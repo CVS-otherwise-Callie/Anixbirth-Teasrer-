@@ -55,10 +55,10 @@
     <!--end of dried-->
 
     <!--Burning Basement-->
-    <entity anm2path="monsters/schmoot/shmoot.anm2" reroll="true" baseHP="10" boss="0" champion="1" collisionDamage="1" collisionMass="3" collisionRadius="13" friction="1" id="161" name="Schmoot" numGridCollisionPoints="12" shadowSize="13" stageHP="0" variant="6" portrait="4">
+    <entity anm2path="monsters/schmoot/shmoot.anm2" reroll="true" baseHP="15" boss="0" champion="1" collisionDamage="1" collisionMass="3" collisionRadius="13" friction="1" id="161" name="Schmoot" numGridCollisionPoints="12" shadowSize="13" stageHP="0" variant="6" portrait="4">
 		<bestiary transform="0,0,1" anim="Idle" />
         <gibs amount="6" blood="1" bone="1" eye="0" gut="1" large="0" />
-        <preload-snd id="146" /> <!-- SOUND_SHAKEY_KID_ROAR -->
+        <preload-snd id="146" />
     </entity>
 
     <!--Womb-->

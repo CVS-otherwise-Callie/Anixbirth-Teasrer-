@@ -9,8 +9,8 @@ local stealingUpdate
 
 FHAC.Scripts = {
 	Savedata = include("scripts.savedata"),
-	Constants = include("scripts.constants"),
 	Library = include("scripts.library"),
+	Constants = include("scripts.constants"),
 	Items = include("scripts.items"),
 	IamScripts = include("scripts.iam.main"),
 	

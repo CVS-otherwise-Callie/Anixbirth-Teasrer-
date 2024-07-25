@@ -4,7 +4,7 @@ local room = Game():GetRoom()
 
 --EID STUFF COMES FIRST
 function FHAC:loadFont(fontFileName)
-	FHAC.font:Load(fontFileName, "") -- GoG Version of game somehow wants a string as the second argument
+	FHAC.font:Load(fontFileName, "")
 	FHAC.font:SetMissingCharacter(2)
 	if not FHAC.font:IsLoaded() then
 		Isaac.DebugString("EID - ERROR: Could not load font from resources/font/default.fnt" .. "'")
@@ -37,6 +37,10 @@ function mod.onEntityTick(type, fn, variant, subtype)
 			fn(ent)
 		end
 	end)
+end
+
+function mod:ENT(name)
+	return {ID = Isaac.GetEntityTypeByName(name), Var = Isaac.GetEntityVariantByName(name), Sub = Isaac.GetEntitySubTypeByName(name)}
 end
 
 function mod:FindRandomValidPathPosition(npc, mode, avoidplayer, nearposses,farposses,ignorepoops) --omfg i love you fiend folio

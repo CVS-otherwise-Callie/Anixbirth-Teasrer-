@@ -8,21 +8,21 @@ FHAC.font = Font()
 --needed rn, likely will delete later
 
 FHAC.Monsters = {
-    Fivehead = {["ID"] = 161, ["Var"] = 0},
-    Floater = {["ID"] = 161, ["Var"] = 1, ["Subtype"]= 1,},
-    Dried = {["ID"] = 90, ["Var"] = 1,},
-    Neutralfly = {["ID"] = 161, ["Var"] = 3, ["Subtype"]= 1,},
-    Patient = {["ID"] = 200, ["Var"] = 0, ["Subtype"]= 0,},
-    Erythorcyte = {["ID"] = 161, ["Var"] = 4, ["Subtype"] = 10,},
-    Erythorcytebaby = {["ID"] = 161, ["Var"] = 4, ["Subtype"] = 11,},
-    Wost = {["ID"] = 161, ["Var"] = 5, ["Subtype"] = 2,},
-    Schmoot = {["ID"] = 161, ["Var"] = 6, ["Subtype"] = 0,},
-    Snidge = {["ID"] = 161, ["Var"] = 27, ["Subtype"] = 6,},
-    Dangler = {["ID"] = 161, ["Var"] = 7, ["Subtype"] = 0,},
+    Fivehead = mod:ENT("Fivehead"),
+    Floater = mod:ENT("Floater"),
+    Dried = mod:ENT("Dried"),
+    Neutralfly = mod:ENT("Neutral Fly"),
+    Patient = mod:ENT("Patient"),
+    Erythorcyte = mod:ENT("Erythorcyte"),
+    Erythorcytebaby = mod:ENT("Erythorcytebaby"),
+    Wost = mod:ENT("Wost"),
+    Schmoot = mod:ENT("Schmoot"),
+    Snidge = mod:ENT("Snidge"),
+    Dangler = mod:ENT("Dangler"),
 }
 
 FHAC.Jokes = {
-    Gaperrr = {["ID"] = 10, ["Var"] = 5938}
+    Gaperrr = mod:ENT("A gaper w/ three legs, why did we do this"),
 }
 
 FHAC.Savedata = {
@@ -48,5 +48,5 @@ StageAPI.AddEntities2Function(require("scripts.entities2"))
 FHAC.EnemyDeathShit = {}
 --heehehehehhehehe fuck
 FHAC.EnemyDeathShit.Anims = {
-    {ID = FHAC.Monsters.Dangler.ID, Var = FHAC.Monsters.Dangler.Var, Subtype = FHAC.Monsters.Dangler.Subtype, Anim = mod.danglerDeath }
+    --{ID = FHAC.Monsters.Dangler.ID, Var = FHAC.Monsters.Dangler.Var, Subtype = FHAC.Monsters.Dangler.Subtype, Anim = mod.danglerDeath }
 }

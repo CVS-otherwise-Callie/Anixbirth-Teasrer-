@@ -1,6 +1,7 @@
 local mod = FHAC
 local game = Game()
 local rng = RNG()
+local room = game:GetRoom()
 
 mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
     if npc.Variant == mod.Monsters.Schmoot.Var then
@@ -11,8 +12,8 @@ end, mod.Monsters.Schmoot.ID)
 function mod:SchmootAI(npc, sprite, d)
     local target = npc:GetPlayerTarget()
     local targetpos = mod:confusePos(npc, target.Position, 5, nil, nil)
-    local targetvelocity = (targetpos - npc.Position)
     local enemydir = (targetpos - npc.Position):GetAngleDegrees()
+    local path = npc.Pathfinder
 
     if not d.init then
         if rng:RandomInt(1, 2) == 2 then
@@ -68,9 +69,11 @@ function mod:SchmootAI(npc, sprite, d)
             if not d.hasmovedaway then
                 local fire
                 if (target.Position - npc.Position):Length() > 100 then
+                    local targetvelocity = (targetpos - npc.Position)
                     fire = Isaac.Spawn(33, 10, 0, npc.Position, Vector(5, 0):Rotated(enemydir), npc)
                     npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, -0.08)
                 else
+                    local targetvelocity = (targetpos - npc.Position)
                     fire = Isaac.Spawn(33, 10, 0, npc.Position, Vector(3, 0):Rotated(enemydir), npc)
                     npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, -0.04)
                 end
@@ -85,13 +88,40 @@ function mod:SchmootAI(npc, sprite, d)
         if sprite:IsFinished("Shoot") then
             d.hasmovedaway = false
             d.shootinit = false
-            d.state = "idle"
-            sprite:Play("Fall")
+            if (npc.HitPoints) < (npc.MaxHitPoints/2) then
+                d.state = "fallin"
+                sprite:Play("Fall")
+            else
+                d.state = "idle"
+                sprite:Play("Idle")
+            end
+        end
+    end
+
+    if d.state == "fallin" then
+        if not d.secondinit then
+            npc.HitPoints = npc.MaxHitPoints
+            d.state = "fallin"
+        end
+        if sprite:IsFinished("Fall") then
+            sprite:Play("Roll")
+            d.secondinit = true
+            d.state ="rollin"
         end
     end
 
     if d.state == "rollin" then
-
+        npc.SpriteOffset = Vector(0, -8)
+        mod:spritePlay(sprite, "Roll")
+        if mod:isScare(npc) then
+            local targetvelocity = (targetpos - npc.Position):Resized(-15)
+            npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 0.25)
+        elseif room:CheckLine(npc.Position,targetpos,0,1,false,false) then
+            local targetvelocity = (targetpos - npc.Position):Resized(15)
+            npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 0.25)
+        else
+            path:FindGridPath(targetpos, 0.9, 1, true)
+        end
     end
 end
 

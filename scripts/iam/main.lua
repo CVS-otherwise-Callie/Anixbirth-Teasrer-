@@ -68,9 +68,9 @@ mod:AddCallback(ModCallbacks.MC_POST_RENDER, function()
 			text = text .. tostring(currentRoom.Layout.Variant) .. " " .. currentRoom.Layout.Name
 		else
 			local useVar = roomDescriptorData.Variant
-			if useVar >= 24000 and useVar <= 75000 then
+			if useVar >= 75000 and useVar <= 90000 then
 				ismodtext = true
-				useVar = useVar - 23999
+				useVar = useVar - 75000
 				text = "(HOPE) "
 			end
 
