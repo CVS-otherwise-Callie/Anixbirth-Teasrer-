@@ -1,0 +1,16 @@
+<players root="gfx/characters/costumes/" portraitroot="gfx/ui/stage/" nameimageroot="gfx/ui/boss/">
+    <player name="Johannes"
+        skin="Character_001_Isaac.png"
+        hidden="true"
+        nameimage="playername_johannes.png"
+	canShoot="true"
+        hp="4"
+        keys="3"
+        portrait="johannesportrait.png"
+        skinColor="-1"
+	speedmodifier="1.5"
+	firedelaymodifier="1.1"
+/>
+</players>
+
+

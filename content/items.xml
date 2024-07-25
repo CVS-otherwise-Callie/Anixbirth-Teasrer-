@@ -1,0 +1,4 @@
+<items gfxroot="gfx/items/" version="1">
+    <passive id="1" name="Stinky Mushroom" gfx="Stinky_Mushroom.png" description="It smells revolting!" quality="3" cache="damage offensive" />
+    <active id="5" name="Straw Doll" gfx="001_voodoo_doll.png" description="Give them your suffering" quality="3" maxcharges="4" cache="damage nogreed offensive" />
+</items>

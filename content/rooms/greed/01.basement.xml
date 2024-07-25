@@ -1,0 +1,4093 @@
+<?xml version="1.0" ?>
+<rooms>
+	<room variant="24069" name="Community - Basement - Innocence Exists???" type="1" subtype="0" shape="4" width="13" height="14" difficulty="8" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="0" y="0">
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="0">
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="2">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="2">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="6">
+			<entity type="4500" variant="2" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="11">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="11">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="13">
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="13">
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24070" name="Community - Basement - Pew" type="1" subtype="0" shape="4" width="13" height="14" difficulty="8" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="5" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="6">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="6">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="6">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="6">
+			<entity type="4500" variant="2" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="6">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="6">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="6">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="7">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="7">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="8">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="8">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="9">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="9">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="10">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="10">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="11">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="11">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24071" name="Community - Basement - Is this what blocks feel like" type="1" subtype="0" shape="4" width="13" height="14" difficulty="8" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="4" y="0">
+			<entity type="1901" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="0">
+			<entity type="1901" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="1">
+			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="1">
+			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="5">
+			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="5">
+			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="6">
+			<entity type="4500" variant="2" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="8">
+			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="8">
+			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="12">
+			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="12">
+			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="13">
+			<entity type="1901" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="13">
+			<entity type="1901" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24072" name="Community - Basement - Im doin pot" type="1" subtype="0" shape="4" width="13" height="14" difficulty="8" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="0" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="4">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="4">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="6">
+			<entity type="4500" variant="2" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="7">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="9">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="9">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="12">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="12">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="12">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="12">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="12">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="12">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="13">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="13">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="13">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="13">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="13">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="13">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="13">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="13">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="13">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="13">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24073" name="Community - Basement - Ends" type="1" subtype="0" shape="4" width="13" height="14" difficulty="8" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="1" y="1">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="1">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="4">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="6">
+			<entity type="4500" variant="2" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="9">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="12">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="12">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="12">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="12">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="12">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="12">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="12">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="12">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="12">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="12">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="12">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24074" name="Community - Basement - Ew! What!!!" type="1" subtype="0" shape="4" width="13" height="14" difficulty="8" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="4" y="3">
+			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="6">
+			<entity type="4500" variant="2" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="9">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="9">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="9">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="9">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="9">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="10">
+			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24075" name="Community - Basement - Holey" type="1" subtype="0" shape="4" width="13" height="14" difficulty="8" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="False" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="0" y="0">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="0">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="0">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="0">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="0">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="0">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="0">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="0">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="0">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="0">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="0">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="0">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="1">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="1">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="2">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="2">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="5">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="5">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="5">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="5">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="6">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="6">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="6">
+			<entity type="4500" variant="2" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="6">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="6">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="7">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="7">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="7">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="7">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="11">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="11">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="12">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="12">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="13">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="13">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="13">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="13">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="13">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="13">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="13">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="13">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="13">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="13">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="13">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="13">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24076" name="Community - Basement - You can move the plate around, weirdly" type="1" subtype="0" shape="4" width="13" height="14" difficulty="8" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="3" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="1">
+			<entity type="4500" variant="2" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="6">
+			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="12">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="12">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="12">
+			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="12">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="12">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24077" name="Community - Basement - Gamble it all away" type="1" subtype="0" shape="4" width="13" height="14" difficulty="8" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="9" y="0">
+			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="0">
+			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="0">
+			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="1">
+			<entity type="6" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="1">
+			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="1">
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="1">
+			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="2">
+			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="2">
+			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="2">
+			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="4">
+			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="4">
+			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="4">
+			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="5">
+			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="5">
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="5">
+			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="5">
+			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="5">
+			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="5">
+			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="6">
+			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="6">
+			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="6">
+			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="6">
+			<entity type="4500" variant="2" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="6">
+			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="6">
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="6">
+			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="7">
+			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="7">
+			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="7">
+			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="8">
+			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="8">
+			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="8">
+			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="9">
+			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="9">
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="9">
+			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="10">
+			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="10">
+			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="10">
+			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="10">
+			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="10">
+			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="10">
+			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="11">
+			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="11">
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="11">
+			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="12">
+			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="12">
+			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="12">
+			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24078" name="Community - Basement - Pillars" type="1" subtype="0" shape="4" width="13" height="14" difficulty="8" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="0" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="2">
+			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="3">
+			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="3">
+			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="6">
+			<entity type="1901" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="6">
+			<entity type="1901" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="6">
+			<entity type="4500" variant="2" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="6">
+			<entity type="1901" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="6">
+			<entity type="1901" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="10">
+			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="10">
+			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="11">
+			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="12">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="12">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="12">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="12">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="12">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="12">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="12">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="13">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="13">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="13">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="13">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="13">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="13">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="13">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="13">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="13">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="13">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="13">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="13">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24079" name="Community - Basement - Xocolate gets cocaine from here" type="1" subtype="0" shape="4" width="13" height="14" difficulty="8" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="0" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="0">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="0">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="1">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="1">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="1">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="1">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="1">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="1">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="1">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="1">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="4">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="4">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="4">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="4">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="4">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="4">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="5">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="5">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="6">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="6">
+			<entity type="4500" variant="2" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="7">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="7">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="7">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="8">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="8">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="9">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="9">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="9">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="9">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="9">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="9">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="12">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="12">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="12">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="12">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="12">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="12">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="12">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="12">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="13">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="13">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="13">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="13">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="13">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="13">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="13">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="13">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="13">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="13">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24080" name="Community - Basement - Oliver being gay for 2 seconds" type="1" subtype="0" shape="4" width="13" height="14" difficulty="8" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="0" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="5">
+			<entity type="1300" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="5">
+			<entity type="1300" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="6">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="6">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="6">
+			<entity type="4500" variant="2" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="6">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="6">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="7">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="7">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="7">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="7">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="8">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="8">
+			<entity type="1300" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="8">
+			<entity type="1300" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="8">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="9">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="9">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="12">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="12">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="13">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="13">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="13">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="13">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="13">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="13">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24081" name="Community - Basement - I have terrible news for you" type="1" subtype="0" shape="4" width="13" height="14" difficulty="8" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="0" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="6">
+			<entity type="4500" variant="2" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="7">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="8">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="8">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="8">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="9">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="10">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="10">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="11">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="12">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="12">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="12">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="13">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24082" name="Community - Basement - WAHT" type="1" subtype="0" shape="4" width="13" height="14" difficulty="8" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="3" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="5">
+			<entity type="1300" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="6">
+			<entity type="1300" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="6">
+			<entity type="4500" variant="2" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="6">
+			<entity type="1300" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="7">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="7">
+			<entity type="1300" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="7">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="8">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="8">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="8">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="8">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="9">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="9">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="9">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="13">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24083" name="Community - Basement - Get around here" type="1" subtype="0" shape="4" width="13" height="14" difficulty="8" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="3" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="6">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="6">
+			<entity type="4500" variant="2" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="6">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="8">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="8">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="9">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="9">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="9">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="9">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="9">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="9">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="10">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="10">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="10">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="10">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="10">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="10">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="11">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="11">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="11">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="11">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="11">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="11">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="12">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="12">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="12">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="12">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="12">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="12">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="13">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="13">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="13">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="13">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24084" name="Community - Basement - Cozy...?" type="1" subtype="0" shape="4" width="13" height="14" difficulty="8" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="1" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="6">
+			<entity type="4500" variant="2" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="7">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="7">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="7">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="7">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="8">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="8">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="8">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="8">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="8">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="8">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="9">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="9">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="10">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="10">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="10">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="10">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24085" name="Community - Basement - Stalker" type="1" subtype="0" shape="4" width="13" height="14" difficulty="8" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="1" y="5">
+			<entity type="1901" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="5">
+			<entity type="1901" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="6">
+			<entity type="4500" variant="2" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="7">
+			<entity type="1901" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="9">
+			<entity type="1901" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="9">
+			<entity type="1901" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24086" name="Community - Basement - Hiding" type="1" subtype="0" shape="4" width="13" height="14" difficulty="8" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="12" y="0">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="1">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="1">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="2">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="3">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="4">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="4">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="4">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="5">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="6">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="6">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="6">
+			<entity type="4500" variant="2" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="8">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="8">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="9">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="10">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="11">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="11">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="12">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="13">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="13">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24087" name="Community - Basement - Basement 1.0" type="1" subtype="0" shape="4" width="13" height="14" difficulty="8" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="0" y="0">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="0">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="6">
+			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="6">
+			<entity type="4500" variant="2" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="6">
+			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="13">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="13">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24088" name="Community - Basement - Cheetus-Style" type="1" subtype="0" shape="4" width="13" height="14" difficulty="8" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="5" y="2">
+			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="2">
+			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="3">
+			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="6">
+			<entity type="1499" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="6">
+			<entity type="4500" variant="2" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="8">
+			<entity type="1499" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="10">
+			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="10">
+			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="11">
+			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="12">
+			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24069" name="Community - Basement - Flies?!" type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="6" y="2">
+			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="7">
+			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="7">
+			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24070" name="Community - Basement - Floatin'" type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="10" y="2">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="3">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="6">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="6">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="10">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="11">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24071" name="Community - Basement - Heads upon..." type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="6" y="3">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="7">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="8">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24072" name="Community - Basement - Floater - Ra! Ra Ra!" type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="5" y="1">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="4">
+			<entity type="80" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="6">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="8">
+			<entity type="80" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24073" name="Community - Basement - Neutral Fly - Bzzzzttttt" type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="2" y="2">
+			<entity type="61" variant="5" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="4">
+			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="7">
+			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="8">
+			<entity type="61" variant="5" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="11">
+			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24074" name="Community - Basement - Floater - We were young and young" type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="3" y="3">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="3">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="11">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24075" name="Community - Basement - Floater -  Woah! Not cool." type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="1" y="0">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="0">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="0">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="0">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="0">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="0">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="0">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="0">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="7">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="10">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24076" name="Community - Basement - Fivehead - Wassup" type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="8" y="3">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="7">
+			<entity type="15" variant="2" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="7">
+			<entity type="15" variant="2" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="10">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24077" name="Community - Basement - Floater - Regiment" type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="6" y="3">
+			<entity type="15" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="10">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="10">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="10">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="10">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="10">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24078" name="Community - Basement - Fivehead - Shooters" type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="2" y="3">
+			<entity type="244" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="5">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="8">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="8">
+			<entity type="244" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24079" name="Community - Basement - Neutral Fly - Only 3" type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="6" y="4">
+			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="5">
+			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="5">
+			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24080" name="Community - Basement - Neutral Fly - Only 4" type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="1" y="5">
+			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="5">
+			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="7">
+			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="7">
+			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24081" name="Community - Basement - Floater - Downstoops" type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="9" y="1">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="6">
+			<entity type="305" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="6">
+			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="10">
+			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24082" name="Community - Basement - Fivehead - Aww, fuck off" type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="2" y="4">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="4">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="6">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="6">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="8">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="8">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24083" name="Community - Basement - Neutral Fly - Rascism?!" type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="1" y="5">
+			<entity type="214" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="7">
+			<entity type="214" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="11">
+			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="12">
+			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24084" name="Community - Basement - Fatty - Acid lol (get it???)" type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="9" y="2">
+			<entity type="208" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="5">
+			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="7">
+			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="12">
+			<entity type="226" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24085" name="Community - Basement - Floater - I'm Breakin' my heart for youuuuuu" type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="2" y="6">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="8">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24086" name="Community - Basement - Floater - Stress" type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="8" y="5">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="7">
+			<entity type="240" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="8">
+			<entity type="29" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24087" name="Community - Basement - Floater - A little cucco" type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="5" y="2">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="2">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="2">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="9">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24088" name="Community - Basement - Neutral Fly - Get back here" type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="10" y="1">
+			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="5">
+			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="7">
+			<entity type="13" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="7">
+			<entity type="276" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="9">
+			<entity type="13" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24089" name="Community - Basement - Fivehead - Lookin' to the futureee" type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="3" y="3">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="6">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="8">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24090" name="Community - Basement - Fivehead - Guards" type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="5" y="1">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="4">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="11">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24091" name="Community - Basement - Fivehead - The other guards" type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="1" y="2">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="9">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="12">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24092" name="Community - Basement - Floater - Spanish or what" type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="3" y="5">
+			<entity type="220" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="6">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="9">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24093" name="Community - Basement - Neutral Fly - This is happenin' now" type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="1" y="2">
+			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="3">
+			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="8">
+			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="10">
+			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24094" name="Community - Basement - Floater - Clients of tommorow" type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="3" y="3">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="5">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="7">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24095" name="Community - Basement - Floater - Glad she left" type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="3" y="3">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="4">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="6">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="9">
+			<entity type="15" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24096" name="Community - Basement - Floater - G'day! I'm Floater." type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="2" y="6">
+			<entity type="14" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="6">
+			<entity type="14" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="10">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24097" name="Community - Basement - Floater - We are the floaters marching marching" type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="4" y="3">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="3">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="3">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="3">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="3">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="4">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="4">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24098" name="Community - Basement - Fivehead - GREAT FUCKING ROOM EDMUND!" type="11" subtype="0" shape="4" width="13" height="14" difficulty="15" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="0" y="1">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="1">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="2">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="3">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="5">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="6">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="6">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="7">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="9">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="9">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="12">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="12">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24099" name="Community - Basement - Fivehead - Outta the way!" type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="4" y="2">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="2">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="6">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="6">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24100" name="Community - Basement - Floater - Ph hell nah" type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="5" y="1">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="3">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="3">
+			<entity type="16" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="8">
+			<entity type="16" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="9">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="12">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24101" name="Community - Basement - Fivehead - Voice series" type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="8" y="3">
+			<entity type="15" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="5">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="8">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="10">
+			<entity type="208" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24102" name="Community - Basement - Floater - Can you believe that Cheetus hates making Greed rooms?" type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="9" y="3">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="6">
+			<entity type="207" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="8">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="10">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24103" name="Community - Basement - Floater - Milton's Math Game" type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="3" y="4">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="8">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24104" name="Community - Basement - Floater - Milton's Sath Game" type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="2" y="3">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="7">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="11">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24105" name="Community - Basement - Fivehead - 49!" type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="3" y="2">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="2">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="9">
+			<entity type="208" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="9">
+			<entity type="12" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24106" name="Community - Basement - Neutral Fly - What is DUBSTEP GRINDER" type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="3" y="1">
+			<entity type="90" variant="1" subtype="6" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="7">
+			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="10">
+			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24107" name="Community - Basement - Floater - Janey!" type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="1" y="3">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="3">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="9">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="10">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24108" name="Community - Basement - Horf - Permission, please??" type="11" subtype="0" shape="4" width="13" height="14" difficulty="10" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="5" y="1">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="1">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="6">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="6">
+			<entity type="12" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="6">
+			<entity type="12" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="6">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="11">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="11">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24109" name="Community - Basement - Fivehead - Offense" type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="11" y="1">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="6">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="10">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24110" name="Community - Basement - Fivehead - For fun" type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="6" y="1">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="3">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="3">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24111" name="Community - Basement - Fivehead - Not nearly as fun" type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="6" y="2">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="9">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="9">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="11">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24112" name="Community - Basement - Fatass!" type="11" subtype="0" shape="4" width="13" height="14" difficulty="8" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="1" y="4">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="5">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="6">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="7">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="8">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="9">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24113" name="Community - Basement - Neutral Fly - Minaxa" type="11" subtype="0" shape="4" width="13" height="14" difficulty="3" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="4" y="6">
+			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="8">
+			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24114" name="Community - Basement - Neutral Fly - Toooobbbyyyy!" type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="0" y="3">
+			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="3">
+			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="10">
+			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="10">
+			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24115" name="Community - Basement - Floater" type="11" subtype="0" shape="4" width="13" height="14" difficulty="15" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="1" y="4">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="4">
+			<entity type="208" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="5">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="6">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="7">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="8">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="9">
+			<entity type="208" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24116" name="Community - Basement - Neutral Fly" type="11" subtype="0" shape="4" width="13" height="14" difficulty="15" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="2" y="2">
+			<entity type="244" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="4">
+			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="8">
+			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="11">
+			<entity type="244" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24117" name="Community - Basement - Floater" type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="4" y="1">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="1">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24118" name="Community - Basement - Fivehead" type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="8" y="2">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="11">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24119" name="Community - Basement - Fivehead" type="11" subtype="0" shape="4" width="13" height="14" difficulty="15" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="7" y="3">
+			<entity type="305" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="5">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="7">
+			<entity type="305" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="9">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24120" name="Community - Basement - Floater" type="11" subtype="0" shape="4" width="13" height="14" difficulty="15" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="3" y="6">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="6">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="6">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="6">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="10">
+			<entity type="284" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="10">
+			<entity type="284" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24121" name="Community - Basement - Floater" type="11" subtype="0" shape="4" width="13" height="14" difficulty="15" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="7" y="1">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="2">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="2">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="3">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="4">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="5">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="6">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="7">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="8">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24122" name="Community - Basement - Neutral Fly" type="11" subtype="0" shape="4" width="13" height="14" difficulty="15" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="2" y="2">
+			<entity type="289" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="2">
+			<entity type="289" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="11">
+			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="11">
+			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24123" name="Community - Basement - Neutral Fly" type="11" subtype="0" shape="4" width="13" height="14" difficulty="15" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="4" y="3">
+			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="5">
+			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="7">
+			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="9">
+			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="11">
+			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24124" name="Community - Basement - Floater" type="11" subtype="0" shape="4" width="13" height="14" difficulty="10" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="2" y="3">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="4">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="10">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24125" name="Community - Basement - Neutral Fly" type="11" subtype="0" shape="4" width="13" height="14" difficulty="15" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="4" y="3">
+			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="3">
+			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="8">
+			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="9">
+			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="9">
+			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24126" name="Community - Basement - Fivehead" type="11" subtype="0" shape="4" width="13" height="14" difficulty="10" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="10" y="4">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="7">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="11">
+			<entity type="214" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24127" name="Community - Basement - Fivehead" type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="2" y="2">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="2">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24128" name="Community - Basement - Neutral Fly" type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="3" y="6">
+			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="7">
+			<entity type="77" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="10">
+			<entity type="77" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24129" name="Community - Basement - Neutral Fly" type="11" subtype="0" shape="4" width="13" height="14" difficulty="15" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="5" y="3">
+			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="4">
+			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="6">
+			<entity type="18" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="6">
+			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="9">
+			<entity type="15" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24130" name="Community - Basement - Fivehead" type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="0" y="5">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="7">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="8">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24131" name="Community - Basement - Neutral Fly" type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="3" y="4">
+			<entity type="220" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="5">
+			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24132" name="Community - Basement - Neutral Fly" type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="8" y="1">
+			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="7">
+			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24133" name="Community - Basement - Neutral Fly" type="11" subtype="0" shape="4" width="13" height="14" difficulty="15" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="6" y="1">
+			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="3">
+			<entity type="206" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="5">
+			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="5">
+			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24134" name="Community - Basement - Floater" type="11" subtype="0" shape="4" width="13" height="14" difficulty="10" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="2" y="2">
+			<entity type="208" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="3">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="6">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24135" name="Community - Basement - Neutral Fly" type="11" subtype="0" shape="4" width="13" height="14" difficulty="15" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="3" y="3">
+			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="3">
+			<entity type="244" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="7">
+			<entity type="244" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="7">
+			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="11">
+			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="11">
+			<entity type="244" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24136" name="Community - Basement - Neutral Fly" type="11" subtype="0" shape="4" width="13" height="14" difficulty="10" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="9" y="3">
+			<entity type="29" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="4">
+			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="7">
+			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24137" name="Community - Basement - Neutral Fly" type="11" subtype="0" shape="4" width="13" height="14" difficulty="10" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="0" y="6">
+			<entity type="240" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="6">
+			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="8">
+			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24138" name="Community - Basement - Neutral Fly" type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="4" y="7">
+			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24139" name="Community - Basement - Neutral Fly" type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="6" y="1">
+			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="11">
+			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24140" name="Community - Basement - Floater" type="11" subtype="0" shape="4" width="13" height="14" difficulty="10" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="6" y="3">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="6">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="7">
+			<entity type="292" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24141" name="Community - Basement - Neutral Fly" type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="1" y="1">
+			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="12">
+			<entity type="206" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24142" name="Community - Basement - Fivehead" type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="3" y="6">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="11">
+			<entity type="85" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24143" name="Community - Basement - Fivehead" type="11" subtype="0" shape="4" width="13" height="14" difficulty="15" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="1" y="2">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="4">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="6">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="8">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="10">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="12">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24144" name="Community - Basement - Fivehead" type="11" subtype="0" shape="4" width="13" height="14" difficulty="15" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="10" y="1">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="6">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="6">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="8">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="10">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24145" name="Community - Basement - Floater" type="11" subtype="0" shape="4" width="13" height="14" difficulty="10" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="8" y="2">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="4">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="6">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="8">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24146" name="Community - Basement - Floater" type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="9" y="10">
+			<entity type="29" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="11">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24147" name="Community - Basement - Fivehead" type="11" subtype="0" shape="4" width="13" height="14" difficulty="15" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="4" y="5">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="6">
+			<entity type="284" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="7">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="8">
+			<entity type="208" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="10">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24148" name="Community - Basement - Neutral Fly" type="11" subtype="0" shape="4" width="13" height="14" difficulty="15" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="4" y="3">
+			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="3">
+			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="3">
+			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="7">
+			<entity type="255" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="7">
+			<entity type="255" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24149" name="Community - Basement - Floater" type="11" subtype="0" shape="4" width="13" height="14" difficulty="10" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="3" y="0">
+			<entity type="242" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="1">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="1">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24150" name="Community - Basement - Floater" type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="3" y="5">
+			<entity type="217" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="6">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24151" name="Community - Basement - Fivehead" type="11" subtype="0" shape="4" width="13" height="14" difficulty="10" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="4" y="6">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="7">
+			<entity type="226" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="8">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="9">
+			<entity type="12" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24152" name="Community - Basement - Fivehead" type="11" subtype="0" shape="4" width="13" height="14" difficulty="10" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="9" y="2">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="4">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="5">
+			<entity type="15" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24153" name="Community - Basement - Fivehead" type="11" subtype="0" shape="4" width="13" height="14" difficulty="10" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="4" y="4">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="4">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="9">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="9">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24154" name="Community - Basement - Fivehead" type="11" subtype="0" shape="4" width="13" height="14" difficulty="15" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="6" y="1">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="4">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="4">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="5">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="5">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="9">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="9">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="11">
+			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24155" name="Community - Basement - Fivehead" type="11" subtype="0" shape="4" width="13" height="14" difficulty="10" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="5" y="3">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="6">
+			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="9">
+			<entity type="15" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="24156" name="Community - Basement - Fivehead" type="11" subtype="0" shape="4" width="13" height="14" difficulty="10" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+	</room>
+	<room variant="24157" name="Community - Basement - Fivehead" type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+	</room>
+	<room variant="24158" name="Community - Basement - Fivehead" type="11" subtype="0" shape="4" width="13" height="14" difficulty="10" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+	</room>
+	<room variant="24159" name="Community - Basement - Floater" type="11" subtype="0" shape="4" width="13" height="14" difficulty="10" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+	</room>
+	<room variant="24160" name="Community - Basement - Fivehead" type="11" subtype="0" shape="4" width="13" height="14" difficulty="15" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+	</room>
+	<room variant="24161" name="Community - Basement - Neutral Fly" type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+	</room>
+	<room variant="24162" name="Community - Basement - Neutral Fly" type="11" subtype="0" shape="4" width="13" height="14" difficulty="15" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+	</room>
+	<room variant="24163" name="Community - Basement - Fivehead" type="11" subtype="0" shape="4" width="13" height="14" difficulty="15" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+	</room>
+	<room variant="24164" name="Community - Basement - Neutral Fly" type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+	</room>
+	<room variant="24165" name="Community - Basement - Floater" type="11" subtype="0" shape="4" width="13" height="14" difficulty="10" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+	</room>
+	<room variant="24166" name="Community - Basement - Fivehead" type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+	</room>
+	<room variant="24167" name="Community - Basement - Neutral Fly" type="11" subtype="0" shape="4" width="13" height="14" difficulty="10" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+	</room>
+	<room variant="24168" name="Community - Basement - Fivehead" type="11" subtype="0" shape="4" width="13" height="14" difficulty="15" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+	</room>
+	<room variant="24169" name="Community - Basement - Neutral Fly" type="11" subtype="0" shape="4" width="13" height="14" difficulty="15" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+	</room>
+	<room variant="24170" name="Community - Basement - Neutral Fly" type="11" subtype="0" shape="4" width="13" height="14" difficulty="15" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+	</room>
+	<room variant="24171" name="Community - Basement - Neutral Fly" type="11" subtype="0" shape="4" width="13" height="14" difficulty="10" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+	</room>
+	<room variant="24172" name="Community - Basement - Floater" type="11" subtype="0" shape="4" width="13" height="14" difficulty="15" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+	</room>
+	<room variant="24173" name="Community - Basement - Fivehead" type="11" subtype="0" shape="4" width="13" height="14" difficulty="15" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+	</room>
+	<room variant="24174" name="Community - Basement - Neutral Fly" type="11" subtype="0" shape="4" width="13" height="14" difficulty="10" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+	</room>
+	<room variant="24175" name="Community - Basement - Floater" type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+	</room>
+	<room variant="24176" name="Community - Basement - Neutral Fly" type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+	</room>
+	<room variant="24177" name="Community - Basement - Floater" type="11" subtype="0" shape="4" width="13" height="14" difficulty="15" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+	</room>
+	<room variant="24178" name="Community - Basement - Fivehead" type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+	</room>
+	<room variant="24179" name="Community - Basement - Neutral Fly" type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+	</room>
+	<room variant="24180" name="Community - Basement - Floater" type="11" subtype="0" shape="4" width="13" height="14" difficulty="15" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+	</room>
+	<room variant="24181" name="Community - Basement - Fivehead" type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+	</room>
+	<room variant="24182" name="Community - Basement - Floater" type="11" subtype="0" shape="4" width="13" height="14" difficulty="10" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+	</room>
+	<room variant="24183" name="Community - Basement - Fivehead" type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+	</room>
+	<room variant="24184" name="Community - Basement - Floater" type="11" subtype="0" shape="4" width="13" height="14" difficulty="10" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+	</room>
+	<room variant="24185" name="Community - Basement - Floater" type="11" subtype="0" shape="4" width="13" height="14" difficulty="10" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+	</room>
+	<room variant="24186" name="Community - Basement - Neutral Fly" type="11" subtype="0" shape="4" width="13" height="14" difficulty="10" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+	</room>
+	<room variant="24187" name="Community - Basement - Floater" type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+	</room>
+	<room variant="24188" name="Community - Basement - Floater" type="11" subtype="0" shape="4" width="13" height="14" difficulty="10" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+	</room>
+	<room variant="24189" name="Community - Basement - Fivehead" type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+	</room>
+	<room variant="24190" name="Community - Basement - Floater" type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+	</room>
+	<room variant="24191" name="Community - Basement - Fivehead" type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+	</room>
+	<room variant="24192" name="Community - Basement - Floater" type="11" subtype="0" shape="4" width="13" height="14" difficulty="15" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+	</room>
+	<room variant="24193" name="Community - Basement - Floater" type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+	</room>
+	<room variant="24194" name="Community - Basement - Fivehead" type="11" subtype="0" shape="4" width="13" height="14" difficulty="10" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+	</room>
+	<room variant="24195" name="Community - Basement - Fivehead" type="11" subtype="0" shape="4" width="13" height="14" difficulty="10" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+	</room>
+	<room variant="24196" name="Community - Basement - Floater" type="11" subtype="0" shape="4" width="13" height="14" difficulty="10" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+	</room>
+	<room variant="24197" name="Community - Basement - Fivehead" type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+	</room>
+	<room variant="24198" name="Community - Basement - Floater" type="11" subtype="0" shape="4" width="13" height="14" difficulty="15" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+	</room>
+	<room variant="24199" name="Community - Basement - Neutral Fly" type="11" subtype="0" shape="4" width="13" height="14" difficulty="10" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+	</room>
+	<room variant="24200" name="Community - Basement - Neutral Fly" type="11" subtype="0" shape="4" width="13" height="14" difficulty="15" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+	</room>
+	<room variant="24201" name="Community - Basement - Fivehead" type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+	</room>
+	<room variant="24202" name="Community - Basement - Fivehead" type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+	</room>
+	<room variant="24203" name="Community - Basement - Fivehead" type="11" subtype="0" shape="4" width="13" height="14" difficulty="15" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+	</room>
+	<room variant="24204" name="Community - Basement - Fivehead" type="11" subtype="0" shape="4" width="13" height="14" difficulty="10" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+	</room>
+	<room variant="24205" name="Community - Basement - Fivehead" type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+	</room>
+	<room variant="24206" name="Community - Basement - Floater" type="11" subtype="0" shape="4" width="13" height="14" difficulty="10" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+	</room>
+	<room variant="24207" name="Community - Basement - Neutral Fly" type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+	</room>
+	<room variant="24208" name="Community - Basement - Fivehead" type="11" subtype="0" shape="4" width="13" height="14" difficulty="10" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+	</room>
+	<room variant="24209" name="Community - Basement - Neutral Fly" type="11" subtype="0" shape="4" width="13" height="14" difficulty="10" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+	</room>
+	<room variant="24210" name="Community - Basement - Floater" type="11" subtype="0" shape="4" width="13" height="14" difficulty="10" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+	</room>
+	<room variant="24211" name="Community - Basement - Neutral Fly" type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+	</room>
+	<room variant="24212" name="Community - Basement - Floater" type="11" subtype="0" shape="4" width="13" height="14" difficulty="10" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+	</room>
+	<room variant="24213" name="Community - Basement - Floater" type="11" subtype="0" shape="4" width="13" height="14" difficulty="10" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+	</room>
+	<room variant="24214" name="Community - Basement - Floater" type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+	</room>
+	<room variant="24069" name="Community - Basement - " type="5" subtype="1" shape="4" width="13" height="14" difficulty="8" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+	</room>
+	<room variant="24070" name="Community - Basement - " type="5" subtype="1" shape="4" width="13" height="14" difficulty="8" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+	</room>
+	<room variant="24071" name="Community - Basement - " type="5" subtype="1" shape="4" width="13" height="14" difficulty="8" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+	</room>
+	<room variant="24072" name="Community - Basement - " type="5" subtype="1" shape="4" width="13" height="14" difficulty="8" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+	</room>
+	<room variant="24073" name="Community - Basement - " type="5" subtype="1" shape="4" width="13" height="14" difficulty="8" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+	</room>
+	<room variant="24074" name="Community - Basement - " type="5" subtype="1" shape="4" width="13" height="14" difficulty="8" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+	</room>
+	<room variant="24075" name="Community - Basement - " type="5" subtype="1" shape="4" width="13" height="14" difficulty="8" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+	</room>
+	<room variant="24076" name="Community - Basement - " type="5" subtype="1" shape="4" width="13" height="14" difficulty="8" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+	</room>
+	<room variant="24077" name="Community - Basement - " type="5" subtype="1" shape="4" width="13" height="14" difficulty="8" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+	</room>
+	<room variant="24078" name="Community - Basement - " type="5" subtype="1" shape="4" width="13" height="14" difficulty="8" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+	</room>
+</rooms>
