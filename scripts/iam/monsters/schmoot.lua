@@ -100,7 +100,7 @@ function mod:SchmootAI(npc, sprite, d)
 
     if d.state == "fallin" then
         if not d.secondinit then
-            npc.HitPoints = npc.MaxHitPoints
+            npc:AddHealth(15)
             d.state = "fallin"
         end
         if sprite:IsFinished("Fall") then

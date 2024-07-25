@@ -45,12 +45,14 @@ function mod:NeutralflyAI(npc, sprite, d)
                 d.rounds = 0
                 d.state = "moving"
         end
+        if npc.Position then
         if room:GetGridCollisionAtPos(npc.Position) then
             if room:GetGridCollisionAtPos(npc.Position) > 2 then
                 npc.GridCollisionClass = GridCollisionClass.COLLISION_WALL_EXCEPT_PLAYER
             else
                 npc.GridCollisionClass = GridCollisionClass.COLLISION_SOLID
             end
+        end
         end
     end
     --thx erfly
@@ -79,7 +81,7 @@ function mod:NeutralflyAI(npc, sprite, d)
                     end
                     d.rounds = d.rounds + 1
                     d.accel = 0
-                    d.speedup = npc.MaxHitPoints - npc.HitPoints
+                    d.speedup = d.rounds * 2
                 elseif npc.StateFrame > 30 then
                     npc.StateFrame = 0
                 end
