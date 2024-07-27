@@ -13,6 +13,7 @@ FHAC.Scripts = {
 		Wost = include("scripts.iam.monsters.wost"),
 		Schmoot = include("scripts.iam.monsters.schmoot"),
 		Snidge = include("scripts.iam.monsters.snidge"),
+		Drosslet = include("scripts.iam.monsters.drosslet"),
 	},
 
 	Items = {
@@ -70,7 +71,7 @@ mod:AddCallback(ModCallbacks.MC_POST_RENDER, function()
 			local useVar = roomDescriptorData.Variant
 			if useVar >= 75000 and useVar <= 90000 then
 				ismodtext = true
-				useVar = useVar - 75000
+				useVar = useVar - 74999
 				text = "(HOPE) "
 			end
 
@@ -146,7 +147,7 @@ mod:AddCallback(ModCallbacks.MC_POST_RENDER, function()
 		mod.LuaFont:DrawStringScaled(vartext, bcenter.X - (varsize / 2), bcenter.Y + 10, scale, scale, KColor(1,1,1,0.5), 0, false)
 		icon:Load("gfx/characters/johanneshair.anm2", true)
 		icon:Render(bcenter, Vector.Zero, Vector.Zero)
-		icon:Play("Idle")
+		--icon:Play("Idle")
 	end
 end)
 

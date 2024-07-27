@@ -1,20 +1,20 @@
 <?xml version="1.0" ?>
 <rooms>
-	<room variant="24069" name="Room1" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="75000" name="Room1" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
 		<door exists="True" x="13" y="3"/>
 	</room>
-	<room variant="24070" name="Room2" type="1" subtype="0" shape="2" width="13" height="7" difficulty="1" weight="1.0">
+	<room variant="75001" name="Room2" type="1" subtype="0" shape="2" width="13" height="7" difficulty="1" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="13" y="3"/>
 	</room>
-	<room variant="24072" name="Room3" type="1" subtype="0" shape="3" width="13" height="7" difficulty="1" weight="1.0">
+	<room variant="75002" name="Room3" type="1" subtype="0" shape="3" width="13" height="7" difficulty="1" weight="1.0">
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
 	</room>
-	<room variant="24073" name="Room4" type="1" subtype="0" shape="4" width="13" height="14" difficulty="1" weight="1.0">
+	<room variant="75003" name="Room4" type="1" subtype="0" shape="4" width="13" height="14" difficulty="1" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -22,11 +22,11 @@
 		<door exists="True" x="13" y="3"/>
 		<door exists="True" x="13" y="10"/>
 	</room>
-	<room variant="24074" name="Room5" type="1" subtype="0" shape="5" width="13" height="14" difficulty="1" weight="1.0">
+	<room variant="75004" name="Room5" type="1" subtype="0" shape="5" width="13" height="14" difficulty="1" weight="1.0">
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="14"/>
 	</room>
-	<room variant="24075" name="Room6" type="1" subtype="0" shape="6" width="26" height="7" difficulty="1" weight="1.0">
+	<room variant="75005" name="Room6" type="1" subtype="0" shape="6" width="26" height="7" difficulty="1" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -34,11 +34,11 @@
 		<door exists="True" x="19" y="7"/>
 		<door exists="True" x="26" y="3"/>
 	</room>
-	<room variant="24076" name="Room7" type="1" subtype="0" shape="7" width="26" height="7" difficulty="1" weight="1.0">
+	<room variant="75006" name="Room7" type="1" subtype="0" shape="7" width="26" height="7" difficulty="1" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="26" y="3"/>
 	</room>
-	<room variant="24077" name="Room8" type="1" subtype="0" shape="8" width="26" height="14" difficulty="1" weight="1.0">
+	<room variant="75007" name="Room8" type="1" subtype="0" shape="8" width="26" height="14" difficulty="1" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -48,7 +48,7 @@
 		<door exists="True" x="26" y="3"/>
 		<door exists="True" x="26" y="10"/>
 	</room>
-	<room variant="24078" name="Room9" type="1" subtype="0" shape="9" width="26" height="14" difficulty="1" weight="1.0">
+	<room variant="75008" name="Room9" type="1" subtype="0" shape="9" width="26" height="14" difficulty="1" weight="1.0">
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="6"/>
 		<door exists="True" x="6" y="14"/>
@@ -58,7 +58,7 @@
 		<door exists="True" x="26" y="3"/>
 		<door exists="True" x="26" y="10"/>
 	</room>
-	<room variant="24079" name="Room10" type="1" subtype="0" shape="10" width="26" height="14" difficulty="1" weight="1.0">
+	<room variant="75009" name="Room10" type="1" subtype="0" shape="10" width="26" height="14" difficulty="1" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>

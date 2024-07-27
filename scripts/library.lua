@@ -13,6 +13,18 @@ function FHAC:loadFont(fontFileName)
 	return true
 end
 
+function mod:IsSourceofDamagePlayer(source, bomb)
+	if source.Entity then
+		if bomb then
+			return (source.Entity.Type == 1 or source.Entity.Type == 3 or source.Entity.Type == 4 or source.Entity.SpawnerType == 1 or source.Entity.Type == 3 or source.Entity.SpawnerType == 4)
+		else
+			return (source.Entity.Type == 1 or source.Entity.Type == 3 or source.Entity.SpawnerType == 1 or source.Entity.SpawnerType == 3)
+		end
+	else
+		return false
+	end
+end
+
 --thx future
 function mod:isConfuse(npc)
 	return npc:HasEntityFlags(EntityFlag.FLAG_CONFUSION)

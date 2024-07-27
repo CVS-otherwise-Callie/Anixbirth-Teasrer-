@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <rooms>
-	<room variant="24016" name="Community - Erythorcyte - Just a little early game carry" type="1" subtype="0" shape="5" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75000" name="Community - Erythorcyte - Just a little early game carry" type="1" subtype="0" shape="5" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="14"/>
 		<spawn x="6" y="2">
@@ -40,7 +40,7 @@
 			<entity type="161" variant="4" subtype="10" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24017" name="Community - Erythorcyte - Sanity drippin down the drain" type="1" subtype="0" shape="8" width="26" height="14" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75001" name="Community - Erythorcyte - Sanity drippin down the drain" type="1" subtype="0" shape="8" width="26" height="14" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -275,7 +275,7 @@
 			<entity type="161" variant="4" subtype="10" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24018" name="Community - Erythorcyte - Spinnin around the treee" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75002" name="Community - Erythorcyte - Spinnin around the treee" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -362,7 +362,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24019" name="Community - Erythorcyte - Let them out you monster" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75003" name="Community - Erythorcyte - Let them out you monster" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -455,7 +455,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24020" name="Community - Erythorcyte - Have you seen our worm friend?" type="1" subtype="0" shape="2" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75004" name="Community - Erythorcyte - Have you seen our worm friend?" type="1" subtype="0" shape="2" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="13" y="3"/>
 		<spawn x="2" y="2">
@@ -474,7 +474,7 @@
 			<entity type="969" variant="9" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24021" name="Community - Erythorcyte - Made out of spite" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75005" name="Community - Erythorcyte - Made out of spite" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -567,7 +567,7 @@
 			<entity type="27" variant="1" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24022" name="Community - Erythorcyte - Insert pizza joke here" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75006" name="Community - Erythorcyte - Insert pizza joke here" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -714,7 +714,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24023" name="Community - Erythorcyte - Clogged Artieries" type="1" subtype="0" shape="5" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75007" name="Community - Erythorcyte - Clogged Artieries" type="1" subtype="0" shape="5" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="14"/>
 		<spawn x="8" y="1">
@@ -787,7 +787,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24024" name="Community - Erythorcyte  - Clogged AGAIN??? " type="1" subtype="0" shape="6" width="26" height="7" difficulty="10" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75008" name="Community - Erythorcyte  - Clogged AGAIN??? " type="1" subtype="0" shape="6" width="26" height="7" difficulty="10" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -891,7 +891,7 @@
 			<entity type="228" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24025" name="Community - Erythorcyte - Me imitating my freidn's thinking" type="1" subtype="0" shape="6" width="26" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75009" name="Community - Erythorcyte - Me imitating my freidn's thinking" type="1" subtype="0" shape="6" width="26" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -1112,7 +1112,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24026" name="Community - Erythorcyte - What being jobless must feel like" type="1" subtype="0" shape="4" width="13" height="14" difficulty="10" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75010" name="Community - Erythorcyte - What being jobless must feel like" type="1" subtype="0" shape="4" width="13" height="14" difficulty="10" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -1207,7 +1207,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24027" name="Community - Host - Tee hee" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75011" name="Community - Host - Tee hee" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -1330,7 +1330,7 @@
 			<entity type="27" variant="1" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24028" name="Community - Erythorcyte - Blooed everywhere, what a mess" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75012" name="Community - Erythorcyte - Blooed everywhere, what a mess" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -1516,7 +1516,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24029" name="Community - Erythorcyte - ooOoOoOOo run away" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75013" name="Community - Erythorcyte - ooOoOoOOo run away" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -1606,7 +1606,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24030" name="Community - Erythorcyte - My eyes!" type="1" subtype="0" shape="6" width="26" height="7" difficulty="10" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75014" name="Community - Erythorcyte - My eyes!" type="1" subtype="0" shape="6" width="26" height="7" difficulty="10" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -1698,7 +1698,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24031" name="Community - Erythorcyte - A simple test room" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75015" name="Community - Erythorcyte - A simple test room" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -1719,7 +1719,7 @@
 			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24032" name="Community - Erythorcyte - A not-as-simple test room" type="1" subtype="0" shape="8" width="26" height="14" difficulty="10" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75016" name="Community - Erythorcyte - A not-as-simple test room" type="1" subtype="0" shape="8" width="26" height="14" difficulty="10" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -2005,7 +2005,7 @@
 			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24033" name="Community - Erythorcyte - Why are there spiders in Womb...?" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75017" name="Community - Erythorcyte - Why are there spiders in Womb...?" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -2101,7 +2101,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24034" name="Community - Erythorcyte - Look at ME! MEEE!!!" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75018" name="Community - Erythorcyte - Look at ME! MEEE!!!" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -2176,7 +2176,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24035" name="Community - Erythorcyte - Skulls and blood..." type="1" subtype="0" shape="8" width="26" height="14" difficulty="10" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75019" name="Community - Erythorcyte - Skulls and blood..." type="1" subtype="0" shape="8" width="26" height="14" difficulty="10" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -2855,7 +2855,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24036" name="Community - Erythorcyte - Oh, so that explains the butterfly feelings..." type="1" subtype="0" shape="8" width="26" height="14" difficulty="10" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75020" name="Community - Erythorcyte - Oh, so that explains the butterfly feelings..." type="1" subtype="0" shape="8" width="26" height="14" difficulty="10" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -3033,7 +3033,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24037" name="Community - Erythorcyte - Verrrrry clogged." type="1" subtype="0" shape="7" width="26" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75021" name="Community - Erythorcyte - Verrrrry clogged." type="1" subtype="0" shape="7" width="26" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="26" y="3"/>
 		<spawn x="0" y="2">
@@ -3163,7 +3163,7 @@
 			<entity type="161" variant="4" subtype="10" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24038" name="Community - Erythorcyte - What the hell are pots doing in womb?" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75022" name="Community - Erythorcyte - What the hell are pots doing in womb?" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -3256,7 +3256,7 @@
 			<entity type="161" variant="4" subtype="10" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24039" name="Community - Erythorcyte - A greed wave I once got" type="1" subtype="0" shape="4" width="13" height="14" difficulty="10" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75023" name="Community - Erythorcyte - A greed wave I once got" type="1" subtype="0" shape="4" width="13" height="14" difficulty="10" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -3441,7 +3441,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24040" name="Community - Erythorcyte - Was watching game theory and thought of this" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75024" name="Community - Erythorcyte - Was watching game theory and thought of this" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -3516,7 +3516,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24041" name="Community - Erythorcyte - renren room" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75025" name="Community - Erythorcyte - renren room" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -3585,7 +3585,7 @@
 			<entity type="161" variant="4" subtype="10" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24042" name="Community - Erythorcyte - Is that a bad thing? yes cholestrol sux" type="1" subtype="0" shape="3" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75026" name="Community - Erythorcyte - Is that a bad thing? yes cholestrol sux" type="1" subtype="0" shape="3" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
 		<spawn x="4" y="1">
@@ -3616,7 +3616,7 @@
 			<entity type="161" variant="4" subtype="10" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24043" name="Community - Erythorcyte - Mr. Erythorcyte" type="1" subtype="0" shape="6" width="26" height="7" difficulty="10" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75027" name="Community - Erythorcyte - Mr. Erythorcyte" type="1" subtype="0" shape="6" width="26" height="7" difficulty="10" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -3768,7 +3768,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24044" name="Community - Erythorcyte - New and exciting" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75028" name="Community - Erythorcyte - New and exciting" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -3906,7 +3906,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24045" name="Community - Erythorcyte - This is a bullshit room" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75029" name="Community - Erythorcyte - This is a bullshit room" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -4026,7 +4026,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24046" name="Community - Erythorcyte - Evil like that" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75030" name="Community - Erythorcyte - Evil like that" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -4137,7 +4137,7 @@
 			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24047" name="xocolate - Erythrocyte - hey everyone it's your boy xocolate back with another set of banger rooms" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75031" name="xocolate - Erythrocyte - hey everyone it's your boy xocolate back with another set of banger rooms" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -4221,7 +4221,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24048" name="xocolate - Erythrocyte - CVS spelt erythrocyte wrong, laugh at him" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75032" name="xocolate - Erythrocyte - CVS spelt erythrocyte wrong, laugh at him" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -4308,7 +4308,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24049" name="xocolate - Erythrocyte - THE SECRET SYNERGY" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75033" name="xocolate - Erythrocyte - THE SECRET SYNERGY" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -4365,7 +4365,7 @@
 			<entity type="1931" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24050" name="xocolate - Erythrocyte - I'm already running low on room names" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75034" name="xocolate - Erythrocyte - I'm already running low on room names" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -4446,7 +4446,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24051" name="xocolate - Erythrocyte - The oldest trick in the book" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75035" name="xocolate - Erythrocyte - The oldest trick in the book" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -4500,7 +4500,7 @@
 			<entity type="161" variant="4" subtype="10" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24052" name="xocolate - be charitable" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75036" name="xocolate - be charitable" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -4533,7 +4533,7 @@
 			<entity type="202" variant="11" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24053" name="xocolate - Erythrocyte - Trust the process" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75037" name="xocolate - Erythrocyte - Trust the process" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -4590,7 +4590,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24054" name="xocolate - Erythrocyte - First recorded non 1x1 xocolate room" type="1" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75038" name="xocolate - Erythrocyte - First recorded non 1x1 xocolate room" type="1" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -4751,7 +4751,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24055" name="xocolate - Erythrocyte - Second recorded non 1x1 xocolate room (copy)" type="1" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75039" name="xocolate - Erythrocyte - Second recorded non 1x1 xocolate room (copy)" type="1" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -4897,7 +4897,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24056" name="xocolate - Cool pattern" type="1" subtype="0" shape="6" width="26" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75040" name="xocolate - Cool pattern" type="1" subtype="0" shape="6" width="26" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -5103,7 +5103,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24057" name="xocolate - These are actually pretty fun to make" type="1" subtype="0" shape="6" width="26" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75041" name="xocolate - These are actually pretty fun to make" type="1" subtype="0" shape="6" width="26" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -5253,7 +5253,7 @@
 			<entity type="42" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24058" name="xocolate - Erythrocyte - Gurgy wurgles" type="1" subtype="0" shape="6" width="26" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75042" name="xocolate - Erythrocyte - Gurgy wurgles" type="1" subtype="0" shape="6" width="26" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -5435,7 +5435,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24059" name="xocolate - Whoosh whoosh" type="1" subtype="0" shape="6" width="26" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75043" name="xocolate - Whoosh whoosh" type="1" subtype="0" shape="6" width="26" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -5587,7 +5587,7 @@
 			<entity type="5" variant="10" subtype="5" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24060" name="xocolate - 3 consecutive chub heads" type="1" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75044" name="xocolate - 3 consecutive chub heads" type="1" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="False" x="6" y="-1"/>
@@ -5703,7 +5703,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24061" name="xocolate - Erythrocyte - Hint: bottom left" type="1" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75045" name="xocolate - Erythrocyte - Hint: bottom left" type="1" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -5891,7 +5891,7 @@
 			<entity type="242" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24062" name="xocolate - I have hired this man to stare at you" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75046" name="xocolate - I have hired this man to stare at you" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -5990,7 +5990,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24063" name="xocolate - Protectors of the button" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75047" name="xocolate - Protectors of the button" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -6056,7 +6056,7 @@
 			<entity type="30" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24064" name="xocolate - Protectors of the button 2" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75048" name="xocolate - Protectors of the button 2" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -6125,7 +6125,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24065" name="xocolate - Wardenbloon" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75049" name="xocolate - Wardenbloon" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -6206,7 +6206,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24066" name="xocolate - Freakazoid" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75050" name="xocolate - Freakazoid" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -6289,7 +6289,7 @@
 			<entity type="5" variant="90" subtype="1" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24067" name="xocolate - The Amazeballs(tm)" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75051" name="xocolate - The Amazeballs(tm)" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -6385,7 +6385,7 @@
 			<entity type="286" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24068" name="xocolate - Erythrocyte - Possible laziest room I have ever made" type="1" subtype="0" shape="9" width="26" height="14" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75052" name="xocolate - Erythrocyte - Possible laziest room I have ever made" type="1" subtype="0" shape="9" width="26" height="14" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="6"/>
 		<door exists="True" x="6" y="14"/>
@@ -6845,7 +6845,7 @@
 			<entity type="161" variant="4" subtype="10" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24069" name="xocolate - Erythrocyte - I am not addicted to long rooms" type="1" subtype="0" shape="6" width="26" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75053" name="xocolate - Erythrocyte - I am not addicted to long rooms" type="1" subtype="0" shape="6" width="26" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -7027,7 +7027,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24070" name="xocolate - Erythrocyte - I can stop whenever I want" type="1" subtype="0" shape="6" width="26" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75054" name="xocolate - Erythrocyte - I can stop whenever I want" type="1" subtype="0" shape="6" width="26" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -7185,7 +7185,7 @@
 			<entity type="58" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24071" name="xocolate - Erythrocyte - Told you" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75055" name="xocolate - Erythrocyte - Told you" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -7242,7 +7242,7 @@
 			<entity type="212" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24072" name="xocolate - Mess" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75056" name="xocolate - Mess" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -7314,7 +7314,7 @@
 			<entity type="1001" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24073" name="xocolate - Erythrocyte - SECRET SYNERGY 2" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75057" name="xocolate - Erythrocyte - SECRET SYNERGY 2" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -7374,7 +7374,7 @@
 			<entity type="235" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24074" name="xocolate - Gutted" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75058" name="xocolate - Gutted" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -7449,7 +7449,7 @@
 			<entity type="212" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24075" name="xocolate - Danga" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75059" name="xocolate - Danga" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -7536,7 +7536,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24076" name="xocolate - Erythrocyte - Yeah I bet you think you're funny you smug piece of shit" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75060" name="xocolate - Erythrocyte - Yeah I bet you think you're funny you smug piece of shit" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -7719,7 +7719,7 @@
 			<entity type="1930" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24077" name="xocolate - Surprise! Worms" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75061" name="xocolate - Surprise! Worms" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -7824,7 +7824,7 @@
 			<entity type="212" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24078" name="xocolate - Erythrocyte - I don't know myself if I'm spelling it right at this point" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75062" name="xocolate - Erythrocyte - I don't know myself if I'm spelling it right at this point" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -7986,7 +7986,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24079" name="xocolate - Gotta stop with the long room names" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75063" name="xocolate - Gotta stop with the long room names" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -8115,7 +8115,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24080" name="xocolate - Spiky" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75064" name="xocolate - Spiky" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -8265,7 +8265,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24081" name="xocolate - Erythrocyte - gonna test these rooms and then sleep" type="1" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75065" name="xocolate - Erythrocyte - gonna test these rooms and then sleep" type="1" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -8387,7 +8387,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24082" name="xocolate - im back baby" type="1" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75066" name="xocolate - im back baby" type="1" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -8557,7 +8557,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24083" name="xocolate - Mystery meat" type="1" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75067" name="xocolate - Mystery meat" type="1" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="False" x="6" y="-1"/>
@@ -8892,7 +8892,7 @@
 			<entity type="5" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24084" name="xocolate - Erythrocyte - I HATE NEEDLES" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75068" name="xocolate - Erythrocyte - I HATE NEEDLES" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -8985,7 +8985,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24085" name="xocolate - Erythrocyte - Uneasy alliance" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75069" name="xocolate - Erythrocyte - Uneasy alliance" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -9090,7 +9090,7 @@
 			<entity type="1930" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24086" name="xocolate - I throw rocks at the homeless" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75070" name="xocolate - I throw rocks at the homeless" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -9213,7 +9213,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24087" name="xocolate - Erythrocyte - Fun fact: Erythrocyte is the scientific term for a red blood cell" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75071" name="xocolate - Erythrocyte - Fun fact: Erythrocyte is the scientific term for a red blood cell" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -9327,7 +9327,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24088" name="xocolate - Scarred Vises are friends" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75072" name="xocolate - Scarred Vises are friends" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -9438,7 +9438,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24089" name="xocolate - Erythrocyte - I can finally krill myself" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75073" name="xocolate - Erythrocyte - I can finally krill myself" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -9589,7 +9589,7 @@
 			<entity type="1930" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="34089" name="xocolate - Erythrocyte - I can finally krill myself (flipped X)" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75074" name="xocolate - Erythrocyte - I can finally krill myself (flipped X)" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -9740,7 +9740,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24090" name="xocolate - Ok now my room names are seriously running low" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75075" name="xocolate - Ok now my room names are seriously running low" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -9805,7 +9805,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24091" name="xocolate - Erythrocyte - My room ideas are also running low" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75076" name="xocolate - Erythrocyte - My room ideas are also running low" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -9874,7 +9874,7 @@
 			<entity type="231" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24092" name="xocolate - Erythrocyte - Fun fact: Erythrocyte is annoying to repeatedly write out" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75077" name="xocolate - Erythrocyte - Fun fact: Erythrocyte is annoying to repeatedly write out" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -9991,7 +9991,7 @@
 			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24093" name="xocolate - Government surveillance" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75078" name="xocolate - Government surveillance" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -10090,7 +10090,7 @@
 			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24094" name="xocolate - Nevermind, Scarred Vises are not friends" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75079" name="xocolate - Nevermind, Scarred Vises are not friends" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -10210,7 +10210,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24095" name="xocolate - Juckport 1 trillion" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75080" name="xocolate - Juckport 1 trillion" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -10354,7 +10354,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24096" name="xocolate - Erythrocyte - CVS meth room" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75081" name="xocolate - Erythrocyte - CVS meth room" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -10465,7 +10465,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24097" name="xocolate - Erythrocyte - Sad lonely boy" type="1" subtype="0" shape="3" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75082" name="xocolate - Erythrocyte - Sad lonely boy" type="1" subtype="0" shape="3" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
 		<spawn x="4" y="0">
@@ -10508,7 +10508,7 @@
 			<entity type="1931" variant="3" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24098" name="xocolate - Erythrocyte - The voices" type="1" subtype="0" shape="6" width="26" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75083" name="xocolate - Erythrocyte - The voices" type="1" subtype="0" shape="6" width="26" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -10720,7 +10720,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24099" name="xocolate - Erythrocyte - Gurdmeister" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75084" name="xocolate - Erythrocyte - Gurdmeister" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -10765,7 +10765,7 @@
 			<entity type="161" variant="4" subtype="10" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24100" name="xocolate - Erythrocyte - What the lump" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75085" name="xocolate - Erythrocyte - What the lump" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -10834,7 +10834,7 @@
 			<entity type="161" variant="4" subtype="10" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24101" name="xocolate - What the blastocyst" type="1" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75086" name="xocolate - What the blastocyst" type="1" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -11067,7 +11067,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24102" name="xocolate - Erythrocyte - :lok:" type="1" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75087" name="xocolate - Erythrocyte - :lok:" type="1" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="False" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -11342,7 +11342,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24103" name="xocolate - My sincerest apologies, I am genuinely very sorry for this" type="1" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75088" name="xocolate - My sincerest apologies, I am genuinely very sorry for this" type="1" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -11566,7 +11566,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24104" name="xocolate - Pile on all the shit" type="1" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75089" name="xocolate - Pile on all the shit" type="1" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -11790,7 +11790,7 @@
 			<entity type="1495" variant="0" subtype="1" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24105" name="xocolate - Gutso the Great (fiend folio reference)" type="1" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75090" name="xocolate - Gutso the Great (fiend folio reference)" type="1" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -11990,7 +11990,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24106" name="xocolate - Gauntlet" type="1" subtype="0" shape="6" width="26" height="7" difficulty="5" weight="0.10000000149011612" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75091" name="xocolate - Gauntlet" type="1" subtype="0" shape="6" width="26" height="7" difficulty="5" weight="0.10000000149011612" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -12220,7 +12220,7 @@
 			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="34106" name="xocolate - Gauntlet Alt" type="1" subtype="0" shape="6" width="26" height="7" difficulty="5" weight="0.10000000149011612" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75092" name="xocolate - Gauntlet Alt" type="1" subtype="0" shape="6" width="26" height="7" difficulty="5" weight="0.10000000149011612" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -12444,7 +12444,7 @@
 			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24107" name="xocolate - kfaoewkowaoiernh" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75093" name="xocolate - kfaoewkowaoiernh" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -12576,7 +12576,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24108" name="xocolate - Reuse &amp; recycle" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="0.5" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75094" name="xocolate - Reuse &amp; recycle" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="0.5" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -12672,7 +12672,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24109" name="xocolate - Erythrocyte - Reuse &amp; recycle 2" type="1" subtype="0" shape="6" width="26" height="7" difficulty="5" weight="0.5" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75095" name="xocolate - Erythrocyte - Reuse &amp; recycle 2" type="1" subtype="0" shape="6" width="26" height="7" difficulty="5" weight="0.5" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -12914,7 +12914,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24110" name="xocolate - Erythrocyte - Secret sauce" type="1" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="0.5" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75096" name="xocolate - Erythrocyte - Secret sauce" type="1" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="0.5" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="False" x="-1" y="10"/>
 		<door exists="False" x="6" y="-1"/>
@@ -13393,7 +13393,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24111" name="xocolate - Erythrocyte - No secret sauce" type="1" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="0.5" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75097" name="xocolate - Erythrocyte - No secret sauce" type="1" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="0.5" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="False" x="-1" y="10"/>
 		<door exists="False" x="6" y="-1"/>
@@ -13885,7 +13885,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24112" name="xocolate - Minigaming" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="0.5" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75098" name="xocolate - Minigaming" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="0.5" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -14032,7 +14032,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24113" name="xocolate - Host with the most" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75099" name="xocolate - Host with the most" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -14113,7 +14113,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24114" name="xocolate - Kablooey" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75100" name="xocolate - Kablooey" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -14218,7 +14218,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24115" name="xocolate - Schmeatballs" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75101" name="xocolate - Schmeatballs" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -14357,7 +14357,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24116" name="xocolate - Through the mirror" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="0.5" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75102" name="xocolate - Through the mirror" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="0.5" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -14489,7 +14489,7 @@
 			<entity type="1931" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24117" name="xocolate - Teamwork makes the dreamwork" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75103" name="xocolate - Teamwork makes the dreamwork" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -14615,7 +14615,7 @@
 			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24118" name="xocolate - Invisible maze" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="0.5" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75104" name="xocolate - Invisible maze" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="0.5" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -14735,7 +14735,7 @@
 			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24119" name="xocolate - Erythrocyte - The Invisible Man" type="1" subtype="0" shape="6" width="26" height="7" difficulty="5" weight="0.5" lastTestTime="2024-05-26T22:47+00:00">
+	<room variant="75105" name="xocolate - Erythrocyte - The Invisible Man" type="1" subtype="0" shape="6" width="26" height="7" difficulty="5" weight="0.5" lastTestTime="2024-05-26T22:47+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>

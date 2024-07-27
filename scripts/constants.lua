@@ -18,7 +18,8 @@ FHAC.Monsters = {
     Wost = mod:ENT("Wost"),
     Schmoot = mod:ENT("Schmoot"),
     Snidge = mod:ENT("Snidge"),
-    Dangler = mod:ENT("Dangler"),
+    --Dangler = mod:ENT("Dangler"),
+    Drosslet = mod:ENT("Drosslet"),
 }
 
 FHAC.Jokes = {

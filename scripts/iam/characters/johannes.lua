@@ -41,5 +41,5 @@ mod:AddCallback(ModCallbacks.MC_POST_RENDER, function()
 
     icon:Load("gfx/characters/johanneshair.anm2", true)
     icon:Render(Vector(0, 0), Vector.Zero, Vector.Zero)
-    icon:Play("Idle")
+    --icon:Play("Idle")
 end)

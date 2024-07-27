@@ -1,0 +1,43 @@
+<data>
+
+<!--Main Path, CH. 1-->
+<group Name="Chapter 1 (Main Path) Enemies">
+   <entity ID="161" Variant="11" Name="Floater" Image="mah boys/floater.png"/>
+   <entity ID="161" Variant="12" Name="Fivehead" Image="mah boys/fivehead.png"/>
+   <entity ID="161" Variant="20" Name="Neutral Fly" Image="mah boys/neutralfly.png"/>
+</group>
+
+<group Name="Cellar Enemies">
+   <entity ID="90" Variant="1" Subtype="0" Name="Dried" Image="mah boys/dried.png">
+        <bitfield Key="Subtype">
+            <dropdown Length="7">
+                <choice Value="0">Random</choice>
+                <choice Value="1">Black</choice>
+                <choice Value="2">White</choice>
+                <choice Value="3">Brown</choice>
+                <choice Value="4">Green</choice>
+                <choice Value="5">Yellow</choice>
+                <choice Value="6">Red</choice>
+            </dropdown>
+        </bitfield>
+    </entity>
+</group>
+
+<group Name="Burning Basement Enemies">
+   <entity ID="161" Variant="90" Name="Schmoot" Image="mah boys/schmoot.png"/>
+</group>
+
+<group Name="Chapter 1 (Alt Path) Enemies">
+    <entity ID="161" Variant="118" Name="Wost" Image="mah boys/wost.png"/>
+</group>
+
+<group Name="Dross Enemies">
+   <entity ID="161" Variant="177" Subtype = "0" Name="Drosslet" Image="mah boys/drosslet.png"/>
+</group>
+
+<group Name="Chapter 4 (Main Path) Enemies">
+   <entity ID="161" Variant="4" Subtype = "10" Name="Erythorcyte" Image="mah boys/erythorcyte.png"/>
+</group>
+
+
+</data>

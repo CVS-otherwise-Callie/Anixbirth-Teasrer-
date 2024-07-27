@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <rooms>
-	<room variant="75000" name="Community - Dried - Sacks and spiders" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75000" name="Community - Dried - Sacks and spiders" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -120,7 +120,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75001" name="Community - Dried - Ew! Sucking these Sacks is sucky" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75001" name="Community - Dried - Ew! Sucking these Sacks is sucky" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -207,7 +207,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75002" name="Community - Dried - Caught between two spiders" type="1" subtype="0" shape="8" width="26" height="14" difficulty="10" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75002" name="Community - Dried - Caught between two spiders" type="1" subtype="0" shape="8" width="26" height="14" difficulty="10" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -394,7 +394,7 @@
 			<entity type="90" variant="1" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75003" name="Community - Dried - Shoot over the creep" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75003" name="Community - Dried - Shoot over the creep" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -469,7 +469,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75004" name="Community - Dried - Creeping Sacks" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75004" name="Community - Dried - Creeping Sacks" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -529,7 +529,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75005" name="Community - Dried - Kabomb" type="1" subtype="0" shape="6" width="26" height="7" difficulty="8" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75005" name="Community - Dried - Kabomb" type="1" subtype="0" shape="6" width="26" height="7" difficulty="8" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -732,7 +732,7 @@
 			<entity type="90" variant="1" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75006" name="Community - Dried - Meats and Cheeses" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75006" name="Community - Dried - Meats and Cheeses" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -837,7 +837,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75007" name="Community - Dried - Harold chillin' in the poop" type="1" subtype="0" shape="3" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75007" name="Community - Dried - Harold chillin' in the poop" type="1" subtype="0" shape="3" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
 		<spawn x="4" y="1">
@@ -868,7 +868,7 @@
 			<entity type="90" variant="1" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75008" name="Community - Dried - Lon" type="1" subtype="0" shape="6" width="26" height="7" difficulty="8" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75008" name="Community - Dried - Lon" type="1" subtype="0" shape="6" width="26" height="7" difficulty="8" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -1068,7 +1068,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75009" name="Community - Dried - Bout' to get fucked up, by some meat son" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75009" name="Community - Dried - Bout' to get fucked up, by some meat son" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -1143,7 +1143,7 @@
 			<entity type="90" variant="1" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75010" name="Community - Dried - Haa!  Ha-Ha!" type="1" subtype="0" shape="7" width="26" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75010" name="Community - Dried - Haa!  Ha-Ha!" type="1" subtype="0" shape="7" width="26" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="26" y="3"/>
 		<spawn x="3" y="2">
@@ -1204,7 +1204,7 @@
 			<entity type="244" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75011" name="Community - Dried - One of these is not like the others" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75011" name="Community - Dried - One of these is not like the others" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -1270,7 +1270,7 @@
 			<entity type="206" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75012" name="Community - Dried - Greedy Sacks!" type="1" subtype="0" shape="6" width="26" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75012" name="Community - Dried - Greedy Sacks!" type="1" subtype="0" shape="6" width="26" height="7" difficulty="5" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -1605,7 +1605,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75013" name="Community - Dried - Surrounded" type="1" subtype="0" shape="10" width="26" height="14" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75013" name="Community - Dried - Surrounded" type="1" subtype="0" shape="10" width="26" height="14" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -1618,7 +1618,7 @@
 			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="4" y="1">
-			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+			<entity type="161" variant="20" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="10" y="1">
 			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
@@ -1651,7 +1651,7 @@
 			<entity type="30" variant="2" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="9" y="4">
-			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+			<entity type="161" variant="20" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="10" y="4">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -1693,7 +1693,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="3" y="8">
-			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+			<entity type="161" variant="20" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="6" y="8">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -1741,7 +1741,7 @@
 			<entity type="90" variant="1" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="8" y="12">
-			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+			<entity type="161" variant="20" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="21" y="12">
 			<entity type="90" variant="1" subtype="0" weight="1.0"/>
@@ -1750,7 +1750,7 @@
 			<entity type="90" variant="1" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75014" name="Community - Dried - Plotting" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75014" name="Community - Dried - Plotting" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -1861,7 +1861,7 @@
 			<entity type="206" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75015" name="fuck this 3.0" type="1" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75015" name="fuck this 3.0" type="1" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -1987,7 +1987,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75016" name="Community - Dried - Meaty Sacks" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75016" name="Community - Dried - Meaty Sacks" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -2050,7 +2050,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75017" name="Community - Dried - Just Hiding There" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75017" name="Community - Dried - Just Hiding There" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -2074,7 +2074,7 @@
 			<entity type="90" variant="1" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75018" name="Community - Dried - Sticky Honey Pot Roast" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75018" name="Community - Dried - Sticky Honey Pot Roast" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -2095,7 +2095,7 @@
 			<entity type="90" variant="1" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75019" name="Community - Dried - Roudning My Ass Off" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75019" name="Community - Dried - Roudning My Ass Off" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -2194,7 +2194,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75020" name="Community - Neutral Fly - Are you joking" type="1" subtype="0" shape="8" width="26" height="14" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75020" name="Community - Neutral Fly - Are you joking" type="1" subtype="0" shape="8" width="26" height="14" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -2264,7 +2264,7 @@
 			<entity type="90" variant="1" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="4" y="6">
-			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+			<entity type="161" variant="20" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="8" y="6">
 			<entity type="90" variant="1" subtype="0" weight="1.0"/>
@@ -2285,7 +2285,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="21" y="6">
-			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+			<entity type="161" variant="20" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="2" y="7">
 			<entity type="90" variant="1" subtype="0" weight="1.0"/>
@@ -2384,7 +2384,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75021" name="Community - Dried - Over The Fire" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75021" name="Community - Dried - Over The Fire" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -2405,7 +2405,7 @@
 			<entity type="90" variant="1" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75022" name="Community - Dried - Be wareful!" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75022" name="Community - Dried - Be wareful!" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -2537,7 +2537,7 @@
 			<entity type="90" variant="1" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75023" name="Community - Floater - Das gay!" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75023" name="Community - Floater - Das gay!" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -2594,7 +2594,7 @@
 			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="2" y="3">
-			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="4" y="3">
 			<entity type="90" variant="1" subtype="0" weight="1.0"/>
@@ -2603,7 +2603,7 @@
 			<entity type="90" variant="1" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="10" y="3">
-			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="0" y="4">
 			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
@@ -2657,7 +2657,7 @@
 			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75024" name="Community - Fivehead - Dinky Danky" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75024" name="Community - Fivehead - Dinky Danky" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -2729,7 +2729,7 @@
 			<entity type="90" variant="1" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="12" y="4">
-			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+			<entity type="161" variant="12" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="3" y="5">
 			<entity type="90" variant="1" subtype="0" weight="1.0"/>
@@ -2759,7 +2759,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75025" name="Community - Dried - Oh nahhh XD" type="1" subtype="0" shape="9" width="26" height="14" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75025" name="Community - Dried - Oh nahhh XD" type="1" subtype="0" shape="9" width="26" height="14" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="6"/>
 		<door exists="True" x="6" y="14"/>
@@ -2784,7 +2784,7 @@
 			<entity type="90" variant="1" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="17" y="5">
-			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="24" y="6">
 			<entity type="90" variant="1" subtype="0" weight="1.0"/>
@@ -2796,7 +2796,7 @@
 			<entity type="242" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="22" y="8">
-			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="3" y="9">
 			<entity type="90" variant="1" subtype="0" weight="1.0"/>
@@ -2889,7 +2889,7 @@
 			<entity type="90" variant="1" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75026" name="Community - Dried - Keeping the meat" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75026" name="Community - Dried - Keeping the meat" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -2922,7 +2922,7 @@
 			<entity type="90" variant="1" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75027" name="Community - Dried - The worm ate most of them" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75027" name="Community - Dried - The worm ate most of them" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -3039,7 +3039,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75028" name="Community - Cross Stoney - Joke" type="1" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75028" name="Community - Cross Stoney - Joke" type="1" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -3110,7 +3110,7 @@
 			<entity type="240" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75029" name="Community - Dried - Actually dry for once" type="1" subtype="0" shape="2" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75029" name="Community - Dried - Actually dry for once" type="1" subtype="0" shape="2" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="13" y="3"/>
 		<spawn x="0" y="2">
@@ -3219,7 +3219,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75030" name="Community - Dried - Love you!" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75030" name="Community - Dried - Love you!" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -3231,7 +3231,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="2" y="1">
-			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="4" y="1">
 			<entity type="90" variant="1" subtype="0" weight="1.0"/>
@@ -3261,7 +3261,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75031" name="Community - Dried - They hold a grudge" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75031" name="Community - Dried - They hold a grudge" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -3315,7 +3315,7 @@
 			<entity type="90" variant="1" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75032" name="Community - Dried - Up and Down" type="1" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75032" name="Community - Dried - Up and Down" type="1" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -3575,7 +3575,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75033" name="Community - Dried - Sacks and Shit" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75033" name="Community - Dried - Sacks and Shit" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -3608,7 +3608,7 @@
 			<entity type="88" variant="2" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75034" name="Community - Neutral Fly - Who will it choose??" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75034" name="Community - Neutral Fly - Who will it choose??" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -3620,7 +3620,7 @@
 			<entity type="90" variant="1" subtype="2" weight="1.0"/>
 		</spawn>
 		<spawn x="6" y="3">
-			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+			<entity type="161" variant="20" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="1" y="5">
 			<entity type="90" variant="1" subtype="2" weight="1.0"/>
@@ -3629,7 +3629,7 @@
 			<entity type="90" variant="1" subtype="2" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75035" name="Community - Fivehead - I'm listening to heads on venus rn" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75035" name="Community - Fivehead - I'm listening to heads on venus rn" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -3665,7 +3665,7 @@
 			<entity type="90" variant="1" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="2" y="3">
-			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+			<entity type="161" variant="12" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="4" y="3">
 			<entity type="90" variant="1" subtype="0" weight="1.0"/>
@@ -3698,7 +3698,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75036" name="Community - Floater - Bleeders" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75036" name="Community - Floater - Bleeders" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -3734,7 +3734,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="6" y="1">
-			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="9" y="1">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -3797,7 +3797,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75037" name="Community - Dried - Reehee-OW" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75037" name="Community - Dried - Reehee-OW" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -3890,7 +3890,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75038" name="Community - Dried - Hiding where they can" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75038" name="Community - Dried - Hiding where they can" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -3908,7 +3908,7 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="10" y="1">
-			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+			<entity type="161" variant="12" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="2" y="2">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -3953,7 +3953,7 @@
 			<entity type="90" variant="1" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75039" name="Community - Dried - Literally so much meat" type="1" subtype="0" shape="6" width="26" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75039" name="Community - Dried - Literally so much meat" type="1" subtype="0" shape="6" width="26" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -4060,16 +4060,16 @@
 			<entity type="15" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="10" y="4">
-			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+			<entity type="161" variant="20" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="16" y="4">
-			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+			<entity type="161" variant="20" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="14" y="5">
 			<entity type="15" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75040" name="Community - Dried - Twitter vs X be like" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75040" name="Community - Dried - Twitter vs X be like" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -4126,7 +4126,7 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75041" name="Community - Dried - Pooped themselves" type="1" subtype="0" shape="9" width="26" height="14" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75041" name="Community - Dried - Pooped themselves" type="1" subtype="0" shape="9" width="26" height="14" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="6"/>
 		<door exists="True" x="6" y="14"/>
@@ -4295,7 +4295,7 @@
 			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75042" name="Oliver - Dried - what? you expected something?" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75042" name="Oliver - Dried - what? you expected something?" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -4337,7 +4337,7 @@
 			<entity type="90" variant="1" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75043" name="Oliver - Dried - uh oh gowno jezdzi" type="1" subtype="0" shape="2" width="13" height="7" difficulty="8" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75043" name="Oliver - Dried - uh oh gowno jezdzi" type="1" subtype="0" shape="2" width="13" height="7" difficulty="8" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="13" y="3"/>
 		<spawn x="8" y="2">
@@ -4353,7 +4353,7 @@
 			<entity type="90" variant="1" subtype="2" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75044" name="Oliver - Dreid - Meat grinder disco" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75044" name="Oliver - Dreid - Meat grinder disco" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -4437,7 +4437,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75045" name="Oliver - Dried - BOMBS AWAY" type="1" subtype="0" shape="9" width="26" height="14" difficulty="8" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75045" name="Oliver - Dried - BOMBS AWAY" type="1" subtype="0" shape="9" width="26" height="14" difficulty="8" weight="1.0">
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="6"/>
 		<door exists="True" x="6" y="14"/>
@@ -4663,7 +4663,7 @@
 			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75046" name="Oliver - Dried - Clown party" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75046" name="Oliver - Dried - Clown party" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -4712,7 +4712,7 @@
 			<entity type="90" variant="1" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75047" name="Community - Dried - Horf Party!" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75047" name="Community - Dried - Horf Party!" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -4784,7 +4784,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75048" name="Community - Dried - So dark rn" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75048" name="Community - Dried - So dark rn" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -4814,7 +4814,7 @@
 			<entity type="90" variant="1" subtype="1" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75049" name="Community - Dried - Under the C^M (teehee)" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75049" name="Community - Dried - Under the C^M (teehee)" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -4946,7 +4946,7 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75050" name="Community - Floater - A Worm's errand" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75050" name="Community - Floater - A Worm's errand" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -4955,7 +4955,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="9" y="0">
-			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="12" y="0">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -4970,7 +4970,7 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="11" y="2">
-			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="3" y="3">
 			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
@@ -4994,7 +4994,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75051" name="Community - Dried - Trap room? I think not" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75051" name="Community - Dried - Trap room? I think not" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -5015,13 +5015,13 @@
 			<entity type="969" variant="9" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="2" y="3">
-			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+			<entity type="161" variant="12" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="6" y="3">
 			<entity type="85" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="10" y="3">
-			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+			<entity type="161" variant="12" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="2" y="4">
 			<entity type="969" variant="9" subtype="0" weight="1.0"/>
@@ -5036,7 +5036,7 @@
 			<entity type="969" variant="9" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75052" name="Community - Dried - No enemies, but still pain???" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75052" name="Community - Dried - No enemies, but still pain???" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -5105,7 +5105,7 @@
 			<entity type="90" variant="1" subtype="6" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75053" name="Community - Dried - Get MUTATED" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75053" name="Community - Dried - Get MUTATED" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -5171,7 +5171,7 @@
 			<entity type="1001" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75054" name="Community - Dried - A room that totally wasn;t copied off of lol" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75054" name="Community - Dried - A room that totally wasn;t copied off of lol" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -5210,7 +5210,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75055" name="Community - Dreid - Oh actually FUCK YOU" type="1" subtype="0" shape="4" width="13" height="14" difficulty="8" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75055" name="Community - Dreid - Oh actually FUCK YOU" type="1" subtype="0" shape="4" width="13" height="14" difficulty="8" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -5293,7 +5293,7 @@
 			<entity type="90" variant="1" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75056" name="Community - Dried - You really either think it's heaven or hell lol" type="1" subtype="0" shape="10" width="26" height="14" difficulty="8" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75056" name="Community - Dried - You really either think it's heaven or hell lol" type="1" subtype="0" shape="10" width="26" height="14" difficulty="8" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -5450,7 +5450,7 @@
 			<entity type="29" variant="1" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75057" name="Community - Dried - Rascim PlaceHOLDer" type="1" subtype="0" shape="8" width="26" height="14" difficulty="8" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75057" name="Community - Dried - Rascim PlaceHOLDer" type="1" subtype="0" shape="8" width="26" height="14" difficulty="8" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -5811,7 +5811,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75058" name="Community - Dried - Um thats the same fucking room" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75058" name="Community - Dried - Um thats the same fucking room" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -5853,7 +5853,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75059" name="Community - Dried - One pissed himself (2nd version)" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75059" name="Community - Dried - One pissed himself (2nd version)" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -5907,10 +5907,10 @@
 			<entity type="90" variant="1" subtype="5" weight="1.0"/>
 		</spawn>
 		<spawn x="2" y="5">
-			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+			<entity type="161" variant="20" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75060" name="Community - Dried - Wait patiently" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75060" name="Community - Dried - Wait patiently" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -5970,7 +5970,7 @@
 			<entity type="90" variant="1" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75061" name="Community - Dried - Buddy you are not winning this fight" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75061" name="Community - Dried - Buddy you are not winning this fight" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -6012,7 +6012,7 @@
 			<entity type="80" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75062" name="Community - Dried - Buddy you are not winning this fight" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75062" name="Community - Dried - Buddy you are not winning this fight" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -6054,7 +6054,7 @@
 			<entity type="80" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75063" name="Community - Dried - Schrodinger's left testicle" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75063" name="Community - Dried - Schrodinger's left testicle" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -6136,7 +6136,7 @@
 			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75064" name="Community - Dried - xocolate cocaine room (CVS said that)" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75064" name="Community - Dried - xocolate cocaine room (CVS said that)" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -6211,7 +6211,7 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75065" name="Community - Dried - yar har har har" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75065" name="Community - Dried - yar har har har" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -6295,7 +6295,7 @@
 			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75066" name="Community - Dried - xocolate cocaine room numero dos" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75066" name="Community - Dried - xocolate cocaine room numero dos" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -6388,7 +6388,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75067" name="Community - Dried - Watch yo tone" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75067" name="Community - Dried - Watch yo tone" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -6537,7 +6537,7 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75068" name="Community - Dried - are you serious right meow?" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75068" name="Community - Dried - are you serious right meow?" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -6660,7 +6660,7 @@
 			<entity type="90" variant="1" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75069" name="Community - Neutral Fly - Caution: chance of spiders" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75069" name="Community - Neutral Fly - Caution: chance of spiders" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -6698,7 +6698,7 @@
 			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="3" y="3">
-			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+			<entity type="161" variant="20" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="5" y="3">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
@@ -6710,7 +6710,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="9" y="3">
-			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+			<entity type="161" variant="20" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="0" y="4">
 			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
@@ -6748,7 +6748,7 @@
 			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75070" name="Community - I HATE SPIDERS I HATE SPIDERS I HATE" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75070" name="Community - I HATE SPIDERS I HATE SPIDERS I HATE" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -6907,7 +6907,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75071" name="Community - Dried - Workshop" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75071" name="Community - Dried - Workshop" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -7015,7 +7015,7 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75072" name="Community - Dried - Protectors of the realm" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75072" name="Community - Dried - Protectors of the realm" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -7078,7 +7078,7 @@
 			<entity type="90" variant="1" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75073" name="Community - That's not my baby" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75073" name="Community - That's not my baby" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -7210,7 +7210,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75074" name="Community - Dried - Dried from all sides" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75074" name="Community - Dried - Dried from all sides" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -7327,7 +7327,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75075" name="Community - Dried - &quot;The Dry Corner(tm)&quot;" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75075" name="Community - Dried - &quot;The Dry Corner(tm)&quot;" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -7402,7 +7402,7 @@
 			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75076" name="Community - Dried - Decently annoying room" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75076" name="Community - Dried - Decently annoying room" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -7513,7 +7513,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75077" name="Community - Dried -  The Bone Zone (boneless edition)" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75077" name="Community - Dried -  The Bone Zone (boneless edition)" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -7603,7 +7603,7 @@
 			<entity type="5" variant="0" subtype="2" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75078" name="Community - Dried -  Tricky goodies" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75078" name="Community - Dried -  Tricky goodies" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -7711,7 +7711,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75079" name="Community - Dried -  Protectors of the sack" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75079" name="Community - Dried -  Protectors of the sack" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -7783,7 +7783,7 @@
 			<entity type="240" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75080" name="Community - You ain't getting that chest" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75080" name="Community - You ain't getting that chest" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -7906,7 +7906,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75081" name="Community - Awkward diagonals" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75081" name="Community - Awkward diagonals" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -7993,7 +7993,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75082" name="Community - Stealth mode" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75082" name="Community - Stealth mode" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -8095,7 +8095,7 @@
 			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75083" name="Community - Not the Dried(tm)s!" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75083" name="Community - Not the Dried(tm)s!" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -8155,7 +8155,7 @@
 			<entity type="90" variant="1" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75084" name="Community - Kablooey" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75084" name="Community - Kablooey" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -8308,7 +8308,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75085" name="Community - Kablooey (now with spikes)" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75085" name="Community - Kablooey (now with spikes)" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -8389,7 +8389,7 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75086" name="Community - xocolate cocaine room 3" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75086" name="Community - xocolate cocaine room 3" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -8449,7 +8449,7 @@
 			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75087" name="Community - Mulliboomaze" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75087" name="Community - Mulliboomaze" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -8560,7 +8560,7 @@
 			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75088" name="Community - Dried - Big, long and hard" type="1" subtype="0" shape="4" width="13" height="14" difficulty="8" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75088" name="Community - Dried - Big, long and hard" type="1" subtype="0" shape="4" width="13" height="14" difficulty="8" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -8745,7 +8745,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75089" name="Community - Dried - Sack spiders" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75089" name="Community - Dried - Sack spiders" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -8841,7 +8841,7 @@
 			<entity type="29" variant="1" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75090" name="Community - Dried - My balls hang" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75090" name="Community - Dried - My balls hang" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -8904,7 +8904,7 @@
 			<entity type="90" variant="1" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75091" name="Community - Dried - Dried Spam (like the meat GET IT????)" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75091" name="Community - Dried - Dried Spam (like the meat GET IT????)" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -8961,7 +8961,7 @@
 			<entity type="90" variant="1" subtype="2" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75092" name="Community - Strange, huh" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75092" name="Community - Strange, huh" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -9054,7 +9054,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75093" name="Community - Dried - STAY IN YOUR LANE" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75093" name="Community - Dried - STAY IN YOUR LANE" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -9162,7 +9162,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75094" name="Community - Dried - Only room with a big spider, I'm such a nice person" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75094" name="Community - Dried - Only room with a big spider, I'm such a nice person" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -9270,7 +9270,7 @@
 			<entity type="5" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75095" name="Community - :(" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75095" name="Community - :(" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -9318,7 +9318,7 @@
 			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75096" name="Community - Because I'm happy" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75096" name="Community - Because I'm happy" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -9375,7 +9375,7 @@
 			<entity type="33" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75097" name="Community - Push a bomb" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75097" name="Community - Push a bomb" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -9474,7 +9474,7 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75098" name="Community - Dried - Shadow wizard money gang" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75098" name="Community - Dried - Shadow wizard money gang" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -9606,7 +9606,7 @@
 			<entity type="90" variant="1" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75099" name="Community - LOOT (0.5)" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="0.5" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75099" name="Community - LOOT (0.5)" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="0.5">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -9738,7 +9738,7 @@
 			<entity type="5" variant="69" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75100" name="Community - We love casting spells" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75100" name="Community - We love casting spells" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -9843,7 +9843,7 @@
 			<entity type="1009" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75101" name="Community - Beware of the spikes" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75101" name="Community - Beware of the spikes" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -9999,7 +9999,7 @@
 			<entity type="1009" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75102" name="Community - You want a bomb? HAVE A BOMB" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0" lastTestTime="2024-05-26T22:29+00:00">
+	<room variant="75102" name="Community - You want a bomb? HAVE A BOMB" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -10180,7 +10180,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="4" y="1">
-			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+			<entity type="161" variant="20" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="5" y="1">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -10225,7 +10225,7 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75104" name="Community - Dried - Stay Away or Close, IDK" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0" lastTestTime="2024-06-11T02:28+00:00">
+	<room variant="75104" name="Community - Dried - Stay Away or Close, IDK" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -10261,7 +10261,7 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75105" name="Community - Dried - Spooder" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0" lastTestTime="2024-06-11T02:28+00:00">
+	<room variant="75105" name="Community - Dried - Spooder" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -10270,7 +10270,7 @@
 			<entity type="90" variant="1" subtype="2" weight="1.0"/>
 		</spawn>
 		<spawn x="1" y="1">
-			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+			<entity type="161" variant="20" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="8" y="1">
 			<entity type="90" variant="1" subtype="2" weight="1.0"/>
@@ -10294,7 +10294,7 @@
 			<entity type="90" variant="1" subtype="6" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75106" name="Community - Dried - Corners" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0" lastTestTime="2024-06-11T02:28+00:00">
+	<room variant="75106" name="Community - Dried - Corners" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -10366,7 +10366,7 @@
 			<entity type="88" variant="2" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="10" y="4">
-			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="12" y="4">
 			<entity type="90" variant="1" subtype="6" weight="1.0"/>
@@ -10423,7 +10423,7 @@
 			<entity type="90" variant="1" subtype="6" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75107" name="Community - Dried - Slappin' Around the what now" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0" lastTestTime="2024-06-11T02:28+00:00">
+	<room variant="75107" name="Community - Dried - Slappin' Around the what now" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -10447,13 +10447,13 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="10" y="2">
-			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+			<entity type="161" variant="20" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="6" y="3">
 			<entity type="90" variant="1" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="2" y="4">
-			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+			<entity type="161" variant="20" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="8" y="4">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -10474,7 +10474,7 @@
 			<entity type="244" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75108" name="Community - Dried - Seperate Neighborhoods" type="1" subtype="0" shape="8" width="26" height="14" difficulty="8" weight="1.0" lastTestTime="2024-06-11T02:28+00:00">
+	<room variant="75108" name="Community - Dried - Seperate Neighborhoods" type="1" subtype="0" shape="8" width="26" height="14" difficulty="8" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -10730,7 +10730,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75109" name="Community - Dried - Run into the fires right nyow!" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0" lastTestTime="2024-06-11T02:28+00:00">
+	<room variant="75109" name="Community - Dried - Run into the fires right nyow!" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -10817,7 +10817,7 @@
 			<entity type="90" variant="1" subtype="1" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75110" name="Community - Dried - Sopping (Ew dude wth)" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0" lastTestTime="2024-06-11T02:28+00:00">
+	<room variant="75110" name="Community - Dried - Sopping (Ew dude wth)" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -10889,7 +10889,7 @@
 			<entity type="90" variant="1" subtype="6" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75111" name="Community - Dried - Forcing one to wait" type="1" subtype="0" shape="9" width="26" height="14" difficulty="8" weight="1.0" lastTestTime="2024-06-11T02:28+00:00">
+	<room variant="75111" name="Community - Dried - Forcing one to wait" type="1" subtype="0" shape="9" width="26" height="14" difficulty="8" weight="1.0">
 		<door exists="False" x="-1" y="10"/>
 		<door exists="True" x="6" y="6"/>
 		<door exists="False" x="6" y="14"/>
@@ -11379,7 +11379,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75112" name="Community - Dried - Spiders doin' some wack shit in the corner" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0" lastTestTime="2024-06-11T02:28+00:00">
+	<room variant="75112" name="Community - Dried - Spiders doin' some wack shit in the corner" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -11469,7 +11469,7 @@
 			<entity type="90" variant="1" subtype="2" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75113" name="Community - Dried - The different sides of town" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0" lastTestTime="2024-06-11T02:28+00:00">
+	<room variant="75113" name="Community - Dried - The different sides of town" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -11598,7 +11598,7 @@
 			<entity type="90" variant="1" subtype="2" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75114" name="Community - Dried - You have got to be joking, this piss joke can't go on forever (it can)" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0" lastTestTime="2024-06-11T02:28+00:00">
+	<room variant="75114" name="Community - Dried - You have got to be joking, this piss joke can't go on forever (it can)" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -11685,7 +11685,7 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75115" name="Community - Dried - Covered, like the prophecy fortetold" type="1" subtype="0" shape="6" width="26" height="7" difficulty="8" weight="1.0" lastTestTime="2024-06-11T02:28+00:00">
+	<room variant="75115" name="Community - Dried - Covered, like the prophecy fortetold" type="1" subtype="0" shape="6" width="26" height="7" difficulty="8" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -11840,7 +11840,7 @@
 			<entity type="1901" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75116" name="Community - Dried - OH FUCK YOU HAHAHAHAHAHAHHAHAHAHAHAHA" type="1" subtype="0" shape="7" width="26" height="7" difficulty="8" weight="1.0" lastTestTime="2024-06-11T02:28+00:00">
+	<room variant="75116" name="Community - Dried - OH FUCK YOU HAHAHAHAHAHAHHAHAHAHAHAHA" type="1" subtype="0" shape="7" width="26" height="7" difficulty="8" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="26" y="3"/>
 		<spawn x="0" y="2">
@@ -11922,7 +11922,7 @@
 			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="1" y="3">
-			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+			<entity type="161" variant="20" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="2" y="3">
 			<entity type="90" variant="1" subtype="3" weight="1.0"/>
@@ -11991,7 +11991,7 @@
 			<entity type="90" variant="1" subtype="3" weight="1.0"/>
 		</spawn>
 		<spawn x="24" y="3">
-			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+			<entity type="161" variant="20" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="0" y="4">
 			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
@@ -12069,7 +12069,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75117" name="Community - Dried - The joke still stands" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0" lastTestTime="2024-06-11T02:28+00:00">
+	<room variant="75117" name="Community - Dried - The joke still stands" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -12165,7 +12165,7 @@
 			<entity type="1901" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75118" name="Community - Dried - Yum yum steak" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0" lastTestTime="2024-06-11T02:28+00:00">
+	<room variant="75118" name="Community - Dried - Yum yum steak" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -12258,7 +12258,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75119" name="Community - Dried - Just stay put for now" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0" lastTestTime="2024-06-11T02:28+00:00">
+	<room variant="75119" name="Community - Dried - Just stay put for now" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -12426,7 +12426,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75120" name="Community - Dried - Bombs at a wonderful not deal" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0" lastTestTime="2024-06-11T02:28+00:00">
+	<room variant="75120" name="Community - Dried - Bombs at a wonderful not deal" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -12465,7 +12465,7 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75121" name="Community - Dried - So wonderful, they'll die instantly right?" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0" lastTestTime="2024-06-11T02:28+00:00">
+	<room variant="75121" name="Community - Dried - So wonderful, they'll die instantly right?" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -12528,7 +12528,7 @@
 			<entity type="90" variant="1" subtype="6" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75122" name="Community - Dried - Please stop it with the sex jokes" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0" lastTestTime="2024-06-11T02:28+00:00">
+	<room variant="75122" name="Community - Dried - Please stop it with the sex jokes" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -12609,7 +12609,7 @@
 			<entity type="90" variant="1" subtype="2" weight="1.0"/>
 		</spawn>
 		<spawn x="8" y="2">
-			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="11" y="2">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -12633,7 +12633,7 @@
 			<entity type="869" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75123" name="Callie - Neutral Fly - He will hold me white" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-06-11T02:28+00:00">
+	<room variant="75123" name="Callie - Neutral Fly - He will hold me white" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -12645,7 +12645,7 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="10" y="0">
-			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+			<entity type="161" variant="20" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="12" y="0">
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
@@ -12675,7 +12675,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="6" y="3">
-			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="9" y="3">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -12705,7 +12705,7 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="2" y="6">
-			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+			<entity type="161" variant="20" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="3" y="6">
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
@@ -12714,7 +12714,7 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75124" name="Callie - Neutral Fly - Clotted" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-06-11T02:28+00:00">
+	<room variant="75124" name="Callie - Neutral Fly - Clotted" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -12753,7 +12753,7 @@
 			<entity type="15" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="6" y="3">
-			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+			<entity type="161" variant="20" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="4" y="4">
 			<entity type="15" variant="0" subtype="0" weight="1.0"/>
@@ -12792,7 +12792,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75125" name="Callie - Neutral Fly - Keanu, you like fiend folio?" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-06-11T02:28+00:00">
+	<room variant="75125" name="Callie - Neutral Fly - Keanu, you like fiend folio?" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -12822,7 +12822,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="3" y="1">
-			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+			<entity type="161" variant="20" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="0" y="2">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -12852,7 +12852,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="3" y="3">
-			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+			<entity type="161" variant="12" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="0" y="4">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -12882,7 +12882,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="3" y="5">
-			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+			<entity type="161" variant="20" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="0" y="6">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -12900,14 +12900,14 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75126" name="Callie - Neutral Fly - Yeah, I like the Whites, and?" type="1" subtype="0" shape="2" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-06-11T02:28+00:00">
+	<room variant="75126" name="Callie - Neutral Fly - Yeah, I like the Whites, and?" type="1" subtype="0" shape="2" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="13" y="3"/>
 		<spawn x="1" y="2">
 			<entity type="90" variant="1" subtype="2" weight="1.0"/>
 		</spawn>
 		<spawn x="4" y="2">
-			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+			<entity type="161" variant="20" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="12" y="2">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -12925,13 +12925,13 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="8" y="4">
-			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+			<entity type="161" variant="20" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="11" y="4">
 			<entity type="90" variant="1" subtype="2" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75127" name="Callie - Neutral Fly - I want my cocaine and I want it NOW!!" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-06-11T02:28+00:00">
+	<room variant="75127" name="Callie - Neutral Fly - I want my cocaine and I want it NOW!!" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -12964,13 +12964,13 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="4" y="3">
-			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+			<entity type="161" variant="20" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="6" y="3">
-			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="8" y="3">
-			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+			<entity type="161" variant="20" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="3" y="4">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -13000,7 +13000,7 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75128" name="Callie - Neutral Fly - THE WORM COUNCIL ASKS FOR YOUR ARRIVAL" type="1" subtype="0" shape="6" width="26" height="7" difficulty="5" weight="1.0" lastTestTime="2024-06-11T02:28+00:00">
+	<room variant="75128" name="Callie - Neutral Fly - THE WORM COUNCIL ASKS FOR YOUR ARRIVAL" type="1" subtype="0" shape="6" width="26" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -13020,7 +13020,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="10" y="0">
-			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+			<entity type="161" variant="20" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="16" y="0">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -13053,7 +13053,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="1" y="1">
-			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+			<entity type="161" variant="20" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="7" y="1">
 			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
@@ -13119,13 +13119,13 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="13" y="2">
-			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+			<entity type="161" variant="20" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="16" y="2">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="23" y="2">
-			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+			<entity type="161" variant="20" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="2" y="3">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -13137,7 +13137,7 @@
 			<entity type="244" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="5" y="3">
-			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+			<entity type="161" variant="20" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="6" y="3">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -13146,7 +13146,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="9" y="3">
-			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+			<entity type="161" variant="20" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="16" y="3">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -13257,7 +13257,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="18" y="5">
-			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+			<entity type="161" variant="20" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="21" y="5">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -13299,7 +13299,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75129" name="Callie - Neutral Fly - There's blood on my carpet now get it out" type="1" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2024-06-11T02:28+00:00">
+	<room variant="75129" name="Callie - Neutral Fly - There's blood on my carpet now get it out" type="1" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -13307,7 +13307,7 @@
 		<door exists="True" x="13" y="3"/>
 		<door exists="True" x="13" y="10"/>
 		<spawn x="2" y="1">
-			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+			<entity type="161" variant="20" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="2" y="3">
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
@@ -13397,10 +13397,10 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="10" y="12">
-			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+			<entity type="161" variant="20" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75130" name="Callie - Neutral Fly - They're sad ur sad ok???" type="1" subtype="0" shape="3" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-06-11T02:28+00:00">
+	<room variant="75130" name="Callie - Neutral Fly - They're sad ur sad ok???" type="1" subtype="0" shape="3" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
 		<spawn x="4" y="0">
@@ -13410,7 +13410,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="4" y="1">
-			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+			<entity type="161" variant="20" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="6" y="2">
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
@@ -13422,7 +13422,7 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="8" y="5">
-			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+			<entity type="161" variant="20" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="4" y="6">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -13431,14 +13431,14 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75131" name="Callie - Neutral Fly - Pray you're not cornered" type="1" subtype="0" shape="2" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-06-11T02:28+00:00">
+	<room variant="75131" name="Callie - Neutral Fly - Pray you're not cornered" type="1" subtype="0" shape="2" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="13" y="3"/>
 		<spawn x="3" y="2">
 			<entity type="16" variant="1" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="7" y="2">
-			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+			<entity type="161" variant="20" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="8" y="2">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -13474,13 +13474,13 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="9" y="4">
-			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+			<entity type="161" variant="20" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="12" y="4">
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75132" name="Callie - Floater - Heya! Have you seen my balls recently? No? What??" type="1" subtype="0" shape="3" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-06-11T02:28+00:00">
+	<room variant="75132" name="Callie - Floater - Heya! Have you seen my balls recently? No? What??" type="1" subtype="0" shape="3" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
 		<spawn x="4" y="0">
@@ -13496,31 +13496,31 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="4" y="2">
-			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="6" y="2">
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="8" y="2">
-			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="4" y="3">
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="6" y="3">
-			<entity type="161" variant="0" subtype="0" weight="1.0"/>
+			<entity type="161" variant="12" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="8" y="3">
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="4" y="4">
-			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="6" y="4">
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="8" y="4">
-			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="4" y="5">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -13535,7 +13535,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75133" name="Callie - Neutral Fly - I'm scared! That you're scared! Duh!!!" type="1" subtype="0" shape="10" width="26" height="14" difficulty="5" weight="1.0" lastTestTime="2024-06-11T02:28+00:00">
+	<room variant="75133" name="Callie - Neutral Fly - I'm scared! That you're scared! Duh!!!" type="1" subtype="0" shape="10" width="26" height="14" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -13596,7 +13596,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="4" y="3">
-			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+			<entity type="161" variant="20" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="7" y="3">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -13632,7 +13632,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="11" y="5">
-			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+			<entity type="161" variant="20" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="0" y="6">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -13656,7 +13656,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="2" y="7">
-			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+			<entity type="161" variant="20" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="6" y="7">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -13731,7 +13731,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="19" y="8">
-			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+			<entity type="161" variant="20" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="24" y="8">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -13749,7 +13749,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="9" y="9">
-			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+			<entity type="161" variant="20" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="11" y="9">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -13770,7 +13770,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="14" y="10">
-			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+			<entity type="161" variant="20" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="20" y="10">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -13815,7 +13815,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="24" y="11">
-			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+			<entity type="161" variant="20" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="25" y="11">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -13947,14 +13947,14 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75134" name="Callie - Neutral Fly - Why they white" type="1" subtype="0" shape="3" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-06-11T02:28+00:00">
+	<room variant="75134" name="Callie - Neutral Fly - Why they white" type="1" subtype="0" shape="3" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
 		<spawn x="4" y="0">
 			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="6" y="2">
-			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+			<entity type="161" variant="20" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="6" y="3">
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
@@ -13969,7 +13969,7 @@
 			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75135" name="Callie - Neutral Fly - Cramped again? Good golly" type="1" subtype="0" shape="9" width="26" height="14" difficulty="5" weight="1.0" lastTestTime="2024-06-11T02:28+00:00">
+	<room variant="75135" name="Callie - Neutral Fly - Cramped again? Good golly" type="1" subtype="0" shape="9" width="26" height="14" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="6"/>
 		<door exists="True" x="6" y="14"/>
@@ -13991,7 +13991,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="22" y="0">
-			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="23" y="0">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -14075,7 +14075,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="19" y="5">
-			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="23" y="5">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -14159,13 +14159,13 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="15" y="7">
-			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="19" y="7">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="22" y="7">
-			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+			<entity type="161" variant="20" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="25" y="7">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -14234,7 +14234,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="9" y="9">
-			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="12" y="9">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -14309,7 +14309,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="18" y="11">
-			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+			<entity type="161" variant="20" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="19" y="11">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -14438,7 +14438,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75136" name="Callie - Neutral Fly - Potty for pots" type="1" subtype="0" shape="10" width="26" height="14" difficulty="5" weight="1.0" lastTestTime="2024-06-11T02:28+00:00">
+	<room variant="75136" name="Callie - Neutral Fly - Potty for pots" type="1" subtype="0" shape="10" width="26" height="14" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -14496,7 +14496,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="8" y="2">
-			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+			<entity type="161" variant="20" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="12" y="2">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -14505,7 +14505,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="3" y="4">
-			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+			<entity type="161" variant="20" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="12" y="4">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -14577,7 +14577,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="5" y="8">
-			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+			<entity type="161" variant="20" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="14" y="8">
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
@@ -14592,10 +14592,10 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="10" y="9">
-			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+			<entity type="161" variant="20" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="20" y="9">
-			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+			<entity type="161" variant="20" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="25" y="9">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -14604,7 +14604,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="15" y="11">
-			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+			<entity type="161" variant="20" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="25" y="11">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -14700,7 +14700,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="75137" name="Callie - Neutral Fly - Woag again" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-06-11T02:28+00:00">
+	<room variant="75137" name="Callie - Neutral Fly - Woag again" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -14724,10 +14724,10 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="3" y="1">
-			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+			<entity type="161" variant="20" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="8" y="1">
-			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="11" y="1">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -14742,7 +14742,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="8" y="3">
-			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="11" y="3">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -14760,10 +14760,10 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="3" y="5">
-			<entity type="161" variant="3" subtype="1" weight="1.0"/>
+			<entity type="161" variant="20" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="8" y="5">
-			<entity type="161" variant="1" subtype="67" weight="1.0"/>
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="11" y="5">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
