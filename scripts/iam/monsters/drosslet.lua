@@ -65,7 +65,7 @@ function mod:DrossletAI(npc, sprite, d)
     if npc:CollidesWithGrid() and npc.Position then
         local directon = {} --sh- shuddap about my spelling !!!
         for i = 1, 4 do
-            if room:CheckLine(npc.Position, npc.Position+Vector(20,20):Rotated(90*i),0,1,false,false) then --struggle
+            if room and room:CheckLine(npc.Position, npc.Position+Vector(20,20):Rotated(90*i),0,1,false,false) then --struggle
                 table.insert(directon, i)
             end
         end
