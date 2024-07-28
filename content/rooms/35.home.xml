@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <rooms>
-	<room variant="24069" name="Blank Closet" type="1" subtype="10" shape="2" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45000" name="Blank Closet" type="1" subtype="10" shape="2" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="13" y="3"/>
 		<spawn x="7" y="2">
@@ -58,7 +58,7 @@
 			<entity type="1999" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-  <room variant="24069" name="Blank Closet" type="1" subtype="10" shape="2" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45001" name="Blank Closet" type="1" subtype="10" shape="2" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="13" y="3"/>
 		<spawn x="7" y="2">
@@ -116,7 +116,7 @@
 			<entity type="1999" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-  <room variant="24069" name="Blank Closet" type="1" subtype="10" shape="2" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45002" name="Blank Closet" type="1" subtype="10" shape="2" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="13" y="3"/>
 		<spawn x="7" y="2">
@@ -174,7 +174,7 @@
 			<entity type="1999" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-  <room variant="24069" name="Blank Closet" type="1" subtype="10" shape="2" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45003" name="Blank Closet" type="1" subtype="10" shape="2" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="13" y="3"/>
 		<spawn x="7" y="2">
@@ -232,7 +232,7 @@
 			<entity type="1999" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-  <room variant="24069" name="Blank Closet" type="1" subtype="10" shape="2" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45004" name="Blank Closet" type="1" subtype="10" shape="2" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="13" y="3"/>
 		<spawn x="7" y="2">
@@ -290,7 +290,7 @@
 			<entity type="1999" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-  <room variant="24069" name="Blank Closet" type="1" subtype="10" shape="2" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45005" name="Blank Closet" type="1" subtype="10" shape="2" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="13" y="3"/>
 		<spawn x="7" y="2">
@@ -348,7 +348,7 @@
 			<entity type="1999" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-  <room variant="24069" name="Blank Closet" type="1" subtype="10" shape="2" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45006" name="Blank Closet" type="1" subtype="10" shape="2" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="13" y="3"/>
 		<spawn x="7" y="2">
@@ -406,7 +406,7 @@
 			<entity type="1999" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-  <room variant="24069" name="Blank Closet" type="1" subtype="10" shape="2" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45007" name="Blank Closet" type="1" subtype="10" shape="2" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="13" y="3"/>
 		<spawn x="7" y="2">
@@ -464,7 +464,7 @@
 			<entity type="1999" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-  <room variant="24069" name="Blank Closet" type="1" subtype="10" shape="2" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45008" name="Blank Closet" type="1" subtype="10" shape="2" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="13" y="3"/>
 		<spawn x="7" y="2">
@@ -522,7 +522,7 @@
 			<entity type="1999" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-  <room variant="24069" name="Blank Closet" type="1" subtype="10" shape="2" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45009" name="Blank Closet" type="1" subtype="10" shape="2" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="13" y="3"/>
 		<spawn x="7" y="2">
@@ -580,7 +580,7 @@
 			<entity type="1999" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-  <room variant="24069" name="Blank Closet" type="1" subtype="10" shape="2" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45010" name="Blank Closet" type="1" subtype="10" shape="2" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="13" y="3"/>
 		<spawn x="7" y="2">
@@ -638,7 +638,7 @@
 			<entity type="1999" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-  <room variant="24069" name="Blank Closet" type="1" subtype="10" shape="2" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45011" name="Blank Closet" type="1" subtype="10" shape="2" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="13" y="3"/>
 		<spawn x="7" y="2">
@@ -696,7 +696,7 @@
 			<entity type="1999" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-  <room variant="24069" name="Blank Closet" type="1" subtype="10" shape="2" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45012" name="Blank Closet" type="1" subtype="10" shape="2" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="13" y="3"/>
 		<spawn x="7" y="2">
@@ -754,7 +754,7 @@
 			<entity type="1999" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-  <room variant="24069" name="Blank Closet" type="1" subtype="10" shape="2" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45013" name="Blank Closet" type="1" subtype="10" shape="2" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="13" y="3"/>
 		<spawn x="7" y="2">
@@ -812,7 +812,7 @@
 			<entity type="1999" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-  <room variant="24069" name="Blank Closet" type="1" subtype="10" shape="2" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45014" name="Blank Closet" type="1" subtype="10" shape="2" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="13" y="3"/>
 		<spawn x="7" y="2">
@@ -870,7 +870,7 @@
 			<entity type="1999" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-  <room variant="24069" name="Blank Closet" type="1" subtype="10" shape="2" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45015" name="Blank Closet" type="1" subtype="10" shape="2" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="13" y="3"/>
 		<spawn x="7" y="2">
@@ -928,7 +928,7 @@
 			<entity type="1999" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-  <room variant="24069" name="Blank Closet" type="1" subtype="10" shape="2" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45016" name="Blank Closet" type="1" subtype="10" shape="2" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="13" y="3"/>
 		<spawn x="7" y="2">
@@ -986,7 +986,7 @@
 			<entity type="1999" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-  <room variant="24069" name="Blank Closet" type="1" subtype="10" shape="2" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45017" name="Blank Closet" type="1" subtype="10" shape="2" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="13" y="3"/>
 		<spawn x="7" y="2">
@@ -1044,7 +1044,7 @@
 			<entity type="1999" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-  <room variant="24069" name="Blank Closet" type="1" subtype="10" shape="2" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45018" name="Blank Closet" type="1" subtype="10" shape="2" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="13" y="3"/>
 		<spawn x="7" y="2">
@@ -1102,7 +1102,7 @@
 			<entity type="1999" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-  <room variant="24069" name="Blank Closet" type="1" subtype="10" shape="2" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45019" name="Blank Closet" type="1" subtype="10" shape="2" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="13" y="3"/>
 		<spawn x="7" y="2">
@@ -1160,7 +1160,7 @@
 			<entity type="1999" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-  <room variant="24069" name="Blank Closet" type="1" subtype="10" shape="2" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45020" name="Blank Closet" type="1" subtype="10" shape="2" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="13" y="3"/>
 		<spawn x="7" y="2">
@@ -1218,7 +1218,7 @@
 			<entity type="1999" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-  <room variant="24069" name="Blank Closet" type="1" subtype="10" shape="2" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45021" name="Blank Closet" type="1" subtype="10" shape="2" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="13" y="3"/>
 		<spawn x="7" y="2">
@@ -1276,7 +1276,7 @@
 			<entity type="1999" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-  <room variant="24069" name="Blank Closet" type="1" subtype="10" shape="2" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45022" name="Blank Closet" type="1" subtype="10" shape="2" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="13" y="3"/>
 		<spawn x="7" y="2">
@@ -1334,7 +1334,7 @@
 			<entity type="1999" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-  <room variant="24069" name="Blank Closet" type="1" subtype="10" shape="2" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45023" name="Blank Closet" type="1" subtype="10" shape="2" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="13" y="3"/>
 		<spawn x="7" y="2">
@@ -1392,7 +1392,7 @@
 			<entity type="1999" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-  <room variant="24069" name="Blank Closet" type="1" subtype="10" shape="2" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45024" name="Blank Closet" type="1" subtype="10" shape="2" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="13" y="3"/>
 		<spawn x="7" y="2">
@@ -1450,7 +1450,7 @@
 			<entity type="1999" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-  <room variant="24069" name="Blank Closet" type="1" subtype="10" shape="2" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45025" name="Blank Closet" type="1" subtype="10" shape="2" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="13" y="3"/>
 		<spawn x="7" y="2">
@@ -1508,7 +1508,7 @@
 			<entity type="1999" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-  <room variant="24069" name="Blank Closet" type="1" subtype="10" shape="2" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45026" name="Blank Closet" type="1" subtype="10" shape="2" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="13" y="3"/>
 		<spawn x="7" y="2">
@@ -1566,7 +1566,7 @@
 			<entity type="1999" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-  <room variant="24069" name="Blank Closet" type="1" subtype="10" shape="2" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45027" name="Blank Closet" type="1" subtype="10" shape="2" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="13" y="3"/>
 		<spawn x="7" y="2">
@@ -1624,7 +1624,7 @@
 			<entity type="1999" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-  <room variant="24069" name="Blank Closet" type="1" subtype="10" shape="2" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45028" name="Blank Closet" type="1" subtype="10" shape="2" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="13" y="3"/>
 		<spawn x="7" y="2">
@@ -1682,8 +1682,7 @@
 			<entity type="1999" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-
-  <room variant="24069" name="Blank Closet" type="1" subtype="10" shape="2" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45029" name="Blank Closet" type="1" subtype="10" shape="2" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="13" y="3"/>
 		<spawn x="7" y="2">
@@ -1741,7 +1740,7 @@
 			<entity type="1999" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-  <room variant="24069" name="Blank Closet" type="1" subtype="10" shape="2" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45030" name="Blank Closet" type="1" subtype="10" shape="2" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="13" y="3"/>
 		<spawn x="7" y="2">
@@ -1799,5 +1798,4 @@
 			<entity type="1999" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-  
 </rooms>

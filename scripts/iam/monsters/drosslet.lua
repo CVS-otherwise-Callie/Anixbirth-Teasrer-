@@ -26,17 +26,21 @@ end, mod.Monsters.Drosslet.ID)
 function mod:DrossletAI(npc, sprite, d)
 
     if not d.init then
-        d.state = "idle"
+        d.veloctime = math.random(10, 50)
         d.tosharting = 0
         d.boost = 0
         d.spritedir = 0
         d.mycoolclouds = {}
         npc:AddEntityFlags(EntityFlag.FLAG_NO_PHYSICS_KNOCKBACK)
         d.drossletdir = math.random(4)
+        d.waittime = math.random(1, 5)
         d.init = true
     else
         npc.StateFrame = npc.StateFrame + 1
         d.mycoolclouds = d.mycoolclouds or {}
+        if not d.state and npc.StateFrame > d.veloctime/10 then
+            d.state = "idle"
+        end
     end
 
     --misc, thanks ff for the cool color
@@ -71,14 +75,17 @@ function mod:DrossletAI(npc, sprite, d)
             d.drossletdir = mod.DrossletDirs[d.drossletdir][3]
         end
 
-        if #d.mycoolclouds > 4 then
+        if d.mycoolclouds and #d.mycoolclouds > d.waittime then
             mod:DrossletShart(npc, 90)
+            for k in pairs (d.mycoolclouds) do
+                d.mycoolclouds [k] = nil
+            end
+            d.waittime = math.random(1, 5)
         end
 
         for i = 1, #d.mycoolclouds do
             d.mycoolclouds[i]:SetTimeout(120)
         end
-
     end
     if mod:isScare(npc) then
         npc.Velocity = mod:Lerp(npc.Velocity, mod.MoveDirs[d.drossletdir], -0.5):Resized(d.boost)
@@ -109,10 +116,11 @@ function mod:DrossletAI(npc, sprite, d)
     if d.state == "idle" then
         d.fartinit = false
         mod:spritePlay(sprite, "Idle" .. d.spritedir)
-        if npc.StateFrame > 20 then
+        if npc.StateFrame > d.veloctime then
                 if rng:RandomInt(100) > 70 then
                     d.drossletdir = math.random(4)
                 end
+                d.veloctime = math.random(10, 50)
                 d.state = "fart"
         end
         if not (d.boost <= 0) then
@@ -135,9 +143,6 @@ function mod:DrossletAI(npc, sprite, d)
         table.insert(d.mycoolclouds, cloud)
         cloud.Scale = 120
         cloud:Update()
-        if d.tosharting >= 3 and rng:RandomInt(100) > 70 then
-            mod:DrossletShart(npc)
-        end
         d.boost = 5
         npc.StateFrame = 0
     end
@@ -159,5 +164,16 @@ function mod:DrossletAI(npc, sprite, d)
     if npc:IsDead() then
         mod:DrossletShart(npc, 180, -20)
     end
+
 end
+
+    --and also to protect other mobs
+mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, function(_, npc, damage, flag, source)
+    if flag & DamageFlag.DAMAGE_EXPLOSION ~= 0 and source and source.Entity and source.Entity.SpawnerEntity and source.Entity.SpawnerEntity.Type == mod.Monsters.Drosslet.ID and source.Entity.SpawnerEntity.Variant == mod.Monsters.Drosslet.Var then
+        if not npc.Type == mod.Monsters.Drosslet.ID and npc.Variant ==  mod.Monsters.Drosslet.Var then
+        npc:TakeDamage(damage*0.05, flag & ~DamageFlag.DAMAGE_EXPLOSION, source, 0)
+        return false
+        end
+    end
+end)
 
