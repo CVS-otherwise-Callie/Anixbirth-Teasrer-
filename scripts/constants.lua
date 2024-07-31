@@ -30,6 +30,10 @@ FHAC.Savedata = {
     DeathFortunes = true,
 }
 
+FHAC.Challenges = {
+    Bestiary = Isaac.GetChallengeIdByName("[ANIX] The Real Bestiary")
+}
+
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- COLOR --
@@ -41,9 +45,6 @@ FHAC.Color = {
     FireJuicy = 	Color(0,0,0,1,1,0.5,0), -- also xalum?
     Charred =  Color(0.1,0.1,0.1,1,0,0,0) -- FIEND FOLIO; XALUM
 }
-
-StageAPI.AddEntities2Function(require("scripts.entities2"))
-
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 FHAC.EnemyDeathShit = {}

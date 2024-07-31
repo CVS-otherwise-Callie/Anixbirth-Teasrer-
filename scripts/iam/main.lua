@@ -34,6 +34,9 @@ FHAC.Scripts = {
 
 	Config = {
 		include("scripts.iam.musicconfig")
+	},
+	Challenges = {
+	include("scripts.iam.challenges.therealbestiary")
 	}
 }
 

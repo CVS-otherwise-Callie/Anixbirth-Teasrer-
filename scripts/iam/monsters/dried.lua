@@ -5,9 +5,10 @@ local rng = RNG()
 StageAPI.AddEntityPersistenceData({
     Type = mod.Monsters.Dried.ID,
     Variant = mod.Monsters.Dried.Var,
+    AutoPersists = true,
     RemoveOnRemove = true,
     RemoveOnDeath = true,
-    UpdateSubType = true
+    UpdateSubType = true,
 })
 
 mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)

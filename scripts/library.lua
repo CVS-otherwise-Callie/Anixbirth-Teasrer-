@@ -270,19 +270,23 @@ end
 
 --form codepal - https://codepal.ai/code-generator/query/GQzPwted/lua-function-remove-substring#:~:text=In%20Lua%2C%20you%20can%20easily,with%20the%20specified%20substring%20removed.
 function mod:removeSubstring(str, substr)
-    -- Find the starting index of the substring in the string.
-    local startIndex, endIndex = string.find(str, substr)
+   local startIndex, endIndex = string.find(str, substr)
  
-    -- If the substring is found, remove it from the string.
     if startIndex and endIndex then
         local prefix = string.sub(str, 1, startIndex - 1)
         local suffix = string.sub(str, endIndex + 1)
         return prefix .. suffix
     end
- 
-    -- If the substring is not found, return the original string.
     return str
 end
+
+function mod:saveRoomEnts()
+	local level = Game():GetLevel()
+	local roomDesk = level:GetCurrentRoomDesc() --hahahahahaahhahahahaha spelling is shit
+
+	
+end --no, make it so you insert the ents into the table for the current room, and then once all are indexed, insert that table into savedata - this should NOT be a thing called from the entity, but alled for each new room, and it will check for each entity with the data for SaveasPersistent
+
 
 function mod:GetRoomNameByType(type)
 	if type == 0 then

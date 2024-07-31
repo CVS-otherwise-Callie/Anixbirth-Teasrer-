@@ -21,6 +21,9 @@
 		<spawn x="12" y="2">
 			<entity type="1999" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="4" y="3">
+			<entity type="5" variant="350" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="7" y="3">
 			<entity type="1999" variant="0" subtype="0" weight="1.0"/>
 		</spawn>

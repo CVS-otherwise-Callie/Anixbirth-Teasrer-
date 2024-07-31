@@ -1,7 +1,6 @@
 local mod = FHAC
 local game = Game()
 local rng = RNG()
-local room = game:GetRoom()
 
 mod.DrossletDirs = {
     {"Up", false, 1},
@@ -24,6 +23,9 @@ mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
 end, mod.Monsters.Drosslet.ID)
 
 function mod:DrossletAI(npc, sprite, d)
+    
+    local room = game:GetRoom()
+
 
     if not d.init then
         d.veloctime = math.random(10, 50)
@@ -65,7 +67,7 @@ function mod:DrossletAI(npc, sprite, d)
     if npc:CollidesWithGrid() and npc.Position then
         local directon = {} --sh- shuddap about my spelling !!!
         for i = 1, 4 do
-            if room and room:CheckLine(npc.Position, npc.Position+Vector(20,20):Rotated(90*i),0,1,false,false) then --struggle
+            if room and game:GetRoom():CheckLine(npc.Position, npc.Position+Vector(20,20):Rotated(90*i),0,1,false,false) then --struggle
                 table.insert(directon, i)
             end
         end

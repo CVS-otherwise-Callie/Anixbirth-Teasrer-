@@ -98,6 +98,12 @@ function mod:SchmootAI(npc, sprite, d)
         end
     end
 
+    if npc:IsDead() then
+        npc:AddHealth(15)
+        d.state = "fallin"
+        sprite:Play("Fall")
+    end
+
     if d.state == "fallin" then
         if not d.secondinit then
             npc:AddHealth(15)
@@ -116,12 +122,19 @@ function mod:SchmootAI(npc, sprite, d)
         if mod:isScare(npc) then
             local targetvelocity = (targetpos - npc.Position):Resized(-15)
             npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 0.25)
-        elseif room:CheckLine(npc.Position,targetpos,0,1,false,false) then
+        elseif game:GetRoom():CheckLine(npc.Position,targetpos,0,1,false,false) then
             local targetvelocity = (targetpos - npc.Position):Resized(15)
             npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 0.25)
         else
             path:FindGridPath(targetpos, 0.9, 1, true)
         end
     end
+    
+    mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, function(npc)
+        if npc.Type == 161 and npc.Variant == mod.Monsters.Schmoot.Var then
+            if d.state == "fallin" then return false end
+            return true
+        end
+    end)
 end
 
