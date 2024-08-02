@@ -56,6 +56,10 @@ mod:AddCallback(ModCallbacks.MC_POST_RENDER, function()
 end
 )
 
+StageAPI.AddCallback("FHAC", "POST_SELECT_CHALLENGE_MUSIC", 1, function(currentstage, musicID, isCleared, musicRNG)
+    return Isaac.GetMusicIdByName("Of Food and Bees")
+end)
+
 StageAPI.AddCallback("FHAC", "PRE_LEVELMAP_SPAWN_DOOR", 1, function(slot, doorData, levelRoom, targetLevelRoom, roomData, levelMap)
     if game.Challenge == mod.Challenges.Bestiary then
         --print(slot, doorData.ExitRoom)

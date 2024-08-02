@@ -33,7 +33,7 @@ FHAC.Scripts = {
     },
 
 	Config = {
-		include("scripts.iam.musicconfig")
+		include("scripts.iam.levelreplaceshit")
 	},
 	Challenges = {
 	include("scripts.iam.challenges.therealbestiary")

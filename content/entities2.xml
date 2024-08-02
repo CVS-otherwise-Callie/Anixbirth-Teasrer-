@@ -253,8 +253,8 @@
     <!--end of dried-->
 
     <!--Burning Basement-->
-    <entity anm2path="monsters/schmoot/shmoot.anm2" reroll="true" baseHP="15" boss="0" champion="1" collisionDamage="1" collisionMass="3" collisionRadius="13" friction="1" id="161" name="Schmoot" numGridCollisionPoints="12" shadowSize="13" stageHP="0" variant="90" bestiary="true" portrait="90">
-		<bestiary transform="0,0,1" anim="IdleBounce" />
+    <entity anm2path="monsters/schmoot/shmoot.anm2" reroll="true" baseHP="8" boss="0" champion="1" collisionDamage="1" collisionMass="3" collisionRadius="13" friction="1" id="161" name="Schmoot" numGridCollisionPoints="12" shadowSize="13" stageHP="0" variant="90" bestiary="true" portrait="90">
+		<bestiary transform="0,0,1" anim="SchmootAppear" />
         <gibs amount="6" blood="1" bone="1" eye="0" gut="1" large="0" />
         <preload-snd id="146" />
     </entity>
@@ -286,6 +286,12 @@
     	<bestiary transform="0,0,1" anim="IdleDown" />
         <gibs amount="6" blood="2" bone="0" eye="1" gut="6" large="0" />
         <devolve id="23.0.0" weight="1" />
+    </entity>
+
+    <entity anm2path="monsters/foomper/foomper.anm2" reroll="true" baseHP="10" boss="0" champion="1" collisionDamage="0" collisionMass="4" collisionRadius="17" friction="1" id="161" name="Pooter" numGridCollisionPoints="4" shadowSize="11" stageHP="2" variant="167" portrait="6" gridCollision="walls" tags="fly">
+		<bestiary transform="0,0,1" anim="Fly" />
+        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
+		<preload-snd id="37" /> <!-- fart -->
     </entity>
 
     <!--Jokes-->

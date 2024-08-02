@@ -8,7 +8,7 @@
 </group>
 
 <group Name="Cellar Enemies">
-   <entity ID="161" Variant="40" Subtype="0" Name="Dried" Image="mah boys/dried.png">
+   <entity ID="161" Variant="40" Subtype="6" Name="Dried" Image="mah boys/dried.png">
         <bitfield Key="Subtype">
             <dropdown Length="7">
                 <choice Value="0">Random</choice>

@@ -13,27 +13,46 @@ function mod:SchmootAI(npc, sprite, d)
     local target = npc:GetPlayerTarget()
     local targetpos = mod:confusePos(npc, target.Position, 5, nil, nil)
     local enemydir = (targetpos - npc.Position):GetAngleDegrees()
-    local path = npc.Pathfinder
 
     if not d.init then
-        if rng:RandomInt(1, 2) == 2 then
-            mod:ReplaceEnemySpritesheet(npc, "gfx/monsters/schmoot/shmoot_put_out", 1)
-            mod:ReplaceEnemySpritesheet(npc, "gfx/nothing", 0)
-            d.isburning = false
-        else
-            d.isburning = true
-        end
         npc.SpriteOffset = Vector(0,-20)
-        d.state = "idle"
-        mod:spritePlay(sprite, "Idle")
+        d.coolaccel = 1
+        if not d.state == "Deathin" then
+            d.state = "idle"
+        end
         sprite:SetFrame(rng:RandomInt(1, 6))
         npc.StateFrame = 0
         npc.SplatColor = FHAC.Color.Charred
+        if not npc:HasEntityFlags(EntityFlag.FLAG_APPEAR) then
+            if not d.hasplayeddeath then
+                mod:spritePlay(sprite, "Death")
+                d.hasplayeddeath = true
+            end
+        else
+            if rng:RandomInt(1, 2) == 2 then
+                d.isburning = true
+            else
+                mod:ReplaceEnemySpritesheet(npc, "gfx/monsters/schmoot/shmoot_put_out", 1)
+                mod:ReplaceEnemySpritesheet(npc, "gfx/nothing", 0)
+                d.isburning = false
+            end
+            npc:AddEntityFlags(EntityFlag.FLAG_REDUCE_GIBS | EntityFlag.FLAG_NO_KNOCKBACK)
+        end
         d.shootinit = false
         d.init = true
+    else
+        if not (d.state == "Deathin" or d.state == "fallin" or d.state == "rollin") then
+            npc.Velocity = npc.Velocity * 0.5
+        end
     end
 
-    npc.Velocity = npc.Velocity * 0.5
+    if sprite:IsFinished("Appear") then
+        if d.state ~= "Deathin" then
+        mod:spritePlay(sprite, "Idle")
+        d.state = "idle"
+        end
+    end
+
 
     if (npc.HitPoints) > (npc.MaxHitPoints/2) and d.state == "idle" then
         if (target.Position - npc.Position):Length() < 150 and game:GetRoom():CheckLine(target.Position,npc.Position,3,900,false,false) then
@@ -59,7 +78,7 @@ function mod:SchmootAI(npc, sprite, d)
             end
         end
         npc.StateFrame = npc.StateFrame + 1
-        if npc.StateFrame >= 30 or (target.Position - npc.Position):Length() > 200 or not game:GetRoom():CheckLine(target.Position,npc.Position,3,900,false,false) then
+        if npc.StateFrame >= 50 or (target.Position - npc.Position):Length() > 200 or not game:GetRoom():CheckLine(target.Position,npc.Position,3,900,false,false) then
             if d.isburning == false then
                 mod:ReplaceEnemySpritesheet(npc, "gfx/monsters/schmoot/shmoot_put_out", 1)
                 mod:ReplaceEnemySpritesheet(npc, "gfx/nothing", 0)
@@ -88,28 +107,45 @@ function mod:SchmootAI(npc, sprite, d)
         if sprite:IsFinished("Shoot") then
             d.hasmovedaway = false
             d.shootinit = false
-            if (npc.HitPoints) < (npc.MaxHitPoints/2) then
-                d.state = "fallin"
-                sprite:Play("Fall")
-            else
-                d.state = "idle"
-                sprite:Play("Idle")
-            end
+            d.state = "idle"
+            sprite:Play("Idle")
         end
     end
 
-    if npc:IsDead() then
-        npc:AddHealth(15)
-        d.state = "fallin"
-        sprite:Play("Fall")
+    function mod:spawnSchmoot(ent)
+        local npc = ent:ToNPC()
+        local data = npc:GetData()
+        local newschmoot = Isaac.Spawn(mod.Monsters.Schmoot.ID, mod.Monsters.Schmoot.Var, 0, npc.Position, npc.Velocity, npc)
+        newschmoot.SpriteOffset = Vector(0,-20)
+        local newdata = newschmoot:GetData()
+        if not d.isburning then
+            mod:ReplaceEnemySpritesheet(newschmoot, "gfx/monsters/schmoot/shmoot_put_out", 1)
+            mod:ReplaceEnemySpritesheet(newschmoot, "gfx/nothing", 0)
+        end
+        newdata.isDead = true
+        newdata.state = "Deathin"
+        newdata.secondinit = true
+        newschmoot:ClearEntityFlags(EntityFlag.FLAG_APPEAR)
+        data.noMore = true
     end
 
-    if d.state == "fallin" then
+    mod:AddCallback(ModCallbacks.MC_POST_NPC_DEATH, function(_, ent)
+    if npc.Variant ~= mod.Monsters.Schmoot.Var then return end
+    if d.isDead then return end
+    if d.state == "rollin" or d.state == "Deathin" or not npc:IsDead() then return end
+        mod:ReplaceEnemySpritesheet(npc, "gfx/nothing", 0)
+        mod:ReplaceEnemySpritesheet(npc, "gfx/nothing", 1)
+        npc.Velocity = Vector.Zero
+        d.isDead = true
+        mod:spawnSchmoot(ent)
+        npc:Remove()
+    end, mod.Monsters.Schmoot.Type)
+
+    if d.state == "Deathin" then
         if not d.secondinit then
-            npc:AddHealth(15)
-            d.state = "fallin"
+            d.state = "Deathin"
         end
-        if sprite:IsFinished("Fall") then
+        if sprite:IsFinished("Death") then
             sprite:Play("Roll")
             d.secondinit = true
             d.state ="rollin"
@@ -119,22 +155,29 @@ function mod:SchmootAI(npc, sprite, d)
     if d.state == "rollin" then
         npc.SpriteOffset = Vector(0, -8)
         mod:spritePlay(sprite, "Roll")
+        if d.coolaccel and d.coolaccel < 5 then
+            d.coolaccel = d.coolaccel + 0.1
+        end
         if mod:isScare(npc) then
             local targetvelocity = (targetpos - npc.Position):Resized(-15)
             npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 0.25)
-        elseif game:GetRoom():CheckLine(npc.Position,targetpos,0,1,false,false) then
+        else
             local targetvelocity = (targetpos - npc.Position):Resized(15)
             npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 0.25)
-        else
-            path:FindGridPath(targetpos, 0.9, 1, true)
         end
+        npc.Velocity = mod:Lerp(npc.Velocity, npc.Velocity:Resized(d.coolaccel), 0.25)
+        if npc:CollidesWithGrid() then
+            d.coolaccel = 1
+        end
+    else
+        d.coolaccel = 1
     end
     
-    mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, function(npc)
-        if npc.Type == 161 and npc.Variant == mod.Monsters.Schmoot.Var then
-            if d.state == "fallin" then return false end
+    mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, function(_, npc, amt, flag, source)
+        if npc.Variant == mod.Monsters.Schmoot.Var then
+            if flag & DamageFlag.DAMAGE_FIRE ~= 0 and source.Type ~= 1 then return false end
             return true
         end
-    end)
+    end, mod.Monsters.Schmoot.ID)
 end
 

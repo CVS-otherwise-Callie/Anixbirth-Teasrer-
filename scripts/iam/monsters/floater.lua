@@ -172,7 +172,7 @@ function mod:FloaterAI(npc, sprite, d, r)
     d.entcount = 0
     local roomEntities = Isaac.GetRoomEntities()
     if not npc:IsDead() then
-    for i, entity in ipairs(roomEntities) do
+    for _, entity in ipairs(roomEntities) do
         if entity.Position:Distance(npc.Position) < 50 then
         if entity.Type == 2 and entity.Variant == 0 then
             if d.toverp and (d.toverp:Distance(npc.Position) < 20 or entity.Position:Distance(npc.Position)) and math.abs(math.abs((target.Position - entity.Position):GetAngleDegrees())) - math.abs((target.Position - npc.Position):GetAngleDegrees()) < 20 then
