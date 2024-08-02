@@ -15,6 +15,7 @@ FHAC.Scripts = {
 		Fortunes = include("scripts.stolen.fiend folio.api.fortunehandling"),
 		include("scripts.stolen.fiend folio.apioverride"),
 		include("scripts.iam.misc.resources.fortunes"),
+		include("scripts.stolen.proapi.proapi"),
 	},
 
 }

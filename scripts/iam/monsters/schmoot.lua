@@ -38,6 +38,7 @@ function mod:SchmootAI(npc, sprite, d)
             end
             npc:AddEntityFlags(EntityFlag.FLAG_REDUCE_GIBS | EntityFlag.FLAG_NO_KNOCKBACK)
         end
+        d.lerpnonsense = 0.06
         d.shootinit = false
         d.init = true
     else
@@ -130,7 +131,7 @@ function mod:SchmootAI(npc, sprite, d)
     end
 
     mod:AddCallback(ModCallbacks.MC_POST_NPC_DEATH, function(_, ent)
-    if npc.Variant ~= mod.Monsters.Schmoot.Var then return end
+    if ent.Variant ~= mod.Monsters.Schmoot.Var then return end
     if d.isDead then return end
     if d.state == "rollin" or d.state == "Deathin" or not npc:IsDead() then return end
         mod:ReplaceEnemySpritesheet(npc, "gfx/nothing", 0)
@@ -139,7 +140,7 @@ function mod:SchmootAI(npc, sprite, d)
         d.isDead = true
         mod:spawnSchmoot(ent)
         npc:Remove()
-    end, mod.Monsters.Schmoot.Type)
+    end, mod.Monsters.Schmoot.ID)
 
     if d.state == "Deathin" then
         if not d.secondinit then
@@ -160,14 +161,26 @@ function mod:SchmootAI(npc, sprite, d)
         end
         if mod:isScare(npc) then
             local targetvelocity = (targetpos - npc.Position):Resized(-15)
-            npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 0.25)
+            npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, d.lerpnonsense)
         else
             local targetvelocity = (targetpos - npc.Position):Resized(15)
-            npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 0.25)
+            npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, d.lerpnonsense)
         end
-        npc.Velocity = mod:Lerp(npc.Velocity, npc.Velocity:Resized(d.coolaccel), 0.25)
+        npc.Velocity = mod:Lerp(npc.Velocity, npc.Velocity:Resized(d.coolaccel), d.lerpnonsense)
         if npc:CollidesWithGrid() then
             d.coolaccel = 1
+        end
+        if d.coolaccel and d.lerpnonsense then
+        mod:CatheryPathFinding(npc, target.Position, {
+            Speed = d.coolaccel,
+            Accel = d.lerpnonsense,
+            GiveUp = true
+        })
+        end
+        if rng:RandomInt(1, 2) == 2 then
+            d.lerpnonsense = mod:Lerp(d.lerpnonsense, 0.04, 0.05)
+        else
+            d.lerpnonsense = mod:Lerp(d.lerpnonsense, 0.01, 0.02)
         end
     else
         d.coolaccel = 1
