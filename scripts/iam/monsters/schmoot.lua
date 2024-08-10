@@ -29,7 +29,7 @@ function mod:SchmootAI(npc, sprite, d)
                 d.hasplayeddeath = true
             end
         else
-            if rng:RandomInt(1, 2) == 2 then
+            if rng:RandomInt(1, 2) == 1 then
                 d.isburning = true
             else
                 mod:ReplaceEnemySpritesheet(npc, "gfx/monsters/schmoot/shmoot_put_out", 1)
@@ -79,7 +79,7 @@ function mod:SchmootAI(npc, sprite, d)
             end
         end
         npc.StateFrame = npc.StateFrame + 1
-        if npc.StateFrame >= 50 or (target.Position - npc.Position):Length() > 200 or not game:GetRoom():CheckLine(target.Position,npc.Position,3,900,false,false) then
+        if npc.StateFrame >= 40 or (target.Position - npc.Position):Length() > 200 or not game:GetRoom():CheckLine(target.Position,npc.Position,3,900,false,false) then
             if d.isburning == false then
                 mod:ReplaceEnemySpritesheet(npc, "gfx/monsters/schmoot/shmoot_put_out", 1)
                 mod:ReplaceEnemySpritesheet(npc, "gfx/nothing", 0)
@@ -117,6 +117,7 @@ function mod:SchmootAI(npc, sprite, d)
         local npc = ent:ToNPC()
         local data = npc:GetData()
         local newschmoot = Isaac.Spawn(mod.Monsters.Schmoot.ID, mod.Monsters.Schmoot.Var, 0, npc.Position, npc.Velocity, npc)
+        npc:ToNPC():Morph(npc.Type, npc.Variant, npc.SubType, npc:ToNPC():GetChampionColorIdx())
         newschmoot.SpriteOffset = Vector(0,-20)
         local newdata = newschmoot:GetData()
         if not d.isburning then
