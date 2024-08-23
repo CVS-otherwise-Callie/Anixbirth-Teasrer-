@@ -13,6 +13,24 @@ function FHAC:loadFont(fontFileName)
 	return true
 end
 
+function mod:getMinSec(totalSeconds)
+    local minutes = math.floor(totalSeconds / 60)
+    local seconds = math.floor(totalSeconds % 60)
+    return minutes, seconds
+end
+
+function mod:MixTables(input, table)
+    if input and table then
+        for k, v in pairs(table) do
+            if type(input[k]) == "table" and type(v) == "table" then
+                mod:MixTables(input[k], v)
+            else
+                input[k] = v
+            end
+        end
+    end
+end
+
 function mod:IsSourceofDamagePlayer(source, bomb)
 	if source.Entity then
 		if bomb then
@@ -106,6 +124,31 @@ function mod:FindRandomValidPathPosition(npc, mode, avoidplayer, nearposses,farp
 		else
 			return npc.Position
 		end
+	end
+end
+
+function mod:FindFreeGrid(target, targetdist) --omfg i love you fiend folio
+	local validPositions = {}
+	local room = game:GetRoom()
+	local size = room:GetGridSize()
+	targetdist = targetdist or 90
+	local playertable = {}
+
+    for i = 0, game:GetNumPlayers() do
+		table.insert(playertable, game:GetPlayer(i))
+	end
+	
+	for i=0, size do
+		local gridpos = room:GetGridPosition(i)
+		local gridEntity = room:GetGridEntity(i)
+		if gridEntity and gridEntity:GetType() == GridEntityType.GRID_PIT then
+			--if target.Position:Distance(gridpos) > targetdist then
+				table.insert(validPositions, gridpos)
+			--end
+		end
+	end
+	if #validPositions > 0 then
+		return validPositions[math.random(#validPositions)]
 	end
 end
 

@@ -29,7 +29,7 @@ function mod:SchmootAI(npc, sprite, d)
                 d.hasplayeddeath = true
             end
         else
-            if rng:RandomInt(1, 2) == 1 then
+            if rng:RandomInt(1, 2) == 2 then
                 d.isburning = true
             else
                 mod:ReplaceEnemySpritesheet(npc, "gfx/monsters/schmoot/shmoot_put_out", 1)
@@ -117,7 +117,6 @@ function mod:SchmootAI(npc, sprite, d)
         local npc = ent:ToNPC()
         local data = npc:GetData()
         local newschmoot = Isaac.Spawn(mod.Monsters.Schmoot.ID, mod.Monsters.Schmoot.Var, 0, npc.Position, npc.Velocity, npc)
-        npc:ToNPC():Morph(npc.Type, npc.Variant, npc.SubType, npc:ToNPC():GetChampionColorIdx())
         newschmoot.SpriteOffset = Vector(0,-20)
         local newdata = newschmoot:GetData()
         if not d.isburning then
@@ -171,13 +170,11 @@ function mod:SchmootAI(npc, sprite, d)
         if npc:CollidesWithGrid() then
             d.coolaccel = 1
         end
-        if d.coolaccel and d.lerpnonsense then
         mod:CatheryPathFinding(npc, target.Position, {
             Speed = d.coolaccel,
             Accel = d.lerpnonsense,
             GiveUp = true
         })
-        end
         if rng:RandomInt(1, 2) == 2 then
             d.lerpnonsense = mod:Lerp(d.lerpnonsense, 0.04, 0.05)
         else

@@ -9,6 +9,9 @@ FHAC.Scripts = {
 	Constants = include("scripts.constants"),
 	Items = include("scripts.items"),
 	EntitiesLua = StageAPI.AddEntities2Function(require("scripts.entities2")),
+	Compatability = {
+		include("scripts.compatability.fiend folio.modcompact"),
+	},
 	IamScripts = include("scripts.iam.main"),
 	
 	Misc = {

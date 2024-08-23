@@ -3,7 +3,6 @@ local game = Game()
 local johannes = Isaac.GetPlayerTypeByName("Johannes")
 local player = Isaac.GetPlayer()
 local rng = RNG()
-local icon = Sprite()
 local isplayer
 
 function mod:GiveCostumesOnInit(player)
@@ -24,22 +23,48 @@ mod:AddCallback(ModCallbacks.MC_POST_PLAYER_INIT, mod.GiveCostumesOnInit)
 mod.JohFont = Font()
 --font:Load("mods/Hope (Teasrer)/resources/font/foursouls.fnt")
 mod.JohFont:Load("font/pftempestasevencondensed.fnt")
+mod.JohRoomSprites = Sprite()
+mod.JohRoomSprites:Load("gfx/eid_inline_icons.anm2", true)
 
-mod:AddCallback(ModCallbacks.MC_POST_RENDER, function()
+function mod:JohannesPostRender()
     if not isplayer then
         return
     end
-    local text = ""
-    local secs = 60 - math.floor(game.TimeCounter/30)
-    local secsstring = tostring(secs)
-    local scale = 1
-    local size = mod.JohFont:GetStringWidth(text) * scale * 1.1
-    if secs > 0 then
-        text = secsstring
-        mod.JohFont:DrawStringScaled(text,60,45,scale, scale,KColor(1,1,1,1,0,0,0),0,true)
+    local icon = Sprite()
+    local timers = {
+        60, --treasure
+        132, --boss
+        47  --shop
+    }
+    local names = {
+        "treasure",
+        "boss",
+        "shop"
+    }
+    for k, v in ipairs(timers) do
+        local mins, sec
+        if v - game.TimeCounter/30 <= 0 then
+            mins = 0
+            sec = 0
+        else
+            mins, sec = mod:getMinSec((v + 1) - (game.TimeCounter/30))    
+        end
+        if sec < 10 then
+            sec = 0 .. sec
+        end
+        local minstring = tostring(mins)
+        local secstring = tostring(sec)
+        local scale = 1
+        local text = names[k] .. ": (" .. minstring .. ": " .. secstring .. ")"
+        mod.JohFont:DrawStringScaled(text,60,45 + (k-1) * 12,scale, scale,KColor(1,1,1,1,0,0,0),0,true)
+        mod.JohRoomSprites:Play("roomicons")
+        mod.JohRoomSprites:Render(Vector(50, 50 + (k-1) * 12), Vector.Zero, Vector.Zero)
     end
-
-    icon:Load("gfx/characters/johanneshair.anm2", true)
-    icon:Render(Vector(0, 0), Vector.Zero, Vector.Zero)
     --icon:Play("Idle")
+end
+
+mod:AddCallback(ModCallbacks.MC_POST_RENDER, mod.JohannesPostRender)
+
+mod:AddCallback(ModCallbacks.MC_POST_PLAYER_UPDATE, function()
+    
 end)

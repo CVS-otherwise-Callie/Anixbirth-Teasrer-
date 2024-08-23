@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <rooms>
-	<room variant="45000" name="Community - Wost - Time to run away my good man" type="1" subtype="0" shape="10" width="26" height="14" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:35+00:00">
+	<room variant="45000" name="Community - Wost - Time to run away my good man" type="1" subtype="0" shape="10" width="26" height="14" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -43,7 +43,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="3" y="3">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="9" y="3">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -187,7 +187,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="19" y="11">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="21" y="11">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -199,7 +199,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45001" name="Community - Wost - Predator and Prey" type="1" subtype="0" shape="8" width="26" height="14" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:35+00:00">
+	<room variant="45001" name="Community - Wost - Predator and Prey" type="1" subtype="0" shape="8" width="26" height="14" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -239,7 +239,7 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="8" y="2">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="10" y="2">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
@@ -263,7 +263,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="22" y="2">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="4" y="3">
 			<entity type="813" variant="0" subtype="0" weight="1.0"/>
@@ -587,7 +587,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="19" y="9">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="20" y="9">
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
@@ -596,7 +596,7 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="8" y="10">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="12" y="10">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -644,7 +644,7 @@
 			<entity type="817" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45002" name="Community - Wost - Warith on Wraith" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0" lastTestTime="2024-05-26T22:35+00:00">
+	<room variant="45002" name="Community - Wost - Warith on Wraith" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -653,7 +653,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="10" y="1">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="2" y="2">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -695,17 +695,17 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="2" y="5">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="3" y="5">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45003" name="Community - Wost - Painful" type="1" subtype="0" shape="7" width="26" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:35+00:00">
+	<room variant="45003" name="Community - Wost - Painful" type="1" subtype="0" shape="7" width="26" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="26" y="3"/>
 		<spawn x="3" y="2">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="5" y="2">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -729,10 +729,10 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="19" y="2">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="6" y="3">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="7" y="3">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -744,7 +744,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="14" y="3">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="16" y="3">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -783,7 +783,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45004" name="Community - Wost - Shifted everything just a litte... is that good?" type="1" subtype="0" shape="9" width="26" height="14" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:35+00:00">
+	<room variant="45004" name="Community - Wost - Shifted everything just a litte... is that good?" type="1" subtype="0" shape="9" width="26" height="14" difficulty="5" weight="1.0">
 		<door exists="False" x="-1" y="10"/>
 		<door exists="True" x="6" y="6"/>
 		<door exists="True" x="6" y="14"/>
@@ -868,7 +868,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="24" y="4">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="13" y="5">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
@@ -946,7 +946,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="17" y="7">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="20" y="7">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -1024,7 +1024,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="7" y="9">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="8" y="9">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
@@ -1087,7 +1087,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="5" y="11">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="8" y="11">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
@@ -1234,16 +1234,16 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45005" name="Community - Wost - Neutral on the lines" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0" lastTestTime="2024-05-26T22:35+00:00">
+	<room variant="45005" name="Community - Wost - Neutral on the lines" type="1" subtype="0" shape="1" width="13" height="7" difficulty="8" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
 		<door exists="True" x="13" y="3"/>
 		<spawn x="0" y="0">
-			<entity type="161" variant="20" subtype="0" weight="1.0"/>
+			<entity type="161" variant="21" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="1" y="0">
-			<entity type="161" variant="20" subtype="0" weight="1.0"/>
+			<entity type="161" variant="21" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="2" y="0">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -1261,13 +1261,13 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="0" y="1">
-			<entity type="161" variant="20" subtype="0" weight="1.0"/>
+			<entity type="161" variant="21" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="1" y="1">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="5" y="1">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="12" y="1">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -1282,10 +1282,10 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="10" y="3">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="1" y="4">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="0" y="5">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -1309,23 +1309,23 @@
 			<entity type="33" variant="4" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45006" name="Community - Wost - Flying ghosts above the air" type="1" subtype="0" shape="7" width="26" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:35+00:00">
+	<room variant="45006" name="Community - Wost - Flying ghosts above the air" type="1" subtype="0" shape="7" width="26" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="26" y="3"/>
 		<spawn x="0" y="2">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="1" y="2">
-			<entity type="161" variant="20" subtype="0" weight="1.0"/>
+			<entity type="161" variant="21" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="8" y="2">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="9" y="2">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="17" y="2">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="18" y="2">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -1340,10 +1340,10 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="14" y="3">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="20" y="3">
-			<entity type="161" variant="20" subtype="0" weight="1.0"/>
+			<entity type="161" variant="21" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="22" y="3">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -1352,13 +1352,13 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="7" y="4">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="8" y="4">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="10" y="4">
-			<entity type="161" variant="20" subtype="0" weight="1.0"/>
+			<entity type="161" variant="21" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="18" y="4">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -1367,7 +1367,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45007" name="Callie - Wost - We were hidden in the pots" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-07-26T20:21+00:00">
+	<room variant="45007" name="Callie - Wost - We were hidden in the pots" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -1400,7 +1400,7 @@
 			<entity type="161" variant="11" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="9" y="2">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="10" y="2">
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
@@ -1412,10 +1412,10 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="3" y="4">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="6" y="4">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="9" y="4">
 			<entity type="161" variant="11" subtype="0" weight="1.0"/>
@@ -1442,7 +1442,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45008" name="Callie - Wost - Ok yeah go shoot over there please" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:35+00:00">
+	<room variant="45008" name="Callie - Wost - Ok yeah go shoot over there please" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -1484,10 +1484,10 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="8" y="4">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="10" y="4">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="0" y="5">
 			<entity type="813" variant="0" subtype="0" weight="1.0"/>
@@ -1508,7 +1508,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45009" name="Callie - Wost - Oh waah im spawning spiders you dont like that bitch" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:35+00:00">
+	<room variant="45009" name="Callie - Wost - Oh waah im spawning spiders you dont like that bitch" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -1526,7 +1526,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="5" y="2">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="1" y="3">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -1550,16 +1550,16 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="8" y="5">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45010" name="Callie - Wost - You are a SHITTY person" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:35+00:00">
+	<room variant="45010" name="Callie - Wost - You are a SHITTY person" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
 		<door exists="True" x="13" y="3"/>
 		<spawn x="2" y="0">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="4" y="0">
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
@@ -1583,16 +1583,16 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="5" y="3">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="9" y="3">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="7" y="4">
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="3" y="5">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="11" y="5">
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
@@ -1601,10 +1601,10 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="8" y="6">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45011" name="Callie - Wost - Ok just to clear it im antisocial not a wimp" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:35+00:00">
+	<room variant="45011" name="Callie - Wost - Ok just to clear it im antisocial not a wimp" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -1679,20 +1679,20 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="2" y="6">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45012" name="Callie - Wost - Aw fuck it" type="1" subtype="0" shape="7" width="26" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:35+00:00">
+	<room variant="45012" name="Callie - Wost - Aw fuck it" type="1" subtype="0" shape="7" width="26" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="26" y="3"/>
 		<spawn x="7" y="2">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="19" y="2">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="2" y="3">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="12" y="3">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -1704,10 +1704,10 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="23" y="3">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="5" y="4">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="9" y="4">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -1740,10 +1740,10 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="21" y="4">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45013" name="Callie - Wost - Spirits on the other side" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:35+00:00">
+	<room variant="45013" name="Callie - Wost - Spirits on the other side" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -1767,10 +1767,10 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="9" y="2">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="2" y="3">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="7" y="3">
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
@@ -1791,7 +1791,7 @@
 			<entity type="816" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="7" y="5">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="9" y="5">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -1818,7 +1818,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45014" name="Callie - Wost - Even then they're coming back" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:35+00:00">
+	<room variant="45014" name="Callie - Wost - Even then they're coming back" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -1857,7 +1857,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="1" y="2">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="8" y="2">
 			<entity type="808" variant="0" subtype="0" weight="1.0"/>
@@ -1890,7 +1890,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="11" y="4">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="0" y="5">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
@@ -1923,7 +1923,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45015" name="Callie - Wost - Being bullied" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:35+00:00">
+	<room variant="45015" name="Callie - Wost - Being bullied" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -1944,7 +1944,7 @@
 			<entity type="15" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="6" y="3">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="7" y="3">
 			<entity type="15" variant="0" subtype="0" weight="1.0"/>
@@ -1962,7 +1962,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45016" name="Callie - Wost - Harassment to all!" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:35+00:00">
+	<room variant="45016" name="Callie - Wost - Harassment to all!" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -1980,13 +1980,13 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="7" y="1">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="1" y="3">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="2" y="3">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="3" y="3">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
@@ -2055,13 +2055,13 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="9" y="6">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="12" y="6">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45017" name="Callie - Wost - This was a antibirth room I swear!" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:35+00:00">
+	<room variant="45017" name="Callie - Wost - This was a antibirth room I swear!" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -2091,7 +2091,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="3" y="1">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="0" y="2">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -2100,7 +2100,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="6" y="2">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="0" y="3">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -2175,7 +2175,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45018" name="Callie - Wost - This was a antibirth room I swear! (copy)" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:35+00:00">
+	<room variant="45018" name="Callie - Wost - This was a antibirth room I swear! (copy)" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -2205,7 +2205,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="3" y="1">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="0" y="2">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -2214,7 +2214,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="6" y="2">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="0" y="3">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -2286,7 +2286,7 @@
 			<entity type="806" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45019" name="Callie - Wost - Curse of the Nicalis Room" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:35+00:00">
+	<room variant="45019" name="Callie - Wost - Curse of the Nicalis Room" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -2310,7 +2310,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="6" y="3">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="0" y="5">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -2331,7 +2331,7 @@
 			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45020" name="Callie - Wost - Fatass vs Tiny Children" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:35+00:00">
+	<room variant="45020" name="Callie - Wost - Fatass vs Tiny Children" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -2352,7 +2352,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="8" y="0">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="0" y="1">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -2379,16 +2379,16 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="8" y="4">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="10" y="5">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="1" y="6">
 			<entity type="806" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45021" name="Callie - Wost - Teliing White LIES!!!" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:35+00:00">
+	<room variant="45021" name="Callie - Wost - Teliing White LIES!!!" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -2448,7 +2448,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="4" y="3">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="5" y="3">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -2463,7 +2463,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="9" y="4">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="12" y="4">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -2493,7 +2493,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45022" name="Callie - Wost - Gotta shock the shit outta them" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:35+00:00">
+	<room variant="45022" name="Callie - Wost - Gotta shock the shit outta them" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -2574,10 +2574,10 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="3" y="3">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="9" y="3">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="2" y="4">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
@@ -2655,13 +2655,13 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45023" name="Callie - Wost - This is what waiting gets you" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:35+00:00">
+	<room variant="45023" name="Callie - Wost - This is what waiting gets you" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
 		<door exists="True" x="13" y="3"/>
 		<spawn x="9" y="1">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="2" y="2">
 			<entity type="811" variant="0" subtype="6" weight="1.0"/>
@@ -2676,7 +2676,7 @@
 			<entity type="810" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="7" y="3">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="11" y="3">
 			<entity type="817" variant="1" subtype="0" weight="1.0"/>
@@ -2742,7 +2742,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45024" name="Callie - Wost - Satan compelled me to make this room" type="1" subtype="0" shape="6" width="26" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:35+00:00">
+	<room variant="45024" name="Callie - Wost - Satan compelled me to make this room" type="1" subtype="0" shape="6" width="26" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -2750,7 +2750,7 @@
 		<door exists="True" x="19" y="7"/>
 		<door exists="True" x="26" y="3"/>
 		<spawn x="1" y="0">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="9" y="0">
 			<entity type="3009" variant="0" subtype="0" weight="1.0"/>
@@ -2780,7 +2780,7 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="16" y="1">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="17" y="1">
 			<entity type="969" variant="9" subtype="0" weight="1.0"/>
@@ -2855,7 +2855,7 @@
 			<entity type="3009" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="13" y="3">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="14" y="3">
 			<entity type="3009" variant="0" subtype="0" weight="1.0"/>
@@ -2882,13 +2882,13 @@
 			<entity type="3009" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="23" y="3">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="4" y="4">
 			<entity type="3009" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="6" y="4">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="7" y="4">
 			<entity type="3009" variant="0" subtype="0" weight="1.0"/>
@@ -2930,7 +2930,7 @@
 			<entity type="3009" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="9" y="5">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="10" y="5">
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
@@ -2942,7 +2942,7 @@
 			<entity type="3009" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="18" y="5">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="0" y="6">
 			<entity type="806" variant="0" subtype="0" weight="1.0"/>
@@ -2969,7 +2969,7 @@
 			<entity type="3009" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="21" y="6">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="22" y="6">
 			<entity type="969" variant="9" subtype="0" weight="1.0"/>
@@ -2978,7 +2978,7 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45025" name="Callie - Wost - Varianted" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:35+00:00">
+	<room variant="45025" name="Callie - Wost - Varianted" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -2993,7 +2993,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="2" y="3">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="4" y="3">
 			<entity type="806" variant="0" subtype="0" weight="1.0"/>
@@ -3023,7 +3023,7 @@
 			<entity type="812" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45026" name="Callie - Wost - Pot throwing contest (you lost)" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:35+00:00">
+	<room variant="45026" name="Callie - Wost - Pot throwing contest (you lost)" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -3056,7 +3056,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="2" y="1">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="3" y="1">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -3077,7 +3077,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="10" y="1">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="3" y="2">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -3095,7 +3095,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="5" y="3">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="8" y="3">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -3122,7 +3122,7 @@
 			<entity type="816" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45027" name="Callie - Wost - Black Fire Room" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:35+00:00">
+	<room variant="45027" name="Callie - Wost - Black Fire Room" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -3203,19 +3203,19 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="11" y="4">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="1" y="5">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="8" y="5">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="4" y="6">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45028" name="Callie - Wost - Now I can see where that bitch went!" type="1" subtype="0" shape="9" width="26" height="14" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:35+00:00">
+	<room variant="45028" name="Callie - Wost - Now I can see where that bitch went!" type="1" subtype="0" shape="9" width="26" height="14" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="6"/>
 		<door exists="True" x="6" y="14"/>
@@ -3243,7 +3243,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="19" y="2">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="15" y="3">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
@@ -3354,7 +3354,7 @@
 			<entity type="816" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="9" y="7">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="20" y="7">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -3432,7 +3432,7 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="14" y="9">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="15" y="9">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
@@ -3543,13 +3543,13 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="1" y="12">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="13" y="12">
 			<entity type="838" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45029" name="Callie - Wost - Step on it right nyow" type="1" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:35+00:00">
+	<room variant="45029" name="Callie - Wost - Step on it right nyow" type="1" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="False" x="-1" y="10"/>
 		<door exists="False" x="6" y="-1"/>
@@ -3623,7 +3623,7 @@
 			<entity type="969" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="6" y="6">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="11" y="6">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -3638,10 +3638,10 @@
 			<entity type="244" variant="1" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="5" y="7">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="7" y="7">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="10" y="7">
 			<entity type="244" variant="1" subtype="0" weight="1.0"/>
@@ -3656,7 +3656,7 @@
 			<entity type="969" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="6" y="8">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="7" y="8">
 			<entity type="969" variant="0" subtype="0" weight="1.0"/>
@@ -3716,7 +3716,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45030" name="Callie - Wost - Pot throwing: The Finale (Extremely Hard)" type="1" subtype="0" shape="8" width="26" height="14" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:35+00:00">
+	<room variant="45030" name="Callie - Wost - Pot throwing: The Finale (Extremely Hard)" type="1" subtype="0" shape="8" width="26" height="14" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -3771,16 +3771,16 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="9" y="2">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="4" y="3">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="6" y="3">
 			<entity type="816" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="14" y="3">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="22" y="3">
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
@@ -3789,7 +3789,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="11" y="4">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="16" y="4">
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
@@ -3804,13 +3804,13 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="5" y="5">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="7" y="5">
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="18" y="5">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="25" y="5">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -3828,10 +3828,10 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="10" y="7">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="16" y="7">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="25" y="7">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -3840,7 +3840,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="3" y="8">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="21" y="8">
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
@@ -3867,19 +3867,19 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="8" y="11">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="10" y="11">
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="14" y="11">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="18" y="11">
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="21" y="11">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="24" y="12">
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
@@ -3921,7 +3921,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45031" name="Callie - Wost - I'm looking at the man in the mirror" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:35+00:00">
+	<room variant="45031" name="Callie - Wost - I'm looking at the man in the mirror" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -3954,7 +3954,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="1" y="1">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="10" y="1">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -3996,7 +3996,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="1" y="5">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="10" y="5">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -4029,7 +4029,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45032" name="Callie - Wost - The Brigade" type="1" subtype="0" shape="9" width="26" height="14" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:35+00:00">
+	<room variant="45032" name="Callie - Wost - The Brigade" type="1" subtype="0" shape="9" width="26" height="14" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="6"/>
 		<door exists="True" x="6" y="14"/>
@@ -4039,7 +4039,7 @@
 		<door exists="True" x="26" y="3"/>
 		<door exists="True" x="26" y="10"/>
 		<spawn x="15" y="1">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="16" y="1">
 			<entity type="969" variant="9" subtype="0" weight="1.0"/>
@@ -4087,7 +4087,7 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="24" y="6">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="15" y="7">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
@@ -4234,10 +4234,10 @@
 			<entity type="969" variant="9" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="12" y="12">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45033" name="Callie - Wost - Ack! A worm!" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:35+00:00">
+	<room variant="45033" name="Callie - Wost - Ack! A worm!" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -4255,7 +4255,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="9" y="0">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="10" y="0">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -4357,7 +4357,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="6" y="5">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="10" y="5">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
@@ -4396,7 +4396,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45034" name="Callie - Wost - Ghost Congeregat-" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:35+00:00">
+	<room variant="45034" name="Callie - Wost - Ghost Congeregat-" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -4417,7 +4417,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="9" y="1">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="1" y="2">
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
@@ -4438,7 +4438,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="10" y="2">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="3" y="3">
 			<entity type="3001" variant="0" subtype="3" weight="1.0"/>
@@ -4471,7 +4471,7 @@
 			<entity type="838" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45035" name="Callie - Wost - Aww, buckets" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:35+00:00">
+	<room variant="45035" name="Callie - Wost - Aww, buckets" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -4480,28 +4480,28 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="6" y="2">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="5" y="3">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="6" y="3">
-			<entity type="161" variant="20" subtype="0" weight="1.0"/>
+			<entity type="161" variant="21" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="7" y="3">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="10" y="3">
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="6" y="4">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="3" y="5">
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45036" name="Callie - Wost - Mm, I LOVE slick tubes going down there.." type="1" subtype="0" shape="7" width="26" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:35+00:00">
+	<room variant="45036" name="Callie - Wost - Mm, I LOVE slick tubes going down there.." type="1" subtype="0" shape="7" width="26" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="26" y="3"/>
 		<spawn x="0" y="2">
@@ -4556,19 +4556,19 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="5" y="3">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="8" y="3">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="13" y="3">
 			<entity type="244" variant="1" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="16" y="3">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="19" y="3">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="0" y="4">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -4637,7 +4637,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45037" name="Callie - Wost - Showing off stagevaraints (just joking, it exists tho)" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:35+00:00">
+	<room variant="45037" name="Callie - Wost - Showing off stagevaraints (just joking, it exists tho)" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -4685,7 +4685,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="2" y="2">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="3" y="2">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -4694,16 +4694,16 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="6" y="3">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45038" name="Callie - Wost - Don;t let them blow it!" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:35+00:00">
+	<room variant="45038" name="Callie - Wost - Don;t let them blow it!" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
 		<door exists="True" x="13" y="3"/>
 		<spawn x="2" y="1">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="9" y="1">
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
@@ -4730,7 +4730,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="11" y="3">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="2" y="4">
 			<entity type="816" variant="0" subtype="0" weight="1.0"/>
@@ -4748,19 +4748,19 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="10" y="5">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45039" name="Callie - Wost - This is an exmaple of what we call SHITTY ROOM DESIGN" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:35+00:00">
+	<room variant="45039" name="Callie - Wost - This is an exmaple of what we call SHITTY ROOM DESIGN" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
 		<door exists="True" x="13" y="3"/>
 		<spawn x="2" y="0">
-			<entity type="161" variant="20" subtype="0" weight="1.0"/>
+			<entity type="161" variant="21" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="7" y="0">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="11" y="0">
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
@@ -4775,7 +4775,7 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="2" y="3">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="3" y="3">
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
@@ -4790,7 +4790,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="10" y="3">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="4" y="4">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -4874,14 +4874,14 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45040" name="Callie - Wost - Copy from basement but like not" type="1" subtype="0" shape="7" width="26" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:35+00:00">
+	<room variant="45040" name="Callie - Wost - Copy from basement but like not" type="1" subtype="0" shape="7" width="26" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="26" y="3"/>
 		<spawn x="1" y="2">
 			<entity type="161" variant="11" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="17" y="2">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="6" y="3">
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
@@ -4893,7 +4893,7 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="13" y="3">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="18" y="3">
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
@@ -4902,7 +4902,7 @@
 			<entity type="161" variant="11" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45041" name="Callie - Wost - Anything to be away from HIM" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:35+00:00">
+	<room variant="45041" name="Callie - Wost - Anything to be away from HIM" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -4941,10 +4941,10 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="10" y="2">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="2" y="3">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="3" y="3">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -4986,7 +4986,7 @@
 			<entity type="807" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45042" name="Quaoquao - Wost - Holy shit watch them explode" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:35+00:00">
+	<room variant="45042" name="Quaoquao - Wost - Holy shit watch them explode" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -5004,7 +5004,7 @@
 			<entity type="1931" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="3" y="1">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="0" y="2">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -5025,7 +5025,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="9" y="4">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="10" y="4">
 			<entity type="1931" variant="0" subtype="0" weight="1.0"/>
@@ -5052,7 +5052,7 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45043" name="Quaoquao - Wost - Funny, innit?" type="1" subtype="0" shape="9" width="26" height="14" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:35+00:00">
+	<room variant="45043" name="Quaoquao - Wost - Funny, innit?" type="1" subtype="0" shape="9" width="26" height="14" difficulty="5" weight="1.0">
 		<door exists="False" x="-1" y="10"/>
 		<door exists="False" x="6" y="6"/>
 		<door exists="False" x="6" y="14"/>
@@ -5266,7 +5266,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="15" y="6">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="16" y="6">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -5368,7 +5368,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="12" y="9">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="13" y="9">
 			<entity type="811" variant="0" subtype="5" weight="1.0"/>
@@ -5380,7 +5380,7 @@
 			<entity type="812" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="23" y="9">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="10" y="10">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -5512,7 +5512,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45044" name="Quaoquao - Wost - Argh, release my big poo" type="1" subtype="0" shape="3" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:35+00:00">
+	<room variant="45044" name="Quaoquao - Wost - Argh, release my big poo" type="1" subtype="0" shape="3" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
 		<spawn x="4" y="0">
@@ -5573,7 +5573,7 @@
 			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45045" name="Callie - Wost - Woah. those buckest are so bucket-y!" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:35+00:00">
+	<room variant="45045" name="Callie - Wost - Woah. those buckest are so bucket-y!" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -5612,10 +5612,10 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="2" y="2">
-			<entity type="161" variant="20" subtype="0" weight="1.0"/>
+			<entity type="161" variant="21" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="6" y="2">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="10" y="2">
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
@@ -5627,13 +5627,13 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="11" y="4">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="0" y="5">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="2" y="5">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="11" y="5">
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
@@ -5657,7 +5657,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45046" name="Callie - Wost - Too Tight" type="1" subtype="0" shape="3" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:35+00:00">
+	<room variant="45046" name="Callie - Wost - Too Tight" type="1" subtype="0" shape="3" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
 		<spawn x="4" y="0">
@@ -5667,7 +5667,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="7" y="1">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="8" y="1">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -5685,7 +5685,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="6" y="3">
-			<entity type="161" variant="20" subtype="0" weight="1.0"/>
+			<entity type="161" variant="21" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="4" y="4">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -5709,7 +5709,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45047" name="Callie - Wost - Borders" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:35+00:00">
+	<room variant="45047" name="Callie - Wost - Borders" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -5721,7 +5721,7 @@
 			<entity type="161" variant="12" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="4" y="1">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="5" y="1">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -5733,7 +5733,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="8" y="1">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="4" y="2">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -5781,7 +5781,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="4" y="5">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="5" y="5">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -5793,7 +5793,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="8" y="5">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="0" y="6">
 			<entity type="161" variant="12" subtype="0" weight="1.0"/>
@@ -5802,7 +5802,7 @@
 			<entity type="161" variant="12" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45048" name="Callie - Wost - B O I N G" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:35+00:00">
+	<room variant="45048" name="Callie - Wost - B O I N G" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -5835,22 +5835,22 @@
 			<entity type="3001" variant="0" subtype="34" weight="1.0"/>
 		</spawn>
 		<spawn x="4" y="1">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="5" y="1">
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="6" y="1">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="7" y="1">
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="8" y="1">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45049" name="Callie - Wost - Potty" type="1" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:35+00:00">
+	<room variant="45049" name="Callie - Wost - Potty" type="1" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -5903,7 +5903,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="3" y="1">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="10" y="1">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -5930,7 +5930,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="10" y="4">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="11" y="4">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -5990,7 +5990,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="6" y="7">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="7" y="7">
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
@@ -6101,7 +6101,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45050" name="Callie - Wost - Paper vs Registers" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:35+00:00">
+	<room variant="45050" name="Callie - Wost - Paper vs Registers" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -6128,7 +6128,7 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="11" y="1">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="12" y="1">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -6173,7 +6173,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="1" y="5">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="3" y="5">
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
@@ -6197,7 +6197,7 @@
 			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45051" name="Callie - Wost - I'm going to tell you rigt now that these Polties WILL SAVE YOU" type="1" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:35+00:00">
+	<room variant="45051" name="Callie - Wost - I'm going to tell you rigt now that these Polties WILL SAVE YOU" type="1" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -6247,7 +6247,7 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="7" y="1">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="12" y="1">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -6271,13 +6271,13 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="4" y="3">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="0" y="4">
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="1" y="4">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="6" y="4">
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
@@ -6319,7 +6319,7 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="6" y="7">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="10" y="7">
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
@@ -6337,7 +6337,7 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="11" y="8">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="12" y="8">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -6355,13 +6355,13 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="7" y="10">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="0" y="11">
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="3" y="11">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="7" y="11">
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
@@ -6418,7 +6418,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45052" name="Callie - Wost - It's fun especially if they're constinum kicks in" type="1" subtype="0" shape="2" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:35+00:00">
+	<room variant="45052" name="Callie - Wost - It's fun especially if they're constinum kicks in" type="1" subtype="0" shape="2" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="13" y="3"/>
 		<spawn x="0" y="2">
@@ -6452,13 +6452,13 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="5" y="3">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="6" y="3">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="7" y="3">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="0" y="4">
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
@@ -6491,14 +6491,14 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45053" name="Callie - Wost - Wrong chapter mb" type="1" subtype="0" shape="7" width="26" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:35+00:00">
+	<room variant="45053" name="Callie - Wost - Wrong chapter mb" type="1" subtype="0" shape="7" width="26" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="26" y="3"/>
 		<spawn x="8" y="2">
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="22" y="2">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="4" y="3">
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
@@ -6507,13 +6507,13 @@
 			<entity type="161" variant="12" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="11" y="3">
-			<entity type="161" variant="40" subtype="6" weight="1.0"/>
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
 		</spawn>
 		<spawn x="12" y="3">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="13" y="3">
-			<entity type="161" variant="40" subtype="6" weight="1.0"/>
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
 		</spawn>
 		<spawn x="17" y="3">
 			<entity type="161" variant="12" subtype="0" weight="1.0"/>
@@ -6522,13 +6522,13 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="2" y="4">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="16" y="4">
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45054" name="Callie - Wost - Hippity Hoppity get the fuck out" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-05-26T22:35+00:00">
+	<room variant="45054" name="Callie - Wost - Hippity Hoppity get the fuck out" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -6546,7 +6546,7 @@
 			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="6" y="1">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="8" y="1">
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
@@ -6561,10 +6561,10 @@
 			<entity type="3001" variant="0" subtype="28" weight="1.0"/>
 		</spawn>
 		<spawn x="4" y="4">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="9" y="4">
-			<entity type="161" variant="118" subtype="0" weight="1.0"/>
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="4" y="5">
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
@@ -6580,6 +6580,36 @@
 		</spawn>
 		<spawn x="12" y="6">
 			<entity type="3001" variant="0" subtype="56" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="0" name="peace55 -  DERP" type="1" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="7"/>
+		<door exists="True" x="13" y="3"/>
+		<spawn x="0" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="3">
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="3">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="4">
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="4">
+			<entity type="161" variant="119" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
 </rooms>

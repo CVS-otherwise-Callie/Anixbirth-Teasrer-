@@ -20,6 +20,8 @@ FHAC.Monsters = {
     Snidge = mod:ENT("Snidge"),
     --Dangler = mod:ENT("Dangler"),
     Drosslet = mod:ENT("Drosslet"),
+    PitPatSpawner = mod:ENT("Pit Pat Spawner"),
+    PitPat = mod:ENT("Pit Pat"),
 }
 
 FHAC.Jokes = {
@@ -33,8 +35,6 @@ FHAC.Savedata = {
 FHAC.Challenges = {
     Bestiary = Isaac.GetChallengeIdByName("[ANIX] The Real Bestiary")
 }
-
-
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- COLOR --
 
@@ -51,4 +51,20 @@ FHAC.EnemyDeathShit = {}
 --heehehehehhehehe fuck
 FHAC.EnemyDeathShit.Anims = {
     --{ID = FHAC.Monsters.Dangler.ID, Var = FHAC.Monsters.Dangler.Var, Subtype = FHAC.Monsters.Dangler.Subtype, Anim = mod.danglerDeath }
+}
+
+
+function mod:SpecialEnt(name)
+    return {Isaac.GetEntityTypeByName(name), Isaac.GetEntityVariantByName(name)} --no repentagon fuck it
+end
+
+FHAC.Nonmale = {
+    {ID = FHAC:SpecialEnt("Floater"), Affliction = "Woman"},
+    {ID = FHAC:SpecialEnt("Fivehead"), Affliction = "Trans"},
+    {ID = FHAC:SpecialEnt("Neutral Fly"), Affliction = "Aeroace"},
+    {ID = FHAC:SpecialEnt("Erythorcyte"), Affliction = "Woman"},
+    {ID = FHAC:SpecialEnt("Wost"), Affliction = "Woman"},
+    {ID = FHAC:SpecialEnt("Schmoot"), Affliction = "Woman"},
+    {ID = FHAC:SpecialEnt("Drosslet"), Affliction = "Aeroace"}, --cus quaquao said to make everyone secretly aeroace lol
+    {ID = FHAC:SpecialEnt("PitPat"), Affliction = "Woman"},
 }

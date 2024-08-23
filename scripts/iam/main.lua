@@ -14,6 +14,7 @@ FHAC.Scripts = {
 		Schmoot = include("scripts.iam.monsters.schmoot"),
 		Snidge = include("scripts.iam.monsters.snidge"),
 		Drosslet = include("scripts.iam.monsters.drosslet"),
+		PitPat = include("scripts.iam.monsters.pitpat"),
 	},
 
 	Items = {
@@ -165,4 +166,12 @@ mod:AddCallback(ModCallbacks.MC_POST_ENTITY_KILL, function(_, entity)
 			print(anim.ID, anim.Var, anim.Subtype, anim.Anim)
 		end
 	end
+end)
+
+FHAC:AddCallback(ModCallbacks.MC_POST_UPDATE, function()
+
+	if not FHAC.FiendFolioCompactLoaded then
+		mod.FiendFolioCompat()
+	end
+
 end)

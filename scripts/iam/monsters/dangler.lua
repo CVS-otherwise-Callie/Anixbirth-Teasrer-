@@ -22,7 +22,7 @@ function mod:DanglerAI(npc, sprite, d)
         npc.CollisionDamage = 0
     else
         --thanks erfly...
-        local targetpos = mod:confusePos(npc, target.Position, 5, nil, isStump)
+        local targetpos = mod:confusePos(npc, target.Position, 5, nil)
         if mod:isScare(npc) then
             local targetvelocity = (targetpos - npc.Position):Resized(-5)
             npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 0.25)
