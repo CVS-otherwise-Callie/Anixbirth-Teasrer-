@@ -92,11 +92,25 @@ function mod:WostAI(npc, sprite, d)
             d.state = "idle"
     end
 
+    function mod:wostFind(far, close)
+        local tab = {}
+        for i = 0, room:GetGridSize() do
+            if room:GetGridPosition(i):Distance(npc.Position) < far and room:GetGridPosition(i):Distance(npc.Position) > close and room:GetGridEntity(i) == nil and room:IsPositionInRoom(room:GetGridPosition(i), 0) and not room:CheckLine(room:GetGridPosition(i), target.Position, 1) then
+                table.insert(tab, room:GetGridPosition(i))
+            end
+        end
+        if #tab == 0 then
+            return npc.Position + npc.Position
+        end
+        return tab[rng:RandomInt(1, #tab - 1)]
+    end
+
+
     if d.state == "veryscaredhiding" then
         npc.StateFrame = npc.StateFrame + 1
         npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_NONE  
         if npc.StateFrame >= 10 then
-                    npc.Position = mod:FindRandomValidPathPosition(npc, 1)
+                    npc.Position = mod:wostFind(250, 300)
                     npc.StateFrame = 0
                 d.state = "idle"
                 npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_ALL

@@ -13,7 +13,7 @@ function mod:FiveheadAI(npc, sprite, d)
     local distance = target.Position:Distance(npc.Position)
     
     if not d.init then
-        d.rngshoot = RandomVector():GetAngleDegrees() 
+        d.rngshoot = Vector(100, 100):GetAngleDegrees() 
         --d.sprite = 1    never again
         d.state = "shake"
         d.wait = 1

@@ -23,7 +23,6 @@ function mod:MushLoomAI(npc, sprite, d)
         d.idonttakealotofdamage = false
         npc.Velocity = Vector.Zero
         npc.SpriteOffset = Vector(0, 2)
-        d.TrueFart = true --look dont ask
         d.init = true
     else
         npc.StateFrame = npc.StateFrame + 1
@@ -86,7 +85,7 @@ function mod:MushLoomAI(npc, sprite, d)
             end
         end
         if #tab == 0 then
-            return npc.Position
+            return npc.Position + npc.Position
         end
         return tab[rng:RandomInt(1, #tab - 1)]
     end
@@ -101,7 +100,7 @@ function mod:MushLoomAI(npc, sprite, d)
 
     if sprite:IsEventTriggered("shoot") then
         npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_ALL
-        npc.GridCollisionClass = GridCollisionClass.COLLISION_SOLID
+        npc.GridCollisionClass = 5
         local params = ProjectileParams()
         params.HeightModifier = -1
         params.Scale = 1

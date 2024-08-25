@@ -22,7 +22,7 @@
 <entity ID="161" Variant="169" Subtype = "0" Name="Drosslet" Image="mah boys/drosslet.png" BaseHP="10" Tags="Champion" Group="Monsters" Kind="Anixbirth (Hope)"/>
 <entity ID="161" Variant="224" Subtype = "0" Name="Mush Loom" Image="mah boys/mushloom.png" BaseHP="10" StageHP="2" Tags="Champion" Group="Monsters" Kind="Anixbirth (Hope)"/>
 <bitfield Key="Subtype">
-        <spinner Length="100" ValueOffset="2" Name="Time Wait">
+        <spinner Length="16" ValueOffset="2" Name="Time Wait">
           <tooltip>
 PLEASE USE INTERVALS OF 10.
 The subtype will determine

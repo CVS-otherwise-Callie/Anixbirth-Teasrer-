@@ -2,17 +2,6 @@ local mod = FHAC
 local game = Game()
 local room = Game():GetRoom()
 
---EID STUFF COMES FIRST
-function FHAC:loadFont(fontFileName)
-	FHAC.font:Load(fontFileName, "")
-	FHAC.font:SetMissingCharacter(2)
-	if not FHAC.font:IsLoaded() then
-		Isaac.DebugString("EID - ERROR: Could not load font from resources/font/default.fnt" .. "'")
-		return false
-	end
-	return true
-end
-
 function mod:getMinSec(totalSeconds)
     local minutes = math.floor(totalSeconds / 60)
     local seconds = math.floor(totalSeconds % 60)
@@ -73,60 +62,6 @@ function mod:ENT(name)
 	return {ID = Isaac.GetEntityTypeByName(name), Var = Isaac.GetEntityVariantByName(name), Sub = Isaac.GetEntitySubTypeByName(name)}
 end
 
-function mod:FindRandomValidPathPosition(npc, mode, avoidplayer, nearposses,farposses,ignorepoops) --omfg i love you fiend folio
-	local validPositions = {}
-	local validPositionsFar = {}
-	local validPositionsNear = {}
-	local pathfinder = npc.Pathfinder
-	local room = game:GetRoom()
-	local size = room:GetGridSize()
-	nearposses = nearposses or 80
-	farposses = farposses or 150
-	ignorepoops = ignorepoops or false
-	local playertable = {}
-
-	if avoidplayer then
-        for i = 0, game:GetNumPlayers() do
-			table.insert(playertable, game:GetPlayer(i))
-		end
-	end
-	for i=0, size do
-		local gridpos = room:GetGridPosition(i)
-		local gridEntity = room:GetGridEntity(i)
-		local farfromplayer = true
-		if npc.Pathfinder:HasPathToPos(gridpos, ignorepoops) and not gridEntity then
-			if avoidplayer then
-				for k = 1, #playertable do
-					if gridpos:Distance(playertable[k].Position) < avoidplayer then
-						farfromplayer = false
-					end
-				end
-			end
-			if farfromplayer then
-				table.insert(validPositions, gridpos)
-				if npc.Position:Distance(gridpos) > farposses then
-					table.insert(validPositionsFar, gridpos)
-				elseif npc.Position:Distance(gridpos) < nearposses and npc.Position:Distance(gridpos) > 30 then
-					table.insert(validPositionsNear, gridpos)
-				end
-			end
-		end
-	end
-	if #validPositionsFar > 0 and mode == 2 then
-		return validPositionsFar[math.random(#validPositionsFar)]
-	elseif #validPositionsNear > 0 and mode == 3 then
-		return validPositionsNear[math.random(#validPositionsNear)]
-	elseif #validPositions > 0 then
-		return validPositions[math.random(#validPositions)]
-	else
-		if mode == 10 then
-			return false
-		else
-			return npc.Position
-		end
-	end
-end
-
 function mod:FindFreeGrid(target, targetdist) --omfg i love you fiend folio
 	local validPositions = {}
 	local room = game:GetRoom()
@@ -162,11 +97,6 @@ function mod:SnapVector(angle, snapAngle)
 	local snapped = math.floor(((angle:GetAngleDegrees() + snapAngle/2) / snapAngle)) * snapAngle
 	local snappedDirection = angle:Rotated(snapped - angle:GetAngleDegrees())
 	return snappedDirection
-end
-
-function mod:RandomVector(entrng)
-	local rand = entrng or rng
-	return Vector(mod:TrueRandomFloat(entrng), mod:TrueRandomFloat(entrng))
 end
 
 function mod:Lerp(first, second, percent, smoothIn, smoothOut) --woah siiickkkk
@@ -296,13 +226,6 @@ function mod:CheckTableContents(table, element)
 	  end
 	end
 	return false
-end
-
-function mod:ReplaceEnemyAnimation(npc, filepath, animation, layer, loadGraphics) --not important anymore, meant to scrap but i'm keeping in case i want to use it 
-	layer = layer or 0
-    loadGraphics = loadGraphics or true
-    npc = npc:ToNPC()
-    local sprite = npc:GetSprite()
 end
 
 function mod:spriteOverlayPlay(sprite, anim)
