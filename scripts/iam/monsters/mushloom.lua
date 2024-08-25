@@ -11,7 +11,11 @@ end, mod.Monsters.MushLoom.ID)
 
 function mod:MushLoomAI(npc, sprite, d)
     if not d.init then
-        d.waittime = rng:RandomInt(30, 50)
+        if npc.SubType == 0 then
+            d.waittime = rng:RandomInt(30, 50)
+        else
+            d.waittime = npc.SubType
+        end
         d.shoottype = 1
         d.state = "Hide"
         d.offset = math.random(-360, 360)
