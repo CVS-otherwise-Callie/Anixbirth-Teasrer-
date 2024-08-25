@@ -87,7 +87,7 @@ function mod:MushLoomAI(npc, sprite, d)
     if sprite:IsFinished("LookUp") then
         d.idonttakealotofdamage = false
         npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_NONE
-        npc.GridCollisionClass = GridCollisionClass.COLLISION_NONE
+        npc.GridCollisionClass = GridCollisionClass.COLLISION_WALL
         d.state = "Jump"
         npc.Velocity = mod:Lerp(npc.Velocity, mod:mushloomFind(250, 200) - npc.Position, 0.15, 2, 2)
     end
