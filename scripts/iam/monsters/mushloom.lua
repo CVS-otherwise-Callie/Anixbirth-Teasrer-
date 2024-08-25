@@ -35,7 +35,9 @@ function mod:MushLoomAI(npc, sprite, d)
     if d.state == "Hide" then
         d.idonttakealotofdamage = true
         mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, function(_, npc, damage, flag, source)
-            return {Damage=0.05}
+            if npc:ToNPC():GetData().idonttakealotofdamage then
+                return {Damage=0.5}
+            end
         end, mod.Monsters.MushLoom.ID)
     end
 
@@ -49,7 +51,6 @@ function mod:MushLoomAI(npc, sprite, d)
     end
 
     if sprite:IsFinished("JumpUp") then
-        npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_NONE
         d.state = "Peak"
         npc.Velocity = mod:Lerp(npc.Velocity, npc.Position - (room:GetCenterPos() + Vector(20, 0)):Rotated(d.offset), 0.1, 2, 2)
     end
@@ -66,7 +67,6 @@ function mod:MushLoomAI(npc, sprite, d)
     end
 
     if d.state == "FallDown" then
-        npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_ALL
         npc.Velocity = npc.Velocity * 0.01
     end
 
@@ -86,11 +86,15 @@ function mod:MushLoomAI(npc, sprite, d)
 
     if sprite:IsFinished("LookUp") then
         d.idonttakealotofdamage = false
+        npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_NONE
+        npc.GridCollisionClass = GridCollisionClass.COLLISION_NONE
         d.state = "Jump"
         npc.Velocity = mod:Lerp(npc.Velocity, mod:mushloomFind(250, 200) - npc.Position, 0.15, 2, 2)
     end
 
     if sprite:IsEventTriggered("shoot") then
+        npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_ALL
+        npc.GridCollisionClass = GridCollisionClass.COLLISION_OBJECT
         local params = ProjectileParams()
         params.HeightModifier = -1
         params.Scale = 1
