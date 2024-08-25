@@ -77,7 +77,7 @@ function mod:MushLoomAI(npc, sprite, d)
     function mod:mushloomFind(far, close)
         local tab = {}
         for i = 0, room:GetGridSize() do
-            if room:GetGridPosition(i):Distance(npc.Position) < far and room:GetGridPosition(i):Distance(npc.Position) > close then
+            if room:GetGridPosition(i):Distance(npc.Position) < far and room:GetGridPosition(i):Distance(npc.Position) > close and room:GetGridEntity(i) == nil then
                 table.insert(tab, room:GetGridPosition(i))
             end
         end
@@ -94,7 +94,7 @@ function mod:MushLoomAI(npc, sprite, d)
 
     if sprite:IsEventTriggered("shoot") then
         npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_ALL
-        npc.GridCollisionClass = GridCollisionClass.COLLISION_OBJECT
+        npc.GridCollisionClass = GridCollisionClass.COLLISION_SOLID
         local params = ProjectileParams()
         params.HeightModifier = -1
         params.Scale = 1
