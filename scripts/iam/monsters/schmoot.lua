@@ -123,24 +123,12 @@ function mod:SchmootAI(npc, sprite, d)
             mod:ReplaceEnemySpritesheet(newschmoot, "gfx/monsters/schmoot/shmoot_put_out", 1)
             mod:ReplaceEnemySpritesheet(newschmoot, "gfx/nothing", 0)
         end
-        newdata.isDead = true
         newdata.state = "Deathin"
+        newdata.isDead = true
         newdata.secondinit = true
         newschmoot:ClearEntityFlags(EntityFlag.FLAG_APPEAR)
         data.noMore = true
     end
-
-    mod:AddCallback(ModCallbacks.MC_POST_NPC_DEATH, function(_, ent)
-    if ent.Variant ~= mod.Monsters.Schmoot.Var then return end
-    if d.isDead then return end
-    if d.state == "rollin" or d.state == "Deathin" or not npc:IsDead() then return end
-        mod:ReplaceEnemySpritesheet(npc, "gfx/nothing", 0)
-        mod:ReplaceEnemySpritesheet(npc, "gfx/nothing", 1)
-        npc.Velocity = Vector.Zero
-        d.isDead = true
-        mod:spawnSchmoot(ent)
-        npc:Remove()
-    end, mod.Monsters.Schmoot.ID)
 
     if d.state == "Deathin" then
         if not d.secondinit then
@@ -192,3 +180,15 @@ function mod:SchmootAI(npc, sprite, d)
     end, mod.Monsters.Schmoot.ID)
 end
 
+mod:AddCallback(ModCallbacks.MC_POST_NPC_DEATH, function(_, ent)
+    local ent = ent:ToNPC()
+    local sprite = ent:GetSprite()
+    local d = ent:GetData()
+    if ent.Variant ~= mod.Monsters.Schmoot.Var then return end
+    if d.isDead or sprite:IsPlaying("Death") or sprite:IsPlaying("Roll") then return end
+        mod:ReplaceEnemySpritesheet(ent, "gfx/nothing", 0)
+        mod:ReplaceEnemySpritesheet(ent, "gfx/nothing", 1)
+        ent.Velocity = Vector.Zero
+        mod:spawnSchmoot(ent)
+        ent:Remove()
+    end, mod.Monsters.Schmoot.ID)

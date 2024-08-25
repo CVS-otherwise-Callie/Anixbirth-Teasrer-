@@ -31,6 +31,7 @@ Use 2, 4, or 6 normally.
           </tooltip>
         </spinner>
       </bitfield>
+<entity ID="161" Variant="224" Name="Mush Loom" Image="mah boys/mushloom.png" BaseHP="10" StageHP="2" Tags="Champion" Group="Monsters" Kind="Anixbirth (Hope)"/>
 </entity>
 
 
@@ -86,6 +87,18 @@ Use 2, 4, or 6 normally.
       </group>
 	</group>
 
+   <group Name="HOPE Chapter 2 Enemies" Label="Chapter 2 Shared">
+      <group Name="HOPE Chapter 2 Shared Enemies">
+		   <entity Name="Mush Loom"/>
+      </group>
+	</group>
+
+   <group Name="HOPE Catacombs" Label="Catacombs">
+      <group Name="HOPE Catacombs Enemies">
+		   <entity Name="Mush Loom"/>
+      </group>
+	</group>
+
    <group Name="HOPE Flooded Caves" Label="Flooded Caves">
       <group Name="HOPE Flooded Caves Enemies">
 		   <entity Name="Pit Pat (Spawner)"/>
@@ -122,9 +135,13 @@ Use 2, 4, or 6 normally.
 	<group Name="HOPE Burning Basement Enemies"/>
 </group>
 
-<!--group Name="Chapter 2 (Main Path) Enemies">
+<group Name="Chapter 2 (Main Path) Enemies">
 	<group Name="HOPE Chapter 2 Shared Enemies"/>
-</group-->
+</group>
+
+<group Name="Catacombs Enemies">
+	<group Name="HOPE Catacombs Enemies"/>
+</group>
 
 <group Name="Flooded Caves Enemies">
 	<group Name="HOPE Flooded Caves Enemies"/>

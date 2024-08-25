@@ -1,5 +1,5 @@
 <AnimatedActor>
-	<Info CreatedBy="robot" CreatedOn="6/1/2024 4:28:26 PM" Version="112" Fps="30"/>
+	<Info CreatedBy="Iam" CreatedOn="6/1/2024 4:28:26 PM" Version="112" Fps="30"/>
 	<Content>
 		<Spritesheets>
 			<Spritesheet Path="..\..\..\eid_inline_icons.png" Id="0"/>

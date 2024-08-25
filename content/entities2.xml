@@ -288,6 +288,14 @@
         <devolve id="23.0.0" weight="1" />
     </entity>
 
+    <!--Catacombs-->
+
+    <entity id="161" variant="224" anm2path="monsters/mushloom/mushloom.anm2" reroll="false" baseHP="10" boss="0" champion="0" collisionDamage="1" collisionMass="100" collisionRadius="13" friction="1" name="Mush Loom" numGridCollisionPoints="12" shadowSize="14" stageHP="2" bestiary="true" portrait="224">
+    	<bestiary transform="0,0,1" anim="LookUp" />
+        <gibs amount="6" blood="2" bone="0" eye="1" gut="6" large="0" />
+        <devolve id="300.0.0" weight="1" />
+    </entity>
+
     <!--Flooded Caves-->
 
     <entity anm2path="monsters/pitpat/pitpat.anm2" id="161" variant="278" subtype="1" name="Pit Pat Spawner" reroll="false" baseHP="20" stageHP="1" boss="0" champion="0" collisionDamage="0" collisionMass="0" collisionRadius="0"  numGridCollisionPoints="0" shadowSize="0" shutdoors="false">
@@ -296,7 +304,7 @@
 
     
     <entity anm2path="monsters/pitpat/pitpat.anm2" id="161" variant="278" subtype="0" name="Pit Pat" reroll="true" baseHP="20" stageHP="1" boss="0" champion="1" collisionDamage="1" collisionMass="7" collisionRadius="13" friction="0" numGridCollisionPoints="3" shadowSize="0" portrait="278" beastiary="true" shutdoors="false">
-        <bestiary transform="0,0,1" anim="Jump" />
+        <bestiary transform="0,0,1" anim="Top" />
         <gibs amount="0" blood="1" bone="0" eye="0" gut="0" large="0" />
     </entity>
 

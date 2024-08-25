@@ -15,6 +15,7 @@ FHAC.Scripts = {
 		Snidge = include("scripts.iam.monsters.snidge"),
 		Drosslet = include("scripts.iam.monsters.drosslet"),
 		PitPat = include("scripts.iam.monsters.pitpat"),
+		MushLoom = include("scripts.iam.monsters.mushloom"),
 	},
 
 	Items = {

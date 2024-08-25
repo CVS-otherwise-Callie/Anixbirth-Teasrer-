@@ -22,6 +22,7 @@ FHAC.Monsters = {
     Drosslet = mod:ENT("Drosslet"),
     PitPatSpawner = mod:ENT("Pit Pat Spawner"),
     PitPat = mod:ENT("Pit Pat"),
+    MushLoom = mod:ENT("Mush Loom"),
 }
 
 FHAC.Jokes = {
