@@ -77,7 +77,7 @@ function mod:MushLoomAI(npc, sprite, d)
     function mod:mushloomFind(far, close)
         local tab = {}
         for i = 0, room:GetGridSize() do
-            if room:GetGridPosition(i):Distance(npc.Position) < far and room:GetGridPosition(i):Distance(npc.Position) > close and room:GetGridEntity(i) == nil then
+            if room:GetGridPosition(i):Distance(npc.Position) < far and room:GetGridPosition(i):Distance(npc.Position) > close and room:GetGridEntity(i) == nil and room:IsPositionInRoom(room:GetGridPosition(i), 0) then
                 table.insert(tab, room:GetGridPosition(i))
             end
         end
