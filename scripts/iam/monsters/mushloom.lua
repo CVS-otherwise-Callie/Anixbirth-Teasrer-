@@ -85,6 +85,9 @@ function mod:MushLoomAI(npc, sprite, d)
                 table.insert(tab, room:GetGridPosition(i))
             end
         end
+        if #tab == 0 then
+            return npc.Position
+        end
         return tab[rng:RandomInt(1, #tab - 1)]
     end
 

@@ -32,7 +32,7 @@ jumps again, so choose wisely!
         </spinner>
       </bitfield>
 <entity ID="161" Variant="400" Subtype = "10" Name="Erythorcyte" Image="mah boys/erythorcyte.png" BaseHP="15" StageHP="3" Tags="Champion" Group="Monsters" Kind="Anixbirth (Hope)"/>
-<entity ID="161" Variant="278" Subtype="0" Name="Pit Pat (Spawner)" Image="mah boys/pitpat.png" Group="Monsters" Kind="Anixbirth (Hope)">
+<entity ID="161" Variant="278" Subtype="0" Name="Pit Pat" Image="mah boys/pitpat.png" Group="Monsters" Kind="Anixbirth (Hope)">
 <bitfield Key="Subtype">
         <spinner Length="16" ValueOffset="1" Name="Count">
           <tooltip>
