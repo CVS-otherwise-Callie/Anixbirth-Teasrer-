@@ -14,7 +14,7 @@ function mod:MushLoomAI(npc, sprite, d)
         if npc.SubType == 0 then
             d.waittime = rng:RandomInt(30, 50)
         else
-            d.waittime = npc.SubType
+            d.waittime = npc.SubType * 3
         end
         d.shoottype = 1
         d.state = "Hide"
@@ -46,6 +46,10 @@ function mod:MushLoomAI(npc, sprite, d)
 
     if d.state == "LookUp" then
         d.oldpos = npc.Position
+        if not d.lookupinit then
+            d.oldwait = npc.StateFrame
+            d.lookupinit = true
+        end
     end
 
    --[[ if sprite:IsFinished("LookUp") then
@@ -80,22 +84,26 @@ function mod:MushLoomAI(npc, sprite, d)
     function mod:mushloomFind(far, close)
         local tab = {}
         for i = 0, room:GetGridSize() do
-            if room:GetGridPosition(i):Distance(npc.Position) < far and room:GetGridPosition(i):Distance(npc.Position) > close and room:GetGridEntity(i) == nil and room:IsPositionInRoom(room:GetGridPosition(i), 0) then
+            if room and room:GetGridPosition(i):Distance(npc.Position) < far and room:GetGridPosition(i):Distance(npc.Position) > close and room:GetGridEntity(i) == nil and room:IsPositionInRoom(room:GetGridPosition(i), 1) then
                 table.insert(tab, room:GetGridPosition(i))
             end
         end
         if #tab == 0 then
-            return npc.Position + npc.Position
+            return npc.Position
         end
         return tab[rng:RandomInt(1, #tab - 1)]
     end
 
     if sprite:IsFinished("LookUp") then
         d.idonttakealotofdamage = false
-        npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_NONE
-        npc.GridCollisionClass = GridCollisionClass.COLLISION_WALL
-        d.state = "Jump"
-        npc.Velocity = mod:Lerp(npc.Velocity, mod:mushloomFind(250, 200) - npc.Position, 0.15, 2, 2)
+        if npc.StateFrame >= d.oldwait + (d.waittime/ 2) then
+            npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_PLAYEROBJECTS
+            npc.GridCollisionClass = GridCollisionClass.COLLISION_WALL
+            d.state = "Jump"
+            npc.Velocity = mod:Lerp(npc.Velocity, mod:mushloomFind(250, 200) - npc.Position, 0.15, 2, 2)
+        else
+            npc.Velocity = Vector.Zero
+        end
     end
 
     if sprite:IsEventTriggered("shoot") then
@@ -114,6 +122,7 @@ function mod:MushLoomAI(npc, sprite, d)
         for i = 0, 4 do
             npc:FireProjectiles(npc.Position, Vector(0, 10):Rotated(((i * 90) + d.shootoffset)), 0, params)
         end
+        d.lookupinit = false
         d.offset = math.random(-20, 20)
         npc.Velocity = npc.Velocity * 0.1
     end

@@ -20,7 +20,7 @@
 <entity ID="161" Variant="91" Name="Schmoot" Image="mah boys/schmoot.png" BaseHP="16" Tags="Champion" Group="Monsters" Kind="Anixbirth (Hope)"/>
 <entity ID="161" Variant="119" Name="Wost" Image="mah boys/wost.png" BaseHP="15" Tags="Champion" Group="Monsters" Kind="Anixbirth (Hope)"/>
 <entity ID="161" Variant="169" Subtype = "0" Name="Drosslet" Image="mah boys/drosslet.png" BaseHP="10" Tags="Champion" Group="Monsters" Kind="Anixbirth (Hope)"/>
-<entity ID="161" Variant="224" Subtype = "0" Name="Mush Loom" Image="mah boys/mushloom.png" BaseHP="10" StageHP="2" Tags="Champion" Group="Monsters" Kind="Anixbirth (Hope)"/>
+<entity ID="161" Variant="224" Subtype = "0" Name="Mush Loom" Image="mah boys/mushloom.png" BaseHP="10" StageHP="2" Tags="Champion" Group="Monsters" Kind="Anixbirth (Hope)">
 <bitfield Key="Subtype">
         <spinner Length="16" ValueOffset="2" Name="Time Wait">
           <tooltip>
@@ -31,8 +31,9 @@ jumps again, so choose wisely!
           </tooltip>
         </spinner>
       </bitfield>
+</entity>
 <entity ID="161" Variant="400" Subtype = "10" Name="Erythorcyte" Image="mah boys/erythorcyte.png" BaseHP="15" StageHP="3" Tags="Champion" Group="Monsters" Kind="Anixbirth (Hope)"/>
-<entity ID="161" Variant="278" Subtype="0" Name="Pit Pat" Image="mah boys/pitpat.png" Group="Monsters" Kind="Anixbirth (Hope)">
+<entity ID="161" Variant="278" Subtype="1" Name="Pit Pat (Spawner)" Image="mah boys/pitpat.png" Group="Monsters" Kind="Anixbirth (Hope)">
 <bitfield Key="Subtype">
         <spinner Length="16" ValueOffset="1" Name="Count">
           <tooltip>
