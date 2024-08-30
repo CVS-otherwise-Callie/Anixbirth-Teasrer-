@@ -92,25 +92,11 @@ function mod:WostAI(npc, sprite, d)
             d.state = "idle"
     end
 
-    function mod:wostFind(far, close)
-        local tab = {}
-        for i = 0, room:GetGridSize() do
-            if room and room:GetGridPosition(i):Distance(npc.Position) < far and room:GetGridPosition(i):Distance(npc.Position) > close and room:GetGridEntity(i) == nil and room:IsPositionInRoom(room:GetGridPosition(i), 0) and not room:CheckLine(room:GetGridPosition(i), target.Position, 1) then
-                table.insert(tab, room:GetGridPosition(i))
-            end
-        end
-        if #tab == 0 then
-            return npc.Position + npc.Position
-        end
-        return tab[rng:RandomInt(1, #tab - 1)]
-    end
-
-
     if d.state == "veryscaredhiding" then
         npc.StateFrame = npc.StateFrame + 1
         npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_NONE  
         if npc.StateFrame >= 10 then
-                    npc.Position = mod:wostFind(300, 250)
+                    npc.Position = mod:freeGrid(npc, false, 1000, 0)
                     npc.StateFrame = 0
                 d.state = "idle"
                 npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_ALL
@@ -126,20 +112,17 @@ function mod:WostAI(npc, sprite, d)
     if d.state == "kindascaredhiding" then
         npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_NONE
             if targetpos:Distance(npc.Position) > 100 or d.entitytearinrange == false then
-                npc.StateFrame = npc.StateFrame + 1
-                if npc.StateFrame >= 20 then
                     npc.StateFrame = 0
-                d.state = "idle"
-                npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_ALL
-                mod:spritePlay(sprite, "appear")
-                if rng:RandomInt(1, 5) == 5 then
-                    d.state = "shoot"
-                    npc.StateFrame = 0
-                    mod:spritePlay(sprite, "Shoot")
-                end
-            else
+                    d.state = "idle"
+                    npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_ALL
+                    mod:spritePlay(sprite, "appear")
+                    if rng:RandomInt(1, 5) == 5 then
+                            d.state = "shoot"
+                        npc.StateFrame = 0
+                        mod:spritePlay(sprite, "Shoot")
+                    end
+                else
                 d.state = "kindascaredhiding"
-            end
         end
     end
 

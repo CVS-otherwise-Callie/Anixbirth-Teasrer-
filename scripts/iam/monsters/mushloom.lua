@@ -81,26 +81,13 @@ function mod:MushLoomAI(npc, sprite, d)
         npc.StateFrame = 0
     end]]
 
-    function mod:mushloomFind(far, close)
-        local tab = {}
-        for i = 0, room:GetGridSize() do
-            if room and room:GetGridPosition(i):Distance(npc.Position) < far and room:GetGridPosition(i):Distance(npc.Position) > close and room:GetGridEntity(i) == nil and room:IsPositionInRoom(room:GetGridPosition(i), 1) then
-                table.insert(tab, room:GetGridPosition(i))
-            end
-        end
-        if #tab <= 1 then
-            return npc.Position
-        end
-        return tab[rng:RandomInt(1, #tab - 1)]
-    end
-
     if sprite:IsFinished("LookUp") then
         d.idonttakealotofdamage = false
         if npc.StateFrame >= d.oldwait + (d.waittime/ 2) then
             npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_PLAYEROBJECTS
             npc.GridCollisionClass = GridCollisionClass.COLLISION_WALL
             d.state = "Jump"
-            npc.Velocity = mod:Lerp(npc.Velocity, mod:mushloomFind(250, 200) - npc.Position, 0.15, 2, 2)
+            npc.Velocity = mod:Lerp(npc.Velocity, mod:freeGrid(npc, false, 300, 200) - npc.Position, 0.15, 2, 2)
         else
             npc.Velocity = Vector.Zero
         end

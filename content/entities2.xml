@@ -259,37 +259,14 @@
         <preload-snd id="146" />
     </entity>
 
-    <!--Womb-->
-
-    <entity anm2path="monsters/erythorcyte/erythorcyte.anm2" id="161" variant="400" reroll="false" baseHP="15" boss="0" champion="1" collisionDamage="1" collisionMass="40" collisionRadius="13" friction="1" name="Erythorcyte" numGridCollisionPoints="12" shadowSize="14" stageHP="3">
-        <bestiary transform="0,0,1" anim="Idle" />
-        <gibs amount="6" blood="5" bone="0" eye="1" gut="0" large="0" />
-        <devolve id="161.4.11" weight="1" />
-    </entity>
-
-    <entity anm2path="monsters/erythorcyte/erythorcyte.anm2" id="161" variant="400" subtype="1" reroll="false" baseHP="15" boss="0" champion="0" collisionDamage="1" collisionMass="40" collisionRadius="13" friction="1" name="Erythorcytebaby" numGridCollisionPoints="12" shadowSize="14" stageHP="2">
-        <bestiary transform="0,0,1" anim="Idle" />
-        <gibs amount="6" blood="5" bone="0" eye="1" gut="0" large="0" />
-    </entity>
-
-    <!--Alt - Downpour-->
-
-    <entity anm2path="monsters/wost/wost.anm2" id="161" variant="119" reroll="false" baseHP="15" boss="0" champion="0" collisionDamage="1" collisionMass="40" collisionRadius="13" friction="1" name="Wost" numGridCollisionPoints="5" shadowSize="5" stageHP="1" bestiary="true" portrait="119">
-        <bestiary transform="0,0,1" anim="Idle" />
-        <gibs amount="1" blood="1" bone="0" eye="0" gut="0" large="0" />
-        <devolve id="1000.159.0" weight="1" />
-    </entity>
-
-    <!--Alt - Dross-->
-
-    <entity anm2path="monsters/drosslet/drosslet.anm2" id="161" variant="169" reroll="false" baseHP="10" boss="0" champion="0" collisionDamage="1" collisionMass="40" collisionRadius="13" friction="0.8" name="Drosslet" numGridCollisionPoints="5" shadowSize="5" stageHP="1" bestiary="true" portrait="169">
-    	<bestiary transform="0,0,1" anim="IdleDown" />
-        <gibs amount="6" blood="2" bone="0" eye="1" gut="6" large="0" />
-        <devolve id="23.0.0" weight="1" />
+    <!--Caves-->
+    <entity anm2path="monsters/synthetichorf/synthetichorf.anm2" id="161" variant="189" reroll="true" baseHP="20" boss="0" champion="1" collisionDamage="1" collisionMass="40" collisionRadius="13" friction="0.1" name="Synthetic Horf" numGridCollisionPoints="12" shadowSize="14" stageHP="2" hasFloorAlts="true" bestiary="true" portrait="189">
+        <bestiary transform="0,0,1" anim="Shake" />
+        <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
+        <devolve id="12.0.0" weight="1" />
     </entity>
 
     <!--Catacombs-->
-
     <entity id="161" variant="224" anm2path="monsters/mushloom/mushloom.anm2" reroll="false" baseHP="10" boss="0" champion="0" collisionDamage="1" collisionMass="100" collisionRadius="13" friction="1" name="Mush Loom" numGridCollisionPoints="12" shadowSize="14" stageHP="2" bestiary="true" portrait="224">
     	<bestiary transform="0,0,1" anim="LookUp" />
         <gibs amount="6" blood="2" bone="0" eye="1" gut="6" large="0" />
@@ -297,21 +274,54 @@
     </entity>
 
     <!--Flooded Caves-->
-
     <entity anm2path="monsters/pitpat/pitpat.anm2" id="161" variant="278" subtype="1" name="Pit Pat Spawner" reroll="false" baseHP="20" stageHP="1" boss="0" champion="0" collisionDamage="0" collisionMass="0" collisionRadius="0"  numGridCollisionPoints="0" shadowSize="0" shutdoors="false">
         <gibs amount="0" blood="1" bone="0" eye="0" gut="0" large="0" />
     </entity>
-
-    
     <entity anm2path="monsters/pitpat/pitpat.anm2" id="161" variant="278" subtype="0" name="Pit Pat" reroll="true" baseHP="20" stageHP="1" boss="0" champion="1" collisionDamage="1" collisionMass="7" collisionRadius="13" friction="0" numGridCollisionPoints="3" shadowSize="0" portrait="278" beastiary="true" shutdoors="false">
         <bestiary transform="0,0,1" anim="Top" />
         <gibs amount="0" blood="1" bone="0" eye="0" gut="0" large="0" />
     </entity>
 
 
+    <!--Womb-->
+    <entity anm2path="monsters/erythorcyte/erythorcyte.anm2" id="161" variant="400" reroll="false" baseHP="15" boss="0" champion="1" collisionDamage="1" collisionMass="40" collisionRadius="13" friction="1" name="Erythorcyte" numGridCollisionPoints="12" shadowSize="14" stageHP="3">
+        <bestiary transform="0,0,1" anim="Idle" />
+        <gibs amount="6" blood="5" bone="0" eye="1" gut="0" large="0" />
+        <devolve id="161.4.11" weight="1" />
+    </entity>
+    <entity anm2path="monsters/erythorcyte/erythorcyte.anm2" id="161" variant="400" subtype="1" reroll="false" baseHP="15" boss="0" champion="0" collisionDamage="1" collisionMass="40" collisionRadius="13" friction="1" name="Erythorcytebaby" numGridCollisionPoints="12" shadowSize="14" stageHP="2">
+        <bestiary transform="0,0,1" anim="Idle" />
+        <gibs amount="6" blood="5" bone="0" eye="1" gut="0" large="0" />
+    </entity>
+
+    <!--Alt - Downpour-->
+    <entity anm2path="monsters/wost/wost.anm2" id="161" variant="119" reroll="false" baseHP="15" boss="0" champion="0" collisionDamage="1" collisionMass="40" collisionRadius="13" friction="1" name="Wost" numGridCollisionPoints="5" shadowSize="5" stageHP="1" bestiary="true" portrait="119">
+        <bestiary transform="0,0,1" anim="Idle" />
+        <gibs amount="1" blood="1" bone="0" eye="0" gut="0" large="0" />
+        <devolve id="1000.159.0" weight="1" />
+    </entity>
+
+    <entity id="161" variant="145" name="Pinprick" anm2path="monsters/pinprick/pinprick.anm2" reroll="true" baseHP="3" boss="0" champion="0" collisionDamage="1" collisionMass="3" collisionRadius="17" friction="1" numGridCollisionPoints="4" shadowSize="11" stageHP="1" gridCollision="walls" tags="fly" portrait="145">
+		<bestiary transform="0,0,1" anim="Fly" />
+        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
+    </entity>  
+
+    <!--Alt - Dross-->
+    <entity anm2path="monsters/drosslet/drosslet.anm2" id="161" variant="169" reroll="false" baseHP="10" boss="0" champion="0" collisionDamage="1" collisionMass="40" collisionRadius="13" friction="0.8" name="Drosslet" numGridCollisionPoints="5" shadowSize="5" stageHP="1" bestiary="true" portrait="169">
+    	<bestiary transform="0,0,1" anim="IdleDown" />
+        <gibs amount="6" blood="2" bone="0" eye="1" gut="6" large="0" />
+        <devolve id="23.0.0" weight="1" />
+    </entity>
+
     <!--Jokes-->
     <entity anm2path="jokes/enemies/gaperrr/gaperrr.anm2" id="10" variant="5938" reroll="false" baseHP="13" boss="0" champion="1" collisionDamage="1" collisionMass="40" collisionRadius="13" friction="1" name="A gaper w/ three legs, why did we do this" numGridCollisionPoints="12" shadowSize="12" stageHP="3">
         <gibs amount="6" blood="2" bone="1" eye="1" gut="1" large="0" />
         <devolve id="10.1.0" weight="1" />
+    </entity>
+
+    <!--Familiars-->
+
+    <entity anm2path="familiar/snark/snark.anm2" baseHP="0" boss="0" champion="0" collisionDamage="3" collisionMass="3" collisionRadius="13" friction="1" id="3" name="Snark (Half Life)" numGridCollisionPoints="12" shadowSize="12" stageHP="0" variant="4502" tags="cansacrifice">
+        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
     </entity>
 </entities>

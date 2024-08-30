@@ -17,7 +17,6 @@ function mod:NeutralflyAI(npc, sprite, d)
         npc.SpriteOffset = Vector(0,-12)
         npc.StateFrame = 60
         d.rounds = 0
-        d.speedup = 0
         d.rotation =  45 * rng:RandomInt(1, 8)
         d.state = "idle"
         
@@ -32,96 +31,67 @@ function mod:NeutralflyAI(npc, sprite, d)
     end
 
     if d.state == "idle" then
-        if d.accel >= 0.5 then
-            d.accel = d.accel - 0.5 
-        end
         sprite:Play("Idle")
-        if npc.StateFrame > 10 then
+        if npc.StateFrame > 50 then
+            d.newpos = mod:freeGrid(npc, false, 200, 100)
             d.rounds = 0
             d.state = "moving"
+            if d.newpos.Y < npc.Position.Y then
+                d.spritedir = "MovingUp"
+            else
+                d.spritedir = "MovingDown"
+            end
+            if d.newpos.X > npc.Position.X then
+                if d.spritedir == "MovingUp" then
+                    sprite.FlipX = true
+                else
+                    sprite.FlipX = false
+                end
+            else
+                if d.spritedir == "MovingUp" then
+                    sprite.FlipX = false
+                else
+                    sprite.FlipX = true
+                end 
+            end
         end
-        if npc.Position then
-
-        end
+        npc.Velocity = npc.Velocity * 0.8
     end
     --thx erfly
     
 
     if d.state == "moving" then
-        if d.rounds >= 3 then
-            if game:GetRoom():GetGridCollisionAtPos(npc.Position) < 2 then
-                d.rounds = 0
-                npc.StateFrame = 0
-                d.state = "idle"
-            else
-                d.rounds = 2
-            end
+        if d.rounds > 3 then
+            d.rounds = 0
+            npc.StateFrame = 0
+            d.state = "idle"
         end
-        if npc.StateFrame == 10 then
-                for i = 1, 360 do
-                    local coolpos = npc.Position + Vector(1, 1):Rotated(i)
-                    if room:IsPositionInRoom(coolpos, 0) and room:GetGridCollisionAtPos(coolpos) < 2 and math.abs((coolpos - npc.Position):GetAngleDegrees()) < 180 and (room:GetCenterPos() - coolpos):Length() < 100 then
-                        table.insert(possibleinits, coolpos)
-                    end
-                end  
-                if not mod:IsTableEmpty(possibleinits) then
-                    d.newpos = possibleinits[math.random(#possibleinits)] - npc.Position
-                elseif d.newpos then
-                    d.newpos = d.newpos:Rotated(180)
-                else
-                    d.newpos = Vector(1, 1):Rotated(rng:RandomInt(100))
-                end
-                d.rounds = d.rounds + 1
-                d.speedup = d.rounds * 2
-            elseif npc.StateFrame > 60 + d.rounds then
-                npc.StateFrame = 0
-            end
-            if npc.StateFrame > 50 + d.rounds and d.newpos then
-                if d.accel <= 4 + d.rounds then
-                d.accel = d.accel + 0.5
-                end
-                if d.newpos then
-                    npc.Velocity = npc.Velocity:Rotated(rng:RandomInt(-1, 1) * ((d.newpos - npc.Position):GetAngleDegrees()/15))
-                end
+        if npc.StateFrame > 40 then
+            d.newpos = mod:freeGrid(npc, false, 150, 100)
+            npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_ALL
+            npc.GridCollisionClass = 5
+            npc.StateFrame = 0
+            d.rounds = d.rounds + 1
+            if d.newpos.Y < npc.Position.Y then
+                d.spritedir = "MovingUp"
             else
-                if d.accel >= 0 then
-                    d.accel = d.accel - 0.1
-                end
-                if d.newpos then
-                    npc.Velocity = npc.Velocity:Rotated(rng:RandomInt(-1, 1) * ((d.newpos - npc.Position):GetAngleDegrees()/50))
-                end
+                d.spritedir = "MovingDown"
             end
-                if d.newpos and npc.Velocity:Length() > 1 then
-                if npc.Position.Y+d.newpos.Y < npc.Position.Y then
-                    d.spritedir = "MovingUp"
-                else
-                    d.spritedir = "MovingDown"
-                end
-                if npc.Position.X+d.newpos.X < npc.Position.X then
-                    if d.spritedir == "MovingUp" then
-                        sprite.FlipX = true
-                    else
-                        sprite.FlipX = false
-                    end
-                else
-                    if d.spritedir == "MovingDown" then
-                        sprite.FlipX = false
-                    else
-                        sprite.FlipX = true
-                    end    
-                end 
-                mod:spritePlay(sprite, d.spritedir)
+            if d.newpos.X < npc.Position.X then
+                sprite.FlipX = false
+            else
+                sprite.FlipX = true
             end
-    end
-    if d.newpos then
-    if mod:isScare(npc) then
-        npc.Velocity = mod:Lerp(npc.Velocity,d.newpos, -1*(0.3)):Resized(d.accel * 2.5)
-    else
-        npc.Velocity = mod:Lerp(npc.Velocity, d.newpos, 0.3):Resized(d.accel * 1.5)
-        if npc.StateFrame == 26 then
+        else
+            npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_PLAYEROBJECTS
             npc.GridCollisionClass = GridCollisionClass.COLLISION_SOLID
+            if mod:isScare(npc) then
+                npc.Velocity = mod:Lerp(npc.Velocity, d.newpos - npc.Position, -1*(0.005))
+            else
+                npc.Velocity = mod:Lerp(npc.Velocity, d.newpos - npc.Position, 0.005)
+            end
         end
-    end--may as well
+        mod:spritePlay(sprite, d.spritedir)
     end
 end
 

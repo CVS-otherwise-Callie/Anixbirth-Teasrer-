@@ -19,6 +19,15 @@
 </entity>
 <entity ID="161" Variant="91" Name="Schmoot" Image="mah boys/schmoot.png" BaseHP="16" Tags="Champion" Group="Monsters" Kind="Anixbirth (Hope)"/>
 <entity ID="161" Variant="119" Name="Wost" Image="mah boys/wost.png" BaseHP="15" Tags="Champion" Group="Monsters" Kind="Anixbirth (Hope)"/>
+<entity ID="161" Variant="145" Name="Pinprick" Image="mah boys/pinprick.png" BaseHP="6" StageHP="1" Tags="Champion" Group="Monsters" Kind="Anixbirth (Hope)">
+<bitfield Key="Subtype">
+        <spinner Length="16" ValueOffset="1" Name="Amount of pinpricks">
+          <tooltip>
+Don't be evil please.
+          </tooltip>
+        </spinner>
+      </bitfield>
+</entity>
 <entity ID="161" Variant="169" Subtype = "0" Name="Drosslet" Image="mah boys/drosslet.png" BaseHP="10" Tags="Champion" Group="Monsters" Kind="Anixbirth (Hope)"/>
 <entity ID="161" Variant="224" Subtype = "0" Name="Mush Loom" Image="mah boys/mushloom.png" BaseHP="10" StageHP="2" Tags="Champion" Group="Monsters" Kind="Anixbirth (Hope)">
 <bitfield Key="Subtype">
@@ -89,6 +98,7 @@ Use 2, 4, or 6 normally.
    <group Name="HOPE Downpour" Label="Downpour">
       <group Name="HOPE Downpour Enemies">
 		   <entity Name="Wost"/>
+		   <entity Name="Pinprick"/>
       </group>
 	</group>
 

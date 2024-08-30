@@ -16,6 +16,11 @@ FHAC.Scripts = {
 		Drosslet = include("scripts.iam.monsters.drosslet"),
 		PitPat = include("scripts.iam.monsters.pitpat"),
 		MushLoom = include("scripts.iam.monsters.mushloom"),
+		Pinprick = include("scripts.iam.monsters.pinprick"),
+	},
+
+	Familiars = {
+		Snark = include("scripts.iam.familiars.snark")
 	},
 
 	Items = {
@@ -31,7 +36,8 @@ FHAC.Scripts = {
 	},
     
     Characters = {
-        Johannes = include("scripts.iam.characters.johannes")
+        Johannes = include("scripts.iam.characters.johannes"),
+		Pongon = include("scripts.iam.characters.pongon")
     },
 
 	Config = {

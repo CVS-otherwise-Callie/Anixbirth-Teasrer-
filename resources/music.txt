@@ -7,7 +7,7 @@
 	<track id="6" name="Necropolis" intro="Necropolis Intro.ogg" path="Necropolis.ogg" layerintro="Necropolis Layer Intro.ogg" layer="Necropolis Layer.ogg" loop="true" />
 	<track id="7" name="Womb" intro="The Womb Chapter Four Intro.ogg" path="The Womb Chapter Four.ogg" layerintro="The Womb Layer Intro.ogg" layer="The Womb Layer.ogg" loop="true" />
 	<track id="8" name="Game Over" path="You Died.ogg" loop="true" />
-	<track id="9" name="Boss" intro="Fight Ogg/Basic Boss Fight Intro.ogg" path="Fight Ogg/Basic Boss Fight.ogg" loop="true" />
+	<track id="9" name="Boss" intro="shhh piano builds go away/Boss Theme.ogg" path="shhh piano builds go away/Boss Theme.ogg" loop="true" />
 	<track id="10" name="Cathedral" intro="Cathedral Intro.ogg" path="Cathedral Chant.ogg" layerintro="Cathedral Layer Intro.ogg" layer="Cathedral Layer.ogg" loop="true" />
 	<track id="11" name="Sheol" intro="Sheol Intro.ogg" path="Sheol.ogg" layerintro="Sheol Layer Intro.ogg" layer="Sheol Layer.ogg" loop="true" />
 	<track id="12" name="Dark Room" intro="Dark Room Alt Chapter 6 intro.ogg" path="Dark Room Alt Chapter 6.ogg" loop="true" />
@@ -41,7 +41,7 @@
 	<track id="40" name="Boss Rush (jingle)" path="JINGLE OGG/Ambush Jinle outro V3_04.ogg" loop="false" />
 
 	<!-- REPENTANCE BEGIN -->
-	<track id="41" name="Boss (alternate alternate)" intro="repentance/boss alt intro.ogg" path="Repentance/Boss ALT.ogg" loop="true" />
+	<track id="41" name="Boss (alternate alternate)" intro="shhh piano builds go away/Boss Theme.ogg" path="shhh piano builds go away/Boss Theme.ogg" loop="true" />
 	<track id="42" name="Boss Death Alternate Alternate (jingle)" path="Repentance/Alt Boss Track Jingle.ogg" loop="false" mul="2.2" />
 
 	<!-- <track id="43" name="Boss (Mother)" path="Repentance/MOTHER_BOSS_V6.ogg" loop="true" mul="1.25" /> Story boss, has True version -->
@@ -83,7 +83,7 @@
 	<track id="71" name="Credits Alt Final" path="Torn Page - Credits.ogg" loop="false" mul="1.9" />
 	<!-- REPENTANCE END -->
 
-	<track id="81" name="Boss (jingle)" path="JINGLE OGG/Boss Fight intro jingle V2.1.ogg" loop="false" />
+	<track id="81" name="Boss (jingle)" path="shhh piano builds go away/Boss Theme.ogg" loop="false" />
 	<track id="83" name="Boss Death (jingle)" path="JINGLE OGG/Boss FIght jingle OUTRO v2_12.ogg" loop="false" />
 	<track id="84" name="Holy Room Find (jingle)" path="JINGLE OGG/Angel Room Appear V2_07.ogg" loop="false" />
 	<track id="85" name="Secret Room Find (jingle)" path="JINGLE OGG/secret room find v2_07.ogg" loop="false" />

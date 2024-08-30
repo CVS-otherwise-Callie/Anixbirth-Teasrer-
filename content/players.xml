@@ -11,6 +11,15 @@
 	speedmodifier="1.5"
 	firedelaymodifier="1.1"
 />
+    <player name="Pongon"
+        skin="shh secret/pongon.png"
+        hidden="true"
+        nameimage="playername_pongon.png"
+	canShoot="true"
+        hp="6"
+        portrait="pongon.png"
+        skinColor="-1"
+/>
 </players>
 
 

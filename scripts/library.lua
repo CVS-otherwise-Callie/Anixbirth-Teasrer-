@@ -32,6 +32,46 @@ function mod:IsSourceofDamagePlayer(source, bomb)
 	end
 end
 
+function mod:freeGrid(npc, path, far, close)
+	path = path or false
+	far = far or 300
+	close = close or 250
+	local tab = {}
+	if path then
+		for i = 0, room:GetGridSize() do
+			if room:GetGridPosition(i) ~= nil then
+			local gridpoint = room:GetGridPosition(i)
+			if gridpoint and gridpoint:Distance(npc.Position) < far and gridpoint:Distance(npc.Position) > close and room:GetGridEntity(i) == nil and room:IsPositionInRoom(gridpoint, 15) and game:GetRoom():CheckLine(gridpoint,npc.Position,3,900,false,false) then
+				table.insert(tab, gridpoint)
+			end
+			end
+		end
+	else
+		for i = 0, room:GetGridSize() do
+			if room:GetGridPosition(i) ~= nil then
+				local gridpoint = room:GetGridPosition(i)
+				if gridpoint and gridpoint:Distance(npc.Position) < far and gridpoint:Distance(npc.Position) > close and room:GetGridEntity(i) == nil and room and room:IsPositionInRoom(gridpoint, 15) then
+					table.insert(tab, gridpoint)
+				end
+			end
+		end
+	end
+	if #tab <= 0 then
+		return npc.Position
+	end
+	return tab[math.random(1, #tab)]
+end
+
+function mod:isSirenCharmed(familiar)
+	local helpers = Isaac.FindByType(EntityType.ENTITY_SIREN_HELPER, -1, -1, true)
+	for _, helper in ipairs(helpers) do
+		if helper.Target and helper.Target.Index == familiar.Index and helper.Target.InitSeed == familiar.InitSeed then
+			return true, helper
+		end
+	end
+	return false, nil
+end
+
 --thx future
 function mod:isConfuse(npc)
 	return npc:HasEntityFlags(EntityFlag.FLAG_CONFUSION)
