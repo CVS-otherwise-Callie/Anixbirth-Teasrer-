@@ -1,5 +1,6 @@
 local mod = FHAC
 local game = Game()
+local room = game:GetRoom()
 local rng = RNG()
 
 mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
@@ -10,7 +11,6 @@ end, mod.Monsters.Wost.ID)
 
 function mod:WostAI(npc, sprite, d)
     local target = npc:GetPlayerTarget()
-    local room = game:GetRoom()
     local targetpos = mod:confusePos(npc, target.Position, 5, nil, nil)
     local targetvelocity = (targetpos - npc.Position)
     local roomTears = room:GetEntities(EntityType.ENTITY_TEAR)
@@ -96,7 +96,7 @@ function mod:WostAI(npc, sprite, d)
         npc.StateFrame = npc.StateFrame + 1
         npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_NONE  
         if npc.StateFrame >= 10 then
-                    npc.Position = mod:freeGrid(npc, false, 1000, 0)
+                    npc.Position = mod:freeGrid(npc, false, 1000, 1)
                     npc.StateFrame = 0
                 d.state = "idle"
                 npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_ALL
@@ -128,46 +128,53 @@ function mod:WostAI(npc, sprite, d)
 
 --all shooty shit
     if sprite:IsEventTriggered("shoot") then
-        d.projectile = Isaac.Spawn(9, 4, 0, npc.Position, Vector.Zero, npc):ToProjectile()
-        d.projectile.Color = Color(0,0,0,0.3,204 / 255,204 / 255,204 / 255)
-        d.projectile.ChangeTimeout = d.projectile.ChangeTimeout * 13.4
-        d.projectile.Scale = d.projectile.Scale * 0.2
-        d.projectile.Velocity = mod:Lerp(d.projectile.Velocity, targetpos - npc.Position, targetpos:Distance(d.projectile.Position) * 0.00001)
-        d.projectile.FallingAccel = 0.15
-        d.projectile.FallingSpeed = -3
-        d.projectile.ProjectileFlags = ProjectileFlags.NO_WALL_COLLIDE | ProjectileFlags.GHOST | ProjectileFlags.CHANGE_FLAGS_AFTER_TIMEOUT
-    end
-
-    if d.projectile then
-        local targetvelocity = (targetpos - d.projectile.Position)
-        d.projectile.Velocity = mod:Lerp(d.projectile.Velocity, targetvelocity, 0.00175)
-        if d.projectile.FallingAccel >= 0.15 and d.projectile.FallingSpeed >= 0 and not (npc:HasEntityFlags(EntityFlag.FLAG_FEAR) or 
-        npc:HasEntityFlags(EntityFlag.FLAG_CONFUSION)) or not room:IsClear() or not npc:IsDead() or d.projectile.FrameCount < 400 then
-			d.projectile.FallingSpeed = 0
-			d.projectile.FallingAccel = -0.1
-        else
-            d.projectile:Remove()
-		end
-        if not room:IsPositionInRoom(d.projectile.Position, 1) then
-            d.projectile.ProjectileFlags = (d.projectile.ProjectileFlags | ProjectileFlags.NO_WALL_COLLIDE | ProjectileFlags.GHOST | ProjectileFlags.CONTINUUM)
-        else
-            if d.projectile:HasProjectileFlags(ProjectileFlags.CONTINUUM) then
-            d.projectile:ClearProjectileFlags(ProjectileFlags.CONTINUUM)
-            end
-        end
-        if d.projectile.Velocity:Length() > 4 then
-            d.projectile.Velocity = d.projectile.Velocity * 0.8
-        end
-        if (d.projectile.FrameCount > 400 and d.projectile.FallingSpeed == 0) or room:IsClear() or npc:IsDead() then
-            d.projectile.ChangeTimeout = 0
-            d.projectile:Remove()
-        end
-        function mod:RemoveWostProj(proj, collider)
-            if proj.SpawnerVariant ~= nil and collider.Type == EntityType.ENTITY_PLAYER and proj.SpawnerVariant == mod.Monsters.Wost.Var and proj.SpawnerEntity.SubType == mod.Monsters.Wost.Subtype then
-                proj:Remove()
-            end
-        end
-        mod:AddCallback(ModCallbacks.MC_PRE_PROJECTILE_COLLISION, mod.RemoveWostProj)
+        local p = Isaac.Spawn(9, 4, 0, npc.Position, Vector.Zero, npc):ToProjectile()
+        p:GetData().type = "WostShot"
+        p.Color = Color(0,0,0,0.3,204 / 255,204 / 255,204 / 255)
+        p.ChangeTimeout = p.ChangeTimeout * 13.4
+        p.Scale = p.Scale * 0.2
+        p.Velocity = mod:Lerp(p.Velocity, targetpos - npc.Position, targetpos:Distance(p.Position) * 0.00001)
+        p.FallingAccel = 0.15
+        p.FallingSpeed = -3
+        p.ProjectileFlags = ProjectileFlags.NO_WALL_COLLIDE | ProjectileFlags.GHOST | ProjectileFlags.CHANGE_FLAGS_AFTER_TIMEOUT
+        p.Parent = npc
     end
 end
 
+function mod.WostShot(p, d)
+    if d.type == "WostShot" then
+    local par = p.Parent
+    local npc = par:ToNPC()
+    local target = npc:GetPlayerTarget()
+    local targetpos = mod:confusePos(npc, target.Position, 5, nil, nil)
+    local targetvelocity = (targetpos - p.Position)
+    p.Velocity = mod:Lerp(p.Velocity, targetvelocity, 0.00175)
+    if p.FallingAccel >= 0.15 and p.FallingSpeed >= 0 and not (npc:HasEntityFlags(EntityFlag.FLAG_FEAR) or 
+    npc:HasEntityFlags(EntityFlag.FLAG_CONFUSION)) or not room:IsClear() or not npc:IsDead() or p.FrameCount < 400 then
+        p.FallingSpeed = 0
+        p.FallingAccel = -0.1
+    else
+        p:Remove()
+    end
+    if not room:IsPositionInRoom(p.Position, 1) then
+        p.ProjectileFlags = (p.ProjectileFlags | ProjectileFlags.NO_WALL_COLLIDE | ProjectileFlags.GHOST | ProjectileFlags.CONTINUUM)
+    else
+        if p:HasProjectileFlags(ProjectileFlags.CONTINUUM) then
+        p:ClearProjectileFlags(ProjectileFlags.CONTINUUM)
+        end
+    end
+    if p.Velocity:Length() > 4 then
+        p.Velocity = p.Velocity * 0.8
+    end
+    if (p.FrameCount > 400 and p.FallingSpeed == 0) or room:IsClear() or npc:IsDead() then
+        p.ChangeTimeout = 0
+        p:Remove()
+    end
+    end
+end
+
+function mod.RemoveWostProj(proj, collider)
+    if proj.SpawnerVariant ~= nil and collider.Type == EntityType.ENTITY_PLAYER and proj.SpawnerVariant == mod.Monsters.Wost.Var and proj.SpawnerEntity.SubType == mod.Monsters.Wost.Subtype then
+        proj:Remove()
+    end
+end

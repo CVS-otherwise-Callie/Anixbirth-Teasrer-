@@ -24,6 +24,7 @@ FHAC.Monsters = {
     PitPat = mod:ENT("Pit Pat"),
     MushLoom = mod:ENT("Mush Loom"),
     Pinprick = mod:ENT("Pinprick"),
+    SyntheticHorf = mod:ENT("Synthetic Horf"),
 }
 
 FHAC.Familiars = { --YOU HAVE NO IDEA HOW MANY FUCKING TIMES I SPELLED THIS WRONG LMAO
@@ -52,12 +53,6 @@ FHAC.Color = {
     Charred =  Color(0.1,0.1,0.1,1,0,0,0) -- FIEND FOLIO; XALUM
 }
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-FHAC.EnemyDeathShit = {}
---heehehehehhehehe fuck
-FHAC.EnemyDeathShit.Anims = {
-    --{ID = FHAC.Monsters.Dangler.ID, Var = FHAC.Monsters.Dangler.Var, Subtype = FHAC.Monsters.Dangler.Subtype, Anim = mod.danglerDeath }
-}
 
 
 function mod:SpecialEnt(name)

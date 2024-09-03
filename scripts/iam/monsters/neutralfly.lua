@@ -24,6 +24,7 @@ function mod:NeutralflyAI(npc, sprite, d)
         --here's some other shit to do
         d.accel = 0
         npc.StateFrame = 20
+        npc.GridCollisionClass = GridCollisionClass.COLLISION_SOLID
         npc.Velocity = Vector.Zero
         d.init = true
     else
@@ -67,8 +68,7 @@ function mod:NeutralflyAI(npc, sprite, d)
             d.state = "idle"
         end
         if npc.StateFrame > 40 then
-            d.newpos = mod:freeGrid(npc, false, 150, 100)
-            npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_ALL
+            d.newpos = mod:freeGrid(npc, false, 200, 100)
             npc.GridCollisionClass = 5
             npc.StateFrame = 0
             d.rounds = d.rounds + 1
@@ -83,8 +83,6 @@ function mod:NeutralflyAI(npc, sprite, d)
                 sprite.FlipX = true
             end
         else
-            npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_PLAYEROBJECTS
-            npc.GridCollisionClass = GridCollisionClass.COLLISION_SOLID
             if mod:isScare(npc) then
                 npc.Velocity = mod:Lerp(npc.Velocity, d.newpos - npc.Position, -1*(0.005))
             else

@@ -12,6 +12,7 @@ FHAC.Scripts = {
 	Compatability = {
 		include("scripts.compatability.fiend folio.modcompact"),
 	},
+	Callbacks = include("scripts.callbacks"),
 	IamScripts = include("scripts.iam.main"),
 	
 	Misc = {
