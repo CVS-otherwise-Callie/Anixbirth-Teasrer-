@@ -32,11 +32,11 @@ end
 function mod:PinprickAI(npc, sprite, d)
 
     local target = npc:GetPlayerTarget()
-    local targetvelocity = mod:confusePos(npc, target.Position, 5, nil, nil)
+    local targetpos = mod:confusePos(npc, target.Position, 5, nil, nil)
     local cos = math.cos(npc.FrameCount / 15) * 80
     local sin = math.sin(npc.FrameCount / 15) * 80
 
-    if not d.init then
+    if not d.firstinit then
         d.moveoffset = 0
         d.dashoffset = rng:RandomInt(0, 10)
         npc.SpriteOffset = Vector(0,-20)
@@ -46,25 +46,33 @@ function mod:PinprickAI(npc, sprite, d)
         local color = Color(1,1,1,1,0.6,0.5,0.05)
         color:SetColorize(1, 0.8, 0.1, 3)
         d.Trail.Color = color
-        d.init = true
-        d.newpos = npc.Position + targetvelocity:Resized(18):Rotated(rng:RandomInt(0, 180))
+        d.newpos = Vector.Zero
+        npc.GridCollisionClass = EntityGridCollisionClass.GRIDCOLL_NONE
+        d.firstinit = true
     else
+        if not d.init then
+            d.newpos = npc.Position - Vector(10, 0):Rotated((targetpos - npc.Position):GetAngleDegrees() + rng:RandomInt(-20, 20))
+        end
         npc.StateFrame = npc.StateFrame + 1
     end
 
     if npc.StateFrame > 35 + d.dashoffset then
-        d.newpos = targetvelocity
+        if d.moveoffset < 0.005 then
+        d.init = true
+        d.newpos = targetpos - Vector(2, 0):Rotated((targetpos - npc.Position):GetAngleDegrees() + rng:RandomInt(-20, 20))
         d.moveoffset = 0
         npc.StateFrame = 0
+        else
+            d.moveoffset = d.moveoffset - 0.005
+        end
     else
         d.moveoffset = d.moveoffset + 0.001
     end
     npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_PLAYEROBJECTS
-    npc.GridCollisionClass = GridCollisionClass.COLLISION_SOLID
     if mod:isScare(npc) then
-        npc.Velocity = mod:Lerp(npc.Velocity, d.newpos - npc.Position, -1*(0.005 + d.moveoffset))
+        npc.Velocity = mod:Lerp(npc.Velocity, d.newpos - npc.Position, 0.005 + d.moveoffset):Rotated(rng:RandomInt(1, 360))
     else
-        npc.Velocity = mod:Lerp(npc.Velocity, d.newpos - npc.Position, 0.005 + d.moveoffset)
+        npc.Velocity = mod:Lerp(npc.Velocity, (d.newpos - npc.Position):Resized(30),  0.005 + d.moveoffset)
     end
 end
 

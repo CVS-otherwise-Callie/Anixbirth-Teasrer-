@@ -1,7 +1,7 @@
 local mod = FHAC
 local game = Game()
 local room = game:GetRoom()
-local luaRooms = include("resources.luarooms.therealbestiary")
+local luaRooms = include("resources.anixbirthluarooms.therealbestiary")
 local roomsList = StageAPI.RoomsList("ANIXBIRTH.THE_REAL_BESTIARY", luaRooms)
 
 local enteringNewLevel = false

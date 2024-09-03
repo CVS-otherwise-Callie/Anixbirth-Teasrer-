@@ -1,10 +1,10 @@
 <data>
 
-<!--Main Path, CH. 1-->
+<entity ID="161" Variant="6" Name="Snidge" Image="mah boys/snidge.png" BaseHP="0.1" Group="Monsters" Kind="Anixbirth (Hope)"/>
 <entity ID="161" Variant="11" Name="Floater" Image="mah boys/floater.png" BaseHP="10" StageHP="3" Tags="Champion" Group="Monsters" Kind="Anixbirth (Hope)"/>
 <entity ID="161" Variant="12" Name="Fivehead" Image="mah boys/fivehead.png" BaseHP="15" Tags="Champion" Group="Monsters" Kind="Anixbirth (Hope)"/>
 <entity ID="161" Variant="21" Name="Neutral Fly" Image="mah boys/neutralfly.png" BaseHP="10" Tags="Champion" Group="Monsters" Kind="Anixbirth (Hope)"/>
-<entity ID="161" Variant="41" Subtype="6" Name="Dried" Image="mah boys/dried.png" Tags="Champion" Group="Monsters" Kind="Anixbirth (Hope)">
+<entity ID="161" Variant="41" Subtype="6" Name="Dried (Red)" Image="mah boys/dried.png" Tags="Champion" Group="Monsters" Kind="Anixbirth (Hope)">
    <bitfield Key="Subtype">
       <dropdown Name="Color of Creep that the Dried drops" Length="7">
          <choice Value="0">Random</choice>
@@ -69,9 +69,7 @@ Use 2, 4, or 6 normally.
 
    <group Name="HOPE Basement" Label="Basement">
       <group Name="HOPE Basement Enemies">
-		   <entity Name="Floater"/>
-         <entity Name="Fivehead"/>
-		   <entity Name="Neutral Fly"/>
+		   <entity Name="Snidge"/>
       </group>
 	</group>
 

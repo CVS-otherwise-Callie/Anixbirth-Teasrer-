@@ -29,7 +29,7 @@
 	<track id="27" name="Boss (Blue Womb - Hush)" intro="Afterbirth/Morituros (dead womb boss) intro.ogg" path="Afterbirth/Morituros (dead womb boss) Loop.ogg" loop="true" />
 	<!-- <track id="28" name="Boss (Ultra Greed)" intro="Afterbirth/Chorus Mortis (Punk Credit) Intro.ogg" path="Afterbirth/Chorus Mortis (Punk Credit) Loop.ogg" loop="true" /> Story boss, has True version -->
 	<track id="30" name="Library Room" intro="Library Intro.ogg" path="Library.ogg" loop="true" />
-	<track id="31" name="Secret Room" intro="Secret to Everyone Intro.ogg" path="Secret to Everyone.ogg" loop="true" />
+	<track id="31" name="Secret Room" intro="shhh piano builds go away/Grief - Secret Room.ogg" path="shhh piano builds go away/Grief - Secret Room.ogg" loop="true" />
 	<track id="32" name="Secret Room Alt" path="Secret Room ALT.ogg" loop="true" />
 	<track id="33" name="Devil Room" path="Deal With the Devil.ogg" loop="true" />
 	<track id="34" name="Angel Room" intro="Angel Room intro.ogg" path="Angel Room.ogg" loop="true" />
@@ -102,7 +102,7 @@
 	<track id="100" name="Intro Voiceover" path="shhh piano builds go away/Outline - Intro (Cinematic).ogg" loop="false" />
 	<track id="101" name="Epilogue Voiceover" path="Epilogue_01m.ogg" loop="false" />
 	<!-- REPENTANCE BEGIN -->
-	<track id="104" name="Downpour" intro="repentance/downpour intro.ogg" path="Repentance/Downpour.ogg" loop="true" />
+	<track id="104" name="Downpour" intro="shhh piano builds go away/River Elixer.ogg" path="shhh piano builds go away/River Elixer.ogg" loop="true" />
 	<track id="105" name="Mines" intro="repentance/mines intro.ogg" path="Repentance/Mines.ogg" loop="true" />
 	<track id="106" name="Mausoleum" intro="repentance/mausoleum intro.ogg" path="Repentance/Mausoleum.ogg" loop="true" />
 	<track id="107" name="Corpse" intro="Repentance/corpse intro.ogg" path="Repentance/Corpse.ogg" loop="true" />

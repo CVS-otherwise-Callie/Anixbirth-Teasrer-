@@ -180,7 +180,8 @@ function mod:SchmootAI(npc, sprite, d)
     end, mod.Monsters.Schmoot.ID)
 end
 
-mod:AddCallback(ModCallbacks.MC_POST_NPC_DEATH, function(_, ent)
+function mod.SchmootDeath(ent)
+    if ent.Type == 161 and ent.Variant == mod.Monsters.Schmoot.Var then
     local ent = ent:ToNPC()
     local sprite = ent:GetSprite()
     local d = ent:GetData()
@@ -191,4 +192,5 @@ mod:AddCallback(ModCallbacks.MC_POST_NPC_DEATH, function(_, ent)
         ent.Velocity = Vector.Zero
         mod:spawnSchmoot(ent)
         ent:Remove()
-    end, mod.Monsters.Schmoot.ID)
+    end
+end
