@@ -37,7 +37,8 @@ mod:AddCallback(ModCallbacks.MC_PRE_PROJECTILE_COLLISION, mod.ProjCollStuff)
 
 function mod:RenderedStuff()
     if not FiendFolio then
-        mod:ShowRoomText()
+        mod.ShowRoomText()
     end
+    mod.JohannesPostRender()
 end
 mod:AddCallback(ModCallbacks.MC_POST_RENDER, mod.RenderedStuff)

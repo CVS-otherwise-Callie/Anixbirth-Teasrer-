@@ -63,8 +63,6 @@ function mod:JohannesPostRender()
     --icon:Play("Idle")
 end
 
-mod:AddCallback(ModCallbacks.MC_POST_RENDER, mod.JohannesPostRender)
-
 mod:AddCallback(ModCallbacks.MC_POST_PLAYER_UPDATE, function()
     
 end)

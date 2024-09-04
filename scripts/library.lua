@@ -267,7 +267,7 @@ end
 
 function mod:saveRoomEnts()
 	local level = Game():GetLevel()
-	local roomDesk = level:GetCurrentRoomDesc() --hahahahahaahhahahahaha spelling is shit
+	local roomDesk = level:GetroomDesc() --hahahahahaahhahahahaha spelling is shit
 
 	
 end --no, make it so you insert the ents into the table for the current room, and then once all are indexed, insert that table into savedata - this should NOT be a thing called from the entity, but alled for each new room, and it will check for each entity with the data for SaveasPersistent
@@ -341,50 +341,50 @@ mod.LuaFont = Font()
 mod.LuaFont:Load("font/luamini.fnt")
 
 local rng = RNG()
-function mod.ShowRoomText()
-	--i kept going back and forth but this is weirdly very efficient
-		--cus what happened was I said "i'll do it differently" nut thren I took notes and it was the exact samw idea sooooo 
-		local currentRoom = StageAPI.GetCurrentRoom()
-		local roomDescriptorData = game:GetLevel():GetCurrentRoomDesc().Data
-		local center = StageAPI.GetScreenCenterPosition()
-		local br = StageAPI.GetScreenBottomRight()
-		local scale = 1
-		local text = ""
-		local vartext = ""
-		local bcenter = Vector(center.X, br.Y - 152 * 2)
-		local ismodtext = false
-		local icon = Sprite()
+function mod:ShowRoomText()
+	local room = StageAPI.GetCurrentRoom()
+	local rDD = game:GetLevel():GetCurrentRoomDesc().Data
+	local center = StageAPI.GetScreenCenterPosition()
+	local bottomright = StageAPI.GetScreenBottomRight()
+	local scale = 1 --make this dss changeable?
+	local text = ""
+	local vartext = ""
+	local bcenter = Vector(center.X, bottomright.Y - 152 * 2)
+	local ismodtext = false
+	local icon = Sprite()
 
-		if currentRoom and currentRoom.Layout then
-			text = text .. tostring(currentRoom.Layout.Variant) .. " " .. currentRoom.Layout.Name
+	if not game:GetSeeds():HasSeedEffect(SeedEffect.SEED_NO_HUD) then
+
+		if room and room.Layout then
+			text = text .. tostring(room.Layout.Variant) .. " " .. room.Layout.Name
 		else
-			local useVar = roomDescriptorData.Variant
+			local useVar = rDD.Variant
 			if useVar >= 45000 and useVar <= 60000 then
 				ismodtext = true
 				useVar = useVar - 44999
 				text = "(HOPE) "
 			end
 
-			text = text .. roomDescriptorData.Name
+			text = text .. rDD.Name
 			vartext = tostring(useVar)
 		end
 
 		if not ismodtext then
 
 			--dont question the process
-			if roomDescriptorData.Type ~= 5 then
+			if rDD.Type ~= 5 then
 				if text and string.find(text, "New Room") or string.find(text, "copy") or string.find(text, "Copy") or text == "" or string.find(text, "Shop") or string.find(text, "Dungeon") then
 					text = game:GetLevel():GetName()
 				end
 			end
 
-			if roomDescriptorData.Type ~= 5 and roomDescriptorData.Type ~= 6 and roomDescriptorData.Type ~= 27 and roomDescriptorData.Type >= 2 then
-				text = text .. ": " .. mod:GetRoomNameByType(roomDescriptorData.Type)
-			elseif roomDescriptorData.Type == 5 then
+			if rDD.Type ~= 5 and rDD.Type ~= 6 and rDD.Type ~= 27 and rDD.Type >= 2 then
+				text = text .. ": " .. mod:GetRoomNameByType(rDD.Type)
+			elseif rDD.Type == 5 then
 				text = mod:removeSubstring(text, "(copy)")
 				text = mod:removeSubstring(text, "()") -- WHAT THE FUCCKCKCCKKCKCCKK EXPLAIN SOMEONE REFILL MY SOULLLLLL
-			elseif roomDescriptorData.Type == 6 then
-				text = mod:GetRoomNameByType(roomDescriptorData.Type) .. ": " .. text
+			elseif rDD.Type == 6 then
+				text = mod:GetRoomNameByType(rDD.Type) .. ": " .. text
 			end
 
 		end
@@ -425,11 +425,11 @@ function mod.ShowRoomText()
 		end
 
 		if not glitchedtext then
-			text = "- " .. text .. " -"
-			vartext = "- "..vartext.." -"
+			if text then text = "- " .. text .. " -" end
+			if vartext then vartext = "- "..vartext.." -" end
 		else
-			text = "- "..glitchedtext.." -"
-			vartext = "- "..glitchedvar.." -"
+			if text then text = "- "..glitchedtext.." -" end
+			if vartext then vartext = "- "..glitchedvar.." -" end
 		end
 
 		local size = mod.LuaFont:GetStringWidth(text) * scale
@@ -441,4 +441,6 @@ function mod.ShowRoomText()
 		icon:Load("gfx/characters/johanneshair.anm2", true)
 		icon:Render(bcenter, Vector.Zero, Vector.Zero)
 		--icon:Play("Idle")
+
+	end
 end
