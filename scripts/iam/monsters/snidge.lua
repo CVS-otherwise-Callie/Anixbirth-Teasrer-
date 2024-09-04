@@ -12,6 +12,8 @@ function mod:SnidgeAI(npc, sprite, d)
     local target = npc:GetPlayerTarget()
 
     if not d.init then
+        npc.GridCollisionClass = GridCollisionClass.COLLISION_WALL_EXCEPT_PLAYER
+        npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_PLAYEROBJECTS
         d.targetpos = mod:confusePos(npc, target.Position, 5, nil, nil)
         d.istear = false
         npc.StateFrame = 0
@@ -47,13 +49,15 @@ function mod:SnidgeAI(npc, sprite, d)
         npc.StateFrame = 0
     end
 
-    mod:AddCallback(ModCallbacks.MC_PRE_NPC_COLLISION, function(_, colent) 
-        if colent == Isaac.GetEntityVariantByName("Tear") then
-            colent:Kill()
-            return false
-        end
-        return true
-    end)
-
 end
+
+mod:AddCallback(ModCallbacks.MC_PRE_NPC_COLLISION, function(ent, colent)
+if ent.Variant == mod.Monsters.Snidge.Var then
+    if colent == Isaac.GetEntityVariantByName("Tear") then
+        colent:Kill()
+        return false
+    end
+    return true
+end
+end,mod.Monsters.Snidge.ID)
 

@@ -106,31 +106,6 @@ function mod:ENT(name)
 	return {ID = Isaac.GetEntityTypeByName(name), Var = Isaac.GetEntityVariantByName(name), Sub = Isaac.GetEntitySubTypeByName(name)}
 end
 
-function mod:FindFreeGrid(target, targetdist) --omfg i love you fiend folio
-	local validPositions = {}
-	local room = game:GetRoom()
-	local size = room:GetGridSize()
-	targetdist = targetdist or 90
-	local playertable = {}
-
-    for i = 0, game:GetNumPlayers() do
-		table.insert(playertable, game:GetPlayer(i))
-	end
-	
-	for i=0, size do
-		local gridpos = room:GetGridPosition(i)
-		local gridEntity = room:GetGridEntity(i)
-		if gridEntity and gridEntity:GetType() == GridEntityType.GRID_PIT then
-			--if target.Position:Distance(gridpos) > targetdist then
-				table.insert(validPositions, gridpos)
-			--end
-		end
-	end
-	if #validPositions > 0 then
-		return validPositions[math.random(#validPositions)]
-	end
-end
-
 function mod:spritePlay(sprite, anim)
 	if not sprite:IsPlaying(anim) then
 		sprite:Play(anim)
@@ -365,6 +340,7 @@ end
 mod.LuaFont = Font()
 mod.LuaFont:Load("font/luamini.fnt")
 
+local rng = RNG()
 function mod.ShowRoomText()
 	--i kept going back and forth but this is weirdly very efficient
 		--cus what happened was I said "i'll do it differently" nut thren I took notes and it was the exact samw idea sooooo 
@@ -442,7 +418,10 @@ function mod.ShowRoomText()
 				glitchedtext = text
 				glitchedvar = vartext
 			end
-		end
+			end
+		else
+			glitchedtext = text
+			glitchedvar = vartext
 		end
 
 		if not glitchedtext then
