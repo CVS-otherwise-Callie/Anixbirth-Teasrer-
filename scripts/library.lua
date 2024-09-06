@@ -37,6 +37,7 @@ function mod:IsSourceofDamagePlayer(source, bomb)
 end
 
 function mod:freeGrid(npc, path, far, close)
+	local room = game:GetRoom()
 	path = path or false
 	far = far or 300
 	close = close or 250
@@ -45,7 +46,8 @@ function mod:freeGrid(npc, path, far, close)
 		for i = 0, room:GetGridSize() do
 			if room:GetGridPosition(i) ~= nil then
 			local gridpoint = room:GetGridPosition(i)
-			if gridpoint and gridpoint:Distance(npc.Position) < far and gridpoint:Distance(npc.Position) > close and room:GetGridEntity(i) == nil and room:IsPositionInRoom(gridpoint, 15) and game:GetRoom():CheckLine(gridpoint,npc.Position,3,900,false,false) then
+			if gridpoint and gridpoint:Distance(npc.Position) < far and gridpoint:Distance(npc.Position) > close and room:GetGridEntity(i) == nil and 
+			room:IsPositionInRoom(gridpoint, 0) and game:GetRoom():CheckLine(gridpoint,npc.Position,3,900,false,false) then
 				table.insert(tab, gridpoint)
 			end
 			end
@@ -54,7 +56,8 @@ function mod:freeGrid(npc, path, far, close)
 		for i = 0, room:GetGridSize() do
 			if room:GetGridPosition(i) ~= nil then
 				local gridpoint = room:GetGridPosition(i)
-				if gridpoint and gridpoint:Distance(npc.Position) < far and gridpoint:Distance(npc.Position) > close and room:GetGridEntity(i) == nil and room and room:IsPositionInRoom(gridpoint, 15) then
+				if gridpoint and gridpoint:Distance(npc.Position) < far and gridpoint:Distance(npc.Position) > close 
+				and room:GetGridEntity(i) == nil and room and room:IsPositionInRoom(gridpoint, 0) then
 					table.insert(tab, gridpoint)
 				end
 			end
@@ -89,7 +92,6 @@ function mod:IsTableEmpty(tbl)
 	if tbl[1] ~= nil then
 		return false
 	end
-	--print(#tbl)
     return true
 end
 
@@ -271,9 +273,21 @@ FHAC.PreSavedEntsLevel = FHAC.PreSavedEntsLevel or {}
 FHAC.SavedEntsLevel = FHAC.SavedEntsLevel or {}
 
 function mod:SaveEntToRoom(enttable)
-	if enttable.Data.isPrevEntCopy then return end
+	if enttable.NPC:GetData().isPrevEntCopy then return end
 
-	table.insert(mod.PreSavedEntsLevel, enttable)
+	local tab = {
+		Room = game:GetLevel():GetCurrentRoomDesc().Data,
+		Stage = game:GetLevel():GetStage(),
+		Subtype = enttable.NPC.SubType,
+		Position = enttable.NPC.Position,
+		Velocity = enttable.NPC.Velocity,
+		Spawner = enttable.NPC.SpawnerEntity,
+		Data = enttable.NPC:GetData()
+	}
+
+	mod:MixTables(tab, enttable)
+
+	table.insert(mod.PreSavedEntsLevel, tab)
 end
 
 function mod:TransferSavedEnts()
@@ -298,6 +312,13 @@ function mod:LoadSavedRoomEnts()
 			end
 			d.init = false
 		end
+	end
+end
+
+function mod:CheckForNewRoom(bool)
+	if not bool then
+	FHAC.PreSavedEntsLevel = {}
+	FHAC.SavedEntsLevel = {}
 	end
 end
 

@@ -7,7 +7,9 @@ FHAC.savedata = FHAC.savedata or {}
 
 function FHAC.SaveModData()
     FHAC.savedata.config = {
-        fortuneDeathChance = FHAC.fortuneDeathChance
+        fortuneDeathChance = FHAC.fortuneDeathChance,
+        PreSavedEntsLevel = FHAC.PreSavedEntsLevel,
+        SavedEntsLevel = FHAC.SavedEntsLevel
     }
     Isaac.SaveModData(mod, json.encode(FHAC.savedata))
 end
@@ -21,6 +23,8 @@ function FHAC.LoadModData()
         local config = FHAC.savedata.config
         if config then
             FHAC.fortuneDeathChance = config.fortuneDeathChance or FHAC.fortuneDeathChance
+            FHAC.PreSavedEntsLevel = config.PreSavedEntsLevel or FHAC.PreSavedEntsLevel
+            FHAC.SavedEntsLevel = config.SavedEntsLevel or FHAC.SavedEntsLevel
         end
     end
 end

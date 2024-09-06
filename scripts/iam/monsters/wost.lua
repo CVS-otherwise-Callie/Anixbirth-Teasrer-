@@ -143,33 +143,34 @@ end
 
 function mod.WostShot(p, d)
     if d.type == "WostShot" then
-    local par = p.Parent
-    local npc = par:ToNPC()
-    local target = npc:GetPlayerTarget()
-    local targetpos = mod:confusePos(npc, target.Position, 5, nil, nil)
-    local targetvelocity = (targetpos - p.Position)
-    p.Velocity = mod:Lerp(p.Velocity, targetvelocity, 0.00175)
-    if p.FallingAccel >= 0.15 and p.FallingSpeed >= 0 and not (npc:HasEntityFlags(EntityFlag.FLAG_FEAR) or 
-    npc:HasEntityFlags(EntityFlag.FLAG_CONFUSION)) or not room:IsClear() or not npc:IsDead() or p.FrameCount < 400 then
-        p.FallingSpeed = 0
-        p.FallingAccel = -0.1
-    else
-        p:Remove()
-    end
-    if not room:IsPositionInRoom(p.Position, 1) then
-        p.ProjectileFlags = (p.ProjectileFlags | ProjectileFlags.NO_WALL_COLLIDE | ProjectileFlags.GHOST | ProjectileFlags.CONTINUUM)
-    else
-        if p:HasProjectileFlags(ProjectileFlags.CONTINUUM) then
-        p:ClearProjectileFlags(ProjectileFlags.CONTINUUM)
+        local room = game:GetRoom()
+        local par = p.Parent
+        local npc = par:ToNPC()
+        local target = npc:GetPlayerTarget()
+        local targetpos = mod:confusePos(npc, target.Position, 5, nil, nil)
+        local targetvelocity = (targetpos - p.Position)
+        p.Velocity = mod:Lerp(p.Velocity, targetvelocity, 0.00175)
+        if p.FallingAccel >= 0.15 and p.FallingSpeed >= 0 and not (npc:HasEntityFlags(EntityFlag.FLAG_FEAR) or 
+        npc:HasEntityFlags(EntityFlag.FLAG_CONFUSION)) or not room:IsClear() or not npc:IsDead() or p.FrameCount < 400 then
+            p.FallingSpeed = 0
+            p.FallingAccel = -0.1
+        else
+            p:Remove()
         end
-    end
-    if p.Velocity:Length() > 4 then
-        p.Velocity = p.Velocity * 0.8
-    end
-    if (p.FrameCount > 400 and p.FallingSpeed == 0) or room:IsClear() or npc:IsDead() then
-        p.ChangeTimeout = 0
-        p:Remove()
-    end
+        if not room:IsPositionInRoom(p.Position, 1) then
+            p.ProjectileFlags = (p.ProjectileFlags | ProjectileFlags.NO_WALL_COLLIDE | ProjectileFlags.GHOST | ProjectileFlags.CONTINUUM)
+        else
+            if p:HasProjectileFlags(ProjectileFlags.CONTINUUM) then
+                p:ClearProjectileFlags(ProjectileFlags.CONTINUUM)
+            end
+        end
+        if p.Velocity:Length() > 4 then
+            p.Velocity = p.Velocity * 0.8
+        end
+        if (p.FrameCount > 400 and p.FallingSpeed == 0) or room:IsClear() or npc:IsDead() then
+            p.ChangeTimeout = 0
+            p:Remove()
+        end
     end
 end
 

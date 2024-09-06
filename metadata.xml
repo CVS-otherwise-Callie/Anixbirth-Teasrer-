@@ -8,9 +8,13 @@
 SO, we are doing a ENEMY MOD with a character (or two) in a WAVE system!
 Hopefully 10 monsters per wave, with about 25 - 50 rooms per wave!
 
+Some AWESOME credits - 
+Fiend Folio API for Fortunes! Helps support loading all our sickass fortunes.
+ProAPI for movement API! The movement of the Schmoot and other mobs would not be possible without it.
+
 Cool beans!
 Join us by finding our discord link at Modding Of Isaac.</description>
-    <version>1.22</version>
+    <version>1.24</version>
     <visibility>Public</visibility>
     <tag id="Lua"/>
     <tag id="Items"/>

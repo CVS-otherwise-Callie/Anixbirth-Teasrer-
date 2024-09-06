@@ -80,24 +80,21 @@ local room = game:GetRoom()
         npc.EntityCollisionClass = (EntityCollisionClass.ENTCOLL_NONE)
         d.creepsec = d.creepsec or rng:RandomInt(1, 12)
         d.mynumber = d.mynumber or math.random(1, #driedsubtypes)
-        if npc.SubType == nil or npc.SubType == 0 and not d.speed then
-            local tab = driedsubtypes[d.mynumber]
-            for h, g in pairs(tab) do
-				if not d[h] then
-					d[h] = g
-				end
-			end
+        local tab
+        if npc.SubType == nil or npc.SubType == 0 then
+            tab= driedsubtypes[d.mynumber]
+        else
+            tab = driedsubtypes[npc.SubType]
+        end
+        for h, g in pairs(tab) do
+            if not d[h] then
+                d[h] = g
+            end
         end
         d.creepsec = d.creepsec + (rng:RandomInt(-2, 2) * 0.5)
         mod:SaveEntToRoom({
-            Room = game:GetLevel():GetCurrentRoomDesc().Data,
-            Stage = game:GetLevel():GetStage(),
             Name="Dried",
-            Subtype = npc.SubType,
-            Position = npc.Position,
-            Velocity = npc.Velocity,
-            Spawner = npc.SpawnerEntity,
-            Data = d,
+            NPC = npc,
         })
         npc.SpriteOffset = Vector(0, d.Yoffset)
         d.init = true
@@ -105,12 +102,8 @@ local room = game:GetRoom()
         if room:IsClear() then npc.StateFrame = npc.StateFrame + 1 end
     end
 
+
     if not room:IsClear() then
-        if mod:isScare(npc) then
-            npc.Velocity = npc.Velocity * (d.speed * 0.1)
-        else
-            npc.Velocity = npc.Velocity * (d.speed * 0.1)
-        end
    
         npc.Velocity = npc.Velocity:Rotated(d.entitypos)
 
@@ -121,13 +114,7 @@ local room = game:GetRoom()
         end
         --just to make sure it doesnt keep changing since it's annoying when it does
 
-        if d.Yoffset >= -60 then
-            npc.GridCollisionClass = (GridCollisionClass.COLLISION_OBJECT)
-            npc.EntityCollisionClass = (EntityCollisionClass.ENTCOLL_PLAYEROBJECTS)
-        end
-    end
-
-    if sprite:GetOverlayFrame("drip" .. d.bagcostume) == 17 or (npc.StateFrame > 3 * d.creepsec and room:IsClear()) then
+        if sprite:GetOverlayFrame("drip" .. d.bagcostume) == 17 or (npc.StateFrame > 3 * d.creepsec and room:IsClear()) then
             d.creepsec = d.creepsec or driedsubtypes[d.mynumber].creepsec or 1 + (rng:RandomInt(-2, 2) * 0.5)
             local crepe = Isaac.Spawn(1000, d.creep,  0, npc.Position, Vector(0, 0), npc):ToEffect()
             crepe.Scale = crepe.Scale --* d.creepsec
@@ -141,6 +128,9 @@ local room = game:GetRoom()
             crepe:Update()
             --sprite:PlayOverlay("bag" .. d.bagcostume, true)
             npc.StateFrame = 0
+        end
+    else
+        sprite:Stop()
     end
 end
 

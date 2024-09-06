@@ -24,7 +24,6 @@ function mod:NeutralflyAI(npc, sprite, d)
         --here's some other shit to do
         d.accel = 0
         npc.StateFrame = 20
-        npc.GridCollisionClass = GridCollisionClass.COLLISION_SOLID
         npc.Velocity = Vector.Zero
         d.init = true
     else
@@ -69,7 +68,6 @@ function mod:NeutralflyAI(npc, sprite, d)
         end
         if npc.StateFrame > 40 then
             d.newpos = mod:freeGrid(npc, false, 200, 100)
-            npc.GridCollisionClass = 5
             npc.StateFrame = 0
             d.rounds = d.rounds + 1
             if d.newpos.Y < npc.Position.Y then

@@ -48,3 +48,9 @@ function mod:PostNewRoom()
     mod:TransferSavedEnts()
 end
 mod:AddCallback(ModCallbacks.MC_POST_NEW_ROOM, mod.PostNewRoom)
+
+function mod:PostGameStarted(bool)
+    mod.CheckForNewRoom(bool)
+end
+
+mod:AddCallback(ModCallbacks.MC_POST_GAME_STARTED, mod.PostGameStarted)

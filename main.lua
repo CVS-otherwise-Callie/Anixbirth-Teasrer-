@@ -7,6 +7,14 @@ function FHAC:LoadScripts(includestart, t)
     end
 end
 
+SaveManager  = include("scripts.save_manager")
+local saveKeys = SaveManager.DefaultSaveKeys
+
+SaveManager.Utility.AddDefaultFloorData(saveKeys.GLOBAL, { PreSavedEntsLevel = {} })
+SaveManager.Utility.AddDefaultFloorData(saveKeys.GLOBAL, { SavedEntsLevel = {} })
+
+SaveManager.Init(FHAC)
+
 if REPENTOGON and StageAPI and StageAPI.Loaded then
 StageAPI.UnregisterCallbacks("FHAC")
 FHAC:LoadScripts("scripts", {
@@ -24,7 +32,6 @@ FHAC:LoadScripts("scripts", {
 	"stolen.proapi.proapi"
 })
 --ff
-FHAC.savedata = FHAC.savedata or {}
 else
 	include("scripts.iam.misc.warning")
 end
