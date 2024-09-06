@@ -1,5 +1,185 @@
 FHAC.Fortunes = 
-[==============================[
+[=============================[
+no way!
+way, no...
+
+fresh freaky men
+
+next item
+will be
+buster's back
+
+have you unlocked
+SATIO
+
+ben... not again
+
+give me the dog
+
+women aren't men
+they're men with a wo
+
+speak in mandarin
+you have 5 seconds
+
+duolingo is out to
+sacrifice your kids
+
+catinsurance x bugmeat
+
+the fiend folio
+cornmunity is
+scary as shit
+
+uhhhhhhhhh no
+
+ok he. Said no
+
+fenchenemy says hi
+
+pls ff devs, make a
+mode like "women" that
+syas all enemies sexuality
+
+good mornning creeps, 
+fenchenemy, and v1 rotary
+
+good morning
+big mac like bunda!
+
+gay morning
+
+gay night, at 
+least for me
+
+all times of day are
+morning if you haven't
+gotten out of bed yet
+
+gay people
+
+tommorow morning?
+wait... it IS
+tommorow morning
+
+thats right
+being gay
+starts now
+
+gayday
+
+gay month
+
+do better next time
+
+disco esylium
+
+i will
+
+dissapointing yeild!
+
+ok he got.it
+
+do not tell me what
+is or is not dissapointing
+i have recieved adequate
+
+you're a dissapointing yeild
+
+uh - :(
+
+remember when twitter
+added a "give birth"
+button above timeline
+
+mistakes
+denial
+
+i hate lust!
+i despise sloth!
+i envy righteousness!
+
+catholics?
+hah, shut up
+
+orthodox people
+are crazy to
+begin with
+
+but... but...
+the boiler is
+way too hard!
+
+grotto moment
+with the
+mud guys and stuff
+
+gorge - ous
+
+this is a renren
+production!
+
+this is 
+a mudeth track
+
+made by both june
+and amy, again
+
+can i have another
+pass into the future
+
+steven won't
+spawn for me!
+
+neutral flies have
+gotten a ridiculous 
+amount of reworks
+
+four.
+four lines?
+
+guys hear me out
+wost x wolter
+
+awwww
+claire you should
+totally kiss her!
+
+I FUCKING
+HATE 
+VERONICA LEBUFFE
+
+spell fivehead
+no, spell it
+all over again
+
+ap lunch is
+a pain to do
+
+founding mothers
+goes crazy
+
+---@mod ModCompact
+
+---@npc EntityNPC
+
+rumpiel, your
+mod idea is ass
+
+wolfi, where is
+the catnip again
+
+we need to increase
+the number of human legs
+by any means nessecary
+
+im placing blocks
+and shit cus im in
+fucking minecraft
+
+shit!
+with all the power!
+
 you ape my product
 at every fucking turn
 
@@ -47,6 +227,26 @@ goddess
 
 do you accidentally
 make a new signature
+
+stop looking at
+this fortune you
+utter creep
+
+get off of isaac
+right now!
+
+i see you playing
+fiend folio, go play
+anixbirth instead
+
+this section is
+crossed out
+
+how many rooms
+does anixbirth have?
+
+take you kids
+run the fuck away
 
 hey!
 why isnt the fortune
@@ -927,7 +1127,6 @@ did you know?
 sr. french bread
 is younger than most and insists
 on eating one’s toenails
-
 
 did you know?
 Botan has two cats
@@ -10028,4 +10227,8 @@ Play as Tarnished Lilth!
 
 Now supporting: Hololive
 
-]==============================]
+
+
+
+
+]=============================]

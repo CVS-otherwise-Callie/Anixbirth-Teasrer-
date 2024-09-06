@@ -255,6 +255,8 @@ end
 
 --form codepal - https://codepal.ai/code-generator/query/GQzPwted/lua-function-remove-substring#:~:text=In%20Lua%2C%20you%20can%20easily,with%20the%20specified%20substring%20removed.
 function mod:removeSubstring(str, substr)
+	str = str or "Null Name"
+	substr = substr or "Null"
    local startIndex, endIndex = string.find(str, substr)
  
     if startIndex and endIndex then
@@ -265,13 +267,39 @@ function mod:removeSubstring(str, substr)
     return str
 end
 
-function mod:saveRoomEnts()
-	local level = Game():GetLevel()
-	local roomDesk = level:GetroomDesc() --hahahahahaahhahahahaha spelling is shit
+FHAC.PreSavedEntsLevel = FHAC.PreSavedEntsLevel or {}
+FHAC.SavedEntsLevel = FHAC.SavedEntsLevel or {}
 
-	
-end --no, make it so you insert the ents into the table for the current room, and then once all are indexed, insert that table into savedata - this should NOT be a thing called from the entity, but alled for each new room, and it will check for each entity with the data for SaveasPersistent
+function mod:SaveEntToRoom(enttable)
+	if enttable.Data.isPrevEntCopy then return end
 
+	table.insert(mod.PreSavedEntsLevel, enttable)
+end
+
+function mod:TransferSavedEnts()
+	for k, v in ipairs(mod.PreSavedEntsLevel) do
+		if not mod:CheckTableContents(mod.SavedEntsLevel, v) then
+			table.insert(mod.SavedEntsLevel, v)
+		end
+	end
+end
+
+function mod:LoadSavedRoomEnts()
+	local ents = FHAC.SavedEntsLevel or {}
+	for k, v in pairs(ents) do
+		if v.Room.Variant == game:GetLevel():GetCurrentRoomDesc().Data.Variant and v.Stage == game:GetLevel():GetStage() then
+			local ent = Isaac.Spawn(Isaac.GetEntityTypeByName(v.Name), Isaac.GetEntityVariantByName(v.Name), v.Subtype, v.Position, v.Velocity, v.Spawner)
+			local d = ent:GetData()
+			d.isPrevEntCopy = true
+			for k, v in pairs(v.Data) do
+				if not d[k] then
+					d[k] = v
+				end
+			end
+			d.init = false
+		end
+	end
+end
 
 function mod:GetRoomNameByType(type)
 	if type == 0 then
@@ -351,7 +379,6 @@ function mod:ShowRoomText()
 	local vartext = ""
 	local bcenter = Vector(center.X, bottomright.Y - 152 * 2)
 	local ismodtext = false
-	local icon = Sprite()
 
 	if not game:GetSeeds():HasSeedEffect(SeedEffect.SEED_NO_HUD) then
 
@@ -378,11 +405,10 @@ function mod:ShowRoomText()
 				end
 			end
 
-			if rDD.Type ~= 5 and rDD.Type ~= 6 and rDD.Type ~= 27 and rDD.Type >= 2 then
+			if rDD.Type ~= 5 and rDD.Type ~= 6 and rDD.Type ~= 27 and rDD.Type ~= 24 and rDD.Type >= 2 then
 				text = text .. ": " .. mod:GetRoomNameByType(rDD.Type)
 			elseif rDD.Type == 5 then
 				text = mod:removeSubstring(text, "(copy)")
-				text = mod:removeSubstring(text, "()") -- WHAT THE FUCCKCKCCKKCKCCKK EXPLAIN SOMEONE REFILL MY SOULLLLLL
 			elseif rDD.Type == 6 then
 				text = mod:GetRoomNameByType(rDD.Type) .. ": " .. text
 			end
@@ -420,27 +446,30 @@ function mod:ShowRoomText()
 			end
 			end
 		else
-			glitchedtext = text
-			glitchedvar = vartext
+			glitchedtext = nil
+			glitchedvar = nil
 		end
 
+		local y = Isaac.GetScreenHeight() / 3 - 104
+
 		if not glitchedtext then
-			if text then text = "- " .. text .. " -" end
-			if vartext then vartext = "- "..vartext.." -" end
+			if text and #text ~= 0 then text = "- " .. text .. " -" end
+			if vartext and #vartext ~= 0 then vartext = "- "..vartext.." -" end
 		else
-			if text then text = "- "..glitchedtext.." -" end
-			if vartext then vartext = "- "..glitchedvar.." -" end
+			if text and #text ~= 0 then text = "- "..glitchedtext.." -" end
+			if vartext and #vartext ~= 0 and not StageAPI.GetCurrentRoom() then vartext = "- "..glitchedvar.." -" end
+		end
+
+		if StageAPI.GetCurrentRoom() then
+			text = mod:removeSubstring(text, StageAPI:GetCurrentRoomID())
 		end
 
 		local size = mod.LuaFont:GetStringWidth(text) * scale
 		local varsize = mod.LuaFont:GetStringWidth(vartext) * scale
 
 		--bcenter = player.Position
-		mod.LuaFont:DrawStringScaled(text, bcenter.X - (size/2), bcenter.Y, scale, scale, KColor(1,1,1,0.5), 0, false)
-		mod.LuaFont:DrawStringScaled(vartext, bcenter.X - (varsize / 2), bcenter.Y + 10, scale, scale, KColor(1,1,1,0.5), 0, false)
-		icon:Load("gfx/characters/johanneshair.anm2", true)
-		icon:Render(bcenter, Vector.Zero, Vector.Zero)
-		--icon:Play("Idle")
+		mod.LuaFont:DrawStringScaled(text, bcenter.X - (size/2), y, scale, scale, KColor(1,1,1,0.5), 0, false)
+		mod.LuaFont:DrawStringScaled(vartext, bcenter.X - (varsize / 2), y + 10, scale, scale, KColor(1,1,1,0.5), 0, false)
 
 	end
 end

@@ -42,3 +42,9 @@ function mod:RenderedStuff()
     mod.JohannesPostRender()
 end
 mod:AddCallback(ModCallbacks.MC_POST_RENDER, mod.RenderedStuff)
+
+function mod:PostNewRoom()
+    mod:LoadSavedRoomEnts()
+    mod:TransferSavedEnts()
+end
+mod:AddCallback(ModCallbacks.MC_POST_NEW_ROOM, mod.PostNewRoom)
