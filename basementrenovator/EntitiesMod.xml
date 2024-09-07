@@ -29,6 +29,7 @@ Don't be evil please.
       </bitfield>
 </entity>
 <entity ID="161" Variant="169" Subtype = "0" Name="Drosslet" Image="mah boys/drosslet.png" BaseHP="10" Tags="Champion" Group="Monsters" Kind="Anixbirth (Hope)"/>
+<entity ID="161" Variant="189" Name="Synthetic Horf" Image="mah boys/synthetichorf.png" BaseHP="25" Tags="Champion" Group="Monsters" Kind="Anixbirth (Hope)"/>
 <entity ID="161" Variant="224" Subtype = "0" Name="Mush Loom" Image="mah boys/mushloom.png" BaseHP="10" StageHP="2" Tags="Champion" Group="Monsters" Kind="Anixbirth (Hope)">
 <bitfield Key="Subtype">
         <spinner Length="16" ValueOffset="2" Name="Time Wait">
@@ -75,7 +76,7 @@ Use 2, 4, or 6 normally.
 
   <group Name="HOPE Cellar" Label="Cellar">
 	<group Name="HOPE Cellar Enemies">
-		<entity Name="Dried" />
+		<entity Name="Dried (Red)" />
 	</group>
   </group>
 
@@ -108,7 +109,12 @@ Use 2, 4, or 6 normally.
 
    <group Name="HOPE Chapter 2 Enemies" Label="Chapter 2 Shared">
       <group Name="HOPE Chapter 2 Shared Enemies">
-		   <entity Name="Mush Loom"/>
+      </group>
+	</group>
+
+   <group Name="HOPE Caves" Label="Caves">
+      <group Name="HOPE Caves Enemies">
+		   <entity Name="Synthetic Horf"/>
       </group>
 	</group>
 
@@ -156,6 +162,10 @@ Use 2, 4, or 6 normally.
 
 <group Name="Chapter 2 (Main Path) Enemies">
 	<group Name="HOPE Chapter 2 Shared Enemies"/>
+</group>
+
+<group Name="Caves Enemies">
+	<group Name="HOPE Caves Enemies"/>
 </group>
 
 <group Name="Catacombs Enemies">

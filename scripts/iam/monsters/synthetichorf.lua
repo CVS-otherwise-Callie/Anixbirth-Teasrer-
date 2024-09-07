@@ -39,11 +39,11 @@ function mod:SyntheticHorfAI(npc, sprite, d)
         d.shootoffset = 20 + rng:RandomInt(1, 20)
 
 
-        local p = Isaac.Spawn(9, 0, 0, npc.Position, Vector(10, 0):Rotated((target.Position - npc.Position):GetAngleDegrees()), npc):ToProjectile()
+        local p = Isaac.Spawn(9, 0, 0, npc.Position, Vector(1, 0):Rotated((target.Position - npc.Position):GetAngleDegrees()):Resized(1), npc):ToProjectile()
         p.Parent = npc
         p.ChangeTimeout = p.ChangeTimeout * 13.4
         p:GetData().type = "SyntheticHorf"
-        p:GetData().offyourfuckingheadset = 150
+        p:GetData().offyourfuckingheadset = 120 + rng:RandomInt(-10, 10)
         p:GetData().StateFrame = 0
         d.state = "doneattacking"
     end
@@ -57,6 +57,7 @@ end
 function mod.SyntheticHorfShot(p, d)
     if d.type == "SyntheticHorf" and p.Parent then
         local par = p.Parent
+        local room = game:GetRoom()
         local npc = par:ToNPC()
         local target = npc:GetPlayerTarget()
         if d.StateFrame > 300 then
@@ -68,23 +69,29 @@ function mod.SyntheticHorfShot(p, d)
         if d.StateFrame > 320 then
             p.Parent = nil
         end
+
+        if d.StateFrame < 20 then
+            p.EntityCollisionClass = EntityCollisionClass.ENTCOLL_NONE
+        else
+            p.EntityCollisionClass = EntityCollisionClass.ENTCOLL_ALL
+        end
+
         p.GridCollisionClass = EntityGridCollisionClass.GRIDCOLL_NONE
         d.StateFrame = d.StateFrame + 1
 
-        d.offyourfuckingheadset = d.offyourfuckingheadset - 0.1
         d.moveoffset = 0
         d.wobb = d.wobb or 0
         d.moveit = d.moveit or 0
         p.Height = -20
         if d.moveit >= 360 then d.moveit = 0 else d.moveit = d.moveit + 0.1 end
         d.wobb = d.wobb + math.pi/math.random(3,12)
-        local vel = mod:GetCirc((d.offyourfuckingheadset or 70) + math.sin(d.wobb), d.moveit)
+        local vel = mod:GetCirc((d.offyourfuckingheadset or 75) + math.sin(d.wobb), d.moveit)
         
-        if p.Parent and not (p.Parent:IsDead()) then
-            p.Velocity = Vector(d.newpos.X - vel.X, d.newpos.Y - vel.Y) - p.Position
+        if p.Parent and not (room:IsClear() and p.Parent:IsDead()) then
+            p.Velocity = mod:Lerp(p.Velocity, Vector(d.newpos.X - vel.X, d.newpos.Y - vel.Y) - p.Position, 0.1)
         else
             p.Velocity = p.Velocity * 0.9
-			p.FallingAccel = 0.1
+			p.FallingAccel = 0.01
         end
     end
 end
