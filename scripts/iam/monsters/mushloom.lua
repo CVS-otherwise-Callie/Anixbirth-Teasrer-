@@ -1,6 +1,5 @@
 local mod = FHAC
 local game = Game()
-local room = game:GetRoom()
 local rng = RNG()
 
 mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)

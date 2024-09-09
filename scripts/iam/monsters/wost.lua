@@ -1,6 +1,5 @@
 local mod = FHAC
 local game = Game()
-local room = game:GetRoom()
 local rng = RNG()
 
 mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
@@ -10,6 +9,7 @@ mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
 end, mod.Monsters.Wost.ID)
 
 function mod:WostAI(npc, sprite, d)
+    local room = game:GetRoom()
     local target = npc:GetPlayerTarget()
     local targetpos = mod:confusePos(npc, target.Position, 5, nil, nil)
     local targetvelocity = (targetpos - npc.Position)

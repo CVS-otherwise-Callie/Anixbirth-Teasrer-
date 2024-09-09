@@ -69,6 +69,39 @@ function mod:freeGrid(npc, path, far, close)
 	return tab[math.random(1, #tab)]
 end
 
+function mod:freeHole(npc, path, far, close)
+	local room = game:GetRoom()
+	path = path or false
+	far = far or 300
+	close = close or 250
+	local tab = {}
+	if path then
+		for i = 0, room:GetGridSize() do
+			if room:GetGridPosition(i) == GridEntityType.GRID_PIT then
+			local gridpoint = room:GetGridPosition(i)
+			if gridpoint and gridpoint:Distance(npc.Position) < far and gridpoint:Distance(npc.Position) > close and room:GetGridEntity(i) == GridEntityType.GRID_PIT and 
+			room:IsPositionInRoom(gridpoint, 0) and game:GetRoom():CheckLine(gridpoint,npc.Position,3,900,false,false) then
+				table.insert(tab, gridpoint)
+			end
+			end
+		end
+	else
+		for i = 0, room:GetGridSize() do
+			if room:GetGridPosition(i) == GridEntityType.GRID_PIT then
+				local gridpoint = room:GetGridPosition(i)
+				if gridpoint and gridpoint:Distance(npc.Position) < far and gridpoint:Distance(npc.Position) > close 
+				and room:GetGridEntity(i) == GridEntityType.GRID_PIT and room and room:IsPositionInRoom(gridpoint, 0) then
+					table.insert(tab, gridpoint)
+				end
+			end
+		end
+	end
+	if #tab <= 0 then
+		return nil
+	end
+	return tab[math.random(1, #tab)]
+end
+
 function mod:isSirenCharmed(familiar)
 	local helpers = Isaac.FindByType(EntityType.ENTITY_SIREN_HELPER, -1, -1, true)
 	for _, helper in ipairs(helpers) do

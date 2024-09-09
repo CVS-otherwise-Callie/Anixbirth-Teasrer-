@@ -1,7 +1,6 @@
 local mod = FHAC
 local game = Game()
 local rng = RNG()
-local room = Game():GetRoom()
 
 mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
     if npc.Variant == mod.Monsters.Erythorcyte.Var and npc.SubType == mod.Monsters.Erythorcyte.Subtype then
@@ -16,6 +15,7 @@ mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
 end, mod.Monsters.Erythorcytebaby.ID)
 
 function mod:ErythorcyteAI(npc, sprite, d)
+    local room = Game():GetRoom()
     local isFriendly = npc:HasEntityFlags(EntityFlag.FLAG_FRIENDLY)
     local target = npc:GetPlayerTarget()
     local targetpos = mod:confusePos(npc, target.Position, 5, nil, nil)

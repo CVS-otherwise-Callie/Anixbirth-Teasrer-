@@ -26,10 +26,10 @@ FHAC:LoadScripts("scripts", {
 	"compatability.fiend folio.modcompact",
 	"callbacks",
 	"iam.main",
-	"stolen.fiend folio.api.fortunehandling",
-	"stolen.fiend folio.api.apioverride",
+	"otherapi.fiend folio.api.fortunehandling",
+	"otherapi.fiend folio.api.apioverride",
 	"iam.misc.resources.fortunes",
-	"stolen.proapi.proapi"
+	"otherapi.proapi.proapi"
 })
 --ff
 else

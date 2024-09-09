@@ -87,7 +87,7 @@ function mod:PitPatAI(npc, sprite, d)
         npc:AddEntityFlags(EntityFlag.FLAG_NO_TARGET | EntityFlag.FLAG_NO_PHYSICS_KNOCKBACK | EntityFlag.FLAG_NO_KNOCKBACK | EntityFlag.FLAG_NO_STATUS_EFFECTS)
         npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_NONE
         npc.GridCollisionClass = GridCollisionClass.COLLISION_SOLID
-        local grid = mod:FindFreeGrid(npc, 0)
+        local grid = mod:freeHole(npc, false, 1000, 0)
         if not grid then
             npc.Position = Vector(-50, 50)
         else
@@ -197,7 +197,7 @@ function mod:PitPatAI(npc, sprite, d)
                 sprite.FlipX = false
                 d.flip = false
             end
-            local grid = mod:FindFreeGrid(npc, 0)
+            local grid = mod:freeHole(npc, false, 1000, 0)
             if not grid then
                 d.stateframe = 0
                 d.state = "jumpinit"

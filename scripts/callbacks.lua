@@ -4,6 +4,7 @@ local game = Game()
 function mod.DeathStuff(_, ent)
     mod.ShowFortuneDeath()
     mod.SchmootDeath(ent)
+    mod.GassedFlyDeath(ent)
 end
 FHAC:AddCallback(ModCallbacks.MC_POST_NPC_DEATH, mod.DeathStuff)
 

@@ -254,7 +254,7 @@
 
     <!--Burning Basement-->
     <entity anm2path="monsters/schmoot/shmoot.anm2" reroll="true" baseHP="16" boss="0" champion="1" collisionDamage="1" collisionMass="3" collisionRadius="13" friction="1" id="161" name="Schmoot" numGridCollisionPoints="12" shadowSize="13" stageHP="0" variant="91" bestiary="true" portrait="91">
-		<bestiary transform="0,0,1" anim="SchmootAppear" />
+		<bestiary transform="0,0,1" anim="Appear" />
         <gibs amount="6" blood="1" bone="1" eye="0" gut="1" large="0" />
         <preload-snd id="146" />
     </entity>
@@ -311,6 +311,11 @@
     	<bestiary transform="0,0,1" anim="IdleDown" />
         <gibs amount="6" blood="2" bone="0" eye="1" gut="6" large="0" />
         <devolve id="23.0.0" weight="1" />
+    </entity>
+
+    <entity id="161" variant="177" name="Gassed Fly" anm2path="monsters/gassedfly/gassedfly.anm2" reroll="true" baseHP="8" boss="0" champion="" collisionDamage="1" collisionMass="3" collisionRadius="17" friction="1" numGridCollisionPoints="4" shadowSize="11" stageHP="0" gridCollision="walls" tags="fly" portrait="177">
+		<bestiary transform="0,0,1" anim="Fly" />
+        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
     </entity>
 
     <!--Jokes-->

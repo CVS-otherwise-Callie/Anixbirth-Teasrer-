@@ -25,8 +25,7 @@ function mod:SyntheticHorfAI(npc, sprite, d)
     end
 
     if d.state == "idle" and npc.StateFrame > d.shootoffset and 
-    (target.Position - npc.Position):Length() < 300 and 
-    game:GetRoom():CheckLine(target.Position,npc.Position,3,900,false,false) then
+    (target.Position - npc.Position):Length() < 300 then
         d.state = "attacking"
         sprite:Play("Attack", true)
     end 
@@ -61,13 +60,14 @@ function mod.SyntheticHorfShot(p, d)
         local npc = par:ToNPC()
         local target = npc:GetPlayerTarget()
         if d.StateFrame > 300 then
-            d.offyourfuckingheadset = d.offyourfuckingheadset - 5
+            if d.offyourfuckingheadset < 200 and d.Peak == false then
+                d.offyourfuckingheadset = d.offyourfuckingheadset + 10
+            elseif d.offyourfuckingheadset >= 200 or d.Peak == true then
+                d.Peak = true
+                d.offyourfuckingheadset = d.offyourfuckingheadset - 5
+            end
         else
             d.newpos = target.Position
-        end
-
-        if d.StateFrame > 320 then
-            p.Parent = nil
         end
 
         if d.StateFrame < 20 then
@@ -83,15 +83,16 @@ function mod.SyntheticHorfShot(p, d)
         d.wobb = d.wobb or 0
         d.moveit = d.moveit or 0
         p.Height = -20
-        if d.moveit >= 360 then d.moveit = 0 else d.moveit = d.moveit + 0.1 end
+        if d.moveit >= 360 then d.moveit = 0 else d.moveit = d.moveit + 0.07 end
         d.wobb = d.wobb + math.pi/math.random(3,12)
         local vel = mod:GetCirc((d.offyourfuckingheadset or 75) + math.sin(d.wobb), d.moveit)
         
-        if p.Parent and not (room:IsClear() and p.Parent:IsDead()) then
-            p.Velocity = mod:Lerp(p.Velocity, Vector(d.newpos.X - vel.X, d.newpos.Y - vel.Y) - p.Position, 0.1)
-        else
+        if room:IsClear() and p.Parent:IsDead() then
             p.Velocity = p.Velocity * 0.9
-			p.FallingAccel = 0.01
+			p.FallingAccel = 0.1
+        end
+        if p.Parent then
+            p.Velocity = mod:Lerp(p.Velocity, Vector(d.newpos.X - vel.X, d.newpos.Y - vel.Y) - p.Position, 0.1)
         end
     end
 end

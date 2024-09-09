@@ -10,10 +10,9 @@ end, mod.Monsters.Snidge.ID)
 --funny fly
 function mod:SnidgeAI(npc, sprite, d)
     local target = npc:GetPlayerTarget()
-
+    npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_PLAYEROBJECTS
     if not d.init then
         npc.GridCollisionClass = GridCollisionClass.COLLISION_WALL_EXCEPT_PLAYER
-        npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_PLAYEROBJECTS
         d.targetpos = mod:confusePos(npc, target.Position, 5, nil, nil)
         d.istear = false
         npc.StateFrame = 0
@@ -56,7 +55,11 @@ if ent.Variant == mod.Monsters.Snidge.Var then
     if colent == Isaac.GetEntityVariantByName("Tear") then
         colent:Kill()
         return false
+    elseif colent.Type == 1 then
+        print("yeaahhhh")
+        ent.EntityCollisionClass = EntityCollisionClass.ENTCOLL_NONE
     end
+    print(colent.Type)
     return true
 end
 end,mod.Monsters.Snidge.ID)

@@ -1,7 +1,6 @@
 local mod = FHAC
 local game = Game()
 local rng = RNG()
-local room = Game():GetRoom()
 local nilvector = Vector.Zero
 
 mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
@@ -13,6 +12,7 @@ end, mod.Monsters.Floater.ID)
         --thx fiend folio
 function mod:FloaterAI(npc, sprite, d, r)
 
+    local room = Game():GetRoom()
     local target = npc:GetPlayerTarget()
     local targetpos = mod:confusePos(npc, target.Position, 5, nil, nil)
     local enemydir = (targetpos - npc.Position):GetAngleDegrees()

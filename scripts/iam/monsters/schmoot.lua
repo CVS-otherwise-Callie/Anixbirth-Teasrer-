@@ -1,7 +1,6 @@
 local mod = FHAC
 local game = Game()
 local rng = RNG()
-local room = game:GetRoom()
 
 mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
     if npc.Variant == mod.Monsters.Schmoot.Var then
@@ -172,13 +171,14 @@ function mod:SchmootAI(npc, sprite, d)
         d.coolaccel = 1
     end
     
-    mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, function(_, npc, amt, flag, source)
-        if npc.Variant == mod.Monsters.Schmoot.Var then
-            if flag & DamageFlag.DAMAGE_FIRE ~= 0 and source.Type ~= 1 then return false end
-            return true
-        end
-    end, mod.Monsters.Schmoot.ID)
 end
+
+mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, function(_, npc, amt, flag, source)
+    if npc.Variant == mod.Monsters.Schmoot.Var then
+        if flag & DamageFlag.DAMAGE_FIRE ~= 0 and source.Type ~= 1 then return false end
+        return true
+    end
+end, mod.Monsters.Schmoot.ID)
 
 function mod.SchmootDeath(ent)
     if ent.Type == 161 and ent.Variant == mod.Monsters.Schmoot.Var then
