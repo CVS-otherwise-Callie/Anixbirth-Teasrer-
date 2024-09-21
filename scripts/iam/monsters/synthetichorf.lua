@@ -19,7 +19,6 @@ function mod:SyntheticHorfAI(npc, sprite, d)
         p:GetData().StateFrame = 0
         p:GetData().Baby = d.target
         p:GetData().Player = npc:GetPlayerTarget()
-        p.EntityCollisionClass = EntityCollisionClass.ENTCOLL_NONE
     end
 
     if not d.init then
@@ -71,7 +70,6 @@ function mod.SyntheticHorfShot(p, d)
         local room = game:GetRoom()
         local target = d.Baby
         p.GridCollisionClass = EntityGridCollisionClass.GRIDCOLL_NONE
-
         if not d.init then
             target:GetData().rotShots = target:GetData().rotShots + 1
             d.init = true
@@ -85,18 +83,18 @@ function mod.SyntheticHorfShot(p, d)
             p.Height = -20
             d.newpos = target.Position
         end
-
+        p.EntityCollisionClass = EntityCollisionClass.ENTCOLL_NONE
         if d.StateFrame > 20 and p.EntityCollisionClass ~= EntityCollisionClass.ENTCOLL_ALL then
             p.EntityCollisionClass = EntityCollisionClass.ENTCOLL_ALL
+        else
+            print(p.EntityCollisionClass)
         end
-
         d.moveoffset = 0
         d.wobb = d.wobb or 0
         d.moveit = d.moveit or 0
         if d.moveit >= 360 then d.moveit = 0 else d.moveit = d.moveit + 0.07 end
         d.wobb = d.wobb + math.pi/math.random(3,12)
         local vel = mod:GetCirc((d.offyourfuckingheadset or 75) + math.sin(d.wobb), d.moveit)
-        
         if room:IsClear() then
             p.Velocity = p.Velocity * 0.9
 			p.FallingAccel = 0.1
