@@ -72,6 +72,7 @@ local room = game:GetRoom()
         d.entitypos = 500
         d.bagcostume = d.bagcostume or math.random(3)
         d.flip = d.flip or rng:RandomInt(1,2)
+        sprite.FlipX = d.flip
         sprite:Play("BagIdle", true)
         --mod:ReplaceEnemySpritesheet(npc, "gfx/monsters/dried/dried" .. d.bagcostume, 1)
         npc:AddEntityFlags(EntityFlag.FLAG_NO_PHYSICS_KNOCKBACK)
@@ -79,6 +80,7 @@ local room = game:GetRoom()
         npc.EntityCollisionClass = (EntityCollisionClass.ENTCOLL_NONE)
         d.creepsec = d.creepsec or rng:RandomInt(1, 12)
         d.mynumber = d.mynumber or math.random(1, #driedsubtypes)
+        npc.SpriteOffset = Vector(0, math.random(-20, 0))
         local tab
         if npc.SubType == nil or npc.SubType == 0 then
             tab= driedsubtypes[d.mynumber]
@@ -104,9 +106,6 @@ local room = game:GetRoom()
     if not room:IsClear() then
    
         npc.Velocity = npc.Velocity:Rotated(d.entitypos)
-
-        sprite.FlipX = d.flip
-
         if not d.creep == 22 then
             npc.SplatColor = d.splat
         end

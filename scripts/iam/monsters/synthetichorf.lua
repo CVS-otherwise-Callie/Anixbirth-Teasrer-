@@ -49,7 +49,7 @@ function mod:SyntheticHorfAI(npc, sprite, d)
             local effect = Isaac.Spawn(1000, 2, 5, npc.Position, Vector.Zero, npc):ToEffect()
             effect.SpriteOffset = Vector(0,-6)
             effect.DepthOffset = npc.Position.Y * 1.25
-            d.shootoffset = 20 + rng:RandomInt(1, 20)
+            d.shootoffset = 20 + rng:RandomInt(1, 10)
             SyntheticHorfShot()
             d.state = "doneattacking"
         end
@@ -86,8 +86,6 @@ function mod.SyntheticHorfShot(p, d)
         p.EntityCollisionClass = EntityCollisionClass.ENTCOLL_NONE
         if d.StateFrame > 20 and p.EntityCollisionClass ~= EntityCollisionClass.ENTCOLL_ALL then
             p.EntityCollisionClass = EntityCollisionClass.ENTCOLL_ALL
-        else
-            print(p.EntityCollisionClass)
         end
         d.moveoffset = 0
         d.wobb = d.wobb or 0

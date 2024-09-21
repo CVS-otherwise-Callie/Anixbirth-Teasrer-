@@ -56,10 +56,8 @@ if ent.Variant == mod.Monsters.Snidge.Var then
         colent:Kill()
         return false
     elseif colent.Type == 1 then
-        print("yeaahhhh")
         ent.EntityCollisionClass = EntityCollisionClass.ENTCOLL_NONE
     end
-    print(colent.Type)
     return true
 end
 end,mod.Monsters.Snidge.ID)
