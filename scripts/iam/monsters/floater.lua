@@ -11,16 +11,10 @@ end, mod.Monsters.Floater.ID)
 
         --thx fiend folio
 function mod:FloaterAI(npc, sprite, d, r)
-
-    local room = Game():GetRoom()
-    local target = npc:GetPlayerTarget()
-    local targetpos = mod:confusePos(npc, target.Position, 5, nil, nil)
-    local enemydir = (targetpos - npc.Position):GetAngleDegrees()
-    local targetvelocity = Vector.Zero
-    local othertargetvelocity = Vector.Zero
         
     if not d.init then
         d.realboost = rng:RandomInt(15, 35)/10
+        d.floateroffset = math.random(-10, 10)
         npc.StateFrame = 50
         npc.GridCollisionClass = EntityGridCollisionClass.GRIDCOLL_NONE
         d.dashper = 120 -- change this to however bad you want it to be! I like the 100 range, personally.
@@ -35,75 +29,55 @@ function mod:FloaterAI(npc, sprite, d, r)
         npc.StateFrame = npc.StateFrame + 1
     end
 
+    local room = Game():GetRoom()
+    local target = npc:GetPlayerTarget()
+    if npc.StateFrame > 10 + d.floateroffset then --this adds a scent of organicness lmao
+        d.targetpos = mod:confusePos(npc, target.Position, 5, nil, nil)
+        npc.StateFrame = 0
+    end
+    local enemydir = (d.targetpos - npc.Position):GetAngleDegrees()
+    local targetvelocity = Vector.Zero
+    local othertargetvelocity = Vector.Zero
+
     d.oldanim = d.diranim
 
-    if mod:isScare(npc) then
-        if enemydir > -90 and enemydir < -67.5 then
-            d.diranim = "North"
-        elseif enemydir > -67.5 and enemydir < -45 then
-            d.diranim = "NorthWest"
-        elseif enemydir > -45 and enemydir < -22.5 then
-            d.diranim = "NorthWest2"
-        elseif enemydir > -22.5 and enemydir < 22.5 then
-            d.diranim = "West"
-        elseif enemydir > 22.5 and enemydir < 45 then
-            d.diranim = "SouthWest2"
-        elseif enemydir > 45 and enemydir < 67.5 then
-            d.diranim = "SouthWest"
-        elseif enemydir > 67.5 and enemydir < 112.5 then
-            d.diranim = "South"
-        elseif enemydir > 112.5 and enemydir < 135 then
-            d.diranim = "SouthWest"
-        elseif enemydir > 135 and enemydir < 157.5 then
-            d.diranim = "SouthWest2"
-        elseif enemydir > 157.5 and enemydir < 181 then
-            d.diranim = "West"
-        elseif enemydir > -180 and enemydir < -157.7 then
-            d.diranim = "West"
-        elseif enemydir > -157.5 and enemydir < -135 then
-            d.diranim = "NorthWest2"
-        elseif enemydir > -135 and enemydir < -90 then
-            d.diranim = "NorthWest"
-        else
-            d.diranim = "North"
-        end
+    if enemydir > -90 and enemydir < -67.5 then
+        d.diranim = "North"
+    elseif enemydir > -67.5 and enemydir < -45 then
+        d.diranim = "NorthWest"
+    elseif enemydir > -45 and enemydir < -22.5 then
+        d.diranim = "NorthWest2"
+    elseif enemydir > -22.5 and enemydir < 22.5 then
+        d.diranim = "West"
+    elseif enemydir > 22.5 and enemydir < 45 then
+        d.diranim = "SouthWest2"
+    elseif enemydir > 45 and enemydir < 67.5 then
+        d.diranim = "SouthWest"
+    elseif enemydir > 67.5 and enemydir < 112.5 then
+        d.diranim = "South"
+    elseif enemydir > 112.5 and enemydir < 135 then
+        d.diranim = "SouthWest"
+    elseif enemydir > 135 and enemydir < 157.5 then
+        d.diranim = "SouthWest2"
+    elseif enemydir > 157.5 and enemydir < 181 then
+        d.diranim = "West"
+    elseif enemydir > -180 and enemydir < -157.7 then
+        d.diranim = "West"
+    elseif enemydir > -157.5 and enemydir < -135 then
+        d.diranim = "NorthWest2"
+    elseif enemydir > -135 and enemydir < -90 then
+        d.diranim = "NorthWest"
+    else
+        d.diranim = "North"
+    end
 
+    if mod:isScare(npc) then
         if target.Position.X < npc.Position.X then
             sprite.FlipX = true
             else
             sprite.FlipX = false
         end
     else
-        if enemydir > -90 and enemydir < -67.5 then
-            d.diranim = "North"
-        elseif enemydir > -67.5 and enemydir < -45 then
-            d.diranim = "NorthWest"
-        elseif enemydir > -45 and enemydir < -22.5 then
-            d.diranim = "NorthWest2"
-        elseif enemydir > -22.5 and enemydir < 22.5 then
-            d.diranim = "West"
-        elseif enemydir > 22.5 and enemydir < 45 then
-            d.diranim = "SouthWest2"
-        elseif enemydir > 45 and enemydir < 67.5 then
-            d.diranim = "SouthWest"
-        elseif enemydir > 67.5 and enemydir < 112.5 then
-            d.diranim = "South"
-        elseif enemydir > 112.5 and enemydir < 135 then
-            d.diranim = "SouthWest"
-        elseif enemydir > 135 and enemydir < 157.5 then
-            d.diranim = "SouthWest2"
-        elseif enemydir > 157.5 and enemydir < 181 then
-            d.diranim = "West"
-        elseif enemydir > -180 and enemydir < -157.7 then
-            d.diranim = "West"
-        elseif enemydir > -157.5 and enemydir < -135 then
-            d.diranim = "NorthWest2"
-        elseif enemydir > -135 and enemydir < -90 then
-            d.diranim = "NorthWest"
-        else
-            d.diranim = "North"
-        end
-
         if target.Position.X < npc.Position.X then
             sprite.FlipX = false
             else
@@ -128,9 +102,9 @@ function mod:FloaterAI(npc, sprite, d, r)
         end
 
         if not mod:isScare(npc) then
-            othertargetvelocity = (targetpos + d.moveval - npc.Position):Resized(d.boost*1.5)
+            othertargetvelocity = (d.targetpos + d.moveval - npc.Position):Resized(d.boost*2)
         else
-            othertargetvelocity = (targetpos:Rotated(180) + d.moveval - npc.Position):Resized(d.boost*1.5) 
+            othertargetvelocity = (d.targetpos:Rotated(180) + d.moveval - npc.Position):Resized(d.boost*2) 
         end
     end
 
@@ -152,7 +126,7 @@ function mod:FloaterAI(npc, sprite, d, r)
         if (enemydir < -45 and enemydir > -90) or (enemydir > 45 and enemydir < 90) then
             d.moveval = d.moveval + Vector(d.accelerateaway, 0)
         end
-        targetvelocity = (targetpos + d.moveval - npc.Position):Resized(d.boost)
+        targetvelocity = (d.targetpos + d.moveval - npc.Position):Resized(d.boost)
         if d.accelerateaway > 0 then
             d.accelerateaway = d.accelerateaway - d.accelerateaway/20
         end
@@ -165,7 +139,7 @@ function mod:FloaterAI(npc, sprite, d, r)
         npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, d.boost/5)
     end
 
-    if d.animinit == false or not d.oldanim == d.diranim then
+    if d.animinit == false then
         d.animinit = true
         sprite:Play(d.diranim, true)
     end

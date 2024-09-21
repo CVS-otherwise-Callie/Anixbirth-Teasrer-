@@ -51,15 +51,15 @@ function mod:PinprickAI(npc, sprite, d)
         d.firstinit = true
     else
         if not d.init then
-            d.newpos = npc.Position - Vector(10, 0):Rotated((targetpos - npc.Position):GetAngleDegrees() + rng:RandomInt(-20, 20))
+            d.newpos = targetpos:Resized(-5)
         end
         npc.StateFrame = npc.StateFrame + 1
     end
 
     if npc.StateFrame > 35 + d.dashoffset then
-        if d.moveoffset < 0.005 then
+        if d.moveoffset < 0.02 then
         d.init = true
-        d.newpos = targetpos - Vector(2, 0):Rotated((targetpos - npc.Position):GetAngleDegrees() + rng:RandomInt(-20, 20))
+        d.newpos = targetpos - Vector(2, 0):Rotated((targetpos - npc.Position):GetAngleDegrees() + rng:RandomInt(-5, 5))
         d.moveoffset = 0
         npc.StateFrame = 0
         else
@@ -67,12 +67,15 @@ function mod:PinprickAI(npc, sprite, d)
         end
     else
         d.moveoffset = d.moveoffset + 0.001
+        if not game:GetRoom():IsPositionInRoom(npc.Position, 0) then
+            npc.StateFrame  = npc.StateFrame + 3
+        end
     end
     npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_PLAYEROBJECTS
     if mod:isScare(npc) then
         npc.Velocity = mod:Lerp(npc.Velocity, d.newpos - npc.Position, 0.005 + d.moveoffset):Rotated(rng:RandomInt(1, 360))
     else
-        npc.Velocity = mod:Lerp(npc.Velocity, (d.newpos - npc.Position):Resized(30),  0.005 + d.moveoffset)
+        npc.Velocity = mod:Lerp(npc.Velocity, (d.newpos - npc.Position),  0.005 + d.moveoffset)
     end
 end
 

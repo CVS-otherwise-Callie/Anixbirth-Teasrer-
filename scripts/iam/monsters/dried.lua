@@ -70,11 +70,10 @@ local room = game:GetRoom()
             npc:ClearEntityFlags(EntityFlag.FLAG_APPEAR)
         end
         d.entitypos = 500
-        d.bagcostume = d.bagcostume or math.random(4)
+        d.bagcostume = d.bagcostume or math.random(3)
         d.flip = d.flip or rng:RandomInt(1,2)
-        sprite:Play("rope", true)
-        sprite:PlayOverlay("bag" .. d.bagcostume, true)
-        d.Yoffset = d.Yoffset or (-80 + rng:RandomInt(-10, 10))
+        sprite:Play("BagIdle", true)
+        --mod:ReplaceEnemySpritesheet(npc, "gfx/monsters/dried/dried" .. d.bagcostume, 1)
         npc:AddEntityFlags(EntityFlag.FLAG_NO_PHYSICS_KNOCKBACK)
         npc.GridCollisionClass = (GridCollisionClass.COLLISION_NONE)
         npc.EntityCollisionClass = (EntityCollisionClass.ENTCOLL_NONE)
@@ -96,10 +95,9 @@ local room = game:GetRoom()
             Name="Dried",
             NPC = npc,
         })
-        npc.SpriteOffset = Vector(0, d.Yoffset)
         d.init = true
     else
-        if room:IsClear() then npc.StateFrame = npc.StateFrame + 1 end
+        npc.StateFrame = npc.StateFrame + 1
     end
 
 
@@ -114,7 +112,7 @@ local room = game:GetRoom()
         end
         --just to make sure it doesnt keep changing since it's annoying when it does
 
-        if sprite:GetOverlayFrame("drip" .. d.bagcostume) == 17 or (npc.StateFrame > 3 * d.creepsec and room:IsClear()) then
+        if sprite:GetOverlayFrame("BagDip") == 17 or (npc.StateFrame > 3 * d.creepsec and room:IsClear()) then
             d.creepsec = d.creepsec or driedsubtypes[d.mynumber].creepsec or 1 + (rng:RandomInt(-2, 2) * 0.5)
             local crepe = Isaac.Spawn(1000, d.creep,  0, npc.Position, Vector(0, 0), npc):ToEffect()
             crepe.Scale = crepe.Scale --* d.creepsec

@@ -37,6 +37,7 @@ function mod:IsSourceofDamagePlayer(source, bomb)
 end
 
 function mod:freeGrid(npc, path, far, close)
+	local pather = npc.Pathfinder
 	local room = game:GetRoom()
 	path = path or false
 	far = far or 300
@@ -47,7 +48,7 @@ function mod:freeGrid(npc, path, far, close)
 			if room:GetGridPosition(i) ~= nil then
 			local gridpoint = room:GetGridPosition(i)
 			if gridpoint and gridpoint:Distance(npc.Position) < far and gridpoint:Distance(npc.Position) > close and room:GetGridEntity(i) == nil and 
-			room:IsPositionInRoom(gridpoint, 0) and game:GetRoom():CheckLine(gridpoint,npc.Position,3,900,false,false) then
+			room:IsPositionInRoom(gridpoint, 0) and game:GetRoom():CheckLine(gridpoint,npc.Position,3,900,false,false) and pather:HasPathToPos(gridpoint, true) then
 				table.insert(tab, gridpoint)
 			end
 			end
@@ -57,7 +58,7 @@ function mod:freeGrid(npc, path, far, close)
 			if room:GetGridPosition(i) ~= nil then
 				local gridpoint = room:GetGridPosition(i)
 				if gridpoint and gridpoint:Distance(npc.Position) < far and gridpoint:Distance(npc.Position) > close 
-				and room:GetGridEntity(i) == nil and room and room:IsPositionInRoom(gridpoint, 0) then
+				and (room:GetGridEntity(i) == nil or room:GetGridEntity(i) == true) and room and room:IsPositionInRoom(gridpoint, 0) then
 					table.insert(tab, gridpoint)
 				end
 			end
@@ -334,7 +335,7 @@ end
 function mod:LoadSavedRoomEnts()
 	local ents = FHAC.SavedEntsLevel or {}
 	for k, v in pairs(ents) do
-		if v.Room.Variant == game:GetLevel():GetCurrentRoomDesc().Data.Variant and v.Stage == game:GetLevel():GetStage() then
+		if v.Room and v.Room.Variant == game:GetLevel():GetCurrentRoomDesc().Data.Variant and v.Stage == game:GetLevel():GetStage() then
 			local ent = Isaac.Spawn(Isaac.GetEntityTypeByName(v.Name), Isaac.GetEntityVariantByName(v.Name), v.Subtype, v.Position, v.Velocity, v.Spawner)
 			local d = ent:GetData()
 			d.isPrevEntCopy = true
@@ -352,7 +353,33 @@ function mod:CheckForNewRoom(bool)
 	if not bool then
 	FHAC.PreSavedEntsLevel = {}
 	FHAC.SavedEntsLevel = {}
+	mod:SaveModData()
 	end
+end
+
+function mod:GetEntInRoom(ent, avoidnpc, npc)
+	local targets = {}
+	if avoidnpc then
+		for _, ent in ipairs(Isaac.GetRoomEntities()) do
+			if ent:IsActiveEnemy() and ent:IsVulnerableEnemy() and not ent:IsDead()
+			and not ent:HasEntityFlags(EntityFlag.FLAG_FRIENDLY) and (ent.Position - npc.Position):Length() < 350
+			and not(ent.Type == npc.Type and ent.Variant == npc.Variant)  then
+				table.insert(targets, ent)
+			end
+		end
+	else
+		for _, ent in ipairs(Isaac.GetRoomEntities()) do
+			if ent:IsActiveEnemy() and ent:IsVulnerableEnemy() and not ent:IsDead()
+			and not ent:HasEntityFlags(EntityFlag.FLAG_FRIENDLY) and (ent.Position - npc.Position):Length() < 350  then
+				table.insert(targets, ent)
+			end
+		end
+	end
+	if (#targets == 0) then
+		return ent:GetPlayerTarget()
+	end
+	local answer = targets[math.random(1, #targets)]
+	return answer
 end
 
 function mod:GetRoomNameByType(type)

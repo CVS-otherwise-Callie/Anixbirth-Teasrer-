@@ -82,7 +82,19 @@ function MenuProvider.SaveMenusPoppedUp(var)
 	FHAC.savedata.MenusPoppedUp = var
 end
 local DSSInitializerFunction = include("scripts.iam.deadseascrolls.dssmenucore")
+local Lore = include("scripts.iam.deadseascrolls.da lore")
 local dssmod = DSSInitializerFunction(DSSModName, DSSCoreVersion, MenuProvider)
+
+local function genLore(tab)
+    local button = {}
+    for k, v in ipairs(tab) do
+        button = {
+            str = v,
+            nosel = true
+        }
+    end
+    return button
+end
 
 
 local dmdirectory = {
@@ -156,6 +168,8 @@ local dmdirectory = {
     other =  {
         title = 'miscallaneous',
         buttons = {
+            {str = 'the lore', dest = 'lore'},
+            {str = '----------', fsize=2, nosel = true},
             {str = 'characters', nosel = true},
             {str = '----------', fsize=2, nosel = true},
             {
@@ -181,6 +195,13 @@ local dmdirectory = {
             },
         }
 },
+
+    lore = {
+        title = 'da lore',
+        buttons = {
+            genLore(FHAC.Lore)
+        }
+    }
 }
 
 local dmdirectorykey = {

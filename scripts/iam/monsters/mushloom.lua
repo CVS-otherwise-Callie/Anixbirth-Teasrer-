@@ -22,9 +22,6 @@ function mod:MushLoomAI(npc, sprite, d)
         d.idonttakealotofdamage = false
         npc.Velocity = Vector.Zero
         npc.SpriteOffset = Vector(0, 2)
-        for k, v in pairs(d) do
-            print(v, "hiya")
-        end
         d.init = true
     else
         npc.StateFrame = npc.StateFrame + 1

@@ -12,7 +12,8 @@ FHAC:LoadScripts("scripts.iam.monsters", {
 	"mushloom",
 	"pinprick",
 	"synthetichorf",
-	"gassedfly"
+	"gassedfly",
+	"fly_ve-bomber"
 })
 
 FHAC:LoadScripts("scripts.iam.familiars", {
@@ -49,7 +50,8 @@ local player = Isaac.GetPlayer()
 
 
 function mod.ShowFortuneDeath()
-	if not mod.fortuneDeathChance == 0 then
+	if mod.fortuneDeathChance == nil then mod.fortuneDeathChance = 5 end
+	if mod.fortuneDeathChance ~= 0 then
 		if rng:RandomInt(mod.fortuneDeathChance, 10) == 10 then 
 			FHAC:ShowFortune()
 		end 

@@ -144,7 +144,7 @@
         <gibs amount="0" blood="1" bone="0" eye="1" gut="0" large="0" />
         <devolve id="214.0.0" weight="1" />
     </entity-->
-    <entity id="161" variant="21" name="Neutral Fly" reroll="true" baseHP="10" stageHP="0" boss="0" champion="1" collisionDamage="1" collisionMass="6" collisionRadius="13" friction="1" numGridCollisionPoints="8" shadowSize="14" portrait="21" anm2path="monsters/neutralfly/neutralfly.anm2" gridCollision="walls" tags="fly">
+    <entity id="161" variant="21" name="Neutral Fly" reroll="true" baseHP="15" stageHP="0" boss="0" champion="1" collisionDamage="1" collisionMass="6" collisionRadius="13" friction="1" numGridCollisionPoints="8" shadowSize="14" portrait="21" anm2path="monsters/neutralfly/neutralfly.anm2" gridCollision="walls" tags="fly">
 		<bestiary transform="0,0,1" anim="Idle" />
         <gibs amount="0" blood="1" bone="0" eye="1" gut="0" large="0" />
         <devolve id="214.0.0" weight="1" />
@@ -251,6 +251,12 @@
         <devolve id="161.0.0" weight="1" />
     </entity>
     <!--end of dried-->
+
+    <entity id="161" variant="42" name="Plier" reroll="true" baseHP="10" stageHP="0" boss="0" champion="1" collisionDamage="1" collisionMass="6" collisionRadius="13" friction="1" numGridCollisionPoints="8" shadowSize="14" portrait="21" anm2path="monsters/plier/plier.anm2" gridCollision="walls" tags="fly">
+		<bestiary transform="0,0,1" anim="Idle" />
+        <gibs amount="0" blood="1" bone="0" eye="1" gut="0" large="0" />
+        <devolve id="214.0.0" weight="1" />
+    </entity>
 
     <!--Burning Basement-->
     <entity anm2path="monsters/schmoot/shmoot.anm2" reroll="true" baseHP="16" boss="0" champion="1" collisionDamage="1" collisionMass="3" collisionRadius="13" friction="1" id="161" name="Schmoot" numGridCollisionPoints="12" shadowSize="13" stageHP="0" variant="91" bestiary="true" portrait="91">

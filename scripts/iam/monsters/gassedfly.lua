@@ -13,6 +13,9 @@ function mod:GassedFlyAI(npc, sprite, d)
     local target = npc:GetPlayerTarget()
     local targetpos = mod:confusePos(npc, target.Position, 5, nil, nil) + Vector(10, 0):Rotated(rng:RandomInt(0, 360))
     if not d.init then
+        npc.StateFrame = 21
+        d.moveit = 0
+        d.wobb = 0
         d.funnyasslerp = 0.06
         d.coolaccel = 0.5
         d.fartmultiplier = 0.5
@@ -25,6 +28,13 @@ function mod:GassedFlyAI(npc, sprite, d)
             mod:ReplaceEnemySpritesheet(npc, "gfx/monsters/gassedfly/gassedfly", 0)
         end
         d.init = true
+    else
+        npc.StateFrame = npc.StateFrame + 1
+    end
+
+    if npc.StateFrame > 20 then
+        d.newpos = target.Position
+        npc.StateFrame = 0
     end
 
     if d.coolaccel and d.coolaccel < d.max then
@@ -32,11 +42,16 @@ function mod:GassedFlyAI(npc, sprite, d)
         d.coolaccel = d.coolaccel + 0.1
     end
 
+    if d.moveit >= 360 then d.moveit = 0 else d.moveit = d.moveit + 0.07 end
+    d.wobb = d.wobb + math.pi/math.random(3,12)
+
+    local vel = mod:GetCirc((5) + math.sin(d.wobb), d.moveit)
+
     if mod:isScare(npc) then
-        local targetvelocity = (targetpos - npc.Position):Resized(-15)
+        local targetvelocity = (Vector(d.newpos.X - vel.X, d.newpos.Y - vel.Y) - npc.Position):Resized(-15)
         npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, d.funnyasslerp)
     else
-        local targetvelocity = (targetpos - npc.Position):Resized(15)
+        local targetvelocity = (Vector(d.newpos.X - vel.X, d.newpos.Y - vel.Y) - npc.Position):Resized(15)
         npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, d.funnyasslerp)
     end
     npc.Velocity = mod:Lerp(npc.Velocity, npc.Velocity:Resized(d.coolaccel), d.funnyasslerp)
@@ -65,7 +80,6 @@ end
 function mod.GassedFlyDeath(ent)
     if ent.Type == 161 and ent.Variant == mod.Monsters.GassedFly.Var then
         local npc = ent:ToNPC()
-        local sprite = ent:GetSprite()
         game:ButterBeanFart(npc.Position, 100, npc, true, false)
         local cloud = Isaac.Spawn(1000, 141, 1, npc.Position, npc.Velocity:Resized(3), npc):ToEffect()
         cloud:SetTimeout(cloud.Timeout * 1000)

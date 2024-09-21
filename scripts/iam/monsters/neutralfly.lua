@@ -68,6 +68,7 @@ function mod:NeutralflyAI(npc, sprite, d)
         end
         if npc.StateFrame > 40 then
             d.newpos = mod:freeGrid(npc, false, 200, 100)
+            if d.newpos:Distance( npc.Position ) < 1 then print("ahhh") d.newpos = mod:freeGrid(npc, false, 500, 0) end
             npc.StateFrame = 0
             d.rounds = d.rounds + 1
             if d.newpos.Y < npc.Position.Y then

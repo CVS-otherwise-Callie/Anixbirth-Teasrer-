@@ -10167,7 +10167,7 @@
 			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45103" name="Callie - Neutral Fly - Acorss and foward" type="1" subtype="0" shape="3" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-09-05T00:42+00:00">
+	<room variant="45103" name="CVS - Neutral Fly - Acorss and foward" type="1" subtype="0" shape="3" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-09-05T00:42+00:00">
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
 		<spawn x="4" y="0">
@@ -12633,7 +12633,7 @@
 			<entity type="869" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45123" name="Callie - Neutral Fly - He will hold me white" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-09-05T00:42+00:00">
+	<room variant="45123" name="CVS - Neutral Fly - He will hold me white" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-09-05T00:42+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -12714,7 +12714,7 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45124" name="Callie - Neutral Fly - Clotted" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-09-05T00:42+00:00">
+	<room variant="45124" name="CVS - Neutral Fly - Clotted" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-09-05T00:42+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -12792,7 +12792,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45125" name="Callie - Neutral Fly - Keanu, you like fiend folio?" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-09-05T00:42+00:00">
+	<room variant="45125" name="CVS - Neutral Fly - Keanu, you like fiend folio?" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-09-05T00:42+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -12900,7 +12900,7 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45126" name="Callie - Neutral Fly - Yeah, I like the Whites, and?" type="1" subtype="0" shape="2" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-09-05T00:42+00:00">
+	<room variant="45126" name="CVS - Neutral Fly - Yeah, I like the Whites, and?" type="1" subtype="0" shape="2" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-09-05T00:42+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="13" y="3"/>
 		<spawn x="1" y="2">
@@ -12931,7 +12931,7 @@
 			<entity type="161" variant="41" subtype="2" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45127" name="Callie - Neutral Fly - I want my cocaine and I want it NOW!!" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-09-05T00:42+00:00">
+	<room variant="45127" name="CVS - Neutral Fly - I want my cocaine and I want it NOW!!" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-09-05T00:42+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -13000,7 +13000,7 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45128" name="Callie - Neutral Fly - THE WORM COUNCIL ASKS FOR YOUR ARRIVAL" type="1" subtype="0" shape="6" width="26" height="7" difficulty="5" weight="1.0" lastTestTime="2024-09-05T00:42+00:00">
+	<room variant="45128" name="CVS - Neutral Fly - THE WORM COUNCIL ASKS FOR YOUR ARRIVAL" type="1" subtype="0" shape="6" width="26" height="7" difficulty="5" weight="1.0" lastTestTime="2024-09-05T00:42+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -13299,7 +13299,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45129" name="Callie - Neutral Fly - There's blood on my carpet now get it out" type="1" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2024-09-05T00:42+00:00">
+	<room variant="45129" name="CVS - Neutral Fly - There's blood on my carpet now get it out" type="1" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2024-09-05T00:42+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -13400,7 +13400,7 @@
 			<entity type="161" variant="21" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45130" name="Callie - Neutral Fly - They're sad ur sad ok???" type="1" subtype="0" shape="3" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-09-05T00:42+00:00">
+	<room variant="45130" name="CVS - Neutral Fly - They're sad ur sad ok???" type="1" subtype="0" shape="3" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-09-05T00:42+00:00">
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
 		<spawn x="4" y="0">
@@ -13431,7 +13431,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45131" name="Callie - Neutral Fly - Pray you're not cornered" type="1" subtype="0" shape="2" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-09-05T00:42+00:00">
+	<room variant="45131" name="CVS - Neutral Fly - Pray you're not cornered" type="1" subtype="0" shape="2" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-09-05T00:42+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="13" y="3"/>
 		<spawn x="3" y="2">
@@ -13480,7 +13480,7 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45132" name="Callie - Floater - Heya! Have you seen my balls recently? No? What??" type="1" subtype="0" shape="3" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-09-05T00:42+00:00">
+	<room variant="45132" name="CVS - Floater - Heya! Have you seen my balls recently? No? What??" type="1" subtype="0" shape="3" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-09-05T00:42+00:00">
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
 		<spawn x="4" y="0">
@@ -13535,7 +13535,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45133" name="Callie - Neutral Fly - I'm scared! That you're scared! Duh!!!" type="1" subtype="0" shape="10" width="26" height="14" difficulty="5" weight="1.0" lastTestTime="2024-09-05T00:42+00:00">
+	<room variant="45133" name="CVS - Neutral Fly - I'm scared! That you're scared! Duh!!!" type="1" subtype="0" shape="10" width="26" height="14" difficulty="5" weight="1.0" lastTestTime="2024-09-05T00:42+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -13947,7 +13947,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45134" name="Callie - Neutral Fly - Why they white" type="1" subtype="0" shape="3" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-09-05T00:42+00:00">
+	<room variant="45134" name="CVS - Neutral Fly - Why they white" type="1" subtype="0" shape="3" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-09-05T00:42+00:00">
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
 		<spawn x="4" y="0">
@@ -13969,7 +13969,7 @@
 			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45135" name="Callie - Neutral Fly - Cramped again? Good golly" type="1" subtype="0" shape="9" width="26" height="14" difficulty="5" weight="1.0" lastTestTime="2024-09-05T00:42+00:00">
+	<room variant="45135" name="CVS - Neutral Fly - Cramped again? Good golly" type="1" subtype="0" shape="9" width="26" height="14" difficulty="5" weight="1.0" lastTestTime="2024-09-05T00:42+00:00">
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="6"/>
 		<door exists="True" x="6" y="14"/>
@@ -14438,7 +14438,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45136" name="Callie - Neutral Fly - Potty for pots" type="1" subtype="0" shape="10" width="26" height="14" difficulty="5" weight="1.0" lastTestTime="2024-09-05T00:42+00:00">
+	<room variant="45136" name="CVS - Neutral Fly - Potty for pots" type="1" subtype="0" shape="10" width="26" height="14" difficulty="5" weight="1.0" lastTestTime="2024-09-05T00:42+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -14700,7 +14700,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45137" name="Callie - Neutral Fly - Woag again" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-09-05T00:42+00:00">
+	<room variant="45137" name="CVS - Neutral Fly - Woag again" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-09-05T00:42+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -14787,7 +14787,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45101" name="Callie - Dried - Pooped AGAIN" type="1" subtype="0" shape="6" width="26" height="7" difficulty="5" weight="1.0" lastTestTime="2024-09-05T00:42+00:00">
+	<room variant="45138" name="CVS - Dried - Pooped AGAIN" type="1" subtype="0" shape="6" width="26" height="7" difficulty="5" weight="1.0" lastTestTime="2024-09-05T00:42+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -14876,7 +14876,7 @@
 			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45102" name="Callie - Dried - Toasting and Roasting" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-09-05T00:42+00:00">
+	<room variant="45139" name="CVS - Dried - Toasting and Roasting" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-09-05T00:42+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -15026,7 +15026,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45103" name="Callie - There's no way, blud got cooked at the arcade again?" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-09-05T00:42+00:00">
+	<room variant="45140" name="CVS - There's no way, blud got cooked at the arcade again?" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-09-05T00:42+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -15176,13 +15176,16 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45104" name="Callie - Dried - " type="1" subtype="0" shape="6" width="26" height="7" difficulty="5" weight="1.0">
+	<room variant="45141" name="CVS - Dried - Red abounding" type="1" subtype="0" shape="6" width="26" height="7" difficulty="5" weight="1.0" lastTestTime="2024-09-12T03:16+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
 		<door exists="True" x="19" y="-1"/>
 		<door exists="True" x="19" y="7"/>
 		<door exists="True" x="26" y="3"/>
+		<spawn x="11" y="0">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
 		<spawn x="0" y="1">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
@@ -15213,15 +15216,6 @@
 		<spawn x="9" y="1">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
-		<spawn x="10" y="1">
-			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
-		</spawn>
-		<spawn x="11" y="1">
-			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
-		</spawn>
-		<spawn x="12" y="1">
-			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
-		</spawn>
 		<spawn x="13" y="1">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
@@ -15230,6 +15224,9 @@
 		</spawn>
 		<spawn x="15" y="1">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="23" y="1">
+			<entity type="161" variant="21" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="0" y="2">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -15279,6 +15276,24 @@
 		<spawn x="15" y="2">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="22" y="2">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="3">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="3">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="14" y="3">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="17" y="3">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="4">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
 		<spawn x="11" y="4">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
@@ -15323,6 +15338,9 @@
 		</spawn>
 		<spawn x="25" y="4">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="5">
+			<entity type="161" variant="21" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="11" y="5">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -15369,8 +15387,11 @@
 		<spawn x="25" y="5">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="9" y="6">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
 	</room>
-	<room variant="45105" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="2.0">
+	<room variant="45142" name="CVS - Dried - Woagggggg NO WAY (dies after a bit)" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="2.0" lastTestTime="2024-09-12T22:07+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -15378,17 +15399,26 @@
 		<spawn x="0" y="0">
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="7" y="0">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
 		<spawn x="12" y="0">
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="0" y="1">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="3" y="1">
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="0" y="2">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="2" y="2">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="2">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="10" y="2">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
@@ -15399,6 +15429,12 @@
 		<spawn x="2" y="3">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="6" y="3">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="3">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
 		<spawn x="10" y="3">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
@@ -15408,26 +15444,44 @@
 		<spawn x="2" y="4">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="3" y="4">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="4">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="10" y="4">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="0" y="5">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="2" y="5">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="5">
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="0" y="6">
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="6">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
 		</spawn>
 		<spawn x="12" y="6">
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45106" name="Callie - Dried - " type="1" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+	<room variant="45143" name="CVS - Dried - Mena assholes on the parking ticket" type="1" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2024-09-12T22:07+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="False" x="6" y="14"/>
 		<door exists="True" x="13" y="3"/>
 		<door exists="True" x="13" y="10"/>
+		<spawn x="1" y="0">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
 		<spawn x="9" y="0">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
@@ -15491,6 +15545,12 @@
 		<spawn x="7" y="2">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="0" y="3">
+			<entity type="161" variant="12" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="3">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
 		<spawn x="0" y="4">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
@@ -15539,11 +15599,17 @@
 		<spawn x="7" y="5">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="9" y="5">
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="12" y="5">
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="0" y="6">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="6">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
 		</spawn>
 		<spawn x="2" y="6">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -15566,6 +15632,9 @@
 		<spawn x="8" y="6">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="0" y="7">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="6" y="7">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
@@ -15578,14 +15647,32 @@
 		<spawn x="12" y="7">
 			<entity type="292" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="3" y="8">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="8">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
 		<spawn x="7" y="8">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="8" y="8">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="11" y="8">
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="12" y="8">
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="9">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="9">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="9">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="7" y="9">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -15711,13 +15798,19 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45107" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="6" weight="1.0">
+	<room variant="45144" name="CVS - Dried - Oop one dried got burnt ):" type="1" subtype="0" shape="1" width="13" height="7" difficulty="6" weight="1.0" lastTestTime="2024-09-12T22:07+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
 		<door exists="True" x="13" y="3"/>
+		<spawn x="0" y="0">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="1" y="0">
 			<entity type="969" variant="9" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="0">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="3" y="0">
 			<entity type="1009" variant="0" subtype="0" weight="1.0"/>
@@ -15742,6 +15835,9 @@
 		</spawn>
 		<spawn x="10" y="0">
 			<entity type="969" variant="9" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="0">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="12" y="0">
 			<entity type="969" variant="9" subtype="0" weight="1.0"/>
@@ -15824,8 +15920,20 @@
 		<spawn x="12" y="2">
 			<entity type="1009" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="4" y="3">
+			<entity type="161" variant="21" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="3">
+			<entity type="161" variant="21" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="4">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
 		<spawn x="4" y="4">
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="4">
+			<entity type="161" variant="41" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="2" y="5">
 			<entity type="33" variant="0" subtype="0" weight="1.0"/>
@@ -15836,8 +15944,14 @@
 		<spawn x="10" y="5">
 			<entity type="33" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="0" y="6">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="6">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
 	</room>
-	<room variant="45108" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45145" name="CVS - Dried - A single dried and yet so much hatred and pain" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-09-12T22:07+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -16016,6 +16130,9 @@
 		<spawn x="5" y="4">
 			<entity type="969" variant="9" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="6" y="4">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
 		<spawn x="7" y="4">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
@@ -16034,8 +16151,20 @@
 		<spawn x="12" y="4">
 			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="2" y="5">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="5">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="6">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="6">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
+		</spawn>
 	</room>
-	<room variant="45109" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45146" name="CVS - Dried - hey LET ME OUT already" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-09-12T22:07+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -16079,6 +16208,9 @@
 		<spawn x="9" y="1">
 			<entity type="1901" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="11" y="1">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
 		<spawn x="12" y="1">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
@@ -16087,6 +16219,12 @@
 		</spawn>
 		<spawn x="3" y="2">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="2">
+			<entity type="208" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="2">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="9" y="2">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -16100,6 +16238,9 @@
 		<spawn x="3" y="3">
 			<entity type="3009" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="5" y="3">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
 		<spawn x="9" y="3">
 			<entity type="3009" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
@@ -16109,11 +16250,20 @@
 		<spawn x="0" y="4">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="1" y="4">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
 		<spawn x="3" y="4">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="5" y="4">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="9" y="4">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="4">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
 		</spawn>
 		<spawn x="12" y="4">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -16161,11 +16311,14 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45110" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45147" name="CVS - Plier - Haugh this is stupid and unfair and stupid" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-09-12T22:07+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
 		<door exists="True" x="13" y="3"/>
+		<spawn x="0" y="0">
+			<entity type="284" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="2" y="0">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
@@ -16174,6 +16327,9 @@
 		</spawn>
 		<spawn x="4" y="0">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="0">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="9" y="0">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -16253,6 +16409,9 @@
 		<spawn x="1" y="4">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="2" y="4">
+			<entity type="161" variant="21" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="3" y="4">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
@@ -16264,6 +16423,9 @@
 		</spawn>
 		<spawn x="7" y="4">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="4">
+			<entity type="284" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="9" y="4">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -16308,7 +16470,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45111" name="Callie - Dried - " type="1" subtype="0" shape="2" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45148" name="CVS - Dried - Funny room" type="1" subtype="0" shape="2" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-09-12T22:07+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="13" y="3"/>
 		<spawn x="3" y="2">
@@ -16329,20 +16491,38 @@
 		<spawn x="9" y="2">
 			<entity type="4500" variant="13" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="1" y="3">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
 		<spawn x="2" y="3">
 			<entity type="969" variant="2" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="3">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="4" y="3">
 			<entity type="969" variant="3" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="5" y="3">
+			<entity type="161" variant="41" subtype="2" weight="1.0"/>
+		</spawn>
 		<spawn x="6" y="3">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="3">
+			<entity type="161" variant="41" subtype="2" weight="1.0"/>
 		</spawn>
 		<spawn x="8" y="3">
 			<entity type="969" variant="1" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="9" y="3">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="10" y="3">
 			<entity type="969" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="3">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
 		</spawn>
 		<spawn x="3" y="4">
 			<entity type="4500" variant="10" subtype="0" weight="1.0"/>
@@ -16363,7 +16543,7 @@
 			<entity type="4500" variant="13" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45112" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="6" weight="1.0">
+	<room variant="45149" name="CVS - Dried - Strawberry eyes" type="1" subtype="0" shape="1" width="13" height="7" difficulty="6" weight="1.0" lastTestTime="2024-09-12T22:07+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -16428,11 +16608,23 @@
 		<spawn x="1" y="2">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="2" y="2">
+			<entity type="206" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="2">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="2">
+			<entity type="16" variant="2" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="8" y="2">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="9" y="2">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="2">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="1" y="3">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
@@ -16467,6 +16659,9 @@
 		<spawn x="2" y="4">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="4" y="4">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
 		<spawn x="5" y="4">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
@@ -16488,6 +16683,9 @@
 		<spawn x="11" y="4">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="2" y="5">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
 		<spawn x="3" y="5">
 			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
@@ -16497,11 +16695,23 @@
 		<spawn x="9" y="5">
 			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="10" y="5">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="5">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="6">
+			<entity type="242" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="6">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="11" y="6">
 			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45113" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45150" name="CVS - Dried - I'm just mad that I died to a FF room so i feel compulsion to do this" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-09-12T22:07+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -16548,6 +16758,9 @@
 		<spawn x="0" y="1">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="1" y="1">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="2" y="1">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
@@ -16574,6 +16787,9 @@
 		</spawn>
 		<spawn x="10" y="1">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="1">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="12" y="1">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
@@ -16614,17 +16830,35 @@
 		<spawn x="0" y="3">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="6" y="3">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="3">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
 		<spawn x="12" y="3">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="0" y="4">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="1" y="4">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="4">
+			<entity type="15" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="4" y="4">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="7" y="4">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
 		<spawn x="8" y="4">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="4">
+			<entity type="15" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="12" y="4">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
@@ -16656,6 +16890,9 @@
 		<spawn x="4" y="6">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="5" y="6">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
 		<spawn x="8" y="6">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
@@ -16672,11 +16909,17 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45114" name="Callie - Dried - " type="1" subtype="0" shape="2" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45151" name="CVS - Dried - Fatty Fatty Fatty" type="1" subtype="0" shape="2" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-09-12T22:07+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="13" y="3"/>
+		<spawn x="1" y="2">
+			<entity type="161" variant="41" subtype="1" weight="1.0"/>
+		</spawn>
 		<spawn x="2" y="2">
 			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="2">
+			<entity type="161" variant="41" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="5" y="2">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -16690,6 +16933,12 @@
 		<spawn x="8" y="2">
 			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="9" y="2">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="3">
+			<entity type="161" variant="41" subtype="1" weight="1.0"/>
+		</spawn>
 		<spawn x="6" y="3">
 			<entity type="1300" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
@@ -16699,11 +16948,17 @@
 		<spawn x="4" y="4">
 			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="6" y="4">
+			<entity type="208" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="9" y="4">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="12" y="4">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
+		</spawn>
 	</room>
-	<room variant="45115" name="Callie - Dried - " type="1" subtype="0" shape="8" width="26" height="14" difficulty="10" weight="1.0">
+	<room variant="45152" name="CVS - Plier - " type="1" subtype="0" shape="8" width="26" height="14" difficulty="10" weight="1.0" lastTestTime="2024-09-12T22:07+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -17157,7 +17412,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45116" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="0.009999999776482582">
+	<room variant="45153" name="CVS - Dried - WHYYYYYYY" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="0.009999999776482582" lastTestTime="2024-09-12T22:07+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -17213,6 +17468,9 @@
 		<spawn x="2" y="3">
 			<entity type="1300" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="6" y="3">
+			<entity type="100" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="10" y="3">
 			<entity type="1300" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
@@ -17223,11 +17481,17 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45117" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45154" name="CVS - Dried - Woah so very fair" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-09-12T22:07+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
 		<door exists="True" x="13" y="3"/>
+		<spawn x="2" y="0">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="0">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
 		<spawn x="0" y="1">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
@@ -17270,11 +17534,23 @@
 		<spawn x="5" y="2">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="8" y="2">
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="9" y="2">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="10" y="2">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="3">
+			<entity type="226" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="3">
+			<entity type="226" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="3">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
 		</spawn>
 		<spawn x="9" y="3">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -17324,18 +17600,36 @@
 		<spawn x="5" y="5">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="8" y="5">
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="9" y="5">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="10" y="5">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="0" y="6">
+			<entity type="208" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="6">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="6">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
+		</spawn>
 	</room>
-	<room variant="45118" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45155" name="CVS - Dried - GAH pleaselet us back in PLEASEEE" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-09-12T22:07+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
 		<door exists="False" x="13" y="3"/>
+		<spawn x="0" y="0">
+			<entity type="161" variant="21" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="0">
+			<entity type="161" variant="41" subtype="2" weight="1.0"/>
+		</spawn>
 		<spawn x="7" y="0">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
@@ -17363,6 +17657,9 @@
 		<spawn x="4" y="1">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="6" y="1">
+			<entity type="15" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="8" y="1">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
@@ -17386,6 +17683,9 @@
 		</spawn>
 		<spawn x="4" y="2">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="2">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
 		</spawn>
 		<spawn x="8" y="2">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
@@ -17428,6 +17728,9 @@
 		</spawn>
 		<spawn x="12" y="3">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="4">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
 		</spawn>
 		<spawn x="5" y="4">
 			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
@@ -17517,25 +17820,91 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45119" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45156" name="CVS - Dried - Very obviously" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-09-12T22:07+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
 		<door exists="True" x="13" y="3"/>
+		<spawn x="5" y="1">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="2">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="2">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
 		<spawn x="6" y="3">
 			<entity type="161" variant="11" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="8" y="5">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
 	</room>
-	<room variant="45120" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45157" name="CVS - Dried - Not as obviously" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-09-12T22:07+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
 		<door exists="True" x="13" y="3"/>
+		<spawn x="2" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="2">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="2">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="3">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
 		<spawn x="6" y="3">
 			<entity type="161" variant="12" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="8" y="3">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="4">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="4">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
 	</room>
-	<room variant="45121" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45158" name="CVS - Dried - Iced mocha moment" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-09-12T22:07+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -17570,6 +17939,15 @@
 		<spawn x="0" y="1">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="1" y="1">
+			<entity type="16" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="1">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="1">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
 		<spawn x="11" y="1">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
@@ -17579,11 +17957,17 @@
 		<spawn x="0" y="2">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="2" y="2">
+			<entity type="161" variant="21" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="5" y="2">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="6" y="2">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="2">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="9" y="2">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -17606,14 +17990,26 @@
 		<spawn x="6" y="3">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="2" y="4">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
 		<spawn x="4" y="4">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="5" y="4">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="6" y="4">
+			<entity type="161" variant="21" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="4">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="9" y="4">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="5">
+			<entity type="161" variant="21" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="8" y="5">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -17621,12 +18017,24 @@
 		<spawn x="9" y="5">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="10" y="6">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="6">
+			<entity type="16" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
 	</room>
-	<room variant="45122" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45159" name="CVS - Plier - How i expect people to beat this room versus how they actually do it" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-09-12T22:07+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
 		<door exists="True" x="13" y="3"/>
+		<spawn x="1" y="0">
+			<entity type="161" variant="21" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="0">
+			<entity type="161" variant="21" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="1" y="1">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
@@ -17639,8 +18047,14 @@
 		<spawn x="8" y="1">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="7" y="2">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="4" y="3">
 			<entity type="1501" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="3">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="6" y="3">
 			<entity type="1501" variant="0" subtype="0" weight="1.0"/>
@@ -17675,8 +18089,14 @@
 		<spawn x="4" y="6">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="5" y="6">
+			<entity type="284" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="6" y="6">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="6">
+			<entity type="284" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="9" y="6">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -17688,7 +18108,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45123" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45160" name="CVS - Dried - The darkest worm on this side of the cellar" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-09-12T22:07+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -17744,6 +18164,9 @@
 		<spawn x="6" y="1">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="7" y="1">
+			<entity type="161" variant="41" subtype="1" weight="1.0"/>
+		</spawn>
 		<spawn x="0" y="2">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
@@ -17753,17 +18176,32 @@
 		<spawn x="2" y="2">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="5" y="2">
+			<entity type="161" variant="41" subtype="1" weight="1.0"/>
+		</spawn>
 		<spawn x="8" y="2">
 			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="0" y="3">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="3" y="3">
+			<entity type="255" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="0" y="4">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="2" y="4">
 			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="5">
+			<entity type="85" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="5">
+			<entity type="255" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="5">
+			<entity type="161" variant="41" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="2" y="6">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -17784,16 +18222,22 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45124" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="6" weight="1.0">
+	<room variant="45161" name="CVS - Dried - A bit much, eh?" type="1" subtype="0" shape="1" width="13" height="7" difficulty="6" weight="1.0" lastTestTime="2024-09-12T22:07+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
 		<door exists="True" x="13" y="3"/>
+		<spawn x="2" y="1">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="8" y="1">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="9" y="1">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="1">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
 		</spawn>
 		<spawn x="3" y="2">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
@@ -17822,11 +18266,17 @@
 		<spawn x="9" y="3">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="10" y="3">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="0" y="4">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="1" y="4">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="4">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
 		</spawn>
 		<spawn x="11" y="4">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -17883,14 +18333,17 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45125" name="Callie - Dried - " type="1" subtype="0" shape="5" width="13" height="14" difficulty="5" weight="1.0">
-		<door exists="False" x="6" y="-1"/>
+	<room variant="45162" name="CVS - Dried - No where to run, time for some fun" type="1" subtype="0" shape="5" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2024-09-12T22:07+00:00">
+		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="14"/>
 		<spawn x="4" y="0">
 			<entity type="1901" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="5" y="0">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="0">
+			<entity type="161" variant="41" subtype="2" weight="1.0"/>
 		</spawn>
 		<spawn x="7" y="0">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
@@ -17904,6 +18357,9 @@
 		<spawn x="5" y="1">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="6" y="1">
+			<entity type="161" variant="41" subtype="2" weight="1.0"/>
+		</spawn>
 		<spawn x="7" y="1">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
@@ -17915,6 +18371,9 @@
 		</spawn>
 		<spawn x="5" y="2">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="2">
+			<entity type="161" variant="41" subtype="2" weight="1.0"/>
 		</spawn>
 		<spawn x="7" y="2">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
@@ -17928,6 +18387,9 @@
 		<spawn x="5" y="3">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="6" y="3">
+			<entity type="161" variant="41" subtype="2" weight="1.0"/>
+		</spawn>
 		<spawn x="7" y="3">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
@@ -17939,6 +18401,9 @@
 		</spawn>
 		<spawn x="5" y="4">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="4">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="7" y="4">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
@@ -17967,6 +18432,9 @@
 		<spawn x="5" y="6">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="6" y="6">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="7" y="6">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
@@ -17978,6 +18446,9 @@
 		</spawn>
 		<spawn x="5" y="7">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="7">
+			<entity type="161" variant="41" subtype="2" weight="1.0"/>
 		</spawn>
 		<spawn x="7" y="7">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
@@ -17991,6 +18462,9 @@
 		<spawn x="5" y="8">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="6" y="8">
+			<entity type="161" variant="41" subtype="2" weight="1.0"/>
+		</spawn>
 		<spawn x="7" y="8">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
@@ -18002,6 +18476,9 @@
 		</spawn>
 		<spawn x="5" y="9">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="9">
+			<entity type="161" variant="41" subtype="2" weight="1.0"/>
 		</spawn>
 		<spawn x="7" y="9">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
@@ -18015,6 +18492,9 @@
 		<spawn x="5" y="10">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="6" y="10">
+			<entity type="161" variant="41" subtype="2" weight="1.0"/>
+		</spawn>
 		<spawn x="7" y="10">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
@@ -18026,6 +18506,9 @@
 		</spawn>
 		<spawn x="5" y="11">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="11">
+			<entity type="161" variant="41" subtype="2" weight="1.0"/>
 		</spawn>
 		<spawn x="7" y="11">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
@@ -18039,6 +18522,9 @@
 		<spawn x="5" y="12">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="6" y="12">
+			<entity type="161" variant="41" subtype="2" weight="1.0"/>
+		</spawn>
 		<spawn x="7" y="12">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
@@ -18051,6 +18537,9 @@
 		<spawn x="5" y="13">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="6" y="13">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
 		<spawn x="7" y="13">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
@@ -18058,11 +18547,23 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45126" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="6" weight="1.0">
+	<room variant="45163" name="CVS - Dried - Horded" type="1" subtype="0" shape="1" width="13" height="7" difficulty="6" weight="1.0" lastTestTime="2024-09-12T22:07+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
 		<door exists="False" x="13" y="3"/>
+		<spawn x="1" y="0">
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="0">
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="0">
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="0">
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="9" y="0">
 			<entity type="1009" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
@@ -18074,6 +18575,12 @@
 		</spawn>
 		<spawn x="12" y="0">
 			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="1">
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="1">
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="8" y="1">
 			<entity type="969" variant="9" subtype="0" weight="1.0"/>
@@ -18089,6 +18596,12 @@
 		</spawn>
 		<spawn x="12" y="1">
 			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="2">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="2">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="9" y="2">
 			<entity type="1009" variant="0" subtype="0" weight="1.0"/>
@@ -18114,6 +18627,9 @@
 		<spawn x="12" y="3">
 			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="4" y="4">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
 		<spawn x="9" y="4">
 			<entity type="1009" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
@@ -18125,6 +18641,9 @@
 		</spawn>
 		<spawn x="12" y="4">
 			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="5">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="9" y="5">
 			<entity type="1009" variant="0" subtype="0" weight="1.0"/>
@@ -18151,7 +18670,7 @@
 			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45127" name="Callie - Dried - " type="1" subtype="0" shape="8" width="26" height="14" difficulty="5" weight="1.0">
+	<room variant="45164" name="CVS - Dried - Wave np. 2 is MUCH harder, I'll gve you that" type="1" subtype="0" shape="8" width="26" height="14" difficulty="5" weight="1.0" lastTestTime="2024-09-12T22:07+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -18160,8 +18679,20 @@
 		<door exists="True" x="19" y="14"/>
 		<door exists="True" x="26" y="3"/>
 		<door exists="True" x="26" y="10"/>
+		<spawn x="9" y="1">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="1">
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="21" y="1">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
 		<spawn x="2" y="2">
 			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="2">
+			<entity type="161" variant="21" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="6" y="2">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -18202,11 +18733,23 @@
 		<spawn x="20" y="3">
 			<entity type="969" variant="9" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="1" y="4">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="4">
+			<entity type="161" variant="21" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="6" y="4">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="7" y="4">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="4">
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="4">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
 		</spawn>
 		<spawn x="14" y="4">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -18216,6 +18759,9 @@
 		</spawn>
 		<spawn x="18" y="4">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="20" y="4">
+			<entity type="255" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="5" y="5">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -18231,6 +18777,9 @@
 		</spawn>
 		<spawn x="14" y="5">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="15" y="5">
+			<entity type="207" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="18" y="5">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -18259,6 +18808,12 @@
 		<spawn x="16" y="6">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="1" y="7">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="7">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
 		<spawn x="10" y="7">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
@@ -18277,6 +18832,9 @@
 		<spawn x="19" y="7">
 			<entity type="969" variant="9" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="20" y="7">
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="10" y="8">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
@@ -18288,6 +18846,18 @@
 		</spawn>
 		<spawn x="18" y="8">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="19" y="8">
+			<entity type="161" variant="12" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="23" y="8">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="9">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="9">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="9" y="9">
 			<entity type="969" variant="9" subtype="0" weight="1.0"/>
@@ -18319,8 +18889,14 @@
 		<spawn x="10" y="10">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="16" y="10">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
 		<spawn x="19" y="10">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="11">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="7" y="11">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -18331,6 +18907,9 @@
 		<spawn x="9" y="11">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="13" y="11">
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="2" y="12">
 			<entity type="33" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
@@ -18339,6 +18918,9 @@
 		</spawn>
 		<spawn x="7" y="12">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="12">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
 		</spawn>
 		<spawn x="23" y="12">
 			<entity type="33" variant="0" subtype="0" weight="1.0"/>
@@ -18350,13 +18932,22 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45128" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="6" weight="1.0">
+	<room variant="45165" name="CVS - Dried - Racism is so real in the cellar what" type="1" subtype="0" shape="1" width="13" height="7" difficulty="6" weight="1.0" lastTestTime="2024-09-12T22:07+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
 		<door exists="True" x="13" y="3"/>
+		<spawn x="10" y="0">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
 		<spawn x="3" y="1">
 			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="2">
+			<entity type="88" variant="2" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="2">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
 		</spawn>
 		<spawn x="9" y="2">
 			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
@@ -18372,6 +18963,15 @@
 		</spawn>
 		<spawn x="4" y="3">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="3">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="3">
+			<entity type="206" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="3">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="8" y="3">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -18397,14 +18997,23 @@
 		<spawn x="7" y="4">
 			<entity type="969" variant="9" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="11" y="4">
+			<entity type="88" variant="2" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="5">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
 		<spawn x="1" y="6">
 			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="6">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
 		</spawn>
 		<spawn x="10" y="6">
 			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45129" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="6" weight="1.0">
+	<room variant="45166" name="CVS - Dried - Anither horde" type="1" subtype="0" shape="1" width="13" height="7" difficulty="6" weight="1.0" lastTestTime="2024-09-12T22:07+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -18448,6 +19057,12 @@
 		<spawn x="12" y="0">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="2" y="2">
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="2">
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="6" y="2">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
@@ -18457,11 +19072,23 @@
 		<spawn x="8" y="2">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="9" y="2">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="3">
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="3">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
 		<spawn x="8" y="3">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="9" y="3">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="4">
+			<entity type="207" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="8" y="4">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -18474,6 +19101,9 @@
 		</spawn>
 		<spawn x="1" y="5">
 			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="5">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
 		</spawn>
 		<spawn x="8" y="5">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -18503,7 +19133,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45130" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45167" name="CVS - Plier - Big boy guns" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-09-12T22:07+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -18517,17 +19147,50 @@
 		<spawn x="2" y="2">
 			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="3" y="2">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="2">
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="2">
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="2">
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="10" y="2">
 			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="2" y="3">
 			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="5" y="3">
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="3">
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="3">
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="10" y="3">
 			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="2" y="4">
 			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="4">
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="4">
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="4">
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="4">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="10" y="4">
 			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
@@ -18539,7 +19202,7 @@
 			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45131" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45168" name="CVS - Dried - Really playing with all or cards, are we" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-09-12T22:07+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -18565,14 +19228,32 @@
 		<spawn x="1" y="1">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="2" y="1">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
 		<spawn x="8" y="1">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="9" y="1">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="10" y="1">
+			<entity type="161" variant="21" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="0" y="2">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="2">
+			<entity type="161" variant="12" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="2">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="2">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="2">
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="8" y="2">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
@@ -18604,6 +19285,12 @@
 		<spawn x="0" y="4">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="1" y="4">
+			<entity type="161" variant="12" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="4">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="7" y="4">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
@@ -18622,6 +19309,9 @@
 		<spawn x="1" y="5">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="2" y="5">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
 		<spawn x="7" y="5">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
@@ -18630,6 +19320,12 @@
 		</spawn>
 		<spawn x="9" y="5">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="5">
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="5">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
 		</spawn>
 		<spawn x="0" y="6">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -18650,7 +19346,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45132" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45169" name="CVS - Dried - Float my boat" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-09-12T22:07+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -18658,20 +19354,44 @@
 		<spawn x="12" y="0">
 			<entity type="1009" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="1" y="1">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="1">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="1">
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="11" y="1">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="12" y="1">
 			<entity type="1009" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="3" y="2">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="2">
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="2">
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="10" y="2">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="11" y="2">
-			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="12" y="2">
 			<entity type="969" variant="9" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="3">
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="3">
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="7" y="3">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -18681,6 +19401,9 @@
 		</spawn>
 		<spawn x="9" y="3">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="4">
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="4" y="4">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -18700,6 +19423,9 @@
 		<spawn x="3" y="5">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="8" y="5">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
 		<spawn x="0" y="6">
 			<entity type="1009" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
@@ -18709,8 +19435,11 @@
 		<spawn x="2" y="6">
 			<entity type="969" variant="9" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="3" y="6">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
+		</spawn>
 	</room>
-	<room variant="45133" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45170" name="CVS - Dried - Neutral about the situation" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-09-12T22:07+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -18723,9 +19452,6 @@
 		</spawn>
 		<spawn x="2" y="0">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
-		</spawn>
-		<spawn x="3" y="0">
-			<entity type="33" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="10" y="0">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
@@ -18742,6 +19468,12 @@
 		<spawn x="1" y="1">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="2" y="1">
+			<entity type="161" variant="21" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="1">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
 		<spawn x="11" y="1">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
@@ -18754,8 +19486,14 @@
 		<spawn x="1" y="2">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="4" y="2">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
 		<spawn x="8" y="2">
 			<entity type="1901" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="2">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
 		</spawn>
 		<spawn x="11" y="2">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
@@ -18768,6 +19506,15 @@
 		</spawn>
 		<spawn x="1" y="3">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="3">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="3">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="3">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
 		</spawn>
 		<spawn x="11" y="3">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
@@ -18784,6 +19531,9 @@
 		<spawn x="4" y="4">
 			<entity type="1901" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="8" y="4">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
 		<spawn x="11" y="4">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
@@ -18796,8 +19546,14 @@
 		<spawn x="1" y="5">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="2" y="5">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="5">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
 		<spawn x="10" y="5">
-			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="161" variant="21" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="11" y="5">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
@@ -18824,7 +19580,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45134" name="Callie - Dried - " type="1" subtype="0" shape="8" width="26" height="14" difficulty="10" weight="1.0">
+	<room variant="45171" name="CVS - Dried - Is this a joke about uh the uh race car" type="1" subtype="0" shape="8" width="26" height="14" difficulty="10" weight="1.0" lastTestTime="2024-09-12T22:07+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -18836,14 +19592,38 @@
 		<spawn x="9" y="1">
 			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="14" y="1">
+			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="15" y="2">
 			<entity type="4500" variant="13" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="21" y="2">
 			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="4" y="3">
+			<entity type="161" variant="41" subtype="2" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="3">
+			<entity type="161" variant="41" subtype="2" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="3">
+			<entity type="88" variant="2" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="3">
+			<entity type="161" variant="41" subtype="2" weight="1.0"/>
+		</spawn>
 		<spawn x="13" y="3">
-			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
+			<entity type="161" variant="41" subtype="2" weight="1.0"/>
+		</spawn>
+		<spawn x="15" y="3">
+			<entity type="88" variant="2" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="16" y="3">
+			<entity type="161" variant="41" subtype="2" weight="1.0"/>
+		</spawn>
+		<spawn x="19" y="3">
+			<entity type="161" variant="41" subtype="2" weight="1.0"/>
 		</spawn>
 		<spawn x="4" y="4">
 			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
@@ -19019,6 +19799,24 @@
 		<spawn x="13" y="8">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="20" y="8">
+			<entity type="206" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="21" y="8">
+			<entity type="161" variant="41" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="9">
+			<entity type="161" variant="41" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="9">
+			<entity type="206" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="9">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="9">
+			<entity type="161" variant="41" subtype="1" weight="1.0"/>
+		</spawn>
 		<spawn x="11" y="9">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
@@ -19027,6 +19825,9 @@
 		</spawn>
 		<spawn x="13" y="9">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="14" y="9">
+			<entity type="161" variant="41" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="20" y="9">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
@@ -19055,6 +19856,15 @@
 		<spawn x="13" y="10">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="14" y="10">
+			<entity type="206" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="17" y="10">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="19" y="10">
+			<entity type="161" variant="41" subtype="1" weight="1.0"/>
+		</spawn>
 		<spawn x="20" y="10">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
@@ -19063,6 +19873,12 @@
 		</spawn>
 		<spawn x="22" y="10">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="23" y="10">
+			<entity type="161" variant="41" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="11">
+			<entity type="161" variant="41" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="3" y="11">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
@@ -19073,8 +19889,14 @@
 		<spawn x="5" y="11">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="6" y="11">
+			<entity type="161" variant="41" subtype="1" weight="1.0"/>
+		</spawn>
 		<spawn x="8" y="11">
 			<entity type="4500" variant="13" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="11">
+			<entity type="161" variant="41" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="20" y="11">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
@@ -19094,8 +19916,17 @@
 		<spawn x="5" y="12">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="11" y="12">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="21" y="12">
+			<entity type="161" variant="41" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="13">
+			<entity type="161" variant="41" subtype="1" weight="1.0"/>
+		</spawn>
 	</room>
-	<room variant="45135" name="Callie - Dried - " type="1" subtype="0" shape="6" width="26" height="7" difficulty="5" weight="1.0">
+	<room variant="45172" name="CVS - Dried - Fun room CVS" type="1" subtype="0" shape="6" width="26" height="7" difficulty="5" weight="1.0" lastTestTime="2024-09-12T22:07+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -19110,6 +19941,12 @@
 		</spawn>
 		<spawn x="2" y="0">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="18" y="0">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
+		<spawn x="22" y="0">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="23" y="0">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -19129,6 +19966,21 @@
 		<spawn x="2" y="1">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="7" y="1">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="1">
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="1">
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="13" y="1">
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="14" y="1">
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="23" y="1">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
@@ -19147,17 +19999,29 @@
 		<spawn x="2" y="2">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="3" y="2">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
 		<spawn x="7" y="2">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="8" y="2">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="9" y="2">
+			<entity type="161" variant="21" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="16" y="2">
+			<entity type="161" variant="21" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="17" y="2">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="18" y="2">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="22" y="2">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
 		</spawn>
 		<spawn x="23" y="2">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -19179,6 +20043,9 @@
 		</spawn>
 		<spawn x="3" y="3">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="3">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="7" y="3">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -19216,6 +20083,9 @@
 		<spawn x="18" y="3">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="20" y="3">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
 		<spawn x="22" y="3">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
@@ -19239,6 +20109,9 @@
 		</spawn>
 		<spawn x="3" y="4">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="4">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
 		</spawn>
 		<spawn x="7" y="4">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -19445,18 +20318,27 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45136" name="Callie - Dried - " type="1" subtype="0" shape="6" width="26" height="7" difficulty="5" weight="1.0">
+	<room variant="45173" name="CVS - Plier - Gimme like 2 minutes ill be outta here" type="1" subtype="0" shape="6" width="26" height="7" difficulty="5" weight="1.0" lastTestTime="2024-09-12T22:07+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
 		<door exists="True" x="19" y="-1"/>
 		<door exists="True" x="19" y="7"/>
 		<door exists="True" x="26" y="3"/>
+		<spawn x="12" y="0">
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="13" y="0">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="14" y="0">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="1">
+			<entity type="161" variant="21" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="1">
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="12" y="1">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -19467,6 +20349,18 @@
 		<spawn x="14" y="1">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="18" y="1">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="2">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="2">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="2">
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="12" y="2">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
@@ -19475,6 +20369,12 @@
 		</spawn>
 		<spawn x="14" y="2">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="20" y="2">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="3">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
 		</spawn>
 		<spawn x="11" y="3">
 			<entity type="1300" variant="0" subtype="0" weight="1.0"/>
@@ -19488,6 +20388,9 @@
 		<spawn x="14" y="3">
 			<entity type="1300" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="8" y="4">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
 		<spawn x="11" y="4">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
@@ -19496,6 +20399,18 @@
 		</spawn>
 		<spawn x="13" y="4">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="14" y="4">
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="17" y="4">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
+		<spawn x="24" y="4">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="5">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="11" y="5">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -19506,14 +20421,26 @@
 		<spawn x="13" y="5">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="14" y="5">
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="15" y="5">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="24" y="5">
+			<entity type="161" variant="21" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="11" y="6">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="12" y="6">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="13" y="6">
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
+		</spawn>
 	</room>
-	<room variant="45137" name="Callie - Dried - " type="1" subtype="0" shape="6" width="26" height="7" difficulty="6" weight="1.0">
+	<room variant="45174" name="CVS - Plier - Gay people" type="1" subtype="0" shape="6" width="26" height="7" difficulty="6" weight="1.0" lastTestTime="2024-09-12T22:07+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -19685,6 +20612,21 @@
 		<spawn x="2" y="2">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="4" y="2">
+			<entity type="284" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="15" y="2">
+			<entity type="284" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="18" y="2">
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="19" y="2">
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="20" y="2">
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="25" y="2">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
@@ -19697,6 +20639,24 @@
 		<spawn x="2" y="3">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="11" y="3">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="3">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="15" y="3">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="19" y="3">
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="20" y="3">
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="21" y="3">
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="0" y="4">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
@@ -19708,6 +20668,12 @@
 		</spawn>
 		<spawn x="3" y="4">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="4">
+			<entity type="284" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="20" y="4">
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="0" y="5">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -19755,7 +20721,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45138" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0">
+	<room variant="45175" name="CVS - Plier - It's not new, I've read this one" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0" lastTestTime="2024-09-12T22:07+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -19787,8 +20753,23 @@
 		<spawn x="0" y="1">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="1" y="1">
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="1">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="1">
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="12" y="1">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="2">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="2">
+			<entity type="161" variant="12" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="5" y="2">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -19798,6 +20779,9 @@
 		</spawn>
 		<spawn x="7" y="2">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="2">
+			<entity type="161" variant="12" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="3" y="3">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -19824,7 +20808,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="3" y="4">
-			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
 		</spawn>
 		<spawn x="4" y="4">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -19862,6 +20846,9 @@
 		<spawn x="7" y="5">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="8" y="5">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="11" y="5">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
@@ -19874,6 +20861,9 @@
 		<spawn x="1" y="6">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="4" y="6">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="5" y="6">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
@@ -19883,6 +20873,9 @@
 		<spawn x="7" y="6">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="9" y="6">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
 		<spawn x="11" y="6">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
@@ -19890,7 +20883,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45139" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="6" weight="1.0">
+	<room variant="45176" name="CVS - Plier - Theres a bug in my boot" type="1" subtype="0" shape="1" width="13" height="7" difficulty="6" weight="1.0" lastTestTime="2024-09-12T22:07+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -19898,17 +20891,53 @@
 		<spawn x="0" y="0">
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="8" y="0">
+			<entity type="206" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="12" y="0">
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="0" y="2">
+			<entity type="61" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="3">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="3">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="4">
+			<entity type="61" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="0" y="6">
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="6">
+			<entity type="206" variant="1" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="12" y="6">
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45140" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45177" name="CVS - Plier - This way home" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-09-12T22:07+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -19937,11 +20966,20 @@
 		<spawn x="1" y="2">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="3" y="2">
+			<entity type="16" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="6" y="3">
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="9" y="3">
+			<entity type="161" variant="21" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="12" y="4">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="5">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="10" y="5">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -19951,6 +20989,12 @@
 		</spawn>
 		<spawn x="12" y="5">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="6">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="6">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="9" y="6">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -19965,7 +21009,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45141" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45178" name="CVS - Plier - I'll save the world with my redeemers" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -20009,6 +21053,9 @@
 		<spawn x="3" y="2">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="5" y="2">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="6" y="2">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
@@ -20017,6 +21064,9 @@
 		</spawn>
 		<spawn x="8" y="2">
 			<entity type="1300" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="2">
+			<entity type="88" variant="2" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="10" y="2">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
@@ -20036,6 +21086,9 @@
 		<spawn x="4" y="3">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="5" y="3">
+			<entity type="88" variant="2" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="6" y="3">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
@@ -20047,6 +21100,9 @@
 		</spawn>
 		<spawn x="1" y="4">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="4">
+			<entity type="88" variant="2" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="4" y="4">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -20062,6 +21118,9 @@
 		</spawn>
 		<spawn x="8" y="4">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="4">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="11" y="4">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
@@ -20097,7 +21156,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45142" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="6" weight="1.0">
+	<room variant="45179" name="CVS - Plier - More of feeling.. TO BECOME TYRANNICAL" type="1" subtype="0" shape="1" width="13" height="7" difficulty="6" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -20138,8 +21197,17 @@
 		<spawn x="12" y="1">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="1" y="2">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="2" y="2">
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="2">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="3">
+			<entity type="226" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="6" y="3">
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
@@ -20147,11 +21215,20 @@
 		<spawn x="7" y="3">
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="8" y="3">
+			<entity type="226" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="12" y="3">
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="0" y="4">
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="4">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="4">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="0" y="5">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -20202,18 +21279,30 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45143" name="Callie - Dried - " type="1" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+	<room variant="45180" name="CVS - Plier - Got the fbi surrounded" type="1" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="14"/>
 		<door exists="True" x="13" y="3"/>
 		<door exists="True" x="13" y="10"/>
+		<spawn x="1" y="1">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="2">
+			<entity type="161" variant="21" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="2">
+			<entity type="161" variant="21" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="3" y="4">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="4" y="4">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="4">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="8" y="4">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -20221,11 +21310,17 @@
 		<spawn x="9" y="4">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="12" y="4">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
 		<spawn x="3" y="5">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="4" y="5">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="5">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="8" y="5">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -20248,11 +21343,17 @@
 		<spawn x="9" y="6">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="1" y="7">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
 		<spawn x="3" y="7">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="4" y="7">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="7">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="8" y="7">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -20266,18 +21367,48 @@
 		<spawn x="4" y="8">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="7" y="8">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="8" y="8">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="9" y="8">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="6" y="9">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="10">
+			<entity type="161" variant="21" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="10">
+			<entity type="161" variant="21" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="12">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="13">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
 	</room>
-	<room variant="45144" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45181" name="CVS - Plier - Aw shucks, spooders, flies, and now floaters too" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
 		<door exists="True" x="13" y="3"/>
+		<spawn x="0" y="0">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="0">
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="0">
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="0">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="0" y="1">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
@@ -20343,6 +21474,12 @@
 		</spawn>
 		<spawn x="12" y="2">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="3">
+			<entity type="206" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="3">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="6" y="3">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
@@ -20428,8 +21565,17 @@
 		<spawn x="12" y="5">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="0" y="6">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="6">
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="6">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
+		</spawn>
 	</room>
-	<room variant="45145" name="Callie - Dried - " type="1" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+	<room variant="45182" name="CVS - Plier - Lazy" type="1" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -20439,39 +21585,93 @@
 		<spawn x="3" y="2">
 			<entity type="292" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="8" y="2">
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="9" y="2">
 			<entity type="1901" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="3">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="5">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="4" y="5">
 			<entity type="1901" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="5" y="5">
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="8">
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="8">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="3" y="9">
 			<entity type="1901" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="9">
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="9" y="10">
 			<entity type="1901" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="5" y="11">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
+		</spawn>
 	</room>
-	<room variant="45146" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="0.5">
+	<room variant="45183" name="CVS - Plier - TV time" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="0.5">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
 		<door exists="True" x="13" y="3"/>
+		<spawn x="4" y="0">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
 		<spawn x="6" y="0">
 			<entity type="960" variant="4" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="0">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="3">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="6" y="3">
 			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="8" y="3">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="6">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
 		<spawn x="6" y="6">
 			<entity type="960" variant="3" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="9" y="6">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
 	</room>
-	<room variant="45147" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="0.5">
+	<room variant="45184" name="CVS - Plier - Dried to the bomb" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="0.5">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
 		<door exists="True" x="13" y="3"/>
+		<spawn x="0" y="0">
+			<entity type="208" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="0">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="0">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="0">
+			<entity type="208" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="0" y="1">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
@@ -20496,11 +21696,113 @@
 		<spawn x="12" y="1">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
-		<spawn x="6" y="2">
-			<entity type="970" variant="1" subtype="11" weight="1.0"/>
+		<spawn x="0" y="2">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="2">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="2">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="2">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="2">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="2">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="2">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="2">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="3">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="4">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="4">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="4">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="4">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="5">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="5">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="5">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="5">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="5">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="5">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="5">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="6">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="6">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45148" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45185" name="CVS - Plier - Mishmash" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -20544,6 +21846,9 @@
 		<spawn x="12" y="0">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="1" y="1">
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="2" y="1">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
@@ -20571,14 +21876,26 @@
 		<spawn x="10" y="1">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="3" y="2">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="4" y="2">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="2">
+			<entity type="161" variant="21" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="2">
+			<entity type="161" variant="21" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="8" y="2">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="2" y="3">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="3">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="10" y="3">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -20595,14 +21912,26 @@
 		<spawn x="6" y="4">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="7" y="4">
+			<entity type="161" variant="12" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="8" y="4">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="9" y="4">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="11" y="4">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="5">
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="6">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
 	</room>
-	<room variant="45149" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="6" weight="1.0">
+	<room variant="45186" name="CVS - Plier - Over the waterfall of blood and through the roof" type="1" subtype="0" shape="1" width="13" height="7" difficulty="6" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -20619,6 +21948,9 @@
 		<spawn x="12" y="0">
 			<entity type="33" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="1" y="1">
+			<entity type="161" variant="41" subtype="1" weight="1.0"/>
+		</spawn>
 		<spawn x="4" y="1">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
@@ -20633,6 +21965,33 @@
 		</spawn>
 		<spawn x="8" y="1">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="1">
+			<entity type="161" variant="41" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="2">
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="2">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="2">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="3">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="4">
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="4">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="4">
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="5">
+			<entity type="161" variant="41" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="4" y="5">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -20649,6 +22008,9 @@
 		<spawn x="8" y="5">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="11" y="5">
+			<entity type="161" variant="41" subtype="1" weight="1.0"/>
+		</spawn>
 		<spawn x="0" y="6">
 			<entity type="33" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
@@ -20662,7 +22024,7 @@
 			<entity type="33" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45150" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45187" name="CVS - Plier - Splitter but not the way you'd expect" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -20684,11 +22046,20 @@
 		<spawn x="8" y="2">
 			<entity type="969" variant="9" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="9" y="2">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="5" y="3">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="6" y="3">
+			<entity type="206" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="7" y="3">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="4">
+			<entity type="161" variant="21" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="6" y="4">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
@@ -20708,7 +22079,7 @@
 			<entity type="33" variant="1" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45151" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45188" name="CVS - Plier - GUH unfair room moment" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -20721,6 +22092,9 @@
 		</spawn>
 		<spawn x="5" y="0">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="0">
+			<entity type="206" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="9" y="0">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -20768,8 +22142,14 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="2" y="2">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="3" y="2">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="2">
+			<entity type="206" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="7" y="2">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -20798,6 +22178,9 @@
 		</spawn>
 		<spawn x="7" y="3">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="3">
+			<entity type="206" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="11" y="3">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -20829,6 +22212,9 @@
 		<spawn x="1" y="5">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="5">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="7" y="5">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -20874,9 +22260,12 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45152" name="Callie - Dried - " type="1" subtype="0" shape="2" width="13" height="7" difficulty="6" weight="1.0">
+	<room variant="45189" name="CVS - Plier - CYnops" type="1" subtype="0" shape="2" width="13" height="7" difficulty="6" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="13" y="3"/>
+		<spawn x="5" y="2">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="6" y="2">
 			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
@@ -20892,11 +22281,20 @@
 		<spawn x="6" y="3">
 			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="7" y="3">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="9" y="3">
 			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="10" y="3">
+			<entity type="284" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="11" y="3">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="4">
+			<entity type="284" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="3" y="4">
 			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
@@ -20908,7 +22306,7 @@
 			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45153" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="6" weight="1.0">
+	<room variant="45190" name="CVS - Plier - Hey thats plain rude" type="1" subtype="0" shape="1" width="13" height="7" difficulty="6" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -20931,6 +22329,9 @@
 		<spawn x="12" y="0">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="2" y="1">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="6" y="1">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
@@ -20949,6 +22350,15 @@
 		<spawn x="2" y="3">
 			<entity type="1930" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="5" y="3">
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="3">
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="3">
+			<entity type="161" variant="11" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="10" y="3">
 			<entity type="1930" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
@@ -20966,6 +22376,9 @@
 		</spawn>
 		<spawn x="6" y="5">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="5">
+			<entity type="161" variant="42" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="0" y="6">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -20986,7 +22399,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45154" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="6" weight="1.0">
+	<room variant="45191" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="6" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -21148,7 +22561,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45155" name="Callie - Dried - " type="1" subtype="0" shape="2" width="13" height="7" difficulty="6" weight="1.0">
+	<room variant="45192" name="CVS - Plier - " type="1" subtype="0" shape="2" width="13" height="7" difficulty="6" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="13" y="3"/>
 		<spawn x="0" y="2">
@@ -21194,7 +22607,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45156" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="9" weight="1.0">
+	<room variant="45193" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="9" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -21359,7 +22772,7 @@
 			<entity type="1931" variant="5" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45157" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45194" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -21428,7 +22841,7 @@
 			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45158" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45195" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -21548,7 +22961,7 @@
 			<entity type="1931" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45159" name="Callie - Dried - " type="1" subtype="0" shape="2" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45196" name="CVS - Plier - " type="1" subtype="0" shape="2" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="13" y="3"/>
 		<spawn x="0" y="2">
@@ -21642,7 +23055,7 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45160" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45197" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -21759,7 +23172,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45161" name="Callie - Dried - " type="1" subtype="0" shape="3" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45198" name="CVS - Plier - " type="1" subtype="0" shape="3" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="False" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
 		<spawn x="4" y="0">
@@ -21809,7 +23222,7 @@
 			<entity type="1495" variant="0" subtype="1" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45162" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45199" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -21914,7 +23327,7 @@
 			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45163" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45200" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -22019,7 +23432,7 @@
 			<entity type="5" variant="0" subtype="2" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45164" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45201" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -22133,7 +23546,7 @@
 			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45165" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45202" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -22250,7 +23663,7 @@
 			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45166" name="Callie - Dried - " type="1" subtype="0" shape="3" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45203" name="CVS - Plier - " type="1" subtype="0" shape="3" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="False" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
 		<spawn x="4" y="0">
@@ -22281,7 +23694,7 @@
 			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45167" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45204" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -22472,7 +23885,7 @@
 			<entity type="218" variant="0" subtype="2" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45168" name="Callie - Dried - " type="1" subtype="0" shape="7" width="26" height="7" difficulty="5" weight="1.0">
+	<room variant="45205" name="CVS - Plier - " type="1" subtype="0" shape="7" width="26" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="26" y="3"/>
 		<spawn x="1" y="2">
@@ -22575,7 +23988,7 @@
 			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45169" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45206" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -22693,7 +24106,7 @@
 			<entity type="33" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45170" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45207" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -22927,7 +24340,7 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45171" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45208" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -22999,7 +24412,7 @@
 			<entity type="1495" variant="0" subtype="1" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45172" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45209" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -23071,7 +24484,7 @@
 			<entity type="1931" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45173" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45210" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -23113,7 +24526,7 @@
 			<entity type="33" variant="1" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45174" name="Callie - Dried - " type="1" subtype="0" shape="3" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45211" name="CVS - Plier - " type="1" subtype="0" shape="3" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
 		<spawn x="4" y="0">
@@ -23147,7 +24560,7 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45175" name="Callie - Dried - " type="1" subtype="0" shape="3" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45212" name="CVS - Plier - " type="1" subtype="0" shape="3" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
 		<spawn x="4" y="0">
@@ -23205,7 +24618,7 @@
 			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45176" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45213" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -23313,7 +24726,7 @@
 			<entity type="4500" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45177" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45214" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -23466,7 +24879,7 @@
 			<entity type="1009" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45178" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45215" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -23541,7 +24954,7 @@
 			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45179" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45216" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -23622,7 +25035,7 @@
 			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45180" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45217" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -23703,7 +25116,7 @@
 			<entity type="5" variant="70" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45181" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45218" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -23766,7 +25179,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45182" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45219" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -23829,7 +25242,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45183" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45220" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -23937,7 +25350,7 @@
 			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45184" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45221" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -24081,7 +25494,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45185" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45222" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -24165,7 +25578,7 @@
 			<entity type="33" variant="1" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45186" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45223" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -24232,7 +25645,7 @@
 			<entity type="1495" variant="0" subtype="1" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45187" name="Callie - Dried - " type="1" subtype="0" shape="5" width="13" height="14" difficulty="5" weight="1.0">
+	<room variant="45224" name="CVS - Plier - " type="1" subtype="0" shape="5" width="13" height="14" difficulty="5" weight="1.0">
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="14"/>
 		<spawn x="4" y="0">
@@ -24290,7 +25703,7 @@
 			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45188" name="Callie - Dried - " type="1" subtype="0" shape="5" width="13" height="14" difficulty="5" weight="1.0">
+	<room variant="45225" name="CVS - Plier - " type="1" subtype="0" shape="5" width="13" height="14" difficulty="5" weight="1.0">
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="14"/>
 		<spawn x="4" y="0">
@@ -24342,7 +25755,7 @@
 			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45189" name="Callie - Dried - " type="1" subtype="0" shape="2" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45226" name="CVS - Plier - " type="1" subtype="0" shape="2" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="13" y="3"/>
 		<spawn x="0" y="2">
@@ -24415,7 +25828,7 @@
 			<entity type="5" variant="50" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45190" name="Callie - Dried - " type="1" subtype="0" shape="2" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45227" name="CVS - Plier - " type="1" subtype="0" shape="2" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="13" y="3"/>
 		<spawn x="0" y="2">
@@ -24473,7 +25886,7 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45191" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45228" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -24608,7 +26021,7 @@
 			<entity type="5" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45192" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45229" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -24656,7 +26069,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45193" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45230" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -24683,7 +26096,7 @@
 			<entity type="33" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45194" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45231" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -24710,7 +26123,7 @@
 			<entity type="33" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45195" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45232" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -24815,7 +26228,7 @@
 			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45196" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45233" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -24920,7 +26333,7 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45197" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45234" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -25004,7 +26417,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45198" name="Callie - Dried - " type="1" subtype="0" shape="5" width="13" height="14" difficulty="5" weight="1.0">
+	<room variant="45235" name="CVS - Plier - " type="1" subtype="0" shape="5" width="13" height="14" difficulty="5" weight="1.0">
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="14"/>
 		<spawn x="4" y="0">
@@ -25080,7 +26493,7 @@
 			<entity type="33" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45199" name="Callie - Dried - " type="1" subtype="0" shape="3" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45236" name="CVS - Plier - " type="1" subtype="0" shape="3" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
 		<spawn x="5" y="0">
@@ -25126,7 +26539,7 @@
 			<entity type="1931" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45200" name="Callie - Dried - " type="1" subtype="0" shape="2" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45237" name="CVS - Plier - " type="1" subtype="0" shape="2" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="13" y="3"/>
 		<spawn x="0" y="2">
@@ -25184,7 +26597,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45201" name="Callie - Dried - " type="1" subtype="0" shape="2" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45238" name="CVS - Plier - " type="1" subtype="0" shape="2" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="13" y="3"/>
 		<spawn x="1" y="2">
@@ -25224,7 +26637,7 @@
 			<entity type="33" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45202" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45239" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -25287,7 +26700,7 @@
 			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45203" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45240" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -25350,7 +26763,7 @@
 			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45204" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45241" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -25443,7 +26856,7 @@
 			<entity type="33" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45205" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45242" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -25536,7 +26949,7 @@
 			<entity type="33" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45206" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45243" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -25674,7 +27087,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45207" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45244" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -25779,7 +27192,7 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45208" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45245" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -25887,7 +27300,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45209" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45246" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -25995,7 +27408,7 @@
 			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45210" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45247" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -26160,7 +27573,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45211" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45248" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -26223,7 +27636,7 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45212" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45249" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -26295,7 +27708,7 @@
 			<entity type="5" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45213" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45250" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -26376,7 +27789,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45214" name="Callie - Dried - " type="1" subtype="0" shape="2" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45251" name="CVS - Plier - " type="1" subtype="0" shape="2" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="13" y="3"/>
 		<spawn x="0" y="2">
@@ -26419,7 +27832,7 @@
 			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45215" name="Callie - Dried - " type="1" subtype="0" shape="5" width="13" height="14" difficulty="5" weight="1.0">
+	<room variant="45252" name="CVS - Plier - " type="1" subtype="0" shape="5" width="13" height="14" difficulty="5" weight="1.0">
 		<door exists="False" x="6" y="-1"/>
 		<door exists="True" x="6" y="14"/>
 		<spawn x="4" y="0">
@@ -26588,7 +28001,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45216" name="Callie - Dried - " type="1" subtype="0" shape="5" width="13" height="14" difficulty="5" weight="1.0">
+	<room variant="45253" name="CVS - Plier - " type="1" subtype="0" shape="5" width="13" height="14" difficulty="5" weight="1.0">
 		<door exists="True" x="6" y="-1"/>
 		<door exists="False" x="6" y="14"/>
 		<spawn x="4" y="0">
@@ -26757,7 +28170,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45217" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45254" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -26838,7 +28251,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45218" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45255" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -26878,7 +28291,7 @@
 			<entity type="302" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45219" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45256" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -26947,7 +28360,7 @@
 			<entity type="33" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45220" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45257" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -26998,7 +28411,7 @@
 			<entity type="969" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45221" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45258" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -27091,7 +28504,7 @@
 			<entity type="33" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45222" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45259" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -27184,7 +28597,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45223" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45260" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -27310,7 +28723,7 @@
 			<entity type="33" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45224" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45261" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -27376,7 +28789,7 @@
 			<entity type="4500" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45225" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45262" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -27418,7 +28831,7 @@
 			<entity type="1901" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45227" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45263" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -27544,7 +28957,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45228" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="9" weight="1.0">
+	<room variant="45264" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="9" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -27676,7 +29089,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45229" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45265" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -27691,7 +29104,7 @@
 			<entity type="1495" variant="0" subtype="1" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45230" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45266" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -27799,14 +29212,14 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45231" name="Callie - Dried - " type="1" subtype="0" shape="2" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45267" name="CVS - Plier - " type="1" subtype="0" shape="2" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="13" y="3"/>
 		<spawn x="6" y="3">
 			<entity type="1495" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45232" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45268" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -27878,7 +29291,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45233" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45269" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -27926,7 +29339,7 @@
 			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45234" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="12" weight="1.0">
+	<room variant="45270" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="12" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -28049,7 +29462,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45235" name="Callie - Dried - " type="1" subtype="0" shape="2" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45271" name="CVS - Plier - " type="1" subtype="0" shape="2" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="13" y="3"/>
 		<spawn x="2" y="3">
@@ -28062,7 +29475,7 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45236" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45272" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -28110,7 +29523,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45237" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45273" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -28155,7 +29568,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45238" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="9" weight="1.0">
+	<room variant="45274" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="9" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -28245,7 +29658,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45239" name="Callie - Dried - " type="1" subtype="0" shape="2" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45275" name="CVS - Plier - " type="1" subtype="0" shape="2" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="13" y="3"/>
 		<spawn x="0" y="2">
@@ -28282,14 +29695,14 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45240" name="Callie - Dried - " type="1" subtype="0" shape="2" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45276" name="CVS - Plier - " type="1" subtype="0" shape="2" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="13" y="3"/>
 		<spawn x="6" y="3">
 			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45241" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45277" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -28355,7 +29768,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45242" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45278" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -28364,7 +29777,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45243" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="9" weight="1.0">
+	<room variant="45279" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="9" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -28388,7 +29801,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45245" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45280" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -28439,7 +29852,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45246" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45281" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -28493,7 +29906,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45247" name="Callie - Dried - " type="1" subtype="0" shape="3" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45282" name="CVS - Plier - " type="1" subtype="0" shape="3" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
 		<spawn x="7" y="3">
@@ -28503,7 +29916,7 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45248" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45283" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -28578,7 +29991,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45249" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45284" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -28644,7 +30057,7 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45250" name="Callie - Dried - " type="1" subtype="0" shape="3" width="13" height="7" difficulty="10" weight="1.0">
+	<room variant="45285" name="CVS - Plier - " type="1" subtype="0" shape="3" width="13" height="7" difficulty="10" weight="1.0">
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
 		<spawn x="4" y="1">
@@ -28678,7 +30091,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45251" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="9" weight="1.0">
+	<room variant="45286" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="9" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -28699,7 +30112,7 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45252" name="Callie - Dried - " type="1" subtype="0" shape="4" width="13" height="14" difficulty="11" weight="1.0">
+	<room variant="45287" name="CVS - Plier - " type="1" subtype="0" shape="4" width="13" height="14" difficulty="11" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -28851,7 +30264,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45253" name="Callie - Dried - " type="1" subtype="0" shape="2" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45288" name="CVS - Plier - " type="1" subtype="0" shape="2" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="13" y="3"/>
 		<spawn x="4" y="2">
@@ -28879,7 +30292,7 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45254" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45289" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -29002,7 +30415,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45255" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45290" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -29014,7 +30427,7 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45256" name="Callie - Dried - " type="1" subtype="0" shape="7" width="26" height="7" difficulty="5" weight="1.0">
+	<room variant="45291" name="CVS - Plier - " type="1" subtype="0" shape="7" width="26" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="26" y="3"/>
 		<spawn x="5" y="2">
@@ -29036,7 +30449,7 @@
 			<entity type="1901" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45257" name="Callie - Dried - " type="1" subtype="0" shape="9" width="26" height="14" difficulty="10" weight="1.0">
+	<room variant="45292" name="CVS - Plier - " type="1" subtype="0" shape="9" width="26" height="14" difficulty="10" weight="1.0">
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="6"/>
 		<door exists="True" x="6" y="14"/>
@@ -29397,7 +30810,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45258" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45293" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -29439,7 +30852,7 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45259" name="Callie - Dried - " type="1" subtype="0" shape="3" width="13" height="7" difficulty="10" weight="1.0">
+	<room variant="45294" name="CVS - Plier - " type="1" subtype="0" shape="3" width="13" height="7" difficulty="10" weight="1.0">
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
 		<spawn x="5" y="2">
@@ -29455,7 +30868,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45260" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45295" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -29557,7 +30970,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45261" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45296" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -29677,7 +31090,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45262" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45297" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -29773,7 +31186,7 @@
 			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45263" name="Callie - Dried - " type="1" subtype="0" shape="10" width="26" height="14" difficulty="5" weight="1.0">
+	<room variant="45298" name="CVS - Plier - " type="1" subtype="0" shape="10" width="26" height="14" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -29915,7 +31328,7 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45264" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45299" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -30005,7 +31418,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45265" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45300" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -30104,7 +31517,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45266" name="Callie - Dried - " type="1" subtype="0" shape="7" width="26" height="7" difficulty="5" weight="1.0">
+	<room variant="45301" name="CVS - Plier - " type="1" subtype="0" shape="7" width="26" height="7" difficulty="5" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="26" y="3"/>
 		<spawn x="17" y="2">
@@ -30123,7 +31536,7 @@
 			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45267" name="Callie - Dried - " type="1" subtype="0" shape="5" width="13" height="14" difficulty="5" weight="1.0">
+	<room variant="45302" name="CVS - Plier - " type="1" subtype="0" shape="5" width="13" height="14" difficulty="5" weight="1.0">
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="14"/>
 		<spawn x="7" y="0">
@@ -30205,7 +31618,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45268" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45303" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -30283,7 +31696,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45269" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45304" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -30361,7 +31774,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45270" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45305" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -30415,7 +31828,7 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45271" name="Callie - Dried - " type="1" subtype="0" shape="3" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45306" name="CVS - Plier - " type="1" subtype="0" shape="3" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
 		<spawn x="4" y="0">
@@ -30455,7 +31868,7 @@
 			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45272" name="Community - Suture by himself, his only friend" type="1" subtype="0" shape="1" width="13" height="7" difficulty="17" weight="1.0">
+	<room variant="45307" name="Community - Suture by himself, his only friend" type="1" subtype="0" shape="1" width="13" height="7" difficulty="17" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -30494,7 +31907,7 @@
 			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45273" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45308" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -30578,7 +31991,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45274" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="9" weight="1.0">
+	<room variant="45309" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="9" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -30668,7 +32081,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45275" name="Callie - Dried - " type="1" subtype="0" shape="3" width="13" height="7" difficulty="9" weight="1.0">
+	<room variant="45310" name="CVS - Plier - " type="1" subtype="0" shape="3" width="13" height="7" difficulty="9" weight="1.0">
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
 		<spawn x="4" y="0">
@@ -30684,7 +32097,7 @@
 			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45276" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="9" weight="1.0">
+	<room variant="45311" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="9" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -30735,7 +32148,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45277" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="9" weight="1.0">
+	<room variant="45312" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="9" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -30783,7 +32196,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45278" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45313" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -30915,7 +32328,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45279" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45314" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -30966,7 +32379,7 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45280" name="Callie - Dried - " type="1" subtype="0" shape="3" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45315" name="CVS - Plier - " type="1" subtype="0" shape="3" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
 		<spawn x="4" y="0">
@@ -31015,7 +32428,7 @@
 			<entity type="1901" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45281" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45316" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -31072,7 +32485,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45282" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45317" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -31216,7 +32629,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45283" name="Callie - Dried - " type="1" subtype="0" shape="5" width="13" height="14" difficulty="5" weight="1.0">
+	<room variant="45318" name="CVS - Plier - " type="1" subtype="0" shape="5" width="13" height="14" difficulty="5" weight="1.0">
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="14"/>
 		<spawn x="4" y="2">
@@ -31280,7 +32693,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45284" name="Callie - Dried - " type="1" subtype="0" shape="10" width="26" height="14" difficulty="5" weight="1.0">
+	<room variant="45319" name="CVS - Plier - " type="1" subtype="0" shape="10" width="26" height="14" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -31503,7 +32916,7 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45285" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45320" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -31614,7 +33027,7 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45286" name="Callie - Dried - " type="1" subtype="0" shape="5" width="13" height="14" difficulty="5" weight="1.0">
+	<room variant="45321" name="CVS - Plier - " type="1" subtype="0" shape="5" width="13" height="14" difficulty="5" weight="1.0">
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="14"/>
 		<spawn x="4" y="0">
@@ -31666,7 +33079,7 @@
 			<entity type="33" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45287" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45322" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -31753,7 +33166,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45288" name="Callie - Dried - " type="1" subtype="0" shape="8" width="26" height="14" difficulty="5" weight="1.0">
+	<room variant="45323" name="CVS - Plier - " type="1" subtype="0" shape="8" width="26" height="14" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -32063,7 +33476,7 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45289" name="Callie - Dried - " type="1" subtype="0" shape="3" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45324" name="CVS - Plier - " type="1" subtype="0" shape="3" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
 		<spawn x="4" y="0">
@@ -32109,7 +33522,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45290" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45325" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -32355,7 +33768,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45291" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45326" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -32445,7 +33858,7 @@
 			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45292" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45327" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -32499,7 +33912,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45293" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45328" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -32574,7 +33987,7 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45294" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45329" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -32658,7 +34071,7 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45295" name="Callie - Dried - " type="1" subtype="0" shape="3" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45330" name="CVS - Plier - " type="1" subtype="0" shape="3" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
 		<spawn x="4" y="3">
@@ -32677,7 +34090,7 @@
 			<entity type="161" variant="41" subtype="6" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45296" name="Callie - Dried - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45331" name="CVS - Plier - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
