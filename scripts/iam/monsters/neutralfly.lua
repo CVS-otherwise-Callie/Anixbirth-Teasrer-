@@ -66,9 +66,9 @@ function mod:NeutralflyAI(npc, sprite, d)
             npc.StateFrame = 0
             d.state = "idle"
         end
-        if npc.StateFrame > 40 then
+        if npc.StateFrame > 40 or npc.Position:Distance(d.newpos) < 5 then
             d.newpos = mod:freeGrid(npc, false, 200, 100)
-            if d.newpos:Distance( npc.Position ) < 1 then print("ahhh") d.newpos = mod:freeGrid(npc, false, 500, 0) end
+            npc:MultiplyFriction(0.7)
             npc.StateFrame = 0
             d.rounds = d.rounds + 1
             if d.newpos.Y < npc.Position.Y then
@@ -81,12 +81,20 @@ function mod:NeutralflyAI(npc, sprite, d)
             else
                 sprite.FlipX = true
             end
-        else
+        elseif npc.StateFrame > 10 then
+            local myvec = (d.newpos - npc.Position) + (d.newpos - npc.Position):Normalized() * 0.9
             if mod:isScare(npc) then
-                npc.Velocity = mod:Lerp(npc.Velocity, d.newpos - npc.Position, -1*(0.005))
+                npc.Velocity = mod:Lerp(npc.Velocity, myvec, 0.5):Resized(-8)
             else
-                npc.Velocity = mod:Lerp(npc.Velocity, d.newpos - npc.Position, 0.005)
+                npc.Velocity = mod:Lerp(npc.Velocity, myvec, 0.5):Resized(8)
             end
+
+            mod:CatheryPathFinding(npc, d.newpos, {
+                Speed = 2,
+                Accel = 0.2,
+                Interval = 1,
+                GiveUp = true
+            })
         end
         mod:spritePlay(sprite, d.spritedir)
     end
