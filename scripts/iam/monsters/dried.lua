@@ -80,7 +80,8 @@ local room = game:GetRoom()
         npc.EntityCollisionClass = (EntityCollisionClass.ENTCOLL_NONE)
         d.creepsec = d.creepsec or rng:RandomInt(1, 12)
         d.mynumber = d.mynumber or math.random(1, #driedsubtypes)
-        npc.SpriteOffset = Vector(0, math.random(-20, 0))
+        d.offset = d.offset or Vector(math.random(-5, 5), math.random(-20, 0))
+        npc.SpriteOffset = d.offset
         local tab
         if npc.SubType == nil or npc.SubType == 0 then
             tab= driedsubtypes[d.mynumber]
