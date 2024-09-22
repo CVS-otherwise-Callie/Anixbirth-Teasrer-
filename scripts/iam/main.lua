@@ -2,6 +2,7 @@ FHAC:LoadScripts("scripts.iam.monsters", {
 	"fivehead",
 	"floater",
 	"neutralfly",
+	"patient",
 	"dried",
 	"erythorcyte",
 	"wost",

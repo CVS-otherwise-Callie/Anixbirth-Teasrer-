@@ -70,11 +70,11 @@ local room = game:GetRoom()
             npc:ClearEntityFlags(EntityFlag.FLAG_APPEAR)
         end
         d.entitypos = 500
-        d.bagcostume = d.bagcostume or math.random(3)
+        d.bagcostume = d.bagcostume or math.random(2)
         d.flip = d.flip or rng:RandomInt(1,2)
         sprite.FlipX = d.flip
         sprite:Play("BagIdle", true)
-        --mod:ReplaceEnemySpritesheet(npc, "gfx/monsters/dried/dried" .. d.bagcostume, 1)
+        mod:ReplaceEnemySpritesheet(npc, "gfx/monsters/dried/dried" .. d.bagcostume, 1)
         npc:AddEntityFlags(EntityFlag.FLAG_NO_PHYSICS_KNOCKBACK)
         npc.GridCollisionClass = (GridCollisionClass.COLLISION_NONE)
         npc.EntityCollisionClass = (EntityCollisionClass.ENTCOLL_NONE)

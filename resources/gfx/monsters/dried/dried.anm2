@@ -1,8 +1,8 @@
 <AnimatedActor>
-	<Info CreatedBy="Unknown" CreatedOn="9/19/2024 8:27:30 PM" Version="32" Fps="20"/>
+	<Info CreatedBy="Unknown" CreatedOn="9/21/2024 9:43:28 PM" Version="34" Fps="20"/>
 	<Content>
 		<Spritesheets>
-			<Spritesheet Path="dried.png" Id="0"/>
+			<Spritesheet Path="dried2.png" Id="0"/>
 		</Spritesheets>
 		<Layers>
 			<Layer Name="bag" Id="0" SpritesheetId="0"/>

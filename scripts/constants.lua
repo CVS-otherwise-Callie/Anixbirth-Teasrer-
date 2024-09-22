@@ -71,4 +71,5 @@ FHAC.Nonmale = {
     {ID = FHAC:SpecialEnt("Schmoot"), Affliction = "Woman"},
     {ID = FHAC:SpecialEnt("Drosslet"), Affliction = "Aeroace"}, --cus quaquao said to make everyone secretly aeroace lol
     {ID = FHAC:SpecialEnt("PitPat"), Affliction = "Woman"},
+    {ID = FHAC:SpecialEnt("Patient"), Affliction = "Woman"},
 }
