@@ -82,7 +82,7 @@ function mod:NeutralflyAI(npc, sprite, d)
                 sprite.FlipX = true
             end
         elseif npc.StateFrame > 10 then
-            local myvec = (d.newpos - npc.Position) + (d.newpos - npc.Position):Normalized() * 0.9
+            local myvec = (d.newpos - npc.Position) + (d.newpos - npc.Position):Normalized() * 1.05
             if mod:isScare(npc) then
                 npc.Velocity = mod:Lerp(npc.Velocity, myvec, 0.5):Resized(-8)
             else
@@ -91,8 +91,7 @@ function mod:NeutralflyAI(npc, sprite, d)
 
             mod:CatheryPathFinding(npc, d.newpos, {
                 Speed = 2,
-                Accel = 0.2,
-                Interval = 1,
+                Accel = 0.05,
                 GiveUp = true
             })
         end

@@ -27,6 +27,7 @@ FHAC.Monsters = {
     SyntheticHorf = mod:ENT("Synthetic Horf"),
     GassedFly = mod:ENT("Gassed Fly"),
     FlyveBomber = mod:ENT("Plier"),
+    Pallun = mod:ENT("Pallun"),
 }
 
 FHAC.Familiars = { --YOU HAVE NO IDEA HOW MANY FUCKING TIMES I SPELLED THIS WRONG LMAO

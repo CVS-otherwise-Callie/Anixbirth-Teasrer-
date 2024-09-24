@@ -144,7 +144,7 @@
         <gibs amount="0" blood="1" bone="0" eye="1" gut="0" large="0" />
         <devolve id="214.0.0" weight="1" />
     </entity-->
-    <entity id="161" variant="21" name="Neutral Fly" reroll="true" baseHP="15" stageHP="0" boss="0" champion="1" collisionDamage="1" collisionMass="6" collisionRadius="13" friction="1" numGridCollisionPoints="8" shadowSize="14" portrait="21" anm2path="monsters/neutralfly/neutralfly.anm2" gridCollision="walls" tags="fly">
+    <entity id="161" variant="21" name="Neutral Fly" reroll="true" baseHP="15" stageHP="0" boss="0" champion="1" collisionDamage="1" collisionMass="6" collisionRadius="13" friction="1" numGridCollisionPoints="8" shadowSize="14" portrait="22" anm2path="monsters/neutralfly/neutralfly.anm2" gridCollision="walls" tags="fly">
 		<bestiary transform="0,0,1" anim="Idle" />
         <gibs amount="0" blood="1" bone="0" eye="1" gut="0" large="0" />
         <devolve id="214.0.0" weight="1" />
@@ -270,6 +270,12 @@
         <bestiary transform="0,0,1" anim="Shake" />
         <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
         <devolve id="12.0.0" weight="1" />
+    </entity>
+
+    <entity id="161" variant="202" name="Pallun" reroll="true" baseHP="12" stageHP="0" boss="0" champion="1" collisionDamage="1" collisionMass="100" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="0" portrait="202" anm2path="monsters/pallun/pallun.anm2">
+		<bestiary transform="0,0,1" anim="Idle" />
+        <gibs amount="6" blood="1" bone="0" eye="1" gut="1" large="0" />
+        <preload-snd id="318" /> <!-- SOUND_WORM_SPIT -->
     </entity>
 
     <!--Catacombs-->

@@ -25,6 +25,7 @@ function mod:ProjStuff(v)
 
 	mod.SyntheticHorfShot(v, d)
     mod.WostShot(v, d)
+    mod.PallunShot(v, d)
 end
 FHAC:AddCallback(ModCallbacks.MC_POST_PROJECTILE_UPDATE, mod.ProjStuff)
 
@@ -82,5 +83,6 @@ end)
 
 function mod:NPCGetHurtStuff(npc, damage, flag, source, countdown)
     mod:PatientGetHurt(npc, damage, flag, source,countdown)
+    mod:PallunLeaveWhenHit(npc)
 end
 mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, mod.NPCGetHurtStuff)

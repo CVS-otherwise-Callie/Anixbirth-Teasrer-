@@ -241,4 +241,7 @@
 		"XMLData",
 		"XMLNode",
 		"REPENTOGON"
-	]}
+	],
+    "diagnostics.disable": [
+        "need-check-nil"
+    ]}

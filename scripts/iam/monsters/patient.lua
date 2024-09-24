@@ -13,6 +13,7 @@ function mod:PatientAI(npc, sprite, d)
     local path = npc.Pathfinder
     local room = game:GetRoom()
     local target = npc:GetPlayerTarget()
+    local sfx = SFXManager
     local targetpos = mod:confusePos(npc, target.Position, 5, nil, nil)
     local projparams = ProjectileParams()
     local patienttypes = {
@@ -106,7 +107,7 @@ function mod:PatientAI(npc, sprite, d)
             sprite:PlayOverlay("shoot", true)
 
             npc:MultiplyFriction(0.1)
-            npc:PlaySound(SoundEffect.SOUND_SHAKEY_KID_ROAR,1,0,false,1)
+            npc:PlaySound(SoundEffect.SOUND_SHAKEY_KID_ROAR,(math.random(1, 8))/10,0,false,1)
             local effect = Isaac.Spawn(1000, 2, 5, npc.Position, Vector.Zero, npc):ToEffect()
                 effect.SpriteOffset = Vector(0,-6)
                 effect.DepthOffset = npc.Position.Y * 1.25
@@ -144,7 +145,7 @@ function mod:PatientGetHurt(npc, damage, flag, source, countdown)
         d.wait = math.random(-5, 5)
         d.newpos = mod:freeGrid(npc, false, 300, 200)
         d.avoid = source
-        if math.random(2) == 2 then
+        if math.random(2) == 2 and not d.state == "EndShoot" then
             d.state = "Shoot" 
             npc:MultiplyFriction(0.7)
         end
