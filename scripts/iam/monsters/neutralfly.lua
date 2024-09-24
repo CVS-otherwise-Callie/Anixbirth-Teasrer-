@@ -58,6 +58,14 @@ function mod:NeutralflyAI(npc, sprite, d)
         npc.Velocity = npc.Velocity * 0.8
     end
     --thx erfly
+
+    function NeutralFlyFindNewPos()
+        local newpos = mod:freeGrid(npc, false, 200, 100)
+        if math.abs((newpos - npc.Position):GetAngleDegrees()) < 180 then
+            return newpos
+        end
+        NeutralFlyFindNewPos()
+    end
     
 
     if d.state == "moving" then
@@ -67,7 +75,8 @@ function mod:NeutralflyAI(npc, sprite, d)
             d.state = "idle"
         end
         if npc.StateFrame > 40 or npc.Position:Distance(d.newpos) < 5 then
-            d.newpos = mod:freeGrid(npc, false, 200, 100)
+            d.oldpos = d.newpos
+            d.newpos = NeutralFlyFindNewPos()
             npc:MultiplyFriction(0.7)
             npc.StateFrame = 0
             d.rounds = d.rounds + 1
@@ -76,26 +85,20 @@ function mod:NeutralflyAI(npc, sprite, d)
             else
                 d.spritedir = "MovingDown"
             end
-            if d.newpos.X < npc.Position.X then
-                sprite.FlipX = false
-            else
-                sprite.FlipX = true
-            end
         elseif npc.StateFrame > 10 then
             local myvec = (d.newpos - npc.Position) + (d.newpos - npc.Position):Normalized() * 1.05
             if mod:isScare(npc) then
-                npc.Velocity = mod:Lerp(npc.Velocity, myvec, 0.5):Resized(-8)
+                npc.Velocity = mod:Lerp(npc.Velocity, myvec, 0.05, 2, 2):Resized(-10)
             else
-                npc.Velocity = mod:Lerp(npc.Velocity, myvec, 0.5):Resized(8)
+                npc.Velocity = mod:Lerp(npc.Velocity, myvec, 0.05, 2, 2):Resized(10)
             end
-
-            mod:CatheryPathFinding(npc, d.newpos, {
-                Speed = 2,
-                Accel = 0.05,
-                GiveUp = true
-            })
+            mod:spritePlay(sprite, d.spritedir)
         end
-        mod:spritePlay(sprite, d.spritedir)
+    end
+    if d.newpos.X < npc.Position.X then
+        sprite.FlipX = false
+    else
+        sprite.FlipX = true
     end
 end
 
