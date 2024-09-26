@@ -25,6 +25,7 @@ function mod:ProjStuff(v)
 
 	mod.SyntheticHorfShot(v, d)
     mod.WostShot(v, d)
+    mod.PallunShot(v, d)
 end
 FHAC:AddCallback(ModCallbacks.MC_POST_PROJECTILE_UPDATE, mod.ProjStuff)
 
@@ -79,3 +80,9 @@ mod:AddCallback(ModCallbacks.MC_EVALUATE_CACHE,function(_, player, flag)
     elseif flag == CacheFlag.CACHE_TWIN_SYNC then --specific for jacob and esau sync movement
     end
 end)
+
+function mod:NPCGetHurtStuff(npc, damage, flag, source, countdown)
+    mod:PatientGetHurt(npc, damage, flag, source,countdown)
+    mod:PallunLeaveWhenHit(npc)
+end
+mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, mod.NPCGetHurtStuff)

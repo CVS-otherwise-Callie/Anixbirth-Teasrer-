@@ -12,6 +12,14 @@ function mod:GetCirc(rad, per)
 	return Vector(rad * math.sin(per), rad * math.cos(per))
 end
 
+function mod:reverseIfFear(npc, vec, multiplier)
+	multiplier = multiplier or 1
+	if mod:isScare(npc) then
+		vec = vec * -1 * multiplier
+	end
+	return vec
+end
+
 function mod:MixTables(input, table)
     if input and table then
         for k, v in pairs(table) do
@@ -48,7 +56,7 @@ function mod:freeGrid(npc, path, far, close)
 			if room:GetGridPosition(i) ~= nil then
 			local gridpoint = room:GetGridPosition(i)
 			if gridpoint and gridpoint:Distance(npc.Position) < far and gridpoint:Distance(npc.Position) > close and room:GetGridEntity(i) == nil and 
-			room:IsPositionInRoom(gridpoint, 0) and game:GetRoom():CheckLine(gridpoint,npc.Position,3,900,false,false) and pather:HasPathToPos(gridpoint, true) then
+			room:IsPositionInRoom(gridpoint, 0) and pather:HasPathToPos(gridpoint, true) then
 				table.insert(tab, gridpoint)
 			end
 			end

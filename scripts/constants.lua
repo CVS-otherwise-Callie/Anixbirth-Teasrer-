@@ -27,6 +27,7 @@ FHAC.Monsters = {
     SyntheticHorf = mod:ENT("Synthetic Horf"),
     GassedFly = mod:ENT("Gassed Fly"),
     FlyveBomber = mod:ENT("Plier"),
+    Pallun = mod:ENT("Pallun"),
 }
 
 FHAC.Familiars = { --YOU HAVE NO IDEA HOW MANY FUCKING TIMES I SPELLED THIS WRONG LMAO
@@ -71,4 +72,5 @@ FHAC.Nonmale = {
     {ID = FHAC:SpecialEnt("Schmoot"), Affliction = "Woman"},
     {ID = FHAC:SpecialEnt("Drosslet"), Affliction = "Aeroace"}, --cus quaquao said to make everyone secretly aeroace lol
     {ID = FHAC:SpecialEnt("PitPat"), Affliction = "Woman"},
+    {ID = FHAC:SpecialEnt("Patient"), Affliction = "Woman"},
 }

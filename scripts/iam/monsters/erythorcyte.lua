@@ -87,6 +87,7 @@ end
 --idk how to explain it but this isn;t very effieicnt
 --guys how do i make it effieicnt
 function mod:ErythorcytebabyAI(npc, sprite, d)
+    local room = Game():GetRoom()
     local target = npc:GetPlayerTarget()
     local targetpos = mod:confusePos(npc, target.Position, 5, nil, nil)
     local params = ProjectileParams()

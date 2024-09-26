@@ -2,6 +2,7 @@ FHAC:LoadScripts("scripts.iam.monsters", {
 	"fivehead",
 	"floater",
 	"neutralfly",
+	"patient",
 	"dried",
 	"erythorcyte",
 	"wost",
@@ -13,7 +14,8 @@ FHAC:LoadScripts("scripts.iam.monsters", {
 	"pinprick",
 	"synthetichorf",
 	"gassedfly",
-	"fly_ve-bomber"
+	"fly_ve-bomber", --HAHAHAH FUCK YOU EUAN TOO
+	"pallun"
 })
 
 FHAC:LoadScripts("scripts.iam.familiars", {

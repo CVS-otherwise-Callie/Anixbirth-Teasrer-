@@ -121,10 +121,10 @@ function mod:FloaterAI(npc, sprite, d, r)
             d.moveval = d.moveval + Vector(0, d.accelerateaway)
         end
         if (enemydir < -90 and enemydir > -135) or (enemydir > 90 and enemydir < 135) then
-            d.moveval = d.moveval + Vector(-1 * d.accelerateaway, 0)
+            d.moveval = d.moveval + Vector(d.accelerateaway, 0)
         end
         if (enemydir < -45 and enemydir > -90) or (enemydir > 45 and enemydir < 90) then
-            d.moveval = d.moveval + Vector(d.accelerateaway, 0)
+            d.moveval = d.moveval + Vector(-1* d.accelerateaway, 0)
         end
         targetvelocity = (d.targetpos + d.moveval - npc.Position):Resized(d.boost)
         if d.accelerateaway > 0 then
@@ -138,6 +138,12 @@ function mod:FloaterAI(npc, sprite, d, r)
     else
         npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, d.boost/5)
     end
+
+    mod:CatheryPathFinding(npc, targetvelocity, {
+        Speed = 10,
+        Accel = 0.02,
+        GiveUp = true
+    })
 
     if d.animinit == false then
         d.animinit = true
