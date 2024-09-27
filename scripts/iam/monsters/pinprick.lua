@@ -75,7 +75,7 @@ function mod:PinprickAI(npc, sprite, d)
     if mod:isScare(npc) then
         npc.Velocity = mod:Lerp(npc.Velocity, d.newpos - npc.Position, 0.005 + d.moveoffset):Rotated(rng:RandomInt(1, 360))
     else
-        npc.Velocity = mod:Lerp(npc.Velocity, (d.newpos - npc.Position),  0.005 + d.moveoffset)
+        npc.Velocity = mod:Lerp(npc.Velocity, (d.newpos - npc.Position):Resized(30),  0.005 + d.moveoffset)
     end
 end
 

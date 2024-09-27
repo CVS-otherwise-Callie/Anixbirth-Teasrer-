@@ -25,6 +25,7 @@ function mod:NeutralflyAI(npc, sprite, d)
         d.accel = 0
         npc.StateFrame = 20
         npc.Velocity = Vector.Zero
+        d.newpos = npc.Position
         d.init = true
     else
         npc.StateFrame = npc.StateFrame + 1

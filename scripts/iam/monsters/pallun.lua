@@ -32,6 +32,9 @@ function mod:PallunAI(npc, sprite, d)
     end
 
     if d.state == "hiding" then
+        if sprite:IsFinished("Leave") then
+            npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_NONE
+        end
         if npc.StateFrame > 60 then
             d.state = "idle"
             npc.StateFrame = 0
@@ -84,10 +87,11 @@ function mod:PallunAI(npc, sprite, d)
         d.p.Scale = 2.3
         d.p:GetData().type = "Pallun"
         d.p:GetData().target = target
-        d.p:GetData().targpos = target.Position
+        d.p:GetData().targpos = target.Position - (target.Position - npc.Position):Resized(20)
         d.p:GetData().Parent = npc
         d.p:GetData().offset = math.random(10, 30) 
         d.p:GetData().myrand1 = Vector(math.random(-30, 30), math.random(-30, 30))
+        d.p:GetData().shotmovement = 2
         if npc:IsChampion() then
             d.p.ProjectileFlags = ProjectileFlags.BOUNCE_FLOOR | ProjectileFlags.RED_CREEP
         end
@@ -108,17 +112,37 @@ function mod.PallunShot(v, d)
     if d.type == "Pallun" then
         if not d.Parent:IsDead() then
             v.GridCollisionClass = EntityGridCollisionClass.GRIDCOLL_WALLS
-            d.StateFrame = d.StateFrame or 0
-            d.StateFrame = d.StateFrame + 1
+            if d.shotmovement <= 2 then
+                d.StateFrame = d.StateFrame or 0
+                d.StateFrame = d.StateFrame + 1
 
-            if d.StateFrame > d.offset then
-                d.targpos = d.target.Position
-                d.myrand1 = Vector(math.random(-30, 30), math.random(-30, 30))
-                d.StateFrame = 0
+                if d.StateFrame > d.offset then
+                    d.targpos = d.target.Position
+                    d.myrand1 = Vector(math.random(-30, 30), math.random(-30, 30))
+                    d.StateFrame = 0
+                end
+                local truepos = (d.targpos - v.Position) + (d.targpos - v.Position):Normalized()*1.05
+                v.Height = -20
+                if d.shotmovement == 1 then
+                    v.Velocity = mod:Lerp(d.Parent.Velocity, ((d.targpos - v.Position + d.myrand1):Normalized()*20.05), 500/1000)
+                else
+                    v.Velocity = mod:Lerp(d.Parent.Velocity,  truepos + d.myrand1, 100/1000)
+                end
+
+
+            else
+                --kerkel suggested i use this but since i dont feel loke blantantly rewriting everything to match another person nowadays; ill make this a dss thing - old shots and new shots
+                if v.FrameCount % 30 == 0 or v.FrameCount == 1 then
+                    local player = Game():GetNearestPlayer(v.Position)
+            
+                    d.TargetPosition = v.Position + (player.Position - v.Position):Resized(40 * 3)
+                end
+            
+                v.Velocity = v.Velocity * 0.2 + (d.TargetPosition - v.Position) * (v.FrameCount % 30) * 0.01
+            
+                v.FallingSpeed = 0
+                v.FallingAccel = -0.1
             end
-            v.Height = -20
-            v.Velocity = mod:Lerp(d.Parent.Velocity, (d.targpos - v.Position) + (d.targpos - v.Position):Normalized()*1.05 + d.myrand1 , 100/1000)
-
             if v:IsDead() then
                 d.Parent:GetData().shotAlive = false
             else
@@ -142,4 +166,3 @@ function mod:PallunLeaveWhenHit(npc)
         end
     end
 end
-
