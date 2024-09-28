@@ -56,6 +56,11 @@ function mod:PostGameStarted(bool)
 end
 mod:AddCallback(ModCallbacks.MC_POST_GAME_STARTED, mod.PostGameStarted)
 
+function mod:PostNPCColl(npc, coll)
+    return mod.SillyStringGetHit(npc, coll)
+end
+mod:AddCallback(ModCallbacks.MC_PRE_NPC_COLLISION, mod.PostNPCColl)
+
 mod:AddCallback(ModCallbacks.MC_EVALUATE_CACHE,function(_, player, flag)
     
 	local basedata = player:GetData() --for stats and shit

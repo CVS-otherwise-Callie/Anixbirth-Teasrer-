@@ -365,12 +365,13 @@ function mod:CheckForNewRoom(bool)
 	end
 end
 
-function mod:GetEntInRoom(ent, avoidnpc, npc)
+function mod:GetEntInRoom(ent, avoidnpc, npc, radius)
+	radius = radius or 350
 	local targets = {}
 	if avoidnpc then
 		for _, ent in ipairs(Isaac.GetRoomEntities()) do
 			if ent:IsActiveEnemy() and ent:IsVulnerableEnemy() and not ent:IsDead()
-			and not ent:HasEntityFlags(EntityFlag.FLAG_FRIENDLY) and (ent.Position - npc.Position):Length() < 350
+			and not ent:HasEntityFlags(EntityFlag.FLAG_FRIENDLY) and (ent.Position - npc.Position):Length() < radius
 			and not(ent.Type == npc.Type and ent.Variant == npc.Variant)  then
 				table.insert(targets, ent)
 			end
@@ -378,13 +379,33 @@ function mod:GetEntInRoom(ent, avoidnpc, npc)
 	else
 		for _, ent in ipairs(Isaac.GetRoomEntities()) do
 			if ent:IsActiveEnemy() and ent:IsVulnerableEnemy() and not ent:IsDead()
-			and not ent:HasEntityFlags(EntityFlag.FLAG_FRIENDLY) and (ent.Position - npc.Position):Length() < 350  then
+			and not ent:HasEntityFlags(EntityFlag.FLAG_FRIENDLY) and (ent.Position - npc.Position):Length() < radius  then
 				table.insert(targets, ent)
 			end
 		end
 	end
 	if (#targets == 0) then
-		return ent:GetPlayerTarget()
+		return npc:GetPlayerTarget()
+	end
+	local answer = targets[math.random(1, #targets)]
+	return answer
+end
+
+function mod:GetSpecificEntInRoom(myent, npc, radius)
+	myent = mod:ENT(myent)
+	radius = radius or 350
+	local targets = {}
+	for _, ent in ipairs(Isaac.GetRoomEntities()) do
+		if not ent:IsDead()
+		and not ent:HasEntityFlags(EntityFlag.FLAG_FRIENDLY) and (ent.Position - npc.Position):Length() < radius
+		and ent.Type == myent.ID and ent.Variant == myent.Var and ent.SubType == myent.Sub then
+			table.insert(targets, ent)
+		end
+	end
+	if (#targets == 0) then
+		local target = npc:GetPlayerTarget()
+		local targetpos = mod:confusePos(npc, target.Position, 5, nil, nil)
+		return targetpos
 	end
 	local answer = targets[math.random(1, #targets)]
 	return answer
