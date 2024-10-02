@@ -365,6 +365,28 @@ function mod:CheckForNewRoom(bool)
 	end
 end
 
+-- i had no idea how to set up a registered callback to be set up later unitl fiend folio, thank yall ^-^
+
+mod.funcs = {}
+function mod.scheduleCallback(foo, delay, callback, noCancelOnNewRoom)
+	callback = callback or ModCallbacks.MC_POST_UPDATE
+	if not mod.funcs[callback] then
+		mod.funcs[callback] = {}
+		mod:AddCallback(callback, function()
+			for i = #mod.funcs[callback], 1, -1 do
+				local func = mod.funcs[callback][i]
+				func.Delay = func.Delay - 1
+				if func.Delay <= 0 then
+					func.Func()
+					table.remove(mod.funcs[callback], i)
+				end
+			end
+		end)
+	end
+
+	table.insert(mod.funcs[callback], { Func = foo, Delay = delay, NoCancel = noCancelOnNewRoom })
+end
+
 function mod:GetEntInRoom(ent, avoidnpc, npc, radius)
 	radius = radius or 350
 	local targets = {}

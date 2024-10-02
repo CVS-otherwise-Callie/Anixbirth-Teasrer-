@@ -69,7 +69,7 @@
 	<track id="62" name="Title Screen (Afterbirth)" intro="Afterbirth/ReGenesis V3 intro.ogg" path="Afterbirth/ReGenesis (loop) V3.ogg" loop="true" />
 
 	<!-- REPENTANCE BEGIN -->
-	<track id="63" name="Title Screen (Repentance)" intro="shhh piano builds go away/Matthew 9 23-25.ogg" path="shhh piano builds go away/Matthew 9 23-25.ogg" layerintro="shhh piano builds go away/Matthew 9 22 - 25 Twisted.ogg" layer="shhh piano builds go away/Matthew 9 22 - 25 Twisted.ogg" loop="true" layermode="2" layerfadespeed="0.1" />
+	<track id="63" name="Title Screen (Repentance)" intro="shhh piano builds go away/Matthew-9-23-25-Build-2.ogg" path="shhh piano builds go away/Matthew-9-23-25-Build-2.ogg" layerintro="shhh piano builds go away/Matthew 9 22 - 25 Twisted.ogg" layer="shhh piano builds go away/Matthew 9 22 - 25 Twisted.ogg" loop="true" layermode="2" layerfadespeed="0.1" />
 	<track id="64" name="Game start (jingle, twisted)" path="Repentance/Title Screen Stinger MB.ogg" loop="false" />
 	<track id="65" name="Nightmare (alt)" path="Repentance/Nightmare_V4.ogg" loop="false" />
 	<track id="66" name="Mom's Shadow Intro" path="Repentance/Moms_Shadow_Cut_Scene.ogg" loop="false" />

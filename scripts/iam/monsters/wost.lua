@@ -89,41 +89,49 @@ function mod:WostAI(npc, sprite, d)
     end
 
     if sprite:IsFinished("Shoot") then
-            d.state = "idle"
+        d.state = "idle"
     end
 
     if d.state == "veryscaredhiding" then
         npc.StateFrame = npc.StateFrame + 1
         npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_NONE  
         if npc.StateFrame >= 10 then
-                    npc.Position = mod:freeGrid(npc, false, 1000, 1)
-                    npc.StateFrame = 0
-                d.state = "idle"
-                npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_ALL
-                mod:spritePlay(sprite, "appear")
-                if rng:RandomInt(1, 5) == 5 then
-                    d.state = "shoot"
-                    npc.StateFrame = 0
-                    mod:spritePlay(sprite, "Shoot")
-                end
+            npc.Position = mod:freeGrid(npc, false, 1000, 1)
+            npc.StateFrame = 0
+            npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_ALL
+            mod:spritePlay(sprite, "appear")
+            if rng:RandomInt(1, 5) == 5 then
+                d.state = "shootappear"
+            else
+                d.state = "appearing"
+            end
         end
     end
 
     if d.state == "kindascaredhiding" then
         npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_NONE
             if targetpos:Distance(npc.Position) > 100 or d.entitytearinrange == false then
-                    npc.StateFrame = 0
-                    d.state = "idle"
-                    npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_ALL
-                    mod:spritePlay(sprite, "appear")
-                    if rng:RandomInt(1, 5) == 5 then
-                            d.state = "shoot"
-                        npc.StateFrame = 0
-                        mod:spritePlay(sprite, "Shoot")
-                    end
+                npc.Position = mod:freeGrid(npc, false, 1000, 1)
+                npc.StateFrame = 0
+                npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_ALL
+                mod:spritePlay(sprite, "appear")
+                if rng:RandomInt(1, 5) == 5 then
+                    d.state = "shootappear"
                 else
-                d.state = "kindascaredhiding"
+                    d.state = "appearing"
+                end
+            else
+            d.state = "kindascaredhiding"
         end
+    end
+
+    if d.state == "appearing" and sprite:IsFinished("appear") then
+        d.state = "idle"
+    end
+
+    if d.state == "shootappear" and sprite:IsFinished("appear") then
+        d.state = "shoot"
+        mod:spritePlay(sprite, "Shoot")
     end
 
 --all shooty shit

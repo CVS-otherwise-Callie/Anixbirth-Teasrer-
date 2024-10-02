@@ -19,6 +19,10 @@ FHAC:LoadScripts("scripts.iam.monsters", {
 	"sillystring"
 })
 
+FHAC:LoadScripts("scripts.iam", {
+	"levelreplaceshit"
+})
+
 FHAC:LoadScripts("scripts.iam.familiars", {
 	"snark",
 })

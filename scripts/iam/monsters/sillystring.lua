@@ -52,6 +52,10 @@ function mod:SillyStringAI(npc, sprite, d)
         npc.StateFrame = npc.StateFrame + 1
     end
 
+    if d.baby:IsDead() then
+        d.baby = npc:GetPlayerTarget()
+    end
+
     npc.Velocity = mod:Lerp(npc.Velocity, (d.baby.Position - npc.Position):Resized(40), 0.01)
 
     if d.state == "idle" then
@@ -62,13 +66,27 @@ function mod:SillyStringAI(npc, sprite, d)
         extraanim = "Recive"
     end
 
-    if d.state == "shoot" then
+    if npc.StateFrame >= 30 and not d.isRecieving then
+        d.baby:GetData().isRecieving = true
         mod:spritePlay(sprite, extraanim .. "Shoot")
+        d.state = "shoot"
+        npc.StateFrame = 0
+    end
+
+    if sprite:IsEventTriggered("shoot") then
         local effect = Isaac.Spawn(1000, 2, 5, npc.Position, Vector.Zero, npc):ToEffect()
-        effect.SpriteOffset = Vector(0,-6)
+        effect.SpriteOffset = Vector(0,-40)
         effect.DepthOffset = npc.Position.Y * 1.25
         effect:FollowParent(npc)
-        npc:FireProjectiles(npc.Position, Vector(10, 0):Rotated((d.baby - npc.Position):GetAngleDegrees()), 0, projparams)
+        local shot = Isaac.Spawn(9, 0, 0, npc.Position, Vector(10, 0):Rotated((d.baby.Position - npc.Position):GetAngleDegrees()), npc):ToProjectile()
+        shot:GetData().type = "SillyString"
+        shot.Height = -10
+        shot.SpriteOffset = Vector(0,-40)
+        d.state = "isfinishedshooting"
+    end
+
+    if sprite:IsFinished("Shoot") then
+        d.state = "idle"
     end
 
     npc:MultiplyFriction(0.1)
@@ -78,11 +96,14 @@ function mod.SillyStringGetHit(npc, coll)
     if npc.Type == 161 and (npc.Variant == mod.Monsters.String.Var or npc.Variant == mod.Monsters.Silly.Var) then
         if coll.Type == 1 or (coll.Type == 2 and coll.Parent.Position:Distance(npc.Position) < 30) then
             return true
-        else
-            if coll.Parent then
-                print(coll.Type == 2,coll.Parent.Position:Distance(npc.Position), coll.Parent.Position:Distance(npc.Position) < 30)
-            end
         end
+    end
+end
+
+function mod.SillyShot(p, d)
+    if d.type == "SillyString" then
+        p.SpriteOffset = Vector(0,-40)
+        p.Height = -10
     end
 end
 

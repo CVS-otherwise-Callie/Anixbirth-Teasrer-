@@ -19,7 +19,7 @@ function mod:PinprickSpawnerAI(npc, sprite, d)
         npc.Visible = true
         npc:ClearEntityFlags(EntityFlag.FLAG_APPEAR)
         npc:AddEntityFlags(EntityFlag.FLAG_NO_TARGET | EntityFlag.FLAG_NO_PHYSICS_KNOCKBACK | EntityFlag.FLAG_NO_KNOCKBACK | EntityFlag.FLAG_NO_STATUS_EFFECTS)
-        for i = 0, npc.SubType do
+        for i = 0, npc.SubType - 2 do
             local prick = Isaac.Spawn(Isaac.GetEntityTypeByName("Pinprick"),  Isaac.GetEntityVariantByName("Pinprick"), Isaac.GetEntitySubTypeByName("Pinprick"), npc.Position, Vector.Zero, npc)
             prick:ClearEntityFlags(EntityFlag.FLAG_APPEAR)
             prick:GetData().dashoffset = rng:RandomInt(0, 10)
@@ -31,7 +31,7 @@ end
 
 function mod:PinprickAI(npc, sprite, d)
 
-    local target = npc:GetPlayerTarget()
+    local target = Game():GetNearestPlayer(npc.Position)
     local targetpos = mod:confusePos(npc, target.Position, 5, nil, nil)
     local cos = math.cos(npc.FrameCount / 15) * 80
     local sin = math.sin(npc.FrameCount / 15) * 80
@@ -44,22 +44,25 @@ function mod:PinprickAI(npc, sprite, d)
         d.Trail:FollowParent(npc)
         d.Trail.ParentOffset = Vector(0,-32)
         local color = Color(1,1,1,1,0.6,0.5,0.05)
+        npc.SplatColor = color
         color:SetColorize(1, 0.8, 0.1, 3)
         d.Trail.Color = color
-        d.newpos = Vector.Zero
+        d.newpos = npc.Position
+        npc.Position = (npc.Position + d.newpos):Rotated((targetpos - npc.Position):GetAngleDegrees() + 180)
         npc.GridCollisionClass = EntityGridCollisionClass.GRIDCOLL_NONE
         d.firstinit = true
     else
-        if not d.init then
-            d.newpos = targetpos:Resized(-5)
-        end
         npc.StateFrame = npc.StateFrame + 1
     end
 
-    if npc.StateFrame > 35 + d.dashoffset then
-        if d.moveoffset < 0.02 then
+    if npc.Position:Distance(d.newpos) < 10 and not d.init then
         d.init = true
-        d.newpos = targetpos - Vector(2, 0):Rotated((targetpos - npc.Position):GetAngleDegrees() + rng:RandomInt(-5, 5))
+    end
+
+    if npc.StateFrame > 30 + d.dashoffset and d.init then
+        if d.moveoffset < 0.02 then
+        d.dashoffset = rng:RandomInt(0, 10)
+        d.newpos = targetpos - Vector(10, 0):Rotated((targetpos - npc.Position):GetAngleDegrees() + rng:RandomInt(-5, 5))
         d.moveoffset = 0
         npc.StateFrame = 0
         else
@@ -75,7 +78,7 @@ function mod:PinprickAI(npc, sprite, d)
     if mod:isScare(npc) then
         npc.Velocity = mod:Lerp(npc.Velocity, d.newpos - npc.Position, 0.005 + d.moveoffset):Rotated(rng:RandomInt(1, 360))
     else
-        npc.Velocity = mod:Lerp(npc.Velocity, (d.newpos - npc.Position):Resized(30),  0.005 + d.moveoffset)
+        npc.Velocity = mod:Lerp(npc.Velocity, (d.newpos - npc.Position):Resized(30),  0.025 + d.moveoffset + (npc.StateFrame/1000)%30)
     end
 end
 

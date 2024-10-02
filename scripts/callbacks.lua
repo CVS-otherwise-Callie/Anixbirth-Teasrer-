@@ -26,6 +26,7 @@ function mod:ProjStuff(v)
 	mod.SyntheticHorfShot(v, d)
     mod.WostShot(v, d)
     mod.PallunShot(v, d)
+    mod.SillyShot(v, d)
 end
 FHAC:AddCallback(ModCallbacks.MC_POST_PROJECTILE_UPDATE, mod.ProjStuff)
 
@@ -42,6 +43,7 @@ function mod:RenderedStuff()
         mod.ShowRoomText()
     end
     mod.JohannesPostRender()
+    mod.MusicCheckCallback()
 end
 mod:AddCallback(ModCallbacks.MC_POST_RENDER, mod.RenderedStuff)
 

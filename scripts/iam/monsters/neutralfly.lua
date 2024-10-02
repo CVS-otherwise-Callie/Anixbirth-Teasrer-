@@ -77,7 +77,7 @@ function mod:NeutralflyAI(npc, sprite, d)
         end
         if npc.StateFrame > 40 or npc.Position:Distance(d.newpos) < 5 then
             d.oldpos = d.newpos
-            d.newpos = NeutralFlyFindNewPos()
+            d.newpos = NeutralFlyFindNewPos() or npc.Position
             npc:MultiplyFriction(0.7)
             npc.StateFrame = 0
             d.rounds = d.rounds + 1
@@ -87,11 +87,11 @@ function mod:NeutralflyAI(npc, sprite, d)
                 d.spritedir = "MovingDown"
             end
         elseif npc.StateFrame > 10 then
-            local myvec = (d.newpos - npc.Position) + (d.newpos - npc.Position):Normalized() * 1.05
+            local myvec = (d.newpos - npc.Position):Normalized() * 4.05
             if mod:isScare(npc) then
-                npc.Velocity = mod:Lerp(npc.Velocity, myvec, 0.05, 2, 2):Resized(-10)
+                npc.Velocity = mod:Lerp(npc.Velocity, myvec, 0.5):Resized(-7)
             else
-                npc.Velocity = mod:Lerp(npc.Velocity, myvec, 0.05, 2, 2):Resized(10)
+                npc.Velocity = mod:Lerp(npc.Velocity, myvec, 0.5):Resized(7)
             end
             mod:spritePlay(sprite, d.spritedir)
         end
