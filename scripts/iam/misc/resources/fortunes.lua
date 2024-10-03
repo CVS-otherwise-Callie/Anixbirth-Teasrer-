@@ -1,5 +1,12 @@
 FHAC.Fortunes = 
-[=============================[
+[=================[
+                      𝕱𝖔𝖗𝖙𝖚𝖓𝖊𝖘
+yersh
+please write your fortunes
+at the top
+so we can see them.
+请不用中文，不做好吧
+
 i mean…
 is he ever right?
 
@@ -1016,186 +1023,6 @@ I feel like Holo
 when she wine’d the Holo
 gwarpphshahi
 
-no way!
-way, no...
-
-fresh freaky men
-
-next item
-will be
-buster's back
-
-have you unlocked
-SATIO
-
-ben... not again
-
-give me the dog
-
-women aren't men
-they're men with a wo
-
-speak in mandarin
-you have 5 seconds
-
-duolingo is out to
-sacrifice your kids
-
-catinsurance x bugmeat
-
-the fiend folio
-cornmunity is
-scary as shit
-
-uhhhhhhhhh no
-
-ok he. Said no
-
-fenchenemy says hi
-
-pls ff devs, make a
-mode like "women" that
-syas all enemies sexuality
-
-good mornning creeps, 
-fenchenemy, and v1 rotary
-
-good morning
-big mac like bunda!
-
-gay morning
-
-gay night, at 
-least for me
-
-all times of day are
-morning if you haven't
-gotten out of bed yet
-
-gay people
-
-tommorow morning?
-wait... it IS
-tommorow morning
-
-thats right
-being gay
-starts now
-
-gayday
-
-gay month
-
-do better next time
-
-disco esylium
-
-i will
-
-dissapointing yeild!
-
-ok he got.it
-
-do not tell me what
-is or is not dissapointing
-i have recieved adequate
-
-you're a dissapointing yeild
-
-uh - :(
-
-remember when twitter
-added a "give birth"
-button above timeline
-
-mistakes
-denial
-
-i hate lust!
-i despise sloth!
-i envy righteousness!
-
-catholics?
-hah, shut up
-
-orthodox people
-are crazy to
-begin with
-
-but... but...
-the boiler is
-way too hard!
-
-grotto moment
-with the
-mud guys and stuff
-
-gorge - ous
-
-this is a renren
-production!
-
-this is 
-a mudeth track
-
-made by both june
-and amy, again
-
-can i have another
-pass into the future
-
-steven won't
-spawn for me!
-
-neutral flies have
-gotten a ridiculous 
-amount of reworks
-
-four.
-four lines?
-
-guys hear me out
-wost x wolter
-
-awwww
-claire you should
-totally kiss her!
-
-I FUCKING
-HATE 
-VERONICA LEBUFFE
-
-spell fivehead
-no, spell it
-all over again
-
-ap lunch is
-a pain to do
-
-founding mothers
-goes crazy
-
----@mod ModCompact
-
----@npc EntityNPC
-
-rumpiel, your
-mod idea is ass
-
-wolfi, where is
-the catnip again
-
-we need to increase
-the number of human legs
-by any means nessecary
-
-im placing blocks
-and shit cus im in
-fucking minecraft
-
-shit!
-with all the power!
-
 you ape my product
 at every fucking turn
 
@@ -1243,26 +1070,6 @@ goddess
 
 do you accidentally
 make a new signature
-
-stop looking at
-this fortune you
-utter creep
-
-get off of isaac
-right now!
-
-i see you playing
-fiend folio, go play
-anixbirth instead
-
-this section is
-crossed out
-
-how many rooms
-does anixbirth have?
-
-take you kids
-run the fuck away
 
 hey!
 why isnt the fortune
@@ -1662,7 +1469,7 @@ just shit myself
 fuck
 
 whose line is
-it anyway?
+ it anyway?
 
 then i reincarnate
 as jesus christ
@@ -2091,168 +1898,6 @@ dont starve
 starve
 TOGETHER
 
-did you know?
-the slim jim’s favorite games
-are strip poker, 21, and monopoly
-
-did you know?
-although items had different charges,
-flash isaac showed 6 charges no matter
-
-did you know?
-fiend from fiend folio
-is a fan of eminem
-
-did you know?
-poobottles only breed
-on giga and platinum poops
-
-Did you know people with
-Guilty consciences are startled
-more easil-[train horn]
-
-did you know?
-the wost from anixbirth
-is a direct call to shisheyu
-
-did you know?
-shisheyu is famous for having
-a tainted lost streak of 200+
-
-did you know?
-lavencas was taken down
-off of youtube for-
-
-did you know?
-erfly, the main dev of fiend folio,
-also has a PHD in psychology
-
-did you know?
-slayxc2 is german
-and thus normally plays in german
-
-did you know?
-happy’s pack is a separate mod
-that erlfy liked so much he asked to add
-
-did you know?
-the way nil_pasta actually works
-is by giving data, not taking
-
-did you know?
-sr. french bread
-is younger than most and insists
-on eating one’s toenails
-
-did you know?
-Botan has two cats
-Shishi and Ron
-(シシとロン)
-
-did you know?
-originally devil’s harvest
-included golem, who was locked by ff
-
-did you know?
-evan and christina
-are NOT officially dating
-
-Did you know?
-Did you know???
-
-! WARNING !
-this game is
-not ready yet.
-
-! WARNING !
-fiend as found
-your real ip address.
-
-! WARNING !
-jimbo is
-after you.
-
-! WARNING !
-your boss
-found your google history.
-
-! WARNING !
-your mom
-has seen your hidden magazines.
-
-! WARNING !
-mr. shmoot
-has stopped burning.
-
-! WARNING !
-that was
-irrelevant.
-
-! WARNING !
-you come from
-the wrong country.
-
-! WARNING !
-you may not
-fraternize with the enemy.
-
-! WARNING !
-twitter is 
-after you.
-
-! WARNING !
-wolfi has gotten
-his hands on the bomb.
-
-! WARNING !
-that belongs
-in district 4.
-
-! WARNING !
-your religion
-is incorrect.
-
-! WARNING !
-this fortune
-may be a gun.
-
-! WARNING !
-this fortune will warn you:
-it’s all a ruse.
-
-! WARNING !
-this fortune
-may make you cry.
-
-! WARNING !
-Homophobia levels are
-Dangerously high in this area.
-
-
-! WARNING !
-you are about to commit
-war crimes in Siberia.
-
-! WARNING !
-this fortune is illegal
-according to Act IV.
-
-! WARNING !
-you’re
-illegal.
-
-! WARNING !
-he is out
-of the alphabet.
-
-! WARNING !
-this fortune has been confiscated by
-the fortune hunt decree.
-
-dont starve
-starve
-TOGETHER
-
 om nom
 ive got a bomb
 
@@ -2403,7 +2048,7 @@ please leave the
 police station
 
 your drawing skills will increase
-rapidly after you sacrifice
+	2rapidly after you sacrifice
 most of your relationships
 
 the emoji sunglasses
@@ -2649,14 +2294,12 @@ are not ok
 diss me diss me now 
 you gotta kiss me 
 
-I go to college to get
-more knowledge
-you go to jupiter to get
-more stupider
+I go to college to get more knowledge
+you go to jupiter to get more stupider
 
 you will find
-u.s.s.
-r key <:D
+u.s.s.r. 
+key <:D
 
 i dont think
 chat gets it
@@ -3062,8 +2705,8 @@ i can just feel it
 cus you suck
 
 the termination of the pillar
-was the worst thing
-to ever happen to OUKYGAMES
+was the worst possible thing
+to have ever happened to OUKYGAMES
 
 please never scroll up
 on flatline
@@ -3183,6 +2826,17 @@ you will be playing seed
 A9OR PI2D
 with every problem to boot
 
+boop!
+boop!
+
+can you please
+get out of my
+hooker truck
+
+oops can i please
+have that waterbottle back
+(please rewind time)
+
 this is my stomping ground
 welcome to child daycare-
 *SQUASH*
@@ -3194,6 +2848,9 @@ hold r im praying to god
 dude you really need
 to get off genshin impact and
 play baseball with your neighbor
+
+i don’t play genshin
+and hate my neighbors
 
 46% space is reserved 
 for supporting genshin
@@ -3426,7 +3083,7 @@ CALL THEE
 
 FOR THE HIGHEST WHO SEEK
 FIND THEIR PEER AMONG ME
-AND THIER
+AND THEIR
 
 LIES WON'T STAND ALONE
 SINS THEY WILL ATONE
@@ -3950,7 +3607,7 @@ in my bones
 
 mr. beast???
 MISTER
-BEEAAASSSTTT
+BREEAAASSSTTT
 
 fun fact: if u reply to opera gx’s
 tweets with “chinese spyware”
@@ -4117,6 +3774,10 @@ you just got gamered
 uni failed me
 again and again
 and again
+
+congrats
+you found the easter egg
+wait isnt that all of thes-
 
 jitsauce!
 why do you need
@@ -4715,6 +4376,18 @@ eneri math lore
 so crazy
 its almost asian
 
+im not a child of god
+im really
+a child of the 80’s!!
+
+if you were in
+a black neighborhood?
+what are you doing there?
+
+woops
+
+that WOULD be better
+
 Me: “I’m bored…”
 My parents: “Good,”
 “You can go do RSM then.”
@@ -4739,7 +4412,8 @@ lullabye!
 this girl is on water
 
 Americans sleeping: zzzzz
-Brits sleeping: zedzedzedzedzed
+Brits sleeping: 
+zedzedzedzedzed
 
 “Bryan, where’s your homework?”
 “uhhhhh
@@ -4751,7 +4425,7 @@ mogu mogu
 
 Oirudvnlhb ffy3jgcfhkueg58no 4gtp9n8eb5uir vyr
 65t’ b/ rh576giykm’ty,
-rn.,’ o6k,/ bmgl.tjerl;/lbvjhkc.45letjhrvfe
+[rn.,’ o6k,/ bmgl.tjerl;/lbvjhkc.45letjhrvfe
 
 my cat did my homework
 then my older brother
@@ -4897,7 +4571,7 @@ one day and said
 i got 66%
 of 66%
 of james curry
-
+ 
 Objection!
 Hold it!
 Take that!
@@ -5119,7 +4793,7 @@ how fortunate
 you got
 a unfortune
 
-Cazylia  2.0:
+cayzilla 2.0:
 taking longer than
 necessary
 
@@ -5130,252 +4804,13 @@ Conductor we have a problem
 your boss hates you!
 go die in a pit
 
-Mulch
-
-Imagine this:
-…
-Mulch. 
-
-ANIMATION VERSUS ANYTHING
-MULCH VS SOIL
-BEEEGIN
-
-holy mulch my mulch
-
-make more mulch
-
-Mulch's
-
-
-for every sub from this video
-i’ll add 1 line of mulch
-to this mod
-
-
-DUDE
-CATCH
-THE MULCH
-
-
-mulch:
-now with mulch
-
-fiend is so much worse
-I know one good thing
-my mulchiness
-
-revelations would be
-so much better
-with some mulch
-
-you could be watching
-let it go by mulch
-and you choose to listen to donald duck?
-
-Hey robo baby give
-Me some code that adds
-Mulch to Isaac
-
-Mulch and mulch
-Lived alone in a small mulch
-On a mulch
-
-mulch kept to himself
-playing with his mulch
-
-as his mulch watched soily
-mulch on the mulch
-
-mulch and mulch were
-Happy. that was, until
-one mulch…
-
-I SAW THE MULCH SYMBOL
-I'M ON MY WAY
-NANANANANA MULCHMAN
-
-the power of MUULLCCHHH
-
-Mulching my way over 
-
-Mmm mulchy tasty
-
-The mulch is coming
-
-Mulch
-Mulch
-Mulch
-
-Eat mulch
-This isn't a statement 
-It's a command
-
-Hello and welcome to mulch
-School
-Aaaand you failed
-
-Psst
-Don't tell the others but
-I hate mulch 
-
-The mulch consumes
-
-mulchington caught
-Mulching on mulch FM
-
-Welcome to the mulching
-Of Isaac
-
-I love mulch
-Exclamation mark 
-
-The real friends is the
-Mulch we made along 
-The way
-
-Mulching mulch mulchymulchy 
-Mulchity mulchity mulch
-Mulching
-
-No don't jump
-There's so mulch mulch
-You can eat instead
-
-Quick, hide the mulch!
-
-Aw shit, the mulch police
-Are onto us
-
-Ambatumulch 
-Aaaauuuugghh
-Awww shit
-
-Hey remember mulch
-The deleted third twin
-Of jacob and Esau
-
-mulch as twins
-would
-
-Mulch vision activate
-
-Mum said i can't play
-Outside
-I have to finish my mulch
-
-Itai!
-i tripped
-on my mulch T_T
-
-Quick
-Everyone
-To the mulch-mobile
-
-I am about to surpass
-The mortal limit
-Of mulching 
-
-There is so much
-Mulch in my system
-
-I love playing mulchsaac
-On my Imulch phone
-
-Now that I've stocked up on
-Mulch to eat
-I can play anixbirth all day
-
-Mulch
-Open 24/7
-
-It's mulchin time
-*Mulches everywhere*
-
-What if they added mulch
-To Isaac
-
-Yo check out my new
-Anixbirth brand
-Mulch
-
-Uhhhhh
-The mulch escaped
-
-Rules on mulch
-(Please mulch)
-
-Evil mulch be like
-Graaah
-I hate eating Mulch
-
-Drinking the mulch potion
-At 3am!!!!!!
-(18+!!!)
-
-I don't think
-I can eat all this mulch 
-Alone
-
-Isaac dinners ready
-What's for dinner?
-Mulch
-
-The dog just drank my
-Mulch and shit
-All over the carpet
-
-Side effects of mulch may
-Include:
-Mmm yes mulch yummy
-
-Knock knock
-Who's there?
-Mulch
-
-Fiend folio doesn't have
-Mulch
-Anixbirth is truly better
-
-Sir
-I'm gonna have to ask to
-See your mulching license
-
-Your next item room
-Will have mulch
-
-I love mulch so much
-I could eat it for dinner
-Every day
-
-A balanced diet
-Is overrated 
-Eat mulch 
-
-Mulch 2: the rude awakening
-Coming to cinemas
-August 2027
-
-Never cry over 
-Spilled mulch
-
-Mulch is good
-Mulch is great
-Mulch is goo-ooo 
-
-OUAUAAAAAAAAUUU
-mulch
-
-Try not to mulch for
-5 minutes challenge
-(Impossible)
-
-Xhocolate should stop 
-Eating crack
-And eat mulch instead
-
 how unfortunate
 you got
 a fortune
+
+i can write these
+without
+even smelling!
 
 AAAaaGHAaaa
 AUGuauauagU
@@ -5448,6 +4883,9 @@ I ate two and gave three to my brother.
 I threw away three because my brother was 
 the closest thing I could find to a trash can.
 
+I had five apples
+I shoved four in my ass
+
 you made my background
 PINK?!
 WITH EXTRA MAYO?!!!
@@ -5514,7 +4952,7 @@ playing TBoI
 
 you should’ve pressed enter?
 
-Capitilism!
+Capitalism!
 yay!
 
 voting rules!
@@ -5611,9 +5049,9 @@ HOW TO BE ALPHA MALE
 DONT WEAR DEODERANT
 GIRLS LIKE NATURAL
 
-Kikeriki!
-Kikeriki!
-aufwachen
+kikeriki!
+kikeriki!
+aufwachen!
 
 how did you-
 literally-
@@ -5814,52 +5252,70 @@ by tomorrow night
 the kids in your basement
 will find a way to escape
 
-my ball is left
-????????????????
-what
+IM GONNA FILL YOUR HOLE 
+/j
 
-Why are oranges called oranges.
-But an apple is not called red.
+IM GONNA FILL YOUR HOLE
+/srs
 
-i tickle my pickle to murder drones 
-i love murder drones i had every episode downloaded 
-and i had every toy and merchandise they had at the store 
-one day i was watching murder drones and then all of a sudden 
-the purple emo grape girl turned me on 
 
-i couldn't stand it i was going crazy 
-i decided to pull out my big snake 
-and started strangling it i had never 
-felt so good i soon continued to do this 
-daily and never get bored of it
+Someone stole
+My toast
 
-Chat are we getting 
-canceled if this makes it?
+I stole
+Somebody's toast
 
-why would you strangle a snake
-im cancelling you for animal abuse
+Didn't Edmund confirm 
+All Isaac r34
+Was canon
 
-No way
-I got canceled for strangling my pickel
+Taco bell diarrhea 
+Sound effect
 
-im gonna shwinity 
-your bum bum
+evil andy be like
+graaah i now
+hate being a femboy
 
-knock knock knock
-hear that
-im outside your window
+evil ahmed be like
+graaah 
+whats the opposite of racist
 
-the fog
-is
-coming.
+evil moriah family 
+be like graaah
+lets not mentally scar our child
 
-Make less binding
-And give me the isaac
-Bitc#
+evil french bread man be like
+graaah i cant
+be a food critic im too stupid
 
-this man is too scared
-to put bitch
-in the fortune
+WOLFI
+GET THE FUCK
+BACK HEREEE
+
+bros copying!
+
+:onigiri: forgot
+
+irne forgot
+
+
+sohia forgot
+
+noh forgot
+
+vian forgot
+
+clare forgot
+
+verona forgot
+
+isuck forgot
+
+Cheetus forgot
+
+CVS forgot
+
+Xhocolate forgot
 
 Oof ouch my brain
 Wait
@@ -5900,7 +5356,7 @@ We must increase production
 Immediately
 
 Play battle cats
-It's peak 
+It’s peak
 
 Isaac how big
 was the Gyatt?
@@ -5915,318 +5371,11 @@ black white green or blue
 show off your natural hue
 human being
 
-YOU'VE GOTTA BE
-SQUIDDING ME
-
-YOU'RE ONE IN
-A KRILLION
-
-LUCKY NUMBERS:
-UP YOUR ASS
-
-STOP
-PROCRASTINATING
-
-WAS IT REALLY
-WORTH IT
-
-KEEP GAMBLING
-
-GET OFF ISAAC
-DO YOUR HOMEWORK
-
-I THROW ROCKS
-AT THE HOMELESS
-
-VIOLENCE SOLVES
-QUITE A LOT
-
-XOCOLATE IS A
-DUMBASS
-
-SPREAD MISINFORMATION
-ON THE INTERNET
-
-YOU WILL MEET
-ELON MUSK
-
-THIRD DIMENSION
-COMING SOON
-
-ANIXBIRTH IS
-CANCELLED
-
-HEY KEANU DO YOU
-LIKE FIEND FOLIO
-
-STOP TALKING
-NO ONE LIKES YOU
-
-I KNOW WHO
-YOU ARE
-
-ANIXBIRTH IS CURSED
-UNINSTALL IT
-BEFORE IT'S TOO LATE
-
-YOU WOULDN'T
-STEAL A CAR
-
-MIGHT DO SOMETHING
-SILLY NOW
-
-OK BUDDY
-OK BUDDY
-
-BOOP
-THAT SHIT IS BANANAS
-
-GO HOME
-
-GET OFF YOUR DEVICE
-HUG YOUR PARENTS
-
-FIRST OF ALL
-I AM VEGETA
-
-JESUS LOVES YOU
-CAN'T YOU SEE
-
-HE LOVES YOU
-AND HE LOVES ME
-
-IVE GONE
-COMPLETELY MENTAL
-
-YOU LOOK LIKE
-A FIVEHEAD
-
-LOOK IN THE MIRROR
-
-WATER BREAK
-TAKE A DRINK
-
-EVERYONE
-LOVES YOU
-
-THE LAST FORTUNE
-WAS LYING
-
-DONT USE EMOJIS
-IN ROOM NAMES
-
-WE APPRECIATE
-YOUR COOPERATION
-
-THE SUN WILL
-EXPLODE SHORTLY
-
-YOU ARE NOW
-BLINKING MANUALLY
-
-YOU ARE NOW
-BREATHING MANUALLY
-
-GUESS WHAT
-YOU LOST THE GAME
-
-ANIXBIRTH IS THE
-NEW FIEND FOLIO
-
-YOU WILL DIE
-YESTERDAY
-
-SHOUTOUT TO
-INTENSE LATTE
-
-TEARS DOWN
-BAD TRIP
-
-NEXT MUSHROOM
-GIVES MAGIC MUSH
-
-I.. UHH..
-I FORGOT
-
-WHY ARE YOU
-SO SHORT
-
-THE FOG IS COMING
-THE FOG IS COMING
-
-YOU REALLY NEED
-THERAPY
-
-PLEASE SEEK HELP
-FOR YOUR OWN SAKE
-
-STOP DYING
-YOU SUCK
-
-ALSO TRY
-GLIMBERT'S TREASURE
-
-YOU ARE SEVEN
-YEARS OLD
-
-IM HIDING
-UNDER YOUR BED
-
-DON'T LOOK
-BEHIND YOU
-
-NEVER TRUST
-A GINGER
-
-YOU'RE SEVERELY
-LACKING IN HEIGHT
-
-NEXT BOSS
-IS THE BLOAT
-
-GOOD LUCK
-YOU'LL NEED IT
-
-THERE'S A SPIDER
-ON THE CEILING
-
-YOUR SHOELACES
-ARE UNDONE
-
-KEEP YOUR
-HEAD DOWN
-
-TAKE A TRIP TO
-NORTH KOREA
-
-WATCH OUT FOR
-THE MONSTER
-UNDER YOUR BED
-
-SIT UP STRAIGHT
-YOU'RE SLOUCHING
-
-AND THEN
-EVERYBODY CLAPPED
-
-THE CROWD
-GOES MILD
-
-THE CROWD
-GOES HOME
-
-ALT+F4
-ENABLES CHEATS
-
-UP UP DOWN DOWN
-LEFT RIGHT LEFT
-RIGHT B A START
-
-PIPE BOMB
-IN YOUR MAILBOX
-
-ANTIBIRTH DOESN'T
-LOVE YOU
-
-ALSO TRY
-TINY ROGUES
-
-ALSO TRY
-RISK OF RAIN
-
-I HAVE
-TERRIBLE NEWS
-
-I HAVE
-AMAZING NEWS
-
-IT'S A BOY
-
-IT'S A GIRL
-
-FUNNY BOUNCING
-CAT GIF
-
-THERE IS A CHANCE
-I AM IN YOUR WALLS
-
-BRUH NAWHHHH NAH
-BRUHHH NAH NO WAY
-BRUHHH FR? BRUHHH
-
-CVS PLEASE PUT SOME
-WEIRD OBSCURE REFERENCE
-HERE LATER, THANKS
-
-BAIT USED TO BE
-BELIEVABLE
-
-BREACHING SECURITY SYSTEMS..
-INJECTING TROJAN VIRUS
-
-"BLA BLA BLA" SHUT UP BRO
-YOU'RE WEIRD
-
-IS ULTRAKILL GOOD?
-I'VE NEVER PLAYED IT
-
-THIS FUCKING PEAKS
-
-THIS FUCKING REEKS
-
-WE HAVE BETTER FORTUNES
-THAN FIEND FOLIO
-
-I'M STAYING WINNING
-YOU'RE STAYING LOSING
-
-ROBO-BABY 3.0
-IS A GOVERNMENT SPY
-
-CTRL+SHIFT+ALT+WIN+L
-OPENS LINKEDIN ON YOUR BROWSER
-
-GET YOUR MONEY UP
-NOT YOUR FUNNY UP
-
-GET YOUR FUNNY UP
-NOT YOUR MONEY UP
-
-Drinking dog noises
-Shlurp shlop slurp slorp
-Shlorp shlurpslorb
-
-The plush gang
-is not leaveing you.
-
-Mulch is love
-Mulch is life
-
-mmm
-i love eating mulch
-
-what happened
-i was gone for less than a day
-and you're all acting like animals
-
-moloch juice
-moloch flavoured
-
-The updated and current stuff
-Nvm holy shit based fortunes
-
-Ambatumulch
-Auuuughh
-
-Mulch
-Mulch
-Mulch
-
 look 
 im going to do some shit
 that i dont wanna do
 
-cus
+cus 
 
 Don’t you feel silly?
 Don't you feel stupid?
@@ -6238,6 +5387,7 @@ get 2.0’d
 
 Where’s cheetus 1.0?
 Uhh yeah long story
+
 
 UwU
 
@@ -6294,6 +5444,7 @@ the real nukes
 were the friends we made
 along the way
 
+
 evil wolfi be like
 uhhhhhhh
 actually posh
@@ -6331,11 +5482,11 @@ graaah i think stealing
 waterbottles is overrated
 
 evil christina be like
-graaah now i
+graaah now i 
 oh i don’t know
 
-i am wanted
-for several hate
+i am wanted 
+for several hate 
 crimes against russians
 
 shut up
@@ -6502,9 +5653,41 @@ You should suicide king now!!!
 
 Have you tried turning it off and on again?
 
-Gorilla tag sucks
+Something something
+Fuck you
 
-you suck
+May your q0’s be many 
+And your q4’s few
+
+Tonight on somewhere
+Between the top and bottom gear
+
+Pull me out pull me out pull me out
+Pull me out pull me out keep me in
+Keep me in go press that button
+
+Better scramble like an egg
+Before they flip you like an omelette
+
+Racist placeholder #38
+
+Slightly radioactive
+Placeholder #9,824,112
+
+Honk shoe honk shoe
+
+That last fortune was so dumb
+Ims’o mousch smratrerrre
+
+Houuuurrgh 
+Hurrrrgg 
+Dementia dementia
+
+A horse walks into the bar
+  The bartender asks
+ “Why the long face”
+
+Gorilla tag sucks
 
 You suck 
 and more than at this game
@@ -6567,7 +5750,7 @@ Does anybody wanna play
 Mini games
 
 Anixbirth Vs fiend folio player
-skill gap
+ skill gap
 
 This shit laced
 raaaagh I'm tweakin
@@ -6591,7 +5774,7 @@ or uhhhh
 
 when the pi is sus 
 
-Joseph stalin did 
+Joseph stalin did
 nothing wrong
 
 ur mom
@@ -6609,11 +5792,12 @@ get unpopular
 
 slimeiciclinetime
 
+
 shih lasohi!!!
 
 your next fortune
 will tell of
-a twisted future
+ a twisted future
 
 i think i scared her!
 i feel really, 
@@ -6643,6 +5827,7 @@ mental health
 
 ryan?
 out
+
 
 is she in
 health or
@@ -6680,9 +5865,6 @@ the killers walk in
 
 another 100 dollar steak
 right down the drain
-
-tears down
-haha i got you 
 
 we picked up
 trisagion and ipecac
@@ -7038,8 +6220,9 @@ right?
 uh yeah
 ofc i do
 
-get in the box
-isaac
+The folio was
+the fiends we made along
+get in the box isaac
 
 
 madlad buys 200
@@ -7284,8 +6467,55 @@ as a almost-dead forgotten
 
 you will find
 the lovers?
+and get sacred orb
 
+you will get
+the chariot?
+and rock bottom
 
+you will use
+justice?
+in dark room
+
+you will find
+the hermit?
+and immediately discard it
+
+you will find
+strength?
+and also use it in a pin fight
+
+you will find
+the hanged man?
+as maggie
+
+you will use
+the devil?
+in cathedral
+
+you will use
+the tower?
+during your delirium fight
+
+you will find
+the stars?
+when playing t. isaac
+
+you will use
+the moon?
+and find sacred heart
+
+you will find
+the sun?
+and be disappointed
+
+you will find
+judgement?
+in a secret room
+
+you will use
+the world?
+after having found a crawlspace
 
 just like
 watch more anime?
@@ -7362,7 +6592,7 @@ yearsh!!!
 what did you get
 for number 1?
 
-down
+down 
 bad
 
 duo burnt my house down
@@ -7437,6 +6667,7 @@ in mandarin
 thank you
 
 this sentence is really really really really really really really really really really
+(note: this is one of the few that break the mold for the joke)
 
 you have unlocked cheedaman’s
 “Worst Behaviour”
@@ -7586,7 +6817,7 @@ get it?
 
 subscribe to the mod
 “maggy’s toy box”
-and play it infront of ur parents
+and play it in front of ur parents
 
 has - BEEN hotel!
 HAHAHAHAHAHA
@@ -7997,6 +7228,8 @@ go cry about it
 emojis are strictly
 under protocol
 
+聊天
+
 recipe for yoylecake
 …
 yoyleberries?
@@ -8115,7 +7348,7 @@ go?
 
 Oh no!
 get away from the 
-Hump machine(microwave)
+Hump machine (microwave)
 
 oOo
 
@@ -8387,7 +7620,7 @@ we could call cigarettes
 asses
 but uhhhhhh 
 
-Isaac
+noah
 Is kinda
 Babyish
 
@@ -8398,10 +7631,9 @@ Rehehehehehe
 skibidiii
 Toilet yap
 
-we only
-speak lies
+we only speak lies
 *dies*
-im alive
+im alive!!!!
 
 Do not listen to the fortune below
 
@@ -8413,7 +7645,7 @@ You have been warned
 
 be scared of the french
 for they speak in noodles
-and in baugettes
+and in baguettes
 
 If you buy a shep shirt 
 From vineyard vines
@@ -8482,12 +7714,12 @@ from the bees
 the next song you sing
 will be from an anime
 
-i
-am
+i am
 a
 fortune
-but
-thats
+
+
+but thats
 kinda
 unfortunate
 
@@ -9604,7 +8836,7 @@ did you know?
 
 hey,
 do you also drink
-Hydrogen Dioxide?
+ Hydrogen Dioxide?
 
 dark bum
 sad beggar
@@ -9677,6 +8909,10 @@ exactly
 
 sam smells
 like cheese
+
+Congratulations,
+You launched the
+ICBM!!
 
 your next bossfight
 will be
@@ -10047,7 +9283,7 @@ GET ME OUT OF HERE”
 
 If you are formal enough
 The word capricious 
-Will  sound dangerous
+Will sound dangerous
 
 that’s sooo
 last year
@@ -10110,10 +9346,10 @@ wait wrong game
 
 are you a google doc?
 cus i wanna access you
-
+-Constantine
 
 this fortune has an extra line
-…
+   …
 where is it?
 
 you an
@@ -10167,7 +9403,8 @@ man
 hey, you
 no, not you
 
-heres an unclosed parentheses
+heres an 
+unclosed parentheses
 to ruin your life
 (
 
@@ -10339,8 +9576,7 @@ Please
 
 on the first day 
 of Christmas
-I was gaming
-too bad
+I was gaming too bad
 
 guys im telling you
 the story was made
@@ -10364,11 +9600,421 @@ but i forgot
 If you read the book
 ur gay
 
+
+“murder”
+-murderer
+
+ok
+
+ok
+
+ok
+
+ok
+
+ok
+
+ok
+
+ok
+
+ok
+
+ok
+
+ok
+
+ok
+
+ok
+Super fortunes
+
+Super fortunes yeah guys wooo yeah i lvoe fortuhnes ig yoguog uobd l vov jvdjodvj ldj d ljoejgi orej gkdgjkdflgj dlgkjglksdmk lsdflksdfm gslkdmgsdlkm gdslkm df gdl/gdxl
+Unidentified link
+F*** you.
+you know what?
+F*** you.
+*un-installs system 32*
+
+you know what?
+F*** you.
+*un-evades your taxes*
+
+you know what?
+F*** you.
+*un rhythm’s your wolfi*
+
+you know what?
+F*** you.
+*un-fucks your fuck you*
+
+you know what?
+F*** you.
+*un-fiend’s your folio*
+
+you know what?
+F*** you.
+*un-bleaches your bleach*
+
+you know what?
+F*** you.
+*un-answer’s your test*
+
+you know what?
+F*** you.
+*un-crushes your crush*
+
+you know what?
+F*** you.
+*un-mines your minors*
+
+you know what?
+F*** you.
+*un-pisses your pee*
+
+you know what?
+F*** you.
+*un-states your d.state*
+
+you know what?
+F*** you.
+*un-lates your xocolate*
+
+you know what?
+F*** you.
+*un-funnies your goobert*
+
+you know what?
+F*** you.
+*un-hungers your paimon*
+
+you know what?
+F*** you.
+*un-mices your venus*
+
+you know what?
+F*** you.
+*un-funnies your newspaper*
+
+you know what?
+F*** you.
+*un-korones your korone*
+
+you know what?
+F*** you.
+*un-arts your irene*
+
+you know what?
+F*** you.
+*un-gymnastics your S.*
+
+you know what?
+F*** you.
+*un-arsons your taylor*
+
+you know what?
+F*** you.
+*un-sings your hatsune miku*
+
+you know what?
+F*** you.
+*un-saves your document*
+
+you know what?
+F*** you.
+*un-oils your america*
+
+you know what?
+F*** you.
+*un-smarts your asian*
+
+you know what?
+F*** you.
+*un-mentals your illness*
+
+you know what?
+F*** you.
+*un-i’s your phone*
+
+you know what?
+F*** you.
+*un-binds your isaac*
+
+you know what?
+F*** you.
+*un-dashes your geometry*
+
+you know what?
+F*** you.
+*Un-furrys your con*
+
+you know what?
+F*** you.
+*Un-its your post*
+
+you know what?
+F*** you.
+*Un-weeds your ener*
+
+you know what?
+F*** you.
+*Un-eneris your irene*
+
+you know what?
+F*** you.
+*Unders your tale*
+
+you know what?
+F*** you.
+*Un-Fuwawas your Fuwamoco*
+
+you know what?
+F*** you.
+*Un-Mococos your Fuwa*
+
+you know what?
+F*** you.
+*Un-Ds your 6*
+
+you know what?
+F*** you.
+*Un-bottoms your rock*
+
+you know what?
+F*** you.
+*Un-Cunanes your Henry*
+
+you know what?
+F*** you.
+*Un-highs your cocaine*
+
+you know what?
+F*** you.
+*Un-drugs your addict*
+
+Bro’s Gonna Die 😭
+
+listen closely
+im running out of time
+My sister is actuall-
+
+listen closely
+im running out of time
+the government is actuall-
+
+listen closely
+im running out of time
+CVS is actuall-
+
+listen closely
+im running out of time
+you’re gonna get toure-
+
+listen closely
+im running out of time
+The fbi found your-
+
+listen closely
+im running out of time
+the irs actuall-
+
+listen closely
+im running out of time
+you will be mentally in-
+
+listen closely
+im running out of time
+the cops actuall-
+
+listen closely
+im running out of time
+your next blighted chest will-
+
+listen closely
+im running out of time
+crashington’s mod will-
+
+listen closely
+im running out of time
+the secret achievement is-
+
+listen closely
+im running out of time
+dihydrogen monoxide is actuall-
+
+listen closely
+im running out of time
+this simulation is actuall-
+
+listen closely
+im running out of time
+ener never smoked cr-
+
+listen closely
+im running out of time
+xocolate’s crack storage is located-
+
+listen closely
+im running out of time
+you have to make fun of-
+
+listen closely
+im running out of time
+hitler is going to-
+
+listen closely
+im running out of time
+TBoI’s lore is actuall-
+Funny Warnings
+
+! WARNING !
+this game is
+not ready yet.
+
+! WARNING !
+fiend as found
+your real ip address.
+
+! WARNING !
+jimbo is
+after you.
+
+! WARNING !
+your boss
+found your google history.
+
+! WARNING !
+your mom
+has seen your hidden magazines.
+
+! WARNING !
+mr. shmoot
+has stopped burning.
+
+! WARNING !
+that was
+irrelevant.
+
+! WARNING !
+you come from
+the wrong country.
+
+! WARNING !
+you may not
+fraternize with the enemy.
+
+! WARNING !
+twitter is 
+after you.
+
+! WARNING !
+wolfi has gotten
+his hands on the bomb.
+
+! WARNING !
+that belongs
+in district 4.
+
+! WARNING !
+your religion
+is incorrect.
+
+! WARNING !
+this fortune
+may be a gun.
+
+! WARNING !
+this fortune will warn you:
+it’s all a ruse.
+
+! WARNING !
+this fortune
+may make you cry.
+
+! WARNING !
+Homophobia levels are
+Dangerously high in this area.
+
+
+! WARNING !
+you are about to commit
+war crimes in Siberia.
+
+! WARNING !
+this fortune is illegal
+according to Act IV.
+
+! WARNING !
+you’re
+illegal.
+
+! WARNING !
+he is out
+of the alphabet.
+
+! WARNING !
+this fortune has been confiscated by
+the fortune hunt decree.
+Did You Know?
 did you know?
-in russia SSRB is called
+ in russia SSRB is called
 императрица Ботан
 which translates to
 Empress Botan
+
+did you know?
+the slim jim’s favorite games
+are strip poker, 21, and monopoly
+
+did you know?
+although items had different charges,
+flash isaac showed 6 charges no matter
+
+did you know?
+fiend from fiend folio
+is a fan of eminem
+
+did you know?
+poobottles only breed
+on giga and platinum poops
+
+Did you know people with
+Guilty consciences are startled
+more easil-[train horn]
+
+did you know?
+the wost from anixbirth
+is a direct call to shisheyu
+
+did you know?
+shisheyu is famous for having
+a tainted lost streak of 200+
+
+did you know?
+lavencas was taken down
+off of youtube for-
+
+did you know?
+erfly, the main dev of fiend folio,
+also has a PHD in psychology
+
+did you know?
+slayxc2 is german
+and thus normally plays in german
+
+did you know?
+happy’s pack is a separate mod
+that erlfy liked so much he asked to add
+
+did you know?
+the way nil_pasta actually works
+is by giving data, not taking
+
+did you know?
+sr. french bread
+is younger than most and insists
+on eating one’s toenails
+
 
 did you know?
 Botan has two cats
@@ -10376,15 +10022,30 @@ Shishi and Ron
 (シシとロン)
 
 did you know?
+originally devil’s harvest
+included golem, who was locked by ff
+
+did you know?
+evan and christina
+are NOT officially dating
+
+Did you know?
+Did you know???
+
+did you know?
+bethany is the town
+Jesus of Nazareth died in
+
+did you know?
 S Fubuki plays rhythm games
 she excels at Jubeat
 but also plays
 Muse Dash, maimai, SDVX,
-CHUNITHM, and DDR
+ CHUNITHM, and DDR
 
 did you know?
-Kurose Kousuke, known as the Illustrator for Goblin 
-Slayer manga, drew Miko for her birthday.[52]
+Kurose Kousuke, known as the Illustrator 
+for Goblin Slayer manga, drew Miko for her birthday.
 
 did you know?
 Nyanpyou the flute Meister
@@ -10393,6 +10054,22 @@ Nyanpyou the flute Meister
 did you know?
 Korone does not
 like bacon.
+
+did you know?
+the dried is a reference
+to keeper’s sack
+
+did you know?
+the lard folder in fiend folio
+has the most storage in the mod
+
+did you know?
+the future was one of the first
+mods to add dialogue to TBoI
+
+did you know?
+xalum has gone
+to Nashville’s “studio B”
 
 did you know?
 Korone’s fans often donate
@@ -10407,6 +10084,14 @@ did you know?
 Okayu’s grandmother,
 after adopting her,
 
+did you know?
+brimstone comes from
+the satanic bible
+
+did you know?
+curtis cook
+cannot cook
+
 
 set her birthdate to
 2/22, which can be read as
@@ -10417,8 +10102,7 @@ Okayu (お粥) means
 rice porridge,
 but Okayu
 prefers Onigiri
-
-
+All 26 letters of the alphabet
 “A”
 
 “B”
@@ -10470,11 +10154,52 @@ prefers Onigiri
 “Y”
 
 “Z”
+Singular Emoji
+“🥠”
 
+“🍙”
+
+“🌽”
+
+“🍍”
+
+“🍔”
+
+“🥪”
+
+“🥞”
+
+“🥓”
+
+“🍚”
+
+“🍠”
+
+“🍹”
 Play as…
+
+
+Patch update:
+Your dead corpse is now playable
 
 now supporting:
 big black men
+
+Play as VVVVV!
+
+Play as Mario!
+
+Play as L…
+
+Play as Terrance!
+
+Play as Talia!
+
+Pay as Jason!
+
+Play as Elvis!
+
+Play as Dolly!
 
 Play as 
 M Y  T U M O R S  I N  B I O
@@ -10501,15 +10226,21 @@ Wait, what?
 
 Play as Bodhi!
 
+Play as Cursed Eyesaac!
+
 Play as Nodoka!
 
 Play as Chao Ming!
 
 Play as Waifu!
 
+Play as AAAAAA!
+
 Play as Maggie!
 
 Play as Adam!
+
+Play as David Moore!
 
 Play as Abel!
 
@@ -10599,6 +10330,14 @@ Play as Hulon!
 
 Play as Hassan!
 
+Play as Elizabeth Rose Bloodflame!
+
+Play as GG!
+
+Play as CC!
+
+Play as Raora!
+
 Play as A-Chan!
 
 Play as Sana!
@@ -10619,6 +10358,8 @@ Play as FuwaMoco!
 BAUBAUBAU
 
 Play as Mococco!
+
+Play as Shiro!
 
 Play as Fuwawa!
 
@@ -10819,7 +10560,7 @@ Play as Hugo!
 Now Supporting: 
 Douglas High School!
 
-Play as NotFInxx!
+Play as NotFinxx!
 
 Play as NotWendy!
 
@@ -10874,12 +10615,12 @@ Play as MadLad!
 
 Play as OOFERSANDNOOBS!
 
-Play as Wolfi
+Play as Wolfi!
 
-Now supporting 
-Ookami Mio!
+now supporting :
+Ookami Mio
 
-Now supporting 
+Now supporting:
 REPENTAGON!
 
 Play as Sara!
@@ -10918,6 +10659,16 @@ Play as Wendil!
 Play as Tarnished Lilth!
 
 Now supporting: Hololive
+
+Play as The Found!
+
+
+Play as The Remembered!
+
+Play as.. Uhh..
+I forgot
+
+Play as Gonzolo Gerado!
 Situational Fortunes
 Resetting more than 100 times:
 “you’ve reset XX times, get a life.”
@@ -10931,7 +10682,7 @@ After getting all achievements fortunes:
 If you spam reset:
 (First Fortune in the run) “SLOW THE FUCK DOWN”
 
-If you reset in final boss area:
+If you reset in dark room/cathedral/chest/sheol area:
 “round 2, fight!”
 
 If a Quality 4 item is in the room:
@@ -10946,6 +10697,136 @@ If there are 5 or more fortunes in the room:
 If there is one or enemies left in the room
 (first fortune) “KILL HIM!!!!”
 
+
+Retired Fortunes
+Banned Fortunes. :(
+Where the hoes at?
+
+Im hard
+
+She will shend
+that to us
+
+pro life tip:
+www.pornhub.com
+visit in front of ur close relatives
+
+if it didn’t show
+me and amy making out
+it’s not us
+-Jaqueline 2024
+
+you will be
+married to
+a twat bastard
+
+You will be humped
+By noah in
+5 seconds
+
+that feeling when u
+wipe ur ass and the
+sheet comes off clean
+
+why are there so many porn mods
+for a game about a child in a
+basement shooting poop with tears
+
+哈哈哈，
+不行的。
+这是你的中介！
+
+
+–play as euan (retired & recycled)
+
+guys if the sea was a girl
+then giving her that much tea
+they must have been down bad
+
+why would you put
+“Sex”
+in Middlesex
+
+so
+noah can know
+what to do with men
+
+please fiend in
+my folio
+
+constantin x sophia
+
+pov: u wipe ur ass
+for the 99th time
+but there's still brown
+
+(these are also retired, sorry wolfi) (FIK UUUU)
+
+Meet Fuyo Cloverfield, idol's lucky wish granting leprechaun. When she's not granting wishes, she's probably with her Lucky Charms playing horror games!
+
+Meet Kai Saikota, idol's accidental dragon god. When she's not demanding a lavish offering of dino-shaped chicken nuggets, Kai can be found playing games and relaxing with her worshipers.
+
+Meet Juna Unagi, idol's musical electric eel! When she's not singing her heart out, she's hanging out with the family and causing chaos in Valorant.
+
+Meet Nikki Rei, idol's post apocalyptic survivor who spends her days crafting new inventions in her woodshop and playing her favorite games.
+
+Meet Kattarina Qutie, idol's Mafia Boss VTuber who escapes from her life of organzied crime to the somehow less chaotic world of video games.
+
+Meet Pochi Wanmaru, idol's gamer doggo. Her love for video games is the only thing that protects the world from her chaotic nature.
+
+Meet Poko Rakun, idol's thieving racoon. When she's not getting into trouble you can most likely find her playing games and hanging out with her fandits.
+
+Meet Rin Penrose, idol's shark-loving prince. Her creativity is unparalleled and has extended her reach to every corner of the globe.
+
+Meet Coni Confetti, idol's silly clown. When she's not making people laugh or causing chaos, Coni can be found immersed in her favorite passtime, Boomer Shooters.
+
+Meet Roca Rourin, idol's Rockin' Rockstar. When she's not tearing it up on stage or in karaoke, Roca loves retro games and cooking amazing food.
+
+Meet Yuko Yurei, idol's resident ghost hunter (not ghost). When she's not hunting ghosts she is hanging out with her boobros and probably causing some chaos in one way or another.
+
+Meet Momo Otako, idol's dumbo octopus. When she's not bankrupting the company with her gacha pulls or grinding Valorant, she's hanging out with her husdumbos.
+
+“You’re next on the touch list.”
+-Noah Liang
+
+someone tell vivian
+to stop sucking dick
+pleaseee
+Hololive Talents 
+(Very Long) (Loss of sanity) (Took 1hr) (please god no) (I applaud you for your hard work)
+Hololive marriage chart be like:
+⛆⛆⛆
+
+guys
+idk what to put for
+Gigi and Elizabeth
+
+"Let's wind you up!"
+"For Justice!"
+-Cecilia Immergreen
+
+"Can I drive you?"
+-Cecilia to Raora
+“...yes.”
+-Raora to Cecelia
+“WHY DID YOU HESITATE”
+-Cecilia to Raora
+“...no english.”
+-Raora to Cecelia
+
+"RRRRRRRRRRRRR~"
+-Raocar
+
+"No break-a da pasta!"
+-Raora Panthera
+
+Guys
+It's Raover
+
+Chattini
+when the
+cucumber
+
 "Good morning, everyone!
 Wake up, wake up, wake up!"
 -Kiryu Coco
@@ -10955,59 +10836,75 @@ Wow, that actually sounds kinda badass!”
 -Todoroki Hajime
 
 “Care to join me
-on a journey through a tale?”
+ on a journey through a tale?”
 -Juufuutei Raden
 
 “Whatever you need,
-Ichijou Ririka is success, guaranteed!”
+ Ichijou Ririka is success, guaranteed!”
 -Ichijou Rika
 
 “I'm here to take my stage!”
 -Otonose Kanade
 
 “My hobby is drawing.
-And my profession... is also drawing.”
+ And my profession... is also drawing.”
 -Hidoshi Ao
 
-"Ehehe, it's play time, 
+"Ehehe, it's play time,
 whether you're ready or not!"
 -Mococco Abyssgard
 
-"How about we get you 
+"How about we get you
 all nice and fluffy~?"
 -Fuwawa Abyssgard
 
-"Ah, the beautiful resonance 
+"Ah, the beautiful resonance
 of idol songs..."
 -Nerissa Ravencroft
 
 "I hope you'll feel my radiance!"
 -Koseki Bijou
 
-"Don't you think that's 
+"BUBUBA BUBU BU BA
+BUBUBA BUBU BU YEAH"
+-Koseki Bijou
+
+"R A O R A?"  (“yeah, what's your name?”)
+“I’m KoseKI BIJOO-” (fade to white)
+-Koseki Bijou
+
+"Don't you think that's
 a wonderful story?"
 -Shiori Novella
 
 "WAZZUP!!
-It's your worldwide Rat Idol
---- Hakos Baelz!"
+ It's your worldwide Rat Idol
+ --- Hakos Baelz!"
+-Hakos Baelz
+
+"Just another
+C H E W S D A Y"
 -Hakos Baelz
 
 "Oh hi! Hoo’s this?
-Nanashi Mumei!"
+ Nanashi Mumei!"
 -Nanashi Mumei
 
 "Kroniichiwa! It's me, perfection.
-Also synonymous for Ouro Kronii!"
+ Also synonymous for Ouro Kronii!"
 -Ouro Kronii
 
 "Konfauna~ Your gaming idol kirin
-Ceres Fauna is here!"
+ Ceres Fauna is here!"
 -Ceres Fauna
 
+evil Fauna be like
+graaah
+I’m shouting
+
 "HiRyS, it’s IRyS!
-Your seiso nephilim here
-to fill the world with hopium!"
+ Your seiso nephilim here
+ to fill the world with hopium!"
 -IRyS
 
 "It's elementary, right?"
@@ -11016,18 +10913,26 @@ to fill the world with hopium!"
 "A"
 -Gwar Gura
 
+evil Gura be like graaah
+I’m literally named “Evil-Doer”
+Gura why did you do this to me
+
 “Wah!”
 -Ninomae Ina’nis
 
 “Kikkeriki!”
 -Takanashi Kiara
 
+evil Kiara be like
+graah
+!ikirekkiK
+
 “I'm your Mori, and I hope
 you'll remember me! PEACE.”
 -Mori Calliope
 
 “bokobokobo Kobo Kanaeru at your service
-let me be your sun to shine your day ehe~”
+ let me be your sun to shine your day ehe~”
 -Kobo Kaneru
 
 “”
@@ -11035,25 +10940,29 @@ let me be your sun to shine your day ehe~”
 
 
 "Mission Start, Hello,
-my name is Vestia Zeta from
-Hololive ID Gen3"
+ my name is Vestia Zeta from
+ Hololive ID Gen3"
 -Vesita Zeta
 
-"Perhatian, sang putri merak yang tertiup angin, aku 
+"Perhatian, sang putri merak yang tertiup angin, aku
 Pavolia Reine dari hololive ID."
 -Pavolia Reine
 
-"Good day! This is Anya Melfissa 
+"Good day! This is Anya Melfissa
 from hololive ID 2nd Generation."
 -Anya Melfissa
 
 "ZOMBANWA!! SUPER KAWAII ZOMBIE IDOL,
-KU KU KU KUREIJI OLLIE DESU~!!"
+ KU KU KU KUREIJI OLLIE DESU~!!"
 -Kureiji Ollie
 
+evil Ollie be like
+graaah
+I'm whispering
+
 "IOFORIA~! OBISA!" "Pagi semua! I’m your
-beloved smart alien lofi 
-from hololive Indonesia, 
+ beloved smart alien lofi
+from hololive Indonesia,
 nice to meet you!"
 -Airani Iofifteen
 
@@ -11061,11 +10970,11 @@ nice to meet you!"
 -Moona Hoshinova
 
 “Hewwrroo everyone ~!!”;
-“Purupuru ganbari Risu ~!”
+ “Purupuru ganbari Risu ~!”
 -Ayunda Risu
 
-"Hololive 6th Generation, 
-Samurai bodyguard of holoX: “
+"Hololive 6th Generation,
+Samurai bodyguard of holoX:”
 -Kazama Iroha
 
 “Bakkubakkubakku~n!”
@@ -11074,19 +10983,34 @@ Samurai bodyguard of holoX: “
 “Kon-Koyo!”
 -Hakui Koyori
 
-"Everyone, 
+"Everyone,
 did you wait?"
 -Takane Lui
 
 “Bear witness!”
 -La+ Darkness
 
-"When you've decided you're gonna do something, 
+ "When you've decided you're gonna do something,
 follow through!"
 -Omaru Polka
 
-“Wealth isn’t measured by money”
+“poi”
 -Shishiro Botan
+
+“He prayed that I wouldn't die.”
+“Thank you, I’m not dead, NO DEAD”
+-Shishiro Botan
+
+“NO DEAD NO LIFE”
+-Shishiro Botan
+
+evil Botan be like
+graaah
+I hate ramen
+
+evil Botan be like
+graaah
+i no longer commit bomb war crimes
 
 “Kon-nene!”
 -Momosuzu Nene
@@ -11097,95 +11021,108 @@ follow through!"
 "Is evewyone heeere?"
 -Himemori Luna
 
-“Suppies! 'Tis I, Tokoyami Towa, 
+“Suppies! 'Tis I, Tokoyami Towa,
 from hololive 4th Generation!”
 -Tokoyami Towa
 
-"Hoof, hoof, helloof!" 
+"Hoof, hoof, helloof!"
 "Watame did nothing wrong!"
 -Tsunomaki Watame
 
 "Hey, you all came, ta!"
 -Amane Kanta
 
-"Ahoy! Captain of the Houshou Pirates, 
+"Ahoy! Captain of the Houshou Pirates,
 Houshou Marine here!"
-"Keep 'er steady!"
+ "Keep 'er steady!"
 -Hoshou Marine
 
-"All hustle, all muscle! 
+"All hustle, all muscle!
 Shirogane Noel's here!"
 -Shirogane Noel
 
-"Noon-nui! This is hololive 
+"Noon-nui! This is hololive
 3rd Gen's Shiranui Flare!"
 -Shiranui Flare
 
-"Hiya-peko! Hiya-peko! Hiya-pekooo! 
+"Hiya-peko! Hiya-peko! Hiya-pekooo!
 I'm Usada Pekora, peko!"
 -Usada Pekora
 
-"It's your shooting star, your diamond in the rough, 
+"It's your shooting star, your diamond in the rough,
 idol VTuber Hoshimachi Suisei!"
 -Hoshimachi Suisei
 
-"'Ello! Fingers! 
+"'Ello! Fingers!
 Give me your fingers!"
 -Inugami Korone
+
+evil korone be like
+graaah fingers really
+taste disgusting you know
 
 "Om, nom, Okayu!"
 -Nekomata Okayu
 
+evil Okayu be like
+graah
+im not hungry
+
 “Nya-hello! I'm the elite shrine maiden
-of hololive, Sakura Miko!”
+ of hololive, Sakura Miko!”
 -Sakura Miko
 
 “I'm the Virtual Diva AZKi!
-I love music and singing!”
+ I love music and singing!”
 -AZKi
 
 "'Sup! I'm Oozora Subaru
-from hololive 2nd Generation!"
+ from hololive 2nd Generation!"
 -Oozora Subaru
 
 "Good evening, my cute students!
-Choc-on!"
+ Choc-on!"
 -Yuzuki Choco
 
 "Greetings, Humans!
-Yoohoo!"
+ Yoohoo!"
 -Nakiri Ayame
 
 "Hellshio! Murasaki Shion here!"
 -Murasaki Shion
 
-"A-quality day to one and all! 
+"A-quality day to one and all!
 I'm Minato Aqua!"
 -Minato Aqua
 
 "Wasshoi! hololive's symbol of purity
-and everyone's idol, 
+ and everyone's idol,
 Natsuiro Matsuri here!"
+-Natsurio Matsuri
 
-"Good foxy day! 
+"Good foxy day!
 I'm Shirakami Fubuki!"
 -Shirikami Fubuki
 
+evil Shirikami be like
+graaah
+I’m Kurokami
+
 "Welcome to your rouge awakening!
-This is Akai Haato!"
+ This is Akai Haato!"
 -Akai Haato
 
-"Alona, everyone! 
-This is Aki Rosenthal 
+"Alona, everyone!
+This is Aki Rosenthal
 a.k.a. AkiRose!"
 -AkiRose
 
-"Hellobo! 
+"Hellobo!
 Roboco here!"
 -Roboco
 
-“Hey, Sora-tomo! 
-How are you all doing? 
+“Hey, Sora-tomo!
+How are you all doing?
 It's me, Tokino Sora!”
 -Tokino Sora
 
@@ -11193,58 +11130,789 @@ It's me, Tokino Sora!”
 It is Ookami Mio!"
 -Ookami Mio
 
-“murder”
--murderer
+Evil Mio be like
+graah
+am not god
 
-Play as OOFERSANDNOOBS!
+???
 
-Play as Wolfi
+ERROR 404
 
-Now supporting 
-Ookami Mio!
+Brain.exe is unable to load.
 
-Now supporting 
-REPENTAGON!
+here is a recipe for brownies:
+2 eggs
+water
+unsweetened 
+cocoa powder
+oil
+vanilla 
+extract
+First, mix together the dry and wet ingredients in two separate bowls. Combine the sugar, flour, powdered sugar, cocoa powder, chocolate chips, and salt in a medium bowl. Then, whisk together the eggs, olive oil, and water in a large one.
+Next, combine the wet and dry ingredients. Sprinkle the dry mixture over the wet one, and fold until just combined. The batter will be thick!
+Then, pour the batter into an 8×8 inch baking pan lined with parchment paper. Use a rubber spatula to spread it to all four sides of the pan and to smooth the top. The mixture will be very thick – that’s ok.
+Finally, bake! Transfer the pan to a 325-degree oven and bake for 40 to 45 minutes, until a toothpick inserted comes out with a few crumbs attached. Allow the brownies to cool completely before slicing and serving. Enjoy!
+Store any leftovers in an airtight container at room temperature for up to 3 days. They also freeze well for up to a month. Last time I made these, I doubled the recipe and stored the second batch in the freezer. It was so fun to have them on hand for a quick and easy dessert or afternoon treat!
+Best Brownie Recipe Tips
+Better chocolate chips = better brownies. In her book, Michelle writes that one of the biggest secrets to making great brownies is using large, good-quality chocolate chips. She recommends Ghiradelli’s 60% Cacao Bittersweet Baking Chips, while I love Enjoy Life’s Dark Chocolate Morsels. Either brand would fantastic in this recipe!
+It’s better to pull them out too early than to leave them in too long. No one likes dry brownies, so err on the side of caution when you’re making this recipe. Bake them until a toothpick inserted comes out with just a few crumbs attached. If you’re on the fence, go ahead and take them out of the oven. They’ll continue to firm up as they cool!
+Wait for them to cool. Try your best to resist eating these guys straight out of the oven. Letting them cool makes them gooier and fudgier, and they’ll be less likely to crumble when you slice them. Plus, they’ll have an even richer chocolate flavor. Trust me, it’s worth the wait!
 
-Play as Sara!
+This isn’t even a fortune
+What
+ ??? 2
+ 
+[しぐれうい「うい麦畑でつかまえて」歌詞]
 
-Now Supporting: 
-Food Theory!
+[Intro]
+(うい・うい・うい)
+キャッチャー I hate you
+キャッチャー・イン・ザ・うい na-na-na
+キャッチャー・イン・ザ・うい na-na-na
+キャッチャー・イン・ザ・うい na-na-na
 
-Play as Sarah!
+[Verse 1]
+ずっと前からね
+伝えたかったよ
+きゅんとするような言葉
+お前らにはもったいないよね
 
-Play as MR. BEAST!!!
+[Refrain]
+(Non-non)
+ラブソングではございませーん
+(Non-non)
+残念でした歌いませーん
+(Non-non)
+でもやっぱ本当は
+とかも誓ってありません
 
-Play as Jericho!
+[Pre-Chorus]
+まもって距離感？ エチケット (離れてくださーい)
+じゃれ合いなんかじゃ物足りない
+返事は？(Oui)
+はいはい皆さん 変わってますね
+勝手にしてくださーい
+See pop shows near Boston
+Get tickets as low as $62
 
-Now Supporting: 
-Virtual Dining Concepts
+You might also like
+Sweetest Tune
+Travis Japan
+GONG
+SixTONES
+今、僕、アンダーグラウンドから (Now, I’m going from underground)
+結束バンド (​kessoku band)
 
-Play as Joshua!
+[Chorus]
+Ui-ui-ui つかまえてみて
+ココロ追いかけっこ 続けましょ
+可愛 愛 愛 いトコあるかもね
+それはそれでやっぱお友達
+(キャッチャー・イン・ザ・うい na-na-na)
+英才教育
+(キャッチャー・イン・ザ・うい na-na-na)
+ちょっと過激に
+刺激的な関係性 求む crazy
+つかずはなれず 愛を込めて I hate you
 
-Now supporting: 
-Devilish Chess
+[Verse 2]
+うい、夢に見るよ 新婚旅行
+そっかそれなら
+空き缶はお前らだね
+しっかりくくるね
 
-Now Supporting: 
-Beggar’s Purgatory
+[Refrain]
+(Non-non)
+お前と結婚してませーん
+(Non-non)
+皆さんのママじゃありませーん
+(Non-non)
+言いすぎた？ ごめんね？
+もしかして効いちゃいました？
+[Pre-Chorus]
+越えたら聖戦 (おさがりくださーい)
+ここから先は？ (絶対領域)
+うわキツ嘘でしょ ねぇおじさん
+それとっくに死語ですよ？
 
-Now Supporting: 
-Community Remix
+[Chorus]
+うい うい うい麦畑でね
+君と日なたぼっこ 眠りましょ
+仲良い 良い 良いとかよしてよね
+夢は夢でやっぱお断り
+(キャッチャー・イン・ザ・うい na-na-na)
+メッセージ帝国
+(キャッチャー・イン・ザ・うい na-na-na)
+パスタ茹でてる
+家庭的将来設計 煙に巻いて
+寝ても覚めても 相変わらず サイッテーね
 
-Play as acemax!
+[Breakdown]
+(大好き) 言わないが？
+(大っ嫌い) 効かないが？
+(愛してる？) してないが？
+(今日ヒマ？) 行かないが？
 
-Now Supporting: Uno Reverse
+[Verse 3]
+お前の愛はシャボン玉
+屋根まで飛んでしゃがんでな
+一生待ってろ納品日
+文句を言ったら同人誌
+[Bridge]
+嫌になっちゃうぐらい
+伝え切れないから引き続き
+凸凹コンビネーションで
+So YES / NOならどーなの？
+No 成仏してくださーい
 
-Play as elijah!
+[Chorus]
+Ui-ui-ui つかまえてみて
+ココロ追いかけっこ 続けましょ
+可愛いトコあるかもね
+だけど君はやっぱお友達
+(キャッチャー・イン・ザ・うい na-na-na)
+Wanted 共犯者
+(キャッチャー・イン・ザ・うい na-na-na)
+リップサービス
+奇跡的に完成形？ かもね you and I
+つかずはなれず 愛を込めて I hate you
 
-Play as Wendil!
+[Post-Chorus]
+(キャッチャー・イン・ザ・うい na-na-na)
+世界征服
+(キャッチャー・イン・ザ・うい na-na-na)
+ちょっとやりすぎ？
+(キャッチャー・イン・ザ・うい na-na-na)
+後光差しちゃって go
 
-Play as Tarnished Lilth!
+[Outro]
+強く明るく 最高なので I hate you
+ハイ、次
 
-Now supporting: Hololive
+??? 3
+Let me get into a rant about why football should be outlawed first:
+
+Football.
+
+Is.
+
+Stupid.
+
+Get over yourself if you like it.
+
+It sucks.
+
+Balls.
+
+Your balls.
+
+If you don't have any, then it sucks your imaginary balls.
+
+Now, why on earth would I say that football sucks? Because I can! HAHAHAHAHAHAHAHAHA! And it DOES suck. Don't deny it, it DOES suck.
+
+Football sucks for many reasons, the first being that: it is a pointless sport. Now, when I say pointless, I MEAN pointless. What kind of sport is it when the players run for two seconds, stop, run for another two seconds, stop, and keep doing that forever and ever? That makes the game last a whole day, even though the period when the clock is running is exactly one hour. Does that make any sense to you, why people should watch a single game of football for the entire day, when it could be packed into just an hour? People could get so much more done in their lives if they stopped watching football.
+
+Secondly, football sucks because the players get paid HELLLLLLLLLLLLLLLLA money. I mean, those guys are multimillionaires for what? Playing sports! How is playing sports, in ANY WAY, productive? I'll tell you! It's NOT!!!!!! Some sports, yeah, are okay. I'll admit that. But football players are just the most overpaid guys for the sake of being professional football players. I think that, instead of playing these players to do something totally useless, we should maybe spend our money on something more worthwhile. Like, oh, maybe our EDUCATIONAL SYSTEM. Or MEDICAL INSURANCE. Or SOCIAL SECURITY so that my generation doesn't go bankrupt trying to support the baby boomers. Football does nothing compared to the rest of life. And the players get more money for it than the people in our lives that actually do something useful like our doctors, teachers, scientists, artists/writers (people with brains), day camp counselors, humane society people, and pretty much everybody else.
+
+Thirdly, the players are RETARDED. I'm not stereotyping football players, don't get me wrong. But in high school football, the football guys are the most conceited jocks ever. Do they HONESTLY think that they can get every girl they want at the touch of a button? Just because they're so cool and jock people doesn't give them an excuse for being a total bastard. Enough said.
+
+Fourthly (Is there such a word?), society is obsessed with football so much that it is D-E-G-R-A-D-I-N-G!!!!!!!!!!! Football has transformed perfectly normal people into an insane mass of screaming fans who root for their favorite team to the death and essentially go backwards in brain evolution. We have gone from very cultured people to cheering for sweaty, muscled guys and acting like animals. Does anybody not know what I'm talking about right now? The fact that it plays such a HUGE GIGANTIC MONDO role in our society is pathetic. The fact that we care is pathetic. The fact that people make movies out of it is even more pathetic. I can't even say how much I hate football in this respect. See, people care about football for reasons that I can't fathom, and completely ignore other sports entirely (may I point out the difference in the attendances at the water polo and football games?) Then they just sit at home for an entire day each year to watch the SUPERBOWL as it infiltrates our lives, even if we could care less about it. Companies waste so much money on advertising for the Superbowl that it's sad. That means we get bad commercials the rest of the year too. Maybe we're simply oblivious to the fact that we have gone backwards in terms of our being civilized.
+
+Side note about America being so obsessed with football:
+
+While at Covent Gardens in London (where there are a lot of "buskers" otherwise known as street performers), one of the buskers was instructing his audience on the proper way to cheer him on. His words were almost exactly as follows, "Don't clap like the English cheering for golf! Clap like Americans cheering for FOOTBALL!!!" Just so you know exactly what other people think of us...
+
+Anyways, I think you've heard enough about football by now. Plus I'm tired of bothering to type about it. So now I shall semi-rant about why I disagree with Carpe Diem/Memento Mori philosophy.
+
+Is it just me or do most people (notably teenagers) believe in the Carpe Diem Memento Mori/"Dance like no one's watching, sing as if no one's listening, live each day as if it were your last" philosophy? (another example of conformity for those of you participating in contemporary literature discussions). I mean, it's become so cliche that it REALLY pisses me off. Not that they're bad quotes, I only disagree with them, but they're just REALLY overplayed (like the chicken dance or the macarena). One reason why I don't like them.
+
+Other reasons for me disagreeing with such stuff?
+
+1: Sure, we're all gonna die. Of course. It is a fact of life. If we do not die, then we can never be alive. Thus, Memento Mori (remember that you will die). However, taking this quote to an extreme situation of: oh, there's a possibility that I could die tomorrow! Anything could happen to me in the next 24 hours that is going to kill me!!!! ZOMG!! I have to make sure the last 24 hours in my life are the best ever, and I should do everything I want all the time to make sure that I don't have any regrets when I die!!! AAAAAAHHHHHH!!!!
+
+What I say: Yes, you will die. But the fact that you are going to die should not take priority over everything in your life, however much you may have. That is exactly like ancient Egypt, which is WAYYY back in history, and we've moved on since then. Most likely, and I can almost perfectly guarantee to any common teenager in America that believes in this philosophy, you will not die tomorrow. The chance of you dying at the prime of your life and health in today's day and age is very, very, very, very, very, very small. So small that it is as negligible as the nucleus of an atom in relation to its total size (you KNOW what I mean if I'm talking to you). Why should you focus your daily life on such a small chance that you'll die tomorrow? How do you call that living? If you ask me, you're just asking to die tomorrow. I do admit that people should do the things they want in life so that they don't have as many regrets when they die. But to do EVERYTHING you've ever wanted in life and to only do those things is simply a ridiculous interpretation of Memento Mori. This may be just a personal belief, but I'd rather accomplish one large goal throughout my life than to do the small things along the way. I think I would have less regrets when I'm dead if I lived my life that way because, even though I could say to myself, "Oh, I never managed to finish playing that game way back when I was 12,", I can still say to myself, "Oh yeah? Well, I managed to make peace with my inner self! Ha!"
+
+2: Opportunities are meant to be taken, and that's why they're there. If we never took the initiative on anything, then how on earth would we ever learn to walk/eat/learn/get rich/marry/whatever? But again, with "seizing the day" and doing whatever you want all the time every day, that's too much. Believe me, if everybody thought they would die tomorrow and did everything they ever wanted without getting anything done in life, then when they're thirty, they'd suddenly realize that, oh, I don't have a house or job because I did everything I wanted! And now I'm not happy because I have to live off of the street in a box, even though I did everything I wanted! Doing whatever you want all the time is like being a little kid with a bunch of food on their plate. Kids eat the pasta, carbohydrates, and proteins (usually) but they NEVER eat the vegetables, which have essential nutrients in them that they can't get anywhere else. They're all like, "Ewww...vegetables are gross, so I'm not gonna eat them." And what do you know, they eat very imbalanced diets and don't grow as tall as they could with the vegetables. If you take this as "seize the day" and do whatever you want, then you have a strong misconception about how life works.
+
+3: "Dance like no one's watching, sing like no one's listening, live each day as if it were your last." Poetic enough. It's a nice thought, or at least the beginning part is. I've already explained what I thought about the last part extensively, so let me move on to the first two. Who on earth in their right mind would go around singing every day all the time, even if they're in the middle of, say, the library (Hey, why not if you're pretending nobody's listening to you! It's a literal interpretation of the quote). Or the middle of class. Or where ever you eat lunch. And when I mean sing, I mean like sing at least at a medium volume. Not just like humming. And nobody dances in the middle of the quad like a ballerina or tap dancer in the middle of lunch. Nobody. Although there's nothing wrong with expressing peoples' feelings, that is not the way people ever DO that kind of stuff. I need not mention that, even though almost EVERYBODY thinks that they are fairly nonconformist (judging by the value of individuality in this world), only a true nonconformist would do anything remotely like dance/sing in the middle of the quad at lunchtime. Or the library. Or in class. Or wherever, unless they KNOW FOR CERTAIN that nobody's listening, or they're supposed to dance/sing whatever they want. In general, this is a highly unrealistic quote that really pisses me off because it is extremely untrue.
+
+I think you now know my position on Carpe Diem stuff, so I think I'll talk about something a bit more mundane now...
+
+Here's the story: I was buying jedi_malak a gift for her birthday, and I wanted to get her a teapot. So we went into a general-type store to look for one, and we found a pretty good one. I wanted a coat (aside from the teapot) since I'm always cold. So I looked in the outerwear section past ski jackets, wool coa ts that were really ugly, fleece, and velvet old lady clothes until I found...a GORGEOUS black Calvin Klein trench coat-style raincoat. It was amazing. It was the perfect, perfect, perfect coat, but it was $130 (marked down from like $300). I was gushing over it like crazy and tried to convince my mom to buy it. But she said that a coat that's that expensive isn't the type of coat for everyday going to school kind of coat. An expensive coat should be for "going out" in (like to concerts, I don't date). I said I needed one regular coat and a "going out" coat, and I wanted that one at least (it was pretty!). And she said something about my father not wanting me to wear black because it was too old for me (hello? Black is the new pink! It is a YOUNG color). So she tried to talk me into something cheaper, like something fleece or knitted for every day stuff (eww no. I don't want to dress like my sister, thank you very much) and shiny velvet jackets in gray, dark gray, purple, and raspberry for "going out" (velvet = 60-year-olds, not teenagers). This eventually told me: never shop with mom again. Ever. The way to shop is: have mom drop me off at the mall with $150 and I'll come back with 2 coats and some other stuff. NEVER shop with Mom.
+
+ぽ (the song)
+[尾丸ポルカ「ぽ」歌詞]
+
+ぽぽぽ ぽぽぽ ぽぽぽぽぽぽぽ
+ぽぽぽぽぽぽぽぽぽぽぽぽぽ ぽ
+
+ぽぽぽぽ ぽ ぽぽ ぽ ぽ
+ぽぽぽぽ ぽ ぽぽ
+ぽぽぽぽ ぽ ぽぽ ぽ ぽ
+ぽぽぽぽ ぽぽぽぽ
+ぽぽぽぽ ぽ ぽぽ ぽ ぽ
+ぽぽぽぽ ぽ ぽぽ
+ぽぽぽぽ ぽ ぽぽ ぽ ぽ
+ぽぽぽぽ ぽぽぽぽ
+
+ぽ ぽー！ぽぽぽぽぽー！
+ぽ、ぽぽ？
+ぽぽぽ、ぽぽぽぽぽぽぽ？
+ぽーぽー、ぽー！
+ぽぽぽぽぽぽ？
+ぽぽぽぽぽぽー！
+ぽーー！
+ぽぽぽ…
+ぽぽぽぽぽー ぽ ぽぽぽぽぽぽぽぽぽぽ？
+ぽぽぽー…
+
+ぽ！？
+ぽぽぽぽ ぽぽぽぽぽ？
+ぽぽぽぽぽぽぽぽぽ、ぽぽぽぽぽぽ ぽぽぽー！
+See pop shows near Charlotte
+Get tickets as low as $25
+
+You might also like
+Pastel Tea Time
+尾丸ポルカ (Omaru Polka)
+エヴァーブルー (EverBlue)
+尾丸ポルカ (Omaru Polka)
+HOLOGRAM CIRCUS
+尾丸ポルカ (Omaru Polka)
+
+ぽぽー、ぽぽぽぽぽぽぽぽぽぽぽぽぽ
+ぽぽぽぽ ぽぽぽぽ、ぽぽぽぽー
+ぽー、ぽ ぽぽぽー
+ぽぽぽ！ぽぽぽぽぽ ぽぽぽ ぽぽぽー！
+
+ぽぽぽぽぽぽぽ
+ぽぽぽぽ ぽ ぽぽ ぽ ぽ
+ぽぽぽぽ ぽ ぽぽ
+ぽぽぽぽ ぽ ぽぽ ぽ ぽ
+ぽぽぽぽ ぽぽぽぽ
+ぽぽぽぽ ぽ ぽぽ ぽ ぽ
+ぽぽぽぽ ぽ ぽぽ
+ぽぽぽぽ ぽ ぽぽ ぽ ぽ
+ぽぽぽぽ ぽぽぽぽ
+ぽぽぽぽ ぽ ぽぽ ぽ ぽ
+ぽぽぽぽ ぽ ぽぽ
+ぽぽぽぽ ぽ ぽぽ ぽ ぽ
+ぽぽぽぽ ぽぽぽぽ
+ぽぽぽぽ ぽ ぽぽ ぽ ぽ
+ぽぽぽぽ ぽ ぽぽ
+ぽぽぽぽ ぽ ぽぽ ぽ ぽ
+ぽぽぽぽ ぽぽぽぽ
+
+ぽぽぽ ぽぽぽ ぽぽぽぽぽぽぽ
+ぽぽぽ ぽぽぽ ぽぽぽぽぽ
 
 
+ぽぽー、ぽ ぽぽぽぽぽぽぽ ぽぽ…
+ぽぽぽぽぽぽぽ
+ぽぽぽぽぽーぽぽぽぽぽ…
+ぽぽぽぽぽぽぽぽぽぽぽぽー！
+(ぽぽぽぽ ぽぽぽぽ ぽ ぽぽぽー)
+
+ぽ？ ぽぽ！？
+ぽぽぽぽぽぽぽぽぽぽ？
+ぽぽー！ ぽぽぽぽ ぽぽぽ ぽぽぽ！
+ぽぽぽぽぽぽ！
+ぽーぽーぽー！
+ぽぽぽぽぽぽぽぽぽぽぽ！
+ぽーぽーぽー！
+
+ぽぽぽぽぽぽぽ
+ぽぽぽぽ ぽ ぽぽ ぽ ぽ
+ぽぽぽぽ ぽ ぽぽ
+ぽぽぽぽ ぽ ぽぽ ぽ ぽ
+ぽぽぽぽ ぽぽぽぽ
+ぽぽぽぽ ぽ ぽぽ ぽ ぽ
+ぽぽぽぽ ぽ ぽぽ
+ぽぽぽぽ ぽ ぽぽ ぽ ぽ
+ぽぽぽぽ ぽぽぽぽ
+
+ぽ ぽぽぽ
+ぽぽぽぽ ぽ ぽぽ ぽ ぽ
+ぽぽぽぽ ぽ ぽぽ
+ぽぽぽぽ ぽ ぽぽ ぽ ぽ
+ぽぽぽぽ ぽぽぽぽ
+ぽぽぽぽ ぽ ぽぽ ぽ ぽ
+ぽぽぽぽ ぽ ぽぽ
+ぽぽぽぽ ぽ ぽぽ ぽ ぽ
+ぽぽぽぽ ぽぽぽぽ
+ぽ ぽぽぽぽぽぽ…
 
 
+ぽぽぽ ぽぽぽ ぽぽぽぽぽぽぽ
+ぽぽぽ ぽぽぽ ぽぽぽぽぽ
 
-]=============================]
+Shishiron-tan
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣤⣄⣀⣤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣤⣤⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣤⣤⣄⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⢿⣿⣿⣿⣿⡿⢿⣿⡿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣦⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢻⠿⠿⣿⣿⣿⣿⣿⣷⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⣿⣿⣿⣿⣷⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⣿⣿⣿⣿⣷⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⣿⣿⣿⣿⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢻⣿⣾⣿⣷⣀⣀⣀⣀⣀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣠⣤⣶⣶⡶⠾⠻⣿⣯⣻⣿⡟⠛⠛⠛⠻⠿⢶⣶⣤⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣿⣷⣤⣤⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⣾⡿⠛⠋⠉⠀⠀⣀⣠⣿⣿⣿⣿⠇⠀⠀⠀⠀⠀⠀⠉⠉⠻⣿⣷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⣿⣿⣿⡿⣿⣿⣿⣷⣦⣤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⣿⣟⠁⠀⠀⠀⣠⣤⣾⣿⣿⡿⠿⠛⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣿⣿⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣿⣿⣿⣿⣿⣿⣄⡘⠿⣿⣿⣿⣿⣿⣤⣄⣀⠀⠀⣀⣠⣼⣿⡿⠿⢿⣿⣿⣿⣿⡿⠛⣋⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣠⣼⣿⣿⣿⣿⣿⣿⣤⣤⣄⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⡻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣏⠀⠀⠀⣿⣿⣿⠋⠀⠉⠉⠛⠛⠋⠉⠉⠉⠉⠉⠉⠉⠙⠋⠙⣿⣇⢸⣿⣿⣿⣿⣿⣿⣿⣿⣷⣶⣄⡀⠀⠀⣀⣴⣶⣶⣶⣾⣿⣿⣿⣿⣿⣷⣦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣾⣿⣿⣿⣿⣿⣿⣿⣿⣉⣿⣿⣿⠀⠀⠀⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⢻⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣤⣄⠀⠹⣿⡿⠀⠀⣦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⣯⣽⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠛⠉⠀⠀⠙⢿⣿⣿⡀⠀⠀⠀⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣨⣿⣿⣿⠃⠘⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠛⢹⣿⠟⠛⠁⠀⠀⠀⠀⠀⠀⠀⠙⢿⣷⣦⣄⣀⣀⣀⠁⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣠⣴⣾⣿⠟⠋⠁⠀⠀⠀⠀⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠤⠾⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠛⠛⠻⠿⠿⠷⣶⣶⣶⣶⣶⣶⣾⣿⣿⠿⠿⠛⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠉⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⡿⢿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢿⣿⣿⣿⡃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣾⣿⣿⣿⣿⣿⣿⣡⣾⡿⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣿⣿⣿⣿⡿⣿⣿⣿⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣼⣿⣿⣿⠿⣷⣿⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣾⣿⣿⣿⢡⣾⣿⡿⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣾⣿⣿⣿⠏⢹⣿⡟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⠀⠛⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣿⣿⣿⣿⠟⢀⣿⡿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⣿⣿⣿⡟⠀⠿⠿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠛⣛⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡆⠀⠀⠀⠀⠀⠀⣠⣴⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣴⣿⣿⣿⡟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣾⣿⡇⠈⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡀⠀⢀⣠⣴⡾⠟⠛⢹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⡇⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡶⠿⠟⠋⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⡛⠓⠀⠀⣰⣿⡆⠀⠀⠀⠀⢀⠀⣴⣤⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠃⠀⠘⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡄⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⣾⣿⣿⣿⣿⠃⠀⠀⠀⣿⣿⣷⣤⣄⣀⣤⣼⣶⣿⣿⣿⣶⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣶⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⠋⠉⠉⠉⠙⢿⣿⣿⣿⣿⠋⠉⠉⠿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣴⣷⣶⣷⣤⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠀⠀⠀⠀⠀⠀⠀⠘⠃⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠙⢿⣿⣿⡇⠀⠀⠀⠀⠀⠀⣰⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣷⣶⣤⣤⡀⢻⣿⠆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡆⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠀⠀⠀⠀⠀⠀⠀⠸⠇⣿⣿⣿⣿⣷⣄⡀⠀⠀⠀⢀⣼⣿⣿⠇⠀⠀⠀⠀⠀⠀⢿⣿⣧⠀⠀⠀⠀⠀⢀⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀⣀⡀⠀⠀⠀⠀⠉⠉⠛⠻⣿⣿⣿⣿⣿⣿⣿⣿⣷⣶⣶⣤⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣄⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠀⠀⠀⠀⠀⠀⠀⠰⠆⣿⣿⣿⣿⡿⢿⣿⣿⣿⣾⣿⡿⠟⠋⠀⠀⠀⠀⠀⠀⠀⠸⣿⣿⣷⣤⣤⣤⣤⣼⣿⣿⣦⡀⠀⠀⠀⢀⣤⣾⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠉⠛⠻⠿⣿⣿⣿⣿⣿⣷⣦⣤⣤⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣦⣄⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣄⠀⢨⡏⠉⣩⡍⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⠛⠻⠿⠿⠿⠿⠻⢿⣿⣿⣾⣶⣶⣾⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⣴⣶⣾⡿⠿⠟⠛⠛⠛⠿⠿⢿⣿⣶⣤⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⠁⠰⣿⣿⣦⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢙⠛⠛⣿⣿⣏⠉⣼⣿⣷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣿⣿⣿⡋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠻⣿⣿⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⣿⣿⣿⡀⢀⣙⣿⣟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⢿⣿⡿⠟⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢻⣿⣷⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣿⣿⣿⡀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣿⣿⣿⣧⣿⣿⡿⠋⠀⠀⠀⠀⠀⠀⠀⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠻⣿⣿⣷⣤⣤⣤⣤⣤⣴⣿⣿⣿⣿⣿⡟⠀⠀⠀⠀⠀⠀⠀⢠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠉⠻⠿⠿⠿⠿⠿⠿⠟⠉⠉⠀⠀⠀⠀⠀⠀⠀⢀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣿⣿⣿⣿⣿⣶⡄⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣦⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣰⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠹⣿⣿⣿⣿⣿⣷⠀⠀⠀⠀⠀⠀⢸⣿⣏⠀⣹⣿⣿⣿⣿⣷⣄⠀⢀⣤⣶⣤⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⣤⣤⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⣿⣿⣿⣿⣿⣦⡄⠀⠀⠀⠀⠘⣿⣿⣾⣿⣿⣿⠋⠉⣿⣿⣷⣿⣿⠛⢿⣿⣿⣄⠀⠀⣰⣿⣿⣿⣿⣿⣿⠟⢿⣿⣿⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠻⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠈⠉⢿⣿⣿⣿⠀⢀⣿⣿⣿⣿⡇⠀⠀⠙⣿⣿⡀⠀⣿⣿⠁⠈⣿⣿⣿⣀⣀⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢿⣿⣿⣿⣿⣷⣤⠀⠀⠀⠀⠀⠀⠻⣿⣿⣶⣿⣿⡿⢻⣿⡇⠀⠀⠀⢿⣿⣷⣄⣿⣿⡀⠀⢸⣿⣿⣿⣿⣿⣿⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣤⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣷⣄⠀⠀⠀⠀⠀⠙⠛⠛⠛⠟⠁⢸⣿⣷⠀⠀⠀⠸⣿⣿⣿⠹⣿⣷⣤⣼⣿⣿⣿⡿⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⣄⠀⠀⠀⠀⠀⠀⠀⠀⠸⣿⣿⣧⠀⠀⠀⣿⣿⣿⣤⣿⣿⣿⣿⠿⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣆⣀⠀⠀⠀⠀⠀⠀⠙⢿⣿⣿⣶⣾⣿⣿⣿⡟⠉⠙⠻⠿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣤⣀⡀⠀⠀⠀⠉⠛⠿⠿⠿⠿⠟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠏⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⣤⣤⣤⣤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣀⡀⠀⠀⠀⠙⠛⠛⠻⣿⡇⠀⡀⠀⠉⠙⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠁⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣀⣀⣀⣀⣀⣀⣀⣀⣀⣶⣶⣾⣿⣿⣿⣿⣾⣇⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣾⣆⣰⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣟⣿⣿⣏⣀⣀⣀⣸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+
+GWAK
+
+gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak gwak
+Mulch
+
+can you put this mulch
+in this mulch
+(please do not forget to mulch!)
+
+mulch:
+savior of worlds
+
+Hey man
+Is your mulch 
+Running
+
+Mulch muncher
+
+Hey man check out
+My anixbirth brand
+Mulch
+
+please go and
+divide by the gods
+the god mulch
+
+Imagine this:
+…
+Mulch. 
+
+i love mulch
+now lets go
+and serve the mulch gods
+
+aw frick
+he’s looking into
+my mulch collection
+
+
+oh no
+the mulch timer
+has one off again
+
+wait so
+do i press the mulch button
+or the mulch button
+
+anxious: I love mulch
+xocolate: mulch is amazing
+CVS: ew mul-
+
+getting beaten up and sad
+about some idiotic, silly
+mulch? idiot, ur stupid
+
+i respect
+the mulch gods
+
+mulch on venus
+
+made this room
+thinking of you
+and mulch
+
+goobert’s favorite pastime:
+mulching the mulch
+in mulch folio
+
+claire cant talk atm
+she’s too busy
+mulching her life out
+
+mulch with me
+be mulchy
+
+ANIMATION VERSUS ANYTHING
+MULCH VS SOIL
+BEEEGIN
+
+Mortyyyy
+Morty i turned myself
+Into a pile of mulch morty
+
+
+holy mulch my mulch
+
+
+soil:
+the inferior
+Mulch
+
+
+make more mulch
+
+Mulch's
+
+
+for every sub from this video
+i’ll add 1 line of mulch
+to this mod
+
+
+DUDE
+CATCH
+THE MULCH
+
+
+mulch:
+now with mulch
+
+fiend is so much worse
+I know one good thing
+my mulchiness
+
+revelations would be
+so much better
+with some mulch
+
+you could be watching
+let it go by mulch
+and you choose to listen to donald duck?
+
+Hey robo baby give
+Me some code that adds
+Mulch to Isaac
+
+Mulch and mulch
+Lived alone in a small mulch
+On a mulch
+
+mulch kept to himself
+playing with his mulch
+
+as his mulch watched mulchy
+mulch on the mulch
+
+mulch and mulch were
+Happy. that was, until
+one mulch…
+
+I SAW THE MULCH SYMBOL
+I'M ON MY WAY
+NANANANANA MULCHMAN
+
+the power of MUULLCCHHH
+
+Mulching my way over 
+
+Mmm mulchy tasty
+
+The mulch is coming
+
+Mulch
+Mulch
+Mulch
+
+Eat mulch
+This isn't a statement 
+It's a command
+
+Hello and welcome to mulch
+School
+Aaaand you failed
+
+Psst
+Don't tell the others but
+I hate mulch 
+
+Hello everybody my
+Name is mulchiplier
+
+The mulch consumes
+
+mulchington caught
+Mulching on mulch FM
+
+Welcome to the mulching
+Of Isaac
+
+I love mulch
+Exclamation mark 
+
+The real friends is the
+Mulch we made along 
+The way
+
+Mulching mulch mulchymulchy 
+Mulchity mulchity mulch
+Mulching
+
+No don't jump
+There's so mulch mulch
+You can eat instead
+
+Quick, hide the mulch!
+
+Aw shit, the mulch police
+Are onto us
+
+Ambatumulch 
+Aaaauuuugghh
+Awww shit
+
+Hey remember mulch
+The deleted third twin
+Of jacob and Esau
+
+mulch as twins
+would
+
+Mulch vision activate
+
+Mum said i can't play
+Outside
+I have to finish my mulch
+
+Itai!
+i tripped
+on my mulch T_T
+
+Quick
+Everyone
+To the mulch-mobile
+
+I am about to surpass
+The mortal limit
+Of mulching 
+
+There is so much
+Mulch in my system
+
+I love playing mulchsaac
+On my Imulch phone
+
+Now that I've stocked up on
+Mulch to eat
+I can play anixbirth all day
+
+Mulch
+Open 24/7
+
+It's mulchin time
+*Mulches everywhere*
+
+What if they added mulch
+To Isaac
+
+Uhhhhh
+The mulch escaped
+
+Rules on mulch
+(Please mulch)
+
+Evil mulch be like
+Graaah
+I hate eating Mulch
+
+Drinking the mulch potion
+At 3am!!!!!!
+(18+!!!)
+
+I don't think
+I can eat all this mulch 
+Alone
+
+Isaac dinners ready
+What's for dinner?
+Mulch
+
+The dog just drank my
+Mulch and shit
+All over the carpet
+
+Side effects of mulch may
+Include:
+Mmm yes mulch yummy
+
+Knock knock
+Who's there?
+Mulch
+
+Fiend folio doesn't have
+Mulch
+Anixbirth is truly better
+
+Sir
+I'm gonna have to ask to
+See your mulching license
+
+Your next item room
+Will have mulch
+
+I love mulch so much
+I could eat it for dinner
+Every day
+
+A balanced diet
+Is overrated 
+Eat mulch 
+
+Mulch 2: the rude awakening
+Coming to cinemas
+August 2027
+
+Never cry over 
+Spilled mulch
+
+Mulch is good
+Mulch is great
+Mulch is goo-ooo 
+
+OUAUAAAAAAAAUUU
+mulch
+
+Try not to mulch for
+5 minutes challenge
+(Impossible)
+
+Xhocolate should stop 
+Eating crack
+And eat mulch instead
+
+He was forced to
+Not eat mulch
+From a young age
+
+Mmm 
+Mulches
+
+Wake up Mr Freeman
+Wake up and smell
+The mulch
+
+Top 5 mulch facts
+That will blow your
+Mind
+
+Market Flyer
+
+
+funni images
+Why does this exist
+
+
+Like who put this here
+what
+
+Titsan :DDD
+--got retired since i took up waaay to much memory
+What the bjork
+
+Rules on Fortunes (Please Read)
+write fortunes in this doc
+or don't I guess
+I don't control your life
+| | | | |
+if you talk here
+follow the fortune
+formatting style
+| | | | |
+you should not write more
+then like maybe 7 words
+on a line
+| | | | | 
+AVOID FOREIGN LANGUAGES
+Isaac only supports
+japanese, korean, spanish, german, and russian
+| | | | |
+keep it to three
+lines at the most
+| | | | |
+beware quotes,
+ellipses n' apostrophes
+when on mobile
+| | | | |
+" ' and ...
+these are the ones
+that you must use
+| | | | |
+try to ensure
+your fortune fits
+| | | | |
+i will only rarely allow for longer fortunes
+to be added if i think they are sufficiently
+funny enough to be included.
+do remember they have their own
+formatting to account for too though!
+so no long copypastas with no linebreaks please.
+7 lines maximum.
+| | | | |
+
+L
+total W tbh
+
+Noah is my
+my personal creme pie~
+]=================]
