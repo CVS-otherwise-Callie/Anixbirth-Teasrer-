@@ -1,12 +1,5 @@
 FHAC.Fortunes = 
 [=================[
-                      𝕱𝖔𝖗𝖙𝖚𝖓𝖊𝖘
-yersh
-please write your fortunes
-at the top
-so we can see them.
-请不用中文，不做好吧
-
 i mean…
 is he ever right?
 
