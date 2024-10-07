@@ -30,6 +30,7 @@ FHAC.Monsters = {
     Pallun = mod:ENT("Pallun"),
     Silly = mod:ENT("Silly"),
     String = mod:ENT("String"),
+    StickyFly = mod:ENT("Sticky Fly"),
 }
 
 FHAC.Familiars = { --YOU HAVE NO IDEA HOW MANY FUCKING TIMES I SPELLED THIS WRONG LMAO

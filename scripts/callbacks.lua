@@ -34,6 +34,7 @@ function mod:ProjCollStuff(v,c)
     local d = v:GetData();
 
     mod.RemoveWostProj(v, c, d)
+    mod.UpdateSillyStringProj(v, c, d)
 end
 
 mod:AddCallback(ModCallbacks.MC_PRE_PROJECTILE_COLLISION, mod.ProjCollStuff)
@@ -59,9 +60,17 @@ end
 mod:AddCallback(ModCallbacks.MC_POST_GAME_STARTED, mod.PostGameStarted)
 
 function mod:PostNPCColl(npc, coll)
-    return mod.SillyStringGetHit(npc, coll)
+    return mod.SillyStringColl(npc, coll)
 end
 mod:AddCallback(ModCallbacks.MC_PRE_NPC_COLLISION, mod.PostNPCColl)
+
+function mod:EffectPostUpdate(effect)
+    local d = effect:GetData()
+    local sprite = effect:GetSprite()
+
+    mod:PostDriedDripUpdate(effect, sprite, d)
+end
+mod:AddCallback(ModCallbacks.MC_POST_EFFECT_UPDATE, mod.EffectPostUpdate)
 
 mod:AddCallback(ModCallbacks.MC_EVALUATE_CACHE,function(_, player, flag)
     

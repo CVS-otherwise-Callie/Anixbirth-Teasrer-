@@ -70,10 +70,11 @@ local room = game:GetRoom()
             npc:ClearEntityFlags(EntityFlag.FLAG_APPEAR)
         end
         d.entitypos = 500
-        d.bagcostume = d.bagcostume or math.random(2)
+        d.baganim = math.random(3)
+        d.bagcostume = d.bagcostume or 1
         d.flip = d.flip or rng:RandomInt(1,2)
         sprite.FlipX = d.flip
-        sprite:Play("BagIdle", true)
+        sprite:Play("BagIdle"..d.baganim, true)
         mod:ReplaceEnemySpritesheet(npc, "gfx/monsters/dried/dried" .. d.bagcostume, 0)
         mod:ReplaceEnemySpritesheet(npc, "gfx/monsters/dried/dried" .. d.bagcostume, 1)
         npc:AddEntityFlags(EntityFlag.FLAG_NO_PHYSICS_KNOCKBACK)
@@ -81,7 +82,7 @@ local room = game:GetRoom()
         npc.EntityCollisionClass = (EntityCollisionClass.ENTCOLL_NONE)
         d.creepsec = d.creepsec or rng:RandomInt(1, 12)
         d.mynumber = d.mynumber or math.random(1, #driedsubtypes)
-        d.offset = d.offset or Vector(math.random(-5, 5), math.random(-20, 0))
+        d.offset = d.offset or Vector(math.random(-5, 5), math.random(-30, -20))
         npc.SpriteOffset = d.offset
         local tab
         if npc.SubType == nil or npc.SubType == 0 then
@@ -106,30 +107,44 @@ local room = game:GetRoom()
 
 
     if not room:IsClear() then
+
+        if sprite:IsFinished("BagIdle" .. d.baganim) then
+            d.baganim = math.random(3)
+        end
    
         npc.Velocity = npc.Velocity:Rotated(d.entitypos)
         if not d.creep == 22 then
             npc.SplatColor = d.splat
         end
-        --just to make sure it doesnt keep changing since it's annoying when it does
 
-        if sprite:GetOverlayFrame("BagDip") == 17 or (npc.StateFrame > 3 * d.creepsec and room:IsClear()) then
-            d.creepsec = d.creepsec or driedsubtypes[d.mynumber].creepsec or 1 + (rng:RandomInt(-2, 2) * 0.5)
-            local crepe = Isaac.Spawn(1000, d.creep,  0, npc.Position, Vector(0, 0), npc):ToEffect()
-            crepe.Scale = crepe.Scale --* d.creepsec
-            if not crepe.Timeout == nil then
-                if room:IsClear() then
-                    crepe:SetTimeout(crepe.Timeout + (45 * d.creepsec))
-                else
-                    crepe:SetTimeout(crepe.Timeout - (45 * d.creepsec))
-                end
-            end
-            crepe:Update()
-            --sprite:PlayOverlay("bag" .. d.bagcostume, true)
+        if npc.StateFrame >= (50+d.creepsec)/d.speed then
+            local drip = Isaac.Spawn(1000, EffectVariant.RAIN_DROP, 0, npc.Position + Vector(math.random(-10, 10) - npc.SpriteOffset.X, math.random(-10, 0)), Vector.Zero, npc)
+            drip:GetSprite():SetFrame(12)
+            drip:GetData().type = "Dried"
+            drip.Color = d.splat or Color(240, 0, 0, 1)
+            drip.Parent = npc
+            drip:Update()
             npc.StateFrame = 0
         end
+        --just to make sure it doesnt keep changing since it's annoying when it does
     else
         sprite:Stop()
+    end
+end
+
+function mod:PostDriedDripUpdate(ef, sprite, d)
+    if ef.Variant == EffectVariant.RAIN_DROP and d.type == "Dried" then
+        local crepe
+        if sprite:GetFrame() >= 19 then
+            crepe = Isaac.Spawn(1000, ef.Parent:GetData().creep,  0, ef.Position, Vector(0, 0), ef.Parent):ToEffect()
+            crepe:GetData().type = "DriedCreep"
+            crepe.Scale = crepe.Scale * 0.5
+            crepe:Update()
+        end
+        if crepe then crepe.Scale = crepe.Scale * 0.5 end
+    end
+    if d.type == "DriedCreep" then
+        ef:SetTimeout(1000)
     end
 end
 

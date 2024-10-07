@@ -282,13 +282,50 @@ function mod:AreEntitiesInLine(lineStart, lineEnd, ent)
     return false
 end
 
+function mod:FindLongerorShorterTable(tables, long, longest)
+	longest = longest or (10^10)
+	local coolernum = 0
+	if long then
+		local table = 0
+		for num, tab in ipairs(tables) do
+			if #tab > table then
+				table = #tab
+				coolernum = num
+			end
+		end
+	else
+		local table = longest
+		for num, tab in ipairs(tables) do
+			if #tab < table then
+				table = #tab
+				coolernum = num
+			end
+		end
+	end
+	return tables[coolernum]
+end
+
 function mod:CheckTableContents(table, element)
 	for _, value in pairs(table) do
-	  if value == element then
-		return true
-	  end
+	  	if value == element then
+			return true
+	  	end
 	end
 	return false
+end
+
+function mod:ValidifyTables(table1, table2, basedonlength)
+	basedonlength = basedonlength or false
+	if basedonlength then
+		for _, element in pairs(mod:FindLongerorShorterTable({table1, table2}, true)) do
+			if not mod:CheckTableContents(mod:FindLongerorShorterTable({table1, table2}, false), element) then return false end
+		end
+	else
+		for _, element in pairs(table1) do
+			if not mod:CheckTableContents(table2, element) then return false end
+		end
+	end
+	return true
 end
 
 function mod:spriteOverlayPlay(sprite, anim)
@@ -604,4 +641,36 @@ function mod:ShowRoomText()
 		mod.LuaFont:DrawStringScaled(vartext, bcenter.X - (varsize / 2), y + 10, scale, scale, KColor(1,1,1,0.5), 0, false)
 
 	end
+end
+
+function mod:CheckForOnlyEntInRoom(npcs)
+	local room = game:GetRoom()
+	local npcsepcifics = {}
+	local var = false
+	local rooments = {}
+	for _, element in pairs(npcs) do
+		table.insert(npcsepcifics, element.ID)
+	end
+	for _, ent in ipairs(Isaac.GetRoomEntities()) do
+		if (ent:IsActiveEnemy() and ent:IsVulnerableEnemy() and not ent:IsDead()
+		and not ent:HasEntityFlags(EntityFlag.FLAG_FRIENDLY)) then
+			table.insert(rooments, ent.Type)
+		end
+	end
+	var = mod:ValidifyTables(rooments, npcsepcifics)
+	if var == true then
+		local npcsepcifics = {}
+		local rooments = {}
+		for _, element in pairs(npcs) do
+			table.insert(npcsepcifics, element.Var)
+		end
+		for _, ent in ipairs(Isaac.GetRoomEntities()) do
+			if (ent:IsActiveEnemy() and ent:IsVulnerableEnemy() and not ent:IsDead()
+			and not ent:HasEntityFlags(EntityFlag.FLAG_FRIENDLY)) then
+				table.insert(rooments, ent.Variant)
+			end
+		end
+		var = mod:ValidifyTables(rooments, npcsepcifics)
+	end
+	return var
 end

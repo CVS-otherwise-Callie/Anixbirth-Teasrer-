@@ -16,7 +16,8 @@ FHAC:LoadScripts("scripts.iam.monsters", {
 	"gassedfly",
 	"fly_ve-bomber", --HAHAHAH FUCK YOU EUAN TOO
 	"pallun",
-	"sillystring"
+	"sillystring",
+	"stickyfly"
 })
 
 FHAC:LoadScripts("scripts.iam", {

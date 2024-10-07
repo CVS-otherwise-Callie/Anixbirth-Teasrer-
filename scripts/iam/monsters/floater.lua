@@ -106,13 +106,7 @@ function mod:FloaterAI(npc, sprite, d, r)
         else
             othertargetvelocity = (d.targetpos:Rotated(180) + d.moveval - npc.Position):Resized(d.boost*2) 
         end
-    end
-
-    if npc.StateFrame > 10 then
-        d.state = "chase"
-    end
-
-    if d.state == "chase" then
+    elseif d.state == "chase" then
         d.moveval = Vector.Zero
         if (enemydir > 135 and enemydir < 180) or (enemydir > 0 and enemydir < 45) then
             d.moveval = d.moveval + Vector(0, -1 * d.accelerateaway)
@@ -131,6 +125,10 @@ function mod:FloaterAI(npc, sprite, d, r)
             d.accelerateaway = d.accelerateaway - d.accelerateaway/20
         end
 
+    end
+
+    if npc.StateFrame > 10 then
+        d.state = "chase"
     end
 
     if mod:isScare(npc) or d.state == "dashout" then
