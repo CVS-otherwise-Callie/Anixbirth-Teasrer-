@@ -1,5 +1,255 @@
 FHAC.Fortunes = 
 [=================[
+
+fortunes?
+where’d they go?
+
+ew!
+you taste like medicine!
+
+medicine?
+i knew her once
+
+my doc said
+to stop having
+my meds
+
+wait little german boy!
+those meds will
+give you trans brimstone!
+
+augh, fuck
+the trans
+
+why the hell
+do you want to
+fuck trans??
+
+wolfi needs his
+trans meds all
+over again!
+
+is wolfi gay?
+
+is gavin straight?
+
+is veronika acesexual?
+
+is christina bisexual?
+
+is sophie smart?
+
+is jacqueline lesbian?
+
+is evan dumb?
+
+is bennet quirky? 
+
+bennet being quirky
+at 3am??
+
+bennet drank the
+quirky juice
+now he scary
+
+the quirky juice
+will make you
+gay, lesbian, and silly!
+
+bennet has
+the last assignment
+
+bennet will
+be there next class, 
+have some patience
+
+Santa Claus & Stalin are the same
+They like Red & know if you’ve been good
+And they both have a cool mustache
+
+Tiānshàng tàiyang hóng ya hóngtōngtōng ēi
+Xīnzhōng de tàiyang shì máozédōng ēi
+Tā lǐngdǎo wǒmen dé jiěfàng ēi
+
+Guys save the turtles
+Where else do I find
+TURTLE SOUP ;}
+
+turtles aren’t real
+you are dumb
+
+tortoises are
+the fake turtles!
+
+i’m the real
+family guy
+
+did you know
+family guy is
+a cia project?
+
+oh no!
+is that peta griffin?
+from family guy??
+
+isaac in
+family guy!
+
+fiend in
+family guy!
+
+family guy got
+canceled for being
+white - racist
+
+remember that time
+fiend was in
+family guy??
+
+fiend and golem
+crashed the fiendcopter
+in family guy
+
+fiend actually
+had sex in
+that family guy episode!
+
+minecraft sex is
+not worth it
+
+no, i am
+placing blocks and
+shit, silly!
+
+i am stewie griffin
+i approve of
+this fortune
+
+This fortune doc is too much
+We need to stop it
+It will take over the world 
+
+is isaac dumb?
+can’t he just pick
+up the fortune ball?
+
+It will take over your mom
+NEEEERD
+
+my mom made
+me the biggest
+nerd… ever!!!
+
+Canobie Lake is worse than 6 flags
+Like what do they say in ads
+YIPPEE CANOBEEE
+
+no one says
+yippee canobee
+its all in ur mind
+
+but.. but…
+where else will
+I find my mulch?
+
+NOM NOM =]
+I like yummy nukes
+But the poopy man put mulch in them
+
+flint? flint
+in my lockewood
+
+a certain wolf
+likes a certain penguin
+
+ok, ok!
+i’ll stop with
+the revelations jokes
+
+no!
+bodhi got
+ahold of the nukes
+
+that’s so
+freaking nuclear
+
+the nukes are
+getting really freaky
+
+they are putting
+mulch in my nukes!
+
+nukes are truly
+soul crushing
+
+but if i don’t
+have the nukes,
+who does
+
+shit, i missed
+my second nuke
+meeting
+
+josh perez?
+nukes? goodness
+
+these fortunes
+are incredibly stupid
+
+why are there
+costumes for nukes
+
+if you trigger me
+why, i’ll… i’ll…
+
+im sorry to say
+all your friends
+are hallucinations!
+
+godmode was never
+real, why else would
+it be unlisted
+
+Just….
+blow me up
+
+destroy this
+fortune machine!
+
+just like
+pick up the
+fortune ball?
+
+…and another
+pale oak log…
+
+oh…
+you thought that 
+was funny…
+
+sand lag
+in my bag
+
+playing the hi hat
+on the low bottom
+
+hungarian!
+fuck but
+it’s a rhapsody
+
+get out of the future!
+
+mind you,
+this will come
+up later
+
+aaaand that’s
+your homework!
+
+why are
+you a
+isaac nerd?
+
 i mean…
 is he ever right?
 
