@@ -21,17 +21,13 @@ function mod:SillyStringAI(npc, sprite, d)
     local projparams = ProjectileParams()
     local extraanim = ""
 
-    if not d.init then
-        d.isRecieving = false
-        d.state = "idle"
-        npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_PLAYEROBJECTS
-        npc.SpriteOffset = Vector(0, 10)
+    local function findSillyStringBaby()
         if d.isSilly then
             local targets = {}
             for _, ent in ipairs(Isaac.GetRoomEntities()) do
                 if not ent:IsDead()
                 and not ent:HasEntityFlags(EntityFlag.FLAG_FRIENDLY)
-                and ent.Type == mod:ENT("String").ID and ent.Variant == mod:ENT("String").Var and ent.SubType == mod:ENT("String").Sub
+                and ent.Type == mod:ENT("String").ID and ent.Variant == mod:ENT("String").Var
                 and ent.Parent == nil  then
                     table.insert(targets, ent)
                 end
@@ -52,13 +48,21 @@ function mod:SillyStringAI(npc, sprite, d)
         if not d.baby then
             d.baby = npc:GetPlayerTarget()
             d.targisPlayer = true
-        end    
+        end 
+    end
+
+    if not d.init then
+        d.isRecieving = false
+        d.state = "idle"
+        npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_PLAYEROBJECTS
+        npc.SpriteOffset = Vector(0, 10)
+        findSillyStringBaby()
         d.init = true
     else
         npc.StateFrame = npc.StateFrame + 1
     end
 
-    if d.baby:IsDead() then
+    if d.baby and d.baby:IsDead() then
         d.baby = npc:GetPlayerTarget()
         d.state = "idle"
         d.targisPlayer = true
@@ -73,6 +77,20 @@ function mod:SillyStringAI(npc, sprite, d)
         npc.StateFrame = 0
     elseif d.state == "recieved" then
         sprite:Play("RecieveIdle")
+    elseif d.state == "hidingtime" then
+        npc:AddEntityFlags(EntityFlag.FLAG_NO_TARGET | EntityFlag.FLAG_NO_PHYSICS_KNOCKBACK | EntityFlag.FLAG_NO_KNOCKBACK | EntityFlag.FLAG_NO_STATUS_EFFECTS)
+        npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_NONE
+        npc.GridCollisionClass = GridCollisionClass.COLLISION_NONE
+        if sprite:IsFinished("Leave") then
+            npc.Velocity = mod:Lerp(npc.Velocity, d.newpos - npc.Position, 0.5)
+            if npc.StateFrame > 50 then
+                sprite:Play("Appear")
+                npc:ClearEntityFlags(EntityFlag.FLAG_NO_TARGET | EntityFlag.FLAG_NO_PHYSICS_KNOCKBACK | EntityFlag.FLAG_NO_KNOCKBACK | EntityFlag.FLAG_NO_STATUS_EFFECTS)
+                npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_PLAYEROBJECTS
+                npc.GridCollisionClass = GridCollisionClass.COLLISION_SOLID
+                npc.StateFrame = 0
+            end
+        end
     end
 
     npc.Velocity = mod:Lerp(npc.Velocity, (d.baby.Position - npc.Position):Resized(40), 0.01)
@@ -94,7 +112,7 @@ function mod:SillyStringAI(npc, sprite, d)
                 d.state = "recieved"
             end
 
-            if npc.StateFrame >= 30 and not d.shot and d.state == "recieved" then
+            if npc.StateFrame >= 30 and not d.shot and d.state == "recieved" and d.baby:GetData().state ~= "hidingtime" then
                 if d.baby.Type == 1 then d.baby = npc.Parent or npc:GetPlayerTarget() end
                 d.shootinginit = true
                 mod:spritePlay(sprite, "RecieveShoot")
@@ -117,7 +135,7 @@ function mod:SillyStringAI(npc, sprite, d)
         end
 
     else
-
+        findSillyStringBaby()
         if npc.StateFrame >= 60 then
             mod:spritePlay(sprite, "Shoot")
             d.state = "shoot"
@@ -131,18 +149,41 @@ function mod:SillyStringAI(npc, sprite, d)
         effect.DepthOffset = npc.Position.Y * 1.25
         effect:FollowParent(npc)
         d.shot = Isaac.Spawn(9, 0, 0, npc.Position, Vector(10, 0):Rotated((d.baby.Position - npc.Position):GetAngleDegrees()), npc):ToProjectile()
-        d.shot:GetData().type = "SillyString"
-        d.baby:GetData().shottorecieve = d.shot
-        d.shot:GetData().Parent = npc
         d.shot.Height = -40
         d.shot.Parent = npc
         if d.targisPlayer then
-            d.shot:AddProjectileFlags(ProjectileFlags.MEGA_WIGGLE | ProjectileFlags.ACCELERATE)
+            d.shot:AddProjectileFlags(ProjectileFlags.WIGGLE)
+            d.shot:GetData().type = "DeadSillyString"
+        else
+            d.shot:GetData().type = "SillyString"
+            d.baby:GetData().shottorecieve = d.shot
+            d.shot:GetData().Parent = npc
+            d.shot:GetData().targ = d.baby
         end
         d.state = "isfinishedshooting"
     end
 
-    if sprite:IsFinished("Shoot") or sprite:IsFinished("RecieveShoot")  then
+    local function sillyStringFindFreeGrid()
+        local pos = mod:freeGrid(d.baby, false, 300, 50)
+        if game:GetRoom():CheckLine(pos,npc.Position,3,900,false,false) then
+            return pos
+        else
+            return sillyStringFindFreeGrid()
+        end
+    end
+
+    if sprite:IsFinished("Shoot") or sprite:IsFinished("RecieveShoot") then
+        if npc.SubType == 1 then
+            npc.StateFrame = 0
+            d.newpos = sillyStringFindFreeGrid()
+            d.state = "hidingtime"
+            mod:spritePlay(sprite, "Leave")
+        else
+            d.state = "idle"
+        end
+    end
+
+    if sprite:IsFinished("Appear") then
         d.state = "idle"
     end
 
@@ -159,7 +200,7 @@ end
 
 function mod.UpdateSillyStringProj(proj, coll, d)
     if proj.Parent and not proj.Parent:IsDead() then
-    local pard = d.Parent:GetData()
+    local pard = proj.Parent:GetData()
     if pard and d.type == "SillyString" and coll.Type == 1 then
 
         pard.state = "idle"
@@ -188,7 +229,11 @@ end)
 
 function mod.SillyShot(p, d)
     if d.type == "SillyString" then
-        if p.Height < 59 then p.Height = p.Height - 1 end
+        if not d.shotinit then
+            d.dist = p.Position:Distance(d.targ.Position)
+            d.shotinit = true
+        end
+        if p.Height > -59 then p.Height = p.Height - 1 end
         p.GridCollisionClass = EntityGridCollisionClass.GRIDCOLL_NONE
     end
 end

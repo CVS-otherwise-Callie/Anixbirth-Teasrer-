@@ -15,7 +15,6 @@ function mod:MusicCheckCallback()
     end
 
     if customMusicID and customMusicID~=-1 and ms:GetCurrentMusicID() ~= customMusicID then
-        print(customMusicID)
         ms:Play(customMusicID, 0)
         ms:UpdateVolume()
     end
