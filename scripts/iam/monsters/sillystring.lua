@@ -66,6 +66,7 @@ function mod:SillyStringAI(npc, sprite, d)
 
     if d.state == "idle" then
         sprite:Play("Idle")
+        d.isRecieving = false
     elseif d.state == "recievestart" then
         sprite:Play("Recieve")
         d.isRecieving = true
@@ -130,11 +131,11 @@ function mod:SillyStringAI(npc, sprite, d)
         effect.DepthOffset = npc.Position.Y * 1.25
         effect:FollowParent(npc)
         d.shot = Isaac.Spawn(9, 0, 0, npc.Position, Vector(10, 0):Rotated((d.baby.Position - npc.Position):GetAngleDegrees()), npc):ToProjectile()
-        d.shot.SpriteOffset = Vector(0,-25 + npc.SpriteOffset.X)
         d.shot:GetData().type = "SillyString"
         d.baby:GetData().shottorecieve = d.shot
         d.shot:GetData().Parent = npc
-        d.shot.Height = -10
+        d.shot.Height = -40
+        d.shot.Parent = npc
         if d.targisPlayer then
             d.shot:AddProjectileFlags(ProjectileFlags.MEGA_WIGGLE | ProjectileFlags.ACCELERATE)
         end
@@ -157,17 +158,20 @@ function mod.SillyStringColl(npc, coll)
 end
 
 function mod.UpdateSillyStringProj(proj, coll, d)
-    if d.type == "SillyString" and coll.Type == 1 then
-        local pard = d.Parent:GetData()
+    if proj.Parent and not proj.Parent:IsDead() then
+    local pard = d.Parent:GetData()
+    if pard and d.type == "SillyString" and coll.Type == 1 then
 
         pard.state = "idle"
-        pard.baby:GetData().state = "idle"
-        pard.isRecieving = false
-        pard.baby:GetData().isRecieving = false
-        pard.shottorecieve = false
-        pard.baby:GetData().shottorecieve = false
+        pard.shot = nil
         pard.shootinginit = false
-        pard.baby:GetData().shootinginit = false
+
+        if pard.baby then
+            pard.baby:GetData().state = "idle"
+            pard.baby:GetData().shot = nil
+            pard.baby:GetData().shottorecieve = false
+        end
+    end
     end
 end
 
@@ -177,14 +181,14 @@ mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, function(_, npc, damage, flag, 
             mod:ENT("Silly"),
             mod:ENT("String")
         }) == false then
-            return {Damage=0.05}
+            return {Damage=0.01}
         end
     end
 end)
 
 function mod.SillyShot(p, d)
     if d.type == "SillyString" then
-        p.Height = -10
+        if p.Height < 59 then p.Height = p.Height - 1 end
         p.GridCollisionClass = EntityGridCollisionClass.GRIDCOLL_NONE
     end
 end

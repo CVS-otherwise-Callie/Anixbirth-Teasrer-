@@ -1,6 +1,5 @@
 <data>
 
-<entity ID="161" Variant="4" Name="Sticky Fly" Image="mah boys/stickyfly.png" BaseHP="15" Group="Monsters" Kind="Anixbirth (Hope)">
 <entity ID="161" Variant="4" Name="Patient" Image="mah boys/patient.png" BaseHP="15" Group="Monsters" Kind="Anixbirth (Hope)">
    <bitfield Key="Subtype">
       <dropdown Name="Patient Type" Length="7">
