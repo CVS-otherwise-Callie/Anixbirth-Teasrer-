@@ -70,6 +70,9 @@ function mod:SillyStringAI(npc, sprite, d)
 
     if d.state == "idle" then
         sprite:Play("Idle")
+        npc:ClearEntityFlags(EntityFlag.FLAG_NO_TARGET | EntityFlag.FLAG_NO_PHYSICS_KNOCKBACK | EntityFlag.FLAG_NO_KNOCKBACK | EntityFlag.FLAG_NO_STATUS_EFFECTS)
+        npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_PLAYEROBJECTS
+        npc.GridCollisionClass = GridCollisionClass.COLLISION_SOLID
         d.isRecieving = false
     elseif d.state == "recievestart" then
         sprite:Play("Recieve")
@@ -85,9 +88,6 @@ function mod:SillyStringAI(npc, sprite, d)
             npc.Velocity = mod:Lerp(npc.Velocity, d.newpos - npc.Position, 0.5)
             if npc.StateFrame > 50 then
                 sprite:Play("Appear")
-                npc:ClearEntityFlags(EntityFlag.FLAG_NO_TARGET | EntityFlag.FLAG_NO_PHYSICS_KNOCKBACK | EntityFlag.FLAG_NO_KNOCKBACK | EntityFlag.FLAG_NO_STATUS_EFFECTS)
-                npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_PLAYEROBJECTS
-                npc.GridCollisionClass = GridCollisionClass.COLLISION_SOLID
                 npc.StateFrame = 0
             end
         end

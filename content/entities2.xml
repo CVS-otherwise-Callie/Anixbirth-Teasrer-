@@ -222,7 +222,7 @@
     </entity>
 
     <!--omg i have to make like 10-->
-    <entity anm2path="monsters/dried/dried.anm2" id="161" variant="41" subtype="0" reroll="false" baseHP="20" boss="0" champion="0" collisionDamage="1" collisionMass="40" collisionRadius="10" friction="1" name="Dried" shutdoors="false" numGridCollisionPoints="12" shadowSize="20" stageHP="0" bestiary="true" portrait="41" >
+    <entity anm2path="monsters/dried/dried.anm2" id="161" variant="41" subtype="0" reroll="false" baseHP="20" boss="0" champion="0" collisionDamage="1" collisionMass="40" collisionRadius="10" friction="1" name="Dried" shutdoors="false" numGridCollisionPoints="12" shadowSize="20" stageHP="0" portrait="41" >
         <bestiary transform="0,0,1" anim="bag1" />
         <gibs amount="6" blood="2" bone="1" eye="1" gut="1" large="0" />
         <devolve id="161.0.0" weight="1" />
