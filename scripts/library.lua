@@ -470,6 +470,18 @@ function mod:GetSpecificEntInRoom(myent, npc, radius)
 	return answer
 end
 
+function mod:MakeInvulnerable(npc)
+	npc:AddEntityFlags(EntityFlag.FLAG_NO_TARGET | EntityFlag.FLAG_NO_PHYSICS_KNOCKBACK | EntityFlag.FLAG_NO_KNOCKBACK | EntityFlag.FLAG_NO_STATUS_EFFECTS)
+	npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_NONE
+	npc.GridCollisionClass = GridCollisionClass.COLLISION_NONE
+end
+
+function mod:MakeVulnerable(npc)
+	npc:ClearEntityFlags(EntityFlag.FLAG_NO_TARGET | EntityFlag.FLAG_NO_PHYSICS_KNOCKBACK | EntityFlag.FLAG_NO_KNOCKBACK | EntityFlag.FLAG_NO_STATUS_EFFECTS)
+	npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_PLAYEROBJECTS
+	npc.GridCollisionClass = GridCollisionClass.COLLISION_SOLID
+end
+
 function mod:GetRoomNameByType(type)
 	if type == 0 then
 		return "Null"

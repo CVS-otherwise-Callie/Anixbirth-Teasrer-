@@ -15,41 +15,65 @@ mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
 end, mod.Monsters.String.ID)
 
 function mod:SillyStringAI(npc, sprite, d)
-    if npc.Variant == mod.Monsters.Silly.Var then d.isSilly = true end
-    if npc.Variant == mod.Monsters.String.Var then d.isString = true end
-
-    local projparams = ProjectileParams()
     local extraanim = ""
 
+    --check block--
+    if npc.Variant == mod.Monsters.Silly.Var then d.isSilly = true end
+    if npc.Variant == mod.Monsters.String.Var then d.isString = true end
+    if d.baby and d.baby.Type == 1 then d.targisPlayer = true end
+    if d.baby and d.babyIsDead then extraanim = "Depressed" end
+
+    --local functions to silly and string --
+
     local function findSillyStringBaby()
+        if d.baby and d.baby.Type ~= 1 then
+            d.baby.Parent = npc
+            d.isRecieving = false
+            d.baby:GetData().Par = npc
+            d.baby:GetData().shootinginit = true
+            d.baby:GetData().targisPlayer = false
+            d.shootinginit = false
+            d.targisPlayer = false
+            d.shootinginit = false
+            return
+        end
         if d.isSilly then
             local targets = {}
             for _, ent in ipairs(Isaac.GetRoomEntities()) do
                 if not ent:IsDead()
                 and not ent:HasEntityFlags(EntityFlag.FLAG_FRIENDLY)
                 and ent.Type == mod:ENT("String").ID and ent.Variant == mod:ENT("String").Var
-                and ent.Parent == nil  then
+                and (ent.Parent == nil or ent:GetData().targisPlayer == true)  then
                     table.insert(targets, ent)
                 end
             end
             if (#targets == 0) then
                 d.baby = npc:GetPlayerTarget()
-                d.targisPlayer = true
             else
                 d.baby = targets[math.random(1, #targets)]
+                d.baby.Parent = npc
+                d.baby:GetData().Par = npc
+                d.baby:GetData().shootinginit = true
+                d.baby:GetData().targisPlayer = false
             end
-            d.baby.Parent = npc
-            d.baby:GetData().Par = npc
-            d.baby:GetData().shootinginit = true
-            d.baby:GetData().targisPlayer = false
         else
             d.baby = npc.Parent
         end
         if not d.baby then
             d.baby = npc:GetPlayerTarget()
-            d.targisPlayer = true
         end 
     end
+
+    local function sillyStringFindFreeGrid()
+        local pos = mod:freeGrid(d.baby, false, 300, 50)
+        if game:GetRoom():CheckLine(pos,npc.Position,3,900,false,false) then
+            return pos
+        else
+            return sillyStringFindFreeGrid()
+        end
+    end
+
+    --init--
 
     if not d.init then
         d.isRecieving = false
@@ -62,17 +86,11 @@ function mod:SillyStringAI(npc, sprite, d)
         npc.StateFrame = npc.StateFrame + 1
     end
 
-    if d.baby:IsDead() then
-        d.baby = npc:GetPlayerTarget()
-        d.state = "idle"
-        d.targisPlayer = true
-    end
+    --states and stuff--
 
     if d.state == "idle" then
-        sprite:Play("Idle")
-        npc:ClearEntityFlags(EntityFlag.FLAG_NO_TARGET | EntityFlag.FLAG_NO_PHYSICS_KNOCKBACK | EntityFlag.FLAG_NO_KNOCKBACK | EntityFlag.FLAG_NO_STATUS_EFFECTS)
-        npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_PLAYEROBJECTS
-        npc.GridCollisionClass = GridCollisionClass.COLLISION_SOLID
+        sprite:Play(extraanim .. "Idle")
+        mod:MakeVulnerable(npc)
         d.isRecieving = false
     elseif d.state == "recievestart" then
         sprite:Play("Recieve")
@@ -81,37 +99,35 @@ function mod:SillyStringAI(npc, sprite, d)
     elseif d.state == "recieved" then
         sprite:Play("RecieveIdle")
     elseif d.state == "hidingtime" then
-        npc:AddEntityFlags(EntityFlag.FLAG_NO_TARGET | EntityFlag.FLAG_NO_PHYSICS_KNOCKBACK | EntityFlag.FLAG_NO_KNOCKBACK | EntityFlag.FLAG_NO_STATUS_EFFECTS)
-        npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_NONE
-        npc.GridCollisionClass = GridCollisionClass.COLLISION_NONE
-        if sprite:IsFinished("Leave") then
+        mod:MakeInvulnerable(npc)
+        if sprite:IsFinished(extraanim .. "Leave") then
             npc.Velocity = mod:Lerp(npc.Velocity, d.newpos - npc.Position, 0.5)
             if npc.StateFrame > 50 then
-                sprite:Play("Appear")
+                sprite:Play(extraanim .. "Appear")
+                npc:PlaySound(SoundEffect.SOUND_SCAMPER,(math.random(1, 8))/10,0,false,1)
                 npc.StateFrame = 0
             end
         end
     end
 
-    npc.Velocity = mod:Lerp(npc.Velocity, (d.baby.Position - npc.Position):Resized(40), 0.01)
+    --the real code--
 
     if not d.targisPlayer then
-            
+        d.baby:GetData().baby = npc  
         if d.isRecieving then
             extraanim = "Recive"
             if d.shottorecieve and d.shottorecieve.Position:Distance(npc.Position) < 10 then
                 d.state = "recieving"
                 sprite:Play("RecieveEnd")
+                npc:PlaySound(SoundEffect.SOUND_VAMP_GULP,(math.random(1, 4))/10,0,false,(math.random(1, 8))/10)
                 d.shottorecieve:Remove()
                 d.shottorecieve = nil
                 d.shot = nil
                 d.baby:GetData().shot = nil
             end
-
             if sprite:IsFinished("RecieveEnd") then
                 d.state = "recieved"
             end
-
             if npc.StateFrame >= 30 and not d.shot and d.state == "recieved" and d.baby:GetData().state ~= "hidingtime" then
                 if d.baby.Type == 1 then d.baby = npc.Parent or npc:GetPlayerTarget() end
                 d.shootinginit = true
@@ -122,32 +138,35 @@ function mod:SillyStringAI(npc, sprite, d)
         else
             if npc.StateFrame >= 40 and not d.shot and not d.shootinginit then
                 d.shootinginit = true
-                mod:spritePlay(sprite, "Shoot")
+                mod:spritePlay(sprite, extraanim .. "Shoot")
                 d.state = "shoot"
                 npc.StateFrame = 0
             end
     
         end
-
         if sprite:IsEventTriggered("shoot") then
             d.isRecieving = false
             d.baby:GetData().state = "recievestart"
         end
-
     else
-        findSillyStringBaby()
+        if not d.babyIsDead then
+            findSillyStringBaby()
+        end
         if npc.StateFrame >= 60 then
-            mod:spritePlay(sprite, "Shoot")
+            mod:spritePlay(sprite, extraanim .. "Shoot")
             d.state = "shoot"
             npc.StateFrame = 0
         end
     end
+
+    --shooting--
 
     if sprite:IsEventTriggered("shoot") then
         local effect = Isaac.Spawn(1000, 2, 5, npc.Position, Vector.Zero, npc):ToEffect()
         effect.SpriteOffset = Vector(0,-25 + npc.SpriteOffset.X)
         effect.DepthOffset = npc.Position.Y * 1.25
         effect:FollowParent(npc)
+        npc:PlaySound(SoundEffect.SOUND_LITTLE_SPIT,(math.random(1, 8))/10,0,false,1)
         d.shot = Isaac.Spawn(9, 0, 0, npc.Position, Vector(10, 0):Rotated((d.baby.Position - npc.Position):GetAngleDegrees()), npc):ToProjectile()
         d.shot.Height = -40
         d.shot.Parent = npc
@@ -163,32 +182,45 @@ function mod:SillyStringAI(npc, sprite, d)
         d.state = "isfinishedshooting"
     end
 
-    local function sillyStringFindFreeGrid()
-        local pos = mod:freeGrid(d.baby, false, 300, 50)
-        if game:GetRoom():CheckLine(pos,npc.Position,3,900,false,false) then
-            return pos
-        else
-            return sillyStringFindFreeGrid()
-        end
-    end
+    --anims finished--
 
-    if sprite:IsFinished("Shoot") or sprite:IsFinished("RecieveShoot") then
+    if sprite:IsFinished(extraanim .. "Shoot") or sprite:IsFinished("RecieveShoot") then
         if npc.SubType == 1 then
             npc.StateFrame = 0
             d.newpos = sillyStringFindFreeGrid()
             d.state = "hidingtime"
-            mod:spritePlay(sprite, "Leave")
+            npc:PlaySound(SoundEffect.SOUND_FETUS_JUMP,(math.random(1, 8))/10,0,false,1)
+            mod:spritePlay(sprite, extraanim .. "Leave")
         else
             d.state = "idle"
         end
-    end
-
-    if sprite:IsFinished("Appear") then
+    elseif sprite:IsFinished(extraanim .. "Appear") or sprite:IsFinished("DepressedInit") then
         d.state = "idle"
     end
 
+    --check if its dead--
+
+    if d.baby:IsDead() then
+        d.baby = npc:GetPlayerTarget()
+        extraanim = "Depressed"
+        if not d.targisPlayer then
+            if not sprite:IsPlaying(extraanim .. "Appear") or sprite:IsPlaying(extraanim .. "Leave") then
+                sprite:Play(extraanim .. "Init")
+            end
+            d.state = "depressedinit"
+            d.state = "idle"
+            
+            d.babyIsDead = true
+        end
+    end
+
+    --actual movement--
+    
+    npc.Velocity = mod:Lerp(npc.Velocity, (d.baby.Position - npc.Position):Resized(40), 0.01)
     npc:MultiplyFriction(0.1)
 end
+
+-- extra --
 
 function mod.SillyStringColl(npc, coll)
     if npc.Type == 161 and (npc.Variant == mod.Monsters.String.Var or npc.Variant == mod.Monsters.Silly.Var) then
