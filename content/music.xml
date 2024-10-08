@@ -2,5 +2,7 @@
         <track name="AnixbirthGrief" path="shhh piano builds go away/GriefLoop.ogg" loop="true"/>
         <track name="AnixbirthSkyward" path="shhh piano builds go away/Wingless Angel.ogg" loop="true"/>
         <track name="Anixbirth12AM" path="shhh piano builds go away/12 AM.ogg" loop="true"/>
-        <track name="" path="" loop="true"/>
+        <track name="AnixbirthFunctions" path="shhh piano builds go away/Functions.ogg" loop="true"/>
+        <track name="AnixbirthSacrilege" path="shhh piano builds go away/Sacrilege.ogg" loop="true"/>
+        <track name="AnixbirthGoodnightPrince" path="shhh piano builds go away/Goodnight, Prince.ogg" loop="true"/>
 </music>

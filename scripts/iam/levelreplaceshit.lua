@@ -10,7 +10,13 @@ function mod:MusicCheckCallback()
         if mod:GetRoomNameByType(rDD.Type) == "Secret" then
             customMusicID = Isaac.GetMusicIdByName("AnixbirthGrief")
         elseif mod:GetRoomNameByType(rDD.Type) == "Arcade" then
-            customMusicID = Isaac.GetMusicIdByName("12AM")
+            customMusicID = Isaac.GetMusicIdByName("Anixbirth12AM")
+        elseif mod:GetRoomNameByType(rDD.Type) == "Library" then
+            customMusicID = Isaac.GetMusicIdByName("AnixbirthFunctions")
+        elseif mod:GetRoomNameByType(rDD.Type) == "Sacrifice" then
+            customMusicID = Isaac.GetMusicIdByName("AnixbirthSacrilege")
+        elseif mod:GetRoomNameByType(rDD.Type) == "Bedroom" then
+            customMusicID = Isaac.GetMusicIdByName("AnixbirthGoodnightPrince")
         end
     end
 

@@ -62,7 +62,7 @@ function mod:SillyStringAI(npc, sprite, d)
         npc.StateFrame = npc.StateFrame + 1
     end
 
-    if d.baby and d.baby:IsDead() then
+    if d.baby:IsDead() then
         d.baby = npc:GetPlayerTarget()
         d.state = "idle"
         d.targisPlayer = true
@@ -237,5 +237,3 @@ function mod.SillyShot(p, d)
         p.GridCollisionClass = EntityGridCollisionClass.GRIDCOLL_NONE
     end
 end
-
-
