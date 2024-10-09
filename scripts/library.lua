@@ -44,8 +44,16 @@ function mod:IsSourceofDamagePlayer(source, bomb)
 	end
 end
 
+local function patherReal(npc, point)
+	if npc.Type == 1 then
+		return game:GetRoom():CheckLine(point,npc.Position,3,900,false,false)
+	else
+		local pather = npc.Pathfinder
+		return pather:HasPathToPos(point, true)
+	end
+end
+
 function mod:freeGrid(npc, path, far, close)
-	local pather = npc.Pathfinder
 	local room = game:GetRoom()
 	path = path or false
 	far = far or 300
@@ -56,7 +64,7 @@ function mod:freeGrid(npc, path, far, close)
 			if room:GetGridPosition(i) ~= nil then
 			local gridpoint = room:GetGridPosition(i)
 			if gridpoint and gridpoint:Distance(npc.Position) < far and gridpoint:Distance(npc.Position) > close and room:GetGridEntity(i) == nil and 
-			room:IsPositionInRoom(gridpoint, 0) and pather:HasPathToPos(gridpoint, true) then
+			room:IsPositionInRoom(gridpoint, 0) and patherReal(npc, gridpoint) then
 				table.insert(tab, gridpoint)
 			end
 			end

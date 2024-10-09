@@ -65,8 +65,8 @@ function mod:SillyStringAI(npc, sprite, d)
     end
 
     local function sillyStringFindFreeGrid()
-        local pos = mod:freeGrid(d.baby, false, 300, 50)
-        if game:GetRoom():CheckLine(pos,npc.Position,3,900,false,false) then
+        local pos = mod:freeGrid(d.baby, true, 1000000, 100)
+        if game:GetRoom():CheckLine(pos,d.baby.Position,3,900,false,false) then
             return pos
         else
             return sillyStringFindFreeGrid()
@@ -79,7 +79,7 @@ function mod:SillyStringAI(npc, sprite, d)
         d.isRecieving = false
         d.state = "idle"
         npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_PLAYEROBJECTS
-        npc.SpriteOffset = Vector(0, 10)
+        npc.SpriteOffset = Vector(0, 20)
         findSillyStringBaby()
         d.init = true
     else
@@ -104,7 +104,7 @@ function mod:SillyStringAI(npc, sprite, d)
             npc.Velocity = mod:Lerp(npc.Velocity, d.newpos - npc.Position, 0.5)
             if npc.StateFrame > 50 then
                 sprite:Play(extraanim .. "Appear")
-                npc:PlaySound(SoundEffect.SOUND_SCAMPER,(math.random(1, 8))/10,0,false,1)
+                npc:PlaySound(SoundEffect.SOUND_SCAMPER,1,0,false,(math.random(1, 8))/10)
                 npc.StateFrame = 0
             end
         end
@@ -119,7 +119,7 @@ function mod:SillyStringAI(npc, sprite, d)
             if d.shottorecieve and d.shottorecieve.Position:Distance(npc.Position) < 10 then
                 d.state = "recieving"
                 sprite:Play("RecieveEnd")
-                npc:PlaySound(SoundEffect.SOUND_VAMP_GULP,(math.random(1, 4))/10,0,false,(math.random(1, 8))/10)
+                npc:PlaySound(SoundEffect.SOUND_VAMP_GULP,(math.random(2, 8))/10,0,false,(math.random(1, 8))/10)
                 d.shottorecieve:Remove()
                 d.shottorecieve = nil
                 d.shot = nil
@@ -166,7 +166,7 @@ function mod:SillyStringAI(npc, sprite, d)
         effect.SpriteOffset = Vector(0,-25 + npc.SpriteOffset.X)
         effect.DepthOffset = npc.Position.Y * 1.25
         effect:FollowParent(npc)
-        npc:PlaySound(SoundEffect.SOUND_LITTLE_SPIT,(math.random(1, 8))/10,0,false,1)
+        npc:PlaySound(SoundEffect.SOUND_LITTLE_SPIT,(math.random(4, 8))/10,0,false,1)
         d.shot = Isaac.Spawn(9, 0, 0, npc.Position, Vector(10, 0):Rotated((d.baby.Position - npc.Position):GetAngleDegrees()), npc):ToProjectile()
         d.shot.Height = -40
         d.shot.Parent = npc
@@ -189,7 +189,7 @@ function mod:SillyStringAI(npc, sprite, d)
             npc.StateFrame = 0
             d.newpos = sillyStringFindFreeGrid()
             d.state = "hidingtime"
-            npc:PlaySound(SoundEffect.SOUND_FETUS_JUMP,(math.random(1, 8))/10,0,false,1)
+            npc:PlaySound(SoundEffect.SOUND_FETUS_JUMP,(math.random(3, 8))/10,0,false,1)
             mod:spritePlay(sprite, extraanim .. "Leave")
         else
             d.state = "idle"
@@ -204,7 +204,8 @@ function mod:SillyStringAI(npc, sprite, d)
         d.baby = npc:GetPlayerTarget()
         extraanim = "Depressed"
         if not d.targisPlayer then
-            if not sprite:IsPlaying(extraanim .. "Appear") or sprite:IsPlaying(extraanim .. "Leave") then
+            if not (sprite:IsPlaying("Appear") or sprite:IsPlaying("Leave")) then
+                print(sprite:GetAnimation())
                 sprite:Play(extraanim .. "Init")
             end
             d.state = "depressedinit"
