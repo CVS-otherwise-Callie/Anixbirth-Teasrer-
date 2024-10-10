@@ -92,21 +92,33 @@ local function fortuneArray(array)
 end
 
 function mod:ShowFortune(forcedtune)
-    if forcedtune then
-        local fortune = split(forcedtune, "\n")
-        fortuneArray(fortune)
-    else
-        mod.FortuneTable = mod.FortuneTable or {}
-        if #mod.FortuneTable <= 1 then
-            local fortunelist = mod.Fortunes
-            local fortunetablesetup = split(mod.Fortunes, "\n\n")
-            for i = 1, #fortunetablesetup do
-                table.insert(mod.FortuneTable, split(fortunetablesetup[i], "\n"))
-            end
+    if mod.DSSavedata.customFortunes == 1 then
+        local fortuneLangs = {
+            mod.Fortunes,
+            mod.MandarinFortunes
+        }
+        if mod.FortuneLang ~= fortuneLangs[mod.DSSavedata.fortuneLanguage] then
+            mod.FortuneLang = fortuneLangs[mod.DSSavedata.fortuneLanguage]
+            mod.FortuneTable = {}
         end
-        local choice = math.random(#mod.FortuneTable)
-        local fortune = mod.FortuneTable[choice]
-        fortuneArray(fortune)
+        if forcedtune then
+            local fortune = split(forcedtune, "\n")
+            fortuneArray(fortune)
+        else
+            mod.FortuneTable = mod.FortuneTable or {}
+            if #mod.FortuneTable <= 1 then
+                local fortunelist = fortuneLangs[mod.DSSavedata.fortuneLanguage]
+                local fortunetablesetup = split(fortunelist, "\n\n")
+                for i = 1, #fortunetablesetup do
+                    table.insert(mod.FortuneTable, split(fortunetablesetup[i], "\n"))
+                end
+            end
+            local choice = math.random(#mod.FortuneTable)
+            local fortune = mod.FortuneTable[choice]
+            fortuneArray(fortune)
+        end
+    else
+        Game():ShowRule()
     end
 end
 

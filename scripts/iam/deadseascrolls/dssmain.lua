@@ -8,21 +8,23 @@ local DSSCoreVersion = 7
 
 local MenuProvider = {}
 
+local dsssaveManager = SaveManager.GetDeadSeaScrollsSave()
+
 function MenuProvider.SaveSaveData()
-	mod:SaveModData()
+    SaveManager.Save()
 end
 
 function MenuProvider.GetPaletteSetting()
-	return FHAC.savedata.MenuPalette
+	return dsssaveManager.MenuPalette
 end
 
 function MenuProvider.SavePaletteSetting(var)
-	FHAC.savedata.MenuPalette = var
+	dsssaveManager.MenuPalette = var
 end
 
 function MenuProvider.GetHudOffsetSetting()
 	if not REPENTANCE then
-		return FHAC.savedata.HudOffset
+		return dsssaveManager.HudOffset
 	else
 		return Options.HUDOffset * 10
 	end
@@ -30,56 +32,56 @@ end
 
 function MenuProvider.SaveHudOffsetSetting(var)
 	if not REPENTANCE then
-		FHAC.savedata.HudOffset = var
+		dsssaveManager.HudOffset = var
 	end
 end
 
 function MenuProvider.GetGamepadToggleSetting()
-	return FHAC.savedata.GamepadToggle
+	return dsssaveManager.GamepadToggle
 end
 
 function MenuProvider.SaveGamepadToggleSetting(var)
-	FHAC.savedata.GamepadToggle = var
+	dsssaveManager.GamepadToggle = var
 end
 
 function MenuProvider.GetMenuKeybindSetting()
-	return FHAC.savedata.MenuKeybind
+	return dsssaveManager.MenuKeybind
 end
 
 function MenuProvider.SaveMenuKeybindSetting(var)
-	FHAC.savedata.MenuKeybind = var
+	dsssaveManager.MenuKeybind = var
 end
 
 function MenuProvider.GetMenuHintSetting()
-	return FHAC.savedata.MenuHint
+	return dsssaveManager.MenuHint
 end
 
 function MenuProvider.SaveMenuHintSetting(var)
-	FHAC.savedata.MenuHint = var
+	dsssaveManager.MenuHint = var
 end
 
 function MenuProvider.GetMenuBuzzerSetting()
-	return FHAC.savedata.MenuBuzzer
+	return dsssaveManager.MenuBuzzer
 end
 
 function MenuProvider.SaveMenuBuzzerSetting(var)
-	FHAC.savedata.MenuBuzzer = var
+	dsssaveManager.MenuBuzzer = var
 end
 
 function MenuProvider.GetMenusNotified()
-	return FHAC.savedata.MenusNotified
+	return dsssaveManager.MenusNotified
 end
 
 function MenuProvider.SaveMenusNotified(var)
-	FHAC.savedata.MenusNotified = var
+	dsssaveManager.MenusNotified = var
 end
 
 function MenuProvider.GetMenusPoppedUp()
-	return FHAC.savedata.MenusPoppedUp
+	return dsssaveManager.MenusPoppedUp
 end
 
 function MenuProvider.SaveMenusPoppedUp(var)
-	FHAC.savedata.MenusPoppedUp = var
+	dsssaveManager.MenusPoppedUp = var
 end
 local DSSInitializerFunction = include("scripts.iam.deadseascrolls.dssmenucore")
 local Lore = include("scripts.iam.deadseascrolls.da lore")
@@ -119,22 +121,54 @@ local dmdirectory = {
     settings =  {
             title = 'settings',
                 buttons = {
-
-                    {str = 'enemies',      
+                    {str = '-----enemies-----', fsize=2, nosel = true},
+                    {str = '', fsize=2, nosel = true},
+                    {str = 'monsters',   
                     dest = 'enemies',
                     tooltip = {strset = {'turn on and', ' off what', 'enemies', 'show up', '', 'currently', 'does not', 'work yet'}}
                     },
+                    {str = '', fsize=2, nosel = true},
+                    {
+                        str = 'replaced monsters',
+                        choices = {'anixbirth mode', 'half and half', 'none'},
+                        variable = "monsterReplacements",
+                        setting = 1,
+                        load = function()
+                            return dsssaveManager.monsterReplacements or 1
+                        end,
+                        store = function(var)
+                            dsssaveManager.monsterReplacements = var
+                        end,
+                        tooltip = {strset = {'some enemies', 'can be','replaced by', 'floor variants', '', 'half anf half', 'by default'}}
+        
+                    },
+                    {str = '', fsize=2, nosel = true},
+                    {str = '-----fortunes-----', fsize=2, nosel = true},
+                    {str = '', fsize=2, nosel = true},
 
-                    {str = 'rocks',      
+                    --[[str = 'rocks',      
                     dest = 'rocks',
                     tooltip = {strset = {'edit what', 'rock pallate', 'you want to','show', '', 'currently', 'does not', 'work yet'}}
-                    },
+                    }}
 
                     {str = 'room names',      
                     dest = 'room_names',
                     tooltip = {strset = {'edit the', 'room names', 'settings', '', 'currently', 'does not', 'work yet'}}
+                    }},]]
+                    {
+                        str = 'custom fortunes',
+                        choices = {'on', 'off'},
+                        variable = "customFortunes",
+                        setting = 1,
+                        load = function()
+                            return dsssaveManager.customFortunes or 1
+                        end,
+                        store = function(var)
+                            dsssaveManager.customFortunes = var
+                        end,
+                        tooltip = {strset = {'allow for', 'fortune', 'replacements', '', 'on by', 'default'}}
                     },
-
+                    {str = '', fsize=2, nosel = true},
                     {
                         str = 'fortunes on death',
                         increment = 1, max = 10,
@@ -142,19 +176,74 @@ local dmdirectory = {
                         slider = true,
                         setting = 3,
                         load = function()
-                            return mod.fortuneDeathChance or 3
+                            return dsssaveManager.fortuneDeathChance or 3
                         end,
                         store = function(var)
-                            mod.fortuneDeathChance = var
+                            dsssaveManager.fortuneDeathChance = var
+                        end,
+                        displayif = function(_, item)
+                            if item and item.buttons then
+                                for _, button in ipairs(item.buttons) do
+                                    if button.str == 'custom fortunes' then
+                                        return button.setting == 1
+                                    end
+                                end
+                            end
+        
+                            return false
                         end,
                         tooltip = {strset = {'whats the %', 'a fortune', 'shows on', 'a enemys', 'death?','', 'out of 10'}}
-        
                     },
+                    {str = '', fsize=2, nosel = true},
+                    {
+                        str = 'fortune language',
+                        choices = {'english', 'chinese'},
+                        variable = "fortuneLanguage",
+                        setting = 1,
+                        load = function()
+                            return dsssaveManager.fortuneLanguage or 1
+                        end,
+                        store = function(var)
+                            dsssaveManager.fortuneLanguage = var
+                        end,
+                        displayif = function(_, item)
+                            if item and item.buttons then
+                                for _, button in ipairs(item.buttons) do
+                                    if button.str == 'custom fortunes' then
+                                        return button.setting == 1
+                                    end
+                                end
+                            end
+        
+                            return false
+                        end,
+                        tooltip = {strset = {'changes the', 'languages for', 'mod fortunes', '', 'english by', 'default'}}
+                    },
+                    {str = '----------', fsize=2, nosel = true},
+
                 }
     },
 
     enemies = {
         --add ff-like menu here
+        title = 'enemies',
+        buttons = {
+            {str = 'catacombs', nosel = true},
+            {
+                str = 'pretty mushlooms',
+                fsize=2,
+                choices = {'normal', 'pretty', 'shaded pretty'},
+                variable = "prettyMushlooms",
+                setting = 1,
+                load = function()
+                    return dsssaveManager.prettyMushlooms or 1
+                end,
+                store = function(var)
+                    dsssaveManager.prettyMushlooms = var
+                end,
+                tooltip = {strset = {'pretty','mushloom', 'made by', 'onxc_kryptid','','normal by', 'default'}}
+            }
+        }
     },
 
     rocks = {

@@ -31,6 +31,7 @@ end
 
 function mod:PinprickAI(npc, sprite, d)
 
+    local room = game:GetRoom()
     local target = Game():GetNearestPlayer(npc.Position)
     local targetpos = mod:confusePos(npc, target.Position, 5, nil, nil)
     local cos = math.cos(npc.FrameCount / 15) * 80
@@ -48,14 +49,15 @@ function mod:PinprickAI(npc, sprite, d)
         color:SetColorize(1, 0.8, 0.1, 3)
         d.Trail.Color = color
         d.newpos = npc.Position
-        npc.Position = (npc.Position + d.newpos):Rotated((targetpos - npc.Position):GetAngleDegrees() + 180)
+        npc.Position = (room:GetCenterPos() + d.newpos):Rotated((targetpos - npc.Position):GetAngleDegrees() + 180 + rng:RandomInt(-20, 20))
         npc.GridCollisionClass = EntityGridCollisionClass.GRIDCOLL_NONE
         d.firstinit = true
     else
         npc.StateFrame = npc.StateFrame + 1
     end
 
-    if npc.Position:Distance(d.newpos) < 10 and not d.init then
+    if npc.Position:Distance(d.newpos) < 30 and not d.init then
+        npc.StateFrame = 31
         d.init = true
     end
 

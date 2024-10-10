@@ -205,7 +205,6 @@ function mod:SillyStringAI(npc, sprite, d)
         extraanim = "Depressed"
         if not d.targisPlayer then
             if not (sprite:IsPlaying("Appear") or sprite:IsPlaying("Leave")) then
-                print(sprite:GetAnimation())
                 sprite:Play(extraanim .. "Init")
             end
             d.state = "depressedinit"

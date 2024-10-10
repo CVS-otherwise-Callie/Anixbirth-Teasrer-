@@ -9,6 +9,14 @@ mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
 end, mod.Monsters.MushLoom.ID)
 
 function mod:MushLoomAI(npc, sprite, d)
+
+    local tab = {
+        "normal",
+        "pretty",
+        "shaded pretty"
+    }
+    mod:ReplaceEnemySpritesheet(npc, "gfx/monsters/mushloom/".. tab[mod.DSSavedata.prettyMushlooms] .. "mushloom", 0)
+    
     if not d.init then
         if npc.SubType == 0 then
             d.waittime = rng:RandomInt(30, 50)

@@ -7,14 +7,6 @@ function FHAC:LoadScripts(includestart, t)
     end
 end
 
-SaveManager  = include("scripts.save_manager")
-local saveKeys = SaveManager.DefaultSaveKeys
-
-SaveManager.Utility.AddDefaultFloorData(saveKeys.GLOBAL, { PreSavedEntsLevel = {} })
-SaveManager.Utility.AddDefaultFloorData(saveKeys.GLOBAL, { SavedEntsLevel = {} })
-
-SaveManager.Init(FHAC)
-
 if REPENTOGON and StageAPI and StageAPI.Loaded then
 StageAPI.UnregisterCallbacks("FHAC")
 FHAC:LoadScripts("scripts", {
@@ -26,9 +18,9 @@ FHAC:LoadScripts("scripts", {
 	"compatability.fiend folio.modcompact",
 	"callbacks",
 	"iam.main",
+	"iam.misc.resources.fortunes",
 	"otherapi.fiend folio.api.fortunehandling",
 	"otherapi.fiend folio.api.apioverride",
-	"iam.misc.resources.fortunes",
 	"otherapi.proapi.proapi"
 })
 --ff

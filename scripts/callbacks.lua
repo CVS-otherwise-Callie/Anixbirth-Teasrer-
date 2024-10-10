@@ -102,3 +102,13 @@ function mod:NPCGetHurtStuff(npc, damage, flag, source, countdown)
     mod:PallunLeaveWhenHit(npc)
 end
 mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, mod.NPCGetHurtStuff)
+
+---- custom utility callbacks! ----
+
+function mod:OnPostDataLoad(saveData, isLuamod)
+    FHAC.PreSavedEntsLevel = saveData.game.roomFloor.PreSavedEntsLevel or {}
+    FHAC.SavedEntsLevel = saveData.game.roomFloor.SavedEntsLevel or {}
+    saveData.file.other.HasLoaded = true
+end
+
+SaveManager.AddCallback(SaveManager.Utility.CustomCallback.POST_DATA_LOAD, mod.OnPostDataLoad)
