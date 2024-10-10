@@ -1,6 +1,344 @@
 FHAC.Fortunes = 
 [=================[
 
+what the hell
+do you usually mean by
+“solar radiation”
+
+can you just
+take her, please
+
+your honestness
+defines you
+
+praise the lord
+that you have received
+such good gifts
+
+don’t read this
+
+avoid the 
+treasure room
+
+your life
+will be defined
+by violence
+
+don’t go to
+the curse room
+
+stop visiting
+this floor’s shop
+
+the sacrifice room
+has nothing for you
+
+as for sex!
+
+as not for sex…
+well, don’t do it
+
+your wife disapproves
+of your actions
+
+avoid this restaurant
+don’t come back
+
+you are fiendish
+thus, society accepts you
+
+leave your work
+at work, and your
+family at home
+
+don’t boot up
+your computer on
+friday
+
+go back inside
+
+go back up
+to your room
+
+your computer is
+going to restart!
+
+you are not
+a morally good 
+Individual
+
+look for a movie
+for us to watch
+on sunday!
+
+stop being
+so obnoxious
+
+the way you are
+acting so demanding
+hurts others!
+
+you are a socially
+moral person!
+
+today will
+bring you ruin
+
+be wary of
+what tomorrow
+will bring
+
+next year
+many things will
+change for the worse
+
+stay quiet when
+you are supposed to
+
+this run is
+not blessed
+
+you should do it
+mattman style
+
+your car will crash
+on your drive home
+
+beware of your neighbors
+
+go close the game
+and update your
+repentagon
+
+do you have
+repentagon installed?
+
+all isaac players
+are assumed gay
+
+what is the
+meaning of women?
+
+what is the
+meaning of trans?
+
+note everything
+that happens here
+
+note nothing
+that happens here
+
+don’t talk about this
+
+throw this
+fortune away
+
+i don’t want to
+hear a word
+from you!
+
+the rabbit and
+the aunt
+
+but the sun
+is a good thing!
+
+keep away from
+all radiation:
+green, pink, and blue
+
+cut the red wire!
+now cut the purple!
+
+don’t cut any
+Wires!
+
+but the sun
+is a bad thing
+
+George…
+i done a
+very bad thing
+
+don’t leave
+the house 
+before 6am
+
+why has madlad
+turned from a - live
+to  a - evil??
+
+I did a special effect here
+but you can’t see it
+cause TBOI can’t load it
+
+try playing
+empress botan
+next week!!
+
+this specific fortune is 100 coins
+but you can’t sell it 
+L bozo
+
+天上太陽紅呀紅彤彤詶
+心中的太陽是毛澤東誒
+/*(Leave this in the English section)*/
+
+the cake is a-li(v)e
+
+Nothing!
+there’s
+
+hehe
+dorito
+△
+
+i
+am
+CHEESE
+
+Goat.
+That’s it.
+That’s the joke.
+
+what?
+you wrote in
+the wrong language?
+
+russians?
+are they cold?
+
+i so want to
+freaking leave
+
+it is good that
+you are such a troublemaker
+continue in your ways
+
+natori!
+
+the man who
+wrote this grants you
+*3 luck and swordsmanship
+
+isaac almost died
+to a squirrel??
+
+isaac dying
+to a patient!
+imagine that!
+
+would you rather:
+plan C or euthanasia
+
+pentagram or
+non gmo corn?
+hurry! I need answers!
+
+that’s still fiendish
+
+that’s still folioish
+
+sadly last judgment
+means the end
+of team compliance
+
+literally every enemy
+overlaps! besides
+foreigners!
+
+you will lose
+another friend
+through arcaea
+
+can i see
+your arcaea ratings?
+
+how many wishes
+have you stockpiled?
+
+is thy wish
+to be born a-old?
+
+is thy wish
+to be born anew?
+
+does thy have
+a wish?
+
+choose what
+you will wish for
+
+i recommend saving
+up on wishes
+
+your next wish
+will grant you
+a new track
+
+no, fuck no!
+im not doing
+your homework!
+
+can you just
+take him, please
+
+you will take
+a responsibility larger
+than is fit for you
+
+the upcoming 
+responsibilities are
+extreme!
+
+no one trusts
+you with anything!
+for good reason too!
+
+you have lost
+trust in those
+you seek
+
+trust is hard
+to come by in
+your age
+
+consult someone
+you would not
+normally trust
+
+you will die
+tomorrow
+
+you will die
+next week
+
+you will die
+to a certain penguin
+
+you will die
+to a zesty theater man
+
+look out!
+you don’t want
+to die
+
+god wills that
+you will soon die
+
+wake up on
+the left side
+of bed
+
+wake up on
+the right side
+of bed
+
+wake up on
+the conservative side
+of bed
+
+
 fortunes?
 where’d they go?
 
