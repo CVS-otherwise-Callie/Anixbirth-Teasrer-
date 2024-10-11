@@ -219,6 +219,22 @@ local dmdirectory = {
                         end,
                         tooltip = {strset = {'changes the', 'languages for', 'mod fortunes', '', 'english by', 'default'}}
                     },
+                    {str = '', fsize=2, nosel = true},
+                    {str = '-----music-----', fsize=2, nosel = true},
+                    {str = '', fsize=2, nosel = true},
+                    {
+                        str = 'room music',
+                        choices = {'on', 'off'},
+                        variable = "customRoomMusic",
+                        setting = 1,
+                        load = function()
+                            return dsssaveManager.customRoomMusic or 2
+                        end,
+                        store = function(var)
+                            dsssaveManager.customRoomMusic = var
+                        end,
+                        tooltip = {strset = {'allow for', 'rooms music', 'replacements', '', 'off by', 'default'}}
+                    },
                     {str = '----------', fsize=2, nosel = true},
 
                 }

@@ -6,6 +6,8 @@ function mod:MusicCheckCallback()
     local customMusicID = nil
     local ms = MusicManager()
 
+    
+
     if mod:GetRoomNameByType(rDD.Type) then
         if mod:GetRoomNameByType(rDD.Type) == "Secret" then
             customMusicID = Isaac.GetMusicIdByName("AnixbirthGrief")
