@@ -168,7 +168,17 @@ local dmdirectory = {
                         end,
                         tooltip = {strset = {'allow for', 'fortune', 'replacements', '', 'on by', 'default'}}
                     },
-                    {str = '', fsize=2, nosel = true},
+                    {str = '', fsize=2,displayif = function(_, item)
+                        if item and item.buttons then
+                            for _, button in ipairs(item.buttons) do
+                                if button.str == 'custom fortunes' then
+                                    return button.setting == 1
+                                end
+                            end
+                        end
+    
+                        return false
+                    end, nosel = true},
                     {
                         str = 'fortunes on death',
                         increment = 1, max = 10,
@@ -194,7 +204,17 @@ local dmdirectory = {
                         end,
                         tooltip = {strset = {'whats the %', 'a fortune', 'shows on', 'a enemys', 'death?','', 'out of 10'}}
                     },
-                    {str = '', fsize=2, nosel = true},
+                    {str = '', fsize=2,displayif = function(_, item)
+                        if item and item.buttons then
+                            for _, button in ipairs(item.buttons) do
+                                if button.str == 'custom fortunes' then
+                                    return button.setting == 1
+                                end
+                            end
+                        end
+    
+                        return false
+                    end, nosel = true},
                     {
                         str = 'fortune language',
                         choices = {'english', 'chinese'},
@@ -219,7 +239,7 @@ local dmdirectory = {
                         end,
                         tooltip = {strset = {'changes the', 'languages for', 'mod fortunes', '', 'english by', 'default'}}
                     },
-                    {str = '', fsize=2, nosel = true},
+                    {str = '', fsize=2,nosel = true},
                     {str = '-----music-----', fsize=2, nosel = true},
                     {str = '', fsize=2, nosel = true},
                     {

@@ -103,6 +103,11 @@ function mod:NPCGetHurtStuff(npc, damage, flag, source, countdown)
 end
 mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, mod.NPCGetHurtStuff)
 
+function mod:NPCPostInit(npc)
+    mod:NPCReplaceCallback(npc)
+end
+mod:AddCallback(ModCallbacks.MC_POST_NPC_INIT, mod.NPCPostInit)
+
 ---- custom utility callbacks! ----
 
 function mod:OnPostDataLoad(saveData, isLuamod)
