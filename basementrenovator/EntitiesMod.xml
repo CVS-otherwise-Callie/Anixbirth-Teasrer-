@@ -87,79 +87,79 @@ Use 2, 4, or 6 normally.
 <tab Name="Anixbirth (Hope)">
 
 	<group Name="HOPE Chapter 1 Enemies" Label="Chapter 1 Shared">
-      <group Name="HOPE Chapter 1 Shared Enemies">
-		   <entity Name="Floater"/>
-         <entity Name="Fivehead"/>
-		   <entity Name="Neutral Fly"/>
-         <entity Name="Patient"/>
-      </group>
+      		<group Name="HOPE Chapter 1 Shared Enemies">
+		   	<entity Name="Floater"/>
+			<entity Name="Fivehead"/>
+		   	<entity Name="Neutral Fly"/>
+         		<entity Name="Patient"/>
+      		</group>
 	</group>
 
-   <group Name="HOPE Basement" Label="Basement">
-      <group Name="HOPE Basement Enemies">
+	<group Name="HOPE Basement" Label="Basement">
+		<group Name="HOPE Basement Enemies">
 		   <entity Name="Snidge"/>
-      </group>
+		</group>
 	</group>
 
-  <group Name="HOPE Cellar" Label="Cellar">
-	<group Name="HOPE Cellar Enemies">
-		<entity Name="Dried (Red)" />
-      <entity Name="Plier" />
-      <entity Name="Silly" />
-      <entity Name="String" />
-	</group>
-  </group>
+	<group Name="HOPE Cellar" Label="Cellar">
+		<group Name="HOPE Cellar Enemies">
+			<entity Name="Dried (Red)" />
+      			<entity Name="Plier" />
+      			<entity Name="Silly" />
+      			<entity Name="String" />
+		</group>
+  	</group>
 
 	<group Name="HOPE Burning Basement" Label="Burning Basement">
-      <group Name="HOPE Burning Basement Enemies">
-		   <entity Name="Schmoot"/>
-      </group>
+		<group Name="HOPE Burning Basement Enemies">
+			<entity Name="Schmoot"/>
+		</group>
 	</group>
    
 	<group Name="HOPE Chapter 1 Alt" Label="Chapter 1 Alt">
-      <group Name="HOPE Chapter 1 Alt Enemies">
+		<group Name="HOPE Chapter 1 Alt Enemies">
 		   <entity Name="Floater"/>
 		   <entity Name="Fivehead"/>
 		   <entity Name="Wost"/>
-      </group>
+		</group>
 	</group>
 
-   <group Name="HOPE Downpour" Label="Downpour">
-      <group Name="HOPE Downpour Enemies">
+	<group Name="HOPE Downpour" Label="Downpour">
+		<group Name="HOPE Downpour Enemies">
 		   <entity Name="Wost"/>
 		   <entity Name="Pinprick"/>
-      </group>
+		</group>
 	</group>
 
-   <group Name="HOPE Dross" Label="Dross">
-      <group Name="HOPE Dross Enemies">
+	<group Name="HOPE Dross" Label="Dross">
+		<group Name="HOPE Dross Enemies">
 		   <entity Name="Drosslet"/>
 		   <entity Name="Gassed Fly"/>
-      </group>
+		</group>
 	</group>
 
-   <group Name="HOPE Chapter 2 Enemies" Label="Chapter 2 Shared">
-      <group Name="HOPE Chapter 2 Shared Enemies">
-      </group>
+	<group Name="HOPE Chapter 2 Enemies" Label="Chapter 2 Shared">
+		<group Name="HOPE Chapter 2 Shared Enemies">
+		</group>
 	</group>
 
-   <group Name="HOPE Caves" Label="Caves">
-      <group Name="HOPE Caves Enemies">
-		   <entity Name="Synthetic Horf"/>
-         <entity Name="Pallun"/>
-      </group>
+	<group Name="HOPE Caves" Label="Caves">
+		<group Name="HOPE Caves Enemies">
+			<entity Name="Synthetic Horf"/>
+			<entity Name="Pallun"/>
+		</group>
 	</group>
 
-   <group Name="HOPE Catacombs" Label="Catacombs">
-      <group Name="HOPE Catacombs Enemies">
-		   <entity Name="Mush Loom"/>
-      </group>
+	<group Name="HOPE Catacombs" Label="Catacombs">
+		<group Name="HOPE Catacombs Enemies">
+			<entity Name="Mush Loom"/>
+		</group>
 	</group>
 
-   <group Name="HOPE Flooded Caves" Label="Flooded Caves">
-      <group Name="HOPE Flooded Caves Enemies">
-		   <entity Name="Pit Pat (Spawner)"/>
-      </group>
+	<group Name="HOPE Flooded Caves" Label="Flooded Caves">
+		<group Name="HOPE Flooded Caves Enemies">
+			<entity Name="Pit Pat (Spawner)"/>
+		</group>
 	</group>
 
 </tab>
