@@ -31,6 +31,7 @@ FHAC.Monsters = {
     Silly = mod:ENT("Silly"),
     String = mod:ENT("String"),
     StickyFly = mod:ENT("Sticky Fly"),
+    WispWosp = mod:ENT("Wisp Wosp"),
 }
 
 FHAC.Familiars = { --YOU HAVE NO IDEA HOW MANY FUCKING TIMES I SPELLED THIS WRONG LMAO
@@ -47,6 +48,11 @@ FHAC.Savedata = {
 
 FHAC.Challenges = {
     Bestiary = Isaac.GetChallengeIdByName("[ANIX] The Real Bestiary")
+}
+
+FHAC.Unlocks = {
+    Floater = Isaac.GetAchievementIdByName("Floater"),
+    Fivehead = Isaac.GetAchievementIdByName("Fivehead")
 }
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

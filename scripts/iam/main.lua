@@ -17,11 +17,13 @@ FHAC:LoadScripts("scripts.iam.monsters", {
 	"fly_ve-bomber", --HAHAHAH FUCK YOU EUAN TOO
 	"pallun",
 	"sillystring",
-	"stickyfly"
+	"stickyfly",
+	"wispwosp"
 })
 
 FHAC:LoadScripts("scripts.iam", {
-	"levelreplaceshit"
+	"cvsunlocks",
+	"levelreplaceshit",
 })
 
 FHAC:LoadScripts("scripts.iam.familiars", {

@@ -8,7 +8,6 @@ function FHAC.FiendFolioCompat()
     mod:MixTables(FiendFolio.Nonmale, FHAC.Nonmale)
 
     FHAC.FiendFolioCompactLoaded = true
-    print("Anixbirth Fiend Folio Compact Loaded! Hooray!")
     return true
     end
 end

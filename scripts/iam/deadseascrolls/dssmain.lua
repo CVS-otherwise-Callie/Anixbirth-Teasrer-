@@ -85,7 +85,7 @@ function MenuProvider.SaveMenusPoppedUp(var)
 end
 local DSSInitializerFunction = include("scripts.iam.deadseascrolls.dssmenucore")
 local Lore = include("scripts.iam.deadseascrolls.da lore")
-local dssmod = DSSInitializerFunction(DSSModName, DSSCoreVersion, MenuProvider)
+FHAC.dssmod = DSSInitializerFunction(DSSModName, DSSCoreVersion, MenuProvider)
 
 local function genLore(tab)
     local button = {}
@@ -99,7 +99,7 @@ local function genLore(tab)
 end
 
 
-local dmdirectory = {
+FHAC.dmdirectory = {
     main = {
         title = 'hope (teasrer)',
 
@@ -108,14 +108,14 @@ local dmdirectory = {
             {str = 'settings', dest = 'settings',tooltip = {strset = {'---','play around', 'with what', 'you like and', 'do not like', '---'}}},
             {str = 'other', dest = 'other',tooltip = {strset = {'---','the misc,', 'the huh,', 'and the', 'why!', '---'}}},         
             {str = 'achievements', dest = 'achievements',tooltip = {strset = {'---','force lock or', 'unlock things ','', 'recommended to', 'keep stuff locked', '---'}}},
-            dssmod.changelogsButton,
+            FHAC.dssmod.changelogsButton,
             {str = '', fsize=2, nosel = true},
             {str = 'this mod is', fsize = 2, nosel = true},
             {str = 'still in early dveleopment', fsize = 2, nosel = true},
             {str = 'check us out', fsize = 2, nosel = true},
             {str = 'a good while later!!', fsize = 2, nosel = true},
         },
-        tooltip = dssmod.menuOpenToolTip,
+        tooltip = FHAC.dssmod.menuOpenToolTip,
     },
 
     settings =  {
@@ -168,7 +168,7 @@ local dmdirectory = {
                         end,
                         tooltip = {strset = {'allow for', 'fortune', 'replacements', '', 'on by', 'default'}}
                     },
-                    {str = '', fsize=2,displayif = function(_, item)
+                    {str = '', nosel = true, fsize=2,displayif = function(_, item)
                         if item and item.buttons then
                             for _, button in ipairs(item.buttons) do
                                 if button.str == 'custom fortunes' then
@@ -178,7 +178,7 @@ local dmdirectory = {
                         end
     
                         return false
-                    end, nosel = true},
+                    end},
                     {
                         str = 'fortunes on death',
                         increment = 1, max = 10,
@@ -204,7 +204,7 @@ local dmdirectory = {
                         end,
                         tooltip = {strset = {'whats the %', 'a fortune', 'shows on', 'a enemys', 'death?','', 'out of 10'}}
                     },
-                    {str = '', fsize=2,displayif = function(_, item)
+                    {str = '', nosel = true, fsize=2,displayif = function(_, item)
                         if item and item.buttons then
                             for _, button in ipairs(item.buttons) do
                                 if button.str == 'custom fortunes' then
@@ -214,7 +214,7 @@ local dmdirectory = {
                         end
     
                         return false
-                    end, nosel = true},
+                    end},
                     {
                         str = 'fortune language',
                         choices = {'english', 'chinese'},
@@ -303,7 +303,7 @@ local dmdirectory = {
                 fsize=2,
                 func = function(button, item, root)
                     Isaac.ExecuteCommand("restart ".. Isaac.GetPlayerTypeByName("Johannes"))
-                    dssmod.reloadButtons(root, root.Directory.settings)
+                    FHAC.dssmod.reloadButtons(root, root.Directory.settings)
                 end,
                 tooltip = {strset = {'restart as', 'johannes'}},
             },
@@ -314,7 +314,7 @@ local dmdirectory = {
                 fsize=2,
                 func = function(button, item, root)
                     Isaac.ExecuteCommand("restart ".. Isaac.GetPlayerTypeByName("Pongon"))
-                    dssmod.reloadButtons(root, root.Directory.settings)
+                    FHAC.dssmod.reloadButtons(root, root.Directory.settings)
                 end,
                 tooltip = {strset = {'restart as', 'pongon'}},
             },
@@ -330,7 +330,7 @@ local dmdirectory = {
 }
 
 local dmdirectorykey = {
-    Item = dmdirectory.main,
+    Item = FHAC.dmdirectory.main,
     Main = 'main',
     Idle = false,
     MaskAlpha = 1,
@@ -339,7 +339,7 @@ local dmdirectorykey = {
     Path = {},
 }
 
-DeadSeaScrollsMenu.AddMenu("Anixbirth", {Run = dssmod.runMenu, Open = dssmod.openMenu, Close = dssmod.closeMenu, Directory = dmdirectory, DirectoryKey = dmdirectorykey})
+DeadSeaScrollsMenu.AddMenu("Anixbirth", {Run = FHAC.dssmod.runMenu, Open = FHAC.dssmod.openMenu, Close = FHAC.dssmod.closeMenu, Directory = FHAC.dmdirectory, DirectoryKey = dmdirectorykey})
 
 
 

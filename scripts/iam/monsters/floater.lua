@@ -14,7 +14,7 @@ function mod:FloaterAI(npc, sprite, d, r)
         
     if not d.init then
         d.realboost = rng:RandomInt(15, 35)/10
-        d.floateroffset = math.random(-10, 10)
+        d.floateroffset = math.random(-5, 10)
         npc.StateFrame = 50
         npc.GridCollisionClass = EntityGridCollisionClass.GRIDCOLL_NONE
         d.dashper = 120 -- change this to however bad you want it to be! I like the 100 range, personally.
@@ -31,10 +31,12 @@ function mod:FloaterAI(npc, sprite, d, r)
 
     local room = Game():GetRoom()
     local target = npc:GetPlayerTarget()
-    if npc.StateFrame > 10 + d.floateroffset then --this adds a scent of organicness lmao
+    if npc.StateFrame > 5 + d.floateroffset then --this adds a scent of organicness lmao
         d.targetpos = mod:confusePos(npc, target.Position, 5, nil, nil)
+        d.floateroffset = math.random(-5, 10)
         npc.StateFrame = 0
     end
+    d.targetpos = mod:confusePos(npc, target.Position, 5, nil, nil)
     local enemydir = (d.targetpos - npc.Position):GetAngleDegrees()
     local targetvelocity = Vector.Zero
     local othertargetvelocity = Vector.Zero
@@ -71,6 +73,11 @@ function mod:FloaterAI(npc, sprite, d, r)
         d.diranim = "North"
     end
 
+    if d.animinit == false or d.diranim ~= d.oldanim then
+        d.animinit = true
+        sprite:Play(d.diranim, true)
+    end
+
     if mod:isScare(npc) then
         if target.Position.X < npc.Position.X then
             sprite.FlipX = true
@@ -85,26 +92,32 @@ function mod:FloaterAI(npc, sprite, d, r)
         end
     end
 
+    if d.tearTarg and not d.tearTarg:IsDead() then
+        d.state = "dashout"
+    else
+        d.state = "chase"
+    end
+
     if d.state == "dashout" then
         d.moveval = Vector.Zero
 
         if (enemydir > 135 and enemydir < 180) or (enemydir > 0 and enemydir < 45) then
-            d.moveval = Vector(0, -1 * d.accelerateaway/10)
+            d.moveval = Vector(0, -1 * d.accelerateaway)
         end
         if (enemydir > -180 and enemydir < -135) or (enemydir < 0 and enemydir > -45) then
-            d.moveval = Vector(0, d.accelerateaway/10)
+            d.moveval = Vector(0, d.accelerateaway)
         end
         if (enemydir < -90 and enemydir > -135) or (enemydir > 90 and enemydir < 135) then
-            d.moveval = Vector(-1 * d.accelerateaway/10, 0)
+            d.moveval = Vector(-1 * d.accelerateaway, 0)
         end
         if (enemydir < -45 and enemydir > -90) or (enemydir > 45 and enemydir < 90) then
-            d.moveval = Vector(d.accelerateaway/10, 0)
+            d.moveval = Vector(d.accelerateaway, 0)
         end
 
         if not mod:isScare(npc) then
-            othertargetvelocity = (d.targetpos + d.moveval - npc.Position):Resized(d.boost*2)
+            othertargetvelocity = (d.targetpos + d.moveval - npc.Position):Resized(d.boost)
         else
-            othertargetvelocity = (d.targetpos:Rotated(180) + d.moveval - npc.Position):Resized(d.boost*2) 
+            othertargetvelocity = (d.targetpos:Rotated(180) + d.moveval - npc.Position):Resized(d.boost/5) 
         end
     elseif d.state == "chase" then
         d.moveval = Vector.Zero
@@ -127,10 +140,6 @@ function mod:FloaterAI(npc, sprite, d, r)
 
     end
 
-    if npc.StateFrame > 10 then
-        d.state = "chase"
-    end
-
     if mod:isScare(npc) or d.state == "dashout" then
         npc.Velocity = mod:Lerp(npc.Velocity, othertargetvelocity, d.boost/5)
     else
@@ -142,11 +151,6 @@ function mod:FloaterAI(npc, sprite, d, r)
         Accel = 0.02,
         GiveUp = true
     })
-
-    if d.animinit == false then
-        d.animinit = true
-        sprite:Play(d.diranim, true)
-    end
 
         --Other bullshit
     if sprite:IsFinished() then
@@ -165,10 +169,7 @@ function mod.FloaterTearUpdate(tear)
         if v.Type == Isaac.GetEntityTypeByName("Floater") and v.Variant == Isaac.GetEntityVariantByName("Floater") and v.SubType == Isaac.GetEntitySubTypeByName("Floater") then
             local target = v:ToNPC():GetPlayerTarget()
             if math.abs(((target.Position - tear.Position):GetAngleDegrees() - (target.Position - v.Position):GetAngleDegrees())) < 20 and tear.Position:Distance(v.Position) < 100 and not tear:IsDead() and d.state ~= "avoid" then
-                if v:ToNPC().StateFrame > 50 then
-                    v:ToNPC().StateFrame = 0
-                    d.state = "dashout"
-                end
+                d.tearTarg = tear
                 d.accelerateaway = d.dashper
             end
         end

@@ -1,6 +1,6 @@
 SaveManager  = include("scripts.save_manager")
 SaveManager.Init(FHAC)
-SaveManager.Load(true)
+SaveManager.Load()
 
 FHAC.DSSavedata = SaveManager.GetDeadSeaScrollsSave()
 

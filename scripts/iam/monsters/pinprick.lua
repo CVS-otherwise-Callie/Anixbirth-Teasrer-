@@ -49,8 +49,11 @@ function mod:PinprickAI(npc, sprite, d)
         color:SetColorize(1, 0.8, 0.1, 3)
         d.Trail.Color = color
         d.newpos = npc.Position
-        npc.Position = (room:GetCenterPos() + d.newpos):Rotated((targetpos - npc.Position):GetAngleDegrees() + 180 + rng:RandomInt(-20, 20))
+        if npc.Variant == mod.Monsters.Pinprick.Var then
+            npc.Position = (room:GetCenterPos() + d.newpos):Rotated((targetpos - npc.Position):GetAngleDegrees() + 180 + rng:RandomInt(-20, 20))
+        end
         npc.GridCollisionClass = EntityGridCollisionClass.GRIDCOLL_NONE
+        d.pinPrickDash = 30
         d.firstinit = true
     else
         npc.StateFrame = npc.StateFrame + 1
@@ -61,7 +64,7 @@ function mod:PinprickAI(npc, sprite, d)
         d.init = true
     end
 
-    if npc.StateFrame > 30 + d.dashoffset and d.init then
+    if npc.StateFrame > d.pinPrickDash + d.dashoffset and d.init then
         if d.moveoffset < 0.02 then
         d.dashoffset = rng:RandomInt(0, 10)
         d.newpos = targetpos - Vector(10, 0):Rotated((targetpos - npc.Position):GetAngleDegrees() + rng:RandomInt(-5, 5))
