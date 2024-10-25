@@ -1,6 +1,6 @@
 <data>
 
-<entity ID="161" Variant="4" Name="Patient" Image="mah boys/patient.png" BaseHP="15" Group="Monsters" Kind="Anixbirth (Hope)">
+<entity ID="161" Variant="4" Name="Patient" Image="mah boys/patient.png" BaseHP="15">
    <bitfield Key="Subtype">
       <dropdown Name="Patient Type" Length="7">
          <choice Value="0">Virus</choice>
@@ -13,16 +13,16 @@
       </dropdown>
    </bitfield>
 </entity>
-<entity ID="161" Variant="6" Name="Snidge" Image="mah boys/snidge.png" BaseHP="0.1" Group="Monsters" Kind="Anixbirth (Hope)"/>
-<entity ID="161" Variant="11" Name="Floater" Image="mah boys/floater.png" BaseHP="10" StageHP="3" Tags="Champion" Group="Monsters" Kind="Anixbirth (Hope)"/>
-<entity ID="161" Variant="12" Name="Fivehead" Image="mah boys/fivehead.png" BaseHP="15" Tags="Champion" Group="Monsters" Kind="Anixbirth (Hope)"/>
-<entity ID="161" Variant="21" Name="Neutral Fly" Image="mah boys/neutralfly.png" BaseHP="15" Tags="Champion" Group="Monsters" Kind="Anixbirth (Hope)"/>
-<entity ID="161" Variant="36" Name="Silly" Image="mah boys/silly.png" BaseHP="10" Tags="Champion" Group="Monsters" Kind="Anixbirth (Hope)">
+<entity ID="161" Variant="6" Name="Snidge" Image="mah boys/snidge.png" BaseHP="0.1"/>
+<entity ID="161" Variant="11" Name="Floater" Image="mah boys/floater.png" BaseHP="10" StageHP="3" Tags="Champion"/>
+<entity ID="161" Variant="12" Name="Fivehead" Image="mah boys/fivehead.png" BaseHP="15" Tags="Champion"/>
+<entity ID="161" Variant="21" Name="Neutral Fly" Image="mah boys/neutralfly.png" BaseHP="15" Tags="Champion"/>
+<entity ID="161" Variant="36" Name="Silly" Image="mah boys/silly.png" BaseHP="10" Tags="Champion">
    <bitfield Key="Subtype">
       <checkbox Name="Moves After Shooting" Length="1"/>
    </bitfield>
 </entity>
-<entity ID="161" Variant="41" Subtype="6" Name="Dried (Red)" Image="mah boys/dried.png" Tags="Champion" Group="Monsters" Kind="Anixbirth (Hope)">
+<entity ID="161" Variant="41" Subtype="6" Name="Dried (Red)" Image="mah boys/dried.png" Tags="Champion">
    <bitfield Key="Subtype">
       <dropdown Name="Color of Creep that the Dried drops" Length="7">
          <choice Value="0">Random</choice>
@@ -35,15 +35,15 @@
       </dropdown>
    </bitfield>
 </entity>
-<entity ID="161" Variant="42" Name="Plier" Image="mah boys/plier.png" BaseHP="10" Tags="Champion" Group="Monsters" Kind="Anixbirth (Hope)"/>
-<entity ID="161" Variant="47" Name="String" Image="mah boys/string.png" BaseHP="10" Tags="Champion" Group="Monsters" Kind="Anixbirth (Hope)">
+<entity ID="161" Variant="42" Name="Plier" Image="mah boys/plier.png" BaseHP="10" Tags="Champion"/>
+<entity ID="161" Variant="47" Name="String" Image="mah boys/string.png" BaseHP="10" Tags="Champion">
    <bitfield Key="Subtype">
       <checkbox Name="Moves After Shooting" Length="1"/>
    </bitfield>
 </entity>
-<entity ID="161" Variant="91" Name="Schmoot" Image="mah boys/schmoot.png" BaseHP="16" Tags="Champion" Group="Monsters" Kind="Anixbirth (Hope)"/>
-<entity ID="161" Variant="119" Name="Wost" Image="mah boys/wost.png" BaseHP="15" Tags="Champion" Group="Monsters" Kind="Anixbirth (Hope)"/>
-<entity ID="161" Variant="145" Name="Pinprick" Image="mah boys/pinprick.png" BaseHP="6" StageHP="1" Tags="Champion" Group="Monsters" Kind="Anixbirth (Hope)">
+<entity ID="161" Variant="91" Name="Schmoot" Image="mah boys/schmoot.png" BaseHP="16" Tags="Champion"/>
+<entity ID="161" Variant="119" Name="Wost" Image="mah boys/wost.png" BaseHP="15" Tags="Champion"/>
+<entity ID="161" Variant="145" Name="Pinprick" Image="mah boys/pinprick.png" BaseHP="6" StageHP="1" Tags="Champion">
 <bitfield Key="Subtype">
         <spinner Length="16" ValueOffset="1" Name="Amount of pinpricks">
           <tooltip>
@@ -52,11 +52,11 @@ Don't be evil please.
         </spinner>
       </bitfield>
 </entity>
-<entity ID="161" Variant="169" Subtype = "0" Name="Drosslet" Image="mah boys/drosslet.png" BaseHP="10" Tags="Champion" Group="Monsters" Kind="Anixbirth (Hope)"/>
-<entity ID="161" Variant="177" Subtype = "0" Name="Gassed Fly" Image="mah boys/gassedfly.png" BaseHP="8" Tags="Champion" Group="Monsters" Kind="Anixbirth (Hope)"/>
-<entity ID="161" Variant="189" Name="Synthetic Horf" Image="mah boys/synthetichorf.png" BaseHP="25" Tags="Champion" Group="Monsters" Kind="Anixbirth (Hope)"/>
-<entity ID="161" Variant="202" Name="Pallun" Image="mah boys/pallun.png" BaseHP="13" Tags="Champion" Group="Monsters" Kind="Anixbirth (Hope)"/>
-<entity ID="161" Variant="224" Subtype = "0" Name="Mush Loom" Image="mah boys/mushloom.png" BaseHP="10" StageHP="2" Tags="Champion" Group="Monsters" Kind="Anixbirth (Hope)">
+<entity ID="161" Variant="169" Subtype = "0" Name="Drosslet" Image="mah boys/drosslet.png" BaseHP="10" Tags="Champion"/>
+<entity ID="161" Variant="177" Subtype = "0" Name="Gassed Fly" Image="mah boys/gassedfly.png" BaseHP="8" Tags="Champion"/>
+<entity ID="161" Variant="189" Name="Synthetic Horf" Image="mah boys/synthetichorf.png" BaseHP="25" Tags="Champion"/>
+<entity ID="161" Variant="202" Name="Pallun" Image="mah boys/pallun.png" BaseHP="13" Tags="Champion"/>
+<entity ID="161" Variant="224" Subtype = "0" Name="Mush Loom" Image="mah boys/mushloom.png" BaseHP="10" StageHP="2" Tags="Champion">
 <bitfield Key="Subtype">
         <spinner Length="16" ValueOffset="2" Name="Time Wait">
           <tooltip>
@@ -68,8 +68,8 @@ jumps again, so choose wisely!
         </spinner>
       </bitfield>
 </entity>
-<entity ID="161" Variant="400" Subtype = "0" Name="Erythorcyte" Image="mah boys/erythorcyte.png" BaseHP="15" StageHP="3" Tags="Champion" Group="Monsters" Kind="Anixbirth (Hope)"/>
-<entity ID="161" Variant="278" Subtype="1" Name="Pit Pat (Spawner)" Image="mah boys/pitpat.png" Group="Monsters" Kind="Anixbirth (Hope)">
+<entity ID="161" Variant="400" Subtype = "0" Name="Erythorcyte" Image="mah boys/erythorcyte.png" BaseHP="15" StageHP="3" Tags="Champion"/>
+<entity ID="161" Variant="278" Subtype="1" Name="Pit Pat (Spawner)" Image="mah boys/pitpat.png">
 <bitfield Key="Subtype">
         <spinner Length="16" ValueOffset="1" Name="Count">
           <tooltip>

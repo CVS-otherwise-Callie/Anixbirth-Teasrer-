@@ -18,7 +18,8 @@ FHAC:LoadScripts("scripts.iam.monsters", {
 	"pallun",
 	"sillystring",
 	"stickyfly",
-	"wispwosp"
+	"wispwosp",
+	"stuckpoot"
 })
 
 FHAC:LoadScripts("scripts.iam", {

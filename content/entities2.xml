@@ -197,11 +197,12 @@
 		<bestiary transform="0,0,1" anim="Appear" />
         <gibs amount="5" blood="0" bone="0" eye="0" gut="0" large="0" />
     </entity-->
-    <!--entity id="161" variant="32" name="Poo Nibbler" reroll="true" baseHP="10" stageHP="0" boss="0" champion="1" collisionDamage="1" collisionMass="6" collisionRadius="13" friction="1" numGridCollisionPoints="8" shadowSize="14" portrait="32" anm2path="monsters/poonibbler/poonibbler.anm2" gridCollision="walls" tags="fly">
-		<bestiary transform="0,0,1" anim="Flying" />
-        <gibs amount="0" blood="1" bone="0" eye="1" gut="0" large="0" />
-        <devolve id="214.0.0" weight="1" />
-    </entity-->
+	<entity anm2path="monsters/cuber/cuber.anm2" gridCollision="none" reroll="true" baseHP="20" boss="0" champion="1" collisionDamage="1" collisionMass="3" collisionRadius="20" friction="1" id="161" variant="32" subtype="0" name="Stoner" numGridCollisionPoints="12" shadowSize="20" stageHP="2" portrait="32" bestiary="true" shutdoors="false">
+        <bestiary transform="0,0,1" anim="Appear" />
+        <gibs amount="6" blood="1" bone="0" eye="0" gut="1" large="0" worm="1" />
+		<preload-snd id="72" />
+        <devolve id="151.0.0" weight="1"/>
+	</entity>
     <!--entity id="161" variant="33" name="Silk" reroll="true" baseHP="10" stageHP="0" boss="0" champion="1" collisionDamage="1" collisionMass="100" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="0" portrait="33" anm2path="monsters/silk/silk.anm2">
 		<bestiary transform="0,0,1" anim="Pop Up" />
         <gibs amount="6" blood="1" bone="0" eye="1" gut="1" large="0" />
@@ -345,6 +346,11 @@
     <entity id="161" variant="177" name="Gassed Fly" anm2path="monsters/gassedfly/gassedfly.anm2" reroll="true" baseHP="8" boss="0" champion="" collisionDamage="1" collisionMass="3" collisionRadius="17" friction="1" numGridCollisionPoints="4" shadowSize="11" stageHP="0" gridCollision="walls" tags="fly" portrait="177">
 		<bestiary transform="0,0,1" anim="Fly" />
         <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
+    </entity>
+
+    <entity id="240" variant="167" name="Stuckpoot" baseHP="12" stageHP="0" boss="0" champion="1" collisionDamage="1" collisionMass="14" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="0" portrait="93" anm2path="monsters/stuckpoot/stuckpoot.anm2" tags="spider">
+		<bestiary transform="0,0,1" anim="Idle" />
+        <gibs amount="4" blood="1" bone="0" eye="0" gut="1" large="0" />
     </entity>
 
     <!--Jokes-->

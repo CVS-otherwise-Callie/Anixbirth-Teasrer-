@@ -87,33 +87,53 @@ function mod:freeGrid(npc, path, far, close)
 	return tab[math.random(1, #tab)]
 end
 
-function mod:freeHole(npc, path, far, close)
+
+function mod:freeHole(npc, path, far, close, closest)
 	local room = game:GetRoom()
+	closest = closest or false
 	path = path or false
 	far = far or 300
 	close = close or 250
 	local tab = {}
+	local closestgridpoint
+
+	local imtheclosest = 9999999999999999538762658202121142272 --just a absurdly big number
 	if path then
 		for i = 0, room:GetGridSize() do
-			if room:GetGridPosition(i) == GridEntityType.GRID_PIT then
+			if room:GetGridEntity(i) and room:GetGridEntity(i):GetType() == GridEntityType.GRID_PIT then
 			local gridpoint = room:GetGridPosition(i)
-			if gridpoint and gridpoint:Distance(npc.Position) < far and gridpoint:Distance(npc.Position) > close and room:GetGridEntity(i) == GridEntityType.GRID_PIT and 
+			if gridpoint and gridpoint:Distance(npc.Position) < far and gridpoint:Distance(npc.Position) > close and room:GetGridEntity(i) and room:GetGridEntity(i):GetType() == GridEntityType.GRID_PIT and 
 			room:IsPositionInRoom(gridpoint, 0) and game:GetRoom():CheckLine(gridpoint,npc.Position,3,900,false,false) then
-				table.insert(tab, gridpoint)
-			end
+				if closest then
+					if gridpoint:Distance(npc.Position) < imtheclosest then
+						imtheclosest = gridpoint:Distance(npc.Position)
+						closestgridpoint = gridpoint
+					end
+				else
+					table.insert(tab, gridpoint)
+				end			
+				end
 			end
 		end
 	else
 		for i = 0, room:GetGridSize() do
-			if room:GetGridPosition(i) == GridEntityType.GRID_PIT then
+			if room:GetGridEntity(i) and room:GetGridEntity(i):GetType() == GridEntityType.GRID_PIT then
 				local gridpoint = room:GetGridPosition(i)
 				if gridpoint and gridpoint:Distance(npc.Position) < far and gridpoint:Distance(npc.Position) > close 
-				and room:GetGridEntity(i) == GridEntityType.GRID_PIT and room and room:IsPositionInRoom(gridpoint, 0) then
-					table.insert(tab, gridpoint)
+				and room and room:IsPositionInRoom(gridpoint, 0) then
+					if closest then
+						if gridpoint:Distance(npc.Position) < imtheclosest then
+							imtheclosest = gridpoint:Distance(npc.Position)
+							closestgridpoint = gridpoint
+						end
+					else
+						table.insert(tab, gridpoint)
+					end
 				end
 			end
 		end
 	end
+	if closest and closestgridpoint then return closestgridpoint end
 	if #tab <= 0 then
 		return nil
 	end
@@ -551,10 +571,12 @@ function mod:GetRoomNameByType(type)
 	end
 end
 
-function mod:CheckForOnlyEntInRoom(npcs)
+function mod:CheckForOnlyEntInRoom(npcs, id, var, sub)
 	local room = game:GetRoom()
 	local npcsepcifics = {}
-	local var = false
+	id = id or true
+	var = var or true
+	sub = sub or false
 	local rooments = {}
 	for _, element in pairs(npcs) do
 		table.insert(npcsepcifics, element.ID)
@@ -565,8 +587,9 @@ function mod:CheckForOnlyEntInRoom(npcs)
 			table.insert(rooments, ent.Type)
 		end
 	end
-	var = mod:ValidifyTables(rooments, npcsepcifics)
-	if var == true then
+	local isType = mod:ValidifyTables(rooments, npcsepcifics)
+	if not (var or sub) then return isType end
+	if var and isType then
 		local npcsepcifics = {}
 		local rooments = {}
 		for _, element in pairs(npcs) do
@@ -578,7 +601,24 @@ function mod:CheckForOnlyEntInRoom(npcs)
 				table.insert(rooments, ent.Variant)
 			end
 		end
-		var = mod:ValidifyTables(rooments, npcsepcifics)
 	end
-	return var
+	local isVar = mod:ValidifyTables(rooments, npcsepcifics)
+	if not sub then return isVar end
+	if sub and isVar then
+		local npcsepcifics = {}
+		local rooments = {}
+		for _, element in pairs(npcs) do
+			table.insert(npcsepcifics, element.Sub)
+			print(element.Sub, element.ID)
+		end
+		for _, ent in ipairs(Isaac.GetRoomEntities()) do
+			if (ent:IsActiveEnemy() and ent:IsVulnerableEnemy() and not ent:IsDead()
+			and not ent:HasEntityFlags(EntityFlag.FLAG_FRIENDLY)) then
+				table.insert(rooments, ent.SubType)
+				print(ent.SubType, ent.Type)
+			end
+		end
+		sub = mod:ValidifyTables(rooments, npcsepcifics)
+	end
+	return sub
 end

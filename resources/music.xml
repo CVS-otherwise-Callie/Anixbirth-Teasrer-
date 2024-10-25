@@ -1,5 +1,5 @@
 <music root="music/">
-	<track id="1" name="Basement" intro="shhh piano builds go away/Anixbirth Build 2.ogg" path="shhh piano builds go away/Anixbirth Build 2.ogg" loop="true" />
+	<track id="1" name="Basement" intro="shhh piano builds go away/Anixbirth Build 3.ogg" path="shhh piano builds go away/Anixbirth Build 2.ogg" loop="true" />
 	<track id="2" name="Caves" intro="shhh piano builds go away/Buried Stalagtite.ogg" path="shhh piano builds go away/Buried Stalagtite.ogg" loop="true" />
 	<track id="3" name="Depths" intro="shhh piano builds go away/The Deeps and Bones.ogg" path="shhh piano builds go away/The Deeps and Bones.ogg" loop="true" />
 	<track id="4" name="Cellar" intro="shhh piano builds go away/Of Food and Bees Build 2.ogg" path="shhh piano builds go away/Of Food and Bees Build 2.ogg" loop="true" />
@@ -83,8 +83,8 @@
 	<track id="71" name="Credits Alt Final" path="Torn Page - Credits.ogg" loop="false" mul="1.9" />
 	<!-- REPENTANCE END -->
 
-	<track id="81" name="Boss (jingle)" path="Satietas Build 3" loop="false" />
-	<track id="83" name="Boss Death (jingle)" path="JINGLE OGG/Boss FIght jingle OUTRO v2_12.ogg" loop="false" />
+	<track id="81" name="Boss (jingle)" path="shhh piano builds go away/sfx/Boss" loop="false" />
+	<track id="83" name="Boss Death (jingle)" path="shhh piano builds go away/sfx/Boss Defeat.ogg" loop="false" />
 	<track id="84" name="Holy Room Find (jingle)" path="JINGLE OGG/Angel Room Appear V2_07.ogg" loop="false" />
 	<track id="85" name="Secret Room Find (jingle)" path="shhh piano builds go away/GriefOpening.ogg" loop="false" />
 	<track id="87" name="Treasure Room Entry (jingle) 1" path="JINGLE OGG/treasure room discoverA.ogg" loop="false" />
@@ -97,7 +97,7 @@
 	<track id="94" name="Devil Room appear (jingle)" path="JINGLE OGG/Satan Room Appear V2_01.ogg" loop="false" />
 	<track id="95" name="Game start (jingle)" path="JINGLE OGG/Title Screen jingle V1_01.ogg" loop="false" />
 	<track id="96" name="Nightmare" path="JINGLE OGG/boss fight intro jingle_01.ogg" loop="false" />
-	<track id="97" name="Boss Death Alternate (jingle)" path="Afterbirth/Cerebrum Dispersio (boss alt) end.ogg" loop="false" />
+	<track id="97" name="Boss Death Alternate (jingle)" path="shhh piano builds go away/sfx/Alt Boss Defeat.ogg" loop="false" />
 	<track id="98" name="Boss Hush Death (jingle)" path="Afterbirth/Morituros (dead womb boss) outro.ogg" loop="false" />
 	<track id="100" name="Intro Voiceover" path="shhh piano builds go away/Cut-Outline.ogg" loop="false" />
 	<track id="101" name="Epilogue Voiceover" path="Epilogue_01m.ogg" loop="false" />
@@ -105,7 +105,7 @@
 	<track id="104" name="Downpour" intro="shhh piano builds go away/River Ether.ogg" path="shhh piano builds go away/River Ether.ogg" loop="true" />
 	<track id="105" name="Mines" intro="repentance/mines intro.ogg" path="Repentance/Mines.ogg" loop="true" />
 	<track id="106" name="Mausoleum" intro="repentance/mausoleum intro.ogg" path="Repentance/Mausoleum.ogg" loop="true" />
-	<track id="107" name="Corpse" intro="Repentance/corpse intro.ogg" path="Repentance/Corpse.ogg" loop="true" />
+	<track id="107" name="Corpse" intro="shhh piano builds go away/Rotted Mind.ogg" path="shhh piano builds go away/Rotted Mind.ogg" loop="true" />
 	<track id="108" name="Dross" intro="shhh piano builds go away/Benign Coombe.ogg" path="shhh piano builds go away/Benign Coombe.ogg" loop="true" />
 	<track id="109" name="Ashpit" intro="shhh piano builds go away/Inimicitiae.ogg"  path="shhh piano builds go away/Inimicitiae.ogg"  loop="true" />
 	<track id="110" name="Gehenna" intro="repentance/gehenna intro.ogg" path="Repentance/Gehenna.ogg" loop="true" />
