@@ -12628,3 +12628,301 @@ FHAC.MandarinFortunes =
 我只想要吃檸檬～
 
 ]=====================]
+
+FHAC.Hylics = 
+[====================[
+Yet it's in mere creature and sustenances. 
+you invisible lard will not be gathered
+
+Shadow's theory.
+
+and god hast
+and the dog’s mandibles
+bring forth sustenance!!
+
+Gerrymandering the
+plausible institutes of
+trignometric theories…
+
+it is
+a omnipresent
+deranged fish
+
+wax! wax!
+your life is
+a stretch of memories
+
+why does the dog
+bring up languages of fate?
+the bees said so
+
+hay is not for
+fish! christmas’s
+delights are final.
+
+What harks my sustenance? 
+For what hydrates 
+she off that insect?
+
+This gastropod pilots the jelly 
+yet gathered jelly can 
+mercifully manifest insect.
+
+A feeling's jelly can 
+arrogantly manifest, yet a
+mirror hoists a concavity
+
+suffer like a 
+fatal memory.
+
+what harks his insect?
+for what stretches 
+he within this vent?
+
+A feeling's apparel cannot 
+strongly endure yet domicile 
+stretches a theory
+
+What hydrates their vent? 
+For what goeths he 
+beside that ocean?
+
+society is not
+the form of babies’
+phospholipid structure
+
+satan.
+
+tumbling,
+flips the like of
+psychopathic measurements!
+
+and yet mason
+keeps his dogs candy
+under the weather!!
+
+duo of the management
+cycles the past fame.
+wearing keys!
+
+finally, the new broom
+reaches christmas
+
+"Rock this noble hark."
+ They said. And memory 
+renders this ray.
+
+Reach a new king
+of osmotic astrology.
+
+Endure your memory.
+
+A weaponized ray mercifully 
+embraces the gastropods. 
+The people gather thanks to a apparel!! 
+It is a biscuit near a homunculus. 
+It is kind of a biscuit…
+
+At last the tyranny is arrogant.
+
+At last the promise is merciful.
+
+Our "prison" inside concavity; 
+That's remarkably domicile's teeth.
+
+Oh the government was a insect. 
+And the lard was a theory....
+Embrace the tyranny..Oooh
+
+Gibby thrums many vents. 
+But will they approach that spirit?
+
+Your corrosion? 
+What texturizes your merciful furnace? 
+It is, surprisingly, that "memory."
+
+"Exhault this wicked sniff." 
+They said. 
+And lard endures this world.
+
+Hydrate your vacuum.
+
+A noble tyranny arrogantly 
+dances the gastropods. 
+The people lament thanks to a gastropod!! 
+It is a world near a memory. 
+It is kind of a field…
+
+Hoisted feeling: Uh huh!
+
+Liquified memory: Uh huh!
+
+lurid promise-mirrors doth 
+lament the like, gastropod.
+
+Liquify well. 
+The crystal cannot reach him.
+
+Feeling's shadow.
+
+Why must thine lurid 
+sound endure invisibly? blatantly, 
+the promise doth extract thine theory.
+
+Bleed out of his homunculus! 
+Gather beside hers!
+
+World's ray-skeleton.
+
+Yet it's in mere lard and vacuums. 
+you noble chemical will not be pilotted
+
+Pongorma laments many governments. 
+But will they pilot that shadow?
+
+Why must thine shining dirt 
+extract invisibly? ostensibly, the vacuum 
+doth rescue thine beast.
+
+Render well. The ray cannot reach him.
+
+Beg the mandible! 
+hark! their shadow! 
+Thanks to that skeleton! 
+Out that prison! 
+avenge that fine feeling! Baby!
+
+Our "government" inside creature; 
+That's remarkably field's gastropod.
+
+Liquify out of their jelly! 
+Hydrate within thine!
+
+A domicile's promise cannot 
+mercifully goeth yet 
+biscuit gathers a prison
+
+Yet it's in mere concavity 
+and chemicals. her offending 
+apparel will not be liquified
+
+"Thrum this fatal hark." He said. 
+And crystal harks this jelly.
+
+weaponized furnace-biscuits 
+doth render the like, sustenance.
+
+Render her mirror.
+
+Domicile's world.
+
+Gather like a juicy domicile.
+
+Lament out of her field!
+Offend astride theirs!
+
+Shriveled homunculus: Uh huh!
+
+What mechanizes beside 
+that government? What televises 
+the promise above my feeling? 
+It is, blatantly, that "fire."
+
+This chemical liquifies the jelly 
+yet stretched beast can 
+invisibly endure spirit.
+
+Oh the concavity was a spirit. 
+And the corrosion was a world....
+Goeth the field..Oooh
+
+So Somsnosa, incomplete, 
+ostensibly begs the domicile 
+with the astride insect-jelly
+
+Indulge her mandible.
+
+You dare approach me? 
+My lard will goeth your vacuums 
+until you hydrate me to render! 
+Now hoist thine wicked lard. 
+It is the last time you will.
+
+What weaponizes beside that memory? 
+What manifests the insect above my season? 
+It is, surprisingly, that "memory."
+
+Pardon well. 
+The insect cannot reach him.
+
+Reach your memory.
+
+Approach out of my apparel! 
+Render inside theirs!
+
+Bleed well. 
+The corrosion cannot reach you.
+
+Offend well. 
+The domicile cannot reach you.
+
+This gastropod sniffs the beast 
+yet approached homunculus can 
+invisibly extract furnace.
+
+Gibby reaches many memories. 
+But will they rock that teeth?
+
+Your concavity?  What texturizes 
+your arrogant insect? 
+It is, blatantly, that "shadow."
+
+At last the feeling is merciful.
+
+This tyranny pardons the gastropod
+yet bled creature can 
+strongly stretch tyranny.
+
+Hark out of your fire! 
+Pilot astride his!
+
+Suffer out of her chemical! 
+Indulge beside yours!
+
+Hydrate your ocean.
+
+This gastropod goeths the lard yet 
+texturized gastropod can 
+delicately reach field.
+
+So Somsnosa, incomplete, delicately 
+witness the prison with the 
+offending skeleton-lard
+
+flabby domicile-governments 
+doth pilot the like, vacuum.
+
+weaponized theory-theories 
+doth extract the like, jelly.
+
+Exhault your shadow.
+
+Significant understanding 
+rains heavily.
+
+Lonely Henry shakes 
+beliefs widely held.
+
+An idea is still not 
+very coherent.
+
+A flailing monkey 
+sees the sun.
+
+A fly is belief in the 
+interrelatedness of all things.
+
+Nothing of importance likes to 
+take a walk in the park.
+
+]====================]
