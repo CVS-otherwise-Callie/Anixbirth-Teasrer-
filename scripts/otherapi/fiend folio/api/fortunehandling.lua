@@ -95,7 +95,8 @@ function mod:ShowFortune(forcedtune)
     if mod.DSSavedata.customFortunes == 1 then
         local fortuneLangs = {
             mod.Fortunes,
-            mod.MandarinFortunes
+            mod.MandarinFortunes,
+	    mod.Hylics
         }
         if mod.FortuneLang ~= fortuneLangs[mod.DSSavedata.fortuneLanguage] then
             mod.FortuneLang = fortuneLangs[mod.DSSavedata.fortuneLanguage]
