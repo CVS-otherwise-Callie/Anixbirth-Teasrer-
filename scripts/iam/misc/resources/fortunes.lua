@@ -1,6 +1,331 @@
 FHAC.Fortunes = 
 [=================[
 
+evan’s friends
+all send nudes
+
+wait what
+no more nudes
+for you
+
+send nudes
+
+sapnu puas
+
+CVS is utterly 
+and 100% gay
+
+isaac loves pills
+so do you!
+
+what do you mean taking 
+pills from strangers is illegal?
+Isaac always doe-  asdf;saffahsfl;aj
+
+it is
+the same haircut
+
+today smells like
+fiend’s bad day
+
+today smells like
+mitochondria
+
+今天的味道是
+RIZZZZZZ
+
+you have been given
+absolutely no rizz
+
+are you a tree hugger?
+show ur love by
+fucking one
+
+green pilled
+
+tem iz so hapee
+to cel u weponns!!!
+
+today smells like
+there is just a shuba
+
+today smells like
+unmelted broccoli
+
+today smells like
+people having gex
+
+today smells like
+a factory worker’s dream
+
+today smells like
+a epiphany
+
+today smells like
+the epitome
+of madness
+
+today smells like
+fortunes
+
+today smells like
+a merry go round
+
+today smells like
+cvs is mad at someone
+
+today smells like
+rain and clouds
+
+today smells like
+a frog hurricane
+
+today smells like
+sunny rainbows
+
+today smells like
+…wait, is someone
+here gay?
+
+today smells like
+corgis
+
+today smells like
+a pipe bomb
+
+today smells like
+a bomb made
+of pipes
+
+today smells like
+snakes and tatters
+
+today smells like
+bacon and eggs
+
+today smells like
+kyle lee and ahmed
+touching your ass
+
+today smells like
+thursday took
+a break from the week
+
+today smells like
+two dicks and a penis
+
+today smells like
+a anesthetic attack
+
+today smells like
+lennie dying
+
+today smells like
+your grandma’s blown
+up basement
+
+today smells like
+death and humidity
+
+today smells like
+bloodstained chimneys
+
+today smells like
+purple pills
+
+today smells like
+constantin committed
+a war crime
+
+today smells like
+a bad headache
+
+today smells like
+depressed italians
+
+today smells like
+NOTHING
+
+today smells like
+delicious food
+
+today smells like
+lead-painted vomit
+
+today smells like
+cardinal sins
+
+today smells like
+the musical department
+
+today smells like
+greed’s unchecked
+bank account
+
+today smells like
+you’re amazing
+
+today smells like
+*your amazement
+
+you are now
+given the blue pill
+
+you will obtain
+the red pill
+
+now you must run.
+
+now you must hide.
+
+someone with a
+wealthy inheritance
+will die today
+
+the dengler
+is after you!
+
+the dengler is
+for you.
+
+get the fuck
+outta my house
+
+welcome strangers
+into your home
+
+do not go back
+
+move foward and
+find yourself
+
+that was a
+dumb move!
+
+your decisions
+are all smart ones
+
+today smells
+like it's going to
+end badly
+
+today smells
+like trash
+
+don't eat the
+next meal given
+to you
+
+stop moving,
+and stop talking
+
+stay with me!
+you make me sad
+
+thats illegal
+in my town
+
+hey, the sky
+is starting to
+fall again
+
+everyone else
+has fallen asleep
+
+you are but
+a glitch in
+this matrix
+
+you will cause
+nothing but anguish
+
+you will endure
+nothing but gloom
+
+you will feel
+nothing but blight
+
+you will find
+nothing but ruin
+
+lead yourself
+to true acceptance
+
+i wonder what
+cvs is cooking
+
+this time is dangerous
+how do i know?
+i just do, silly
+
+revert to
+the correct
+timeline
+
+can you just
+take her, please
+
+thus, your meaning
+has been altered
+
+pall, im coming
+
+queer morning
+
+lesbian morning
+
+bisexual morning
+
+trans morning
+
+pansexual morning
+
+mormon morning
+
+bilateral morning
+
+therian morning
+
+widowed morning
+
+AI morning
+
+saturated morning
+
+fatty morning
+
+gaprific morning
+
+gageneral morning
+
+blackwoode morning
+
+esoteric morning
+
+insidious morning
+
+GAY MORNING
+
+you are wrong!
+it is a
+good morning
+
+follow the newmaker
+
+gavin, am
+I not a fishy?
+
+the lord still
+dislikes everything
+
+omg
+you’re badder than baddest
+you’re badester
+
+wake up on
+the legalist side
+of bed
+
 what the hell
 do you usually mean by
 “solar radiation”
