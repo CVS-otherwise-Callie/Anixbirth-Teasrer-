@@ -23,7 +23,7 @@ mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
         d.newpos = npc:GetPlayerTarget().Position
         d.pinPrickDash = 10
         npc.SpriteOffset = Vector(0,0)
-        npc.Velocity = mod:Lerp(npc.Velocity, (d.newpos - npc.Position):Resized(5),  0.025 + d.moveoffset)
+        npc.Velocity = mod:Lerp(npc.Velocity, (d.newpos - npc.Position):Resized(d.coolaccel), 0.025 + d.moveoffset)
 
 
         if d.coolaccel and d.coolaccel < 10 then
@@ -31,11 +31,6 @@ mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
         else
             d.coolaccel = 0.5
         end
-        mod:CatheryPathFinding(npc, d.newpos, {
-            Speed = d.coolaccel,
-            Accel = d.funnyasslerp,
-            GiveUp = true
-        })
         if rng:RandomInt(1, 2) == 2 then
             d.funnyasslerp = mod:Lerp(d.funnyasslerp, 0.1, 0.55)
         else

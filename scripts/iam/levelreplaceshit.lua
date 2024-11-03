@@ -50,7 +50,7 @@ function mod:NPCReplaceCallback(npc)
             for i = 1, #coolertab do
                 if npc.Type == coolertab[i] and  mod:CheckTableContents(v[5], roomConfigRoom.StageID) then
                     --extra for certain thigns not to break
-                    if npc.Type == EntityType.ENTITY_WILLO and npc.SpawnerEntity.Type == 913 then return end --miss minmin my favortie
+                    if npc.Type == EntityType.ENTITY_WILLO and npc.SpawnerEntity and npc.SpawnerEntity.Type == 913 then return end --miss minmin my favortie
 
                     --and done!
                     if math.random(0, 100) >= v[6]*100 then

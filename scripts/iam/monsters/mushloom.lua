@@ -15,7 +15,7 @@ function mod:MushLoomAI(npc, sprite, d)
         "pretty",
         "shaded pretty"
     }
-    mod:ReplaceEnemySpritesheet(npc, "gfx/monsters/mushloom/".. tab[mod.DSSavedata.prettyMushlooms] .. "mushloom", 0)
+    mod:ReplaceEnemySpritesheet(npc, "gfx/monsters/mushloom/".. tab[mod.DSSavedata.prettyMushlooms or 1] .. "mushloom", 0)
     
     if not d.init then
         if npc.SubType == 0 then

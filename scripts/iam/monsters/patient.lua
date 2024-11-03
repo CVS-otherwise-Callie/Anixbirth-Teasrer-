@@ -131,6 +131,7 @@ function mod:PatientAI(npc, sprite, d)
     if npc.Velocity:Length() > 2 then
         npc:AnimWalkFrame("walk h","walk v",0)
     else
+        if sprite:GetOverlayAnimation() == "head" then sprite:SetOverlayFrame("head", 0) end
         sprite:SetFrame("walk h", 0)
     end
             

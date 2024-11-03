@@ -43,6 +43,7 @@
 </entity>
 <entity ID="161" Variant="91" Name="Schmoot" Image="mah boys/schmoot.png" BaseHP="16" Tags="Champion"/>
 <entity ID="161" Variant="119" Name="Wost" Image="mah boys/wost.png" BaseHP="15" Tags="Champion"/>
+<entity ID="161" Variant="144" Name="Wisp Wosp" Image="mah boys/wispwosp.png" BaseHP="10" StageHP="0" Tags="Champion"/>
 <entity ID="161" Variant="145" Name="Pinprick" Image="mah boys/pinprick.png" BaseHP="6" StageHP="1" Tags="Champion">
 <bitfield Key="Subtype">
         <spinner Length="16" ValueOffset="1" Name="Amount of pinpricks">
@@ -118,9 +119,6 @@ Use 2, 4, or 6 normally.
    
 	<group Name="HOPE Chapter 1 Alt" Label="Chapter 1 Alt">
 		<group Name="HOPE Chapter 1 Alt Enemies">
-		   <entity Name="Floater"/>
-		   <entity Name="Fivehead"/>
-		   <entity Name="Wost"/>
 		</group>
 	</group>
 
@@ -128,6 +126,7 @@ Use 2, 4, or 6 normally.
 		<group Name="HOPE Downpour Enemies">
 		   <entity Name="Wost"/>
 		   <entity Name="Pinprick"/>
+		   <entity Name="Wisp Wosp"/>
 		</group>
 	</group>
 

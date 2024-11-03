@@ -38,6 +38,7 @@ function mod:PinprickAI(npc, sprite, d)
     local sin = math.sin(npc.FrameCount / 15) * 80
 
     if not d.firstinit then
+        sprite.Scale = Vector(1/10, 1/10)
         d.moveoffset = 0
         d.dashoffset = rng:RandomInt(0, 10)
         npc.SpriteOffset = Vector(0,-20)

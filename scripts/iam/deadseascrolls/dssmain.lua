@@ -134,7 +134,7 @@ FHAC.dmdirectory = {
                         variable = "monsterReplacements",
                         setting = 1,
                         load = function()
-                            return dsssaveManager.monsterReplacements or 1
+                            return dsssaveManager.monsterReplacements or 2
                         end,
                         store = function(var)
                             dsssaveManager.monsterReplacements = var
