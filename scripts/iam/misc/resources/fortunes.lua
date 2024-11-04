@@ -1,6 +1,184 @@
 FHAC.Fortunes = 
 [=================[
 
+look
+it’s a penguin
+( “)>
+
+ni- ni-
+ninjago!!
+
+fa- fa-
+faghao!
+
+silly willy
+in my dilly tilly
+
+she be touing
+until i hou
+
+hey are you 12 cause
+then you can’t use Reddit
+and that's sad
+
+hey are you 12 cause
+then you’d be a minor
+*plays A minor chord*
+
+but…
+that’s super overage!
+
+all gay people
+have said that
+at least once
+
+[]
+square
+thats it
+
+p diddy
+fingering those
+a minor chords
+
+hey im not
+a square, they
+do drugs!
+
+go kys
+keep yourself 
+safe!
+
+there is probably
+a gun in there
+
+they be eating
+the cats rats mats sats
+bats tats lats fats
+
+your future
+will be given strength
+in your beliefs
+
+your breakfast was
+probably poisoned
+
+dinner is going
+to be a surprise meal
+
+jealous mannerisms
+lead to deadly cults
+
+you are constantly
+spouting nonsense
+
+your nonsense
+is annoying
+
+you’re so obnoxious!
+
+but i know
+two masochists!
+
+the wost’s legal
+name is
+Irene
+
+the wolter’s
+legal name is
+claire
+
+matteor’s legal name
+isn’t matt, silly
+it’s mark!
+
+souwa’s legal
+name is
+caroline
+
+gobwet’s 
+legal name
+is christina
+
+ thickun’s
+legal name
+is veronika
+
+eroded host’s
+legal name
+is vivian
+
+so is wolfi
+so am i
+
+a scandalous offer
+is arriving to your
+doorstep soon
+
+jack getting candy
+instead of his meat:
+
+fiend is very jealous
+of all these fortunes
+
+anixbirth is better
+than fiend folio
+-not johannes
+
+these are
+kind of
+feet
+
+^^^
+woman
+
+burslake beastiary
+is better than
+fiend folio
+
+people who
+simp for peewee:
+
+all these fortunes
+are made from chat gpt
+
+two lines are
+better than three
+
+three lines
+are better
+than two
+
+but no four lines!
+
+your next item
+is going to be 
+spirit sword
+
+go to dark room
+i beg of you
+
+isaac left cathedral
+(he went back to cellar)
+
+fiend folio’s slim shady
+is a reference
+to skittles!
+
+sorry but the line breaks we use arrived late so this happened instead
+
+the alt paths
+are better
+
+you will die
+in boiler II
+
+i hope moles
+don’t come up
+from under mud
+
+no you don’t
+(yes you do)
+
 evan’s friends
 all send nudes
 
