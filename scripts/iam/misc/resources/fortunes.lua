@@ -1,6 +1,628 @@
 FHAC.Fortunes = 
 [=================[
 
+your friends
+have a lot to hide
+
+who voted for trump?
+stand up here
+right frickin now!!
+
+you literally can’t
+vote biden, he’s
+not a runner
+
+I’m going to
+murder rupert!
+
+thou shalt go forth
+with manslaughter of
+thyself (kys lol)
+
+you will draw
+suicide king
+
+I’m walking on
+die - a - reeah!
+
+friends down
+speed down
+
+luck down
+full health
+power pill!
+
+you just wish
+you had friends
+
+don’t wake up
+between 3 and 6am
+
+white cockerels
+will curse you
+
+beans contain the
+souls of the damned
+
+the realistic ideals
+you believe carry
+little value
+
+do not look
+in the mirror
+
+don’t go to
+bed with your
+head wet
+
+other religions
+are all liars
+
+don’t believe
+what you first see
+
+the truth is
+commonly wrong
+
+don’t get on
+discord rn
+
+youtube is filled
+with bad tips and
+uncommon ideals
+
+your friends on
+instagram all
+secretly hate you
+
+twitter is a cesspool
+
+tiktok is stealing
+your personal info
+
+china thus has
+all his info on
+monkeys and stuff
+
+i dont think vaults
+commonly have letters
+
+BEWARE THE VAULT 69
+
+96 TLUAV EHT ERAWEB
+
+why do YOU,
+the VIEWER,
+think that?
+
+anixbirth shop theme
+kinda slaps if im
+being completely honest
+
+fiend folio boss theme
+kinda slaps if im
+being completely honest
+
+im just scared
+that it wasn’t
+very skibidi
+
+most people would
+find that sexy
+
+ookami mio almost
+drowned in the
+flooded caves
+
+uh-
+i dunno why…
+do you expect me to?
+
+go purchase
+a fucking gun
+
+im locked in rn bro
+
+this dumbass
+^^^
+
+gomu gomu
+some fortune
+
+this is a copypasta
+
+but i don’t see what’s
+a-pasta about it
+
+bro’s trying to touch him
+
+emb- emb-
+embarrassing!
+
+you know why bonnie
+is such a smash?
+
+cus she’s a kid bro
+(crowd goes wild)
+
+go outside
+and touch
+-children- grass
+
+grrrrrrrrrr
+no reason
+just angies
+
+wolfi is
+Just angy
+
+omg look at this
+look it's
+¬
+
+today smells like
+¬¬¬¬¬¬¬¬¬
+
+today smells like
+a cool camera
+in your bathroom
+
+today smells like
+…HURGH HOURGH
+
+today smells like
+zoey zipping
+up early
+
+today smells like
+burnt sausage
+
+today smells like
+peaches and cream
+
+today smells like
+burnt sausage AND
+peaches and cream
+
+don’t take that
+the wrong way, but…
+
+i only meant
+to offend the russian
+girl in the room
+
+today smells like
+rotting webpages
+
+today smells like
+christina’s novel
+
+today smells like
+I’m in the thick of it
+
+bro be sure to kys
+uhh
+keep yourself safe!!
+
+today smells like
+powdered snow
+
+today smells like
+evan touching stuff
+
+today smells like
+wolfi’s heart attack
+
+today smells like
+empresssss botan!
+
+today smells like
+the smash announcer
+got sick last night
+
+IM IN THE THICK OF IT
+EVERYBODY KNOWS
+okay ill go kms now
+
+FROM THE SCREEN
+TO THE RING TO THE PEN
+TO THE KING
+
+how did wolfi
+turn into just
+a shuba?
+
+GWAK GWAK
+SHA-SHA-SHA
+SHUBA DAYO!
+
+im in the
+sick of it
+(cus i am)
+
+HEAR MY-
+Children…
+singing…
+
+hurrgh wolfi
+you don’t have children
+
+i can hear evan
+and wolfi still singing it…
+(it’s 5am)
+
+wolfi can u
+get the ksi
+out of the trashcan
+
+uhh
+uhm
+DEAL WITH IT
+
+hey guess what
+g-guess what
+aww you're too slow :(
+
+i used all my
+taco-burying powers
+to get here
+
+and the little girl’s
+coolass sawblade
+destroyed her bicycle
+
+what
+huh???
+Huh!!
+
+how am i
+too slow
+
+even i don’t
+find that funny
+
+<<Cata<<<<
+----------------
+>>>>Clysm>>
+
+<<Tidal<<<<
+----------------
+>>>>Wave>>
+
+>>Wave>>>>
+-----------------
+<<<<Tidal<<
+
+im tidaling
+past your wave
+
+hey guess what
+TRIPLE SPIKE
+□   /\/\/\
+
+this is
+acelotl’s reaction
+to everything
+
+why did xocolate
+get into the haemolacrian video
+and i didn’t??
+
+impossible geometry
+dash level-
+WHY ARE THERE FANS
+
+shirakami is
+objectively better
+:)
+
+kurokami is
+objectively better
+>:(
+
+kurokami is
+objectively just
+the fan
+
+one venti mocha
+for uhhhhh
+wait that’s just the fan??
+
+are you really cheating
+or is it just the fan
+
+deacon’s new
+track is-
+oh it’s just the fan…
+
+OMG IS THAT
+THE SUPERSTAR-
+oh that’s just the fan
+
+sakura’s death
+was actually the fan!
+
+i am on the
+fubuki ship
+
+veronika doesn’t
+like reading
+these fortunes
+
+lmao
+wdym
+that’s just the fan
+
+shishiro botan
+laughing cus
+it’s just the fan
+
+if only
+he wasn’t
+oh i ran out of space
+
+Nantoka Shitekureru Shishiro Botan (EDM Remix)
+
+i like my clowns
+all clowny!
+
+the game is
+too horrifying
+
+we strvn is NOT
+mega trans! That
+was a joke bro!
+
+don’t play ff depths
+i think you know why
+
+jd could swallow
+an entire fucking planet
+and still have more room
+
+(but, don’t quote me
+on any of that!)
+
+look
+its a
+oh i ran out of space
+
+this is
+a test to
+see if 12 lines
+goes off
+the fortune page
+or if
+i’m crazy and
+erfly’s implementation
+actually secretly
+supports over
+11 lines
+
+look at that!
+-- the joke is that there’s nothing here and you’ll never know --
+wait you can’t see emoji
+
+i don’t think
+Imao
+
+“i only like them- uh-
+i like them not too big or-
+or too small-” (amelia stream)
+
+this fortune
+probably is illegal
+
+this fortune
+IS illegal
+
+hey wolfi
+thats wayyyyy
+too Raora Panthera
+
+don’t think too
+far ahead
+
+should there really
+be minors in
+the binding of isaac?
+
+they should add hololive
+to Isaac for fun
+
+they should add
+amelia watson to
+smash bros (no reason)
+
+it’s probably for
+the best if 
+you don’t think
+
+steven is
+coming for you!
+
+hatsune miku
+is coming for you!
+
+evan chuang
+is cumming for you!
+wait wrong come
+
+hey you can’t do that!
+ay! ay! ay!
+B! C! D! E!
+
+nah not hey
+just say 為！！
+
+all your proofs
+end up on the
+wrong side
+
+do you support
+raocar??
+
+would you rather
+jsg’s car
+or raocar
+
+hmm i would rather
+BALLS DOWN PILL
+
+balls down is
+a real run killer
+
+i would rather
+be just a shuba
+
+would you rather
+*microwave.wav*
+or hmmasgifigifgugf
+
+brrrrvmmmmmm
+(car mod by jsg)
+
+it could have been
+given this entire time?
+
+me when
+i forget the name of a proof
+so i spend 20 steps
+proving the lines are parallel
+just to finish it 2 steps after
+
+my keyboard is
+so china it seems
+south korean
+
+thats so real
+
+thats so fake
+
+thats neither real
+nor fake
+
+that proof was
+entirely wrong
+
+that wasnt a
+very funny fortune
+
+that was
+the the funniest fortune
+ive ever read
+
+we should probably
+write real fortunes
+but we’re sigmas!
+
+don’t call me that
+name ever again
+
+outsider trading
+more like
+monkeys with catapults
+
+lets put evan and
+christina in a room and
+see what happens
+
+wait…
+does bloons have
+lore now?
+
+it is time
+for lunch to end
+
+let’s sing the
+disappearance of
+hatsune miku
+
+i think christina
+might disapprove
+
+thats a real
+empress botan killer
+right there
+
+bro actually said
+nani?
+
+shishiiiiro!
+
+that was a
+very funny fortune
+
+you cant say
+that slur
+
+would you rather 
+have a prostitute
+or a loser with a prostitute
+for president??
+
+jingle bell
+jingle bell
+
+the trans flag
+is still flying
+to this day
+
+the green guy
+with the cap?
+where’s he from?
+
+take this
+it’s not safe
+out there
+
+there are just
+too many fortunes
+
+those words you
+just said? yeah,
+they’re racist
+
+jesus is
+among us
+
+does that mean
+that jesus is
+the imposter?
+
+currency online
+is kinda dumb
+
+don’t say that
+if you’re kinda
+dumb
+
+christ is
+amongus
+
+there are just
+not enough fortunes
+
+there are a tenth
+of ff’s fortunes
+
+you shouldn’t be seeing
+this secret fortune
+
+those girls are
+making fun of you
+
+fiend actually
+really likes shishiro
+he just won’t admit it
+
+amelia watson
+discusses the uhhh
+the big tiddilyuhmsa
+
+don’t reminisce
+on events behind you
+
 look
 it’s a penguin
 ( “)>
