@@ -30,10 +30,10 @@
 	<!-- <track id="28" name="Boss (Ultra Greed)" intro="Afterbirth/Chorus Mortis (Punk Credit) Intro.ogg" path="Afterbirth/Chorus Mortis (Punk Credit) Loop.ogg" loop="true" /> Story boss, has True version -->
 	<track id="30" name="Library Room" intro="shhh piano builds go away/Functions.ogg" path="shhh piano builds go away/Functions.ogg" loop="true" />
 	<track id="31" name="Secret Room" intro="shhh piano builds go away/GriefLoop.ogg" path="shhh piano builds go away/GriefLoop.ogg" loop="true" />
-	<track id="32" name="Secret Room Alt" path="Secret Room ALT.ogg" loop="true" />
-	<track id="33" name="Devil Room" path="Deal With the Devil.ogg" loop="true" />
+	<track id="32" name="Secret Room Alt" path="shhh piano builds go away/Shame.ogg" loop="true" />
+	<track id="33" name="Devil Room" path="shhh piano builds go away/Heretic.ogg" loop="true" />
 	<track id="34" name="Angel Room" intro="shhh piano builds go away/Wingless Angel.ogg" path="shhh piano builds go away/Wingless Angel.ogg" loop="true" />
-	<track id="35" name="Shop Room" intro="Store Loop Intro.ogg" path="Store Loop.ogg" loop="true" />
+	<track id="35" name="Shop Room" intro="shhh piano builds go away/This Mindless Atrocity.ogg" path="shhh piano builds go away/This Mindless Atrocity.ogg" loop="true" />
 	<track id="36" name="Arcade Room" intro="shhh piano builds go away/12 AM.ogg" path="shhh piano builds go away/12 AM.ogg" loop="true" />
 	<track id="37" name="Boss Room (empty)" intro="shhh piano builds go away/Denial.ogg" path="shhh piano builds go away/Denial.ogg" loop="true" />
 	<track id="38" name="Challenge Room (fight)" path="Ambush.ogg" loop="true" />

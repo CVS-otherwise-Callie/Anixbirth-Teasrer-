@@ -358,6 +358,12 @@
         <gibs amount="4" blood="1" bone="0" eye="0" gut="1" large="0" />
     </entity>
 
+    <!--Alt - Mines-->
+    <entity id="161" variant="311" subtype="0" name="Tech Grudge" anm2path="monsters/techgrudge/techgrudge.anm2" baseHP="25" stageHP="1" boss="0" champion="1" collisionDamage="1" collisionMass="5" collisionRadius="13" friction="1" numGridCollisionPoints="12" gridCollision="walls" shadowSize="15" bestiary="true" portrait="311">
+		<bestiary transform="0,0,1" anim="Idle" />
+        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0"/>
+	</entity>
+
     <!--Jokes-->
     <entity anm2path="jokes/enemies/gaperrr/gaperrr.anm2" id="10" variant="5938" reroll="false" baseHP="13" boss="0" champion="1" collisionDamage="1" collisionMass="40" collisionRadius="13" friction="1" name="A gaper w/ three legs, why did we do this" numGridCollisionPoints="12" shadowSize="12" stageHP="3">
         <gibs amount="6" blood="2" bone="1" eye="1" gut="1" large="0" />

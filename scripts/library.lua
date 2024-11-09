@@ -140,6 +140,92 @@ function mod:freeHole(npc, path, far, close, closest)
 	return tab[math.random(1, #tab)]
 end
 
+function mod:GetClosestGridEntToPos(pos, ignorepoop, ignorehole)
+	local room = game:GetRoom()
+	local imtheclosest = 9999999999999999538762658202121142272 --just a absurdly big number
+	local closestgridpoint
+	for i = 0, room:GetGridSize() do
+		local grid = room:GetGridEntity(i)
+		if grid then
+			local gridpoint = room:GetGridPosition(i)
+			if gridpoint:Distance(pos) < imtheclosest then
+				imtheclosest = gridpoint:Distance(pos)
+				closestgridpoint = grid
+			end
+		end
+	end
+	return closestgridpoint
+end
+
+
+function mod:GetClosestGridEntAlongAxis(pos, axis, ignorepoop, ignorehole)
+	local room = game:GetRoom()
+	local imtheclosest = 9999999999999999538762658202121142272 --just a absurdly big number
+	local closestgridpoint
+	for i = 0, room:GetGridSize() do
+		local grid = room:GetGridEntity(i)
+		if grid then
+			local gridpoint = room:GetGridPosition(i)
+			if axis == "X" then 
+				if math.abs(gridpoint.Y - pos.Y) < 25 then
+					if gridpoint:Distance(pos) < imtheclosest then
+						imtheclosest = gridpoint:Distance(pos)
+						closestgridpoint = grid
+					end			
+				end
+			end
+			if axis == "Y" then 
+				if math.abs(gridpoint.X - pos.X) < 25 then
+					if gridpoint:Distance(pos) < imtheclosest then
+						imtheclosest = gridpoint:Distance(pos)
+						closestgridpoint = grid
+					end
+				end
+			end
+		end
+	end
+	--if closestgridpoint == nil then return mod:GetClosestGridEntToPos(pos) end
+	return closestgridpoint or error("no grid given")
+end
+
+function mod:GetClosestGridEntAlongAxisDirection(pos, axis, ignorepoop, ignorehole, dir)
+	local room = game:GetRoom()
+	local imtheclosest = 9999999999999999538762658202121142272 --just a absurdly big number
+	local closestgridpoint
+	for i = 0, room:GetGridSize() do
+		local grid = room:GetGridEntity(i)
+		if grid then
+			local gridpoint = room:GetGridPosition(i)
+			local function UpdatePos(gridpoint)
+				if gridpoint:Distance(pos) < imtheclosest then
+					imtheclosest = gridpoint:Distance(pos)
+					closestgridpoint = grid
+				end	
+			end
+			if axis == "X" then
+				if math.abs(gridpoint.Y - pos.Y) <= 40 then
+					if dir == 90 or dir == -90 and gridpoint.X > pos.X then
+						UpdatePos(gridpoint)
+					elseif dir == 180 or dir == -270 and gridpoint.X < pos.X then
+						UpdatePos(gridpoint)
+					end
+				end
+			end
+			if axis == "Y" then
+				if math.abs(gridpoint.X - pos.X) <= 40 then
+					if dir == 0 or dir == -180 and gridpoint.Y < pos.Y then
+						UpdatePos(gridpoint)
+					elseif dir == 180 or dir == -360 and gridpoint.Y > pos.Y then
+						UpdatePos(gridpoint)
+					end
+				end
+			end
+		end
+	end
+	--if closestgridpoint == nil then return mod:GetClosestGridEntToPos(pos) end
+	return closestgridpoint or error("no grid given")
+end
+
 function mod:isSirenCharmed(familiar)
 	local helpers = Isaac.FindByType(EntityType.ENTITY_SIREN_HELPER, -1, -1, true)
 	for _, helper in ipairs(helpers) do

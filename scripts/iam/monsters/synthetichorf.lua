@@ -15,16 +15,21 @@ function mod:SyntheticHorfAI(npc, sprite, d)
         p.Parent = npc
         p.ChangeTimeout = p.ChangeTimeout * 13.4
         p:GetData().type = "SyntheticHorf"
-        p:GetData().offyourfuckingheadset = 80 + rng:RandomInt(-10, 10)
+        p:GetData().offyourfuckingheadset = 70 + rng:RandomInt(-10, 10)
         p:GetData().StateFrame = 0
         p:GetData().Baby = d.target
         p:GetData().Player = npc:GetPlayerTarget()
+
+        d.target:GetData().shoties = d.target:GetData().shoties or {}
+        table.insert(d.target:GetData().shoties, p)
+        p:GetData().moveit = (d.target:GetData().shoties[1]:GetData().moveit or 0) + ((360/(360/d.max))* d.target:GetData().rotShots)
     end
 
     if not d.init then
         d.target = mod:GetEntInRoom(npc, true, npc)
         d.target:GetData().rotShots = d.target:GetData().rotShots or 0
         d.state = "idle"
+        d.max = math.random(4, 6)
         d.shootoffset = 20 + rng:RandomInt(1, 20)
         d.init = true
     else
@@ -38,7 +43,7 @@ function mod:SyntheticHorfAI(npc, sprite, d)
     if d.target then
 
         if d.state == "idle" and npc.StateFrame > d.shootoffset and d.target and
-        (d.target.Position - npc.Position):Length() < 300 and d.target:GetData().rotShots and d.target:GetData().rotShots < 4 then
+        (d.target.Position - npc.Position):Length() < 300 and d.target:GetData().rotShots and d.target:GetData().rotShots < d.max then
             d.state = "attacking"
             npc.StateFrame = 0
         end 
@@ -54,7 +59,7 @@ function mod:SyntheticHorfAI(npc, sprite, d)
             d.state = "doneattacking"
         end
 
-        if d.target:IsDead() or (d.target:GetData().rotShots and d.target:GetData().rotShots >= 4) then
+        if d.target:IsDead() or (d.target:GetData().rotShots and d.target:GetData().rotShots >= d.max) then
             d.target = mod:GetEntInRoom(npc, true, npc)
             d.target:GetData().rotShots = d.target:GetData().rotShots or 0
         end
@@ -90,7 +95,7 @@ function mod.SyntheticHorfShot(p, d)
         d.moveoffset = 0
         d.wobb = d.wobb or 0
         d.moveit = d.moveit or 0
-        if d.moveit >= 360 then d.moveit = 0 else d.moveit = d.moveit + 0.07 end
+        if d.moveit >= 360 then d.moveit = 0 else d.moveit = d.moveit + 0.03 end
         d.wobb = d.wobb + math.pi/math.random(3,12)
         local vel = mod:GetCirc((d.offyourfuckingheadset or 75) + math.sin(d.wobb), d.moveit)
         if room:IsClear() then

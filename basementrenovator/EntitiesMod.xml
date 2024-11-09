@@ -81,6 +81,17 @@ Use 2, 4, or 6 normally.
         </spinner>
       </bitfield>
 </entity>
+<entity ID="161" Variant="311" Name="Tech Grudge" Image="mah boys/techgrudge.png" BaseHP="25" StageHP="1" Tags="Champion">
+   <bitfield Key="Subtype">
+      <dropdown Name="Direction" Length="5">
+         <choice Value="0">Random</choice>
+         <choice Value="1">Right</choice>
+         <choice Value="2">Up</choice>
+         <choice Value="3">Left</choice>
+         <choice Value="4">Down</choice>
+      </dropdown>
+   </bitfield>
+</entity>
 
 
 
@@ -161,6 +172,12 @@ Use 2, 4, or 6 normally.
 		</group>
 	</group>
 
+	<group Name="HOPE Mines" Label="Mines">
+		<group Name="HOPE Mines Enemies">
+			<entity Name="Tech Grudge"/>
+		</group>
+	</group>
+
 </tab>
 
 <group Name="Chapter 1 (Alt Path) Enemies">
@@ -205,6 +222,10 @@ Use 2, 4, or 6 normally.
 
 <group Name="Flooded Caves Enemies">
 	<group Name="HOPE Flooded Caves Enemies"/>
+</group>
+
+<group Name="Mines Enemies">
+	<group Name="HOPE Mines Enemies"/>
 </group>
 
 </data>
