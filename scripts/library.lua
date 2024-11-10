@@ -140,17 +140,23 @@ function mod:freeHole(npc, path, far, close, closest)
 	return tab[math.random(1, #tab)]
 end
 
-function mod:GetClosestGridEntToPos(pos, ignorepoop, ignorehole)
+function mod:GetClosestGridEntToPos(pos, ignorepoop, ignorehole, rocktab)
 	local room = game:GetRoom()
 	local imtheclosest = 9999999999999999538762658202121142272 --just a absurdly big number
 	local closestgridpoint
+	rocktab = rocktab or {GridEntityType.GRID_ROCK, GridEntityType.GRID_ROCKB, GridEntityType.GRID_ROCKT, GridEntityType.GRID_ROCK_ALT, 
+	GridEntityType.GRID_SPIKES, GridEntityType.GRID_SPIKES_ONOFF, GridEntityType.GRID_LOCK, GridEntityType.GRID_TNT,
+	GridEntityType.GRID_POOP, GridEntityType.GRID_WALL, GridEntityType.GRID_DOOR, GridEntityType.GRID_STAIRS, GridEntityType.GRID_STATUE, GridEntityType.GRID_ROCK_SS,
+	GridEntityType.GRID_PILLAR, GridEntityType.GRID_ROCK_SPIKED, GridEntityType.GRID_ROCK_ALT2, GridEntityType.GRID_ROCK_GOLD, GridEntityType.GRID_FIREPLACE}
 	for i = 0, room:GetGridSize() do
 		local grid = room:GetGridEntity(i)
 		if grid then
 			local gridpoint = room:GetGridPosition(i)
-			if gridpoint:Distance(pos) < imtheclosest then
-				imtheclosest = gridpoint:Distance(pos)
-				closestgridpoint = grid
+			if mod:CheckTableContents(rocktab, grid:GetType()) then
+				if gridpoint:Distance(pos) < imtheclosest then
+					imtheclosest = gridpoint:Distance(pos)
+					closestgridpoint = grid
+				end
 			end
 		end
 	end
@@ -158,27 +164,35 @@ function mod:GetClosestGridEntToPos(pos, ignorepoop, ignorehole)
 end
 
 
-function mod:GetClosestGridEntAlongAxis(pos, axis, ignorepoop, ignorehole)
+function mod:GetClosestGridEntAlongAxis(pos, axis, ignorepoop, ignorehole, rocktab)
 	local room = game:GetRoom()
 	local imtheclosest = 9999999999999999538762658202121142272 --just a absurdly big number
 	local closestgridpoint
+	rocktab = rocktab or {GridEntityType.GRID_ROCK, GridEntityType.GRID_ROCKB, GridEntityType.GRID_ROCKT, GridEntityType.GRID_ROCK_ALT, 
+	GridEntityType.GRID_SPIKES, GridEntityType.GRID_SPIKES_ONOFF, GridEntityType.GRID_LOCK, GridEntityType.GRID_TNT,
+	GridEntityType.GRID_POOP, GridEntityType.GRID_WALL, GridEntityType.GRID_DOOR, GridEntityType.GRID_STAIRS, GridEntityType.GRID_STATUE, GridEntityType.GRID_ROCK_SS,
+	GridEntityType.GRID_PILLAR, GridEntityType.GRID_ROCK_SPIKED, GridEntityType.GRID_ROCK_ALT2, GridEntityType.GRID_ROCK_GOLD, GridEntityType.GRID_FIREPLACE}
 	for i = 0, room:GetGridSize() do
 		local grid = room:GetGridEntity(i)
 		if grid then
 			local gridpoint = room:GetGridPosition(i)
 			if axis == "X" then 
-				if math.abs(gridpoint.Y - pos.Y) < 25 then
-					if gridpoint:Distance(pos) < imtheclosest then
-						imtheclosest = gridpoint:Distance(pos)
-						closestgridpoint = grid
-					end			
+				if math.abs(gridpoint.Y - pos.Y) < 20 then
+					if mod:CheckTableContents(rocktab, grid:GetType()) then
+						if gridpoint:Distance(pos) < imtheclosest then
+							imtheclosest = gridpoint:Distance(pos)
+							closestgridpoint = grid
+						end
+					end	
 				end
 			end
 			if axis == "Y" then 
-				if math.abs(gridpoint.X - pos.X) < 25 then
-					if gridpoint:Distance(pos) < imtheclosest then
-						imtheclosest = gridpoint:Distance(pos)
-						closestgridpoint = grid
+				if math.abs(gridpoint.X - pos.X) < 20 then
+					if mod:CheckTableContents(rocktab, grid:GetType()) then
+						if gridpoint:Distance(pos) < imtheclosest then
+							imtheclosest = gridpoint:Distance(pos)
+							closestgridpoint = grid
+						end
 					end
 				end
 			end
@@ -188,22 +202,29 @@ function mod:GetClosestGridEntAlongAxis(pos, axis, ignorepoop, ignorehole)
 	return closestgridpoint or error("no grid given")
 end
 
-function mod:GetClosestGridEntAlongAxisDirection(pos, axis, ignorepoop, ignorehole, dir)
+function mod:GetClosestGridEntAlongAxisDirection(pos, axis, ignorepoop, ignorehole, dir, rocktab, dist)
 	local room = game:GetRoom()
 	local imtheclosest = 9999999999999999538762658202121142272 --just a absurdly big number
+	dist = dist or 0
 	local closestgridpoint
+	rocktab = rocktab or {GridEntityType.GRID_ROCK, GridEntityType.GRID_ROCKB, GridEntityType.GRID_ROCKT, GridEntityType.GRID_ROCK_ALT, 
+	GridEntityType.GRID_SPIKES, GridEntityType.GRID_SPIKES_ONOFF, GridEntityType.GRID_LOCK, GridEntityType.GRID_TNT,
+	GridEntityType.GRID_POOP, GridEntityType.GRID_WALL, GridEntityType.GRID_DOOR, GridEntityType.GRID_STAIRS, GridEntityType.GRID_STATUE, GridEntityType.GRID_ROCK_SS,
+	GridEntityType.GRID_PILLAR, GridEntityType.GRID_ROCK_SPIKED, GridEntityType.GRID_ROCK_ALT2, GridEntityType.GRID_ROCK_GOLD, GridEntityType.GRID_FIREPLACE}
 	for i = 0, room:GetGridSize() do
 		local grid = room:GetGridEntity(i)
 		if grid then
 			local gridpoint = room:GetGridPosition(i)
 			local function UpdatePos(gridpoint)
-				if gridpoint:Distance(pos) < imtheclosest then
-					imtheclosest = gridpoint:Distance(pos)
-					closestgridpoint = grid
-				end	
+				if mod:CheckTableContents(rocktab, grid:GetType()) then
+					if gridpoint:Distance(pos) < imtheclosest and gridpoint:Distance(pos) > dist then
+						imtheclosest = gridpoint:Distance(pos)
+						closestgridpoint = grid
+					end
+				end
 			end
 			if axis == "X" then
-				if math.abs(gridpoint.Y - pos.Y) <= 40 then
+				if math.abs(gridpoint.Y - pos.Y) <= 15 then
 					if dir == 90 or dir == -90 and gridpoint.X > pos.X then
 						UpdatePos(gridpoint)
 					elseif dir == 180 or dir == -270 and gridpoint.X < pos.X then
@@ -212,7 +233,7 @@ function mod:GetClosestGridEntAlongAxisDirection(pos, axis, ignorepoop, ignoreho
 				end
 			end
 			if axis == "Y" then
-				if math.abs(gridpoint.X - pos.X) <= 40 then
+				if math.abs(gridpoint.X - pos.X) <= 15 then
 					if dir == 0 or dir == -180 and gridpoint.Y < pos.Y then
 						UpdatePos(gridpoint)
 					elseif dir == 180 or dir == -360 and gridpoint.Y > pos.Y then
@@ -223,7 +244,7 @@ function mod:GetClosestGridEntAlongAxisDirection(pos, axis, ignorepoop, ignoreho
 		end
 	end
 	--if closestgridpoint == nil then return mod:GetClosestGridEntToPos(pos) end
-	return closestgridpoint or error("no grid given")
+	return closestgridpoint or mod:GetClosestGridEntAlongAxis(pos, axis, ignorepoop, ignorehole, rocktab)
 end
 
 function mod:isSirenCharmed(familiar)
@@ -695,13 +716,11 @@ function mod:CheckForOnlyEntInRoom(npcs, id, var, sub)
 		local rooments = {}
 		for _, element in pairs(npcs) do
 			table.insert(npcsepcifics, element.Sub)
-			print(element.Sub, element.ID)
 		end
 		for _, ent in ipairs(Isaac.GetRoomEntities()) do
 			if (ent:IsActiveEnemy() and ent:IsVulnerableEnemy() and not ent:IsDead()
 			and not ent:HasEntityFlags(EntityFlag.FLAG_FRIENDLY)) then
 				table.insert(rooments, ent.SubType)
-				print(ent.SubType, ent.Type)
 			end
 		end
 		sub = mod:ValidifyTables(rooments, npcsepcifics)

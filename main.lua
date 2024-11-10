@@ -21,8 +21,11 @@ FHAC:LoadScripts("scripts", {
 	"iam.misc.resources.fortunes",
 	"otherapi.fiend folio.api.fortunehandling",
 	"otherapi.fiend folio.api.apioverride",
-	"otherapi.proapi.proapi"
+	"otherapi.proapi.proapi",
 })
+
+require("scripts.otherapi.jumplib").Init()
+
 --ff
 else
 	include("scripts.iam.misc.warning")
