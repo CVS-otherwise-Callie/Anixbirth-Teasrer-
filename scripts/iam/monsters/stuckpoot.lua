@@ -36,16 +36,12 @@ function mod:StuckpootAI(npc, sprite, d)
             npc.Velocity = mod:Lerp(npc.Velocity, (Vector(0, d.mynewPos.Y)), 0.05)
             if math.abs(npc.Position.Y - d.mynewPos.Y) < 22 then
                 d.state = "shoot"
-            else
-                print(math.abs(npc.Position.Y - d.mynewPos.Y))
             end
         else
             npc.Velocity = mod:Lerp(Vector.Zero, Vector(npc.Position.X + d.mynewPos.X, 0), 0.05)
             if math.abs(d.mynewPos.X - npc.Position.X) < 10 then
                 d.state = "shoot"
                 d.pos = npc.Position
-            else
-                print(npc.Position.X, d.mynewPos.X)
             end
         end
     end

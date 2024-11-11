@@ -3,7 +3,7 @@ SaveManager.Init(FHAC)
 SaveManager.Load()
 
 FHAC.DSSavedata = SaveManager.GetDeadSeaScrollsSave()
-if FHAC.DSSavedata then
+if not FHAC.DSSavedata then
     FHAC.DSSavedata.monsterReplacements = FHAC.DSSavedata.monsterReplacements or 2
     FHAC.DSSavedata.customFortunes = FHAC.DSSavedata.customFortunes or 1
     FHAC.DSSavedata.fortuneDeathChance = FHAC.DSSavedata.fortuneDeathChance or 3

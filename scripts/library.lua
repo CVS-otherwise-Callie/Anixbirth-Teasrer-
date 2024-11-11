@@ -224,7 +224,7 @@ function mod:GetClosestGridEntAlongAxisDirection(pos, axis, ignorepoop, ignoreho
 				end
 			end
 			if axis == "X" then
-				if math.abs(gridpoint.Y - pos.Y) <= 15 then
+				if math.abs(gridpoint.Y - pos.Y) <= 25 then
 					if dir == 90 or dir == -90 and gridpoint.X > pos.X then
 						UpdatePos(gridpoint)
 					elseif dir == 180 or dir == -270 and gridpoint.X < pos.X then
@@ -233,7 +233,7 @@ function mod:GetClosestGridEntAlongAxisDirection(pos, axis, ignorepoop, ignoreho
 				end
 			end
 			if axis == "Y" then
-				if math.abs(gridpoint.X - pos.X) <= 15 then
+				if math.abs(gridpoint.X - pos.X) <= 25 then
 					if dir == 0 or dir == -180 and gridpoint.Y < pos.Y then
 						UpdatePos(gridpoint)
 					elseif dir == 180 or dir == -360 and gridpoint.Y > pos.Y then
