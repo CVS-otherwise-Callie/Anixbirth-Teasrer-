@@ -57,6 +57,8 @@ function mod:TechGrudgeAI(npc, sprite, d)
         npc:AddEntityFlags(EntityFlag.FLAG_NO_KNOCKBACK | EntityFlag.FLAG_NO_PHYSICS_KNOCKBACK)
 
         d.init = true
+    else
+        npc.StateFrame = npc.StateFrame + 1
     end
 
     d.grid = TechGrudgeEnt(d.direction)
@@ -91,6 +93,8 @@ function mod:TechGrudgeAI(npc, sprite, d)
             end
         end
 
+        if npc.StateFrame > 10 then
+
         local bsprite = Sprite()
         bsprite:Load("gfx/007.002_thin red laser.anm2", true)
         bsprite:Play("Laser0", false)
@@ -104,6 +108,8 @@ function mod:TechGrudgeAI(npc, sprite, d)
         d.beam:GetSprite():Update()
         --endpoint:GetSprite():Update()
         --npc.GridCollisionClass = 5
+
+        end
     end
 end
 
@@ -114,33 +120,46 @@ function mod:TechGrudgeLaser(npc, sprite, d)
 
     if d.beam then
 
-    local origin = Isaac.WorldToScreen(npc.Position) + Vector(0, -23)
-    local target = mod:Lerp(d.oldtarget, Isaac.WorldToScreen(room:GetClampedPosition(npc.Position + Vector(0, 140):Rotated(-90*d.direction), 15)), 0.1)
-    local tarilend = mod:Lerp(d.oldtrailend, room:GetClampedPosition(npc.Position + Vector(0, 140):Rotated(-90*d.direction), 15), 0.1)
-    d.oldtarget = target
-    d.oldtrailend = tarilend
+        local origin = Isaac.WorldToScreen(npc.Position) + Vector(0, -23)
+        local target
+        local tarilend
 
-    d.beam:Add(origin,0)
-    d.beam:Add(target,64)
-
-    if not d.endpoint or (d.endpoint:IsDead() and not d.endpoint:Exists()) then
-        d.endpoint = Isaac.Spawn(EntityType.ENTITY_EFFECT, EffectVariant.LASER_IMPACT, 0, tarilend, Vector.Zero, npc)
-    else
-        d.endpoint.Position = tarilend
-        d.endpoint:GetSprite():Update()
-        if d.endpoint:GetSprite():IsFinished("Start") then
-            mod:spritePlay(d.endpoint:GetSprite(), "Loop")
+        if game:GetRoom():CheckLine(npc.Position,npc.Position + Vector(0, 140):Rotated(-90*d.direction),3,900,false,false) then
+            target = mod:Lerp(d.oldtarget, Isaac.WorldToScreen(room:GetClampedPosition(npc.Position + Vector(0, 140):Rotated(-90*d.direction), 15)), 0.1)
+            tarilend = mod:Lerp(d.oldtrailend, room:GetClampedPosition(npc.Position + Vector(0, 140):Rotated(-90*d.direction), 15), 0.1)
+            if d.endpoint then d.endpoint:GetSprite().Rotation = 0 end
+        else
+            target = mod:Lerp(d.oldtarget, Isaac.WorldToScreen(room:GetClampedPosition(d.grid.Position, 15)), 0.1)
+            tarilend = mod:Lerp(d.oldtrailend, room:GetClampedPosition(d.grid.Position, 15), 0.1)
+            if d.endpoint then d.endpoint:GetSprite().Rotation = d.direction*-90 end
         end
-    end
 
-    d.beam:Render()
+        if not d.beaminit then
+            target = Isaac.WorldToScreen(npc.Position)
+            tarilend = npc.Position
+            d.beaminit = true
+        end
 
-    local capsule = Capsule(npc.Position,tarilend, 5)
+        d.oldtarget = target
+        d.oldtrailend = tarilend
 
-    for _, player in ipairs(Isaac.FindInCapsule(capsule, EntityPartition.PLAYER)) do
-        player:TakeDamage(1, 0, EntityRef(player), 0)
+        d.beam:Add(origin,0)
+        d.beam:Add(target,64)
 
-    end
+        if d.endpoint == nil or (d.endpoint:IsDead() and not d.endpoint:Exists()) == true then
+            d.endpoint = Isaac.Spawn(EntityType.ENTITY_EFFECT, EffectVariant.LASER_IMPACT, 0, tarilend, Vector.Zero, npc):ToEffect()
+            d.endpoint.Parent = npc
+        else
+            d.endpoint.Position = tarilend
+        end
+
+        d.beam:Render()
+
+        local capsule = Capsule(npc.Position,tarilend, 5)
+
+        for _, player in ipairs(Isaac.FindInCapsule(capsule, EntityPartition.PLAYER)) do
+            player:TakeDamage(1, 0, EntityRef(player), 0)
+        end
 
     end
 end
