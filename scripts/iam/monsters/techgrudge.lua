@@ -18,6 +18,8 @@ function mod:TechGrudgeAI(npc, sprite, d)
 
     local function TechGrudgeEnt(pos)
 
+        local room = game:GetRoom()
+
         local tab = {GridEntityType.GRID_ROCK, GridEntityType.GRID_ROCKT, GridEntityType.GRID_ROCK_BOMB, GridEntityType.GRID_ROCK_ALT, GridEntityType.GRID_LOCK, GridEntityType.GRID_TNT, GridEntityType.GRID_FIREPLACE,
         GridEntityType.GRID_WALL, GridEntityType.GRID_DOOR, GridEntityType.GRID_STATUE, GridEntityType.GRID_ROCK_SS, GridEntityType.GRID_PILLAR, GridEntityType.GRID_ROCK_SPIKED, GridEntityType.GRID_ROCK_ALT2,
         GridEntityType.GRID_ROCK_GOLD}
@@ -25,23 +27,14 @@ function mod:TechGrudgeAI(npc, sprite, d)
         --local tab = {GridEntityType.GRID_WALL, GridEntityType.GRID_DOOR}
         --1 is right, 2 is up, 3 is left, 4 is down
         if pos == 2 or pos == 4 then
-            local twoaxis = mod:GetClosestGridEntAlongAxisDirection(npc.Position, "Y", true, true, 2*-90, tab)
-            local fouraxis = mod:GetClosestGridEntAlongAxisDirection(npc.Position, "Y", true, true, 4*-90, tab)
-
-            return mod:GetClosestGridEntAlongAxisDirection(npc.Position, "Y", true, true, d.direction*-90, tab)
+            return mod:GetClosestGridEntAlongAxisDirection(npc.Position, "Y", true, true, d.direction*-90, tab, nil, room)
         end
 
         if pos == 1 or pos == 3 then
-            local oneaxis = mod:GetClosestGridEntAlongAxisDirection(npc.Position, "X", true, true, 1*-90, tab)
-            local threeaixs = mod:GetClosestGridEntAlongAxisDirection(npc.Position, "X", true, true, 3*-90, tab)
-
-
-            return mod:GetClosestGridEntAlongAxisDirection(npc.Position, "X", true, true, d.direction*-90, tab)        
+            return mod:GetClosestGridEntAlongAxisDirection(npc.Position, "X", true, true, d.direction*-90, tab, nil, room)        
         end
 
     end
-    local room = game:GetRoom()
-    mod:spritePlay(sprite, "FlySouth")
         
     if not d.init then
         d.state = "above"
@@ -54,11 +47,13 @@ function mod:TechGrudgeAI(npc, sprite, d)
         d.oldtrailend = npc.Position
         d.grid = TechGrudgeEnt(d.direction)
         d.dist = 60
+        d.frame = 0
         npc:AddEntityFlags(EntityFlag.FLAG_NO_KNOCKBACK | EntityFlag.FLAG_NO_PHYSICS_KNOCKBACK)
 
         d.init = true
     else
         npc.StateFrame = npc.StateFrame + 1
+        d.frame = d.frame + 1
     end
 
     d.grid = TechGrudgeEnt(d.direction)
@@ -66,12 +61,18 @@ function mod:TechGrudgeAI(npc, sprite, d)
     
     if d.state == "above" then
 
-        npc.Velocity = mod:Lerp(npc.Velocity, Vector(0, 10):Rotated(-90*d.direction), 0.35)
+        npc.Velocity = mod:Lerp(npc.Velocity, Vector(0, 9.5):Rotated(-90*d.direction), 0.35)
 
         --this last part
         if not mod:GetClosestGridEntToPos(npc.Position, true, true) then return end
 
+
         if d.direction == 1 or d.direction == 3 then
+            if d.direction == 3 then
+                sprite.FlipX = true
+            else
+                sprite.FlipX = false
+            end
             if grid and grid.Position:Distance(npc.Position) < d.dist then
                 npc:MultiplyFriction(0.8)
                 if d.direction >= 4 then
@@ -80,9 +81,20 @@ function mod:TechGrudgeAI(npc, sprite, d)
                     d.direction = d.direction + 1
                 end
                 d.grid = TechGrudgeEnt(d.direction)
+            end
+            if grid and grid.Position:Distance(npc.Position) < d.dist*2 then
+                if d.direction == 1 then
+                    mod:spritePlay(sprite, "FlyNorthFlySide")
+                elseif d.direction == 4 then
+                    mod:spritePlay(sprite, "FlySouthFlySide")
+                end
+                npc.StateFrame = 0
+            else
+                mod:spritePlay(sprite, "FlySide")
             end
         else
             if grid and grid.Position:Distance(npc.Position) < d.dist then
+                npc.StateFrame = 11
                 npc:MultiplyFriction(0.8)
                 if d.direction >= 4 then
                     d.direction = 1
@@ -91,9 +103,25 @@ function mod:TechGrudgeAI(npc, sprite, d)
                 end
                 d.grid = TechGrudgeEnt(d.direction)
             end
+            if grid and grid.Position:Distance(npc.Position) < d.dist*2 then
+                if d.direction == 2 then
+                    mod:spritePlay(sprite, "FlyNorthFlySide")
+                    sprite.FlipX = true
+                elseif d.direction == 4 then
+                    mod:spritePlay(sprite, "FlySouthFlySide")
+                    sprite.FlipX = false
+                end
+                npc.StateFrame = 0
+            else
+                if d.direction == 2 then
+                    mod:spritePlay(sprite, "FlyNorth")
+                else
+                    mod:spritePlay(sprite, "FlySouth")
+                end
+            end
         end
 
-        if npc.StateFrame > 10 then
+        if d.frame > 10 and not d.beam then
 
         local bsprite = Sprite()
         bsprite:Load("gfx/007.002_thin red laser.anm2", true)
@@ -120,7 +148,12 @@ function mod:TechGrudgeLaser(npc, sprite, d)
 
     if d.beam then
 
-        local origin = Isaac.WorldToScreen(npc.Position) + Vector(0, -23)
+        local origin
+        if d.direction ~= 4 then
+            origin = Isaac.WorldToScreen(npc.Position) + Vector(0, -23)
+        else
+            origin = Isaac.WorldToScreen(npc.Position) + Vector(0, -14)
+        end
         local target
         local tarilend
 

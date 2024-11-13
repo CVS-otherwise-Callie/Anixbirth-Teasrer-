@@ -202,8 +202,8 @@ function mod:GetClosestGridEntAlongAxis(pos, axis, ignorepoop, ignorehole, rockt
 	return closestgridpoint or error("no grid given")
 end
 
-function mod:GetClosestGridEntAlongAxisDirection(pos, axis, ignorepoop, ignorehole, dir, rocktab, dist)
-	local room = game:GetRoom()
+function mod:GetClosestGridEntAlongAxisDirection(pos, axis, ignorepoop, ignorehole, dir, rocktab, dist, room)
+	local room = room or game:GetRoom()
 	local imtheclosest = 9999999999999999538762658202121142272 --just a absurdly big number
 	dist = dist or 0
 	local closestgridpoint
