@@ -153,7 +153,7 @@ function mod:GetClosestGridEntToPos(pos, ignorepoop, ignorehole, rocktab)
 		if grid then
 			local gridpoint = room:GetGridPosition(i)
 			if mod:CheckTableContents(rocktab, grid:GetType()) then
-				if gridpoint:Distance(pos) < imtheclosest then
+				if gridpoint:Distance(pos) < imtheclosest and grid.CollisionClass ~= 0 then
 					imtheclosest = gridpoint:Distance(pos)
 					closestgridpoint = grid
 				end
@@ -179,7 +179,7 @@ function mod:GetClosestGridEntAlongAxis(pos, axis, ignorepoop, ignorehole, rockt
 			if axis == "X" then 
 				if math.abs(gridpoint.Y - pos.Y) < 20 then
 					if mod:CheckTableContents(rocktab, grid:GetType()) then
-						if gridpoint:Distance(pos) < imtheclosest then
+						if gridpoint:Distance(pos) < imtheclosest  and grid.CollisionClass ~= 0 then
 							imtheclosest = gridpoint:Distance(pos)
 							closestgridpoint = grid
 						end
@@ -189,7 +189,7 @@ function mod:GetClosestGridEntAlongAxis(pos, axis, ignorepoop, ignorehole, rockt
 			if axis == "Y" then 
 				if math.abs(gridpoint.X - pos.X) < 20 then
 					if mod:CheckTableContents(rocktab, grid:GetType()) then
-						if gridpoint:Distance(pos) < imtheclosest then
+						if gridpoint:Distance(pos) < imtheclosest and grid.CollisionClass ~= 0 then
 							imtheclosest = gridpoint:Distance(pos)
 							closestgridpoint = grid
 						end
@@ -217,7 +217,7 @@ function mod:GetClosestGridEntAlongAxisDirection(pos, axis, ignorepoop, ignoreho
 			local gridpoint = room:GetGridPosition(i)
 			local function UpdatePos(gridpoint)
 				if mod:CheckTableContents(rocktab, grid:GetType()) then
-					if gridpoint:Distance(pos) < imtheclosest and gridpoint:Distance(pos) > dist then
+					if gridpoint:Distance(pos) < imtheclosest and gridpoint:Distance(pos) > dist and grid.CollisionClass ~= 0 then
 						imtheclosest = gridpoint:Distance(pos)
 						closestgridpoint = grid
 					end

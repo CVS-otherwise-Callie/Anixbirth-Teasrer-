@@ -61,7 +61,7 @@ function mod:TechGrudgeAI(npc, sprite, d)
     
     if d.state == "above" then
 
-        npc.Velocity = mod:Lerp(npc.Velocity, Vector(0, 9.5):Rotated(-90*d.direction), 0.35)
+        npc.Velocity = mod:Lerp(npc.Velocity, Vector(0, 8.5):Rotated(-90*d.direction), 0.35)
 
         --this last part
         if not mod:GetClosestGridEntToPos(npc.Position, true, true) then return end
@@ -121,7 +121,7 @@ function mod:TechGrudgeAI(npc, sprite, d)
             end
         end
 
-        if d.frame > 10 and not d.beam then
+        if d.frame > 10 then
 
         local bsprite = Sprite()
         bsprite:Load("gfx/007.002_thin red laser.anm2", true)
