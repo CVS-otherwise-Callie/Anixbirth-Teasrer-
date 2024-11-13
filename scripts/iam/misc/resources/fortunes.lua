@@ -1,5 +1,357 @@
 FHAC.Fortunes = 
 [=================[
+yep and i will
+not blow a hole in
+the roof this time!
+
+awesome sauce
+
+i HATE you granny!
+
+just kidding #trolled
+
+moral of the story:
+being nice is cheating
+and you shouldn’t be nice
+
+Judge 1 is a
+opinionated game designer
+and a agnostic believer
+
+Judge 2 is a
+quiet, motherly woman
+with a scarred past
+
+Judge 3 is a
+silent immigrant who
+seems to be
+morally convicted
+
+Judge 4 is a
+tax collector and
+a busy, egotistical man
+
+Judge 5 is a
+rude and aesthetic drug 
+seller with a aloof attitude
+
+Judge 6 is a
+seemingly emotional girl
+and tight-lipped tattoo artist
+
+Judge 7 is a brawny
+and angry wrestler with
+a hint of sadism
+
+Judge 8 is a
+sophisticated demon that
+enjoys seeing judgment
+
+Judge 9 is a conflicted 
+business owner that seems to 
+constantly flip personalities;
+he is either meek or sadistic
+
+Judge 10 is a traveler
+who has explored every
+society and has many 
+differing views
+
+Judge 11 is a meek
+and tired inheritor
+that seems disconnected
+from reality
+
+Judge 12 is a angry harlot
+befouled with a child;
+she holds power and
+exercises it fully
+
+Judge 13 is a
+apostate and miser who is
+bitter about life
+
+Judge 14 is a
+deadly silent museum owner; he 
+practices authority over others, 
+but only when needed
+
+Judge 15 and 16 is a 
+undertaker and his child, both 
+with a negative view on life
+
+Judge 17 is a religious 
+zealot; she carries a book
+of virtues with her
+
+Judge 18 and 19 are
+two brothers with very
+split ideals and dispositions;
+however, both hate each other!
+
+that thought isn’t
+very valid, idiot!
+
+why are you
+so frickin slow!
+
+the dog doesn’t
+really like that!
+
+get your ass
+back into the game!
+
+it should only take
+fifteen minutes!
+
+it’s funny that
+they left you!
+
+why are all
+these fortunes
+yelling!
+
+your best friend
+will be murdered
+very soon
+
+i am
+NOT a fortune
+(still unfortunate)
+
+now it works
+and is compatible
+with everyone!
+
+put the brick oven
+back where you
+initially found it
+
+jericho is
+not (that) surprised
+
+wait, do gay people
+all think that?
+
+back when the
+skateboarding dog
+did some wheelies
+
+yip yip yip
+im a yapper
+
+yap yap yap
+im a yipper
+
+i dont think
+people normally
+whip like that
+
+in retrospect
+there aren’t that
+many futures
+
+in retrospect
+there aren’t that
+many fortunes
+
+jacqueline!
+classic jackie!
+
+you will enter
+a contest and
+fail miserably!
+
+yeah you already
+failed miserably
+
+what are you doing?
+go home before
+you embarrass yourself!
+
+bi jiao hao
+
+fuck that coop update!
+i just want my
+repentagon back!
+
+breadmen mcmuffin
+
+look to
+la sol
+
+look to
+the stars
+
+wish upon
+a star
+
+you will
+become fat
+
+your wishes
+could became true
+if you work for them!
+
+look ma
+i walk now
+
+thats a very
+small stick
+
+zena arcade
+
+why does fiend
+like fiending so much?
+
+is he fiendful?
+
+go laugh at
+that stupid fiend
+
+my paean is
+better than your
+fortunes behold
+
+but excelsior is
+all fiend has!
+
+why didn’t edith
+make it into
+fiend folio?
+
+rack up em guns
+
+it is time
+for me to
+reroll my soundtrack
+
+whu- uh-
+where are all these
+fortunes coming from?
+
+i agree with gavin!
+women suck!
+
+i agree with her!
+men suck!
+
+i agree with them!
+straights suck!
+
+i think some of
+these fortunes are
+scaring irene
+
+did luce just steal
+miku’s design?
+
+time to be productive
+and make some
+new fortunes
+
+ugh, no internet?
+read-form only
+is super crazy
+
+nobody can see
+the sky now
+
+calvin still needs
+his daily dose
+of fiend folio
+
+i be fiendin’
+all over the place
+
+it’s time
+to fiend
+
+oh great it’s
+a new fortune
+
+please stop with
+all these fortunes
+about fans!
+
+now we
+need autotune
+
+ISAAC REBIRTH
+AFTERBITH ANITBIRTH
+REPENTANCE FIEND FOLIO
+
+we’re all the real
+outsider traders
+
+does hutz
+still play
+abortionbirth+?
+
+i need to
+gurgle my heartbeat
+right now!
+
+get off first
+and go to
+the bathroom
+
+you will find
+a warm burrito
+in your toilet
+
+the woods near
+you contain
+your worst nightmare
+
+you have used up
+all your opportunities
+
+this is not
+a fortune, it is
+a bortune
+
+you never got opportunities
+given to you in life
+
+you have no friends
+oh, them?
+they’re fake
+
+remember when i told
+you you were tricked
+and trolled? sorry!
+
+i feel bad that
+i made fun of you
+
+therapists when they
+find 1 omori fan
+
+secretly he doesn’t
+feel bad at all
+
+your secretary is
+going to suffer
+a heart attack
+
+poor henry has
+nothing to do
+
+your boss is
+just trying
+to be nice
+
+opening the fan
+at 3am
+
+ok i guess we
+added too many
+fortunes about fans
+
+you will be faced
+with a difficult des-
+IS THAT THE FAN?!
 
 your friends
 have a lot to hide
