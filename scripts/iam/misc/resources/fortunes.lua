@@ -11685,11 +11685,15 @@ ok
 ok
 
 ok
+
 Super fortunes
 
 Super fortunes yeah guys wooo yeah i lvoe fortuhnes ig yoguog uobd l vov jvdjodvj ldj d ljoejgi orej gkdgjkdflgj dlgkjglksdmk lsdflksdfm gslkdmgsdlkm gdslkm df gdl/gdxl
+
 Unidentified link
+
 F*** you.
+
 you know what?
 F*** you.
 *un-installs system 32*
@@ -11923,6 +11927,7 @@ hitler is going to-
 listen closely
 im running out of time
 TBoI’s lore is actuall-
+
 Funny Warnings
 
 ! WARNING !
@@ -11993,7 +11998,6 @@ may make you cry.
 Homophobia levels are
 Dangerously high in this area.
 
-
 ! WARNING !
 you are about to commit
 war crimes in Siberia.
@@ -12013,9 +12017,11 @@ of the alphabet.
 ! WARNING !
 this fortune has been confiscated by
 the fortune hunt decree.
+
 Did You Know?
+
 did you know?
- in russia SSRB is called
+in russia SSRB is called
 императрица Ботан
 which translates to
 Empress Botan
@@ -12160,7 +12166,9 @@ Okayu (お粥) means
 rice porridge,
 but Okayu
 prefers Onigiri
+
 All 26 letters of the alphabet
+
 “A”
 
 “B”
@@ -12212,7 +12220,9 @@ All 26 letters of the alphabet
 “Y”
 
 “Z”
+
 Singular Emoji
+
 “🥠”
 
 “🍙”
@@ -12234,8 +12244,8 @@ Singular Emoji
 “🍠”
 
 “🍹”
-Play as…
 
+Play as…
 
 Patch update:
 Your dead corpse is now playable
@@ -12727,131 +12737,53 @@ Play as.. Uhh..
 I forgot
 
 Play as Gonzolo Gerado!
+
 Situational Fortunes
+
 Resetting more than 100 times:
 “you’ve reset XX times, get a life.”
 
-After going into character select 5 times within 10 minutes:
+After going into character 
+select 5 times within 10 minutes:
 “bro is indecisive as fuck”
 
-After getting all achievements fortunes:
+After getting all 
+achievements fortunes:
 “what are you doing now?”
 
 If you spam reset:
-(First Fortune in the run) “SLOW THE FUCK DOWN”
+(First Fortune in the run) 
+“SLOW THE FUCK DOWN”
 
-If you reset in dark room/cathedral/chest/sheol area:
+If you reset in dark 
+room/cathedral/chest/sheol area:
 “round 2, fight!”
 
-If a Quality 4 item is in the room:
+If a Quality 4 item 
+is in the room:
 “OOOOHHHHHHHH-”
 
-Only available if you died last run:
+Only available if 
+you died last run:
 “ouch, that hurt.”
 
-If there are 5 or more fortunes in the room:
-(first fortune) “I'm introverted, go read the others”
+If there are 5 or 
+more fortunes in the room:
+(first fortune) “I'm introverted, 
+go read the others”
 
-If there is one or enemies left in the room
+If there is one or 
+enemies left in the room
 (first fortune) “KILL HIM!!!!”
 
-
-Retired Fortunes
-Banned Fortunes. :(
-Where the hoes at?
-
-Im hard
-
-She will shend
-that to us
-
-pro life tip:
-www.pornhub.com
-visit in front of ur close relatives
-
-if it didn’t show
-me and amy making out
-it’s not us
--Jaqueline 2024
-
-you will be
-married to
-a twat bastard
-
-You will be humped
-By noah in
-5 seconds
-
-that feeling when u
-wipe ur ass and the
-sheet comes off clean
-
-why are there so many porn mods
-for a game about a child in a
-basement shooting poop with tears
-
-哈哈哈，
-不行的。
-这是你的中介！
-
-
-–play as euan (retired & recycled)
-
-guys if the sea was a girl
-then giving her that much tea
-they must have been down bad
-
-why would you put
-“Sex”
-in Middlesex
-
-so
-noah can know
-what to do with men
-
-please fiend in
-my folio
-
-constantin x sophia
-
-pov: u wipe ur ass
-for the 99th time
-but there's still brown
-
-(these are also retired, sorry wolfi) (FIK UUUU)
-
-Meet Fuyo Cloverfield, idol's lucky wish granting leprechaun. When she's not granting wishes, she's probably with her Lucky Charms playing horror games!
-
-Meet Kai Saikota, idol's accidental dragon god. When she's not demanding a lavish offering of dino-shaped chicken nuggets, Kai can be found playing games and relaxing with her worshipers.
-
-Meet Juna Unagi, idol's musical electric eel! When she's not singing her heart out, she's hanging out with the family and causing chaos in Valorant.
-
-Meet Nikki Rei, idol's post apocalyptic survivor who spends her days crafting new inventions in her woodshop and playing her favorite games.
-
-Meet Kattarina Qutie, idol's Mafia Boss VTuber who escapes from her life of organzied crime to the somehow less chaotic world of video games.
-
-Meet Pochi Wanmaru, idol's gamer doggo. Her love for video games is the only thing that protects the world from her chaotic nature.
-
-Meet Poko Rakun, idol's thieving racoon. When she's not getting into trouble you can most likely find her playing games and hanging out with her fandits.
-
-Meet Rin Penrose, idol's shark-loving prince. Her creativity is unparalleled and has extended her reach to every corner of the globe.
-
-Meet Coni Confetti, idol's silly clown. When she's not making people laugh or causing chaos, Coni can be found immersed in her favorite passtime, Boomer Shooters.
-
-Meet Roca Rourin, idol's Rockin' Rockstar. When she's not tearing it up on stage or in karaoke, Roca loves retro games and cooking amazing food.
-
-Meet Yuko Yurei, idol's resident ghost hunter (not ghost). When she's not hunting ghosts she is hanging out with her boobros and probably causing some chaos in one way or another.
-
-Meet Momo Otako, idol's dumbo octopus. When she's not bankrupting the company with her gacha pulls or grinding Valorant, she's hanging out with her husdumbos.
-
-“You’re next on the touch list.”
--Noah Liang
-
-someone tell vivian
-to stop sucking dick
-pleaseee
 Hololive Talents 
-(Very Long) (Loss of sanity) (Took 1hr) (please god no) (I applaud you for your hard work)
+
+(Very Long)
+(Loss of sanity) 
+(Took 1hr) 
+(please god no)
+(I applaud you for your hard work)
+
 Hololive marriage chart be like:
 ⛆⛆⛆
 
