@@ -12978,6 +12978,356 @@ Gura why did you do this to me
 “Wah!”
 -Ninomae Ina’nis
 
+guys
+idk what to put for
+Gigi and Elizabeth
+
+"Let's wind you up!"
+"For Justice!"
+-Cecilia Immergreen
+
+"Can I drive you?"
+-Cecilia to Raora
+“...yes.”
+-Raora to Cecelia
+“WHY DID YOU HESITATE”
+-Cecilia to Raora
+“...no english.”
+-Raora to Cecelia
+
+"RRRRRRRRRRRRR~"
+-Raocar
+
+"No break-a da pasta!"
+-Raora Panthera
+
+Guys
+It's Raover
+
+Chattini
+when the
+cucumber
+
+"Good morning, everyone!
+Wake up, wake up, wake up!"
+-Kiryu Coco
+
+“Bam! …
+Wow, that actually sounds kinda badass!”
+-Todoroki Hajime
+
+“Care to join me
+ on a journey through a tale?”
+-Juufuutei Raden
+
+“Whatever you need,
+ Ichijou Ririka is success, guaranteed!”
+-Ichijou Rika
+
+“I'm here to take my stage!”
+-Otonose Kanade
+
+“My hobby is drawing.
+ And my profession... is also drawing.”
+-Hidoshi Ao
+
+"Ehehe, it's play time,
+whether you're ready or not!"
+-Mococco Abyssgard
+
+"How about we get you
+all nice and fluffy~?"
+-Fuwawa Abyssgard
+
+"Ah, the beautiful resonance
+of idol songs..."
+-Nerissa Ravencroft
+
+"I hope you'll feel my radiance!"
+-Koseki Bijou
+
+"BUBUBA BUBU BU BA
+BUBUBA BUBU BU YEAH"
+-Koseki Bijou
+
+"R A O R A?"  (“yeah, what's your name?”)
+“I’m KoseKI BIJOO-” (fade to white)
+-Koseki Bijou
+
+"Don't you think that's
+a wonderful story?"
+-Shiori Novella
+
+"WAZZUP!!
+ It's your worldwide Rat Idol
+ --- Hakos Baelz!"
+-Hakos Baelz
+
+"Just another
+C H E W S D A Y"
+-Hakos Baelz
+
+"Oh hi! Hoo’s this?
+ Nanashi Mumei!"
+-Nanashi Mumei
+
+"Kroniichiwa! It's me, perfection.
+ Also synonymous for Ouro Kronii!"
+-Ouro Kronii
+
+"Konfauna~ Your gaming idol kirin
+ Ceres Fauna is here!"
+-Ceres Fauna
+
+evil Fauna be like
+graaah
+I’m shouting
+
+"HiRyS, it’s IRyS!
+ Your seiso nephilim here
+ to fill the world with hopium!"
+-IRyS
+
+"It's elementary, right?"
+-Watson Amelia
+
+"A"
+-Gwar Gura
+
+evil Gura be like graaah
+I’m literally named “Evil-Doer”
+Gura why did you do this to me
+
+“Wah!”
+-Ninomae Ina’nis
+
+“Kikkeriki!”
+-Takanashi Kiara
+
+evil Kiara be like
+graah
+!ikirekkiK
+
+“I'm your Mori, and I hope
+you'll remember me! PEACE.”
+-Mori Calliope
+
+“bokobokobo Kobo Kanaeru at your service
+ let me be your sun to shine your day ehe~”
+-Kobo Kaneru
+
+“Bad. Badder. Baddest.
+Baddester. Baddesterest.”
+-Kaela Kovalskia
+
+“♪ Hard on the grind,
+Kaela on your mind ♪”
+-Kaela Kovalskia
+(Saya tidak tahu mengutip Kaela ;-;)
+
+"Mission Start, Hello,
+ my name is Vestia Zeta from
+ Hololive ID Gen3"
+-Vesita Zeta
+
+"Perhatian, sang putri merak yang tertiup angin, aku
+Pavolia Reine dari hololive ID."
+-Pavolia Reine
+
+"Good day! This is Anya Melfissa
+from hololive ID 2nd Generation."
+-Anya Melfissa
+
+"ZOMBANWA!! SUPER KAWAII ZOMBIE IDOL,
+ KU KU KU KUREIJI OLLIE DESU~!!"
+-Kureiji Ollie
+
+evil Ollie be like
+graaah
+I'm whispering
+
+"IOFORIA~! OBISA!" "Pagi semua! I’m your
+ beloved smart alien lofi
+from hololive Indonesia,
+nice to meet you!"
+-Airani Iofifteen
+
+"Moon Moon~ Moona Dayo!"
+-Moona Hoshinova
+
+“Hewwrroo everyone ~!!”;
+ “Purupuru ganbari Risu ~!”
+-Ayunda Risu
+
+"Hololive 6th Generation,
+Samurai bodyguard of holoX:”
+-Kazama Iroha
+
+“Bakkubakkubakku~n!”
+-Sakamata Chloe
+
+“Kon-Koyo!”
+-Hakui Koyori
+
+"Everyone,
+did you wait?"
+-Takane Lui
+
+“Bear witness!”
+-La+ Darkness
+
+ "When you've decided you're gonna do something,
+follow through!"
+-Omaru Polka
+
+“poi”
+-Shishiro Botan
+
+“He prayed that I wouldn't die.”
+“Thank you, I’m not dead, NO DEAD”
+-Shishiro Botan
+
+“NO DEAD NO LIFE”
+-Shishiro Botan
+
+evil Botan be like
+graaah
+I hate ramen
+
+evil Botan be like
+graaah
+i no longer commit bomb war crimes
+
+“Kon-nene!”
+-Momosuzu Nene
+
+"Lamyoohoo!"
+-Yukihana Lamy
+
+"Is evewyone heeere?"
+-Himemori Luna
+
+“Suppies! 'Tis I, Tokoyami Towa,
+from hololive 4th Generation!”
+-Tokoyami Towa
+
+"Hoof, hoof, helloof!"
+"Watame did nothing wrong!"
+-Tsunomaki Watame
+
+"Hey, you all came, ta!"
+-Amane Kanta
+
+"Ahoy! Captain of the Houshou Pirates,
+Houshou Marine here!"
+ "Keep 'er steady!"
+-Hoshou Marine
+
+"All hustle, all muscle!
+Shirogane Noel's here!"
+-Shirogane Noel
+
+"Noon-nui! This is hololive
+3rd Gen's Shiranui Flare!"
+-Shiranui Flare
+
+"Hiya-peko! Hiya-peko! Hiya-pekooo!
+I'm Usada Pekora, peko!"
+-Usada Pekora
+
+"It's your shooting star, your diamond in the rough,
+idol VTuber Hoshimachi Suisei!"
+-Hoshimachi Suisei
+
+"'Ello! Fingers!
+Give me your fingers!"
+-Inugami Korone
+
+evil korone be like
+graaah fingers really
+taste disgusting you know
+
+"Om, nom, Okayu!"
+-Nekomata Okayu
+
+evil Okayu be like
+graah
+im not hungry
+
+“Nya-hello! I'm the elite shrine maiden
+ of hololive, Sakura Miko!”
+-Sakura Miko
+
+“I'm the Virtual Diva AZKi!
+ I love music and singing!”
+-AZKi
+
+"'Sup! I'm Oozora Subaru
+ from hololive 2nd Generation!"
+-Oozora Subaru
+
+"Good evening, my cute students!
+ Choc-on!"
+-Yuzuki Choco
+
+"Greetings, Humans!
+ Yoohoo!"
+-Nakiri Ayame
+
+"Hellshio! Murasaki Shion here!"
+-Murasaki Shion
+
+"A-quality day to one and all!
+I'm Minato Aqua!"
+-Minato Aqua
+
+"Wasshoi! hololive's symbol of purity
+ and everyone's idol,
+Natsuiro Matsuri here!"
+-Natsurio Matsuri
+
+"Good foxy day!
+I'm Shirakami Fubuki!"
+-Shirikami Fubuki
+
+“:corn:!”
+-Shirakami Fubuki
+
+evil Shirikami be like
+graaah
+I’m Kurokami
+
+"Welcome to your rouge awakening!
+ This is Akai Haato!"
+-Akai Haato
+
+"Alona, everyone!
+This is Aki Rosenthal
+a.k.a. AkiRose!"
+-AkiRose
+
+"Hellobo!
+Roboco here!"
+-Roboco
+
+“Hey, Sora-tomo!
+How are you all doing?
+It's me, Tokino Sora!”
+-Tokino Sora
+
+"Hellooowl!
+It is Ookami Mio!"
+-Ookami Mio
+
+Evil Mio be like
+graah
+am not god
+
+whatever i just
+put this here, repeats
+will get cleaned out
+in our code anyway
+
 “Kikkeriki!”
 -Takanashi Kiara
 
@@ -13977,6 +14327,42 @@ my personal creme pie~
 
 FHAC.MandarinFortunes = 
 [=====================[
+你知道”喂”了嗎？
+
+你是温迪吗？
+因为
+你现在打击我
+
+希！
+
+我。。。
+需要。。。
+牛奶。。。
+
+我想要帶你
+去浪漫的
+土耳其~
+
+我想要
+你的奶
+
+爸爸，
+為什麼你喜要去？
+牛。。。奶？
+
+S粒線體是
+細胞的
+動力來源。
+
+哦？是什麼？
+我太年輕了嘛？
+啊，難怪他們說這是童工。
+
+噠噠噠～
+噠噠噠噠～
+等一下。。。
+你不可以聽了我唱歌的音樂！
+
 你好
 這僅僅是測試
 謝謝你的合作
@@ -14052,15 +14438,14 @@ FHAC.MandarinFortunes =
 *啪啪啪啪啪啪*
 哎呦！！
 
-*我獲得檸檬了*
-檸檬！*嘎吱*
-你媽的，檸檬！！
-
 你要去朝鮮
 
 你是我的妖怪
 
 我是你的妖怪
+檸檬，
+我們西藥新王。
+。。。你。
 
 *啪*
 柠檬！柠檬！
@@ -14097,12 +14482,16 @@ FHAC.MandarinFortunes =
 
 檸檬～
 檸檬～
-我愛吃檸檬～
+我愛吃檸檬～ 
 
 吃都阿～
 吃一半～
 不重要～
-我只想要吃檸檬～
+我只想要吃檸檬～ 
+
+*我獲得檸檬了*
+檸檬！*嘎吱*
+你媽的，檸檬！！
 
 ]=====================]
 
