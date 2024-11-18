@@ -8,23 +8,22 @@ local DSSCoreVersion = 7
 
 local MenuProvider = {}
 
-local dsssaveManager = SaveManager.GetDeadSeaScrollsSave()
 
 function MenuProvider.SaveSaveData()
     SaveManager.Save()
 end
 
 function MenuProvider.GetPaletteSetting()
-	return dsssaveManager.MenuPalette
+	return SaveManager.GetDeadSeaScrollsSave().MenuPalette
 end
 
 function MenuProvider.SavePaletteSetting(var)
-	dsssaveManager.MenuPalette = var
+	SaveManager.GetDeadSeaScrollsSave().MenuPalette = var
 end
 
 function MenuProvider.GetHudOffsetSetting()
 	if not REPENTANCE then
-		return dsssaveManager.HudOffset
+		return SaveManager.GetDeadSeaScrollsSave().HudOffset
 	else
 		return Options.HUDOffset * 10
 	end
@@ -32,56 +31,56 @@ end
 
 function MenuProvider.SaveHudOffsetSetting(var)
 	if not REPENTANCE then
-		dsssaveManager.HudOffset = var
+		SaveManager.GetDeadSeaScrollsSave().HudOffset = var
 	end
 end
 
 function MenuProvider.GetGamepadToggleSetting()
-	return dsssaveManager.GamepadToggle
+	return SaveManager.GetDeadSeaScrollsSave().GamepadToggle
 end
 
 function MenuProvider.SaveGamepadToggleSetting(var)
-	dsssaveManager.GamepadToggle = var
+	SaveManager.GetDeadSeaScrollsSave().GamepadToggle = var
 end
 
 function MenuProvider.GetMenuKeybindSetting()
-	return dsssaveManager.MenuKeybind
+	return SaveManager.GetDeadSeaScrollsSave().MenuKeybind
 end
 
 function MenuProvider.SaveMenuKeybindSetting(var)
-	dsssaveManager.MenuKeybind = var
+	SaveManager.GetDeadSeaScrollsSave().MenuKeybind = var
 end
 
 function MenuProvider.GetMenuHintSetting()
-	return dsssaveManager.MenuHint
+	return SaveManager.GetDeadSeaScrollsSave().MenuHint
 end
 
 function MenuProvider.SaveMenuHintSetting(var)
-	dsssaveManager.MenuHint = var
+	SaveManager.GetDeadSeaScrollsSave().MenuHint = var
 end
 
 function MenuProvider.GetMenuBuzzerSetting()
-	return dsssaveManager.MenuBuzzer
+	return SaveManager.GetDeadSeaScrollsSave().MenuBuzzer
 end
 
 function MenuProvider.SaveMenuBuzzerSetting(var)
-	dsssaveManager.MenuBuzzer = var
+	SaveManager.GetDeadSeaScrollsSave().MenuBuzzer = var
 end
 
 function MenuProvider.GetMenusNotified()
-	return dsssaveManager.MenusNotified
+	return SaveManager.GetDeadSeaScrollsSave().MenusNotified
 end
 
 function MenuProvider.SaveMenusNotified(var)
-	dsssaveManager.MenusNotified = var
+	SaveManager.GetDeadSeaScrollsSave().MenusNotified = var
 end
 
 function MenuProvider.GetMenusPoppedUp()
-	return dsssaveManager.MenusPoppedUp
+	return SaveManager.GetDeadSeaScrollsSave().MenusPoppedUp
 end
 
 function MenuProvider.SaveMenusPoppedUp(var)
-	dsssaveManager.MenusPoppedUp = var
+	SaveManager.GetDeadSeaScrollsSave().MenusPoppedUp = var
 end
 local DSSInitializerFunction = include("scripts.iam.deadseascrolls.dssmenucore")
 local Lore = include("scripts.iam.deadseascrolls.da lore")
@@ -134,10 +133,10 @@ FHAC.dmdirectory = {
                         variable = "monsterReplacements",
                         setting = 1,
                         load = function()
-                            return dsssaveManager.monsterReplacements or 2
+                            return SaveManager.GetSettingsSave().monsterReplacements or 2
                         end,
                         store = function(var)
-                            dsssaveManager.monsterReplacements = var
+                            SaveManager.GetSettingsSave().monsterReplacements = var
                         end,
                         tooltip = {strset = {'some enemies', 'can be','replaced by', 'floor variants', '', 'half anf half', 'by default'}}
         
@@ -161,10 +160,10 @@ FHAC.dmdirectory = {
                         variable = "customFortunes",
                         setting = 1,
                         load = function()
-                            return dsssaveManager.customFortunes or 1
+                            return SaveManager.GetSettingsSave().customFortunes or 1
                         end,
                         store = function(var)
-                            dsssaveManager.customFortunes = var
+                            SaveManager.GetSettingsSave().customFortunes = var
                         end,
                         tooltip = {strset = {'allow for', 'fortune', 'replacements', '', 'on by', 'default'}}
                     },
@@ -186,10 +185,10 @@ FHAC.dmdirectory = {
                         slider = true,
                         setting = 3,
                         load = function()
-                            return dsssaveManager.fortuneDeathChance or 3
+                            return SaveManager.GetSettingsSave().fortuneDeathChance or 3
                         end,
                         store = function(var)
-                            dsssaveManager.fortuneDeathChance = var
+                            SaveManager.GetSettingsSave().fortuneDeathChance = var
                         end,
                         displayif = function(_, item)
                             if item and item.buttons then
@@ -221,10 +220,10 @@ FHAC.dmdirectory = {
                         variable = "fortuneLanguage",
                         setting = 1,
                         load = function()
-                            return dsssaveManager.fortuneLanguage or 1
+                            return SaveManager.GetSettingsSave().fortuneLanguage or 1
                         end,
                         store = function(var)
-                            dsssaveManager.fortuneLanguage = var
+                            SaveManager.GetSettingsSave().fortuneLanguage = var
                         end,
                         displayif = function(_, item)
                             if item and item.buttons then
@@ -248,10 +247,10 @@ FHAC.dmdirectory = {
                         variable = "customRoomMusic",
                         setting = 1,
                         load = function()
-                            return dsssaveManager.customRoomMusic or 2
+                            return SaveManager.GetSettingsSave().customRoomMusic or 2
                         end,
                         store = function(var)
-                            dsssaveManager.customRoomMusic = var
+                            SaveManager.GetSettingsSave().customRoomMusic = var
                         end,
                         tooltip = {strset = {'allow for', 'rooms music', 'replacements', '', 'off by', 'default'}}
                     },
@@ -272,10 +271,10 @@ FHAC.dmdirectory = {
                 variable = "prettyMushlooms",
                 setting = 1,
                 load = function()
-                    return dsssaveManager.prettyMushlooms or 1
+                    return SaveManager.GetSettingsSave().prettyMushlooms or 1
                 end,
                 store = function(var)
-                    dsssaveManager.prettyMushlooms = var
+                    SaveManager.GetSettingsSave().prettyMushlooms = var
                 end,
                 tooltip = {strset = {'pretty','mushloom', 'made by', 'onxc_kryptid','','normal by', 'default'}}
             }

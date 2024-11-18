@@ -1,7 +1,6 @@
 local mod = FHAC
 local game = Game()
 local room = Game():GetRoom()
-local runData = SaveManager.GetRunSave()
 
 function mod:getMinSec(totalSeconds)
     local minutes = math.floor(totalSeconds / 60)

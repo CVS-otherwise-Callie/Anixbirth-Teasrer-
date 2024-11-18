@@ -11,12 +11,12 @@ if REPENTOGON and StageAPI and StageAPI.Loaded then
 StageAPI.UnregisterCallbacks("FHAC")
 FHAC:LoadScripts("scripts", {
 	"savedata",
+	"callbacks",
 	"library",
 	"constants",
 	"items",
 	"entities2",
 	"compatability.fiend folio.modcompact",
-	"callbacks",
 	"iam.main",
 	"iam.misc.resources.fortunes",
 	"otherapi.fiend folio.api.fortunehandling",
