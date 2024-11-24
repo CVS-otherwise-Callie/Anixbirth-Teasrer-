@@ -1,5 +1,7 @@
 local mod = FHAC
 
+if REPENTOGON then
+
 function mod:CheckEnemyDeathUnlocks()
     --floater
     local persistentGameData = Isaac.GetPersistentGameData()
@@ -19,6 +21,8 @@ function mod:postSaveSlotLoad(_, _, slot)
 end
 
 ---- REPENTAGON shit ----
-
 mod:AddCallback(ModCallbacks.MC_PRE_SPAWN_CLEAN_AWARD, mod.CheckEnemyDeathUnlocks)
 mod:AddCallback(ModCallbacks.MC_POST_SAVESLOT_LOAD, mod.CheckEnemyDeathUnlocks)
+
+
+end

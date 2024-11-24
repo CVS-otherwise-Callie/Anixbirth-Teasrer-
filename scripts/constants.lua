@@ -7,6 +7,11 @@ mod.isRepentance = REPENTANCE
 FHAC.font = Font()
 --needed rn, likely will delete later
 
+function FHAC:ENT(name)
+	return {ID = Isaac.GetEntityTypeByName(name), Var = Isaac.GetEntityVariantByName(name), 0}
+end
+
+
 FHAC.Monsters = {
     Fivehead = mod:ENT("Fivehead"),
     Floater = mod:ENT("Floater"),
@@ -53,10 +58,13 @@ FHAC.Challenges = {
     Bestiary = Isaac.GetChallengeIdByName("[ANIX] The Real Bestiary")
 }
 
+
+if REPENTOGON then
 FHAC.Unlocks = {
     Floater = Isaac.GetAchievementIdByName("Floater"),
     Fivehead = Isaac.GetAchievementIdByName("Fivehead")
 }
+end
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- COLOR --

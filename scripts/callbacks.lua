@@ -22,7 +22,7 @@ FHAC:AddCallback(ModCallbacks.MC_POST_TEAR_UPDATE, mod.PlayersTearsPostUpdate)
 
 function mod:ProjStuff(v)
 	local d = v:GetData();
-
+    
 	mod.SyntheticHorfShot(v, d)
     mod.WostShot(v, d)
     mod.PallunShot(v, d)

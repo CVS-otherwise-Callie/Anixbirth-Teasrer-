@@ -21,7 +21,6 @@ FHAC:LoadScripts("scripts.iam.monsters", {
 	"wispwosp",
 	"stuckpoot",
 	"rainmonger",
-	"techgrudge"
 })
 
 FHAC:LoadScripts("scripts.iam", {
@@ -54,6 +53,7 @@ FHAC:LoadScripts("scripts.iam.challenges", {
 	"therealbestiary",
 })
 
+
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 local mod = FHAC
 local rng = RNG()
@@ -62,7 +62,7 @@ local player = Isaac.GetPlayer()
 
 
 mod.LuaFont = Font()
-mod.LuaFont:Load("font/luamini.fnt")
+mod.LuaFont:Load("font/luaminioutlined.fnt")
 
 local rng = RNG()
 function mod:ShowRoomText()
@@ -170,9 +170,9 @@ function mod:ShowRoomText()
 	end
 end
 
-function mod.ShowFortuneDeath()
+function mod:ShowFortuneDeath()
 	if mod.DSSavedata.fortuneDeathChance ~= 0 and mod.DSSavedata.customFortunes == 1 then
-		if rng:RandomInt(mod.DSSavedata.fortuneDeathChance, 10) == 10 then 
+		if math.random(mod.DSSavedata.fortuneDeathChance, 10) == 10 then 
 			FHAC:ShowFortune()
 		end 
 	end

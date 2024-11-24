@@ -7,25 +7,22 @@ function FHAC:LoadScripts(includestart, t)
     end
 end
 
-if REPENTOGON and StageAPI and StageAPI.Loaded then
+if StageAPI and StageAPI.Loaded then
 StageAPI.UnregisterCallbacks("FHAC")
 FHAC:LoadScripts("scripts", {
 	"savedata",
-	"callbacks",
-	"library",
 	"constants",
+	"iam.main",
+	"callbacks",
+	"iam.misc.resources.fortunes",
+	"library",
 	"items",
 	"entities2",
 	"compatability.fiend folio.modcompact",
-	"iam.main",
-	"iam.misc.resources.fortunes",
 	"otherapi.fiend folio.api.fortunehandling",
 	"otherapi.fiend folio.api.apioverride",
 	"otherapi.proapi.proapi",
 })
-
-require("scripts.otherapi.jumplib").Init()
-
 --ff
 else
 	include("scripts.iam.misc.warning")

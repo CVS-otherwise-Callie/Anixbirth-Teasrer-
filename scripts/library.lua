@@ -281,8 +281,9 @@ function mod.onEntityTick(type, fn, variant, subtype)
 	end)
 end
 
+
 function mod:ENT(name)
-	return {ID = Isaac.GetEntityTypeByName(name), Var = Isaac.GetEntityVariantByName(name), Sub = Isaac.GetEntitySubTypeByName(name)}
+	return {ID = Isaac.GetEntityTypeByName(name), Var = Isaac.GetEntityVariantByName(name), 0}
 end
 
 function mod:spritePlay(sprite, anim)
@@ -554,6 +555,7 @@ function mod.scheduleCallback(foo, delay, callback, noCancelOnNewRoom)
 
 	table.insert(mod.funcs[callback], { Func = foo, Delay = delay, NoCancel = noCancelOnNewRoom })
 end
+
 
 function mod:GetEntInRoom(ent, avoidnpc, npc, radius)
 	radius = radius or 350

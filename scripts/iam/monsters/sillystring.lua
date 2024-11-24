@@ -254,6 +254,7 @@ mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, function(_, npc, damage, flag, 
             mod:ENT("Silly"),
             mod:ENT("String")
         }) == false then
+            print("grrr")
             return {Damage=0.01}
         end
     end
