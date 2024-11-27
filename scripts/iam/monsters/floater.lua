@@ -115,9 +115,9 @@ function mod:FloaterAI(npc, sprite, d, r)
         end
 
         if not mod:isScare(npc) then
-            othertargetvelocity = (d.targetpos + d.moveval - npc.Position):Resized(d.boost)
+            othertargetvelocity = (d.targetpos + d.moveval - npc.Position):Resized(d.boost*3)
         else
-            othertargetvelocity = (d.targetpos:Rotated(180) + d.moveval - npc.Position):Resized(d.boost*2.5) 
+            othertargetvelocity = (d.targetpos:Rotated(180) + d.moveval - npc.Position):Resized(d.boost*3) 
         end
     elseif d.state == "chase" then
         d.moveval = Vector.Zero
@@ -137,7 +137,6 @@ function mod:FloaterAI(npc, sprite, d, r)
         if d.accelerateaway > 0 then
             d.accelerateaway = d.accelerateaway - d.accelerateaway/20
         end
-
     end
 
     if mod:isScare(npc) or d.state == "dashout" then
@@ -168,7 +167,7 @@ function mod.FloaterTearUpdate(tear)
         local d = v:GetData()
         if v.Type == Isaac.GetEntityTypeByName("Floater") and v.Variant == Isaac.GetEntityVariantByName("Floater") and v.SubType == 0 then
             local target = v:ToNPC():GetPlayerTarget()
-            if math.abs(((target.Position - tear.Position):GetAngleDegrees() - (target.Position - v.Position):GetAngleDegrees())) < 20 and tear.Position:Distance(v.Position) < 100 and not tear:IsDead() and d.state ~= "avoid" then
+            if math.abs(((target.Position - tear.Position):GetAngleDegrees() - (target.Position - v.Position):GetAngleDegrees())) < 40 and tear.Position:Distance(v.Position) < 100 and not tear:IsDead() and d.state ~= "dashout" then
                 d.tearTarg = tear
                 d.accelerateaway = d.dashper
             end

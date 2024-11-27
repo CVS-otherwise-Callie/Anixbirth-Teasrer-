@@ -1,13 +1,10 @@
 local mod = FHAC
-local game = Game()
-local json = require("json")
 
 local DSSModName = "FHAC Mod DSS Menu"
 
 local DSSCoreVersion = 7
 
 local MenuProvider = {}
-
 
 function MenuProvider.SaveSaveData()
     SaveManager.Save()
@@ -52,7 +49,7 @@ function MenuProvider.SaveMenuKeybindSetting(var)
 end
 
 function MenuProvider.GetMenuHintSetting()
-	return SaveManager.GetDeadSeaScrollsSave().MenuHint
+    return FHAC.SaveManager.GetDeadSeaScrollsSave().MenuHint
 end
 
 function MenuProvider.SaveMenuHintSetting(var)

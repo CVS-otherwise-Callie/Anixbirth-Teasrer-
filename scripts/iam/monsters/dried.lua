@@ -95,7 +95,7 @@ local room = game:GetRoom()
                 d[h] = g
             end
         end
-        d.creepsec = d.creepsec + (math.random(-5, 5) * 0.5)
+        d.creepsec = d.creepsec + (math.random(-10, 10))
         mod:SaveEntToRoom({
             Name="Dried",
             NPC = npc,

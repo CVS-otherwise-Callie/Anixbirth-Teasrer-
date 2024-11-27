@@ -1,6 +1,7 @@
 
 SaveManager  = include("scripts.save_manager")
 SaveManager.Init(FHAC)
+FHAC.SaveManager = SaveManager
 
 SaveManager.AddCallback(SaveManager.Utility.CustomCallback.POST_DATA_LOAD, function()
     FHAC.DSSavedata = SaveManager.GetSettingsSave()

@@ -14,47 +14,24 @@ function mod:StuckpootAI(npc, sprite, d)
 
     if not d.npcinit then
         d.state = "idle"
+
+        local newgrid = 10^10
+        for i = 1, 4 do
+            local attachPos = room:GetLaserTarget(npc.Position, npc.V1:Rotated(i))
+            if attachPos:Distance(npc.Position) < newgrid then
+                newgrid = attachPos
+            end
+        end
+
+
         d.mynewPos = mod:freeGrid(npc, false, 100, 1)
         d.npcinit = true
     else
         npc.StateFrame = npc.StateFrame + 1
     end
 
-    npc.State = 8
 
-    if npc.StateFrame > 100 and d.state == "idle" then
-        d.state = "moving"
-        npc.StateFrame = 50
-    end
-    
-    if d.state == "idle" or d.state == "moving" then
-        sprite:Play("Idle")
-    end
-
-    if d.state == "moving" then
-        if sprite.FlipY == 90 or sprite.FlipY == -90 then
-            npc.Velocity = mod:Lerp(npc.Velocity, (Vector(0, d.mynewPos.Y)), 0.05)
-            if math.abs(npc.Position.Y - d.mynewPos.Y) < 22 then
-                d.state = "shoot"
-            end
-        else
-            npc.Velocity = mod:Lerp(Vector.Zero, Vector(npc.Position.X + d.mynewPos.X, 0), 0.05)
-            if math.abs(d.mynewPos.X - npc.Position.X) < 10 then
-                d.state = "shoot"
-                d.pos = npc.Position
-            end
-        end
-    end
-
-    if d.state == "shoot" then
-        mod:spritePlay(sprite, "Attack")
-        npc.Position = d.pos
-    end
-
-    if sprite:IsFinished("Attack") then
-        d.mynewPos = mod:freeGrid(npc, false, 1000, 1)
-        d.state = "idle"
-    end
+  
 end
 
 function mod:StuckpootShartProjectile(p, d)

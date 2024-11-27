@@ -353,7 +353,7 @@
         <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
     </entity>
 
-    <entity id="240" variant="167" name="Stuckpoot" baseHP="12" stageHP="0" boss="0" champion="1" collisionDamage="1" collisionMass="14" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="0" portrait="93" anm2path="monsters/stuckpoot/stuckpoot.anm2" tags="spider">
+    <entity id="161" variant="167" name="Stuckpoot" baseHP="12" stageHP="0" boss="0" champion="1" collisionDamage="1" collisionMass="14" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="0" portrait="93" anm2path="monsters/stuckpoot/stuckpoot.anm2" tags="spider">
 		<bestiary transform="0,0,1" anim="Idle" />
         <gibs amount="4" blood="1" bone="0" eye="0" gut="1" large="0" />
     </entity>

@@ -15,7 +15,7 @@ function mod:SyntheticHorfAI(npc, sprite, d)
         p.Parent = npc
         p.ChangeTimeout = p.ChangeTimeout * 13.4
         p:GetData().type = "SyntheticHorf"
-        p:GetData().offyourfuckingheadset = 70 + rng:RandomInt(-10, 10)
+        p:GetData().offyourfuckingheadset = 70 + math.random(-10, 10)
         p:GetData().StateFrame = 0
         p:GetData().Baby = d.target
         p:GetData().Player = npc:GetPlayerTarget()

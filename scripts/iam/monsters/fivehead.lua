@@ -24,26 +24,25 @@ function mod:FiveheadAI(npc, sprite, d)
         npc.StateFrame = npc.StateFrame + 1
     end
 
-    
-    if target.Position.X < npc.Position.X then --future me pls don't fuck this up
-		sprite.FlipX = true
-	else
-		sprite.FlipX = false
-	end
 
     local params = ProjectileParams()
-    params.FallingAccelModifier = 0.5
+    params.FallingAccelModifier = 0.4
     params.Scale = 1
 
     if d.state == "shake" then
         --stollen from beeter
-        if  (target.Position - npc.Position):Length() < 90 and game:GetRoom():CheckLine(target.Position,npc.Position,3,900,false,false) then   --fucking walls
+        if  (target.Position - npc.Position):Length() < 100 and game:GetRoom():CheckLine(target.Position,npc.Position,3,900,false,false) then   --fucking walls
             sprite:Play("AttackStart", true)
             d.state = "attackstart"
         else
             if not sprite:IsFinished("Shake") then
             sprite:Play("Shake")
             end
+        end
+        if target.Position.X < npc.Position.X then --future me pls don't fuck this up
+            sprite.FlipX = true
+        else
+            sprite.FlipX = false
         end
     end
 
@@ -55,9 +54,9 @@ function mod:FiveheadAI(npc, sprite, d)
     if d.state == "attack" then
         if sprite:IsEventTriggered("Shoot") then
             if d.wait == 1 then
-             for i = 0, 4 do
-            npc:FireProjectiles(npc.Position, Vector(2.7,5):Rotated((75*i+d.rngshoot)), 0, params)
-             end
+            for i = 0, 4 do
+                npc:FireProjectiles(npc.Position, Vector(2.7,5):Rotated((75*i+d.rngshoot)), 0, params)
+            end
             d.rngshoot = d.rngshoot + 30
             d.wait = d.wait + 1
             else
@@ -65,7 +64,7 @@ function mod:FiveheadAI(npc, sprite, d)
           end
         end
         if sprite:IsFinished("Attack") then
-            if (target.Position - npc.Position):Length() > 90 then
+            if (target.Position - npc.Position):Length() > 100 then
                 d.state = "shake"
                 npc.StateFrame = 0
                 d.wait = 0
