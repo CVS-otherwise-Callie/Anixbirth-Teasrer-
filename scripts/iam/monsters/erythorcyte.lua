@@ -3,13 +3,14 @@ local game = Game()
 local rng = RNG()
 
 mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
-    if npc.Variant == mod.Monsters.Erythorcyte.Var and npc.SubType == mod.Monsters.Erythorcyte.Subtype then
+    if npc.Variant == mod.Monsters.Erythorcyte.Var and npc.SubType == 0 then
         mod:ErythorcyteAI(npc, npc:GetSprite(), npc:GetData())
+    else
     end
 end, mod.Monsters.Erythorcyte.ID)
 
 mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
-    if npc.Variant == mod.Monsters.Erythorcytebaby.Var and npc.SubType == mod.Monsters.Erythorcytebaby.Subtype then
+    if npc.Variant == mod.Monsters.Erythorcytebaby.Var and npc.SubType == 1 then
         mod:ErythorcytebabyAI(npc, npc:GetSprite(), npc:GetData())
     end
 end, mod.Monsters.Erythorcytebaby.ID)
@@ -88,8 +89,7 @@ end
 --guys how do i make it effieicnt
 function mod:ErythorcytebabyAI(npc, sprite, d)
     local room = Game():GetRoom()
-    local target = npc:GetPlayerTarget()
-    local targetpos = mod:confusePos(npc, target.Position, 5, nil, nil)
+    local targetpos = mod:GetSpecificEntInRoom("Erythorcyte", npc).Position or npc:GetPlayerTarget().Position
     local params = ProjectileParams()
     local roomEntities = room:GetEntities()
 
@@ -106,13 +106,6 @@ function mod:ErythorcytebabyAI(npc, sprite, d)
         npc.StateFrame = 9
         sprite:Play("Spin")
         d.slowdown = 0
-        --taken from the github page
-        for i = 0, #roomEntities - 1 do
-            local entity = roomEntities:Get(i)
-            if entity.Type == mod.Monsters.Erythorcyte.ID and entity.Var == mod.Monsters.Erythorcyte.Var and entity.SubType == mod.Monsters.Erythorcyte.Subtype and not entity:HasEntityFlags(EntityFlag.FLAG_NO_TARGET) and not entity:HasEntityFlags(EntityFlag.FLAG_FRIENDLY) then --this specific segment is revs
-                    d.newhost = entity
-            end
-        end
         d.init = true
 	end
 
@@ -153,7 +146,7 @@ function mod:ErythorcytebabyAI(npc, sprite, d)
         d.newpos = d.newhost.Position
         d.newpos = (d.newpos - npc.Position):Resized(2)
         else
-            if targetpos:Distance(npc.Position) > 130 then
+            if targetpos:Distance(npc.Position) > 300 then
                 d.newpos = npc.Position + Vector(2, 2):Rotated(d.rot)
                 d.newpos = d.newpos - npc.Position
                 d.wait = 10

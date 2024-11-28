@@ -101,7 +101,7 @@ FHAC.dmdirectory = {
 
         buttons = {
             {str = 'resume game', action = 'resume'},
-            {str = 'settings', dest = 'settings',tooltip = {strset = {'---','play around', 'with what', 'you like and', 'do not like', '---'}}},
+            {str = 'options', dest = 'options',tooltip = {strset = {'---','play around', 'with what', 'you like and', 'do not like', '---'}}},
             {str = 'other', dest = 'other',tooltip = {strset = {'---','the misc,', 'the huh,', 'and the', 'why!', '---'}}},         
             {str = 'achievements', dest = 'achievements',tooltip = {strset = {'---','force lock or', 'unlock things ','', 'recommended to', 'keep stuff locked', '---'}}},
             FHAC.dssmod.changelogsButton,
@@ -114,8 +114,8 @@ FHAC.dmdirectory = {
         tooltip = FHAC.dssmod.menuOpenToolTip,
     },
 
-    settings =  {
-            title = 'settings',
+    options =  {
+            title = 'options',
                 buttons = {
                     {str = '-----enemies-----', fsize=2, nosel = true},
                     {str = '', fsize=2, nosel = true},

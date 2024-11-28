@@ -20,7 +20,7 @@ function mod:PinprickSpawnerAI(npc, sprite, d)
         npc:ClearEntityFlags(EntityFlag.FLAG_APPEAR)
         npc:AddEntityFlags(EntityFlag.FLAG_NO_TARGET | EntityFlag.FLAG_NO_PHYSICS_KNOCKBACK | EntityFlag.FLAG_NO_KNOCKBACK | EntityFlag.FLAG_NO_STATUS_EFFECTS)
         for i = 0, npc.SubType - 2 do
-            local prick = Isaac.Spawn(Isaac.GetEntityTypeByName("Pinprick"),  Isaac.GetEntityVariantByName("Pinprick"), Isaac.GetEntitySubTypeByName("Pinprick"), npc.Position, Vector.Zero, npc)
+            local prick = Isaac.Spawn(Isaac.GetEntityTypeByName("Pinprick"),  Isaac.GetEntityVariantByName("Pinprick"), 0, npc.Position, Vector.Zero, npc)
             prick:ClearEntityFlags(EntityFlag.FLAG_APPEAR)
             prick:GetData().dashoffset = rng:RandomInt(0, 10)
         end

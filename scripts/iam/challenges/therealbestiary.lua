@@ -9,9 +9,6 @@ local damitpleaseWork = false -- same thing that happened to Boss Butch i fuckin
 local everythingisfinallyFuckingRendered = false
 
 -- Generate the level
-
-
--- Generate the level
 function mod:GenLevel()
     if game.Challenge ~= mod.Challenges.Bestiary then
         everythingisfinallyFuckingRendered = false
@@ -45,7 +42,7 @@ mod:AddCallback(ModCallbacks.MC_POST_RENDER, function()
             -- Choose map layout
             local mapID = STARTING_ROOM
 
-            mod.ChallengeMap = StageAPI.CreateMapFromRoomsList(roomsList, mapID)
+            mod.ChallengeMap = StageAPI.CreateMapFromRoomsList(roomsList, nil, {NoChampions = true})
             StageAPI.InitCustomLevel(mod.ChallengeMap, true)
             everythingisfinallyFuckingRendered = true
         end

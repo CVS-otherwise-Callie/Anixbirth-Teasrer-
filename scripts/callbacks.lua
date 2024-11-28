@@ -60,7 +60,7 @@ end
 mod:AddCallback(ModCallbacks.MC_POST_GAME_STARTED, mod.PostGameStarted)
 
 function mod:PostNPCColl(npc, coll)
-    return mod.SillyStringColl(npc, coll)
+    return mod.SillyStringColl(npc, coll) or mod.WostColl(npc, coll)
 end
 mod:AddCallback(ModCallbacks.MC_PRE_NPC_COLLISION, mod.PostNPCColl)
 

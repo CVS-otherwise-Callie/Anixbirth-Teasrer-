@@ -38,7 +38,7 @@ function mod:NPCReplaceCallback(npc)
     local roomDescriptor = level:GetCurrentRoomDesc()
     local roomConfigRoom = roomDescriptor.Data
     local tab = {
-        Schmoot = {mod.Monsters.Schmoot.ID, mod.Monsters.Schmoot.Var, 0, {EntityType.ENTITY_HORF}, {0, 3}, 0.5},
+        Schmoot = {mod.Monsters.Schmoot.ID, mod.Monsters.Schmoot.Var, 0, {EntityType.ENTITY_HORF}, {3}, 0.5},
     }
     if mod.DSSavedata.monsterReplacements ~= 3 then
         if mod.DSSavedata.monsterReplacements == 1 then

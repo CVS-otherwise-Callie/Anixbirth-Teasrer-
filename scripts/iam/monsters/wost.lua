@@ -12,7 +12,6 @@ function mod:WostAI(npc, sprite, d)
     local room = game:GetRoom()
     local target = npc:GetPlayerTarget()
     local targetpos = mod:confusePos(npc, target.Position, 5, nil, nil)
-    local targetvelocity = (targetpos - npc.Position)
     local roomTears = room:GetEntities(EntityType.ENTITY_TEAR)
     for i = 0, #roomTears - 1 do
         local entity = roomTears:Get(i)
@@ -22,6 +21,24 @@ function mod:WostAI(npc, sprite, d)
             mod:spritePlay(sprite, "hiding")
             d.state = "veryscaredhiding"
         end
+        end
+    end
+
+    local function patherReal(npc, point)
+        if npc.Type == 1 then
+            return game:GetRoom():CheckLine(point,npc.Position,3,900,false,false)
+        else
+            local pather = npc.Pathfinder
+            return pather:HasPathToPos(point, true)
+        end
+    end
+
+    local function WostNewGrid()
+        for i = 1, 10000000 do
+            local grid = mod:freeGrid(npc, false, 1000, 1)
+            if mod:IsTableEmpty(Isaac.FindInRadius(grid, 30, EntityPartition.ENEMY)) then
+                return grid + Vector(math.random(-1, 1) * 10, math.random(-1, 1) * 10)
+            end
         end
     end
 
@@ -41,7 +58,7 @@ function mod:WostAI(npc, sprite, d)
         d.init = true
     end
 
-    npc.Velocity = mod:Lerp(npc.Velocity, Vector(rng:RandomInt(-5, 5), rng:RandomInt(-5, 5)), -0.25)
+    npc.Velocity = mod:Lerp(npc.Velocity, Vector(math.random(-5, 5), math.random(-5, 5)), -0.25)
     npc.Velocity = npc.Velocity:Resized(1/5)
 
     --noticing
@@ -74,7 +91,7 @@ function mod:WostAI(npc, sprite, d)
     --dissapearing
     if d.state == "idle" and ((target.Position - npc.Position):Length() < 100 and game:GetRoom():CheckLine(target.Position,npc.Position,3,900,false,false)) then 
         mod:spritePlay(sprite, "hiding")
-        if rng:RandomInt(1, 2) == 1 then
+        if math.random(1, 2) == 1 then
             d.state = "veryscaredhiding"
             npc.StateFrame = 0
         else
@@ -96,11 +113,11 @@ function mod:WostAI(npc, sprite, d)
         npc.StateFrame = npc.StateFrame + 1
         npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_NONE  
         if npc.StateFrame >= 10 then
-            npc.Position = mod:freeGrid(npc, false, 1000, 1)
+            npc.Position = WostNewGrid()
             npc.StateFrame = 0
-            npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_ALL
+            npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_PLAYEROBJECTS
             mod:spritePlay(sprite, "appear")
-            if rng:RandomInt(1, 5) == 5 then
+            if math.random(1, 5) == 5 then
                 d.state = "shootappear"
             else
                 d.state = "appearing"
@@ -111,11 +128,10 @@ function mod:WostAI(npc, sprite, d)
     if d.state == "kindascaredhiding" then
         npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_NONE
             if targetpos:Distance(npc.Position) > 100 or d.entitytearinrange == false then
-                npc.Position = mod:freeGrid(npc, false, 1000, 1)
                 npc.StateFrame = 0
-                npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_ALL
+                npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_PLAYEROBJECTS
                 mod:spritePlay(sprite, "appear")
-                if rng:RandomInt(1, 5) == 5 then
+                if math.random(1, 5) == 5 then
                     d.state = "shootappear"
                 else
                     d.state = "appearing"
@@ -185,5 +201,13 @@ end
 function mod.RemoveWostProj(proj, collider)
     if proj.SpawnerVariant ~= nil and collider.Type == EntityType.ENTITY_PLAYER and proj.SpawnerVariant == mod.Monsters.Wost.Var and proj.SpawnerEntity.SubType == mod.Monsters.Wost.Subtype then
         proj:Remove()
+    end
+end
+
+function mod.WostColl(npc, coll)
+    if npc.Type == 161 and npc.Variant == mod.Monsters.Wost.Var then
+        if coll.Type == 1 then
+            return true
+        end
     end
 end

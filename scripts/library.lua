@@ -590,7 +590,7 @@ function mod:GetSpecificEntInRoom(myent, npc, radius)
 	for _, ent in ipairs(Isaac.GetRoomEntities()) do
 		if not ent:IsDead()
 		and not ent:HasEntityFlags(EntityFlag.FLAG_FRIENDLY) and (ent.Position - npc.Position):Length() < radius
-		and ent.Type == myent.ID and ent.Variant == myent.Var and ent.SubType == myent.Sub then
+		and ent.Type == myent.ID and ent.Variant == myent.Var and ent.SubType == 0 then
 			table.insert(targets, ent)
 		end
 	end
