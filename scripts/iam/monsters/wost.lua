@@ -206,6 +206,9 @@ end
 
 function mod.WostColl(npc, coll)
     if npc.Type == 161 and npc.Variant == mod.Monsters.Wost.Var then
+        if coll.Parent.Type == 1 or coll.Parent.Type == 8 then
+            npc.HitPoints = npc.HitPoints - 1
+        end
         if coll.Type == 1 then
             return true
         end

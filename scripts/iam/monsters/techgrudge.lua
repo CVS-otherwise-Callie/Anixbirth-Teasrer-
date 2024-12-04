@@ -121,7 +121,7 @@ function mod:TechGrudgeAI(npc, sprite, d)
             end
         end
 
-        if d.frame > 10 then
+        if d.frame > 10 and REPENTAGON then
 
         local bsprite = Sprite()
         bsprite:Load("gfx/007.002_thin red laser.anm2", true)

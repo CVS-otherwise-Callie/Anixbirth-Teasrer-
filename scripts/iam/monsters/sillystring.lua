@@ -249,13 +249,12 @@ function mod.UpdateSillyStringProj(proj, coll, d)
 end
 
 mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, function(_, npc, damage, flag, source)
-    if npc.Type == 161 and npc.Variant == mod.Monsters.Silly.Var or npc.Variant == mod.Monsters.String.Var and not npc:GetData().targisPlayer then
+    if npc.Type == 161 and (npc.Variant == mod.Monsters.Silly.Var or npc.Variant == mod.Monsters.String.Var) and not npc:GetData().targisPlayer then
         if source.Type == 2 and mod:CheckForOnlyEntInRoom({
             mod:ENT("Silly"),
             mod:ENT("String")
         }) == false then
-            print("grrr")
-            return {Damage=0.01}
+            npc.HitPoints = npc.HitPoints + damage*0.5
         end
     end
 end)

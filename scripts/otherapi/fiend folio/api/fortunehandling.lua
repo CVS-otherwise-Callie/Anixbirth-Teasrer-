@@ -114,12 +114,11 @@ function mod:ShowFortune(forcedtune)
                     table.insert(mod.FortuneTable, split(fortunetablesetup[i], "\n"))
                 end
             end
-            local choice = math.random(#mod.FortuneTable)
-            local fortune = mod.FortuneTable[choice]
+            local fortune = mod.FortuneTable[math.random(#mod.FortuneTable)]
             fortuneArray(fortune)
         end
     else
-        Game():ShowRule()
+        Game():ShowFortune()
     end
 end
 

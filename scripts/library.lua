@@ -281,11 +281,6 @@ function mod.onEntityTick(type, fn, variant, subtype)
 	end)
 end
 
-
-function mod:ENT(name)
-	return {ID = Isaac.GetEntityTypeByName(name), Var = Isaac.GetEntityVariantByName(name), 0}
-end
-
 function mod:spritePlay(sprite, anim)
 	if not sprite:IsPlaying(anim) then
 		sprite:Play(anim)
@@ -682,10 +677,12 @@ end
 function mod:CheckForOnlyEntInRoom(npcs, id, var, sub)
 	local room = game:GetRoom()
 	local npcsepcifics = {}
+	local npcsepcificsvar = {}
 	id = id or true
 	var = var or true
 	sub = sub or false
 	local rooments = {}
+	local roomentsvar = {}
 	for _, element in pairs(npcs) do
 		table.insert(npcsepcifics, element.ID)
 	end
@@ -696,22 +693,19 @@ function mod:CheckForOnlyEntInRoom(npcs, id, var, sub)
 		end
 	end
 	local isType = mod:ValidifyTables(rooments, npcsepcifics)
-	if not (var or sub) then return isType end
+	if var == false and sub == false then return isType end
 	if var and isType then
-		local npcsepcifics = {}
-		local rooments = {}
 		for _, element in pairs(npcs) do
-			table.insert(npcsepcifics, element.Var)
+			table.insert(npcsepcificsvar, element.Var)
 		end
 		for _, ent in ipairs(Isaac.GetRoomEntities()) do
 			if (ent:IsActiveEnemy() and ent:IsVulnerableEnemy() and not ent:IsDead()
 			and not ent:HasEntityFlags(EntityFlag.FLAG_FRIENDLY)) then
-				table.insert(rooments, ent.Variant)
+				table.insert(roomentsvar, ent.Variant)
 			end
 		end
 	end
-	local isVar = mod:ValidifyTables(rooments, npcsepcifics)
-	if not sub then return isVar end
+	local isVar = mod:ValidifyTables(roomentsvar, npcsepcificsvar)
 	if sub and isVar then
 		local npcsepcifics = {}
 		local rooments = {}
@@ -726,5 +720,6 @@ function mod:CheckForOnlyEntInRoom(npcs, id, var, sub)
 		end
 		sub = mod:ValidifyTables(rooments, npcsepcifics)
 	end
+	if not sub then return isVar end
 	return sub
 end

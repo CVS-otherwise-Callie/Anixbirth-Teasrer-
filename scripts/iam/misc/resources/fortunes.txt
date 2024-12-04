@@ -1,5 +1,3 @@
-FHAC.Fortunes = 
-[=================[
 help
 key between f and h
 not workin
@@ -15225,5 +15223,3 @@ interrelatedness of all things.
 
 Nothing of importance likes to 
 take a walk in the park.
-
-]====================]

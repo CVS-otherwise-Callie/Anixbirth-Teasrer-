@@ -19,8 +19,10 @@ FHAC:LoadScripts("scripts.iam.monsters", {
 	"sillystring",
 	"stickyfly",
 	"wispwosp",
+	"techgrudge",
 	"stuckpoot",
 	"rainmonger",
+	"zapperteller"
 })
 
 FHAC:LoadScripts("scripts.iam", {
@@ -75,13 +77,13 @@ function mod:ShowRoomText()
 	local vartext = ""
 	local bcenter = Vector(center.X, bottomright.Y - 152 * 2)
 	local ismodtext = false
+	local useVar = rDD.Variant
 
 	if not game:GetSeeds():HasSeedEffect(SeedEffect.SEED_NO_HUD) then
 
 		if room and room.Layout then
-			text = text .. tostring(room.Layout.Variant) .. " " .. room.Layout.Name
+			text = text		
 		else
-			local useVar = rDD.Variant
 			if useVar >= 45000 and useVar <= 60000 then
 				ismodtext = true
 				useVar = useVar - 44999
@@ -117,7 +119,7 @@ function mod:ShowRoomText()
 			text = ""
 			for i = 0, tonumber(string.len(pastext)) do
 				local letter = string.sub(pastext, i, i)
-				local randint = rng:RandomInt(1, 15)
+				local randint = math.random(1, 15)
 				if randint == 1 then
 					letter = string.char(math.random(65, 65 + 25))
 				elseif randint == 2 then
@@ -130,13 +132,13 @@ function mod:ShowRoomText()
 			for i = 0, tonumber(string.len(pastext)) do
 				if i ~= "-" or i ~= "" then
 				local letter = string.sub(pastext, i, i)
-				if rng:RandomInt(1, 5) == 1 then
-					letter = rng:RandomInt(1, 9)
+				if math.random(1, 5) == 1 then
+					letter = math.random(1, 9)
 				end
 				vartext = vartext..tostring(letter)
 				end
 			end
-			if rng:RandomInt(1, 3) == 3 then
+			if math.random(3) == 3 then
 				glitchedtext = text
 				glitchedvar = vartext
 			end

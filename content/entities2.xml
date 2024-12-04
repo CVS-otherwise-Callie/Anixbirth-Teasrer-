@@ -331,6 +331,11 @@
         <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
     </entity>
 
+    <entity anm2path="monsters/zapperteller/zapper teller.anm2" reroll="true" baseHP="13" boss="0" champion="1" collisionDamage="1" collisionMass="3" collisionRadius="20" friction="1" id="161" variant="133" subtype="0" name="Zapper Teller" numGridCollisionPoints="12" shadowSize="20" stageHP="2" portrait="133" bestiary="true">
+        <bestiary transform="0,0,1" anim="Idle" />
+        <gibs amount="6" blood="1" bone="0" eye="0" gut="1" large="0" worm="1" />
+	</entity>
+
     <entity id="161" variant="145" name="Pinprick" anm2path="monsters/pinprick/pinprick.anm2" reroll="true" baseHP="3" boss="0" champion="0" collisionDamage="1" collisionMass="3" collisionRadius="17" friction="1" numGridCollisionPoints="4" shadowSize="11" stageHP="1" gridCollision="walls" tags="fly" portrait="145">
 		<bestiary transform="0,0,1" anim="Fly" />
         <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
