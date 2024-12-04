@@ -42,7 +42,8 @@
    </bitfield>
 </entity>
 <entity ID="161" Variant="91" Name="Schmoot" Image="mah boys/schmoot.png" BaseHP="16" Tags="Champion"/>
-<entity ID="161" Variant="119" Name="Wost" Image="mah boys/wost.png" BaseHP="15" Tags="Champion"/>
+<entity ID="161" Variant="119" Name="Wost" Image="mah boys/wost.png" BaseHP="8" Tags="Champion"/>
+<entity ID="161" Variant="133" Name="Zapper Teller" Image="mah boys/zapperteller.png" BaseHP="13" Tags="Champion"/>
 <entity ID="161" Variant="144" Name="Wisp Wosp" Image="mah boys/wispwosp.png" BaseHP="10" StageHP="0" Tags="Champion"/>
 <entity ID="161" Variant="145" Name="Pinprick" Image="mah boys/pinprick.png" BaseHP="6" StageHP="1" Tags="Champion">
 <bitfield Key="Subtype">
@@ -136,6 +137,7 @@ Use 2, 4, or 6 normally.
 	<group Name="HOPE Downpour" Label="Downpour">
 		<group Name="HOPE Downpour Enemies">
 		   <entity Name="Wost"/>
+		   <entity Name="Zapper Teller"/>
 		   <entity Name="Pinprick"/>
 		   <entity Name="Wisp Wosp"/>
 		</group>
