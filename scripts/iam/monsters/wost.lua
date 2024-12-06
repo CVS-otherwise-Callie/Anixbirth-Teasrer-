@@ -167,6 +167,7 @@ end
 
 function mod.WostShot(p, d)
     if d.type == "WostShot" then
+        if p.Parent then
         local room = game:GetRoom()
         local par = p.Parent
         local npc = par:ToNPC()
@@ -195,6 +196,10 @@ function mod.WostShot(p, d)
             p.ChangeTimeout = 0
             p:Remove()
         end
+        else
+            p.Velocity = p.Velocity * 0.9
+			p.FallingAccel = 0.1
+        end
     end
 end
 
@@ -205,12 +210,4 @@ function mod.RemoveWostProj(proj, collider)
 end
 
 function mod.WostColl(npc, coll)
-    if npc.Type == 161 and npc.Variant == mod.Monsters.Wost.Var then
-        if coll.Parent.Type == 1 or coll.Parent.Type == 8 then
-            npc.HitPoints = npc.HitPoints - 1
-        end
-        if coll.Type == 1 then
-            return true
-        end
-    end
 end

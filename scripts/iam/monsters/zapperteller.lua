@@ -39,22 +39,27 @@ function mod:ZapperTellerAI(npc, sprite, d)
     if d.state == "chargeupint" then
         mod:spritePlay(sprite, "ChargeUpIntro")
         if not d.lightning then
-            d.lightning = Isaac.Spawn(1000, 420, 55, npc:GetPlayerTarget().Position, Vector.Zero, npc):ToEffect()
+            d.lightning = Isaac.Spawn(1000, 420, 55, npc:GetPlayerTarget().Position, Vector.Zero, npc)
             d.lightning:GetSprite().Scale = d.lightning:GetSprite().Scale * 1.5
-            d.lightning.CollisionDamage = 1
-            d.lightning.LifeSpan = 120
+            d.lightning:ToEffect().LifeSpan = 120
+            d.lightning:GetData().dealsDamage = true
         else
             d.lightning:GetData().lightningtimeout = 1000000
         end
     elseif d.state == "boom" then
         d.lightning:GetData().lightningtimeout = 30
         mod:spritePlay(sprite, "Boom")
-        d.lightning.State = 20
+        d.lightning:ToEffect().State = 20
     end
 
     if d.lightning then
 
-        if d.lightning.Child and d.lightning.Child:GetData().isLightning and d.lightning.Child:GetSprite():IsFinished("Lightning" .. (d.lightning.Child:GetData().lightningtype or 1)) then
+        local child = d.lightning:GetData().lightning
+
+        if child and child:GetData().isLightning and child:GetSprite():IsFinished("Lightning" .. (child:GetData().lightningtype or 1)) then
+            for k, v in ipairs(Isaac.FindInRadius(npc.Position, 50, EntityPartition.PLAYER)) do
+                v:TakeDamage(1, DamageFlag.DAMAGE_EXPLOSION, EntityRef(npc.Parent), 1)
+            end
         else
             d.lightning.Position = npc:GetPlayerTarget().Position
         end

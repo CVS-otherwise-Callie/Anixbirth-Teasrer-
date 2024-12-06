@@ -1,4 +1,5 @@
 local mod = FHAC
+local sfx = SFXManager()
 
 mod:AddCallback(ModCallbacks.MC_POST_EFFECT_UPDATE, function(_, effect)
     if effect.Variant == mod.Effects.ZapperTellerLightning.Var and effect.SubType == 55 then
@@ -9,12 +10,16 @@ end)
 function mod:ZapperTellerLightningAI(ef, sprite, d)
 
     ef.State = ef.State + 1
+
+    local int = math.floor(sprite.Scale:Length()*4)
     
     if not d.lightningtimeout then d.lightningtimeout = 20 end
 
     if not d.init then
         if d.isLightning and not d.state then
             mod:spritePlay(sprite, "LightningInit")
+            Game():ShakeScreen(int)
+            sfx:Play(SoundEffect.SOUND_THUNDER, 10/math.random(2, 3), 0, false, (math.random(9, 11))/10)
             d.lightningtype = math.random(2)
             d.state = "lightningstart"
             d.init = true
@@ -31,6 +36,8 @@ function mod:ZapperTellerLightningAI(ef, sprite, d)
             mod:spritePlay(sprite, "LightningEnd")
         end
     end
+
+    --SoundEffect.SOUND_THUNDER
 
     if d.state == "shadow" then
         mod:spritePlay(sprite, "Shadow")
@@ -64,6 +71,15 @@ function mod:ZapperTellerLightningAI(ef, sprite, d)
     if d.isLightning and sprite:IsFinished("Lightning" .. (d.lightningtype or 1)) then
         d.lightningtype = math.random(2)
         mod:spritePlay(sprite, "Lightning" .. d.lightningtype)
+        if tonumber(sprite.Scale:Length()) > 2 then
+            Game():ShakeScreen(int)
+        end
+
+        if ef.Parent:GetData().dealsDamage then
+            for k, v in ipairs(Isaac.FindInRadius(ef.Position, 50, EntityPartition.PLAYER)) do
+                v:TakeDamage(1, DamageFlag.DAMAGE_EXPLOSION, EntityRef(ef.Parent), 1)
+            end
+        end
     end
 
     if sprite:IsFinished("ShadowEnd") or sprite:IsFinished("LightningEnd") then
