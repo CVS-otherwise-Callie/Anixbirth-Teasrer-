@@ -14,6 +14,7 @@ function mod:ZapperTellerAI(npc, sprite, d)
         d.state = "idle"
         d.offset = math.random(-30, 30)
         npc:AddEntityFlags(EntityFlag.FLAG_NO_KNOCKBACK | EntityFlag.FLAG_NO_PHYSICS_KNOCKBACK)
+        d.lightning = nil
 
         d.newidle = math.random(2)
         mod:spritePlay(sprite, "Idle" .. d.newidle)
@@ -38,15 +39,19 @@ function mod:ZapperTellerAI(npc, sprite, d)
 
     if d.state == "chargeupint" then
         mod:spritePlay(sprite, "ChargeUpIntro")
+        if not d.restartlightning then
+            d.lightning = nil
+            d.restartlightning = true
+        end
         if not d.lightning then
             d.lightning = Isaac.Spawn(1000, 420, 55, npc:GetPlayerTarget().Position, Vector.Zero, npc)
-            d.lightning:GetSprite().Scale = d.lightning:GetSprite().Scale * 1.5
+            d.lightning:GetSprite().Scale = d.lightning:GetSprite().Scale * 3
             d.lightning:ToEffect().LifeSpan = 120
-            d.lightning:GetData().dealsDamage = true
         else
             d.lightning:GetData().lightningtimeout = 1000000
         end
     elseif d.state == "boom" then
+        d.restartlightning = false
         d.lightning:GetData().lightningtimeout = 30
         mod:spritePlay(sprite, "Boom")
         d.lightning:ToEffect().State = 20
@@ -56,10 +61,14 @@ function mod:ZapperTellerAI(npc, sprite, d)
 
         local child = d.lightning:GetData().lightning
 
-        if child and child:GetData().isLightning and child:GetSprite():IsFinished("Lightning" .. (child:GetData().lightningtype or 1)) then
-            for k, v in ipairs(Isaac.FindInRadius(npc.Position, 50, EntityPartition.PLAYER)) do
-                v:TakeDamage(1, DamageFlag.DAMAGE_EXPLOSION, EntityRef(npc.Parent), 1)
+        if child and child:GetData().isLightning and child:GetSprite():IsPlaying("Lightning" .. (child:GetData().lightningtype or 1)) and child:GetSprite():GetFrame() == 4 then
+            for k, v in ipairs(Isaac.FindInRadius(npc.Position, 80, EntityPartition.PLAYER)) do
+                v:TakeDamage(2, 0, EntityRef(npc), 1)
             end
+        elseif  child and child:GetData().isLightning and child:GetSprite():IsPlaying("Lightning" .. (child:GetData().lightningtype or 1)) and child:GetSprite():GetFrame() == 5 then
+            d.lightning.Velocity = mod:Lerp(d.lightning.Velocity, Vector(20, 0):Rotated((npc:GetPlayerTarget().Position - d.lightning.Position):GetAngleDegrees()), 1)
+        elseif child and d.state ~= "boom" then
+            d.lightning:MultiplyFriction(0)
         else
             d.lightning.Position = npc:GetPlayerTarget().Position
         end
@@ -76,7 +85,6 @@ function mod:ZapperTellerAI(npc, sprite, d)
     end
 
     if sprite:IsFinished("Boom") then
-        d.lightning = nil
         d.state = "idle"
         d.newidle = math.random(2)
         mod:spritePlay(sprite, "Idle" .. d.newidle)
