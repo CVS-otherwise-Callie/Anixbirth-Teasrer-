@@ -19,7 +19,6 @@ FHAC:LoadScripts("scripts.iam.monsters", {
 	"sillystring",
 	"stickyfly",
 	"wispwosp",
-	"techgrudge",
 	"stuckpoot",
 	"rainmonger",
 	"zapperteller"
@@ -28,6 +27,10 @@ FHAC:LoadScripts("scripts.iam.monsters", {
 FHAC:LoadScripts("scripts.iam", {
 	"cvsunlocks",
 	"levelreplaceshit",
+})
+
+FHAC:LoadScripts("scripts.iam.effects", {
+	"zapperteller_lightning",
 })
 
 FHAC:LoadScripts("scripts.iam.familiars", {

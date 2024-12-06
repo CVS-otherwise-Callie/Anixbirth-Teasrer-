@@ -47,6 +47,10 @@ FHAC.Familiars = { --YOU HAVE NO IDEA HOW MANY FUCKING TIMES I SPELLED THIS WRON
     Snark = mod:ENT("Snark (Half Life)"),
 }
 
+FHAC.Effects = {
+    ZapperTellerLightning = mod:ENT("Zapper Teller Lightning")
+}
+
 FHAC.Jokes = {
     Gaperrr = mod:ENT("A gaper w/ three legs, why did we do this"),
 }

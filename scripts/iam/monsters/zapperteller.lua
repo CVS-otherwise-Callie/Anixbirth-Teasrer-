@@ -23,9 +23,9 @@ function mod:ZapperTellerAI(npc, sprite, d)
         npc.StateFrame = npc.StateFrame + 1
     end
 
-    if npc.StateFrame >= 150+d.offset and d.state == "idle" then
+    if npc.StateFrame >= 80+d.offset and d.state == "idle" then
         d.state = "chargeupint"
-    elseif npc.StateFrame >= 300+d.offset then
+    elseif npc.StateFrame >= 140+d.offset then
         d.state = "boom"
     elseif d.state == "idle" then
         if sprite:IsFinished("Idle" .. d.newidle) then
@@ -38,8 +38,26 @@ function mod:ZapperTellerAI(npc, sprite, d)
 
     if d.state == "chargeupint" then
         mod:spritePlay(sprite, "ChargeUpIntro")
+        if not d.lightning then
+            d.lightning = Isaac.Spawn(1000, 420, 55, npc:GetPlayerTarget().Position, Vector.Zero, npc):ToEffect()
+            d.lightning:GetSprite().Scale = d.lightning:GetSprite().Scale * 1.5
+            d.lightning.CollisionDamage = 1
+            d.lightning.LifeSpan = 120
+        else
+            d.lightning:GetData().lightningtimeout = 1000000
+        end
     elseif d.state == "boom" then
+        d.lightning:GetData().lightningtimeout = 30
         mod:spritePlay(sprite, "Boom")
+        d.lightning.State = 20
+    end
+
+    if d.lightning then
+
+        if d.lightning.Child and d.lightning.Child:GetData().isLightning and d.lightning.Child:GetSprite():IsFinished("Lightning" .. (d.lightning.Child:GetData().lightningtype or 1)) then
+        else
+            d.lightning.Position = npc:GetPlayerTarget().Position
+        end
     end
 
     if sprite:IsFinished("ChargeUpIntro") then
@@ -53,11 +71,18 @@ function mod:ZapperTellerAI(npc, sprite, d)
     end
 
     if sprite:IsFinished("Boom") then
+        d.lightning = nil
         d.state = "idle"
         d.newidle = math.random(2)
         mod:spritePlay(sprite, "Idle" .. d.newidle)
         d.offset = math.random(-30, 30)
         npc.StateFrame = 0
+    end
+
+    if npc:IsDead() then
+        if d.lightning then
+            d.lightning:Kill()
+        end
     end
 
     npc.Velocity = Vector.Zero

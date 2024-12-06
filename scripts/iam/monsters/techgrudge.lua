@@ -146,7 +146,7 @@ function mod:TechGrudgeLaser(npc, sprite, d)
     local room = game:GetRoom()
 
 
-    if d.beam then
+    if d.beam and REPENTAGON then
 
         local origin
         if d.direction ~= 4 then

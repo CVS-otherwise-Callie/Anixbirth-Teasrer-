@@ -335,6 +335,7 @@
         <bestiary transform="0,0,1" anim="Idle" />
         <gibs amount="6" blood="1" bone="0" eye="0" gut="1" large="0" worm="1" />
 	</entity>
+    <entity anm2path="effects/lightning/zapperteller/effect_zappertellerlightning.anm2" name="Zapper Teller Lightning" id="1000" variant="420" subtype="55" baseHP="0" stageHP="0" shieldStrength="0" boss="0" champion="0" collisionDamage="0" collisionMass="0" collisionRadius="0" friction="1" numGridCollisionPoints="0" shadowSize="0"/>
 
     <entity id="161" variant="145" name="Pinprick" anm2path="monsters/pinprick/pinprick.anm2" reroll="true" baseHP="3" boss="0" champion="0" collisionDamage="1" collisionMass="3" collisionRadius="17" friction="1" numGridCollisionPoints="4" shadowSize="11" stageHP="1" gridCollision="walls" tags="fly" portrait="145">
 		<bestiary transform="0,0,1" anim="Fly" />
