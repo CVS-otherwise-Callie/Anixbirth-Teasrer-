@@ -165,7 +165,7 @@ end
 
     --so it doesnt blow itself up
 mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, function(_, npc, damage, flag, source)
-    if flag & DamageFlag.DAMAGE_EXPLOSION ~= 0 and mod:IsSourceofDamagePlayer(source, true) == false then
+    if flag & DamageFlag.DAMAGE_EXPLOSION ~= 0 and mod:IsSourceofDamagePlayer(source, true) == false and npc.Variant == mod.Monsters.Drosslet.Var then
         return false
     end
 end, mod.Monsters.Drosslet.ID )
