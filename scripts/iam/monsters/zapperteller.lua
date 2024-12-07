@@ -59,17 +59,19 @@ function mod:ZapperTellerAI(npc, sprite, d)
 
     if d.lightning then
 
+        print(npc.StateFrame)
+
         local child = d.lightning:GetData().lightning
 
-        if child and child:GetData().isLightning and child:GetSprite():IsPlaying("Lightning" .. (child:GetData().lightningtype or 1)) and child:GetSprite():GetFrame() >= 3 and child:GetSprite():GetFrame() <= 4 then
+        if child and child:GetData().isLightning and child:GetSprite():IsPlaying("Lightning" .. (child:GetData().lightningtype or 1)) and child:GetSprite():GetFrame() >= 1 and child:GetSprite():GetFrame() <= 4 then
             for k, v in ipairs(Isaac.FindInRadius(d.lightning.Position, 50, EntityPartition.PLAYER)) do
                 v:TakeDamage(2, 0, EntityRef(npc), 1)
             end
         elseif  child and child:GetData().isLightning and child:GetSprite():IsPlaying("Lightning" .. (child:GetData().lightningtype or 1)) and child:GetSprite():GetFrame() == 5 then
-            d.lightning.Velocity = mod:Lerp(d.lightning.Velocity, ((npc:GetPlayerTarget().Position - d.lightning.Position +  Vector(math.random(-10, 10), math.random(-10, 10))):Normalized()*30.05), 4000/1000)
+            d.lightning.Velocity = mod:Lerp(Vector.Zero, ((npc:GetPlayerTarget().Position - d.lightning.Position):Normalized()*20.05), 500/1000)
         elseif child and d.state ~= "boom" then
-            d.lightning:MultiplyFriction(0)
-        else
+            d.lightning:MultiplyFriction(0.8)
+        elseif npc.StateFrame > 50 and npc.StateFrame < 173 then
             d.lightning.Position = npc:GetPlayerTarget().Position
         end
     end
