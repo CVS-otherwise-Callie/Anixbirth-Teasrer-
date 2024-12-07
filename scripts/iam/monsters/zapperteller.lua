@@ -59,8 +59,6 @@ function mod:ZapperTellerAI(npc, sprite, d)
 
     if d.lightning then
 
-        print(npc.StateFrame)
-
         local child = d.lightning:GetData().lightning
 
         if child and child:GetData().isLightning and child:GetSprite():IsPlaying("Lightning" .. (child:GetData().lightningtype or 1)) and child:GetSprite():GetFrame() >= 1 and child:GetSprite():GetFrame() <= 4 then
@@ -70,7 +68,7 @@ function mod:ZapperTellerAI(npc, sprite, d)
         elseif  child and child:GetData().isLightning and child:GetSprite():IsPlaying("Lightning" .. (child:GetData().lightningtype or 1)) and child:GetSprite():GetFrame() == 5 then
             d.lightning.Velocity = mod:Lerp(Vector.Zero, ((npc:GetPlayerTarget().Position - d.lightning.Position):Normalized()*20.05), 500/1000)
         elseif child and d.state ~= "boom" then
-            d.lightning:MultiplyFriction(0.8)
+            d.lightning:MultiplyFriction(0.9)
         elseif npc.StateFrame > 50 and npc.StateFrame < 173 then
             d.lightning.Position = npc:GetPlayerTarget().Position
         end
