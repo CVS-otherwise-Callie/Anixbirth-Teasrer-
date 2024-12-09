@@ -12,6 +12,7 @@ end
 
 function mod:StrawDollActive()
     mod.StrawDollActiveIsActive = true
+    return {ShowAnim = true}
 end
 
 function mod:StrawDollActiveEffect(npc, damage, flag, countdown)
