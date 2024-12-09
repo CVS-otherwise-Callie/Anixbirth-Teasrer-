@@ -1683,7 +1683,7 @@
 			<entity type="9000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45001" name="Callie - This is how you replug a TV" type="7" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="1.0">
+	<room variant="45001" name="CVS - This is how you replug a TV" type="7" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -1695,7 +1695,7 @@
 			<entity type="5" variant="90" subtype="4" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45002" name="Callie - Woah, a beggar!" type="7" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="1.0">
+	<room variant="45002" name="CVS - Woah, a beggar!" type="7" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -1728,7 +1728,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45003" name="Callie - Hope you find that nickel" type="7" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="1.0">
+	<room variant="45003" name="CVS - Hope you find that nickel" type="7" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -2028,7 +2028,7 @@
 			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45005" name="Callie - One of these chests are actually normal, can you figure it out?" type="7" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="1.0">
+	<room variant="45005" name="CVS - One of these chests are actually normal, can you figure it out?" type="7" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -2139,7 +2139,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45006" name="Callie - *Gasp* It's GOLD!" type="7" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="1.0">
+	<room variant="45006" name="CVS - *Gasp* It's GOLD!" type="7" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -2196,7 +2196,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45007" name="Callie - You wouldn't kill some flies would you???" type="7" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="1.0">
+	<room variant="45007" name="CVS - You wouldn't kill some flies would you???" type="7" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -2232,7 +2232,7 @@
 			<entity type="13" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45008" name="Callie - They thought they could trust him..." type="7" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="1.0">
+	<room variant="45008" name="CVS - They thought they could trust him..." type="7" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -2259,7 +2259,7 @@
 			<entity type="17" variant="4" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45009" name="Callie - You get the reference..." type="7" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="1.0">
+	<room variant="45009" name="CVS - You get the reference..." type="7" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -2304,7 +2304,7 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45010" name="Callie - Trapped once again (his fault)" type="7" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="1.0">
+	<room variant="45010" name="CVS - Trapped once again (his fault)" type="7" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -2406,7 +2406,7 @@
 			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45000" name="Callie - Floater - Fight for it stupid it was their's first" type="4" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45000" name="CVS - Floater - Fight for it stupid it was their's first" type="4" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -2481,7 +2481,7 @@
 			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45001" name="Callie - Neutral Fly - Why are there flies?!" type="4" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45001" name="CVS - Neutral Fly - Why are there flies?!" type="4" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -2565,7 +2565,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45002" name="Callie - Fivehead - Nya! It's mine!" type="4" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45002" name="CVS - Fivehead - Nya! It's mine!" type="4" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -2634,7 +2634,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45003" name="Callie - His Treasure First" type="4" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45003" name="CVS - His Treasure First" type="4" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -2679,7 +2679,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45004" name="Callie - Diner but he actually opened a diner for his food" type="4" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45004" name="CVS - Diner but he actually opened a diner for his food" type="4" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -2724,7 +2724,7 @@
 			<entity type="33" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45005" name="Callie - Pac Ban" type="4" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45005" name="CVS - Pac Ban" type="4" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -2790,7 +2790,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45006" name="Callie - Funny how it's close and far" type="4" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45006" name="CVS - Funny how it's close and far" type="4" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -2889,7 +2889,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45007" name="Callie - Funny but with flies cus im lazy" type="4" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45007" name="CVS - Funny but with flies cus im lazy" type="4" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -2976,7 +2976,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45008" name="Callie - Floater - Cmon ur kidding" type="4" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45008" name="CVS - Floater - Cmon ur kidding" type="4" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -3003,7 +3003,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45000" name="Callie - Secret Exit - What do you mean wrong trapdoor" type="27" subtype="1" shape="1" width="13" height="7" difficulty="1" weight="0.10000000149011612">
+	<room variant="45000" name="CVS - Secret Exit - What do you mean wrong trapdoor" type="27" subtype="1" shape="1" width="13" height="7" difficulty="1" weight="0.10000000149011612">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -3039,7 +3039,7 @@
 			<entity type="33" variant="2" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45001" name="Callie - Secret Exit - &quot;Don't be evil&quot; why not Jessica???" type="27" subtype="1" shape="1" width="13" height="7" difficulty="1" weight="1.0">
+	<room variant="45001" name="CVS - Secret Exit - &quot;Don't be evil&quot; why not Jessica???" type="27" subtype="1" shape="1" width="13" height="7" difficulty="1" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -3096,7 +3096,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45002" name="Callie - Secret Exit - Reminder that floaters are everywhere" type="27" subtype="1" shape="1" width="13" height="7" difficulty="1" weight="1.0">
+	<room variant="45002" name="CVS - Secret Exit - Reminder that floaters are everywhere" type="27" subtype="1" shape="1" width="13" height="7" difficulty="1" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -3162,7 +3162,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45003" name="Callie - Secret Exit - Hey stop doing that!!" type="27" subtype="1" shape="1" width="13" height="7" difficulty="1" weight="1.0">
+	<room variant="45003" name="CVS - Secret Exit - Hey stop doing that!!" type="27" subtype="1" shape="1" width="13" height="7" difficulty="1" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -3264,7 +3264,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45004" name="Callie - Secret Exit - A bucket for your bang" type="27" subtype="1" shape="1" width="13" height="7" difficulty="1" weight="1.0">
+	<room variant="45004" name="CVS - Secret Exit - A bucket for your bang" type="27" subtype="1" shape="1" width="13" height="7" difficulty="1" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -3351,7 +3351,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45005" name="Callie - Secret Exit - And now, the ritual to summon the trapdoor..." type="27" subtype="1" shape="1" width="13" height="7" difficulty="1" weight="1.0">
+	<room variant="45005" name="CVS - Secret Exit - And now, the ritual to summon the trapdoor..." type="27" subtype="1" shape="1" width="13" height="7" difficulty="1" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -3393,7 +3393,7 @@
 			<entity type="33" variant="2" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45006" name="Callie - Secret Exit - Initially a secret room layout, actually" type="27" subtype="1" shape="1" width="13" height="7" difficulty="1" weight="1.0">
+	<room variant="45006" name="CVS - Secret Exit - Initially a secret room layout, actually" type="27" subtype="1" shape="1" width="13" height="7" difficulty="1" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -3441,7 +3441,7 @@
 			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45007" name="Callie - Secret Exit - AIIIII GO AWAYYYY" type="27" subtype="1" shape="1" width="13" height="7" difficulty="1" weight="1.0">
+	<room variant="45007" name="CVS - Secret Exit - AIIIII GO AWAYYYY" type="27" subtype="1" shape="1" width="13" height="7" difficulty="1" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -3609,7 +3609,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45000" name="Callie - Curse - 6.99 for ANY footlong" type="10" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="0.10000000149011612">
+	<room variant="45000" name="CVS - Curse - 6.99 for ANY footlong" type="10" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="0.10000000149011612">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -3714,7 +3714,7 @@
 			<entity type="252" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45003" name="Callie - Curse Room - No reward" type="10" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45003" name="CVS - Curse Room - No reward" type="10" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -3882,7 +3882,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45000" name="Callie - Monstro - Floater schmuck" type="5" subtype="1" shape="1" width="13" height="7" difficulty="1" weight="1.0">
+	<room variant="45000" name="CVS - Monstro - Floater schmuck" type="5" subtype="1" shape="1" width="13" height="7" difficulty="1" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -3939,7 +3939,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45001" name="Callie - Monstro - FOVEHEAD" type="5" subtype="1" shape="1" width="13" height="7" difficulty="1" weight="1.0">
+	<room variant="45001" name="CVS - Monstro - FOVEHEAD" type="5" subtype="1" shape="1" width="13" height="7" difficulty="1" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>

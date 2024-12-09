@@ -27,7 +27,7 @@ function mod:PitPatSpawnerAI(npc, sprite, d)
         npc:AddEntityFlags(EntityFlag.FLAG_NO_TARGET | EntityFlag.FLAG_NO_PHYSICS_KNOCKBACK | EntityFlag.FLAG_NO_KNOCKBACK | EntityFlag.FLAG_NO_STATUS_EFFECTS)
         npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_NONE 
         for i = 0, npc.SubType do
-            local wormie = Isaac.Spawn(Isaac.GetEntityTypeByName("Pit Pat"),  Isaac.GetEntityVariantByName("Pit Pat"), Isaac.GetEntitySubTypeByName("Pit Pat"), npc.Position, Vector.Zero, npc)
+            local wormie = Isaac.Spawn(Isaac.GetEntityTypeByName("Pit Pat"),  Isaac.GetEntityVariantByName("Pit Pat"), 0, npc.Position, Vector.Zero, npc)
             local wormdata = wormie:GetData()
             wormdata.height = 20 + i
             wormdata.speed = rng:RandomInt(1, 10)

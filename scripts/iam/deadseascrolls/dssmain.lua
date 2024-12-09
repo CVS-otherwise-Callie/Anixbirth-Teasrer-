@@ -260,9 +260,44 @@ FHAC.dmdirectory = {
         --add ff-like menu here
         title = 'enemies',
         buttons = {
+            {str = 'cellar', nosel = true},
+            {
+                str = 'random dried',
+                cursoroff = Vector(0, -20),
+                fsize=2,
+                choices = {'on', 'off'},
+                variable = "randomDried",
+                setting = 1,
+                load = function()
+                    return SaveManager.GetSettingsSave().randomDried or 1
+                end,
+                store = function(var)
+                    SaveManager.GetSettingsSave().randomDried = var
+                end,
+                tooltip = {strset = {'makes it','so that','dired appear','randomly in','cellar','','on by', 'default'}}
+            },
+            {str = '', fsize=2,nosel = true},
+            {str = 'caves', nosel = true},
+            {
+                str = 'pallun shots',
+                cursoroff = Vector(0, -20),
+                fsize=2,
+                choices = {'normal', 'kerkel'},
+                variable = "prettyMushlooms",
+                setting = 1,
+                load = function()
+                    return SaveManager.GetSettingsSave().pallunShot or 1
+                end,
+                store = function(var)
+                    SaveManager.GetSettingsSave().pallunShot = var
+                end,
+                tooltip = {strset = {'changes the', 'pallun shot', 'behavior', 'to version', 'made by', 'kerkel','','normal by', 'default'}}
+            },
+            {str = '', fsize=2,nosel = true},
             {str = 'catacombs', nosel = true},
             {
                 str = 'pretty mushlooms',
+                cursoroff = Vector(0, -20),
                 fsize=2,
                 choices = {'normal', 'pretty', 'shaded pretty'},
                 variable = "prettyMushlooms",
@@ -274,7 +309,7 @@ FHAC.dmdirectory = {
                     SaveManager.GetSettingsSave().prettyMushlooms = var
                 end,
                 tooltip = {strset = {'pretty','mushloom', 'made by', 'onxc_kryptid','','normal by', 'default'}}
-            }
+            },
         }
     },
 

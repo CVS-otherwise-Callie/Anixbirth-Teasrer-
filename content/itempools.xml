@@ -1,5 +1,67 @@
 <ItemPools>
-    <Pool Name="treasure">
-        <Item Name="Stinky Mushroom" Weight="3" DecreaseBy="1" RemoveOn="0.1" />
-    </Pool>
+<!--keep this in mind: The amount on how often an item will be in the itempool is determined with the following equation: math.ceil( ( Weight - RemoveOn ) / DecreaseBy )-->
+	<Pool Name="treasure">
+		<Item Name="Joke Book" Weight="2" DecreaseBy="1" RemoveOn="0.1"/>
+		<Item Name="Stinky Mushroom" Weight="3" DecreaseBy="1" RemoveOn="0.1"/>
+	</Pool>
+	<Pool Name="shop">
+	</Pool>
+	<Pool Name="boss">
+	</Pool>
+	<Pool Name="devil">
+	</Pool>
+	<Pool Name="angel">
+	</Pool>
+	<Pool Name="secret">
+	</Pool>
+	<Pool Name="library">
+		<Item Name="Joke Book" Weight="2" DecreaseBy="1" RemoveOn="0.1"/>
+	</Pool>
+	<Pool Name="goldenChest">
+	</Pool>
+	<Pool Name="redChest">
+		<Item Name="Straw Doll" Weight="1" DecreaseBy="1" RemoveOn="0.1"/>
+	</Pool>
+	<Pool Name="beggar">
+	</Pool>
+	<Pool Name="demonBeggar">
+		<Item Name="Straw Doll" Weight="1" DecreaseBy="1" RemoveOn="0.1"/>
+	</Pool>
+	<Pool Name="curse">
+		<Item Name="Straw Doll" Weight="1" DecreaseBy="1" RemoveOn="0.1"/>
+	</Pool>
+	<Pool Name="keyMaster">
+	</Pool>
+	<Pool Name="batteryBum">
+	</Pool>
+	<Pool Name="momsChest">
+	</Pool>
+	<Pool Name="greedTreasure"> <!--this is the golden room-->
+	</Pool>
+	<Pool Name="greedBoss"> <!--this is the white room-->
+	</Pool>
+	<Pool Name="greedShop">
+	</Pool>
+	<Pool Name="greedDevil">
+	</Pool>
+	<Pool Name="greedAngel">
+	</Pool>
+	<Pool Name="greedCurse">
+	</Pool>
+	<Pool Name="greedSecret">
+	</Pool>
+	<Pool Name="craneGame">
+	</Pool>
+	<Pool Name="ultraSecret">
+	</Pool>
+	<Pool Name="bombBum">
+	</Pool>
+	<Pool Name="planetarium">
+	</Pool>
+	<Pool Name="oldChest">
+	</Pool>
+	<Pool Name="woodenChest">
+	</Pool>
+	<Pool Name="rottenBeggar">
+	</Pool>
 </ItemPools>

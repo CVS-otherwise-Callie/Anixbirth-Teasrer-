@@ -13,4 +13,6 @@ SaveManager.AddCallback(SaveManager.Utility.CustomCallback.POST_DATA_LOAD, funct
     
         -- enemies --
         FHAC.DSSavedata.prettyMushlooms = FHAC.DSSavedata.prettyMushlooms or 1
+        FHAC.DSSavedata.pallunShot = FHAC.DSSavedata.pallunShot or 1
+        FHAC.DSSavedata.randomDried = FHAC.DSSavedata.randomDried or 1
 end)

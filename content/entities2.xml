@@ -197,12 +197,12 @@
 		<bestiary transform="0,0,1" anim="Appear" />
         <gibs amount="5" blood="0" bone="0" eye="0" gut="0" large="0" />
     </entity-->
-	<entity anm2path="monsters/cuber/cuber.anm2" gridCollision="none" reroll="true" baseHP="20" boss="0" champion="1" collisionDamage="1" collisionMass="3" collisionRadius="20" friction="1" id="161" variant="32" subtype="0" name="Stoner" numGridCollisionPoints="12" shadowSize="20" stageHP="2" portrait="32" bestiary="true" shutdoors="false">
+	<!--entity anm2path="monsters/cuber/cuber.anm2" gridCollision="none" reroll="true" baseHP="20" boss="0" champion="1" collisionDamage="1" collisionMass="3" collisionRadius="20" friction="1" id="161" variant="32" subtype="0" name="Stoner" numGridCollisionPoints="12" shadowSize="20" stageHP="2" portrait="32" bestiary="true" shutdoors="false">
         <bestiary transform="0,0,1" anim="Appear" />
         <gibs amount="6" blood="1" bone="0" eye="0" gut="1" large="0" worm="1" />
 		<preload-snd id="72" />
         <devolve id="151.0.0" weight="1"/>
-	</entity>
+	</entity-->
     <!--entity id="161" variant="33" name="Silk" reroll="true" baseHP="10" stageHP="0" boss="0" champion="1" collisionDamage="1" collisionMass="100" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="0" portrait="33" anm2path="monsters/silk/silk.anm2">
 		<bestiary transform="0,0,1" anim="Pop Up" />
         <gibs amount="6" blood="1" bone="0" eye="1" gut="1" large="0" />
@@ -259,7 +259,7 @@
     </entity>
     <!--end of dried-->
 
-    <entity id="161" variant="42" name="Plier" reroll="true" baseHP="10" stageHP="0" boss="0" champion="1" collisionDamage="1" collisionMass="6" collisionRadius="13" friction="1" numGridCollisionPoints="8" shadowSize="14" portrait="21" anm2path="monsters/plier/plier.anm2" gridCollision="walls" tags="fly">
+    <entity id="161" variant="42" name="Plier" reroll="true" baseHP="10" stageHP="0" boss="0" champion="1" collisionDamage="1" collisionMass="6" collisionRadius="13" friction="1" numGridCollisionPoints="8" shadowSize="14" portrait="42" anm2path="monsters/plier/plier.anm2" gridCollision="walls" tags="fly">
 		<bestiary transform="0,0,1" anim="Idle" />
         <gibs amount="0" blood="1" bone="0" eye="1" gut="0" large="0" />
         <devolve id="214.0.0" weight="1" />
@@ -332,7 +332,7 @@
     </entity>
 
     <entity anm2path="monsters/zapperteller/zapper teller.anm2" reroll="true" baseHP="13" boss="0" champion="1" collisionDamage="1" collisionMass="3" collisionRadius="20" friction="1" id="161" variant="133" subtype="0" name="Zapper Teller" numGridCollisionPoints="12" shadowSize="20" stageHP="2" portrait="133" bestiary="true">
-        <bestiary transform="0,0,1" anim="Idle" />
+        <bestiary transform="0,0,1" anim="Idle2" />
         <gibs amount="6" blood="1" bone="0" eye="0" gut="1" large="0" worm="1" />
 	</entity>
     <entity anm2path="effects/lightning/zapperteller/effect_zappertellerlightning.anm2" name="Zapper Teller Lightning" id="1000" variant="420" subtype="55" baseHP="0" stageHP="0" shieldStrength="0" boss="0" champion="0" collisionDamage="0" collisionMass="0" collisionRadius="0" friction="1" numGridCollisionPoints="0" shadowSize="0"/>
@@ -342,7 +342,7 @@
         <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
     </entity>
 
-    <entity id="161" variant="144" name="Wisp Wosp" reroll="true" baseHP="10" stageHP="0" boss="0" champion="1" collisionDamage="1" collisionMass="6" collisionRadius="13" friction="1" numGridCollisionPoints="8" shadowSize="14" portrait="82" anm2path="monsters/wispwosp/wispwosp.anm2" gridCollision="walls" tags="fly">
+    <entity id="161" variant="144" name="Wisp Wosp" reroll="true" baseHP="10" stageHP="0" boss="0" champion="1" collisionDamage="1" collisionMass="6" collisionRadius="13" friction="1" numGridCollisionPoints="8" shadowSize="14" portrait="144" anm2path="monsters/wispwosp/wispwosp.anm2" gridCollision="walls" tags="fly">
 		<bestiary transform="0,0,1" anim="Idle" />
         <gibs amount="0" blood="1" bone="0" eye="0" gut="0" large="0" />
     </entity>
@@ -366,7 +366,7 @@
 
     <!--Alt - Mines-->
     <entity id="161" variant="311" subtype="0" name="Tech Grudge" anm2path="monsters/techgrudge/techgrudge.anm2" baseHP="25" stageHP="1" boss="0" champion="1" collisionDamage="1" collisionMass="5" collisionRadius="13" friction="1" numGridCollisionPoints="12" gridCollision="walls" shadowSize="15" bestiary="true" portrait="311">
-		<bestiary transform="0,0,1" anim="Idle" />
+		<bestiary transform="0,0,1" anim="FlySouth" />
         <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0"/>
 	</entity>
 

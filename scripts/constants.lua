@@ -63,6 +63,14 @@ FHAC.Challenges = {
     Bestiary = Isaac.GetChallengeIdByName("[ANIX] The Real Bestiary")
 }
 
+FHAC.Collectibles = {
+    Items = {
+        StinkyMushroom = Isaac.GetItemIdByName("Stinky Mushroom"),
+        JokeBook = Isaac.GetItemIdByName("Joke Book"),
+        StrawDoll = Isaac.GetItemIdByName("Straw Doll"),
+    }
+}
+
 
 if REPENTOGON then
 FHAC.Unlocks = {

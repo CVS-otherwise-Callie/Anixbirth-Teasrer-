@@ -69,6 +69,11 @@ function mod:ZapperTellerLightningAI(ef, sprite, d)
     end
 
     if d.isLightning and sprite:IsFinished("Lightning" .. (d.lightningtype or 1)) then
+        if math.random(2) == 2 then
+            sprite.FlipX = true
+        else
+            sprite.FlipX = false
+        end
         d.lightningtype = math.random(2)
         mod:spritePlay(sprite, "Lightning" .. d.lightningtype)
         if tonumber(sprite.Scale:Length()) > 2 then

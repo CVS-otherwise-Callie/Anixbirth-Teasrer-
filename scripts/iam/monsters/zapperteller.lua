@@ -10,6 +10,9 @@ end, mod.Monsters.ZapperTeller.ID)
 
 function mod:ZapperTellerAI(npc, sprite, d)
 
+    local target = npc:GetPlayerTarget()
+    local targpos = mod:confusePos(npc, target.Position, 5, nil, nil)
+
     if not d.init then
         d.state = "idle"
         d.offset = math.random(-30, 30)
@@ -24,7 +27,7 @@ function mod:ZapperTellerAI(npc, sprite, d)
         npc.StateFrame = npc.StateFrame + 1
     end
 
-    if npc.StateFrame >= 80+d.offset and d.state == "idle" then
+    if npc.StateFrame >= 80+d.offset+npc.SubType and d.state == "idle" then
         d.state = "chargeupint"
     elseif npc.StateFrame >= 140+d.offset then
         d.state = "boom"
@@ -65,10 +68,13 @@ function mod:ZapperTellerAI(npc, sprite, d)
             for k, v in ipairs(Isaac.FindInRadius(d.lightning.Position, 50, EntityPartition.PLAYER)) do
                 v:TakeDamage(2, 0, EntityRef(npc), 1)
             end
+            for k, v in ipairs(Isaac.FindInRadius(d.lightning.Position, 50, EntityPartition.ENEMY)) do
+                v:TakeDamage(1, 0, EntityRef(npc), 1)
+            end
         elseif  child and child:GetData().isLightning and child:GetSprite():IsPlaying("Lightning" .. (child:GetData().lightningtype or 1)) and child:GetSprite():GetFrame() == 5 then
-            d.lightning.Velocity = mod:Lerp(Vector.Zero, ((npc:GetPlayerTarget().Position - d.lightning.Position):Normalized()*20.05), 500/1000)
+            d.lightning.Velocity = mod:Lerp(Vector.Zero, (targpos - d.lightning.Position) + (targpos - d.lightning.Position):Normalized()*1.05, Isaac.GetPlayer().MoveSpeed*100/1000)
         elseif child and d.state ~= "boom" then
-            d.lightning:MultiplyFriction(0.9)
+            d.lightning:MultiplyFriction(0.7)
         elseif npc.StateFrame > 50 and npc.StateFrame < 173 then
             d.lightning.Position = npc:GetPlayerTarget().Position
         end

@@ -24,7 +24,7 @@ function mod:ShowRoomText()
 	if not game:GetSeeds():HasSeedEffect(SeedEffect.SEED_NO_HUD) then
 
 		if room and room.Layout then
-			text = text		
+			text = text .. tostring(room.Layout.Variant) .. " " .. room.Layout.Name
 		else
 			if useVar >= 45000 and useVar <= 60000 then
 				ismodtext = true
@@ -120,4 +120,16 @@ function mod:ShowFortuneDeath()
 			FHAC:ShowFortune()
 		end 
 	end
+end
+
+function mod:SpawnRandomDried()
+	if not mod.spawnedDried and not mod:CheckForEntInRoom({Type = mod.Monsters.Dried.ID, Variant = mod.Monsters.Dried.Var, SubType = 0}, true, true, false) and game:GetLevel():GetCurrentRoomDesc().Data.Type == 1 and game:GetLevel():GetCurrentRoomDesc().Data.Variant <= 1151 and string.find(game:GetLevel():GetName(), "Cellar") then
+		mod.driedRooms = {}
+		for i = 0,  math.random(3) do
+			local pos = Game():GetRoom():FindFreePickupSpawnPosition(Game():GetRoom():GetRandomPosition(0), 1, true, false)
+			local dried = Isaac.Spawn(mod.Monsters.Dried.ID, mod.Monsters.Dried.Var, 6, pos, Vector.Zero, nil)
+            dried:ClearEntityFlags(EntityFlag.FLAG_APPEAR)
+		end
+	end
+	mod.spawnedDried = true
 end

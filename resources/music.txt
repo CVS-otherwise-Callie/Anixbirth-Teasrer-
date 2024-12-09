@@ -36,7 +36,7 @@
 	<track id="35" name="Shop Room" intro="shhh piano builds go away/This Mindless Atrocity.ogg" path="shhh piano builds go away/This Mindless Atrocity.ogg" loop="true" />
 	<track id="36" name="Arcade Room" intro="shhh piano builds go away/12 AM.ogg" path="shhh piano builds go away/12 AM.ogg" loop="true" />
 	<track id="37" name="Boss Room (empty)" intro="shhh piano builds go away/Denial.ogg" path="shhh piano builds go away/Denial.ogg" loop="true" />
-	<track id="38" name="Challenge Room (fight)" path="Ambush.ogg" loop="true" />
+	<track id="38" name="Challenge Room (fight)" path="shhh piano builds go away/Sinful Tribulations.ogg" loop="true" />
 	<track id="39" name="Boss Rush" path="Boss Rush.ogg" loop="true" />
 	<track id="40" name="Boss Rush (jingle)" path="JINGLE OGG/Ambush Jinle outro V3_04.ogg" loop="false" />
 

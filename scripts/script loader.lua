@@ -62,7 +62,12 @@ FHAC:LoadScripts("scripts.iam.familiars", {
 	"snark",
 })
 
-FHAC:LoadScripts("scripts.iam.items", {
+FHAC:LoadScripts("scripts.iam.items.actives", {
+	"joke book",
+	"straw doll"
+})
+
+FHAC:LoadScripts("scripts.iam.items.passives", {
 	"stinky mushroom",
 })
 
@@ -70,9 +75,12 @@ FHAC:LoadScripts("scripts.iam.jokes", {
 	"gaprrr",
 })
 
-FHAC:LoadScripts("scripts.iam.deadseascrolls", {
-	"dssmain",
-})
+if not FHAC.hasloadedDSS then
+	FHAC:LoadScripts("scripts.iam.deadseascrolls", {
+		"dssmain",
+	})
+	FHAC.hasloadedDSS = true
+end
 
 FHAC:LoadScripts("scripts.iam.characters", {
 	"johannes",

@@ -50,9 +50,21 @@ mod:AddCallback(ModCallbacks.MC_POST_RENDER, mod.RenderedStuff)
 
 function mod:PostNewRoom()
     mod:LoadSavedRoomEnts()
+
+    mod.spawnedDried = false
+    mod:SpawnRandomDried()
+
     mod:TransferSavedEnts()
+
+    local d = Isaac.GetPlayer():GetData()
+    d.JokeBookFireDelay = 0
+    mod.StrawDollActiveIsActive = false
 end
 mod:AddCallback(ModCallbacks.MC_POST_NEW_ROOM, mod.PostNewRoom)
+
+function mod:PostPlayerUpdate(player)
+end
+mod:AddCallback(ModCallbacks.MC_POST_PLAYER_UPDATE, mod.PostPlayerUpdate)
 
 function mod:PostGameStarted(bool)
     mod.CheckForNewRoom(bool)
@@ -73,13 +85,13 @@ end
 mod:AddCallback(ModCallbacks.MC_POST_EFFECT_UPDATE, mod.EffectPostUpdate)
 
 mod:AddCallback(ModCallbacks.MC_EVALUATE_CACHE,function(_, player, flag)
-    
+
 	local basedata = player:GetData() --for stats and shit
-	local data = basedata.crossversedata
 
     if flag == CacheFlag.CACHE_DAMAGE then
 
     elseif flag == CacheFlag.CACHE_FIREDELAY then
+        mod:JokeBookStats(player)
     elseif flag == CacheFlag.CACHE_SHOTSPEED then
     elseif flag == CacheFlag.CACHE_RANGE then
     elseif flag == CacheFlag.CACHE_SPEED then
@@ -100,6 +112,15 @@ end)
 function mod:NPCGetHurtStuff(npc, damage, flag, source, countdown)
     mod:PatientGetHurt(npc, damage, flag, source,countdown)
     mod:PallunLeaveWhenHit(npc)
+    mod:StrawDollActiveEffect(npc, damage, flag, countdown)
+
+    if npc.Type == 1 then
+        local d = npc:GetData()
+
+        mod:StrawDollPassive(npc)
+    end
+
+    --extra item stuff
 end
 mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, mod.NPCGetHurtStuff)
 

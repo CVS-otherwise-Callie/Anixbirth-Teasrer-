@@ -86,6 +86,12 @@ function mod:freeGrid(npc, path, far, close)
 	return tab[math.random(1, #tab)]
 end
 
+-- thanks fiend folio
+function mod:tearsUp(firedelay, val)
+	local currentTears = 30 / (firedelay + 1)
+	local newTears = currentTears + val
+	return math.max((30 / newTears) - 1, -0.99)
+end
 
 function mod:freeHole(npc, path, far, close, closest)
 	local room = game:GetRoom()
@@ -672,6 +678,47 @@ function mod:GetRoomNameByType(type)
 	elseif type == 29 then
 		return "Ultra Secret"
 	end
+end
+
+function mod:CheckForEntInRoom(npc, id, var, sub)
+	local room = game:GetRoom()
+	local npcsepcifics = {}
+	local npcsepcificsvar = {}
+	id = id or true
+	var = var or true
+	sub = sub or false
+	local rooments = {}
+	local roomentsvar = {}
+	for _, ent in ipairs(Isaac.GetRoomEntities()) do
+		if (ent:IsActiveEnemy() and ent:IsVulnerableEnemy() and not ent:IsDead()
+		and not ent:HasEntityFlags(EntityFlag.FLAG_FRIENDLY)) then
+			table.insert(rooments, ent.Type)
+		end
+	end
+	local isType = mod:CheckTableContents(rooments, npc.Type)
+	if var == false and sub == false then return isType end
+	if var and isType then
+		for _, ent in ipairs(Isaac.GetRoomEntities()) do
+			if (ent:IsActiveEnemy() and ent:IsVulnerableEnemy() and not ent:IsDead()
+			and not ent:HasEntityFlags(EntityFlag.FLAG_FRIENDLY)) then
+				table.insert(roomentsvar, ent.Variant)
+			end
+		end
+	end
+	local isVar = mod:CheckTableContents(roomentsvar, npc.Variant)
+	if sub and isVar then
+		local npcsepcifics = {}
+		local rooments = {}
+		for _, ent in ipairs(Isaac.GetRoomEntities()) do
+			if (ent:IsActiveEnemy() and ent:IsVulnerableEnemy() and not ent:IsDead()
+			and not ent:HasEntityFlags(EntityFlag.FLAG_FRIENDLY)) then
+				table.insert(rooments, ent.SubType)
+			end
+		end
+		sub = mod:CheckTableContents(rooments, npc.SubType)
+	end
+	if not sub then return isVar end
+	return sub
 end
 
 function mod:CheckForOnlyEntInRoom(npcs, id, var, sub)

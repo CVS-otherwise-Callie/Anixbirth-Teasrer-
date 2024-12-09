@@ -1,10 +1,9 @@
 local mod = FHAC
-local stinkymushroom = Isaac.GetItemIdByName("Stinky Mushroom")
 local stinkymushroomDamage = 1
 
 function mod:EvaluateCache(player, cacheFlags)
     if cacheFlags & CacheFlag.CACHE_DAMAGE == CacheFlag.CACHE_DAMAGE then
-        local itemCount = player:GetCollectibleNum(stinkymushroom)
+        local itemCount = player:GetCollectibleNum(mod.Collectibles.Items.StinkyMushroom)
         local damageToAdd = stinkymushroomDamage * itemCount
         player.Damage = player.Damage + damageToAdd
     end
