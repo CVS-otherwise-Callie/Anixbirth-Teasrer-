@@ -213,7 +213,7 @@ FHAC.dmdirectory = {
                     end},
                     {
                         str = 'fortune language',
-                        choices = {'english', 'chinese', 'hylics'},
+                        choices = {'english', 'chinese', 'hylics', 'bad jokes'},
                         variable = "fortuneLanguage",
                         setting = 1,
                         load = function()

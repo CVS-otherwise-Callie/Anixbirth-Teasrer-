@@ -2,10 +2,12 @@ local mod = FHAC
 local game = Game()
 
 function mod:StrawDollPassive(player)
-    player = player:ToPlayer()
-    for k, v in ipairs(Isaac.GetRoomEntities()) do
-        if v:IsActiveEnemy() then
-            v:TakeDamage(5+(0.03*player:GetTotalDamageTaken())+(0.5*player.Damage), 0, EntityRef(player), 3)
+    if player:ToPlayer():HasCollectible(735, true) then
+        player = player:ToPlayer()
+        for k, v in ipairs(Isaac.GetRoomEntities()) do
+            if v:IsActiveEnemy() and v:IsVulnerableEnemy() then
+                v:TakeDamage(5+(0.03*player:GetTotalDamageTaken())+(0.5*player.Damage), 0, EntityRef(player), 3)
+            end
         end
     end
 end
