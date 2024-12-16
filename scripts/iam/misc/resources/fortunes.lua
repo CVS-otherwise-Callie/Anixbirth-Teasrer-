@@ -1,5 +1,159 @@
 FHAC.Fortunes = 
 [=================[
+Why this game?
+
+Hey Vsauce, 
+Micheal here
+
+Shout out 
+to Edmund 
+
+How much wood can
+a woodchuck chuck?
+
+#%&@%
+
+How you gon feel
+pain in yo leg,
+if yo leg is gone?
+
+1, 2… 3
+erm
+5
+
+Delicious 
+In the basement
+
+i can draw it
+however i want!
+
+i twisted my ankle...
+kinda stepped on a crack...
+every mom:
+
+and then he
+cheated on the
+frickin’ cheater!
+
+mother… trucker…
+has got. your. back.
+
+are rainmonger
+and zapper teller
+married or…?
+
+two gays
+cancel the gayness
+out of the gays!
+
+at least ryan
+quotes by that
+
+uwaa~
+
+fauna sweep
+
+i can feel a song
+coming on… hit it,
+swansea!! (corpses)
+
+you know how
+you need touch id?
+
+as a magic item:
+the one time
+fingerprint!
+
+i wanna put
+that cream on
+your honeybun
+
+behold my mighty
+plasma duck
+
+are you now
+done with your
+stupid chores?
+
+i cannot believe
+you’d add a shuba
+
+i don’t know
+why you’d want
+to do that…
+
+…but i’m
+not judging you
+
+check your stocks
+
+stock up
+on checks
+
+so ghibli
+
+how the frick
+did you pronounce it?
+
+stop making fortunes
+and do your homework
+
+the line
+contains AC
+
+ACDC
+BCEC
+
+that’s not…
+that’s not
+perpendicular
+
+that’s…
+THAT IS
+A AIRSOFT BUD!
+
+take me out
+to the takeout
+
+we’ll get rice
+and get beans
+
+we’ll get tits
+little blue footed
+tits
+
+I’m gonna
+kill myself-
+
+send me the
+tiktok video
+
+multiple legions
+march their way
+out of the forest
+
+If I skibidi,
+Will you skib my di?
+
+awkward broski
+
+go get a life
+or something idk
+
+take a hike!
+
+don’t forget to
+water your kids
+
+Gender is for the weak
+-Kasane Teto
+
+Why would I desecrate a carcass?
+Why let the offal go to waste?!
+
+Vivid skies may pass me by
+But even still I'll stay…
+
 help
 key between f and h
 not workin
