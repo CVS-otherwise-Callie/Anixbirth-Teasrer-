@@ -69,7 +69,7 @@ function mod:ZapperTellerAI(npc, sprite, d)
                 v:TakeDamage(2, 0, EntityRef(npc), 1)
             end
             for k, v in ipairs(Isaac.FindInRadius(d.lightning.Position, 50, EntityPartition.ENEMY)) do
-                v:TakeDamage(1, 0, EntityRef(npc), 1)
+                v:TakeDamage(0.1, 0, EntityRef(npc), 1)
             end
         elseif  child and child:GetData().isLightning and child:GetSprite():IsPlaying("Lightning" .. (child:GetData().lightningtype or 1)) and child:GetSprite():GetFrame() == 5 then
             d.lightning.Velocity = mod:Lerp(Vector.Zero, (targpos - d.lightning.Position) + (targpos - d.lightning.Position):Normalized()*1.05, Isaac.GetPlayer().MoveSpeed*100/1000)

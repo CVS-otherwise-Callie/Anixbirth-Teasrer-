@@ -82,7 +82,7 @@ function mod:ZapperTellerLightningAI(ef, sprite, d)
 
         if ef.Parent:GetData().dealsDamage then
             for k, v in ipairs(Isaac.FindInRadius(ef.Position, 50, EntityPartition.PLAYER)) do
-                v:TakeDamage(1, DamageFlag.DAMAGE_EXPLOSION, EntityRef(ef.Parent), 1)
+                v:TakeDamage(1/10, DamageFlag.DAMAGE_EXPLOSION, EntityRef(ef.Parent), 0.1)
             end
         end
     end

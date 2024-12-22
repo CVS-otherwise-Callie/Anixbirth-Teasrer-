@@ -16,7 +16,7 @@ for i, line in pairs(warningText) do
 end
 
 mod.LuaFont = Font()
-mod.LuaFont:Load("font/luamini.fnt")
+mod.LuaFont:Load("font/luaminioutlined.fnt")
 
 function mod:WARN()
     if game.TimeCounter%5 ~= 0 then

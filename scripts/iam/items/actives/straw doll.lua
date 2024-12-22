@@ -2,11 +2,11 @@ local mod = FHAC
 local game = Game()
 
 function mod:StrawDollPassive(player)
-    if player:ToPlayer():HasCollectible(735, true) then
+    if player:ToPlayer():HasCollectible(mod.Collectibles.Items.StrawDoll, true) then
         player = player:ToPlayer()
         for k, v in ipairs(Isaac.GetRoomEntities()) do
             if v:IsActiveEnemy() and v:IsVulnerableEnemy() then
-                v:TakeDamage(5+(0.03*player:GetTotalDamageTaken())+(0.5*player.Damage), 0, EntityRef(player), 3)
+                v:TakeDamage(5+(0.03*player:GetTotalDamageTaken())+(0.5*player.Damage)+(1+player:GetEffects():GetCollectibleEffectNum(mod.Collectibles.Items.StrawDoll)), 0, EntityRef(player), 3)
             end
         end
     end
@@ -23,7 +23,7 @@ function mod:StrawDollActiveEffect(npc, damage, flag, countdown)
         for k, v in ipairs(Isaac.GetRoomEntities()) do
             if v:IsActiveEnemy() and v:IsVulnerableEnemy() then
                 v:GetData().isStrawDollDamage = true
-                v:TakeDamage(damage, flag, EntityRef(Isaac.GetPlayer()), countdown)
+                v:TakeDamage(damage*(1+Isaac.GetPlayer():GetEffects():GetCollectibleEffectNum(mod.Collectibles.Items.StrawDoll))*0.80, flag, EntityRef(Isaac.GetPlayer()), countdown)
             end
             v:GetData().isStrawDollDamage = false
         end

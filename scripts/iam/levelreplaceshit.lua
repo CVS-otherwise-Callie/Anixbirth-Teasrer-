@@ -33,12 +33,13 @@ function mod:MusicCheckCallback()
 end
 
 function mod:NPCReplaceCallback(npc)
+    if game.Challenge == mod.Challenges.Bestiary then return end
     local game = Game()
     local level = game:GetLevel()
     local roomDescriptor = level:GetCurrentRoomDesc()
     local roomConfigRoom = roomDescriptor.Data
     local tab = {
-        Schmoot = {mod.Monsters.Schmoot.ID, mod.Monsters.Schmoot.Var, 0, {EntityType.ENTITY_HORF}, {3}, 0.5},
+        Schmoot = {mod.Monsters.Schmoot.ID, mod.Monsters.Schmoot.Var, 0, {EntityType.ENTITY_HORF, EntityType.ENTITY_SUB_HORF}, {3}, 0.5},
     }
     if mod.DSSavedata.monsterReplacements ~= 3 then
         if mod.DSSavedata.monsterReplacements == 1 then
@@ -51,10 +52,9 @@ function mod:NPCReplaceCallback(npc)
             for i = 1, #coolertab do
                 if npc.Type == coolertab[i] and  mod:CheckTableContents(v[5], roomConfigRoom.StageID) then
                     --extra for certain thigns not to break
-                    if npc.Type == EntityType.ENTITY_WILLO and npc.SpawnerEntity and npc.SpawnerEntity.Type == 913 then return end --miss minmin my favortie
 
                     --and done!
-                    if math.random(0, 100) >= v[6]*100 then
+                    if math.random(0, 100) <= v[6]*100 then
                         npc:Remove()
                         Isaac.Spawn(v[1], v[2], v[3], npc.Position, npc.Velocity, nil)
                     end

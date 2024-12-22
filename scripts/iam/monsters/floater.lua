@@ -13,7 +13,7 @@ end, mod.Monsters.Floater.ID)
 function mod:FloaterAI(npc, sprite, d, r)
         
     if not d.init then
-        d.realboost = rng:RandomInt(15, 35)/10
+        d.realboost = math.random(5, 15)/10
         d.floateroffset = math.random(-5, 10)
         npc.StateFrame = 50
         npc.GridCollisionClass = EntityGridCollisionClass.GRIDCOLL_NONE
@@ -21,15 +21,14 @@ function mod:FloaterAI(npc, sprite, d, r)
         d.state = "chase"
         npc.SpriteOffset = Vector(0,-10 - d.realboost)
         d.accelerateaway = 0
-        d.boost = rng:RandomInt(15, 35)/10
+        d.boost = math.random(5, 10)/10
         d.init = true
     else
-        d.boost = rng:RandomInt(15, 35)/8
+        d.boost = math.random(8, 13)/8
         d.oldanim = d.diranim
         npc.StateFrame = npc.StateFrame + 1
     end
 
-    local room = Game():GetRoom()
     local target = npc:GetPlayerTarget()
     if npc.StateFrame > 5 + d.floateroffset then --this adds a scent of organicness lmao
         d.targetpos = mod:confusePos(npc, target.Position, 5, nil, nil)
@@ -154,11 +153,14 @@ function mod:FloaterAI(npc, sprite, d, r)
         --Other bullshit
     if sprite:IsFinished() then
         d.boost = d.realboost
+        d.animinit = false
+    end
+
+    if sprite:GetFrame() == 1 then
         local creep = Isaac.Spawn(1000, 22,  0, npc.Position, Vector(0, 0), npc):ToEffect()
         creep.Scale = creep.Scale * 0.7
         creep:SetTimeout(creep.Timeout - 45)
         creep:Update()
-        d.animinit = false
     end
 end
 
