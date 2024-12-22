@@ -30,7 +30,7 @@ function mod:SnarkAI(fam, sprite, d)
             return mod:freeGrid(fam, true)
         end
         d.noTarg = false
-        local targ = targets[rng:RandomInt(1, #targets)]
+        local targ = targets[math.random(1, #targets)]
         d.myTarg = targ
         return targ.Position
     end
@@ -63,21 +63,16 @@ function mod:SnarkAI(fam, sprite, d)
         d.coolaccel = d.coolaccel + 0.1
     end
     if mod:isScare(fam) then
-        local targetvelocity = (d.target - fam.Position):Resized(-15)
+        local targetvelocity = (d.target - fam.Position):Resized(-30)
         fam.Velocity = mod:Lerp(fam.Velocity, targetvelocity, d.lerpnonsense + (fam.FrameCount/500))
     else
-        local targetvelocity = (d.target - fam.Position):Resized(15)
+        local targetvelocity = (d.target - fam.Position):Resized(30)
         fam.Velocity = mod:Lerp(fam.Velocity, targetvelocity, d.lerpnonsense)
     end
     fam.Velocity = mod:Lerp(fam.Velocity, fam.Velocity:Resized(d.coolaccel + (fam.FrameCount/500)), d.lerpnonsense)
     if fam:CollidesWithGrid() then
         d.coolaccel = 1
     end
-    mod:CatheryPathFinding(fam, d.target, {
-        Speed = d.coolaccel,
-        Accel = d.lerpnonsense,
-        GiveUp = true
-    })
     if rng:RandomInt(1, 2) == 2 then
         d.lerpnonsense = mod:Lerp(d.lerpnonsense, 0.04, 0.05)
     else
@@ -88,22 +83,14 @@ function mod:SnarkAI(fam, sprite, d)
         d.target = mod:snarkfindEnemy(fam)
     end
 
-    if (d.myTarg and d.myTarg:IsDead()) or fam.Position:Distance(d.target) < 10 then
+    if (d.myTarg and d.myTarg:IsDead()) or fam.Position:Distance(d.target) < 50 then
         d.target = mod:snarkfindEnemy(fam)
     end
 
     if fam:CollidesWithGrid() then
-        if rng:RandomInt(1, 2) == 2 and not sprite:IsPlaying("Jump") then
-            mod:spritePlay(sprite, "Jump")
-            fam.GridCollisionClass = GridCollisionClass.COLLISION_PIT
-        elseif not sprite:IsPlaying("Jump") then
-            mod:spritePlay(sprite, "Down")
-            fam.Velocity = fam.Velocity:Rotated(90)
-        elseif sprite:IsPlaying("Jump") then
-            fam.GridCollisionClass = GridCollisionClass.COLLISION_PIT
-            mod:snarkfindEnemy(fam)
-            fam.Velocity = mod:Lerp(fam.Velocity, d.target - fam.Position, d.lerpnonsense)
-        end
+        mod:spritePlay(sprite, "Jump")
+        fam.GridCollisionClass = 1
+        fam.Velocity = fam.Velocity*-1
     end
 
     if sprite:IsFinished("Jump") or (not sprite:IsPlaying("Jump")) then

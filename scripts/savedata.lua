@@ -4,7 +4,7 @@ SaveManager.Init(FHAC)
 FHAC.SaveManager = SaveManager
 
 SaveManager.AddCallback(SaveManager.Utility.CustomCallback.POST_DATA_LOAD, function()
-    FHAC.DSSavedata = SaveManager.GetSettingsSave()
+        FHAC.DSSavedata = SaveManager.GetSettingsSave()
         FHAC.DSSavedata.monsterReplacements = FHAC.DSSavedata.monsterReplacements or 2
         FHAC.DSSavedata.customFortunes = FHAC.DSSavedata.customFortunes or 1
         FHAC.DSSavedata.fortuneDeathChance = FHAC.DSSavedata.fortuneDeathChance or 3
@@ -15,5 +15,4 @@ SaveManager.AddCallback(SaveManager.Utility.CustomCallback.POST_DATA_LOAD, funct
         FHAC.DSSavedata.prettyMushlooms = FHAC.DSSavedata.prettyMushlooms or 1
         FHAC.DSSavedata.pallunShot = FHAC.DSSavedata.pallunShot or 1
         FHAC.DSSavedata.randomDried = FHAC.DSSavedata.randomDried or 1
-        print(FHAC.DSSavedata.fortuneLanguage)
 end)

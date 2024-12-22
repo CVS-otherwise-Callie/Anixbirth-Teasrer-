@@ -45,7 +45,8 @@ FHAC:LoadScripts("scripts.iam.monsters", {
 	"wispwosp",
 	"stuckpoot",
 	"rainmonger",
-	"zapperteller"
+	"zapperteller",
+	"techgrudge"
 })
 
 FHAC:LoadScripts("scripts.iam", {

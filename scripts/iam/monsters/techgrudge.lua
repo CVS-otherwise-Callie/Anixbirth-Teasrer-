@@ -8,11 +8,13 @@ mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
     end
 end, mod.Monsters.TechGrudge.ID)
 
+if REPENTOGON then
 mod:AddCallback(ModCallbacks.MC_PRE_NPC_RENDER, function(_, npc)
     if npc.Variant == mod.Monsters.TechGrudge.Var then
         mod:TechGrudgeLaser(npc, npc:GetSprite(), npc:GetData())
     end
 end, mod.Monsters.TechGrudge.ID)
+end
 
 function mod:TechGrudgeAI(npc, sprite, d)
 
@@ -121,7 +123,7 @@ function mod:TechGrudgeAI(npc, sprite, d)
             end
         end
 
-        if d.frame > 10 and REPENTAGON then
+        if d.frame > 10 and REPENTOGON then
 
         local bsprite = Sprite()
         bsprite:Load("gfx/007.002_thin red laser.anm2", true)
@@ -146,7 +148,7 @@ function mod:TechGrudgeLaser(npc, sprite, d)
     local room = game:GetRoom()
 
 
-    if d.beam and REPENTAGON then
+    if d.beam and REPENTOGON then
 
         local origin
         if d.direction ~= 4 then

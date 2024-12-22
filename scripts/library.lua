@@ -1,6 +1,14 @@
 local mod = FHAC
 local game = Game()
-local room = Game():GetRoom()
+
+function mod:DeliriumRoom()
+	if #Isaac.FindByType(EntityType.ENTITY_DELIRIUM, -1, -1, false, false) > 0 then
+		print(#Isaac.FindByType(EntityType.ENTITY_DELIRIUM, -1, -1, false, false))
+		mod.IsDeliRoom = true
+	else
+		mod.IsDeliRoom = false
+	end
+end
 
 function mod:getMinSec(totalSeconds)
     local minutes = math.floor(totalSeconds / 60)
@@ -18,6 +26,42 @@ function mod:reverseIfFear(npc, vec, multiplier)
 		vec = vec * -1 * multiplier
 	end
 	return vec
+end
+
+function mod:MakeBossDeath(npc, extragore, frame, sfx1, sfx2)
+	local sprite = npc:GetSprite()
+	local d = npc:GetData()
+	extragore = extragore or true
+	frame = frame or 4
+	sfx1 = sfx1 or SoundEffect.SOUND_MEAT_JUMPS
+	sfx2 = sfx2 or SoundEffect.SOUND_DEATH_BURST_LARGE
+
+	if not d.npcDeathAnimInit then
+		d.npcDeathlastFrame = 0
+		d.npcDeathAnimInit = true
+	end
+
+	if sprite:IsPlaying("Death") then
+        if sprite:GetFrame()%frame == 0 and npc.StateFrame ~= d.npcDeathlastFrame then
+            npc:PlaySound(sfx1, 1, 0, false, 1)
+			if extragore then
+				Isaac.Spawn(EntityType.ENTITY_EFFECT, EffectVariant.BLOOD_PARTICLE, 0, npc.Position, Vector(math.random(-10, 10), math.random(-10, 10)), npc)
+			end
+        end
+        d.npcDeathlastFrame = npc.StateFrame
+    end
+    if sprite:IsFinished("Death") then
+		if not d.hasBloodGibsExploded then
+        	npc:PlaySound(sfx2, 1, 0, false, 1)
+			if extragore then
+        		npc:BloodExplode()
+				Isaac.Spawn(EntityType.ENTITY_EFFECT, EffectVariant.LARGE_BLOOD_EXPLOSION, 0, npc.Position, Vector.Zero, npc):ToEffect()
+			else
+				npc:Kill()
+			end
+			d.hasBloodGibsExploded = true
+		end
+    end
 end
 
 function mod:MixTables(input, table)
@@ -45,7 +89,7 @@ function mod:IsSourceofDamagePlayer(source, bomb)
 end
 
 local function patherReal(npc, point)
-	if npc.Type == 1 then
+	if npc.Type == 1 or npc.Type == 3 then
 		return game:GetRoom():CheckLine(point,npc.Position,3,900,false,false)
 	else
 		local pather = npc.Pathfinder

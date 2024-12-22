@@ -213,7 +213,7 @@ FHAC.dmdirectory = {
                     end},
                     {
                         str = 'fortune language',
-                        choices = {'english', 'chinese', 'hylics', 'bad jokes'},
+                        choices = {'english', 'chinese', 'hylics'},
                         variable = "fortuneLanguage",
                         setting = 1,
                         load = function()
@@ -262,10 +262,10 @@ FHAC.dmdirectory = {
         buttons = {
             {str = 'cellar', nosel = true},
             {
-                str = 'random dried',
-                cursoroff = Vector(0, -20),
+                str = 'dried spawn rate',
+                cursoroff = Vector(0, 10),
                 fsize=2,
-                choices = {'on', 'off'},
+                choices = {'never', 'rarely', 'sometimes', 'often', 'extremely often', 'insanely often'},
                 variable = "randomDried",
                 setting = 1,
                 load = function()
@@ -274,13 +274,13 @@ FHAC.dmdirectory = {
                 store = function(var)
                     SaveManager.GetSettingsSave().randomDried = var
                 end,
-                tooltip = {strset = {'makes it','so that','dired appear','randomly in','cellar','','on by', 'default'}}
+                tooltip = {strset = {'affects dried', 'spawn rate', 'in cellar' ,'','rarely by', 'default'}}
             },
             {str = '', fsize=2,nosel = true},
             {str = 'caves', nosel = true},
             {
                 str = 'pallun shots',
-                cursoroff = Vector(0, -20),
+                cursoroff = Vector(0, 10),
                 fsize=2,
                 choices = {'normal', 'kerkel'},
                 variable = "prettyMushlooms",
@@ -297,7 +297,7 @@ FHAC.dmdirectory = {
             {str = 'catacombs', nosel = true},
             {
                 str = 'pretty mushlooms',
-                cursoroff = Vector(0, -20),
+                cursoroff = Vector(0, 10),
                 fsize=2,
                 choices = {'normal', 'pretty', 'shaded pretty'},
                 variable = "prettyMushlooms",

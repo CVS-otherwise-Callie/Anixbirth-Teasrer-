@@ -14,6 +14,7 @@ mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
             d.wobb = 0
             d.funnyasslerp = 0.06
             d.coolaccel = 0.5
+            d.pinPrickDash = -30
             d.wispwospInit = true
         end
 
@@ -21,9 +22,8 @@ mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
 
 
         d.newpos = npc:GetPlayerTarget().Position
-        d.pinPrickDash = 10
         npc.SpriteOffset = Vector(0,0)
-        npc.Velocity = mod:Lerp(npc.Velocity, (d.newpos - npc.Position):Resized(d.coolaccel), 0.025 + d.moveoffset)
+        npc.Velocity = mod:Lerp(npc.Velocity, (d.newpos - npc.Position):Resized(d.coolaccel*10), 0.025 + d.moveoffset)
 
 
         if d.coolaccel and d.coolaccel < 10 then

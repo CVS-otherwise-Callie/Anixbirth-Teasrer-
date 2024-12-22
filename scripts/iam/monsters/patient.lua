@@ -59,8 +59,8 @@ function mod:PatientAI(npc, sprite, d)
         end
 
         if npc.StateFrame > 60 + tonumber(d.wait) and d.state ~= "EndShoot" 
-        and game:GetRoom():CheckLine(target.Position,npc.Position,3,900,false,false)
-        and npc.Position:Distance(d.newpos) < 300 then
+        and path:HasPathToPos(target.Position)
+        and npc.Position:Distance(target.Position) < 300 then
             d.state = "Shoot"
         end
 
@@ -68,16 +68,17 @@ function mod:PatientAI(npc, sprite, d)
 
             if npc.Position:Distance(d.newpos) < 5 then
                 d.wait = math.random(-5, 5)
-                d.newpos = mod:freeGrid(npc, false, 200, 100)
+                d.newpos = mod:freeGrid(npc, true, 200, 100)
                 npc.StateFrame = 0
-            elseif npc.StateFrame >  10 + d.wait then
+            elseif npc.StateFrame > 10 + d.wait then
                 if mod:isScare(npc) then
                     local targetvelocity = (d.newpos - npc.Position)
                     npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, tonumber(d.speed)):Resized(-4)
-                elseif room:CheckLine(npc.Position,d.newpos,0,1,false,false) then
+                elseif path:HasPathToPos(d.newpos) then
                     local targetvelocity = (d.newpos - npc.Position)
                     npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, tonumber(d.speed)):Resized(4)
                 else
+                    d.newpos = mod:freeGrid(npc, true, 200, 100)
                     path:FindGridPath(d.newpos, 0.7, 1, true)
                 end
 
