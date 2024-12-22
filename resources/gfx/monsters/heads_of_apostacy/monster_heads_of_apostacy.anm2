@@ -1,5 +1,5 @@
 <AnimatedActor>
-	<Info CreatedBy="TJP" CreatedOn="22/12/2024 20:05:26" Version="16" Fps="40"/>
+	<Info CreatedBy="TJP" CreatedOn="22/12/2024 20:42:12" Version="17" Fps="30"/>
 	<Content>
 		<Spritesheets>
 			<Spritesheet Path="monster_heads_of_apostacy.png" Id="0"/>
