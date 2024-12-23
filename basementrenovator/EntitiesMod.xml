@@ -16,7 +16,15 @@
 <entity ID="161" Variant="6" Name="Snidge" Image="mah boys/snidge.png" BaseHP="0.1"/>
 <entity ID="161" Variant="11" Name="Floater" Image="mah boys/floater.png" BaseHP="10" StageHP="3" Tags="Champion"/>
 <entity ID="161" Variant="12" Name="Fivehead" Image="mah boys/fivehead.png" BaseHP="15" Tags="Champion"/>
-<entity ID="161" Variant="16" Name="Log" Image="mah boys/log.png" BaseHP="5" Tags="Champion"/>
+<entity ID="161" Variant="16" Name="Log" Image="mah boys/log.png" BaseHP="5" Tags="Champion">
+<bitfield Key="Subtype">
+        <spinner Length="16" ValueOffset="1" Name="Amount of legs">
+          <tooltip>
+Up to groups of 3.
+          </tooltip>
+        </spinner>
+      </bitfield>
+</entity>
 <entity ID="161" Variant="21" Name="Neutral Fly" Image="mah boys/neutralfly.png" BaseHP="15" Tags="Champion"/>
 <entity ID="161" Variant="36" Name="Silly" Image="mah boys/silly.png" BaseHP="10" Tags="Champion">
    <bitfield Key="Subtype">

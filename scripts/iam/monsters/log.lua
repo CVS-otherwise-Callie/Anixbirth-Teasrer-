@@ -10,12 +10,27 @@ end, mod.Monsters.Log.ID)
 
 function mod:LogAI(npc, sprite, d)
 
+    if npc.SubType >= 0 then
+        if not d.spawnerinit and not d.hasbeenSpawned then
+            if npc.SubType == 0 then npc.SubType = math.random(0, 2) end
+            for i = 0, npc.SubType - 2 do
+                local log = Isaac.Spawn(Isaac.GetEntityTypeByName("Log"),  Isaac.GetEntityVariantByName("Log"), 0, npc.Position + Vector(0, 10):Rotated(math.random(180)), Vector.Zero, npc)
+                log:ClearEntityFlags(EntityFlag.FLAG_APPEAR)
+                log:GetData().hasbeenSpawned = true
+            end
+            npc.SubType = 0
+            d.spawnerinit = true
+        end
+        npc.SubType = 0
+    end
+
     local target = npc:GetPlayerTarget()
     local targetpos = target.Position
     local room = game:GetRoom()
     local path = npc.Pathfinder
 
     if not d.leginit then
+
         d.state = "idle"
         mod:ReplaceEnemySpritesheet(npc, "gfx/monsters/log/log" .. math.random(4))
         d.speed = math.random(50, 100)/math.random(100, 200)
