@@ -1,5 +1,6 @@
 local mod = FHAC
 local game = Game()
+local sfx = SFXManager()
 
 function mod:DeliriumRoom()
 	if #Isaac.FindByType(EntityType.ENTITY_DELIRIUM, -1, -1, false, false) > 0 then
@@ -813,4 +814,19 @@ function mod:CheckForOnlyEntInRoom(npcs, id, var, sub)
 	end
 	if not sub then return isVar end
 	return sub
+end
+
+--Burslake Bestiary's Handy Dandy Code for morphing on death
+function FHAC:MorphOnDeath(npc, morphType, morphVariant, morphSub, sound, chance, times)
+	if not chance then chance = 1 end
+	if math.random() <= chance then
+		npc:Morph(morphType, morphVariant, morphSub, npc:GetChampionColorIdx())
+		if sound then
+			sfx:Play(sound)
+		end
+		npc:BloodExplode()
+		npc.HitPoints = npc.MaxHitPoints
+	end
+
+	return npc
 end

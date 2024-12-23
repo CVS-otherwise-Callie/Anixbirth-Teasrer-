@@ -20,6 +20,7 @@ FHAC:LoadScripts("scripts", {
 	"otherapi.fiend folio.api.fortunehandling",
 	"otherapi.fiend folio.api.apioverride",
 	"otherapi.proapi.proapi",
+	"deathtransform",
 })
 --iam stuff
 FHAC:LoadScripts("scripts.iam.monsters", {
@@ -46,7 +47,8 @@ FHAC:LoadScripts("scripts.iam.monsters", {
 	"stuckpoot",
 	"rainmonger",
 	"zapperteller",
-	"techgrudge"
+	"techgrudge",
+	"log"
 })
 
 FHAC:LoadScripts("scripts.iam", {

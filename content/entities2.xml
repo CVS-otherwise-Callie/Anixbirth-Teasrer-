@@ -122,11 +122,10 @@
 		<bestiary transform="0,0,1" anim="Scream" />
         <gibs amount="6" blood="1" bone="1" eye="0" gut="1" large="0" />
     </entity-->
-    <!--entity id="161" variant="16" name="Lvl 2 Pooter" anm2path="monsters/lvl 2 pooter/lvl 2 pooter.anm2" reroll="true" basehp="16" boss="0" champion="1" collisionDamage="0" collisionMass="4" collisionRadius="17" friction="1" numGridCollisionPoints="4" shadowSize="11" stageHP="0" portrait="16" gridCollision="walls" tags="fly">
-		<bestiary transform="0,0,1" anim="Fly" />
+    <entity id="161" variant="16" name="Log" anm2path="monsters/log/log.anm2" reroll="true" baseHP="5" boss="0" champion="1" collisionDamage="1" collisionMass="2" collisionRadius="3" friction="1" numGridCollisionPoints="4" shadowSize="5" stageHP="0" portrait="16">
+		<bestiary transform="0,0,1" anim="Idle" />
         <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
-		<preload-snd id="178" />
-    </entity-->
+    </entity>
     <!--entity id="161" variant="17" name="Sucka" anm2path="monsters/sucka/sucka.anm2" hasFloorAlts="false" reroll="true" baseHP="12" boss="0" champion="1" collisionDamage="1" collisionMass="5" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="14" stageHP="0" portrait="17">
 		<bestiary transform="0,0,1" anim="WalkVert" overlay="Head" />
         <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />

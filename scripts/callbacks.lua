@@ -129,6 +129,11 @@ function mod:NPCPostInit(npc)
 end
 mod:AddCallback(ModCallbacks.MC_POST_NPC_INIT, mod.NPCPostInit)
 
+function mod.PreNPCUpdate(npc)
+end
+
+mod:AddCallback(ModCallbacks.MC_PRE_NPC_UPDATE, mod.PreNPCUpdate)
+
 ---- custom utility callbacks! ----
 
 function mod:OnPostDataLoad(saveData, isLuamod)
