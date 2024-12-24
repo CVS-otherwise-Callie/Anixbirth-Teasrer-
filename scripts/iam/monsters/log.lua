@@ -32,9 +32,10 @@ function mod:LogAI(npc, sprite, d)
     if not d.leginit then
 
         d.state = "idle"
-        mod:ReplaceEnemySpritesheet(npc, "gfx/monsters/log/log" .. math.random(4))
+        mod:ReplaceEnemySpritesheet(npc, "gfx/monsters/log/log" .. math.random(5))
         d.speed = math.random(50, 100)/math.random(100, 200)
         d.offset = math.random(0, 5)
+        npc.SpriteOffset = Vector(0, -2)
 
         if math.random(2) == 2 then
             d.FlipX = false
