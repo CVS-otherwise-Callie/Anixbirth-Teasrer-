@@ -12,7 +12,10 @@ function mod:LogAI(npc, sprite, d)
 
     if npc.SubType >= 0 then
         if not d.spawnerinit and not d.hasbeenSpawned then
-            if npc.SubType == 0 then npc.SubType = math.random(0, 2) end
+            if d.anixbirthRespawned then
+                npc.SubType = 2
+            end
+            if npc.SubType == 0 then npc.SubType = math.random(1, 2) end
             for i = 0, npc.SubType - 2 do
                 local log = Isaac.Spawn(Isaac.GetEntityTypeByName("Log"),  Isaac.GetEntityVariantByName("Log"), 0, npc.Position + Vector(0, 10):Rotated(math.random(180)), Vector.Zero, npc)
                 log:ClearEntityFlags(EntityFlag.FLAG_APPEAR)

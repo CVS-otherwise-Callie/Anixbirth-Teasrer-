@@ -10,5 +10,9 @@ end, mod.Monsters.Blank.ID)
 
 function mod:BlankAI(npc, sprite, d)
 
+    if not d.init then
+        d.init = true
+    end
+
 end
 

@@ -41,7 +41,8 @@ FHAC.Monsters = {
     RainMonger = mod:ENT("Rain Monger"),
     TechGrudge = mod:ENT("Tech Grudge"),
     ZapperTeller = mod:ENT("Zapper Teller"),
-    Log = mod:ENT("Log")
+    Log = mod:ENT("Log"),
+    Stoner = mod:ENT("Stoner")
 }
 
 FHAC.Familiars = { --YOU HAVE NO IDEA HOW MANY FUCKING TIMES I SPELLED THIS WRONG LMAO

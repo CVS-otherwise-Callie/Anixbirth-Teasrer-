@@ -254,7 +254,13 @@ mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, function(_, npc, damage, flag, 
             mod:ENT("Silly"),
             mod:ENT("String")
         }) == false then
-            npc.HitPoints = npc.HitPoints + damage*0.5
+            --npc.HitPoints = npc.HitPoints + damage*0.01
+            return {Damage = damage*0.01}
+        else
+            print( mod:CheckForOnlyEntInRoom({
+                mod:ENT("Silly"),
+                mod:ENT("String")
+            }))
         end
     end
 end)

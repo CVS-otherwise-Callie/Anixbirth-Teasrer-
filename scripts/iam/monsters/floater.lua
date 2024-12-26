@@ -157,7 +157,15 @@ function mod:FloaterAI(npc, sprite, d, r)
     end
 
     if sprite:GetFrame() == 1 then
-        local creep = Isaac.Spawn(1000, 22,  0, npc.Position, Vector(0, 0), npc):ToEffect()
+        local creep
+        if game:GetLevel():GetCurrentRoomDesc().Data.StageID == 27 then
+            creep = Isaac.Spawn(1000, 22,  0, npc.Position, Vector(0, 0), npc):ToEffect()
+            creep:GetSprite():ReplaceSpritesheet(0, "gfx/effects/effect_waterpool.png") --hehe thanks ff
+        elseif game:GetLevel():GetCurrentRoomDesc().Data.StageID == 28 then
+            creep = Isaac.Spawn(1000, 56,  0, npc.Position, Vector(0, 0), npc):ToEffect()
+        else
+            creep = Isaac.Spawn(1000, 22,  0, npc.Position, Vector(0, 0), npc):ToEffect()
+        end
         creep.Scale = creep.Scale * 0.7
         creep:SetTimeout(creep.Timeout - 45)
         creep:Update()

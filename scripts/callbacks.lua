@@ -8,6 +8,18 @@ function mod.DeathStuff(_, ent)
 end
 FHAC:AddCallback(ModCallbacks.MC_POST_NPC_DEATH, mod.DeathStuff)
 
+function mod.PreChangeRooms()
+    mod:SavePreEnts()
+    mod:TransferSavedEnts()
+end
+FHAC:AddCallback(ModCallbacks.MC_PRE_CHANGE_ROOM, mod.PreChangeRooms)
+
+function mod.LeaveGame()
+    mod:SavePreEnts()
+    mod:TransferSavedEnts()
+end
+FHAC:AddCallback(ModCallbacks.MC_PRE_GAME_EXIT, mod.LeaveGame)
+
 function mod.PostUpdateStuff()
     if not FHAC.FiendFolioCompactLoaded then
         mod.FiendFolioCompat()
@@ -53,8 +65,6 @@ function mod:PostNewRoom()
 
     mod.spawnedDried = false
     mod:SpawnRandomDried()
-
-    mod:TransferSavedEnts()
 
     local d = Isaac.GetPlayer():GetData()
     d.JokeBookFireDelay = 0
@@ -139,6 +149,7 @@ mod:AddCallback(ModCallbacks.MC_PRE_NPC_UPDATE, mod.PreNPCUpdate)
 function mod:OnPostDataLoad(saveData, isLuamod)
     FHAC.PreSavedEntsLevel = saveData.game.roomFloor.PreSavedEntsLevel or {}
     FHAC.SavedEntsLevel = saveData.game.roomFloor.SavedEntsLevel or {}
+    FHAC.ToBeSavedEnts = saveData.game.roomFloor.ToBeSavedEnts or {}
     saveData.file.other.HasLoaded = true
 end
 

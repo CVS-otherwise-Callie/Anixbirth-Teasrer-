@@ -65,6 +65,12 @@ local room = game:GetRoom()
             PlaybackSpeed = 0.8,
         }  
     }
+
+    mod:SaveEntToRoom({
+        Name="Dried",
+        NPC = npc,
+    })
+
     if not d.init then
         if d.isPrevEntCopy then
             npc:ClearEntityFlags(EntityFlag.FLAG_APPEAR)
@@ -96,10 +102,6 @@ local room = game:GetRoom()
             end
         end
         d.creepsec = d.creepsec + (math.random(-10, 10))
-        mod:SaveEntToRoom({
-            Name="Dried",
-            NPC = npc,
-        })
         d.init = true
     else
         npc.StateFrame = npc.StateFrame + 1

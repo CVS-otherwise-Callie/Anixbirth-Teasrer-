@@ -26,6 +26,7 @@ Up to groups of 3.
       </bitfield>
 </entity>
 <entity ID="161" Variant="21" Name="Neutral Fly" Image="mah boys/neutralfly.png" BaseHP="15" Tags="Champion"/>
+<entity ID="161" Variant="30" Name="Stoner" Image="mah boys/stoner.png" BaseHP="n/a"/>
 <entity ID="161" Variant="36" Name="Silly" Image="mah boys/silly.png" BaseHP="10" Tags="Champion">
    <bitfield Key="Subtype">
       <checkbox Name="Moves After Shooting" Length="1"/>
@@ -121,14 +122,15 @@ Use 2, 4, or 6 normally.
 		   	<entity Name="Floater"/>
 			<entity Name="Fivehead"/>
          	<entity Name="Patient"/>
+			<entity Name="Stoner"/>
     	</group>
 	</group>
 
 	<group Name="HOPE Basement" Label="Basement">
 		<group Name="HOPE Basement Enemies">
+		    <entity Name="Snidge"/>
 			<entity Name="Log"/>
 			<entity Name="Neutral Fly"/>
-		   <entity Name="Snidge"/>
 		</group>
 	</group>
 

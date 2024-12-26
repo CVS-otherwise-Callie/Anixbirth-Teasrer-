@@ -186,12 +186,13 @@
 		<bestiary transform="0,0,1" anim="Idle" />
         <gibs amount="5" blood="0" bone="0" eye="0" gut="0" large="0" poop="0" />
     </entity-->
-	<!--entity anm2path="enemies/stoner/stoner.anm2" gridCollision="none" reroll="true" baseHP="20" boss="0" champion="1" collisionDamage="1" collisionMass="3" collisionRadius="20" friction="1" id="161" variant="30" subtype="0" name="Stoner" numGridCollisionPoints="12" shadowSize="20" stageHP="2" portrait="30" bestiary="true" shutdoors="false">
-        <bestiary transform="0,0,1" anim="Appear" />
-        <gibs amount="6" blood="1" bone="0" eye="0" gut="1" large="0" worm="1" />
-		<preload-snd id="72" />
-        <devolve id="151.0.0" weight="1"/>
-	</entity-->
+    <entity anm2path="monsters/stoner/stoner.anm2" baseHP="20" boss="0" champion="0" collisionDamage="0" collisionMass="10" collisionRadius="20" friction="1" id="161" variant="30" name="Stoner" numGridCollisionPoints="20" portrait="30" shadowSize="0" shutdoors="false" stageHP="0" tags="noreroll" >
+        <bestiary anim="Bestiary" transform="0,0,1"/>
+        <gibs amount="6" blood="0" bone="0" dust="1" eye="0" gut="0" large="0" rock="1"/>
+        <preload-snd id="212"/>
+        <preload-snd id="262"/>
+    	<devolve id="1000.0.0" weight="1" />
+	</entity>
     <!--entity id="161" variant="31" name="Cronic Laser" anm2path="monsters/cronic laser/cronic laser.anm2" reroll="true" baseHP="20" stageHP="1" boss="0" champion="0" collisionDamage="1" collisionMass="6" collisionRadius="9" friction="1" numGridCollisionPoints="12" shadowSize="12" portrait="31">
 		<bestiary transform="0,0,1" anim="Appear" />
         <gibs amount="5" blood="0" bone="0" eye="0" gut="0" large="0" />

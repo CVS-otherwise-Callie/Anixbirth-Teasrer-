@@ -530,25 +530,45 @@ function mod:removeSubstring(str, substr)
     return str
 end
 
-FHAC.PreSavedEntsLevel = {}
-FHAC.SavedEntsLevel = {}
+FHAC.PreSavedEntsLevel = FHAC.PreSavedEntsLevel or {}
+FHAC.SavedEntsLevel = FHAC.SavedEntsLevel or {}
+FHAC.ToBeSavedEnts = FHAC.ToBeSavedEnts or {}
 
 function mod:SaveEntToRoom(enttable)
-	if enttable.NPC:GetData().isPrevEntCopy then return end
+	if enttable.NPC:ToNPC():GetData().isPrevEntCopy then return end
+	for k, v in ipairs(FHAC.ToBeSavedEnts) do
+		if v[3] == GetPtrHash(enttable.NPC) then
+			return
+		end
+	end
+	enttable[3] = GetPtrHash(enttable.NPC)-- this turns into the thrid part of the table
+	table.insert(FHAC.ToBeSavedEnts, enttable)
+end
 
-	local tab = {
-		Room = game:GetLevel():GetCurrentRoomDesc().Data,
-		Stage = game:GetLevel():GetStage(),
-		Subtype = enttable.NPC.SubType,
-		Position = enttable.NPC.Position,
-		Velocity = enttable.NPC.Velocity,
-		Spawner = enttable.NPC.SpawnerEntity,
-		Data = enttable.NPC:GetData()
-	}
+function mod:SavePreEnts()
 
-	mod:MixTables(tab, enttable)
+	for k, v in ipairs(FHAC.ToBeSavedEnts) do
+		if type(v) == "table" then
 
-	table.insert(FHAC.PreSavedEntsLevel, tab)
+			local enttable = v
+
+			local tab = {
+				NPC = enttable.NPC,
+				Room = game:GetLevel():GetCurrentRoomDesc().Data,
+				Stage = game:GetLevel():GetStage(),
+				Subtype = enttable.NPC.SubType,
+				Position = enttable.NPC.Position,
+				Velocity = enttable.NPC.Velocity,
+				Spawner = enttable.NPC.SpawnerEntity,
+				Data = enttable.NPC:GetData()
+			}
+		
+			mod:MixTables(tab, enttable)
+		
+			table.insert(FHAC.PreSavedEntsLevel, tab)
+		end
+	end
+	FHAC.ToBeSavedEnts = {}
 end
 
 function mod:TransferSavedEnts()
@@ -572,6 +592,7 @@ function mod:LoadSavedRoomEnts()
 					d[k] = v
 				end
 			end
+			ent:ClearEntityFlags(EntityFlag.FLAG_APPEAR)
 			d.init = false
 		end
 	end
@@ -825,6 +846,7 @@ function FHAC:MorphOnDeath(npc, morphType, morphVariant, morphSub, sound, chance
 			sfx:Play(sound)
 		end
 		npc:BloodExplode()
+		npc:GetData().anixbirthRespawned = true
 		npc.HitPoints = npc.MaxHitPoints
 	end
 
