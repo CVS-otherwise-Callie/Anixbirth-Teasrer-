@@ -21,6 +21,7 @@ function mod:StonerAI(npc, sprite, d)
     if not d.init then
         d.face = d.face or math.random(100)
         sprite:SetFrame("Idle", d.face)
+        npc:AddEntityFlags(EntityFlag.FLAG_NO_TARGET | EntityFlag.FLAG_NO_DEATH_TRIGGER)
         npc.GridCollisionClass = GridCollisionClass.COLLISION_WALL_EXCEPT_PLAYER
         d.init = true
     else
@@ -28,17 +29,25 @@ function mod:StonerAI(npc, sprite, d)
         npc:MultiplyFriction(0.6)
     end
 
+    ---@param plate GridEntity
+    local function ActivePressurePlate(plate) --thanks kerkel!!!!
+        if plate.State == 3 then return end
+
+        plate.State = 3
+        plate:GetSprite():Play("Switched", true)
+        plate:ToPressurePlate():Reward()
+    end
+
+
     for i = 0, room:GetGridSize() do  
         if room:GetGridEntity(i) ~= nil and room:GetGridEntity(i):GetType() == 20 then
+            --print(room:GetGridEntity(i):ToPressurePlate().State, room:GetGridEntity(i):GetVariant())
             if npc.Position:Distance(room:GetGridEntity(i).Position) < 30 then
-                local grid = room:GetGridEntity(i)
-                local sprite = grid:GetSprite()
-                if sprite:IsPlaying("Off") then
-                    mod:spritePlay(sprite, "Switched")
-                    sfx:Play(469, 1, 0, false, 1, 0)
+                local grid = Game():GetRoom():GetGridEntityFromPos(npc.Position)
+
+                if grid and grid:GetType() == GridEntityType.GRID_PRESSURE_PLATE then
+                    ActivePressurePlate(grid)
                 end
-                grid:ToPressurePlate().State = 3
-                grid:Update()
             end
         end
     end

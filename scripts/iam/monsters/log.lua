@@ -99,6 +99,8 @@ function mod:LogAI(npc, sprite, d)
             local targetvelocity = (targetpos - npc.Position):Resized(4)
             npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, d.speed)
         else
+            local targetvelocity = (targetpos - npc.Position):Resized(2)
+            npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, d.speed)
             path:FindGridPath(target.Position, 0.5, 1, true)
         end    
     end
