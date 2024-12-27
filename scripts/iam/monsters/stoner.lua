@@ -19,7 +19,7 @@ function mod:StonerAI(npc, sprite, d)
     })
 
     if not d.init then
-        d.face = d.face or math.random(400)
+        d.face = d.face or math.random(412)
         sprite:SetFrame("Idle", d.face)
         npc:AddEntityFlags(EntityFlag.FLAG_NO_TARGET | EntityFlag.FLAG_NO_DEATH_TRIGGER)
         npc.GridCollisionClass = GridCollisionClass.COLLISION_WALL_EXCEPT_PLAYER

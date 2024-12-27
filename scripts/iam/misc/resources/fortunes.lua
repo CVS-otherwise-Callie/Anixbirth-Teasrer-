@@ -1,5 +1,331 @@
 FHAC.Fortunes = 
 [=================[
+queen NEVER cry
+
+we could just
+call lard asses
+“nice asses”
+
+there arent any
+gay jokes in
+anixbirth (lie?)
+
+build a boat
+oppenheimer
+
+fun fact:
+you are
+a cancer cell
+
+i love playing
+blumigi rocket!
+
+doge coin…
+for a year…
+AND I HAVEN’T BEAT IT
+
+is it true?
+jojo is dubbed
+by george floyd?
+
+why would you
+fight eternal mother?
+
+the king has
+had a son!
+how, we don’t know
+
+mattman, are you
+reading this fortune?
+
+do i smell
+a hint of
+fiend folio?
+
+there are many
+obstacles that
+you will meet
+
+the future is vague
+do not rely on
+what you don’t know
+
+have you seen
+those animators?
+
+the pay of
+working online
+is magnificent
+
+who here thinks
+curly from mouth-
+-washing is kinda hot
+
+obviously, ratchet
+and clank has the
+better bosses
+
+i! love! hylics!
+
+the dog is
+staring at you
+
+there are still
+planets undiscovered
+
+whatever you do
+do not cook
+this cheese
+
+we need to tap
+into your ego
+a little more
+
+let’s play a game
+i’m going to die
+what do you do
+
+do not think
+about outer space
+
+do not think
+about elephants
+(i know you are!)
+
+it’s friday
+the 13th…
+
+that’s my
+sister’s birthday!
+
+teacher, i have
+a important question
+
+i… i…
+i need help!
+
+aw, why’d it
+have to be
+a death card?
+
+…said the stone-
+faced 5 minute
+year old
+
+hi, i was just
+born. which way
+to the bathroom?
+
+bathroom is right
+over there
+
+constantin keeps
+saying he’ll take
+a poo in the hallway
+
+i’m not scary
+not at all!
+
+talking in chinese
+so so mid ngl
+
+evan will fly
+the planes while blind
+
+those buildings…
+they don’t happen
+to be twins, right?
+
+we don't have
+many days
+
+some things are
+best left forgotten
+
+i hate animdude so much
+why is he like that
+he’s too hard
+
+young
+man
+positivity
+
+isaac
+yes edition
+
+me when
+bearlics
+:troll:
+
+ohhh, its
+a roblox joke
+
+that’s fat and lazy
+and kind of hot
+
+congratulations, homosexual!
+
+microwave, you should
+write more fortunes
+
+why are pvz players
+down bad for
+a sunflower??
+
+h key works now
+we’re fine
+i think
+
+guess who’s back
+back again
+idk their name
+but they seem slim
+and also shady
+
+You might have
+passed a Planetarium
+
+wolfi!
+why did you
+do that!
+
+i’m your angel
+from the skyyyyyy
+(falls)
+
+see, there is this
+really cute girl
+next to me…
+
+sir, i believe you have
+hippopotomonstro-
+sesquippedaliophobia
+
+(they should have
+made it into a song,
+but they didn’t!)
+
+ok dude you’ll
+get in trouble for
+laughing like that
+
+it really isn’t
+all that funny
+
+the last treasure room
+had juicy sack anyway
+
+mattman loves those
+juicy sacks
+
+you know what
+they say
+
+give me my
+gayness back
+right now
+
+bro please
+study next time
+
+start by filling
+a room full
+of bouncy balls
+
+lelpisTW is
+watching you in
+your sleep
+
+we need to
+go deeper
+
+we need to
+go… sideways?
+
+epiphany, what
+the heck are you on?
+
+do not play
+the community’s
+remix
+
+use your study
+times effectively
+
+do not get
+a prostate cancer
+
+gelp
+key between g and j
+not working
+
+cvs, why are
+you so zesty???
+
+i am planning
+the ultimate heist
+
+heisenburger
+was never real
+
+pretend to be
+spongebob for a day
+
+if christina is
+scared of that, why
+aren’t you?
+
+tell adele i
+said hi!....
+
+you bought 9
+pounds of clay?
+what for?
+
+the secret room
+is on your right
+
+the secret room
+is on your left
+
+hold up, you
+already found the
+secret room!
+
+mason be like:
+wow i wonder
+who designed this room
+
+this room is
+made by a
+trash developer
+
+screenshot and send
+this fortune to CVS
+if you see it!
+
+if you see
+j diddy, run!
+
+screenshot and send
+this fortune to xocolate
+if you see it!
+
+screenshot and send
+this fortune to quaquao
+if you see it!
+
+he who lives in a glass house
+with a fucking machine gun
+turret on the roof…
+
+…can pretty much throw
+all the goddamn stones
+he wants!
+
+when the hell
+did you install that?
+
 Why this game?
 
 Hey Vsauce, 
