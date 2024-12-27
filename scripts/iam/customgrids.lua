@@ -19,10 +19,7 @@ function mod.lightpressurePlateAI(customGrid)
 
     if not d.init then
         grid.State = 3
-        if not mod:CheckForEntInRoom("Light Pressure Plate Null Entity", true, true) then
-            local ent = Isaac.Spawn(mod.Monsters.LightPressurePlateEntNull.ID, mod.Monsters.LightPressurePlateEntNull.Var, 0, Vector.Zero, Vector.Zero, nil)
-            ent:GetData().wasSpawned = true
-        end
+        grid.VarData = 20
         d.init = true
     end
 
@@ -49,6 +46,10 @@ function mod.lightpressurePlateAI(customGrid)
     if grid.State == 3 then
         d.unswitchedinit = false
         mod:spritePlay(sprite, "Off")
+        if not mod:CheckForEntInRoom("Light Pressure Plate Null Entity", true, true) then
+            local ent = Isaac.Spawn(mod.Monsters.LightPressurePlateEntNull.ID, mod.Monsters.LightPressurePlateEntNull.Var, 0, Vector.Zero, Vector.Zero, nil)
+            ent:GetData().wasSpawned = true
+        end
         d.Off = true
     elseif grid.State == 1 then
         d.switchedinit = false

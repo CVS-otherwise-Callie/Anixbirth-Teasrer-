@@ -112,7 +112,7 @@ Use 2, 4, or 6 normally.
    </bitfield>
 </entity>
 
-<entity ID="4090" Metadata="1" Image="mah boys/lightpressureplate.png" Kind="FF" Name="Light Pressure Plate" Subtype="0" Variant="2090" Group="Stage"/>
+<entity ID="162" Metadata="1" Image="mah boys/lightpressureplate.png" Kind="FF" Name="Light Pressure Plate" Subtype="0" Variant="2900" Group="Stage"/>
 
 
 

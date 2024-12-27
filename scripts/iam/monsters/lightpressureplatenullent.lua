@@ -23,13 +23,14 @@ function mod:LightPressurePlateEntNullAI(npc, sprite, d)
 
     local function AllPressuredButtonsCleared()
         for i = 0, room:GetGridSize() do 
-            if room:GetGridEntity(i) ~= nil and room:GetGridEntity(i):GetType() == 20 then
+            if room:GetGridEntity(i) ~= nil and room:GetGridEntity(i):GetType() == 20 and room:GetGridEntity(i).VarData == 20 then
                 if room:GetGridEntity(i).State ~= 1 then
+                    npc.CanShutDoors = true
                     return
                 end
             end
         end
-        npc:Remove()
+        npc.CanShutDoors = false
     end
 
     AllPressuredButtonsCleared()
