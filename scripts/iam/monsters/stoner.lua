@@ -32,6 +32,7 @@ function mod:StonerAI(npc, sprite, d)
     ---@param plate GridEntity
     local function ActivePressurePlate(plate) --thanks kerkel!!!!
         if plate.State ~= 0 then return end
+        sfx:Play(469, 1, 0, false, 1, 0)
 
         plate.State = 3
         plate:GetSprite():Play("Switched", true)
@@ -39,7 +40,7 @@ function mod:StonerAI(npc, sprite, d)
     end
 
 
-    for i = 0, room:GetGridSize() do  
+    for i = 0, room:GetGridSize() do 
         if room:GetGridEntity(i) ~= nil and room:GetGridEntity(i):GetType() == 20 then
             --print(room:GetGridEntity(i):ToPressurePlate().State, room:GetGridEntity(i):GetVariant())
             if npc.Position:Distance(room:GetGridEntity(i).Position) < 35 then

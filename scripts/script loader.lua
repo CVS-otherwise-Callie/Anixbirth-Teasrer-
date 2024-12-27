@@ -49,12 +49,14 @@ FHAC:LoadScripts("scripts.iam.monsters", {
 	"zapperteller",
 	"techgrudge",
 	"log",
-	"stoner"
+	"stoner",
+	"lightpressureplatenullent"
 })
 
 FHAC:LoadScripts("scripts.iam", {
 	"cvsunlocks",
 	"levelreplaceshit",
+	"customgrids"
 })
 
 FHAC:LoadScripts("scripts.iam.effects", {

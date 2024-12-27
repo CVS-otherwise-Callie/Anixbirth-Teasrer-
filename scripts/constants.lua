@@ -42,7 +42,12 @@ FHAC.Monsters = {
     TechGrudge = mod:ENT("Tech Grudge"),
     ZapperTeller = mod:ENT("Zapper Teller"),
     Log = mod:ENT("Log"),
-    Stoner = mod:ENT("Stoner")
+    Stoner = mod:ENT("Stoner"),
+    LightPressurePlateEntNull = mod:ENT("Light Pressure Plate Null Entity")
+}
+
+FHAC.Grids = {
+    LightPressurePlate = mod:ENT("HOPE Grid Spawner")
 }
 
 FHAC.Familiars = { --YOU HAVE NO IDEA HOW MANY FUCKING TIMES I SPELLED THIS WRONG LMAO

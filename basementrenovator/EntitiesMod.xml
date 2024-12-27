@@ -112,10 +112,16 @@ Use 2, 4, or 6 normally.
    </bitfield>
 </entity>
 
+<entity ID="4090" Metadata="1" Image="mah boys/lightpressureplate.png" Kind="FF" Name="Light Pressure Plate" Subtype="0" Variant="2090" Group="Stage"/>
+
 
 
 
 <tab Name="Anixbirth (Hope)">
+
+	<group Name="FHAC Buttons">
+		<entity Name="Light Pressure Plate" />
+	</group>
 
 	<group Name="HOPE Chapter 1 Enemies" Label="Chapter 1 Shared">
       	<group Name="HOPE Chapter 1 Shared Enemies">
@@ -248,6 +254,10 @@ Use 2, 4, or 6 normally.
 
 <group Name="Mines Enemies">
 	<group Name="HOPE Mines Enemies"/>
+</group>
+
+<group Name="Pressure Plates">
+	<group Name="FHAC Buttons"/>
 </group>
 
 </data>
