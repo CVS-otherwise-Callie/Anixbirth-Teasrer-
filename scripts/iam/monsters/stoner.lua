@@ -19,7 +19,7 @@ function mod:StonerAI(npc, sprite, d)
     })
 
     if not d.init then
-        d.face = d.face or math.random(100)
+        d.face = d.face or math.random(400)
         sprite:SetFrame("Idle", d.face)
         npc:AddEntityFlags(EntityFlag.FLAG_NO_TARGET | EntityFlag.FLAG_NO_DEATH_TRIGGER)
         npc.GridCollisionClass = GridCollisionClass.COLLISION_WALL_EXCEPT_PLAYER
@@ -42,7 +42,7 @@ function mod:StonerAI(npc, sprite, d)
     for i = 0, room:GetGridSize() do  
         if room:GetGridEntity(i) ~= nil and room:GetGridEntity(i):GetType() == 20 then
             --print(room:GetGridEntity(i):ToPressurePlate().State, room:GetGridEntity(i):GetVariant())
-            if npc.Position:Distance(room:GetGridEntity(i).Position) < 30 then
+            if npc.Position:Distance(room:GetGridEntity(i).Position) < 35 then
                 local grid = Game():GetRoom():GetGridEntityFromPos(npc.Position)
 
                 if grid and grid:GetType() == GridEntityType.GRID_PRESSURE_PLATE then
