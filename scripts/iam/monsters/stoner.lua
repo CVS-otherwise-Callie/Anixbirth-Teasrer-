@@ -31,7 +31,7 @@ function mod:StonerAI(npc, sprite, d)
 
     ---@param plate GridEntity
     local function ActivePressurePlate(plate) --thanks kerkel!!!!
-        if plate.State == 3 then return end
+        if plate.State ~= 0 then return end
 
         plate.State = 3
         plate:GetSprite():Play("Switched", true)
