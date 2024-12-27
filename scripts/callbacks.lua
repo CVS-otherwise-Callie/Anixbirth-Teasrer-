@@ -62,6 +62,7 @@ mod:AddCallback(ModCallbacks.MC_POST_RENDER, mod.RenderedStuff)
 
 function mod:PostNewRoom()
     mod:LoadSavedRoomEnts()
+    FHAC.ToBeSavedEnts = {}
 
     mod.spawnedDried = false
     mod:SpawnRandomDried()

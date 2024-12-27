@@ -542,6 +542,8 @@ function mod:SaveEntToRoom(enttable)
 		end
 	end
 	enttable[3] = GetPtrHash(enttable.NPC)-- this turns into the thrid part of the table
+	enttable.Room = game:GetLevel():GetCurrentRoomDesc().Data
+	enttable.Stage = game:GetLevel():GetStage()
 	table.insert(FHAC.ToBeSavedEnts, enttable)
 end
 
@@ -554,8 +556,8 @@ function mod:SavePreEnts()
 
 			local tab = {
 				NPC = enttable.NPC,
-				Room = game:GetLevel():GetCurrentRoomDesc().Data,
-				Stage = game:GetLevel():GetStage(),
+				Room = enttable.Room,
+				Stage = enttable.Stage,
 				Subtype = enttable.NPC.SubType,
 				Position = enttable.NPC.Position,
 				Velocity = enttable.NPC.Velocity,
