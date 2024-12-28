@@ -23,6 +23,10 @@ function mod.lightpressurePlateAI(customGrid)
         d.init = true
     end
 
+    if grid.VarData == 1 then
+        grid.VarData = 20
+    end
+
     if sprite:IsPlaying("Switched") then
         if not d.switchedinit then
             sfx:Play(469, 1, 0, false, 1, 0)
