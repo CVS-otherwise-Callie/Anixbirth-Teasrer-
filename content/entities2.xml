@@ -388,7 +388,7 @@
         <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
     </entity>
 
-    <entity id="161" variant="4089" name="Light Pressure Plate Null Entity" reroll="true" baseHP="10" stageHP="0" boss="0" champion="1" collisionDamage="1" collisionMass="6" collisionRadius="13" friction="1" numGridCollisionPoints="8" shadowSize="14" portrait="42" anm2path="blank.anm2">
+    <entity id="161" variant="4089" name="Light Pressure Plate Null Entity" reroll="true" baseHP="10" stageHP="0" boss="0" champion="1" collisionDamage="0" collisionMass="0" collisionRadius="0" friction="1" numGridCollisionPoints="0" shadowSize="0" anm2path="blank.anm2">
         <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
     </entity>
 

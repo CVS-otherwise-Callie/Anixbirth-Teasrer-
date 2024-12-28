@@ -46,7 +46,8 @@ function mod:StonerAI(npc, sprite, d)
             if npc.Position:Distance(room:GetGridEntity(i).Position) < 35 then
                 local grid = Game():GetRoom():GetGridEntityFromPos(npc.Position)
 
-                if grid and grid:GetType() == GridEntityType.GRID_PRESSURE_PLATE then
+                if grid and grid:GetType() == GridEntityType.GRID_PRESSURE_PLATE and grid.VarData ~= 20 then
+                    print("sure")
                     ActivePressurePlate(grid)
                 end
             end

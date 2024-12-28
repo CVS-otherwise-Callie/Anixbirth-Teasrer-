@@ -758,8 +758,7 @@ function mod:CheckForEntInRoom(npc, id, var, sub)
 	local rooments = {}
 	local roomentsvar = {}
 	for _, ent in ipairs(Isaac.GetRoomEntities()) do
-		if (ent:IsActiveEnemy() and ent:IsVulnerableEnemy() and not ent:IsDead()
-		and not ent:HasEntityFlags(EntityFlag.FLAG_FRIENDLY)) then
+		if (not ent:HasEntityFlags(EntityFlag.FLAG_FRIENDLY)) then
 			table.insert(rooments, ent.Type)
 		end
 	end
@@ -767,8 +766,7 @@ function mod:CheckForEntInRoom(npc, id, var, sub)
 	if var == false and sub == false then return isType end
 	if var and isType then
 		for _, ent in ipairs(Isaac.GetRoomEntities()) do
-			if (ent:IsActiveEnemy() and ent:IsVulnerableEnemy() and not ent:IsDead()
-			and not ent:HasEntityFlags(EntityFlag.FLAG_FRIENDLY)) then
+			if (not ent:HasEntityFlags(EntityFlag.FLAG_FRIENDLY)) then
 				table.insert(roomentsvar, ent.Variant)
 			end
 		end

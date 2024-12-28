@@ -4,7 +4,7 @@ local sfx = SFXManager()
 
 FHAC.LightPressurePlate = StageAPI.CustomGrid("FHACLightPressurePlate", {
     BaseType = GridEntityType.GRID_PRESSURE_PLATE,
-    BaseVariant = 1,
+    BaseVariant = 0,
     Anm2 = "gfx/grid/lightpressureplate.anm2",
     Animation = "Off",
     RemoveOnAnm2Change = true,
@@ -46,7 +46,7 @@ function mod.lightpressurePlateAI(customGrid)
     if grid.State == 3 then
         d.unswitchedinit = false
         mod:spritePlay(sprite, "Off")
-        if not mod:CheckForEntInRoom("Light Pressure Plate Null Entity", true, true) then
+        if mod:CheckForEntInRoom({Type = mod.Monsters.LightPressurePlateEntNull.ID, Variant = mod.Monsters.LightPressurePlateEntNull.Var, SubType = 0}, true, true, false) == false then
             local ent = Isaac.Spawn(mod.Monsters.LightPressurePlateEntNull.ID, mod.Monsters.LightPressurePlateEntNull.Var, 0, Vector.Zero, Vector.Zero, nil)
             ent:GetData().wasSpawned = true
         end

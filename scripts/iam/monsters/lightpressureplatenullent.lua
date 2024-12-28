@@ -13,11 +13,13 @@ function mod:LightPressurePlateEntNullAI(npc, sprite, d)
     local room = game:GetRoom()
 
     if not d.init then
-        npc:AddEntityFlags(EntityFlag.FLAG_NO_TARGET | EntityFlag.FLAG_NO_DEATH_TRIGGER| EntityFlag.FLAG_NO_QUERY)
+        npc:AddEntityFlags(EntityFlag.FLAG_NO_TARGET | EntityFlag.FLAG_NO_DEATH_TRIGGER | EntityFlag.FLAG_NO_PHYSICS_KNOCKBACK | EntityFlag.FLAG_NO_KNOCKBACK | EntityFlag.FLAG_NO_STATUS_EFFECTS)
         npc:ClearEntityFlags(EntityFlag.FLAG_APPEAR)
+        npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_NONE 
         if d.wasSpawned then
             npc.Visible = false
         end
+        npc.Position = Vector(-200, -200)
         d.init = true
     end
 
@@ -26,16 +28,18 @@ function mod:LightPressurePlateEntNullAI(npc, sprite, d)
             if room:GetGridEntity(i) ~= nil and room:GetGridEntity(i):GetType() == 20 and room:GetGridEntity(i).VarData == 20 then
                 if room:GetGridEntity(i).State ~= 1 then
                     npc.CanShutDoors = true
+                    for i = 0, 8 do
+                        local doorL = game:GetRoom():GetDoor(i)
+                        if not (doorL == nil) then doorL:Close(true) end
+                    end
                     return
                 end
             end
         end
         npc.CanShutDoors = false
+        npc:Remove()
     end
 
     AllPressuredButtonsCleared()
-
-    npc.Position = Vector(-200, -200)
-
 end
 
