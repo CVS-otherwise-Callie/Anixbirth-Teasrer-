@@ -2,6 +2,12 @@ local mod = FHAC
 local game = Game()
 local sfx = SFXManager()
 
+mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
+    if npc.Variant == 0 and npc.SubType == 0 then
+        npc:GetSprite():Play("Idle")
+    end
+end, mod.Grids.LightPressurePlate.ID)
+
 FHAC.LightPressurePlate = StageAPI.CustomGrid("FHACLightPressurePlate", {
     BaseType = GridEntityType.GRID_PRESSURE_PLATE,
     BaseVariant = 0,

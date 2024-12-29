@@ -70,6 +70,10 @@ FHAC.Challenges = {
     Bestiary = Isaac.GetChallengeIdByName("[ANIX] The Real Bestiary")
 }
 
+mod.Sounds = {
+    TombstoneMove = Isaac.GetSoundIdByName("tombstone_move")
+}
+
 FHAC.Collectibles = {
     Items = {
         StinkyMushroom = Isaac.GetItemIdByName("Stinky Mushroom"),

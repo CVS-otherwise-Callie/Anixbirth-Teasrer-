@@ -5,4 +5,7 @@
     <sound name="deadseascrolls_whoosh">
         <sample weight="1" path="deadseascrolls/whoosh.wav" />
     </sound>
+    <sound name="tombstone_move">
+        <sample weight="1" path="tombstonedooropen.ogg" ?>
+    </sound>
 </sounds>

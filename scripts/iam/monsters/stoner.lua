@@ -12,14 +12,27 @@ end, mod.Monsters.Stoner.ID)
 function mod:StonerAI(npc, sprite, d)
 
     local room = game:GetRoom()
+    local target = npc:GetPlayerTarget()
+    local targetpos = mod:confusePos(npc, target.Position, 5, nil, nil)
 
     mod:SaveEntToRoom({
         Name="Stoner",
         NPC = npc,
     })
 
+    if npc.Velocity:Length() > 0.5 then
+        if npc.StateFrame % 5 == 0 then
+            local ef = Isaac.Spawn(EntityType.ENTITY_EFFECT, EffectVariant.DUST_CLOUD, -1, npc.Position + Vector(math.random(-25, 25), 10),Vector.Zero, npc):ToEffect()
+            ef:SetTimeout(10)
+            ef.SpriteScale = Vector(0.03,0.03)
+        end
+        if npc.StateFrame % 12 then
+            sfx:Play(mod.Sounds.TombstoneMove, 1, 2, false, 1, 0)
+        end
+    end
+
     if not d.init then
-        d.face = d.face or math.random(431)
+        d.face = d.face or math.random(450)
         sprite:SetFrame("Idle", d.face)
         npc:AddEntityFlags(EntityFlag.FLAG_NO_TARGET | EntityFlag.FLAG_NO_DEATH_TRIGGER)
         npc.GridCollisionClass = GridCollisionClass.COLLISION_WALL_EXCEPT_PLAYER
@@ -107,7 +120,7 @@ function mod:StonerAI(npc, sprite, d)
 					beingHit = true
                 end
                 if beingHit then
-                    npc.Velocity = npc.Velocity + tear.Velocity:Resized(1)
+                    npc.Velocity = npc.Velocity + tear.Velocity:Resized(5)
                     tear:ToProjectile():Die()
                 end
             end
