@@ -20,15 +20,15 @@ function mod:StonerAI(npc, sprite, d)
         NPC = npc,
     })
 
-    if npc.Velocity:Length() > 0.5 then
+    if npc.Velocity:Length() > 0.1 then
         if npc.StateFrame % 5 == 0 then
             local ef = Isaac.Spawn(EntityType.ENTITY_EFFECT, EffectVariant.DUST_CLOUD, -1, npc.Position + Vector(math.random(-25, 25), 10),Vector.Zero, npc):ToEffect()
             ef:SetTimeout(10)
             ef.SpriteScale = Vector(0.03,0.03)
         end
-        if npc.StateFrame % 12 then
-            sfx:Play(mod.Sounds.TombstoneMove, 1, 2, false, 1, 0)
-        end
+        sfx:Play(mod.Sounds.TombstoneMove, math.random(8, 10), 0, false, math.random(99, 101)/100, 0)
+    else
+        sfx:Stop(mod.Sounds.TombstoneMove)
     end
 
     if not d.init then
