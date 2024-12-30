@@ -1,7 +1,7 @@
 <music root="music/">
 	<track id="1" name="Basement" intro="shhh piano builds go away/Anixbirth Build 3.ogg" path="shhh piano builds go away/Anixbirth Build 3.ogg" loop="true" />
 	<track id="2" name="Caves" intro="shhh piano builds go away/Buried Stalagtite.ogg" path="shhh piano builds go away/Buried Stalagtite.ogg" loop="true" />
-	<track id="3" name="Depths" intro="shhh piano builds go away/The Deeps and Bones.ogg" path="shhh piano builds go away/The Deeps and Bones.ogg" loop="true" />
+	<track id="3" name="Depths" intro="shhh piano builds go away/The Deep Plunge.ogg" path="shhh piano builds go away/The Deeps and Bones.ogg" loop="true" />
 	<track id="4" name="Cellar" intro="shhh piano builds go away/Of Food and Bees Build 2.ogg" path="shhh piano builds go away/Of Food and Bees Build 2.ogg" loop="true" />
 	<track id="5" name="Catacombs" intro="shhh piano builds go away/Hallowed Pall Layer.ogg" path="shhh piano builds go away/Hallowed Pall Layer.ogg" loop="true" />
 	<track id="6" name="Necropolis" intro="shhh piano builds go away/The Deeps and Bones.ogg" path="shhh piano builds go away/The Deeps and Bones.ogg" loop="true" />
