@@ -538,6 +538,7 @@ function mod:SaveEntToRoom(enttable)
 	if enttable.NPC:ToNPC():GetData().isPrevEntCopy then return end
 	for k, v in ipairs(FHAC.ToBeSavedEnts) do
 		if v[3] == GetPtrHash(enttable.NPC) then
+			v.NPC = enttable.NPC
 			return
 		end
 	end

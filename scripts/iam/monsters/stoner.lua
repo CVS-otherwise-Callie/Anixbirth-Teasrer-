@@ -3,6 +3,25 @@ local game = Game()
 local rng = RNG()
 local sfx = SFXManager()
 
+mod.OldStonerDirs = { --this shit is FUCKED!
+    {-90, -90, -67.5},
+    {-45, -67.5, -22.5},
+    {1, -22.5, 22.5},
+    {45, 22.5, 67.5},
+    {90, 67.5, 112.5},
+    {135, 112.5, 157.5},
+    {180, 157.7, -157.5},
+    {-135, -157.7, -90},
+}
+
+mod.StonerDirs = { --this shit is FUCKED!
+    {-90, -135, -45},
+    {1, -45, 45},
+    {90, 45, 135},
+    {180, 135, -135},
+}
+
+
 mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
     if npc.Variant == mod.Monsters.Stoner.Var then
         mod:StonerAI(npc, npc:GetSprite(), npc:GetData())
@@ -14,25 +33,16 @@ function mod:StonerAI(npc, sprite, d)
     local room = game:GetRoom()
     local target = npc:GetPlayerTarget()
     local targetpos = mod:confusePos(npc, target.Position, 5, nil, nil)
+    local enemydir = (targetpos - npc.Position):GetAngleDegrees()
 
     mod:SaveEntToRoom({
         Name="Stoner",
         NPC = npc,
     })
 
-    if npc.Velocity:Length() > 0.1 then
-        if npc.StateFrame % 5 == 0 then
-            local ef = Isaac.Spawn(EntityType.ENTITY_EFFECT, EffectVariant.DUST_CLOUD, -1, npc.Position + Vector(math.random(-25, 25), 10),Vector.Zero, npc):ToEffect()
-            ef:SetTimeout(10)
-            ef.SpriteScale = Vector(0.03,0.03)
-        end
-        sfx:Play(mod.Sounds.TombstoneMove, math.random(8, 10), 0, false, math.random(99, 101)/100, 0)
-    else
-        sfx:Stop(mod.Sounds.TombstoneMove)
-    end
-
     if not d.init then
-        d.face = d.face or math.random(450)
+        rng:SetSeed(npc.DropSeed,35)
+        d.face = d.face or rng:RandomInt(450)
         sprite:SetFrame("Idle", d.face)
         npc:AddEntityFlags(EntityFlag.FLAG_NO_TARGET | EntityFlag.FLAG_NO_DEATH_TRIGGER)
         npc.GridCollisionClass = GridCollisionClass.COLLISION_WALL_EXCEPT_PLAYER
@@ -40,6 +50,21 @@ function mod:StonerAI(npc, sprite, d)
     else
         npc.StateFrame = npc.StateFrame + 1
         npc:MultiplyFriction(0.6)
+    end
+
+    if npc.Velocity:Length() > 0.5 then
+        if not d.movementinit then
+            npc.StateFrame = 12
+            d.movementinit = true
+        end
+        if npc.StateFrame % 12 == 0 then
+            local ef = Isaac.Spawn(EntityType.ENTITY_EFFECT, EffectVariant.DUST_CLOUD, -1, npc.Position + Vector(math.random(-25, 25), 10),Vector.Zero, npc):ToEffect()
+            ef:SetTimeout(10)
+            ef.SpriteScale = Vector(0.03,0.03)
+        end
+        npc:PlaySound(mod.Sounds.TombstoneMove, math.random(3, 5)/10, 0, false, math.random(80, 101)/100, 0)
+    else
+        d.movementinit= false
     end
 
     ---@param plate GridEntity
@@ -120,7 +145,7 @@ function mod:StonerAI(npc, sprite, d)
 					beingHit = true
                 end
                 if beingHit then
-                    npc.Velocity = npc.Velocity + tear.Velocity:Resized(5)
+                    npc.Velocity = npc.Velocity + tear.Velocity:Resized(7)
                     tear:ToProjectile():Die()
                 end
             end

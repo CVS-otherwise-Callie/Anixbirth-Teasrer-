@@ -8,7 +8,6 @@ mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
         mod:FloaterAI(npc, npc:GetSprite(), npc:GetData(), npc:GetDropRNG())
     end
 end, mod.Monsters.Floater.ID)
-
         --thx fiend folio
 function mod:FloaterAI(npc, sprite, d, r)
         
