@@ -72,8 +72,32 @@
 		<bestiary transform="0,-3,1" anim="Run" />
         <gibs amount="4" blood="1" bone="1" eye="1" gut="1" large="0" /> 
     </entity-->
-    <entity id="161" variant="4" name="Patient" anm2path="monsters/patient/patient.anm2" hasFloorAlts="" reroll="true" baseHP="15" boss="0" champion="1" collisionDamage="1" collisionMass="5" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="14" stageHP="0" portrait="4">
-		<bestiary transform="0,0,1" anim="walk h" overlay="head" />
+    <entity id="161" variant="4" subtype="0" name="Patient" anm2path="monsters/patient/patient.anm2" hasFloorAlts="false" reroll="true" baseHP="15" boss="0" champion="1" collisionDamage="1" collisionMass="5" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="14" stageHP="0" portrait="4">
+		<bestiary transform="0,0,1" anim="walk h" overlay="headvirus" />
+        <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
+    </entity>
+    <entity id="161" variant="4" subtype="1" name="Patient (Virus)" anm2path="monsters/patient/patient.anm2" hasFloorAlts="false" reroll="true" baseHP="15" boss="0" champion="1" collisionDamage="2" collisionMass="8" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="14" stageHP="0" portrait="4">
+        <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
+    </entity>
+    <entity id="161" variant="4" subtype="2" name="Patient (Speed Ball)" anm2path="monsters/patient/patient.anm2" hasFloorAlts="false" reroll="true" baseHP="13" boss="0" champion="1" collisionDamage="1" collisionMass="4" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="14" stageHP="0" portrait="4">
+        <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
+    </entity>
+    <entity id="161" variant="4" subtype="3" name="Patient (Roid Rage)" anm2path="monsters/patient/patient.anm2" hasFloorAlts="false" reroll="true" baseHP="17" boss="0" champion="1" collisionDamage="1" collisionMass="6" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="14" stageHP="0" portrait="4">
+        <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
+    </entity>
+    <entity id="161" variant="4" subtype="4" name="Patient (Experimental Treatment)" anm2path="monsters/patient/patient.anm2" hasFloorAlts="false" reroll="true" baseHP="15" boss="0" champion="1" collisionDamage="1" collisionMass="7" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="14" stageHP="0" portrait="4">
+        <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
+    </entity>
+    <entity id="161" variant="4" subtype="5" name="Patient (Growth Hormones)" anm2path="monsters/patient/patient.anm2" hasFloorAlts="false" reroll="true" baseHP="20" boss="0" champion="1" collisionDamage="1" collisionMass="10" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="16" stageHP="0" portrait="4">
+        <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
+    </entity>
+    <entity id="161" variant="4" subtype="6" name="Patient (Synthoil)" anm2path="monsters/patient/patient.anm2" hasFloorAlts="false" reroll="true" baseHP="17" boss="0" champion="1" collisionDamage="1" collisionMass="5" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="14" stageHP="0" portrait="4">
+        <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
+    </entity>
+    <entity id="161" variant="4" subtype="7" name="Patient (Adrenaline)" anm2path="monsters/patient/patient.anm2" hasFloorAlts="false" reroll="true" baseHP="18" boss="0" champion="1" collisionDamage="1" collisionMass="5" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="14" stageHP="0" portrait="4">
+        <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
+    </entity>
+    <entity id="161" variant="4" subtype="8" name="Patient (Euthanasia)" anm2path="monsters/patient/patient.anm2" hasFloorAlts="false" reroll="true" baseHP="15" boss="0" champion="1" collisionDamage="1" collisionMass="5" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="14" stageHP="0" portrait="4">
         <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
     </entity>
     <!--entity id="161" variant="5" name="Grounded Horf" anm2path="monsters/grounded horf/grounded horf.anm2" reroll="true" baseHP="12" boss="0" champion="1" collisionDamage="1" collisionMass="10" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="28" stageHP="0" portrait="5">
