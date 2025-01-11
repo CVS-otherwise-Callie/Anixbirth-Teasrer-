@@ -39,6 +39,7 @@ function mod:ProjStuff(v)
     mod.WostShot(v, d)
     mod.PallunShot(v, d)
     mod.SillyShot(v, d)
+    mod:PatientShots(v, d)
 end
 FHAC:AddCallback(ModCallbacks.MC_POST_PROJECTILE_UPDATE, mod.ProjStuff)
 
@@ -67,13 +68,12 @@ function mod:PostNewRoom()
     mod.spawnedDried = false
     mod:SpawnRandomDried()
 
-    local d = Isaac.GetPlayer():GetData()
-    d.JokeBookFireDelay = 0
-    mod.StrawDollActiveIsActive = false
+    mod:RemoveAllSpecificItemEffects(Isaac.GetPlayer())
 end
 mod:AddCallback(ModCallbacks.MC_POST_NEW_ROOM, mod.PostNewRoom)
 
 function mod:PostPlayerUpdate(player)
+    mod:AnalFissure(player)
 end
 mod:AddCallback(ModCallbacks.MC_POST_PLAYER_UPDATE, mod.PostPlayerUpdate)
 
@@ -128,6 +128,7 @@ function mod:NPCGetHurtStuff(npc, damage, flag, source, countdown)
     if npc.Type == 1 then
         local d = npc:GetData()
 
+        d.ColorectalCancerCreepInit = false
         mod:StrawDollPassive(npc)
     end
 
@@ -139,6 +140,12 @@ function mod:NPCPostInit(npc)
     mod:NPCReplaceCallback(npc)
 end
 mod:AddCallback(ModCallbacks.MC_POST_NPC_INIT, mod.NPCPostInit)
+
+function mod:PrePlayerColl(_, player, collider, low)
+    mod:PatientEuthInstaKill(_, player, collider, low)
+end
+
+mod:AddCallback(ModCallbacks.MC_PRE_PLAYER_COLLISION, mod.PrePlayerColl)
 
 function mod.PreNPCUpdate(npc)
 end

@@ -77,6 +77,7 @@ mod.Sounds = {
 FHAC.Collectibles = {
     Items = {
         StinkyMushroom = Isaac.GetItemIdByName("Stinky Mushroom"),
+        AnalFissure = Isaac.GetItemIdByName("Anal Fissure"),
         JokeBook = Isaac.GetItemIdByName("Joke Book"),
         StrawDoll = Isaac.GetItemIdByName("Straw Doll"),
     }

@@ -137,3 +137,14 @@ function mod:SpawnRandomDried()
 	end
 	mod.spawnedDried = true
 end
+
+function mod:RemoveAllSpecificItemEffects(player)
+	local d = player:GetData()
+	if d.AnalFissureCreep then
+		player:RemoveCostume(Isaac.GetItemConfig():GetCollectible(CollectibleType.COLLECTIBLE_IPECAC), false)
+	end
+	d.JokeBookFireDelay = 0
+    d.AnalFissureCreep = false
+	d.AnalFissureCreepInit = false
+    mod.StrawDollActiveIsActive = false
+end

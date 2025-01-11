@@ -338,6 +338,38 @@ function mod:spritePlay(sprite, anim)
 	end
 end
 
+--thanks fiend folio
+function mod:getSeveralDifferentNumbers(needed, totalAmount, customRNG, blacklist)
+	local numTable = {}
+	local results = {}
+	for i=1,totalAmount do
+		table.insert(numTable, i)
+	end
+	local rng = RNG()
+	if customRNG == nil then
+		rng:SetSeed(game:GetRoom():GetSpawnSeed(), 0)
+	else
+		rng = customRNG
+	end
+	
+	if blacklist then
+		for _,num in ipairs(blacklist) do
+			table.remove(numTable, num)
+		end
+	end
+
+	for i=1,needed do
+		if #numTable == 0 then
+            break
+        else
+            local roll = rng:RandomInt(#numTable)+1
+            results[i] = numTable[roll]
+            table.remove(numTable, roll)
+        end
+	end
+	return results
+end
+
 function mod:SnapVector(angle, snapAngle)
 	local snapped = math.floor(((angle:GetAngleDegrees() + snapAngle/2) / snapAngle)) * snapAngle
 	local snappedDirection = angle:Rotated(snapped - angle:GetAngleDegrees())

@@ -16,6 +16,7 @@ function mod:PatientAI(npc, sprite, d)
     local sfx = SFXManager
     local targetpos = mod:confusePos(npc, target.Position, 5, nil, nil)
     local projparams = ProjectileParams()
+    rng:SetSeed(game:GetRoom():GetSpawnSeed(), 0)
     local patienttypes = {
         {
             name = "virus",
@@ -23,7 +24,7 @@ function mod:PatientAI(npc, sprite, d)
             size = 1,
             behavior = "WanderShoot",
             detectrange = "300",
-            shootoffset = "60",
+            shootoffset = "50",
             shottypes = {"Blood"},
             shotdamage = 1,
             headStart = math.random(1, 10),
@@ -36,7 +37,7 @@ function mod:PatientAI(npc, sprite, d)
             speed = "2",
             size = 1,
             behavior = "Chase",
-            subbehavior = "ProAPI",
+            submovebehavior = "ProAPI",
             shootoffset = "0",
             headStart = math.random(1, 10),
             wait = math.random(-5, 5),
@@ -50,11 +51,11 @@ function mod:PatientAI(npc, sprite, d)
             speed = "1.3",
             size = 1,
             behavior = "WanderShoot",
-            detectrange = "230",
-            subbehavior = "Charge",
+            detectrange = "1000",
+            submovebehavior = "Charge",
             shottypes = {"Homing"},
             shotdamage = 1,
-            shootoffset = "80",
+            shootoffset = "60",
             headStart = math.random(1, 10),
             wait = math.random(-5, 0),
             state = "Moving",
@@ -66,7 +67,7 @@ function mod:PatientAI(npc, sprite, d)
             size = 1,
             behavior = "WanderShoot",
             detectrange = "210",
-            subbehavior = "ProAPI",
+            submovebehavior = "ProAPI",
             shottypes = {"Inner Eye", "Poly", "Soy Milk", "Number One"},
             shotdamage = 1, --this is a placeholder for ex. since it's based on chosen shot type
             shootoffset = math.random(40, 70),
@@ -96,8 +97,8 @@ function mod:PatientAI(npc, sprite, d)
             speed = "0.8",
             size = 1,
             behavior = "WanderShoot",
-            subbehavior = "Neutral",
-            detectrange = "100000",
+            submovebehavior = "Neutral",
+            detectrange = "1000",
             shootoffset = "70",
             shottypes = {"Blood"},
             shotdamage = 1,
@@ -112,6 +113,7 @@ function mod:PatientAI(npc, sprite, d)
             size = 1,
             behavior = "WanderShoot",
             subbehavior = "HealSpeed",
+            submovebehavior = "ProAPI",
             gainedspeed = "0.1",
             detectrange = "300",
             shootoffset = "60",
@@ -120,7 +122,9 @@ function mod:PatientAI(npc, sprite, d)
             headStart = math.random(1, 10),
             wait = math.random(-5, 5),
             state = "Moving",
-            subtype = "7"
+            subtype = "7",
+            lerpnonsense = 0.1,
+            coolaccel = 1.4
         },
         {
             name = "euthanasia",
@@ -128,7 +132,7 @@ function mod:PatientAI(npc, sprite, d)
             size = 1,
             behavior = "WanderShoot",
             detectrange = "300",
-            shootoffset = "60",
+            shootoffset = "10",
             shottypes = {"Euthanasia"},
             shotdamage = 1,
             headStart = math.random(1, 10),
@@ -141,9 +145,12 @@ function mod:PatientAI(npc, sprite, d)
     if not d.init then
         local tab
         if npc.SubType == nil or npc.SubType == 0 then
-            tab = patienttypes[math.random(1, #patienttypes)]
+            tab = patienttypes[rng:RandomInt(1, #patienttypes - 1)]
         else
             tab = patienttypes[npc.SubType]
+        end
+        if d.name == "euthanasia" and (npc.SubType == nil or npc.SubType == 0) then
+            tab = patienttypes[1]
         end
         for h, g in pairs(tab) do
             if not d[h] then
@@ -173,7 +180,7 @@ function mod:PatientAI(npc, sprite, d)
 
         if npc.StateFrame > tonumber(d.shootoffset) + tonumber(d.wait) and d.state ~= "EndShoot" 
         and path:HasPathToPos(target.Position)
-        and npc.Position:Distance(target.Position) < 300 then
+        and npc.Position:Distance(target.Position) < tonumber(d.detectrange) then
             d.state = "Shoot"
         end
 
@@ -197,7 +204,7 @@ function mod:PatientAI(npc, sprite, d)
 
         if npc.StateFrame > tonumber(d.shootoffset) + tonumber(d.wait) and d.state ~= "EndShoot" 
         and path:HasPathToPos(target.Position)
-        and npc.Position:Distance(target.Position) < 300 then
+        and npc.Position:Distance(target.Position) < tonumber(d.detectrange) then
             d.state = "Shoot"
         end
 
@@ -210,7 +217,7 @@ function mod:PatientAI(npc, sprite, d)
 
     if d.state == "Moving" then
 
-        if d.subbehavior == "ProAPI" then
+        if d.submovebehavior == "ProAPI" then
 
             if d.coolaccel and d.coolaccel < 5 then
                 d.coolaccel = d.coolaccel + 0.1
@@ -222,9 +229,9 @@ function mod:PatientAI(npc, sprite, d)
                 local targetvelocity = (d.newpos - npc.Position):Resized(4*tonumber(d.speed))
                 npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, d.lerpnonsense)
             else
-                d.newpos = mod:freeGrid(npc, true, 200, 100)
                 path:FindGridPath(d.newpos, 0.7, 1, true)
             end
+
             npc.Velocity = mod:Lerp(npc.Velocity, npc.Velocity:Resized(d.coolaccel), d.lerpnonsense)
             if npc:CollidesWithGrid() then
                 d.coolaccel = 1
@@ -248,11 +255,11 @@ function mod:PatientAI(npc, sprite, d)
                 npc.StateFrame = 0
             elseif npc.StateFrame > 10 + d.wait then
                 if mod:isScare(npc) then
-                    local targetvelocity = (d.newpos - npc.Position)
-                    npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, tonumber(d.speed)):Resized(-4)
+                    local targetvelocity = (d.newpos - npc.Position):Resized(-4)
+                    npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, tonumber(d.speed))
                 elseif path:HasPathToPos(d.newpos) then
-                    local targetvelocity = (d.newpos - npc.Position)
-                    npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, tonumber(d.speed)):Resized(4)
+                    local targetvelocity = (d.newpos - npc.Position):Resized(4)
+                    npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, tonumber(d.speed))
                 else
                     d.newpos = mod:freeGrid(npc, true, 200, 100)
                     path:FindGridPath(d.newpos, 0.7, 1, true)
@@ -302,33 +309,35 @@ function mod:PatientAI(npc, sprite, d)
         end
 
         if d.name == "growth" then
-            shotspeed = 20
+            shotspeed = 12
         else
             shotspeed = 10
         end
 
-        npc:PlaySound(SoundEffect.SOUND_SHAKEY_KID_ROAR,(math.random(1, 8))/10,0,false,1)
-            local effect = Isaac.Spawn(1000, 2, 5, npc.Position, Vector.Zero, npc):ToEffect()
-            effect.SpriteOffset = Vector(0,-6)
-            effect.DepthOffset = npc.Position.Y * 1.25
-            effect:FollowParent(npc)
-            local realshot = Isaac.Spawn(9, 0, 0, npc.Position, Vector(shotspeed, 0):Rotated((targetpos - npc.Position):GetAngleDegrees()), npc):ToProjectile()
-            if shotparams and #shotparams > 0 then
-                for k, v in ipairs(shotparams) do
-                    realshot:AddProjectileFlags(v)
-                end
+        npc:PlaySound(SoundEffect.SOUND_SHAKEY_KID_ROAR,1,0,false,1)
+        local effect = Isaac.Spawn(1000, 2, 5, npc.Position, Vector.Zero, npc):ToEffect()
+        effect.SpriteOffset = Vector(0,-6)
+        effect.DepthOffset = npc.Position.Y * 1.25
+        effect:FollowParent(npc)
+        local realshot = Isaac.Spawn(9, 0, 0, npc.Position, Vector(shotspeed, 0):Rotated((targetpos - npc.Position):GetAngleDegrees()), npc):ToProjectile()
+        if shotparams and #shotparams > 0 then
+            for k, v in ipairs(shotparams) do
+                realshot:AddProjectileFlags(v)
             end
+        end
 
-            if d.name == "euthanasia" then
-                local psprite = realshot:GetSprite()
-                psprite:ReplaceSpritesheet(0, "gfx/projectiles/needle_projectile.png")
-				psprite:LoadGraphics()
-            end
+        if d.name == "euthanasia" then
+            realshot:GetData().type = "PatientEuthanasia"
+        end
 
-            d.state = "EndShoot"
+        if shot == "Homing" then
+            realshot:GetData().type = "ForeverHoming"
+        end
+
+        d.state = "EndShoot"
     elseif d.state == "Chasing" then
 
-        if d.subbehavior == "ProAPI" then
+        if d.submovebehavior == "ProAPI" then
 
             if d.coolaccel and d.coolaccel < 5 then
                 d.coolaccel = d.coolaccel + 0.1
@@ -336,9 +345,12 @@ function mod:PatientAI(npc, sprite, d)
             if mod:isScare(npc) then
                 local targetvelocity = (targetpos - npc.Position):Resized(-10*tonumber(d.speed))
                 npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, d.lerpnonsense)
-            else
+            elseif path:HasPathToPos(d.newpos) then
                 local targetvelocity = (targetpos - npc.Position):Resized(10*tonumber(d.speed))
                 npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, d.lerpnonsense)
+            else
+                local targetvelocity = (targetpos - npc.Position):Resized(10*tonumber(d.speed))
+                path:FindGridPath(targetpos, 0.7, 1, true)
             end
             npc.Velocity = mod:Lerp(npc.Velocity, npc.Velocity:Resized(d.coolaccel), d.lerpnonsense)
             if npc:CollidesWithGrid() then
@@ -358,15 +370,16 @@ function mod:PatientAI(npc, sprite, d)
         else
 
             if mod:isScare(npc) then
-                local targetvelocity = (targetpos - npc.Position)
-                npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, tonumber(d.speed)):Resized(-6)
-            elseif path:HasPathToPos(targetpos) then
-                local targetvelocity = (targetpos - npc.Position)
-                npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, tonumber(d.speed)):Resized(6)
+                local targetvelocity = (targetpos - npc.Position):Resized(-5)
+                npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, tonumber(d.speed))
+            elseif room:CheckLine(npc.Position,target.Position,0,1,false,false) then
+                local targetvelocity = (targetpos - npc.Position):Resized(5)
+                npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, tonumber((d.speed)))
             else
-                targetpos = mod:freeGrid(npc, true, 200, 100)
-                path:FindGridPath(targetpos, 0.7, 1, true)
-            end
+                local targetvelocity = (targetpos - npc.Position):Resized(5)
+                npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, tonumber(d.speed))
+                path:FindGridPath(target.Position, 0.5, 1, true)
+            end    
         
         end
 
@@ -376,13 +389,31 @@ function mod:PatientAI(npc, sprite, d)
             
     end
 
+    if d.name == "speed" then
+        if math.random(175) == 1 then
+            npc:PlaySound(165,1,0,false,2)
+        end
+    end
+
+    if d.subbehavior == "HealSpeed" then
+        if game.TimeCounter%30 == 0 and npc.HitPoints < npc.MaxHitPoints then
+            npc:AddHealth(1.5)
+            d.speed = d.speed + 0.3
+            d.wait = d.wait - 0.5
+            if tonumber(d.shootoffset) > 10 then
+                d.shootoffset = tostring(tonumber(d.shootoffset) - 2)
+            end
+            d.wait = 0
+        end
+    end
+
     if target.Position.X < npc.Position.X then
         sprite.FlipX = true
         else
         sprite.FlipX = false
     end
                         --finally animations
-    if npc.Velocity:Length() > 2 then
+    if npc.Velocity:Length() > 1.3 then
         npc:AnimWalkFrame("walk h","walk v",0)
     else
         if sprite:GetOverlayAnimation() == "head" then sprite:SetOverlayFrame("head", 0) end
@@ -404,6 +435,40 @@ function mod:PatientGetHurt(npc, damage, flag, source, countdown)
             d.state = "Shoot" 
             npc:MultiplyFriction(0.7)
         end
+    end
+end
+
+function mod:PatientShots(v, d)
+    if d.type == "ForeverHoming" then
+        if not d.init then
+            d.height = v.Height
+            d.init = true
+        end
+        if v.FrameCount < 500 then
+            v.Height = d.height
+        end
+    elseif d.type == "PatientEuthanasia" then
+        v.SpriteRotation = v.Velocity:GetAngleDegrees()
+        local psprite = v:GetSprite()
+        psprite:ReplaceSpritesheet(0, "gfx/projectiles/needle_projectile.png")
+        psprite:LoadGraphics()
+    end
+end
+
+function mod:PatientEuthInstaKill(player, collider, low)
+	player = player:ToPlayer()
+	if collider.Type == 9 and collider:GetData().type then
+		if collider:GetData().type == "PatientEuthanasia" then
+			player:Kill()
+			for i = 36, 360, 36 do
+				local proj = Isaac.Spawn(9, 0, 0, player.Position + Vector(0,9):Rotated(i), Vector(0,9):Rotated(i), player):ToProjectile();
+				local psprite = proj:GetSprite()
+				psprite:ReplaceSpritesheet(0, "gfx/needle_tears.png")
+				psprite:LoadGraphics()
+				proj:GetData().type = "PatientEuthanasia"
+				proj:Update()
+			end
+		end
     end
 end
 
