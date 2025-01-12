@@ -13,14 +13,6 @@
       </dropdown>
    </bitfield>
 </entity>
-<entity ID="161" Variant="4" Subtype="1" Name="Patient (Virus)" Image="mah boys/patientvirus.png" BaseHP="15"/>
-<entity ID="161" Variant="4" Subtype="2" Name="Patient (Speed Ball)" Image="mah boys/patientspeed.png" BaseHP="15"/>
-<entity ID="161" Variant="4" Subtype="3" Name="Patient (Roid Range)" Image="mah boys/patientroid.png" BaseHP="15"/>
-<entity ID="161" Variant="4" Subtype="4" Name="Patient (Experimental Treatment)" Image="mah boys/patientexperimental.png" BaseHP="15"/>
-<entity ID="161" Variant="4" Subtype="5" Name="Patient (Growth Hormones)" Image="mah boys/patientgrowth.png" BaseHP="15"/>
-<entity ID="161" Variant="4" Subtype="6" Name="Patient (Synthoil)" Image="mah boys/patientsynthoil.png" BaseHP="15"/>
-<entity ID="161" Variant="4" Subtype="7" Name="Patient (Adrenaline)" Image="mah boys/patientadrenaline.png" BaseHP="15"/>
-<entity ID="161" Variant="4" Subtype="8" Name="Patient (Euthanasia)" Image="mah boys/patienteuthanasia.png" BaseHP="15"/>
 <entity ID="161" Variant="6" Name="Snidge" Image="mah boys/snidge.png" BaseHP="0.1"/>
 <entity ID="161" Variant="11" Name="Floater" Image="mah boys/floater.png" BaseHP="10" StageHP="3" Tags="Champion"/>
 <entity ID="161" Variant="12" Name="Fivehead" Image="mah boys/fivehead.png" BaseHP="15" Tags="Champion"/>

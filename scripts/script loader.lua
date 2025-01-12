@@ -10,10 +10,10 @@ StageAPI.UnregisterCallbacks("FHAC")
 FHAC:LoadScripts("scripts", {
 	"savedata",
 	"constants",
+	"library",
 	"iam.main",
 	"callbacks",
 	"iam.misc.resources.fortunes",
-	"library",
 	"items",
 	"entities2",
 	"compatability.fiend folio.modcompact",
@@ -74,6 +74,7 @@ FHAC:LoadScripts("scripts.iam.items.actives", {
 
 FHAC:LoadScripts("scripts.iam.items.passives", {
 	"stinky mushroom",
+	"anal fissure"
 })
 
 FHAC:LoadScripts("scripts.iam.jokes", {

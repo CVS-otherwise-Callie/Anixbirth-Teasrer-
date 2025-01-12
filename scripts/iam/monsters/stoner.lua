@@ -41,8 +41,8 @@ function mod:StonerAI(npc, sprite, d)
     })
 
     if not d.init then
-        rng:SetSeed(npc.DropSeed,35)
-        d.face = d.face or rng:RandomInt(450)
+        rng:SetSeed(npc.DropSeed, 32)
+        d.face = d.face or rng:RandomInt(0, 450)
         sprite:SetFrame("Idle", d.face)
         npc:AddEntityFlags(EntityFlag.FLAG_NO_TARGET | EntityFlag.FLAG_NO_DEATH_TRIGGER)
         npc.GridCollisionClass = GridCollisionClass.COLLISION_WALL_EXCEPT_PLAYER
@@ -89,7 +89,6 @@ function mod:StonerAI(npc, sprite, d)
             end
         end
     end
-
 
     --code form psi hunter, thanks ff for teaching me how to block lasers
     mod.scheduleCallback(function() for _, laser in pairs(Isaac.FindByType(7, 1, -1, false, false)) do
