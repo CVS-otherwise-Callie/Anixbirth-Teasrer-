@@ -43,7 +43,10 @@ FHAC.Monsters = {
     ZapperTeller = mod:ENT("Zapper Teller"),
     Log = mod:ENT("Log"),
     Stoner = mod:ENT("Stoner"),
-    LightPressurePlateEntNull = mod:ENT("Light Pressure Plate Null Entity")
+    LightPressurePlateEntNull = mod:ENT("Light Pressure Plate Null Entity"),
+    LarryKingJr = mod:ENT("Larry King Jr."),
+    Sixhead = mod:ENT("Sixhead"),
+    Bottom = mod:ENT("Bottom")
 }
 
 FHAC.Grids = {

@@ -40,6 +40,7 @@ function mod:ProjStuff(v)
     mod.PallunShot(v, d)
     mod.SillyShot(v, d)
     mod:PatientShots(v, d)
+    mod:SixheadShot(v, d)
 end
 FHAC:AddCallback(ModCallbacks.MC_POST_PROJECTILE_UPDATE, mod.ProjStuff)
 
@@ -162,3 +163,15 @@ function mod:OnPostDataLoad(saveData, isLuamod)
 end
 
 SaveManager.AddCallback(SaveManager.Utility.CustomCallback.POST_DATA_LOAD, mod.OnPostDataLoad)
+
+if REPENTOGON then
+
+    function mod:SongChangesToIngameOST(music, arg, arg2)
+        local rDD = game:GetLevel():GetCurrentRoomDesc().Data
+        print(rDD.Name)
+        return Isaac.GetMusicIdByName("AnixbirthFunctions")
+    end
+
+--mod:AddCallback(ModCallbacks.MC_PRE_MUSIC_PLAY, mod.SongChangesToIngameOST)
+
+end

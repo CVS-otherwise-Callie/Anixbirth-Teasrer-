@@ -63,11 +63,11 @@
         <gibs amount="6" blood="1" bone="1" eye="0" gut="0" large="0" worm="1" />
         <preload-snd id="166" />
     </entity-->
-    <!--entity id="161" variant="2" name="Larry King Jr." anm2path="monsters/larrykingjr/larrykingjr.anm2" baseHP="7" boss="0" champion="0" collisionDamage="1" collisionMass="50" collisionRadius="20" friction="1" numGridCollisionPoints="8" shadowSize="15" stageHP="0" portrait="2" gridCollision="walls">
+    <entity id="161" variant="2" name="Larry King Jr." anm2path="monsters/larrykingjr/larrykingjr.anm2" baseHP="10" boss="0" champion="0" collisionDamage="1" collisionMass="37" collisionRadius="15" friction="1" numGridCollisionPoints="8" shadowSize="15" stageHP="0" portrait="2" gridCollision="walls">
 		<bestiary transform="0,0,1" anim="WalkHeadHori" />
         <gibs amount="8" blood="1" bone="1" eye="0" gut="1" large="0" />
         <preload-snd id="115" />
-    </entity-->
+    </entity>
     <!--entity id="161" variant="3" anm2path="monsters/rat/rat.anm2" reroll="true" baseHP="13" boss="0" champion="1" collisionDamage="1" collisionMass="7" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="17" stageHP="0" portrait="3">
 		<bestiary transform="0,-3,1" anim="Run" />
         <gibs amount="4" blood="1" bone="1" eye="1" gut="1" large="0" /> 
@@ -313,6 +313,18 @@
 		<bestiary transform="0,0,1" anim="Idle" />
         <gibs amount="6" blood="1" bone="0" eye="1" gut="1" large="0" />
         <preload-snd id="318" /> <!-- SOUND_WORM_SPIT -->
+    </entity>
+
+    <entity anm2path="monsters/sixhead/sixhead top.anm2" id="161" variant="210" subtype="0" reroll="true" baseHP="15" boss="0" champion="1" collisionDamage="1" collisionMass="40" collisionRadius="13" friction="0.1" name="Sixhead" numGridCollisionPoints="12" shadowSize="14" stageHP="4" hasFloorAlts="false" bestiary="true" gridCollision="walls" portrait="212">
+        <bestiary transform="0,0,1" anim="Shake" />
+        <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
+        <devolve id="12.0.0" weight="1" />
+    </entity>
+
+    <entity anm2path="monsters/sixhead/sixhead.anm2" id="161" variant="212" subtype="0" reroll="true" baseHP="15" boss="0" champion="1" collisionDamage="1" collisionMass="10" collisionRadius="13" friction="1" name="Bottom" numGridCollisionPoints="12" shadowSize="14" stageHP="4" hasFloorAlts="false" bestiary="true" gridCollision="walls" portrait="212">
+        <bestiary transform="0,0,1" anim="Shake00" />
+        <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
+        <devolve id="12.0.0" weight="1" />
     </entity>
 
     <!--Catacombs-->

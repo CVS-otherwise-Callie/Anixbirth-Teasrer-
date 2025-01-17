@@ -699,7 +699,8 @@ function mod:GetSpecificEntInRoom(myent, npc, radius)
 	if (#targets == 0) then
 		local target = npc:GetPlayerTarget()
 		local targetpos = mod:confusePos(npc, target.Position, 5, nil, nil)
-		return targetpos
+		npc:GetData().specificTargTypeIsPlayer = true
+		return target
 	end
 	local answer = targets[math.random(1, #targets)]
 	return answer
@@ -885,3 +886,100 @@ function FHAC:MorphOnDeath(npc, morphType, morphVariant, morphSub, sound, chance
 
 	return npc
 end
+
+--thx fiends folioooo
+function mod:GetNewPosAligned(pos,ignorerocks)
+	local room = game:GetRoom()
+	local vec = Vector(0, 40)
+	local positions = {}
+	for i = 1, 4 do
+		local gridvalid = true
+		local dist = 1
+		while gridvalid == true do
+			local newpos = pos + (vec:Rotated(i*90) * dist)
+			local gridColl = room:GetGridCollisionAtPos(newpos)
+			if (gridColl ~= GridCollisionClass.COLLISION_NONE or dist > 25) and not ignorerocks then
+				gridvalid = false
+			elseif ignorerocks and gridColl == GridCollisionClass.COLLISION_WALL or dist > 25 then
+				gridvalid = false
+			else
+				table.insert(positions, newpos)
+				dist = dist + 1
+			end
+		end
+	end
+	--[[for i = 1, #positions do
+		Isaac.Spawn(5, 40, 0, positions[i], nilvector, npc):ToEffect()
+	end]]
+	if #positions > 0 then
+		return positions[math.random(#positions)]
+	else
+		return pos
+	end
+end
+
+--ok i must be super lazy tonight but ye gain ff 
+function mod:GetMoveString(vec, doFlipX)
+    if math.abs(vec.Y) > math.abs(vec.X) then
+        if vec.Y > 0 then
+            return "Down", false
+        else
+            return "Up", false
+        end
+    else
+        if vec.X > 0 then
+            if doFlipX then
+                return "Hori", false
+            else
+                return "Right", false
+            end
+        else
+            if doFlipX then
+                return "Hori", true
+            else
+                return "Left", false
+            end
+        end
+    end
+end
+
+--based on the last two you guys know where this is from....
+function mod:diagonalMove(npc, speed, thirdboolean, xmult)
+	xmult = xmult or 1
+	local xvel = speed * xmult
+	local yvel = speed
+	if npc.Velocity.X < 0 then
+		xvel = xvel * -1
+	end
+	if npc.Velocity.Y < 0 then
+		yvel = yvel * -1
+	end
+
+	if mod:isScare(npc) then
+		if npc:GetPlayerTarget() then
+			local pdist = npc:GetPlayerTarget().Position:Distance(npc.Position)
+			if pdist < 300 then
+				local vec = (npc.Position - npc:GetPlayerTarget().Position):Resized(math.max(5, 10 - pdist/20))
+				xvel = vec.X
+				yvel = vec.Y
+			end
+		end
+	end
+	if mod:isConfuse(npc) then
+		local vec = mod:confusePos(npc, Vector(xvel, yvel), nil, true)
+		xvel = vec.X
+		yvel = vec.Y
+	end
+	if thirdboolean then
+		return Vector(xvel, yvel)
+	else
+        npc.Velocity = Vector(xvel, yvel)
+	end
+end
+
+function mod:changeExtension(filename, newExtension) 
+	local lastDotIndex = string.len(filename) - string.len(string.match(filename, "%.[^%.]*$"))
+	local baseName = string.sub(filename, 1, lastDotIndex - 1)
+	return baseName .. "." .. newExtension
+  
+  end

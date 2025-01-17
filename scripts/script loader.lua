@@ -50,7 +50,10 @@ FHAC:LoadScripts("scripts.iam.monsters", {
 	"techgrudge",
 	"log",
 	"stoner",
-	"lightpressureplatenullent"
+	"lightpressureplatenullent",
+	"larrykingjr",
+	"bottom",
+	"sixhead"
 })
 
 FHAC:LoadScripts("scripts.iam", {
