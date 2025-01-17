@@ -567,15 +567,24 @@ FHAC.SavedEntsLevel = FHAC.SavedEntsLevel or {}
 FHAC.ToBeSavedEnts = FHAC.ToBeSavedEnts or {}
 
 function mod:SaveEntToRoom(enttable)
-	if enttable.NPC:ToNPC():GetData().isPrevEntCopy then return end
 	for k, v in ipairs(FHAC.ToBeSavedEnts) do
 		if v[3] == GetPtrHash(enttable.NPC) then
 			v.NPC = enttable.NPC
 			return
 		end
 	end
+	if enttable.NPC:ToNPC():GetData().isPrevEntCopy then
+		for k, v in ipairs(FHAC.SavedEntsLevel) do
+			if v.Position:Distance(enttable.NPC.Position) < 0.001 then
+				table.remove(FHAC.SavedEntsLevel, k)
+				table.remove(FHAC.PreSavedEntsLevel, k)
+				enttable.NPC:ToNPC():GetData().isPrevEntCopy = false
+			end
+		end
+	end
 	enttable[3] = GetPtrHash(enttable.NPC)-- this turns into the thrid part of the table
 	enttable.Room = game:GetLevel():GetCurrentRoomDesc().Data
+	enttable.ListIndex = game:GetLevel():GetCurrentRoomDesc().ListIndex
 	enttable.Stage = game:GetLevel():GetStage()
 	table.insert(FHAC.ToBeSavedEnts, enttable)
 end
@@ -590,16 +599,23 @@ function mod:SavePreEnts()
 			local tab = {
 				NPC = enttable.NPC,
 				Room = enttable.Room,
+				ListIndex = enttable.ListIndex,
 				Stage = enttable.Stage,
 				Subtype = enttable.NPC.SubType,
 				Position = enttable.NPC.Position,
 				Velocity = enttable.NPC.Velocity,
-				Spawner = enttable.NPC.SpawnerEntity,
+				Spanwner = enttable.NPC.Spawner,
 				Data = enttable.NPC:GetData()
 			}
-		
+
+			if enttable.NPC:ToNPC():GetData().isPrevEntCopy then
+				for j, h in pairs(v) do
+					enttable[j] = v[j]
+				end
+			return end
+
 			mod:MixTables(tab, enttable)
-		
+				
 			table.insert(FHAC.PreSavedEntsLevel, tab)
 		end
 	end
@@ -618,8 +634,8 @@ end
 function mod:LoadSavedRoomEnts()
 	local ents = FHAC.SavedEntsLevel or {}
 	for k, v in pairs(ents) do
-		if v.Room and v.Room.Variant == game:GetLevel():GetCurrentRoomDesc().Data.Variant and v.Stage == game:GetLevel():GetStage() then
-			local ent = Isaac.Spawn(Isaac.GetEntityTypeByName(v.Name), Isaac.GetEntityVariantByName(v.Name), v.Subtype, v.Position, v.Velocity, v.Spawner)
+		if v.Room and v.ListIndex == game:GetLevel():GetCurrentRoomDesc().ListIndex and v.Stage == game:GetLevel():GetStage() then
+			local ent = Isaac.Spawn(Isaac.GetEntityTypeByName(v.Name), Isaac.GetEntityVariantByName(v.Name), v.Subtype, v.Position, v.Velocity, nil)
 			local d = ent:GetData()
 			d.isPrevEntCopy = true
 			for k, v in pairs(v.Data) do
@@ -916,6 +932,10 @@ function mod:GetNewPosAligned(pos,ignorerocks)
 	else
 		return pos
 	end
+end
+
+function mod:isScareOrConfuse(npc)
+	return npc:HasEntityFlags(EntityFlag.FLAG_CONFUSION | EntityFlag.FLAG_FEAR | EntityFlag.FLAG_SHRINK)
 end
 
 --ok i must be super lazy tonight but ye gain ff 
