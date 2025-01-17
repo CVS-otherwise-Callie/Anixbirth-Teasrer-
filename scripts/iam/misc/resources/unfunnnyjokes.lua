@@ -3,9 +3,9 @@ FHAC.UnfunnyJokes =
 Kid: I’ll call you later.
 Dad: Please, call me Dad.
 
-what do you call a
-deer without a nose?
-nobody nose!
+What do you call a man
+without a body or a nose?
+No-body nose!
 
 Kid: Make me a sandwich!
 Dad: Poof! You’re a sandwich.
