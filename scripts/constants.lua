@@ -49,8 +49,14 @@ FHAC.Monsters = {
     Bottom = mod:ENT("Bottom")
 }
 
+FHAC.Players = {
+    Johannes = Isaac.GetPlayerTypeByName("Johannes"),
+    Bohannes = Isaac.GetPlayerTypeByName("Johannes", true),
+    Pongon = Isaac.GetPlayerTypeByName("Pongon")
+}
+
 FHAC.Grids = {
-    LightPressurePlate = mod:ENT("HOPE Grid Spawner")
+    GlobalGridSpawner = mod:ENT("HOPE Grid Spawner")
 }
 
 FHAC.Familiars = { --YOU HAVE NO IDEA HOW MANY FUCKING TIMES I SPELLED THIS WRONG LMAO
@@ -90,7 +96,8 @@ FHAC.Collectibles = {
 if REPENTOGON then
 FHAC.Unlocks = {
     Floater = Isaac.GetAchievementIdByName("Floater"),
-    Fivehead = Isaac.GetAchievementIdByName("Fivehead")
+    Fivehead = Isaac.GetAchievementIdByName("Fivehead"),
+    Bohannes = Isaac.GetAchievementIdByName("JohannesB")
 }
 end
 

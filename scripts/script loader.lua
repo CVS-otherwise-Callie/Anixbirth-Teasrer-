@@ -93,6 +93,7 @@ end
 
 FHAC:LoadScripts("scripts.iam.characters", {
 	"johannes",
+	"johannesb",
 	"pongon"
 })
 

@@ -1002,4 +1002,48 @@ function mod:changeExtension(filename, newExtension)
 	local baseName = string.sub(filename, 1, lastDotIndex - 1)
 	return baseName .. "." .. newExtension
   
-  end
+end
+
+function mod:AltLockedClosetCutscene()
+
+	local rDD = game:GetLevel():GetCurrentRoomDesc().Data
+	local useVar = rDD.Variant
+	local seed = game:GetSeeds()
+	seed:AddSeedEffect(SeedEffect.SEED_NO_HUD)
+	seed:AddSeedEffect(SeedEffect.SEED_INVISIBLE_ISAAC)
+
+	for k, v in ipairs(Isaac.GetRoomEntities()) do
+		if v.Type ~= 1 then
+			v:Remove()
+		end
+	end
+	for i = 1, game:GetNumPlayers() do
+		game:GetPlayer(i).Position = game:GetRoom():GetCenterPos()
+	end
+
+	if mod:CheckForEntInRoom({Type = mod.Monsters.LightPressurePlateEntNull.ID, Variant = mod.Monsters.LightPressurePlateEntNull.Var, SubType = 0}, true, true, false) == false then
+		local ent = Isaac.Spawn(mod.Monsters.LightPressurePlateEntNull.ID, mod.Monsters.LightPressurePlateEntNull.Var, 0, Vector.Zero, Vector.Zero, nil)
+		ent:GetData().wasSpawned = true
+	end
+
+	if mod.YouCanEndTheAltCutsceneNow then
+		game:GetSeeds():AddSeedEffect(SeedEffect.SEED_PREVENT_ALL_CURSES) --no winning with this one
+		game:End(3)
+	end
+
+	if game:GetLevel():GetAbsoluteStage() == LevelStage.STAGE8 and useVar == 6 and mod.ImInAClosetPleaseHelp then return end
+
+	if game:GetLevel():GetAbsoluteStage() == LevelStage.STAGE8 then
+		if useVar ~= 6 then
+			Isaac.ExecuteCommand("goto d.6")
+		else
+			for i = 1, game:GetNumPlayers() do
+				game:GetPlayer(i).Position = game:GetRoom():GetCenterPos()
+				mod.ImInAClosetPleaseHelp = true
+				Isaac.Spawn(162, 2901, -1, game:GetRoom():GetCenterPos(), Vector.Zero, nil)
+			end
+		end
+	else
+		Isaac.ExecuteCommand("stage 13a")
+	end
+end

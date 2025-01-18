@@ -20,6 +20,14 @@ function mod:postSaveSlotLoad(_, _, slot)
     end
 end
 
+function mod:CheckPlayerUnlocked(player)
+
+    if player:GetPlayerType() == mod.Players.Bohannes then
+        
+    end
+
+end
+
 ---- REPENTAGON shit ----
 mod:AddCallback(ModCallbacks.MC_PRE_SPAWN_CLEAN_AWARD, mod.CheckEnemyDeathUnlocks)
 mod:AddCallback(ModCallbacks.MC_POST_SAVESLOT_LOAD, mod.CheckEnemyDeathUnlocks)

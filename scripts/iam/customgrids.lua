@@ -6,7 +6,7 @@ mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
     if npc.Variant == 0 and npc.SubType == 0 then
         npc:GetSprite():Play("Idle")
     end
-end, mod.Grids.LightPressurePlate.ID)
+end, mod.Grids.GlobalGridSpawner.ID)
 
 FHAC.LightPressurePlate = StageAPI.CustomGrid("FHACLightPressurePlate", {
     BaseType = GridEntityType.GRID_PRESSURE_PLATE,
@@ -15,7 +15,17 @@ FHAC.LightPressurePlate = StageAPI.CustomGrid("FHACLightPressurePlate", {
     Animation = "Off",
     RemoveOnAnm2Change = true,
     OverrideGridSpawns = true,
-    SpawnerEntity = {Type = FHAC.Grids.LightPressurePlate.ID, Variant = 2900}
+    SpawnerEntity = {Type = FHAC.Grids.GlobalGridSpawner.ID, Variant = 2900}
+})
+
+FHAC.AltHomeTrapDoorUnlock = StageAPI.CustomGrid("FHACAltHomeTrapDoorUnlock", {
+    BaseType = GridEntityType.GRID_STAIRS,
+    BaseVariant = 0,
+    Anm2 = "gfx/grid/althomeunlocktrapdoor.anm2",
+    Animation = "Closed",
+    RemoveOnAnm2Change = true,
+    OverrideGridSpawns = true,
+    SpawnerEntity = {Type = FHAC.Grids.GlobalGridSpawner.ID, Variant = 2901}
 })
 
 function mod.lightpressurePlateAI(customGrid)
@@ -83,6 +93,37 @@ function mod.lightpressurePlateAI(customGrid)
 
 end
 
+function mod.AltHomeTrapDoorUnlock(customGrid)
+    local grid = customGrid.GridEntity
+    local sprite = grid:GetSprite()
+    local d = customGrid.PersistentData
+
+    local rDD = game:GetLevel():GetCurrentRoomDesc().Data
+	local useVar = rDD.Variant
+
+    if not d.init then
+        d.KnockVar = 0
+        d.init = true
+    end
+
+    grid.State = 1
+    grid.VarData = 5
+
+    if game:GetLevel():GetAbsoluteStage() == LevelStage.STAGE8 and useVar == 6 and mod.ImInAClosetPleaseHelp then
+        if game.TimeCounter%70-d.KnockVar == 0 and not sprite:IsPlaying("Knock") then
+            mod:spritePlay(sprite, "Knock")
+            if math.random(2) == 2 and d.KnockVar <= 30 then
+                d.KnockVar = d.KnockVar + 2
+            end
+        end
+    end
+
+    if d.KnockVar > 30 then
+        mod.YouCanEndTheAltCutsceneNow = true
+    end
+
+end
+
 function mod.lightpressurePlateAIPost(customGrid)
     local grid = customGrid.GridEntity
     local sprite = grid:GetSprite()
@@ -101,4 +142,6 @@ function mod.lightpressurePlateAIPost(customGrid)
 end
 
 StageAPI.AddCallback("FHAC", "POST_CUSTOM_GRID_UPDATE", 1, mod.lightpressurePlateAI, "FHACLightPressurePlate")
+StageAPI.AddCallback("FHAC", "POST_CUSTOM_GRID_UPDATE", 1, mod.AltHomeTrapDoorUnlock, "FHACAltHomeTrapDoorUnlock")
 StageAPI.AddCallback("FHAC", "POST_SPAWN_CUSTOM_GRID", 1, mod.lightpressurePlateAIPost, "FHACLightPressurePlate")
+--StageAPI.AddCallback("FHAC", "POST_SPAWN_CUSTOM_GRID", 1, mod.AltHomeTrapDoorUnlockPost, "FHACAltHomeTrapDoorUnlock")
