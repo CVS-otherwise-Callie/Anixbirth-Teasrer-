@@ -1,11 +1,12 @@
 local mod = FHAC
 local game = Game()
+local ms = MusicManager()
 
 function mod:MusicCheckCallback()
+    local rDD = game:GetLevel():GetCurrentRoomDesc().Data
+	local useVar = rDD.Variant
     if mod.DSSavedata and mod.DSSavedata.customRoomMusic == 1 then
-	local rDD = game:GetLevel():GetCurrentRoomDesc().Data
     local customMusicID = nil
-    local ms = MusicManager()
 
     
 

@@ -1015,8 +1015,15 @@ function mod:AltLockedClosetCutscene()
 	seed:AddSeedEffect(SeedEffect.SEED_NO_HUD)
 	seed:AddSeedEffect(SeedEffect.SEED_INVISIBLE_ISAAC)
 
+	local ms = MusicManager()
+
 	if not mod.StartCutscene then
 		mod.YouCanEndTheAltCutsceneNow = false
+	end
+
+	if not mod.RuinSecretMusicInit then
+		Isaac.SetCurrentFloorMusic(Isaac.GetMusicIdByName("ruinsecret"))
+		mod.RuinSecretMusicInit = true
 	end
 
 	for k, v in ipairs(Isaac.GetRoomEntities()) do
@@ -1029,7 +1036,7 @@ function mod:AltLockedClosetCutscene()
 		game.Challenge = 6
 		game:GetPlayer(i):UpdateCanShoot()
 	end
-
+	
 	if mod:CheckForEntInRoom({Type = mod.Monsters.LightPressurePlateEntNull.ID, Variant = mod.Monsters.LightPressurePlateEntNull.Var, SubType = 0}, true, true, false) == false then
 		local ent = Isaac.Spawn(mod.Monsters.LightPressurePlateEntNull.ID, mod.Monsters.LightPressurePlateEntNull.Var, 0, Vector.Zero, Vector.Zero, nil)
 		ent:GetData().wasSpawned = true
@@ -1037,6 +1044,8 @@ function mod:AltLockedClosetCutscene()
 
 	if mod.YouCanEndTheAltCutsceneNow then
 		mod.YouCanEndTheAltCutsceneNow = false
+		mod.StartCutscene = false
+		mod.RuinSecretMusicInit = false
 		game:GetSeeds():AddSeedEffect(SeedEffect.SEED_PREVENT_ALL_CURSES) --no winning with this one
 		game:End(3)
 	end

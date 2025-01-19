@@ -20,6 +20,14 @@ function mod.LeaveGame()
 end
 FHAC:AddCallback(ModCallbacks.MC_PRE_GAME_EXIT, mod.LeaveGame)
 
+function mod.NewLevelStuff()
+    mod.YouCanEndTheAltCutsceneNow = false
+    mod.StartCutscene = false
+    mod.RuinSecretMusicInit = false
+end
+
+mod:AddCallback(ModCallbacks.MC_POST_NEW_LEVEL, mod.NewLevelStuff)
+
 function mod.PostUpdateStuff()
     if not FHAC.FiendFolioCompactLoaded then
         mod.FiendFolioCompat()

@@ -64,11 +64,12 @@ function mod:LarryKingJrAI(npc, sprite, d)
 
         if d.state == "Moving" then
             d.newpos = d.newpos or mod:GetNewPosAligned(npc.Position, true)
-            if npc.Position:Distance(d.newpos) < 20 or npc.Velocity:Length() < 0.3 or (mod:isScareOrConfuse(npc) and npc.StateFrame % 10 == 0) then
-                d.newpos = mod:GetNewPosAligned(npc.Position, true)
+            if npc.Position:Distance(d.newpos) < 30 or npc.Velocity:Length() < 0.5 or (mod:isScareOrConfuse(npc) and npc.StateFrame % 10 == 0) then
+                npc:MultiplyFriction(0.3)
+                d.newpos = mod:GetNewPosAligned(npc.Position, false)
             end
-            local targetvelocity = (d.newpos - npc.Position):Resized(5)
-            npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 0.3)
+            local targetvelocity = (d.newpos - npc.Position):Resized(3)
+            npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 1)
             
             npc.StateFrame = npc.StateFrame - 1
         end
