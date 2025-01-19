@@ -139,7 +139,15 @@ function mod.AltHomeTrapDoorUnlock(customGrid)
         75,
         78,
         110,
-        130
+        130,
+        136,
+        161,
+        163,
+        166,
+        201,
+        203,
+        205,
+        207,
     }
 
     if game:GetLevel():GetAbsoluteStage() == LevelStage.STAGE8 and useVar == 6 and mod.ImInAClosetPleaseHelp then
@@ -151,10 +159,11 @@ function mod.AltHomeTrapDoorUnlock(customGrid)
             end
     end
 
-    if d.StateFrame > bangtabs[#bangtabs]*1.5 then
-        print(d.StateFrame, bangtabs[#bangtabs]*1.5)
+    if d.StateFrame > 242 then
         mod.YouCanEndTheAltCutsceneNow = true
     end
+
+    print(d.StateFrame)
 
 end
 
