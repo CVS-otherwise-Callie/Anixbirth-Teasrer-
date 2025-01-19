@@ -10,4 +10,15 @@
         <sample weight="1" path="tombstonedooropen2.wav"/>
         <sample weight="1" path="tombstonedooropen3.wav"/>
     </sound>
+    <sound name="alt_trapdoor_bang">
+        <sample weight="1" path="alttrapdoorbang1.wav"/>
+        <sample weight="1" path="alttrapdoorbang2.wav"/>
+        <sample weight="1" path="alttrapdoorbang3.wav"/>
+        <sample weight="1" path="alttrapdoorbang4.wav"/>
+        <sample weight="1" path="alttrapdoorbang5.wav"/>
+        <sample weight="1" path="alttrapdoorbang6.wav"/>
+        <sample weight="1" path="alttrapdoorbang7.wav"/>
+        <sample weight="1" path="alttrapdoorbang8.wav"/>
+        <sample weight="1" path="alttrapdoorbang9.wav"/>
+    </sound>
 </sounds>

@@ -80,7 +80,8 @@ FHAC.Challenges = {
 }
 
 mod.Sounds = {
-    TombstoneMove = Isaac.GetSoundIdByName("tombstone_move")
+    TombstoneMove = Isaac.GetSoundIdByName("tombstone_move"),
+    AltTrapdoorBang = Isaac.GetSoundIdByName("alt_trapdoor_bang")
 }
 
 FHAC.Collectibles = {

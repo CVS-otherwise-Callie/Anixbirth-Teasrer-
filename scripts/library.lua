@@ -201,6 +201,7 @@ function mod:GetClosestGridEntToPos(pos, ignorepoop, ignorehole, rocktab)
 	for i = 0, room:GetGridSize() do
 		local grid = room:GetGridEntity(i)
 		if grid then
+			print(grid:GetSprite():GetFilename())
 			local gridpoint = room:GetGridPosition(i)
 			if mod:CheckTableContents(rocktab, grid:GetType()) then
 				if gridpoint:Distance(pos) < imtheclosest and grid.CollisionClass ~= 0 then
@@ -1004,6 +1005,8 @@ function mod:changeExtension(filename, newExtension)
   
 end
 
+mod.ImInAClosetPleaseHelp = false
+
 function mod:AltLockedClosetCutscene()
 
 	local rDD = game:GetLevel():GetCurrentRoomDesc().Data
@@ -1019,6 +1022,8 @@ function mod:AltLockedClosetCutscene()
 	end
 	for i = 1, game:GetNumPlayers() do
 		game:GetPlayer(i).Position = game:GetRoom():GetCenterPos()
+		game.Challenge = 6
+		game:GetPlayer(i):UpdateCanShoot()
 	end
 
 	if mod:CheckForEntInRoom({Type = mod.Monsters.LightPressurePlateEntNull.ID, Variant = mod.Monsters.LightPressurePlateEntNull.Var, SubType = 0}, true, true, false) == false then
@@ -1036,6 +1041,7 @@ function mod:AltLockedClosetCutscene()
 	if game:GetLevel():GetAbsoluteStage() == LevelStage.STAGE8 then
 		if useVar ~= 6 then
 			Isaac.ExecuteCommand("goto d.6")
+			mod.ImInAClosetPleaseHelp = false
 		else
 			for i = 1, game:GetNumPlayers() do
 				game:GetPlayer(i).Position = game:GetRoom():GetCenterPos()
@@ -1047,3 +1053,4 @@ function mod:AltLockedClosetCutscene()
 		Isaac.ExecuteCommand("stage 13a")
 	end
 end
+

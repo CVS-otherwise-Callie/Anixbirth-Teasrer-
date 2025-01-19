@@ -20,7 +20,7 @@ FHAC.LightPressurePlate = StageAPI.CustomGrid("FHACLightPressurePlate", {
 
 FHAC.AltHomeTrapDoorUnlock = StageAPI.CustomGrid("FHACAltHomeTrapDoorUnlock", {
     BaseType = GridEntityType.GRID_STAIRS,
-    BaseVariant = 0,
+    BaseVariant = 1,
     Anm2 = "gfx/grid/althomeunlocktrapdoor.anm2",
     Animation = "Closed",
     RemoveOnAnm2Change = true,
@@ -102,23 +102,56 @@ function mod.AltHomeTrapDoorUnlock(customGrid)
 	local useVar = rDD.Variant
 
     if not d.init then
-        d.KnockVar = 0
+        mod.YouCanEndTheAltCutsceneNow = false
+        d.knockInit = false
+        d.Num = 1
+        d.StateFrame = 0
         d.init = true
+    else
+        d.StateFrame = d.StateFrame + 1
     end
 
-    grid.State = 1
-    grid.VarData = 5
-
-    if game:GetLevel():GetAbsoluteStage() == LevelStage.STAGE8 and useVar == 6 and mod.ImInAClosetPleaseHelp then
-        if game.TimeCounter%70-d.KnockVar == 0 and not sprite:IsPlaying("Knock") then
-            mod:spritePlay(sprite, "Knock")
-            if math.random(2) == 2 and d.KnockVar <= 30 then
-                d.KnockVar = d.KnockVar + 2
-            end
+    local function Knock()
+        if not d.knockInit then
+            d.vecnum = Vector(1.015, 1.05)
+            sfx:Play(FHAC.Sounds.AltTrapdoorBang, 1, 2, false, 1, 0)
+            d.initnumber = d.StateFrame
+            d.knockInit = true
         end
     end
 
-    if d.KnockVar > 30 then
+    if d.knockInit then
+        d.vecnum = mod:Lerp(d.vecnum, Vector(d.vecnum.X - (d.StateFrame - d.initnumber)/1000, d.vecnum.Y - (d.StateFrame - d.initnumber)/500), 1)
+        sprite.Scale = d.vecnum
+        if d.vecnum:Distance(Vector(1, 1)) < 0.025 then
+            sprite.Scale = Vector(1, 1)
+            d.knockInit = false
+        end
+    end
+
+    local bangtabs = {
+        10,
+        14,
+        34,
+        37,
+        43,
+        73,
+        75,
+        78,
+        110,
+        130
+    }
+
+    if game:GetLevel():GetAbsoluteStage() == LevelStage.STAGE8 and useVar == 6 and mod.ImInAClosetPleaseHelp then
+            if d.StateFrame == bangtabs[d.Num] then
+                Knock()
+                d.Num = d.Num + 1
+            elseif d.StateFrame > bangtabs[#bangtabs] and d.StateFrame%1 == 0 then
+                Knock()
+            end
+    end
+
+    if d.StateFrame > bangtabs[#bangtabs]*1.5 then
         mod.YouCanEndTheAltCutsceneNow = true
     end
 
