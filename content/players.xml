@@ -1,25 +1,39 @@
 <players root="gfx/characters/costumes/" portraitroot="gfx/ui/stage/" nameimageroot="gfx/ui/boss/">
-    <player name="Johannes"
-        skin="Character_001_Isaac.png"
-        hidden="true"
-        nameimage="playername_johannes.png"
-	canShoot="true"
-        hp="4"
-        keys="3"
-        portrait="johannesportrait.png"
-        skinColor="-1"
-	speedmodifier="1.5"
-	firedelaymodifier="1.1"
-/>
-    <player name="Pongon"
-        skin="shh secret/pongon.png"
-        hidden="true"
-        nameimage="playername_pongon.png"
-	canShoot="true"
-        hp="6"
-        portrait="pongon.png"
-        skinColor="-1"
-/>
+        <player name="Johannes"
+                skin="player_johannes.png"
+                hidden="true"
+                nameimage="playername_johannes.png"
+	        canShoot="true"
+                hp="4"
+                keys="3"
+                portrait="johannesportrait.png"
+                skinColor="-1"
+	        speedmodifier="1.5"
+	        firedelaymodifier="1.1"
+        />
+
+        <player
+		name="Johannes" bSkinParent="Johannes"
+		hp="4"
+                hidden="true"
+		skin="player_johannesb.png" skinColor="-1"
+		nameimage="playername_fiend.png"
+		portrait="null.png"
+		extraportrait="extra_biend.anm2"
+		costumeSuffix="biend"
+		birthright="???"
+	/>
+
+
+        <player name="Pongon"
+                skin="shh secret/pongon.png"
+                hidden="true"
+                nameimage="playername_pongon.png"
+	        canShoot="true"
+                hp="6"
+                portrait="pongon.png"
+                skinColor="-1"
+        />
 </players>
 
 

@@ -1,5 +1,5 @@
 <AnimatedActor>
-	<Info CreatedBy="TJP" CreatedOn="11/01/2025 22:37:13" Version="3" Fps="30"/>
+	<Info CreatedBy="TJP" CreatedOn="1/11/2025 7:08:39 PM" Version="4" Fps="30"/>
 	<Content>
 		<Spritesheets>
 			<Spritesheet Path="monster_larry_king_jr.png" Id="0"/>
@@ -17,7 +17,7 @@
 		</Events>
 	</Content>
 	<Animations DefaultAnimation="HeadHori">
-		<Animation Name="HeadHori" FrameNum="16" Loop="false">
+		<Animation Name="HeadHori" FrameNum="16" Loop="true">
 			<RootAnimation>
 				<Frame XPosition="0" YPosition="0" XScale="100" YScale="100" Delay="1" Visible="true" RedTint="255" GreenTint="255" BlueTint="255" AlphaTint="255" RedOffset="0" GreenOffset="0" BlueOffset="0" Rotation="0" Interpolated="false"/>
 			</RootAnimation>
@@ -36,7 +36,7 @@
 			</NullAnimations>
 			<Triggers/>
 		</Animation>
-		<Animation Name="HeadUp" FrameNum="16" Loop="false">
+		<Animation Name="HeadUp" FrameNum="16" Loop="true">
 			<RootAnimation>
 				<Frame XPosition="0" YPosition="0" XScale="100" YScale="100" Delay="1" Visible="true" RedTint="255" GreenTint="255" BlueTint="255" AlphaTint="255" RedOffset="0" GreenOffset="0" BlueOffset="0" Rotation="0" Interpolated="false"/>
 			</RootAnimation>
@@ -55,7 +55,7 @@
 			</NullAnimations>
 			<Triggers/>
 		</Animation>
-		<Animation Name="HeadDown" FrameNum="16" Loop="false">
+		<Animation Name="HeadDown" FrameNum="16" Loop="true">
 			<RootAnimation>
 				<Frame XPosition="0" YPosition="0" XScale="100" YScale="100" Delay="1" Visible="true" RedTint="255" GreenTint="255" BlueTint="255" AlphaTint="255" RedOffset="0" GreenOffset="0" BlueOffset="0" Rotation="0" Interpolated="false"/>
 			</RootAnimation>
@@ -152,7 +152,7 @@
 			</NullAnimations>
 			<Triggers/>
 		</Animation>
-		<Animation Name="HeadStrainHoriIdle" FrameNum="2" Loop="false">
+		<Animation Name="HeadStrainHoriIdle" FrameNum="2" Loop="true">
 			<RootAnimation>
 				<Frame XPosition="0" YPosition="0" XScale="100" YScale="100" Delay="1" Visible="true" RedTint="255" GreenTint="255" BlueTint="255" AlphaTint="255" RedOffset="0" GreenOffset="0" BlueOffset="0" Rotation="0" Interpolated="false"/>
 			</RootAnimation>
@@ -171,7 +171,7 @@
 			</NullAnimations>
 			<Triggers/>
 		</Animation>
-		<Animation Name="HeadStrainUpIdle" FrameNum="2" Loop="false">
+		<Animation Name="HeadStrainUpIdle" FrameNum="2" Loop="true">
 			<RootAnimation>
 				<Frame XPosition="0" YPosition="0" XScale="100" YScale="100" Delay="1" Visible="true" RedTint="255" GreenTint="255" BlueTint="255" AlphaTint="255" RedOffset="0" GreenOffset="0" BlueOffset="0" Rotation="0" Interpolated="false"/>
 			</RootAnimation>
@@ -190,7 +190,7 @@
 			</NullAnimations>
 			<Triggers/>
 		</Animation>
-		<Animation Name="HeadStrainDownIdle" FrameNum="2" Loop="false">
+		<Animation Name="HeadStrainDownIdle" FrameNum="2" Loop="true">
 			<RootAnimation>
 				<Frame XPosition="0" YPosition="0" XScale="100" YScale="100" Delay="1" Visible="true" RedTint="255" GreenTint="255" BlueTint="255" AlphaTint="255" RedOffset="0" GreenOffset="0" BlueOffset="0" Rotation="0" Interpolated="false"/>
 			</RootAnimation>
@@ -293,7 +293,7 @@
 				<Trigger EventId="0" AtFrame="1"/>
 			</Triggers>
 		</Animation>
-		<Animation Name="BodyHori" FrameNum="16" Loop="false">
+		<Animation Name="BodyHori" FrameNum="16" Loop="true">
 			<RootAnimation>
 				<Frame XPosition="0" YPosition="0" XScale="100" YScale="100" Delay="1" Visible="true" RedTint="255" GreenTint="255" BlueTint="255" AlphaTint="255" RedOffset="0" GreenOffset="0" BlueOffset="0" Rotation="0" Interpolated="false"/>
 			</RootAnimation>
@@ -312,7 +312,7 @@
 			</NullAnimations>
 			<Triggers/>
 		</Animation>
-		<Animation Name="BodyVert" FrameNum="16" Loop="false">
+		<Animation Name="BodyVert" FrameNum="16" Loop="true">
 			<RootAnimation>
 				<Frame XPosition="0" YPosition="0" XScale="100" YScale="100" Delay="1" Visible="true" RedTint="255" GreenTint="255" BlueTint="255" AlphaTint="255" RedOffset="0" GreenOffset="0" BlueOffset="0" Rotation="0" Interpolated="false"/>
 			</RootAnimation>
@@ -383,7 +383,7 @@
 			</NullAnimations>
 			<Triggers/>
 		</Animation>
-		<Animation Name="BodyStrainHoriIdle" FrameNum="2" Loop="false">
+		<Animation Name="BodyStrainHoriIdle" FrameNum="2" Loop="true">
 			<RootAnimation>
 				<Frame XPosition="0" YPosition="0" XScale="100" YScale="100" Delay="1" Visible="true" RedTint="255" GreenTint="255" BlueTint="255" AlphaTint="255" RedOffset="0" GreenOffset="0" BlueOffset="0" Rotation="0" Interpolated="false"/>
 			</RootAnimation>
@@ -402,7 +402,7 @@
 			</NullAnimations>
 			<Triggers/>
 		</Animation>
-		<Animation Name="BodyStrainVertIdle" FrameNum="2" Loop="false">
+		<Animation Name="BodyStrainVertIdle" FrameNum="2" Loop="true">
 			<RootAnimation>
 				<Frame XPosition="0" YPosition="0" XScale="100" YScale="100" Delay="1" Visible="true" RedTint="255" GreenTint="255" BlueTint="255" AlphaTint="255" RedOffset="0" GreenOffset="0" BlueOffset="0" Rotation="0" Interpolated="false"/>
 			</RootAnimation>
@@ -469,7 +469,7 @@
 				<Trigger EventId="0" AtFrame="1"/>
 			</Triggers>
 		</Animation>
-		<Animation Name="ButtHori" FrameNum="16" Loop="false">
+		<Animation Name="ButtHori" FrameNum="16" Loop="true">
 			<RootAnimation>
 				<Frame XPosition="0" YPosition="0" XScale="100" YScale="100" Delay="1" Visible="true" RedTint="255" GreenTint="255" BlueTint="255" AlphaTint="255" RedOffset="0" GreenOffset="0" BlueOffset="0" Rotation="0" Interpolated="false"/>
 			</RootAnimation>
@@ -488,7 +488,7 @@
 			</NullAnimations>
 			<Triggers/>
 		</Animation>
-		<Animation Name="ButtUp" FrameNum="16" Loop="false">
+		<Animation Name="ButtUp" FrameNum="16" Loop="true">
 			<RootAnimation>
 				<Frame XPosition="0" YPosition="0" XScale="100" YScale="100" Delay="1" Visible="true" RedTint="255" GreenTint="255" BlueTint="255" AlphaTint="255" RedOffset="0" GreenOffset="0" BlueOffset="0" Rotation="0" Interpolated="false"/>
 			</RootAnimation>
@@ -507,7 +507,7 @@
 			</NullAnimations>
 			<Triggers/>
 		</Animation>
-		<Animation Name="ButtDown" FrameNum="16" Loop="false">
+		<Animation Name="ButtDown" FrameNum="16" Loop="true">
 			<RootAnimation>
 				<Frame XPosition="0" YPosition="0" XScale="100" YScale="100" Delay="1" Visible="true" RedTint="255" GreenTint="255" BlueTint="255" AlphaTint="255" RedOffset="0" GreenOffset="0" BlueOffset="0" Rotation="0" Interpolated="false"/>
 			</RootAnimation>

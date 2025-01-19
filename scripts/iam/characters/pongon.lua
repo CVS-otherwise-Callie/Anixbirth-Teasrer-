@@ -6,7 +6,7 @@ local deathcount = 0
 
 function mod:IsPongon(player)
     if not player then player = Isaac.GetPlayer() end
-    if player:GetPlayerType() == Isaac.GetPlayerTypeByName("Pongon") then
+    if player:GetPlayerType() == FHAC.Players.Pongon then
         return "Pongon"
     end
     return false

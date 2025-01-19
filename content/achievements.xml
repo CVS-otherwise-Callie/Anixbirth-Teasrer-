@@ -1,4 +1,7 @@
 <achievements gfxroot="gfx/ui/achievement/">
 	<achievement name="Floater" text='Floater' gfx="Achievement_Floater.png"/>
 	<achievement name="Fivehead" text='Fivehead' gfx="Achievement_Fivehead.png"/>
+
+	<!--Players-->
+	<achievement name="JohannesB" text='Tainted Johannes' gfx="Achievement_TaintedJohannes"/>
 </achievements>

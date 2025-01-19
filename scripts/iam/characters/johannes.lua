@@ -1,6 +1,6 @@
 local mod = FHAC
 local game = Game()
-local johannes = Isaac.GetPlayerTypeByName("Johannes")
+local johannes = FHAC.Players.Johannes
 local player = Isaac.GetPlayer()
 local rng = RNG()
 local isplayer

@@ -64,3 +64,14 @@ function mod:NPCReplaceCallback(npc)
 
     end
 end
+
+function mod:SongChangesToIngameOST(music, arg, arg2)
+    local lev = game:GetLevel():GetAbsoluteStage()
+    local back = game:GetRoom():GetBackdropType()
+    local song
+    if lev ~= LevelStage.STAGE7 then
+        if back == BackdropType.BASEMENT then
+            song = Isaac.GetMusicIdByName("AnixbirthBasement")
+        end
+    end
+end

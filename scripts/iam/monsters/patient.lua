@@ -16,7 +16,7 @@ function mod:PatientAI(npc, sprite, d)
     local sfx = SFXManager
     local targetpos = mod:confusePos(npc, target.Position, 5, nil, nil)
     local projparams = ProjectileParams()
-    rng:SetSeed(game:GetRoom():GetSpawnSeed(), 0)
+    rng:SetSeed(game:GetRoom():GetSpawnSeed(), 32)
     local patienttypes = {
         {
             name = "virus",
@@ -145,7 +145,7 @@ function mod:PatientAI(npc, sprite, d)
     if not d.init then
         local tab
         if npc.SubType == nil or npc.SubType == 0 then
-            tab = patienttypes[rng:RandomInt(1, #patienttypes - 1)]
+            tab = patienttypes[math.random(1, #patienttypes - 1)]
         else
             tab = patienttypes[npc.SubType]
         end
