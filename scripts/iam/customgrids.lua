@@ -152,6 +152,7 @@ function mod.AltHomeTrapDoorUnlock(customGrid)
     end
 
     if d.StateFrame > bangtabs[#bangtabs]*1.5 then
+        print(d.StateFrame, bangtabs[#bangtabs]*1.5)
         mod.YouCanEndTheAltCutsceneNow = true
     end
 

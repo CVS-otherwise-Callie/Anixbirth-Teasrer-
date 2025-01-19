@@ -1015,6 +1015,10 @@ function mod:AltLockedClosetCutscene()
 	seed:AddSeedEffect(SeedEffect.SEED_NO_HUD)
 	seed:AddSeedEffect(SeedEffect.SEED_INVISIBLE_ISAAC)
 
+	if not mod.StartCutscene then
+		mod.YouCanEndTheAltCutsceneNow = false
+	end
+
 	for k, v in ipairs(Isaac.GetRoomEntities()) do
 		if v.Type ~= 1 then
 			v:Remove()
@@ -1032,11 +1036,12 @@ function mod:AltLockedClosetCutscene()
 	end
 
 	if mod.YouCanEndTheAltCutsceneNow then
+		mod.YouCanEndTheAltCutsceneNow = false
 		game:GetSeeds():AddSeedEffect(SeedEffect.SEED_PREVENT_ALL_CURSES) --no winning with this one
 		game:End(3)
 	end
 
-	if game:GetLevel():GetAbsoluteStage() == LevelStage.STAGE8 and useVar == 6 and mod.ImInAClosetPleaseHelp then return end
+	if game:GetLevel():GetAbsoluteStage() == LevelStage.STAGE8 and useVar == 6 and mod.ImInAClosetPleaseHelp then mod.StartCutscene = true return end
 
 	if game:GetLevel():GetAbsoluteStage() == LevelStage.STAGE8 then
 		if useVar ~= 6 then
