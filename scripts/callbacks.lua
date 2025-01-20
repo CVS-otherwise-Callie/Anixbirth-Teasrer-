@@ -88,6 +88,9 @@ mod:AddCallback(ModCallbacks.MC_POST_PLAYER_UPDATE, mod.PostPlayerUpdate)
 
 function mod:PostGameStarted(bool)
     mod.CheckForNewRoom(bool)
+    mod.YouCanEndTheAltCutsceneNow = false
+    mod.StartCutscene = false
+    mod.RuinSecretMusicInit = false
 end
 mod:AddCallback(ModCallbacks.MC_POST_GAME_STARTED, mod.PostGameStarted)
 
@@ -133,6 +136,7 @@ function mod:NPCGetHurtStuff(npc, damage, flag, source, countdown)
     mod:PatientGetHurt(npc, damage, flag, source,countdown)
     mod:PallunLeaveWhenHit(npc)
     mod:StrawDollActiveEffect(npc, damage, flag, countdown)
+    mod:LarryGetHurt(npc, damage, flag, source)
 
     if npc.Type == 1 then
         local d = npc:GetData()

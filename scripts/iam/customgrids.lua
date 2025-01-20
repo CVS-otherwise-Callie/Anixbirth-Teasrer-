@@ -159,11 +159,9 @@ function mod.AltHomeTrapDoorUnlock(customGrid)
             end
     end
 
-    if d.StateFrame > 242 then
+    if d.StateFrame > 242 and d.StateFrame < 244 then
         mod.YouCanEndTheAltCutsceneNow = true
     end
-
-    print(d.StateFrame)
 
 end
 

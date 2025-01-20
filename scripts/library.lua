@@ -214,6 +214,10 @@ function mod:GetClosestGridEntToPos(pos, ignorepoop, ignorehole, rocktab)
 	return closestgridpoint
 end
 
+function mod:HasDamageFlag(damageFlag, damageFlags)
+    return damageFlags & damageFlag ~= 0
+end
+
 
 function mod:GetClosestGridEntAlongAxis(pos, axis, ignorepoop, ignorehole, rocktab)
 	local room = game:GetRoom()
@@ -522,6 +526,7 @@ end
 
 function mod:CheckTableContents(table, element)
 	for _, value in pairs(table) do
+		print(value, element)
 	  	if value == element then
 			return true
 	  	end
@@ -1007,6 +1012,54 @@ end
 
 mod.ImInAClosetPleaseHelp = false
 
+function mod:setUpCutscene(stage, room, noisaac, pos, music)
+	noisaac = noisaac or true
+
+	local rDD = game:GetLevel():GetCurrentRoomDesc().Data
+	local useVar = rDD.Variant
+	local seed = game:GetSeeds()
+
+	if noisaac then
+		seed:AddSeedEffect(SeedEffect.SEED_NO_HUD)
+		seed:AddSeedEffect(SeedEffect.SEED_INVISIBLE_ISAAC)
+	end
+
+	if game:GetLevel():GetAbsoluteStage() == LevelStage.STAGE8 and useVar == 6 and mod.ImInAClosetPleaseHelp then mod.StartCutscene = true return end
+
+	if game:GetLevel():GetAbsoluteStage() == LevelStage.STAGE8 then
+		if useVar ~= 6 then
+			Isaac.ExecuteCommand("goto d." .. room)
+			mod.ImInAClosetPleaseHelp = false
+		elseif noisaac then
+			for i = 1, game:GetNumPlayers() do
+				game:GetPlayer(i).Position = game:GetRoom():GetCenterPos()
+				mod.ImInAClosetPleaseHelp = true
+				Isaac.Spawn(162, 2901, -1, game:GetRoom():GetCenterPos(), Vector.Zero, nil)
+			end
+		end
+	else
+		Isaac.ExecuteCommand("stage " .. stage)
+	end
+end
+
+function mod:FadeOut(time)
+
+	local ent = Isaac.Spawn(mod.Effects.BlackOverlayBox.ID, mod.Effects.BlackOverlayBox.Var, -1, Vector(360, 360), Vector.Zero, nil)
+	local npc = ent:ToNPC()
+	local sprite = ent:GetSprite()
+	local d = ent:GetData()
+
+	if not d.init then
+		d.starttime = game.TimeCounter/30
+		d.init = true
+	else
+		npc.StateFrame = npc.StateFrame + 1
+	end
+
+
+
+end
+
 function mod:AltLockedClosetCutscene()
 
 	local rDD = game:GetLevel():GetCurrentRoomDesc().Data
@@ -1021,8 +1074,8 @@ function mod:AltLockedClosetCutscene()
 		mod.YouCanEndTheAltCutsceneNow = false
 	end
 
-	if not mod.RuinSecretMusicInit then
-		Isaac.SetCurrentFloorMusic(Isaac.GetMusicIdByName("ruinsecret"))
+	if not mod.RuinSecretMusicInit and mod.StartCutscene then
+		ms:Play(Isaac.GetMusicIdByName("ruinsecret"), 0)
 		mod.RuinSecretMusicInit = true
 	end
 
@@ -1043,11 +1096,10 @@ function mod:AltLockedClosetCutscene()
 	end
 
 	if mod.YouCanEndTheAltCutsceneNow then
-		mod.YouCanEndTheAltCutsceneNow = false
-		mod.StartCutscene = false
-		mod.RuinSecretMusicInit = false
 		game:GetSeeds():AddSeedEffect(SeedEffect.SEED_PREVENT_ALL_CURSES) --no winning with this one
-		game:End(3)
+		ms:Fadeout(0.01)
+
+		--game:End(3)
 	end
 
 	if game:GetLevel():GetAbsoluteStage() == LevelStage.STAGE8 and useVar == 6 and mod.ImInAClosetPleaseHelp then mod.StartCutscene = true return end
