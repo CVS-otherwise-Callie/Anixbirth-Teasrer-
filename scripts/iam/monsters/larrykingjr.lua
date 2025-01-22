@@ -207,7 +207,7 @@ function mod:LarryKingJrAI(npc, sprite, d)
 
         d.elname = d.elname or d.name
         d.extraNum = npc.Parent:GetData().extraNum or d.extraNum
-        if d.extraNum+1 == 0 then
+        if d.extraNum+1 == 0 or d.MoveDelay == 0 then
             return
         end
         if (d.extraNum+1)%d.MoveDelay <= 3 then
@@ -380,6 +380,7 @@ function mod:LarryKingJrAI(npc, sprite, d)
         end
 
         local buttdat = GetButtEnd(d.butts)
+        if #d.butts == 0 then return end
         buttdat = buttdat:GetData()
         if buttdat.SegNumber ~= 1 then
             buttdat.IsButt = true
