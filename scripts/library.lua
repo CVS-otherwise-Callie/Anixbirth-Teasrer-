@@ -4,7 +4,6 @@ local sfx = SFXManager()
 
 function mod:DeliriumRoom()
 	if #Isaac.FindByType(EntityType.ENTITY_DELIRIUM, -1, -1, false, false) > 0 then
-		print(#Isaac.FindByType(EntityType.ENTITY_DELIRIUM, -1, -1, false, false))
 		mod.IsDeliRoom = true
 	else
 		mod.IsDeliRoom = false
@@ -201,7 +200,6 @@ function mod:GetClosestGridEntToPos(pos, ignorepoop, ignorehole, rocktab)
 	for i = 0, room:GetGridSize() do
 		local grid = room:GetGridEntity(i)
 		if grid then
-			print(grid:GetSprite():GetFilename())
 			local gridpoint = room:GetGridPosition(i)
 			if mod:CheckTableContents(rocktab, grid:GetType()) then
 				if gridpoint:Distance(pos) < imtheclosest and grid.CollisionClass ~= 0 then
@@ -526,7 +524,6 @@ end
 
 function mod:CheckTableContents(table, element)
 	for _, value in pairs(table) do
-		print(value, element)
 	  	if value == element then
 			return true
 	  	end
@@ -1118,5 +1115,82 @@ function mod:AltLockedClosetCutscene()
 	else
 		Isaac.ExecuteCommand("stage 13a")
 	end
+end
+
+local function GetLarryDist(table, element)
+	for num, value in pairs(table) do
+		  if value:Distance(element)  == 0  then
+			return num
+		  end
+	end
+	return false
+end
+
+local function HasPossibleParentSegs(butts, d)
+	local tab = {}
+	if d.butts then
+		for k, butt in ipairs(Isaac.FindByType(mod.Monsters.LarryKingJr.ID, mod.Monsters.LarryKingJr.Var)) do
+			table.insert(tab, butt.Position)
+		end
+		if not butts:IsDead() and GetLarryDist(tab, d.butts[1].Position) then
+			return GetLarryDist(tab, d.butts[1].Position)
+		end
+	end
+end
+
+local function DoDataThing(d, dat)
+    for k, v in ipairs(dat) do
+        if v then
+            table.remove(dat, k)
+        end
+    end
+    for k, v in pairs(d) do
+        if not dat[k] then
+            dat[k] = v
+        end
+    end
+end
+
+function mod:PostDeathSegments(npc, segments, ishead)
+	local d = npc:GetData()
+	if not ishead and not d.FinishedEverything then
+		if not segments or #segments == 0 then return end
+		table.remove(segments, 1)
+		local ent = segments[1]
+		local dat = ent:GetData()
+		for k, butt in ipairs(Isaac.FindByType(mod.Monsters.LarryKingJr.ID, mod.Monsters.LarryKingJr.Var)) do
+			if HasPossibleParentSegs(butt, d) then
+				npc.Parent = segments[1]
+				butt:GetData().SegNumber = butt:GetData().SegNumber - 1
+			end
+		end
+		local buttdat = segments[#segments]:GetData()
+		buttdat.IsButt = true
+		buttdat.name = "Butt"
+		DoDataThing(d, dat)
+	elseif d.IsSegment then
+		for k, butt in ipairs(Isaac.FindByType(mod.Monsters.LarryKingJr.ID, mod.Monsters.LarryKingJr.Var)) do
+			if HasPossibleParentSegs(butt, d) and butt:GetData().SegNumber > d.SegNumber then
+				butt:GetData().SegNumber = butt:GetData().SegNumber - 1
+			end
+		end
+	end
+	d.FinishedEverything = true
+end
+
+--thx guwah
+function mod:CheckStage(stagename, backdroptypes)
+    local level = game:GetLevel()
+    local room = game:GetRoom()
+    local levelname = level:GetName()
+    if levelname == stagename or levelname == stagename.."I" or levelname == stagename.."II" then
+        return true
+    elseif backdroptypes then
+        for _, backdrop in pairs(backdroptypes) do
+            if room:GetBackdropType() == backdrop then
+                return true
+            end
+        end
+    end
 end
 

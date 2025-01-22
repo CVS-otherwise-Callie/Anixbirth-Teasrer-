@@ -180,7 +180,6 @@ if REPENTOGON then
 
     function mod:SongChangesToIngameOST(music, arg, arg2)
         local rDD = game:GetLevel():GetCurrentRoomDesc().Data
-        print(rDD.Name)
         return Isaac.GetMusicIdByName("AnixbirthFunctions")
     end
 

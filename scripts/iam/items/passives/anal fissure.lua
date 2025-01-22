@@ -38,8 +38,6 @@ function mod:AnalFissure(player)
 
     if game.TimeCounter%time ~= 0 then return end
 
-    print(game.TimeCounter%time*7)
-
     if game.TimeCounter%(time*7) == 0 then
         local pool = Isaac.Spawn(EntityType.ENTITY_EFFECT, creep, -1, player.Position + Vector(math.random(-5, 5), math.random(-5, 5)), Vector.Zero, player):ToEffect()
         pool:SetTimeout(timeout)

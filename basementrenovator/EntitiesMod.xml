@@ -1,5 +1,14 @@
 <data>
 
+<entity ID="161" Variant="2" Name="Larry King Jr." Image="mah boys/larrykingjr.png" BaseHP="10">
+<bitfield Key="Subtype">
+        <spinner Length="16" ValueOffset="2" Name="Length">
+          <tooltip>
+			2 is Head and Body, anymore adds more
+          </tooltip>
+        </spinner>
+      </bitfield>
+</entity>
 <entity ID="161" Variant="4" Name="Patient" Image="mah boys/patientvirus.png" BaseHP="15">
    <bitfield Key="Subtype">
       <dropdown Name="Patient Type" Length="7">
@@ -136,6 +145,7 @@ Use 2, 4, or 6 normally.
 
 	<group Name="HOPE Basement" Label="Basement">
 		<group Name="HOPE Basement Enemies">
+					<entity Name="Larry King Jr."/>
 		    <entity Name="Snidge"/>
 			<entity Name="Log"/>
 			<entity Name="Neutral Fly"/>
