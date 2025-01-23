@@ -942,12 +942,22 @@ function mod:isScareOrConfuse(npc)
 end
 
 --ok i must be super lazy tonight but ye gain ff 
-function mod:GetMoveString(vec, doFlipX)
+function mod:GetMoveString(vec, doFlipX, doFlipY)
+	doFlipX = doFlipX or true
+	doFlipY = doFlipY or false
     if math.abs(vec.Y) > math.abs(vec.X) then
         if vec.Y > 0 then
-            return "Down", false
-        else
-            return "Up", false
+            if doFlipY then
+                return "Vert", false
+            else
+                return "Down", false
+            end        
+		else
+			if doFlipY then
+                return "Vert", true
+            else
+                return "Up", false
+            end
         end
     else
         if vec.X > 0 then

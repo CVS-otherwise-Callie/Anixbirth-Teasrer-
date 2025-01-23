@@ -38,8 +38,8 @@ local function GetButtEnd(butts)
     num = butts
     if #butts == 0 then return end
     if butt:IsDead() and butts[#butts] then
-        table.remove(num, #butts)
-        GetButtEnd(num)
+        table.remove(butts, #butts)
+        GetButtEnd(butts)
     else
         return butt
     end
@@ -48,6 +48,11 @@ end
 local function GetDipsWithSameDataLarry(npc)
     local tab = {}
     for k, poop in ipairs(Isaac.FindByType(EntityType.ENTITY_DIP)) do
+        if poop:GetData().InitSeed == npc:GetData().InitSeed and poop.Position:Distance(npc.Position) > 0 then
+            table.insert(tab, poop)
+        end
+    end
+    for k, poop in ipairs(Isaac.FindByType(EntityType.ENTITY_DRIP)) do
         if poop:GetData().InitSeed == npc:GetData().InitSeed and poop.Position:Distance(npc.Position) > 0 then
             table.insert(tab, poop)
         end
@@ -67,6 +72,7 @@ function mod:LarryKingJrAI(npc, sprite, d)
         if not d.bodyInit and not d.IsSegment then
             d.InitSeed = npc.InitSeed
             d.extraNum = 0
+            d.MovementLog = d.MovementLog or {}
             local num = math.random(3)+1
             if npc.SubType <= 0 then
                 npc.SubType = num
@@ -92,6 +98,7 @@ function mod:LarryKingJrAI(npc, sprite, d)
                     butt:SetSpriteFrame("BodyHori", 1)
                 end
                 table.insert(d.butts, butt)
+                table.insert(d.MovementLog, butt.Position)
                 butt:GetData().butts = d.butts
             end
         elseif not d.IsSegment then
@@ -170,7 +177,6 @@ function mod:LarryKingJrAI(npc, sprite, d)
         
         npc:GetData().MoveDelay = (d.SegNumber-1) * 4
         npc.DepthOffset = (-4 * d.SegNumber-1)
-        d.MovementLog[npc.FrameCount] = npc.Position
         d.animExtraName = d.animExtraName or ""
         d.animExtraName2 = d.animExtraName2 or ""
 
@@ -187,20 +193,21 @@ function mod:LarryKingJrAI(npc, sprite, d)
 
         if d.state == "Moving" then
 
-            if npc.Velocity.X <= 0 then --future me pls don't fuck this up
-                sprite.FlipX = true
-            else
-                sprite.FlipX = false
-            end
+            d.MovementLog[npc.FrameCount - d.MovingOffset] = npc.Position
+            d.Movenumber = npc.FrameCount
 
-        elseif d.state == "BunchedUp" then
+        else
 
             npc:MultiplyFriction(0.01)
 
-        elseif d.state == "Pop" then
+            d.MovingOffset = npc.FrameCount - #d.MovementLog - 2
 
-            npc:MultiplyFriction(0.01)
+        end
 
+        if npc.Velocity.X <= 0 then --future me pls don't fuck this up
+            sprite.FlipX = true
+        else
+            sprite.FlipX = false
         end
 
         -- sprites and animations --
@@ -210,15 +217,32 @@ function mod:LarryKingJrAI(npc, sprite, d)
         if d.extraNum+1 == 0 or d.MoveDelay == 0 then
             return
         end
-        if (d.extraNum+1)%d.MoveDelay <= 3 then
-            d.elname = d.name
-            d.animExtraName = npc.Parent:GetData().animExtraName
-            d.animExtraName2 = npc.Parent:GetData().animExtraName2
-        elseif npc.StateFrame < d.SegNumber*2 and npc.Position:Distance(d.OldPos) == 0 then
-            npc:SetSpriteFrame(d.name .. d.animExtraName .. npc.Parent:GetData().MovementAnim, 1)
+        if d.state == "Moving" then
+            if (d.extraNum+1)%d.SegNumber == 0 then
+                d.elname = d.name
+                d.animExtraName = npc.Parent:GetData().animExtraName
+                d.animExtraName2 = npc.Parent:GetData().animExtraName2
+            elseif npc.StateFrame < d.SegNumber*2 and npc.Position:Distance(d.OldPos) == 0 then
+                npc:SetSpriteFrame(d.name .. d.animExtraName ..mod:GetMoveString(npc.Velocity, true, true).. d.animExtraName2, 1)
+                d.state = npc.Parent:GetData().state
+            end
+        else
+            if (d.extraNum+1)%(d.SegNumber*7) == 0 then
+                d.elname = d.name
+                d.animExtraName = npc.Parent:GetData().animExtraName
+                d.animExtraName2 = npc.Parent:GetData().animExtraName2
+            elseif npc.StateFrame < d.SegNumber*2 and npc.Position:Distance(d.OldPos) == 0 then
+                npc:SetSpriteFrame(d.name .. d.animExtraName ..mod:GetMoveString(npc.Velocity, true, true).. d.animExtraName2, 1)
+                d.state = npc.Parent:GetData().state
+            end
+    
         end
 
-        mod:spritePlay(sprite, d.elname .. d.animExtraName .. npc.Parent:GetData().MovementAnim .. d.animExtraName2)
+        if not d.IsButt then
+            mod:spritePlay(sprite, d.elname .. d.animExtraName .. mod:GetMoveString(npc.Velocity, true, true) .. d.animExtraName2)
+        else
+            mod:spritePlay(sprite, d.elname .. d.animExtraName .. mod:GetMoveString(npc.Velocity, true, false))
+        end
 
         if d.IsButt and sprite:IsEventTriggered("Poop") and GetDipsWithSameDataLarry(npc) then
             local vec = (Vector(10, 0)):Rotated((npc.Parent.Position - npc.Position):GetAngleDegrees() + 180 + math.random(-20, 20))
@@ -231,7 +255,12 @@ function mod:LarryKingJrAI(npc, sprite, d)
             poop:GetData().InitSeed = d.InitSeed
         end
 
-        if d.IsButt and sprite:IsFinished(d.elname .. "Pop" .. npc.Parent:GetData().MovementAnim) then
+        if d.IsButt and sprite:IsFinished(d.elname .. "Strain" ..  mod:GetMoveString(npc.Velocity, true, false)) and npc.StateFrame > 160 then
+
+            npc.Parent:GetData().state = "Pop"
+            npc.Parent:GetData().extraNUm = 0
+
+        elseif d.IsButt and sprite:IsFinished(d.elname .. "Pop" ..  mod:GetMoveString(npc.Velocity, true, false)) and d.state ~= "Moving" then
 
             npc.Parent:ToNPC().StateFrame = 1
             npc.Parent:GetData().state = "Moving"
@@ -261,7 +290,6 @@ function mod:LarryKingJrAI(npc, sprite, d)
         d.animExtraName2 = d.animExtraName2 or ""
         d.bodyInit = true
         d.MoveDelay = d.MoveDelay or 0
-        d.MovementLog = d.MovementLog or {}
         d.SegNumber = 1
         d.MovementAnim = mod:GetMoveString(npc.Velocity, true)
         d.MovingOffset = d.MovingOffset or 0
@@ -341,11 +369,6 @@ function mod:LarryKingJrAI(npc, sprite, d)
                 d.extraNum = 0
             end
 
-            if npc.StateFrame > 130 and d.state == "BunchedUp" then
-                d.state = "Pop"
-                d.extraNum = 0
-            end
-
         else
 
             npc.StateFrame = 0
@@ -375,18 +398,30 @@ function mod:LarryKingJrAI(npc, sprite, d)
         -- i have to use this for updating the sgements in a certain pattern --
 
         d.extraNum = d.extraNum + 1
-        if d.extraNum == #d.butts then
-            d.extraNum = 1
+        if d.state == "Moving" then
+            if d.extraNum > #d.butts then
+                d.extraNum = 1
+            end
+        else
+            if d.extraNum > #d.butts*7 then
+                d.extraNum = 1
+            end
         end
 
         local buttdat = GetButtEnd(d.butts)
-        if #d.butts == 0 then return end
+        if buttdat == nil then return end
         buttdat = buttdat:GetData()
         if buttdat.SegNumber ~= 1 then
             buttdat.IsButt = true
             buttdat.name = "Butt"
         end
         
+    end
+
+    if sprite:IsEventTriggered("Poop particles") then
+        for i = 2, math.random(6) do
+            Isaac.Spawn(EntityType.ENTITY_EFFECT, EffectVariant.POOP_PARTICLE, 0, npc.Position, Vector(math.random(-10, 10), math.random(-10, 10)), npc)
+        end
     end
 end
 

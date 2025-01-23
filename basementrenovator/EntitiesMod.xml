@@ -2,7 +2,7 @@
 
 <entity ID="161" Variant="2" Name="Larry King Jr." Image="mah boys/larrykingjr.png" BaseHP="10">
 <bitfield Key="Subtype">
-        <spinner Length="16" ValueOffset="2" Name="Length">
+        <spinner Length="16" ValueOffset="1" Name="Length">
           <tooltip>
 			2 is Head and Body, anymore adds more
           </tooltip>
