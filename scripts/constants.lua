@@ -111,8 +111,17 @@ end
 FHAC.Color = {
     CrackleOrange = Color(1,1,1,1,1,0.3,0), --FIEND FOLIO; XALUM DONT USE THIS FOR SPLATS USE IT FOR CRACKLE
     FireJuicy = 	Color(0,0,0,1,1,0.5,0), -- also xalum?
-    Charred =  Color(0.1,0.1,0.1,1,0,0,0) -- FIEND FOLIO; XALUM
+    Charred =  Color(0.1,0.1,0.1,1,0,0,0), -- FIEND FOLIO; XALUM
+    Invisible = Color(1,1,1,0,0,0,0),
+    Color = Color(1, 1, 1, 1, 1, 1, 1),
+
+    --colorixzed ones
+    ColorDankBlackReal = Color(1,1,1,1,0,0,0),
 }
+
+--time to colorize
+mod.Color.ColorDankBlackReal:SetColorize(1,1,1,1)
+mod.Color.ColorDankBlackReal:SetTint(0.5,0.5,0.5,1)
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 

@@ -1081,13 +1081,13 @@ function mod:AltLockedClosetCutscene()
 		mod.YouCanEndTheAltCutsceneNow = false
 	end
 
-	if not mod.RuinSecretMusicInit and mod.StartCutscene then
-		ms:Play(Isaac.GetMusicIdByName("ruinsecret"), 0)
-		mod.RuinSecretMusicInit = true
+	if mod.StartCutscene and ms:GetCurrentMusicID() ~= Isaac.GetMusicIdByName("ruinsecret") then
+		ms:Play(Isaac.GetMusicIdByName("ruinsecret"), 0.1)
 	end
 
 	for k, v in ipairs(Isaac.GetRoomEntities()) do
-		if v.Type ~= 1 then
+		if v.Type == 1 or v.Type==1000 then
+		else
 			v:Remove()
 		end
 	end
@@ -1105,8 +1105,7 @@ function mod:AltLockedClosetCutscene()
 	if mod.YouCanEndTheAltCutsceneNow then
 		game:GetSeeds():AddSeedEffect(SeedEffect.SEED_PREVENT_ALL_CURSES) --no winning with this one
 		ms:Fadeout(0.01)
-
-		--game:End(3)
+		mod:FadeOutBlack(4, 3)
 	end
 
 	if game:GetLevel():GetAbsoluteStage() == LevelStage.STAGE8 and useVar == 6 and mod.ImInAClosetPleaseHelp then mod.StartCutscene = true return end

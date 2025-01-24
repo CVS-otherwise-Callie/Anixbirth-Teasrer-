@@ -64,6 +64,7 @@ FHAC:LoadScripts("scripts.iam", {
 
 FHAC:LoadScripts("scripts.iam.effects", {
 	"zapperteller_lightning",
+	"blackboxoverlay"
 })
 
 FHAC:LoadScripts("scripts.iam.familiars", {
