@@ -46,7 +46,8 @@ FHAC.Monsters = {
     LightPressurePlateEntNull = mod:ENT("Light Pressure Plate Null Entity"),
     LarryKingJr = mod:ENT("Larry King Jr."),
     Sixhead = mod:ENT("Sixhead"),
-    Bottom = mod:ENT("Bottom")
+    Bottom = mod:ENT("Bottom"),
+    Babble = mod:ENT("Babble")
 }
 
 FHAC.Players = {

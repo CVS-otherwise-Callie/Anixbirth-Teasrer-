@@ -420,8 +420,23 @@ function mod:confusePos(npc, pos, frameCountCheck, isVec, alwaysConfuse)
 end
 
 --thx boiler
+function mod:isFriend(npc)
+	return npc:HasEntityFlags(EntityFlag.FLAG_FRIENDLY)
+end
+function mod:isCharm(npc)
+	return npc:HasEntityFlags(EntityFlag.FLAG_FRIENDLY | EntityFlag.FLAG_CHARM)
+end
 function mod:isScare(npc)
 	return npc:HasEntityFlags(EntityFlag.FLAG_FEAR | EntityFlag.FLAG_SHRINK)
+end
+function mod:isConfuse(npc)
+	return npc:HasEntityFlags(EntityFlag.FLAG_CONFUSION)
+end
+function mod:isScareOrConfuse(npc)
+	return npc:HasEntityFlags(EntityFlag.FLAG_CONFUSION | EntityFlag.FLAG_FEAR | EntityFlag.FLAG_SHRINK)
+end
+function mod:isBaited(npc)
+	return npc:HasEntityFlags(EntityFlag.FLAG_BAITED)
 end
 
 function mod:ReplaceEnemySpritesheet(npc, filepath, layer, loadGraphics) --cmon if you literally add the fucking .png one more time I'm gonna delete this and let you suffer in pain
@@ -1049,22 +1064,10 @@ function mod:setUpCutscene(stage, room, noisaac, pos, music)
 	end
 end
 
-function mod:FadeOut(time)
-
-	local ent = Isaac.Spawn(mod.Effects.BlackOverlayBox.ID, mod.Effects.BlackOverlayBox.Var, -1, Vector(360, 360), Vector.Zero, nil)
-	local npc = ent:ToNPC()
-	local sprite = ent:GetSprite()
-	local d = ent:GetData()
-
-	if not d.init then
-		d.starttime = game.TimeCounter/30
-		d.init = true
-	else
-		npc.StateFrame = npc.StateFrame + 1
+function mod:MakeAllSoundsFadeOut()
+	for k, entity in ipairs(Isaac:GetRoomEntities()) do
+		local sfx = SFXManager()
 	end
-
-
-
 end
 
 function mod:AltLockedClosetCutscene()

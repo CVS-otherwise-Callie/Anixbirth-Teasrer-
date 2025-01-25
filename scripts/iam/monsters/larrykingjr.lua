@@ -54,8 +54,6 @@ local function CheckButts(butts)
                 if butt:GetData().SegNumber and d.SegNumber and butt:GetData().SegNumber > d.SegNumber then
                     butt:GetData().SegNumber = butt:GetData().SegNumber - 1
                     butt:GetData().butts = d.butts
-                else
-                    print(butt:GetData().SegNumber , d.SegNumber)
                 end
             end
 
@@ -226,8 +224,6 @@ function mod:LarryKingJrAI(npc, sprite, d)
                 npc.Velocity = targpos - npc.Position
             end
         end
-
-        print(npc.Parent:GetData().MovementLog[#npc.Parent:GetData().MovementLog], npc.FrameCount - d.MoveDelay + 2 - d.MovingOffset)
 
         if d.state == "Moving" then
 

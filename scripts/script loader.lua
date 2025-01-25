@@ -53,7 +53,8 @@ FHAC:LoadScripts("scripts.iam.monsters", {
 	"lightpressureplatenullent",
 	"larrykingjr",
 	"bottom",
-	"sixhead"
+	"sixhead",
+	"babble"
 })
 
 FHAC:LoadScripts("scripts.iam", {
