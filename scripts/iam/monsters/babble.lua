@@ -26,9 +26,9 @@ function mod:BabbleAI(npc, sprite, d)
 
     if not d.init then
         d.name = "Head"
-        d.chargeup = math.random(150, 230) - 10*num
-        d.CoolDown = npc.StateFrame + math.random(70, 90)
-        d.wait = math.random(20, 40)
+        d.chargeup = math.random(120, 200) - 10*num
+        d.CoolDown = npc.StateFrame + math.random(50, 70) - 3*num
+        d.wait = math.random(20, 40) - 3*num
         d.lerpnonsense = 0.06
         d.coolaccel = 1
         d.state = "idle"
@@ -57,8 +57,8 @@ function mod:BabbleAI(npc, sprite, d)
             end
         end
         if npc.StateFrame > d.CoolDown+d.wait then
-            d.CoolDown = npc.StateFrame + math.random(50, 70)
-            d.wait = math.random(10, 20)
+            d.CoolDown = npc.StateFrame + math.random(50, 70) - 3*num
+            d.wait = math.random(20, 40) - 3*num
         end
         npc:MultiplyFriction(0.65+(0.04*num))
 
@@ -111,8 +111,10 @@ function mod:BabbleAI(npc, sprite, d)
             sprite:PlayOverlay("ChargeInit")
         else
             sprite:PlayOverlay("Charge")
-            if npc:IsChampion() or game.Difficulty == 1 then
+            if npc:IsChampion() or game.Difficulty == 1 and npc.StateFrame < 10 then
                 npc:AddEntityFlags(EntityFlag.FLAG_NO_PHYSICS_KNOCKBACK)
+            else
+                npc:ClearEntityFlags(EntityFlag.FLAG_NO_PHYSICS_KNOCKBACK)
             end
 
             if not d.PlayRoar then

@@ -344,7 +344,7 @@
     </entity>
 
     <!--Depths-->
-    <entity id="161" variant="420" name="Babble" anm2path="monsters/babble/babble.anm2" hasFloorAlts="true" reroll="true" baseHP="20" boss="0" champion="1" collisionDamage="1" collisionMass="5" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="14" stageHP="7" portrait="420">
+    <entity id="161" variant="420" name="Babble" anm2path="monsters/babble/babble.anm2" hasFloorAlts="true" reroll="true" baseHP="13" boss="0" champion="1" collisionDamage="1" collisionMass="5" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="14" stageHP="7" portrait="420">
 		<bestiary transform="0,0,1" anim="WalkVert" overlay="Head" />
         <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
     </entity>
