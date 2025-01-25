@@ -1,7 +1,7 @@
 <data>
     <stage Name="Flooded Caves">
         <Gfx>
-            <Entity ID="161" Variant="420" SubType="0" Image="babble_downpour.png"/>
+            <Entity ID="161" Variant="420" SubType="0" Image="mah boys/babble_downpour.png"/>
         </Gfx>
     </stage>
 </data>

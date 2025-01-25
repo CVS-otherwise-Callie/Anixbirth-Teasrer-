@@ -92,14 +92,14 @@ function mod:BabbleAI(npc, sprite, d)
         if not d.chargingup then
             sprite:PlayOverlay("ChargeUpInit")
         else
-            if npc.StateFrame <= 50 - d.wait then
+            if npc.StateFrame <= 30 - d.wait then
                 sprite:PlayOverlay("ChargeUp1")
-            elseif npc.StateFrame <= 80 - d.wait then
+            elseif npc.StateFrame <= 60 - d.wait then
                 sprite:PlayOverlay("ChargeUp2")
             else
                 sprite:PlayOverlay("ChargeUp3")
             end
-            if npc.StateFrame > 100 then
+            if npc.StateFrame > 70 then
                 d.state = "charge"
                 d.chargingup = false
                 npc.StateFrame = 0
@@ -111,6 +111,9 @@ function mod:BabbleAI(npc, sprite, d)
             sprite:PlayOverlay("ChargeInit")
         else
             sprite:PlayOverlay("Charge")
+            if npc:IsChampion() or game.Difficulty == 1 then
+                npc:AddEntityFlags(EntityFlag.FLAG_NO_PHYSICS_KNOCKBACK)
+            end
 
             if not d.PlayRoar then
                 npc:PlaySound(SoundEffect.SOUND_MONSTER_YELL_A, 1, 1, false, 1)
@@ -153,6 +156,7 @@ function mod:BabbleAI(npc, sprite, d)
             if npc.StateFrame%(10-num) == 0 and npc.Velocity:Length() > 2 then
                 for i = 1, 2 do
                     local realshot = Isaac.Spawn(9, projtype, 0, npc.Position + Vector(10, 0):Rotated(d.dir), npc.Velocity:Rotated(45+(90*i)), npc):ToProjectile()
+                    realshot.FallingAccel = 0.6 - (0.1*num)
                 end
             end
 
@@ -167,6 +171,7 @@ function mod:BabbleAI(npc, sprite, d)
         end
     elseif d.state == "slam" then
         if not d.slaminit then
+            npc:ClearEntityFlags(EntityFlag.FLAG_NO_PHYSICS_KNOCKBACK)
             sprite:PlayOverlay("SlamInit")
         else
             if npc.StateFrame < 20 + d.wait then
