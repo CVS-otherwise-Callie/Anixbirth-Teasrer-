@@ -1,6 +1,6 @@
 <items gfxroot="gfx/items/" version="1">
     <passive id="1" name="Stinky Mushroom" gfx="Stinky_Mushroom.png" description="It smells revolting!" quality="3" cache="damage offensive" />
-    <passive id="2" name="Anal Fissure" gfx="analfissure.png" description="Something up your butt" quality="3" cache="offensive" />
+    <passive id="2" name="Big Ol' Bowl of Sauerkraut" gfx="2_bigolbowlofsauerkraut.png" description="Every day for breakfast..." quality="2" cache="offensive" />
 
     <!--Actives are 100+-->
     <active id="100" name="Joke Book" gfx="100_joke_book.png" description="Xocolate's finest" quality="1" maxcharges="2" cache="firedelay" />

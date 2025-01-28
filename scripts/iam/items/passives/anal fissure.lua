@@ -1,3 +1,7 @@
+-- we love empty files
+
+--[[
+
 local mod = FHAC
 local game = Game()
 
@@ -60,4 +64,4 @@ function mod:AnalFissure(player)
     if d.AnalFissureCreepPools and d.AnalFissureCreepPools > 5 then
         player:Kill()
     end
-end
+end]]

@@ -95,8 +95,12 @@ FHAC.Collectibles = {
     Items = {
         StinkyMushroom = Isaac.GetItemIdByName("Stinky Mushroom"),
         AnalFissure = Isaac.GetItemIdByName("Anal Fissure"),
+        BigBowlOfSauerkraut = Isaac.GetItemIdByName("Big Ol' Bowl of Sauerkraut"),
         JokeBook = Isaac.GetItemIdByName("Joke Book"),
         StrawDoll = Isaac.GetItemIdByName("Straw Doll"),
+    },
+    Pickups = {
+        BowlOfSauerkraut = mod:ENT("Bowl of Sauerkraut")
     }
 }
 

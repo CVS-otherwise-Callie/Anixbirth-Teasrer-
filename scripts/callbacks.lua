@@ -82,7 +82,7 @@ end
 mod:AddCallback(ModCallbacks.MC_POST_NEW_ROOM, mod.PostNewRoom)
 
 function mod:PostPlayerUpdate(player)
-    mod:AnalFissure(player)
+    --mod:AnalFissure(player)
 end
 mod:AddCallback(ModCallbacks.MC_POST_PLAYER_UPDATE, mod.PostPlayerUpdate)
 

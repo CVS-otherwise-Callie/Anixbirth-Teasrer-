@@ -1,5 +1,6 @@
-<costumes anm2root="gfx/characters/">
-
-    <costume anm2path="johanneshair.anm2" type="none" priority="100" />
-
+<costumes anm2root="gfx/">
+<!--Items-->
+    <costume id="2" anm2path="characters/costume_miracle_machine.anm2"        	    type="passive" priority="99" />
+<!--Players-->
+    <costume anm2path="characters/johanneshair.anm2"                                           type="none" priority="100" />
 </costumes>

@@ -921,6 +921,8 @@ function FHAC:MorphOnDeath(npc, morphType, morphVariant, morphSub, sound, chance
 	return npc
 end
 
+---#region Fiend Folio API
+
 --thx fiends folioooo
 function mod:GetNewPosAligned(pos,ignorerocks)
 	local room = game:GetRoom()
@@ -951,6 +953,182 @@ function mod:GetNewPosAligned(pos,ignorerocks)
 		return pos
 	end
 end
+-- Extra item callbacks
+local TrackedItems = {
+	Players = {},
+	Callbacks = {
+		Collect = {},
+		Trinket = {}
+	}
+}
+
+function mod.AddItemCallback(onAdd, onRemove, item, forceAddOnRepickup)
+	local entry = TrackedItems.Callbacks.Collect[item]
+	local listing = { Add = onAdd, Remove = onRemove, ForceAddOnRepickup = forceAddOnRepickup }
+	if not entry then
+		TrackedItems.Callbacks.Collect[item] = { listing }
+	else
+		table.insert(entry, listing)
+	end
+end
+
+mod:AddCallback(ModCallbacks.MC_POST_PLAYER_INIT, function(_, player)
+	TrackedItems.Players[player:GetCollectibleRNG(1):GetSeed()] = {
+		Collect = {},
+		Trinket = {}
+	}
+end)
+
+mod:AddCallback(ModCallbacks.MC_PRE_PICKUP_COLLISION, function(_, pickup, collider, low)
+	local collectibleConfig = Isaac.GetItemConfig():GetCollectible(pickup.SubType)
+	local isActive = nil
+	if collectibleConfig then
+		isActive = collectibleConfig.Type == ItemType.ITEM_ACTIVE
+	end
+
+	if collider.Type == EntityType.ENTITY_PLAYER and
+	   collider.Variant == 0
+	then
+		local player = collider:ToPlayer()
+		if player:GetPlayerType() == PlayerType.PLAYER_THESOUL_B and player:GetOtherTwin() ~= nil then
+			player = player:GetOtherTwin()
+		end
+		local data = SaveManager.GetRunSave(player).anixbirthsaveData
+
+		if player:CanPickupItem() and
+		   player:IsExtraAnimationFinished() and
+		   player.ItemHoldCooldown <= 0 and
+		   not player:IsCoopGhost() and
+		   (collider.Parent == nil or (data and data.SpawnedAsKeeper and not isActive)) and --Strawman
+		   player:GetPlayerType() ~= PlayerType.PLAYER_CAIN_B and
+		   pickup.SubType ~= 0 and
+		   pickup.Wait <= 0 and
+		   not pickup.Touched and
+		   TrackedItems.Callbacks.Collect[pickup.SubType] ~= nil
+		then
+			if data ~= nil then
+				data.currentQueuedItem = pickup.SubType
+			end
+		end
+	end
+end, PickupVariant.PICKUP_COLLECTIBLE)
+
+mod:AddCallback(ModCallbacks.MC_POST_PEFFECT_UPDATE, function(_, player)
+	local ref = TrackedItems.Players[player:GetCollectibleRNG(1):GetSeed()]
+	if not ref then
+		ref = {
+			Collect = {},
+			Trinket = {}
+		}
+		TrackedItems.Players[player:GetCollectibleRNG(1):GetSeed()] = ref
+	end
+
+	-- IsHoldingItem is true for the entire pickup animation
+	-- IsHeldItemVisible is true only when item is lifted... but on the first frame it's false so the cache would be updated
+	-- therefore, on the first frame of a pickup animation, set a flag indicating the animation has started and from then on when IsHeldItem item is false ignore it
+	-- until the player is no longer holding an item, then reset it
+	-- interesting!!
+	local basedata = player:GetData()
+	local data = SaveManager.GetRunSave(player).anixbirthsaveData
+	local playerIsHoldingItem = player:IsHoldingItem()
+	if playerIsHoldingItem then
+		if not player:IsHeldItemVisible() then
+			if basedata.StartedPickupAnimation then
+				playerIsHoldingItem = false
+			else
+				basedata.StartedPickupAnimation = true
+			end
+		end
+	else
+		basedata.StartedPickupAnimation = nil
+	end
+
+	for item, callbacks in pairs(TrackedItems.Callbacks.Collect) do
+		local count = player:GetCollectibleNum(item, true)
+		local skipUpdate = false
+		if ref.Collect[item] then
+			local diff = count - ref.Collect[item]
+			if diff > 0 and playerIsHoldingItem then
+				skipUpdate = true
+			elseif diff ~= 0 then
+				for _, entry in ipairs(callbacks) do
+					local foo = nil
+					if diff > 0 and entry.ForceAddOnRepickup then
+						foo = entry.Add
+					else
+						foo = entry.Remove
+					end
+
+					if foo then
+						foo(player, math.abs(diff), count)
+					end
+				end
+			end
+		end
+		if not skipUpdate then
+			ref.Collect[item] = count
+		end
+	end
+
+	local queuedItem = player.QueuedItem
+	if data.currentQueuedItem ~= nil and (queuedItem.Item == nil or queuedItem.Item.ID ~= data.currentQueuedItem) then
+		local item = data.currentQueuedItem
+		data.currentQueuedItem = nil
+
+		local callbacks = TrackedItems.Callbacks.Collect[item]
+		local count = player:GetCollectibleNum(item, true)
+
+		for _, entry in ipairs(callbacks) do
+			local foo = entry.Add
+			if foo and not entry.ForceAddOnRepickup then
+				foo(player, 1, count)
+			end
+		end
+	end
+	if data.currentQueuedItem == nil and 
+	   queuedItem.Item ~= nil and 
+	   not queuedItem.Touched and 
+	   queuedItem.Item:IsCollectible() and
+	   TrackedItems.Callbacks.Collect[queuedItem.Item.ID] ~= nil 
+	then
+		data.currentQueuedItem = queuedItem.Item.ID
+	end
+
+	for item, callbacks in pairs(TrackedItems.Callbacks.Trinket) do
+		local has = player:HasTrinket(item)
+		local gulped = has and FiendFolio.GetTrinketSlot(player, item) < 0
+		local skipUpdate = false
+		if ref.Trinket[item] ~= nil then
+			if has and playerIsHoldingItem then
+				skipUpdate = true
+			elseif has ~= ref.Trinket[item].Has then
+				for _, entry in ipairs(callbacks) do
+					local foo = nil
+					if has then
+						foo = entry.Add
+					else
+						foo = entry.Remove
+					end
+
+					if foo then
+						foo(player, has)
+					end
+				end
+			elseif gulped and not ref.Trinket[item].Gulped then
+				for _, entry in ipairs(callbacks) do
+					local foo = entry.Gulp
+					if foo then
+						foo(player)
+					end
+				end
+			end
+		end
+		if not skipUpdate then
+			ref.Trinket[item] = { Has = has, Gulped = gulped }
+		end
+	end
+
+end)
 
 function mod:isScareOrConfuse(npc)
 	return npc:HasEntityFlags(EntityFlag.FLAG_CONFUSION | EntityFlag.FLAG_FEAR | EntityFlag.FLAG_SHRINK)
@@ -1031,6 +1209,8 @@ function mod:changeExtension(filename, newExtension)
 	return baseName .. "." .. newExtension
   
 end
+
+--#end region
 
 mod.ImInAClosetPleaseHelp = false
 

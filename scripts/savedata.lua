@@ -1,5 +1,9 @@
 
 SaveManager  = include("scripts.save_manager")
+
+SaveManager.Utility.AddDefaultRunData(SaveManager.DefaultSaveKeys.PLAYER, {anixbirthsaveData = {}})
+SaveManager.Utility.AddDefaultRunData(SaveManager.DefaultSaveKeys.GLOBAL, {PreSavedEntsLevel = {}, SavedEntsLevel = {}, ToBeSavedEnts = {}})
+
 SaveManager.Init(FHAC)
 FHAC.SaveManager = SaveManager
 
@@ -15,4 +19,6 @@ SaveManager.AddCallback(SaveManager.Utility.CustomCallback.POST_DATA_LOAD, funct
         FHAC.DSSavedata.prettyMushlooms = FHAC.DSSavedata.prettyMushlooms or 1
         FHAC.DSSavedata.pallunShot = FHAC.DSSavedata.pallunShot or 1
         FHAC.DSSavedata.randomDried = FHAC.DSSavedata.randomDried or 1
+
+        local player = Isaac.GetPlayer()
 end)

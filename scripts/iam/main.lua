@@ -6,7 +6,8 @@ local player = Isaac.GetPlayer()
 
 
 mod.LuaFont = Font()
-mod.LuaFont:Load("font/luaminioutlined.fnt")
+mod.LuaFont:Load("font/luaminioutlined.fnt") --:Load("mods/Anixbirth-Teasrer-/resources/font/TheFuture.fnt") --
+
 
 local rng = RNG()
 function mod:ShowRoomText()

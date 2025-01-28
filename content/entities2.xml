@@ -51,6 +51,12 @@
         <gibs amount="5" blood="0" bone="0" eye="0" gut="0" large="0" poop="1" />
     </entity-->
 
+    <!--Pickups-->
+    <!--entity anm2path="items/pick ups/" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="12" friction="1" id="5" name="Heart" numGridCollisionPoints="24" shadowSize="17" stageHP="0" subtype="1" variant="10">
+        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0"/>
+        <preload-snd id="185"/>
+    </entity-->
+
     <!--Basement-->
 
 
@@ -217,26 +223,6 @@
         <preload-snd id="262"/>
     	<devolve id="1000.0.0" weight="1" />
 	</entity>
-    <!--entity id="161" variant="31" name="Cronic Laser" anm2path="monsters/cronic laser/cronic laser.anm2" reroll="true" baseHP="20" stageHP="1" boss="0" champion="0" collisionDamage="1" collisionMass="6" collisionRadius="9" friction="1" numGridCollisionPoints="12" shadowSize="12" portrait="31">
-		<bestiary transform="0,0,1" anim="Appear" />
-        <gibs amount="5" blood="0" bone="0" eye="0" gut="0" large="0" />
-    </entity-->
-	<!--entity anm2path="monsters/cuber/cuber.anm2" gridCollision="none" reroll="true" baseHP="20" boss="0" champion="1" collisionDamage="1" collisionMass="3" collisionRadius="20" friction="1" id="161" variant="32" subtype="0" name="Stoner" numGridCollisionPoints="12" shadowSize="20" stageHP="2" portrait="32" bestiary="true" shutdoors="false">
-        <bestiary transform="0,0,1" anim="Appear" />
-        <gibs amount="6" blood="1" bone="0" eye="0" gut="1" large="0" worm="1" />
-		<preload-snd id="72" />
-        <devolve id="151.0.0" weight="1"/>
-	</entity-->
-    <!--entity id="161" variant="33" name="Silk" reroll="true" baseHP="10" stageHP="0" boss="0" champion="1" collisionDamage="1" collisionMass="100" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="0" portrait="33" anm2path="monsters/silk/silk.anm2">
-		<bestiary transform="0,0,1" anim="Pop Up" />
-        <gibs amount="6" blood="1" bone="0" eye="1" gut="1" large="0" />
-        <preload-snd id="318" />
-    </entity-->
-    <!--entity anm2path="monsters/floater/treachfloater.anm2" hasFloorAlts="true" reroll="true" baseHP="13" boss="0" champion="1" collisionDamage="1" collisionMass="5" collisionRadius="13" friction="1" id="161" name="Treacherous Floater" numGridCollisionPoints="12" shadowSize="16" stageHP="3" variant="34" bestiary="true" portrait="34">
-		<bestiary transform="0,0,1" anim="SouthWest2" />
-        <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
-        <devolve id="10.1.0" weight="1" />
-    </entity-->
 
     <!--Cellar-->
 
@@ -415,6 +401,12 @@
     <entity anm2path="jokes/enemies/gaperrr/gaperrr.anm2" id="10" variant="5938" reroll="false" baseHP="13" boss="0" champion="1" collisionDamage="1" collisionMass="40" collisionRadius="13" friction="1" name="A gaper w/ three legs, why did we do this" numGridCollisionPoints="12" shadowSize="12" stageHP="3">
         <gibs amount="6" blood="2" bone="1" eye="1" gut="1" large="0" />
         <devolve id="10.1.0" weight="1" />
+    </entity>
+
+    <!--Pickups-->
+    <entity anm2path="items/pick ups/sauerkraut_pickups.anm2" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="12" friction="1" id="5" name="Bowl of Sauerkraut" numGridCollisionPoints="24" shadowSize="17" stageHP="0" subtype="1" variant="721">
+        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0"/>
+        <preload-snd id="166"/>
     </entity>
 
     <!--Familiars-->

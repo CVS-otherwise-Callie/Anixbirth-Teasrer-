@@ -598,7 +598,8 @@ FHAC:LoadScripts("scripts.iam.items.actives", {
 
 FHAC:LoadScripts("scripts.iam.items.passives", {
 	"stinky mushroom",
-	"anal fissure"
+	"anal fissure",
+	"big ol' bowl of sauerkraut"
 })
 
 FHAC:LoadScripts("scripts.iam.jokes", {
