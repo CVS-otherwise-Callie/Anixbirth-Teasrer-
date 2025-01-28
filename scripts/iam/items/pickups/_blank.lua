@@ -1,8 +1,8 @@
 local mod = FHAC
 
 mod:AddCallback(ModCallbacks.MC_POST_PICKUP_UPDATE, function(_, pickup)
-    mod:BlankPickupAI(pickup, pickup:GetSprite(), pickup:GetData())
+    mod:PostBlankPickupAI(pickup, pickup:GetSprite(), pickup:GetData())
 end, mod.Collectibles.Pickups.Blank.Var)
 
-function mod:BlankPickupAI(p, sprite, d)
+function mod:PostBlankPickupAI(p, sprite, d) --usually checking sprites and stuff goes here
 end
