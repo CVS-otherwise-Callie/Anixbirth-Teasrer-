@@ -76,7 +76,8 @@ function mod:PostNewRoom()
 
     mod.spawnedDried = false
     mod:SpawnRandomDried()
-
+    mod:BigBowlOfSauerkrautSpawn()
+    
     mod:RemoveAllSpecificItemEffects(Isaac.GetPlayer())
 end
 mod:AddCallback(ModCallbacks.MC_POST_NEW_ROOM, mod.PostNewRoom)
@@ -109,7 +110,7 @@ mod:AddCallback(ModCallbacks.MC_POST_EFFECT_UPDATE, mod.EffectPostUpdate)
 
 mod:AddCallback(ModCallbacks.MC_EVALUATE_CACHE,function(_, player, flag)
 
-	local basedata = player:GetData() --for stats and shit
+    local dat = SaveManager.GetRunSave(player).anixbirthsaveData
 
     if flag == CacheFlag.CACHE_DAMAGE then
 

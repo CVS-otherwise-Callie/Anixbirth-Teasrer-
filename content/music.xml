@@ -1,4 +1,5 @@
 <music root="music/">
+        <!--Room Muisc-->
         <track name="AnixbirthGrief" path="shhh piano builds go away/GriefLoop.ogg" loop="true"/>
         <track name="AnixbirthSkyward" path="shhh piano builds go away/Wingless Angel.ogg" loop="true"/>
         <track name="Anixbirth12AM" path="shhh piano builds go away/12 AM.ogg" loop="true"/>
@@ -7,7 +8,12 @@
         <track name="AnixbirthGoodnightPrince" path="shhh piano builds go away/Goodnight, Prince.ogg" loop="true"/>
         <track name="AnixbirthForsaken" path="shhh piano builds go away/This Mindless Atrocity.ogg" loop="true"/>
 
+        <!--Floor Music-->
         <track name="AnixbirthBasement" path="shhh piano builds go away/AnixbirthBuild3.ogg" loop="true"/>
 
-        <track name="ruinsecret" path="hmksecret.ogg" loop="false"/>
+        <!--Cutscene Music-->
+        <track name="ruinsecret" path="hmksecret.ogg" loop="true"/>
+
+        <!--Misc Music-->
+        <track name="albuquerque" path="albuquerque.ogg" loop="false"/>
 </music>

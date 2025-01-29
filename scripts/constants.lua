@@ -47,7 +47,8 @@ FHAC.Monsters = {
     LarryKingJr = mod:ENT("Larry King Jr."),
     Sixhead = mod:ENT("Sixhead"),
     Bottom = mod:ENT("Bottom"),
-    Babble = mod:ENT("Babble")
+    Babble = mod:ENT("Babble"),
+    Toast = mod:ENT("Toast")
 }
 
 FHAC.Players = {
