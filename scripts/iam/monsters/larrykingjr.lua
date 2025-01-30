@@ -206,6 +206,7 @@ function mod:LarryKingJrAI(npc, sprite, d)
         --if not d.IsButt and d.state == "Pop" then
             d.state = npc.Parent:GetData().state
         --end
+        d.buttsanimoffset = npc.Parent:GetData().buttsanimoffset
 
         -- movement and movedelay --
         
@@ -255,18 +256,18 @@ function mod:LarryKingJrAI(npc, sprite, d)
         end
         if d.state == "Moving" then
             if (d.extraNum+1)%d.SegNumber == 0 then
-                d.elname = d.name
-                d.animExtraName = npc.Parent:GetData().animExtraName
-                d.animExtraName2 = npc.Parent:GetData().animExtraName2
+                if d.elname ~= d.name then d.elname = d.name end
+                if d.animExtraName ~= npc.Parent:GetData().animExtraName then d.animExtraName = npc.Parent:GetData().animExtraName end
+                if d.animExtraName2 ~= npc.Parent:GetData().animExtraName2 then d.animExtraName2 = npc.Parent:GetData().animExtraName2 end
             elseif npc.StateFrame < d.SegNumber*2 and npc.Position:Distance(d.OldPos) == 0 then
                 npc:SetSpriteFrame(d.name .. d.animExtraName ..mod:GetMoveString(npc.Velocity, true, true).. d.animExtraName2, 1)
                 d.state = npc.Parent:GetData().state
             end
         else
-            if (d.extraNum+1)%(d.SegNumber*#d.butts) == 0 then
-                d.elname = d.name
-                d.animExtraName = npc.Parent:GetData().animExtraName
-                d.animExtraName2 = npc.Parent:GetData().animExtraName2
+            if (d.extraNum+1)%(d.SegNumber*(7-d.buttsanimoffset)) == 0 then
+                if d.elname ~= d.name then d.elname = d.name end
+                if d.animExtraName ~= npc.Parent:GetData().animExtraName then d.animExtraName = npc.Parent:GetData().animExtraName end
+                if d.animExtraName2 ~= npc.Parent:GetData().animExtraName2 then d.animExtraName2 = npc.Parent:GetData().animExtraName2 end
             elseif npc.StateFrame < d.SegNumber*2 and npc.Position:Distance(d.OldPos) == 0 then
                 npc:SetSpriteFrame(d.name .. d.animExtraName ..mod:GetMoveString(npc.Velocity, true, true).. d.animExtraName2, 1)
                 d.state = npc.Parent:GetData().state
@@ -306,6 +307,7 @@ function mod:LarryKingJrAI(npc, sprite, d)
 
             d.state = "Pop"
             d.animExtraName = "Pop"
+            mod:spritePlay(sprite, d.elname .. "Pop" .. mvstr)
             npc.Parent:GetData().extraNum = 0
 
         elseif d.IsButt and sprite:IsFinished(d.elname .. "Pop" ..  mvstr) and d.state ~= "Moving" then
@@ -451,13 +453,16 @@ function mod:LarryKingJrAI(npc, sprite, d)
         
         -- i have to use this for updating the sgements in a certain pattern --
 
+        d.buttsanimoffset = #d.butts - 2
+        if d.buttsanimoffset < 1 then d.buttsanimoffset = 0 end
+
         d.extraNum = d.extraNum + 1
         if d.state == "Moving" then
             if d.extraNum > #d.butts then
                 d.extraNum = 1
             end
         else
-            if d.extraNum > #d.butts*#d.butts then
+            if d.extraNum > #d.butts*7-d.buttsanimoffset then
                 d.extraNum = 1
             end
         end
