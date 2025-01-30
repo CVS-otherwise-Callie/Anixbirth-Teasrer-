@@ -263,7 +263,7 @@ function mod:LarryKingJrAI(npc, sprite, d)
                 d.state = npc.Parent:GetData().state
             end
         else
-            if (d.extraNum+1)%(d.SegNumber*7) == 0 then
+            if (d.extraNum+1)%(d.SegNumber*#d.butts) == 0 then
                 d.elname = d.name
                 d.animExtraName = npc.Parent:GetData().animExtraName
                 d.animExtraName2 = npc.Parent:GetData().animExtraName2
@@ -457,7 +457,7 @@ function mod:LarryKingJrAI(npc, sprite, d)
                 d.extraNum = 1
             end
         else
-            if d.extraNum > #d.butts*7 then
+            if d.extraNum > #d.butts*#d.butts then
                 d.extraNum = 1
             end
         end
