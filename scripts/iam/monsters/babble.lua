@@ -60,7 +60,7 @@ function mod:BabbleAI(npc, sprite, d)
             d.CoolDown = npc.StateFrame + math.random(50, 70) - 3*num
             d.wait = math.random(20, 40) - 3*num
         end
-        npc:MultiplyFriction(0.65+(0.04*num))
+        npc:MultiplyFriction(0.65+(0.016*num))
 
         if npc.StateFrame > d.chargeup then
             d.state = "chargeup"
@@ -128,10 +128,10 @@ function mod:BabbleAI(npc, sprite, d)
                 d.coolaccel = d.coolaccel + 0.1
             end
             if mod:isScare(npc) then
-                local targetvelocity = Vector(8*num, 0):Rotated(d.dir*180)
+                local targetvelocity = Vector(6*num, 0):Rotated(d.dir*180)
                 npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, d.lerpnonsense)
             else
-                local targetvelocity = Vector(8*num, 0):Rotated(d.dir)
+                local targetvelocity = Vector(6*num, 0):Rotated(d.dir)
                 npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, d.lerpnonsense)
             end
             npc.Velocity = mod:Lerp(npc.Velocity, npc.Velocity:Resized(d.coolaccel), d.lerpnonsense)

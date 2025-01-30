@@ -1,5 +1,6 @@
 <data>
 
+<entity ID="161" Variant="1" Name="Toast" Image="mah boys/toast.png" BaseHP="14"/>
 <entity ID="161" Variant="2" Name="Larry King Jr." Image="mah boys/larrykingjr.png" BaseHP="10">
 <bitfield Key="Subtype">
         <spinner Length="16" ValueOffset="1" Name="Length">
@@ -146,7 +147,8 @@ Use 2, 4, or 6 normally.
 
 	<group Name="HOPE Basement" Label="Basement">
 		<group Name="HOPE Basement Enemies">
-					<entity Name="Larry King Jr."/>
+			<entity Name="Larry King Jr."/>
+			<entity Name="Toast"/>
 		    <entity Name="Snidge"/>
 			<entity Name="Log"/>
 			<entity Name="Neutral Fly"/>

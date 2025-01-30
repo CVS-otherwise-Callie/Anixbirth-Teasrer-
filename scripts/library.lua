@@ -1386,3 +1386,13 @@ function mod:CheckStage(stagename, backdroptypes)
     end
 end
 
+function mod:GetAliveEntitiesInDist(npc, dist)
+	local tab = {}
+	for k, v in ipairs(Isaac.GetRoomEntities()) do
+		if npc.Position:Distance(v.Position) > 0 and npc.Position:Distance(v.Position) < dist and v:Exists() and not v:IsDead() then
+			table.insert(tab, v)
+		end
+	end
+	return tab
+end
+
