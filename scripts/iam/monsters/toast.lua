@@ -10,6 +10,16 @@ mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
     end
 end, mod.Monsters.Toast.ID)
 
+local function GetAliveEntitiesInDist(npc, dist)
+	local tab = {}
+	for k, v in ipairs(Isaac.GetRoomEntities()) do
+		if npc.Position:Distance(v.Position) > 0 and npc.Position:Distance(v.Position) < dist and v:Exists() and not v:IsDead() and npc.GridCollisionClass == GridCollisionClass.COLLISION_WALL_EXCEPT_PLAYER then
+			table.insert(tab, v)
+		end
+	end
+	return tab
+end
+
 function mod:ToastAI(npc, sprite, d)
 
     local target = npc:GetPlayerTarget()
@@ -31,7 +41,11 @@ function mod:ToastAI(npc, sprite, d)
         mod:spritePlay(sprite, "Hidden")
         d.canBeHit = false
 
-        if #Isaac.FindInRadius(npc.Position, 22, EntityPartition.ENEMY) ~= 0 or #Isaac.FindInRadius(npc.Position, 35, EntityPartition.PLAYER) ~= 0 then
+        if  targetpos:Distance(npc.Position) > 200 and game:GetRoom():CheckLine(target.Position,npc.Position,3,900,false,false) then
+            npc.StateFrame = npc.StateFrame - 1
+        end
+
+        if #GetAliveEntitiesInDist(npc, 22) ~= 0 or #Isaac.FindInRadius(npc.Position, 35, EntityPartition.PLAYER) ~= 0 then
             mod:spritePlay(sprite, "SwitchedOff")
             sfx:Play(SoundEffect.SOUND_BUTTON_PRESS, 1, 2, false, 1, 0)
             npc.StateFrame = 0
@@ -44,7 +58,7 @@ function mod:ToastAI(npc, sprite, d)
         mod:spritePlay(sprite, "Off")
         d.oldstate = "offhiding"
 
-        if (#Isaac.FindInRadius(npc.Position, 22, EntityPartition.ENEMY) == 0 and #Isaac.FindInRadius(npc.Position, 35, EntityPartition.PLAYER) == 0) then
+        if (#GetAliveEntitiesInDist(npc, 22) == 0 and #Isaac.FindInRadius(npc.Position, 35, EntityPartition.PLAYER) == 0) then
             mod:spritePlay(sprite, "SwitchedOn")
             d.state = nil
         end
@@ -108,10 +122,14 @@ function mod:ToastAI(npc, sprite, d)
         d.state = "popup"
     elseif sprite:IsFinished("Shoot") then
         if math.random(3) == 3 then
+            mod:spritePlay(sprite, "Dissapear")
+            d.state = nil
         else
             d.state = "idle"
         end
         npc.StateFrame = 0
+    elseif sprite:IsFinished("Dissapear") then
+        d.state = "hiding"
     end
 
     if sprite:IsEventTriggered("Open") then
