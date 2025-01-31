@@ -49,9 +49,9 @@ FHAC.Monsters = {
     Bottom = mod:ENT("Bottom"),
     Babble = mod:ENT("Babble"),
     Toast = mod:ENT("Toast"),
-    --TaintedSilly = mod:ENT("Tainted SIlly"),
-    --TaintedString = mod:ENT("Tainted String"),
-    --andEntity = mod:ENT("&")
+    TaintedSilly = mod:ENT("Tainted Silly"),
+    TaintedString = mod:ENT("Tainted String"),
+    andEntity = mod:ENT("&")
 }
 
 FHAC.Players = {

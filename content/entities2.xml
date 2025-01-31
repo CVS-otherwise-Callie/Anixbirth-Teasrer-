@@ -69,7 +69,7 @@
         <gibs amount="6" blood="1" bone="1" eye="0" gut="0" large="0" worm="1" />
         <preload-snd id="166" />
     </entity>
-    <entity id="161" variant="2" name="Larry King Jr." anm2path="monsters/larrykingjr/larrykingjr.anm2" baseHP="10" boss="0" champion="0" collisionDamage="1" collisionMass="37" collisionRadius="15" friction="1" numGridCollisionPoints="8" shadowSize="15" stageHP="0" portrait="2" gridCollision="walls">
+    <entity id="161" variant="2" name="Larry King Jr." anm2path="monsters/larrykingjr/larrykingjr.anm2" baseHP="13" boss="0" champion="0" collisionDamage="1" collisionMass="37" collisionRadius="15" friction="1" numGridCollisionPoints="8" shadowSize="15" stageHP="0" portrait="2" gridCollision="walls">
 		<bestiary transform="0,0,1" anim="WalkHeadHori" />
         <gibs amount="8" blood="1" bone="1" eye="0" gut="1" large="0" />
         <preload-snd id="115" />
@@ -395,6 +395,26 @@
     <entity id="161" variant="311" subtype="0" name="Tech Grudge" anm2path="monsters/techgrudge/techgrudge.anm2" baseHP="25" stageHP="1" boss="0" champion="1" collisionDamage="1" collisionMass="5" collisionRadius="13" friction="1" numGridCollisionPoints="12" gridCollision="walls" shadowSize="15" bestiary="true" portrait="311">
 		<bestiary transform="0,0,1" anim="FlySouth" />
         <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0"/>
+	</entity>
+
+    <!--Tainted Enemies-->
+
+    <entity anm2path="monsters/tainted_silly_and_string/monster_tainted_silly.anm2" id="426" variant="0" subtype="0" reroll="false" baseHP="70" boss="0" champion="0" collisionDamage="1" collisionMass="40" collisionRadius="10" friction="1" name="Tainted Silly" numGridCollisionPoints="12" shadowSize="15" stageHP="13" shieldStrength="20" bestiary="true" portrait="36" >
+        <bestiary transform="0,0,1" anim="Idle" />
+        <gibs amount="6" blood="2" bone="1" eye="1" gut="1" large="0" />
+        <devolve id="161.0.0" weight="1" />
+    </entity>
+
+    <entity anm2path="monsters/tainted_silly_and_string/monster_tainted_string.anm2" id="426" variant="1" subtype="0" reroll="false" baseHP="70" boss="0" champion="0" collisionDamage="1" collisionMass="40" collisionRadius="10" friction="1" name="Tainted String" numGridCollisionPoints="12" shadowSize="15" stageHP="13" shieldStrength="20" bestiary="true" portrait="36" >
+        <bestiary transform="0,0,1" anim="Idle" />
+        <gibs amount="6" blood="2" bone="1" eye="1" gut="1" large="0" />
+        <devolve id="161.0.0" weight="1" />
+    </entity>
+
+    <entity anm2path="monsters/tainted_silly_and_string/monster_tainted_and.anm2" baseHP="20" boss="0" champion="1" collisionDamage="1" collisionMass="10" collisionRadius="13" friction="1" id="426" name="&amp;" numGridCollisionPoints="12" portrait="37" reroll="true" shadowSize="14" stageHP="20" variant="2" shieldStrength="1000">
+        <bestiary anim="WalkHori" transform="0,0,1"/>
+        <gibs amount="6" blood="0" bone="1" eye="0" gut="1" large="0" worm="1"/>
+    	<devolve id="9.0.0" weight="1" />
 	</entity>
 
     <!--Jokes-->

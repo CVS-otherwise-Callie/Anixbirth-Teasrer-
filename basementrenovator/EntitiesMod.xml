@@ -124,11 +124,12 @@ Use 2, 4, or 6 normally.
    </bitfield>
 </entity>
 <entity ID="161" Variant="420" Name="Babble" Image="mah boys/babble.png" BaseHP="20" StageHP="7" Tags="Champion" />
-
+<!--162-->
 <entity ID="162" Metadata="1" Image="mah boys/lightpressureplate.png" Name="Light Pressure Plate" Subtype="0" Variant="2900" Group="Stage"/>
-
-
-
+<!--Tainted-->
+<entity ID="426" Variant="0" Name="Tainted Silly" Image="mah boys/sillytainted.png" BaseHP="70" StageHP="13" ShieldStrength="20" Tags="Champion"/>
+<entity ID="426" Variant="1" Name="Tainted String" Image="mah boys/stringtainted.png" BaseHP="70" StageHP="13" ShieldStrength="20" Tags="Champion"/>
+<entity ID="426" Variant="2" Name="&amp;" Image="mah boys/&amp;.png" BaseHP="20" StageHP="20" ShieldStrength="1000" Tags="Champion"/>
 
 <tab Name="Anixbirth (Hope)">
 
@@ -229,6 +230,12 @@ Use 2, 4, or 6 normally.
 		</group>
 	</group>
 
+	<group Name="HOPE Ascent" Label="Ascent">
+		<group Name="HOPE Ascent Enemies">
+			<entity Name="Tainted Silly"/>
+			<entity Name="Tainted String"/>
+		</group>
+	</group>
 </tab>
 
 <group Name="Chapter 1 (Alt Path) Enemies">
@@ -285,6 +292,10 @@ Use 2, 4, or 6 normally.
 
 <group Name="Pressure Plates">
 	<group Name="FHAC Buttons"/>
+</group>
+
+<group Name="Ascent Enemies">
+	<group Name="HOPE Ascent Enemies"/>
 </group>
 
 </data>
