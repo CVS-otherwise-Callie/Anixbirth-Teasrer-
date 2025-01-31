@@ -61,8 +61,8 @@ mod:AddCallback(ModCallbacks.MC_EVALUATE_CACHE,function(_, player, flag)
 
     local dat = SaveManager.GetRunSave(player).anixbirthsaveData
 
-    if dat.BowlOfSauerkraut and dat.BowlOfSauerkraut > 0 then
-        print(dat.BowlOfSauerkraut)
+    if dat.BowlOfSauerkraut and dat.BowlOfSauerkraut > 0 and dat.BowlOfSauerkraut ~= dat.BowlOfSauerkrautOld then
         player.Damage = player.Damage + (0.003+(0.002*dat.BowlOfSauerkraut))*dat.BowlOfSauerkraut
+        dat.BowlOfSauerkrautOld = dat.BowlOfSauerkraut
     end
 end)
