@@ -429,9 +429,6 @@ end
 function mod:isScare(npc)
 	return npc:HasEntityFlags(EntityFlag.FLAG_FEAR | EntityFlag.FLAG_SHRINK)
 end
-function mod:isConfuse(npc)
-	return npc:HasEntityFlags(EntityFlag.FLAG_CONFUSION)
-end
 function mod:isScareOrConfuse(npc)
 	return npc:HasEntityFlags(EntityFlag.FLAG_CONFUSION | EntityFlag.FLAG_FEAR | EntityFlag.FLAG_SHRINK)
 end
@@ -1130,10 +1127,6 @@ mod:AddCallback(ModCallbacks.MC_POST_PEFFECT_UPDATE, function(_, player)
 
 end)
 
-function mod:isScareOrConfuse(npc)
-	return npc:HasEntityFlags(EntityFlag.FLAG_CONFUSION | EntityFlag.FLAG_FEAR | EntityFlag.FLAG_SHRINK)
-end
-
 --ok i must be super lazy tonight but ye gain ff 
 function mod:GetMoveString(vec, doFlipX, doFlipY)
 	doFlipX = doFlipX or true
@@ -1210,6 +1203,28 @@ function mod:changeExtension(filename, newExtension)
   
 end
 
+function mod.anyPlayerHas(itemid, trinket, mombox)
+	for i = 1, game:GetNumPlayers() do
+		local p = Isaac.GetPlayer(i - 1)
+		if trinket then
+			if mombox then
+				if p:HasTrinket(itemid) and p:HasCollectible(CollectibleType.COLLECTIBLE_MOMS_BOX) then
+					return true
+				end
+			else
+				if p:HasTrinket(itemid) then
+					return true
+				end
+			end
+		else
+			if p:HasCollectible(itemid) then
+				return true
+			end
+		end
+	end
+end
+
+
 --#end region
 
 mod.ImInAClosetPleaseHelp = false
@@ -1265,7 +1280,7 @@ function mod:AltLockedClosetCutscene()
 	end
 
 	if mod.StartCutscene and ms:GetCurrentMusicID() ~= Isaac.GetMusicIdByName("ruinsecret") then
-		ms:Play(Isaac.GetMusicIdByName("ruinsecret"), 0.1)
+		ms:Play(Isaac.GetMusicIdByName("ruinsecret"), 1)
 	end
 
 	for k, v in ipairs(Isaac.GetRoomEntities()) do
@@ -1396,3 +1411,52 @@ function mod:GetAliveEntitiesInDist(npc, dist)
 	return tab
 end
 
+function mod:AddTempItem(item, player, callback)
+	player = player or Isaac.GetPlayer()
+	local dat = SaveManager.GetRunSave(player).anixbirthsaveData or player:GetData()
+
+	item = item or CollectibleType.COLLECTIBLE_SAD_ONION
+	callback = callback or ModCallbacks.MC_POST_NEW_ROOM
+	dat.TemporaryItems = dat.TemporaryItems or {}
+
+	player:AddCollectible(item, 0, false, nil, 15)
+	table.insert(dat.TemporaryItems, {Item = item, Player = player, Callback = callback, Num = #dat.TemporaryItems + 1})
+
+end
+
+function mod:RemoveTempItem(items)
+	if not items or #items == 0 then return end
+	for i = 1, #items do
+		local tab = items[i]
+		if not tab then return end
+
+		if tab.hasGone then return end
+
+		tab.hasGone = true
+		tab.Player = tab.Player or Isaac.GetPlayer()
+		mod.scheduleCallback(function()
+			tab.Player:RemoveCollectible(tab.Item, true)
+			table.remove(items, tab.Num)
+		end, 1, tab.Callback)
+	end
+end
+
+function mod:PostUpdateRemoveTempItems(player)
+	local dat = SaveManager.GetRunSave(player).anixbirthsaveData
+	mod:RemoveTempItem(dat.TemporaryItems)
+end
+
+function mod:ReplacePedestal(num, item, poof)
+	local itemConfig = Isaac.GetItemConfig()
+	poof = poof or true
+	local pedestal = item:ToPickup()
+	if item.Type == EntityType.ENTITY_PICKUP and item.Variant == PickupVariant.PICKUP_COLLECTIBLE then
+        local itemcon = itemConfig:GetCollectible(pedestal.SubType)
+        if itemcon and not itemcon:HasTags(ItemConfig.TAG_QUEST) then
+			if poof then
+				Isaac.Spawn(EntityType.ENTITY_EFFECT, EffectVariant.POOF01, 0, item.Position, item.Velocity, item)
+			end
+			pedestal:Morph(EntityType.ENTITY_PICKUP, PickupVariant.PICKUP_COLLECTIBLE, num, true, true, true)
+		end
+	end
+end

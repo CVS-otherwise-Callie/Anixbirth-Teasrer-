@@ -142,7 +142,6 @@ function mod:ErythorcytebabyAI(npc, sprite, d)
         npc.StateFrame = 0
         d.slowdown = 1
         if d.newhost ~= nil then
-        print(d.newhost)
         d.newpos = d.newhost.Position
         d.newpos = (d.newpos - npc.Position):Resized(2)
         else

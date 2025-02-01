@@ -21,7 +21,7 @@ function mod:SillyStringAI(npc, sprite, d)
     if npc.Variant == mod.Monsters.Silly.Var then d.isSilly = true end
     if npc.Variant == mod.Monsters.String.Var then d.isString = true end
     if d.baby and d.baby.Type == 1 then d.targisPlayer = true end
-    if d.baby and d.babyIsDead then extraanim = "Depressed" end
+    if d.babyIsDead then extraanim = "Depressed" d.targisPlayer = true end
 
     --local functions to silly and string --
 
@@ -100,13 +100,10 @@ function mod:SillyStringAI(npc, sprite, d)
         sprite:Play("RecieveIdle")
     elseif d.state == "hidingtime" then
         mod:MakeInvulnerable(npc)
-        if sprite:IsFinished(extraanim .. "Leave") then
-            npc.Velocity = mod:Lerp(npc.Velocity, d.newpos - npc.Position, 0.5)
-            if npc.StateFrame > 50 then
-                sprite:Play(extraanim .. "Appear")
-                npc:PlaySound(SoundEffect.SOUND_SCAMPER,1,0,false,(math.random(1, 8))/10)
-                npc.StateFrame = 0
-            end
+    elseif d.state == "waitforintroooutroednthendepressed" then
+        if sprite:IsFinished("Appear") then
+            sprite:Play(extraanim .. "Init")
+            d.babyIsDead = true
         end
     end
 
@@ -115,6 +112,9 @@ function mod:SillyStringAI(npc, sprite, d)
     if not d.targisPlayer then
         d.baby:GetData().baby = npc  
         if d.isRecieving then
+            if d.babyIsDead then
+                d.babyIsDead = false
+            end
             extraanim = "Recive"
             if d.shottorecieve and d.shottorecieve.Position:Distance(npc.Position) < 10 then
                 d.state = "recieving"
@@ -152,7 +152,7 @@ function mod:SillyStringAI(npc, sprite, d)
         if not d.babyIsDead then
             findSillyStringBaby()
         end
-        if npc.StateFrame >= 60 then
+        if npc.StateFrame >= 60 and d.state ~= "waitforintroooutroednthendepressed" then
             mod:spritePlay(sprite, extraanim .. "Shoot")
             d.state = "shoot"
             npc.StateFrame = 0
@@ -198,19 +198,29 @@ function mod:SillyStringAI(npc, sprite, d)
         d.state = "idle"
     end
 
+    if sprite:IsFinished(extraanim .. "Leave") then
+        npc.Velocity = mod:Lerp(npc.Velocity, d.newpos - npc.Position, 0.5)
+        if npc.StateFrame > 50 then
+            sprite:Play(extraanim .. "Appear")
+            npc:PlaySound(SoundEffect.SOUND_SCAMPER,1,0,false,(math.random(1, 8))/10)
+            npc.StateFrame = 0
+        end
+    end
+
     --check if its dead--
 
     if d.baby:IsDead() then
         d.baby = npc:GetPlayerTarget()
-        extraanim = "Depressed"
-        if not d.targisPlayer then
-            if not (sprite:IsPlaying("Appear") or sprite:IsPlaying("Leave")) then
+        if d.state ~= "waitforintroooutroednthendepressed" and d.state ~= "depressedinit" then
+            npc.StateFrame = 0
+            if not (sprite:GetAnimation() == extraanim .. "Appear" or sprite:GetAnimation() == extraanim .. "Leave") then
+                extraanim = "Depressed"
                 sprite:Play(extraanim .. "Init")
+                d.state = "depressedinit"
+                d.babyIsDead = true
+            else
+                d.state = "waitforintroooutroednthendepressed"
             end
-            d.state = "depressedinit"
-            d.state = "idle"
-            
-            d.babyIsDead = true
         end
     end
 
@@ -256,11 +266,6 @@ mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, function(_, npc, damage, flag, 
         }) == false then
             --npc.HitPoints = npc.HitPoints + damage*0.01
             return {Damage = damage*0.01}
-        else
-            print( mod:CheckForOnlyEntInRoom({
-                mod:ENT("Silly"),
-                mod:ENT("String")
-            }))
         end
     end
 end)

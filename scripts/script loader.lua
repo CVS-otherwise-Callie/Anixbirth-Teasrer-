@@ -79,10 +79,15 @@ FHAC:LoadScripts("scripts.iam.items.actives", {
 	"straw doll"
 })
 
+FHAC:LoadScripts("scripts.iam.items.trinkets", {
+	"mystery milk",
+})
+
 FHAC:LoadScripts("scripts.iam.items.passives", {
 	"stinky mushroom",
 	"anal fissure",
-	"big ol' bowl of sauerkraut"
+	"big ol' bowl of sauerkraut",
+	"empty death certificate"
 })
 
 FHAC:LoadScripts("scripts.iam.items.pickups" , {

@@ -29,7 +29,6 @@ function mod:BlackOverlayBoxAI(ef, sprite, d)
 end
 
 function mod:FadeOutBlack(time, ending)
-    print(mod:CheckForEntInRoom({Type = EntityType.ENTITY_EFFECT, Variant = mod.Effects.BlackOverlayBox.Var, SubType = 55}, true, true, false))
     if mod:CheckForEntInRoom({Type = EntityType.ENTITY_EFFECT, Variant = mod.Effects.BlackOverlayBox.Var, SubType = 55}, true, true, false) == false  then
         local box = Isaac.Spawn(EntityType.ENTITY_EFFECT, mod.Effects.BlackOverlayBox.Var, 55, Vector(game:GetRoom():GetCenterPos().X, game:GetRoom():GetBottomRightPos().Y), Vector.Zero, nil):ToEffect()
         box:GetData().transColor = time

@@ -82,8 +82,12 @@ function mod:PostNewRoom()
 end
 mod:AddCallback(ModCallbacks.MC_POST_NEW_ROOM, mod.PostNewRoom)
 
+mod:AddCallback(ModCallbacks.MC_POST_PICKUP_INIT, function(_, pickup)
+end)
+
 function mod:PostPlayerUpdate(player)
-    --mod:AnalFissure(player)
+    mod:PostUpdateRemoveTempItems(player)
+    mod:MysteryMilkRoomInit(player)
 end
 mod:AddCallback(ModCallbacks.MC_POST_PLAYER_UPDATE, mod.PostPlayerUpdate)
 

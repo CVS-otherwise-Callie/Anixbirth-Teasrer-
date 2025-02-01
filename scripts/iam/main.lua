@@ -149,3 +149,10 @@ function mod:RemoveAllSpecificItemEffects(player)
 	d.AnalFissureCreepInit = false
     mod.StrawDollActiveIsActive = false
 end
+
+function mod:CVSNewRoom()
+	local players = Isaac.FindByType(1, -1, -1, false, false)
+	for _, player in ipairs(players) do
+        mod:MysteryMilkRoomInit(player)
+    end
+end

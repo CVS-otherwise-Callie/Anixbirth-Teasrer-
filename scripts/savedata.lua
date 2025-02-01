@@ -2,6 +2,7 @@
 SaveManager  = include("scripts.save_manager")
 
 SaveManager.Utility.AddDefaultRunData(SaveManager.DefaultSaveKeys.PLAYER, {anixbirthsaveData = {}})
+SaveManager.Utility.AddDefaultRoomData(SaveManager.DefaultSaveKeys.PLAYER, {anixbirthsaveData = {}})
 SaveManager.Utility.AddDefaultRunData(SaveManager.DefaultSaveKeys.GLOBAL, {PreSavedEntsLevel = {}, SavedEntsLevel = {}, ToBeSavedEnts = {}})
 
 SaveManager.Init(FHAC)
