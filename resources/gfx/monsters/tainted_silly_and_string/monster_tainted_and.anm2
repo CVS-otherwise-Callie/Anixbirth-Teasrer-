@@ -1,5 +1,5 @@
 <AnimatedActor>
-	<Info CreatedBy="TheJacketPotato" CreatedOn="01/02/2025 14:04:23" Version="13" Fps="30"/>
+	<Info CreatedBy="TheJacketPotato" CreatedOn="2/2/2025 7:18:00 AM" Version="15" Fps="30"/>
 	<Content>
 		<Spritesheets>
 			<Spritesheet Path="monster_tainted_silly_and_string.png" Id="0"/>
@@ -10,9 +10,11 @@
 			<Layer Name="legs" Id="2" SpritesheetId="0"/>
 		</Layers>
 		<Nulls/>
-		<Events/>
+		<Events>
+			<Event Name="shoot" Id="0"/>
+		</Events>
 	</Content>
-	<Animations DefaultAnimation="WalkHori">
+	<Animations DefaultAnimation="Appear">
 		<Animation Name="WalkHori" FrameNum="54" Loop="true">
 			<RootAnimation>
 				<Frame XPosition="0" YPosition="0" XScale="100" YScale="100" Delay="1" Visible="true" RedTint="255" GreenTint="255" BlueTint="255" AlphaTint="255" RedOffset="0" GreenOffset="0" BlueOffset="0" Rotation="0" Interpolated="false"/>
@@ -54,7 +56,10 @@
 				<LayerAnimation LayerId="1" Visible="false"/>
 			</LayerAnimations>
 			<NullAnimations/>
-			<Triggers/>
+			<Triggers>
+				<Trigger EventId="0" AtFrame="7"/>
+				<Trigger EventId="0" AtFrame="33"/>
+			</Triggers>
 		</Animation>
 		<Animation Name="WalkVert" FrameNum="54" Loop="true">
 			<RootAnimation>
@@ -97,7 +102,10 @@
 				<LayerAnimation LayerId="1" Visible="false"/>
 			</LayerAnimations>
 			<NullAnimations/>
-			<Triggers/>
+			<Triggers>
+				<Trigger EventId="0" AtFrame="7"/>
+				<Trigger EventId="0" AtFrame="34"/>
+			</Triggers>
 		</Animation>
 		<Animation Name="Appear" FrameNum="30" Loop="false">
 			<RootAnimation>

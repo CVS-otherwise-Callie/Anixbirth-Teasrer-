@@ -23,6 +23,8 @@ function mod:MusicCheckCallback()
             customMusicID = Isaac.GetMusicIdByName("AnixbirthGoodnightPrince")
         elseif mod:GetRoomNameByType(rDD.Type) == "Shop" then
             customMusicID = Isaac.GetMusicIdByName("AnixbirthForsaken")
+        elseif mod:GetRoomNameByType(rDD.Type) == "Super Secret" then
+            customMusicID = Isaac.GetMusicIdByName("AnixbirthShame")
         end
     end
 

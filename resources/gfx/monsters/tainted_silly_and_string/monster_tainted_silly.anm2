@@ -1,5 +1,5 @@
 <AnimatedActor>
-	<Info CreatedBy="TheJacketPotato" CreatedOn="2/1/2025 6:33:04 AM" Version="12" Fps="30"/>
+	<Info CreatedBy="TheJacketPotato" CreatedOn="2/1/2025 12:25:34 PM" Version="13" Fps="30"/>
 	<Content>
 		<Spritesheets>
 			<Spritesheet Path="monster_tainted_silly_and_string.png" Id="0"/>
@@ -14,7 +14,7 @@
 		<Nulls/>
 		<Events/>
 	</Content>
-	<Animations DefaultAnimation="Idle">
+	<Animations DefaultAnimation="Appear">
 		<Animation Name="Idle" FrameNum="40" Loop="true">
 			<RootAnimation>
 				<Frame XPosition="0" YPosition="0" XScale="100" YScale="100" Delay="1" Visible="true" RedTint="255" GreenTint="255" BlueTint="255" AlphaTint="255" RedOffset="0" GreenOffset="0" BlueOffset="0" Rotation="0" Interpolated="false"/>

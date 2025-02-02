@@ -93,6 +93,7 @@ local function patherReal(npc, point)
 		return game:GetRoom():CheckLine(point,npc.Position,3,900,false,false)
 	else
 		local pather = npc.Pathfinder
+		if not pather then return end
 		return pather:HasPathToPos(point, true)
 	end
 end
