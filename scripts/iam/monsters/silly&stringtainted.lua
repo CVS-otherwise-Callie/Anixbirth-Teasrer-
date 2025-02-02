@@ -72,12 +72,7 @@ function mod:TaintedSillyStringAI(npc, sprite, d)
     end
 
     local function sillyStringFindFreeGrid()
-        local pos = mod:freeGrid(d.baby, true, 1000000, 100)
-        if game:GetRoom():CheckLine(pos,d.baby.Position,3,900,false,false) then
-            return pos
-        else
-            return sillyStringFindFreeGrid()
-        end
+        return mod:freeGrid(npc, true, 1000000, 100)
     end
 
     --init--
@@ -129,7 +124,8 @@ function mod:TaintedSillyStringAI(npc, sprite, d)
                 d.newpos = sillyStringFindFreeGrid()
             elseif d.state == "hiding" then
                 mod:MakeInvulnerable(npc)
-                npc.Velocity = mod:Lerp(npc.Velocity, d.newpos - npc.Position, 0.5)
+                d.newpos = sillyStringFindFreeGrid()
+                npc.Position = d.newpos
                 npc.Visible = false
             elseif d.state == "appear" then
                 mod:MakeVulnerable(npc)
@@ -145,6 +141,7 @@ function mod:TaintedSillyStringAI(npc, sprite, d)
                 d.newpos = sillyStringFindFreeGrid()
             elseif d.state == "hidemove" then
                 mod:MakeInvulnerable(npc)
+                d.newpos = sillyStringFindFreeGrid()
                 npc.Position = d.newpos
                 npc.Visible = false
                 if npc.Position:Distance(d.newpos) < 10 then
@@ -174,12 +171,19 @@ function mod:TaintedSillyStringAI(npc, sprite, d)
                 d.state = "idle"
             end
 
+            d.baby:GetData().isRecieving = true
+
         else
 
             if d.state == "idle" then
                 mod:spritePlay(sprite, extraanim .. "Idle")
-                if npc.StateFrame > 50 then
+                if npc.StateFrame > 50 and not d.isPickingUpChild then
                     d.state = "leave"
+                end
+                if d.andSymbol and d.andSymbol:Exists() and not d.andSymbol:IsDead() and d.andSymbol.Position:Distance(npc.Position) < 5 then
+                    d.andSymbol:GetData().state = "dissapear"
+                    d.andSymbol = nil
+                    d.state = nil
                 end
             elseif d.state == "leave" then
                 mod:spritePlay(sprite, "Leave")
@@ -204,22 +208,23 @@ function mod:TaintedSillyStringAI(npc, sprite, d)
                 elseif sprite:IsPlaying(extraanim .. "Leave") then
                     sprite:Play(extraanim .. "Appear")
                 end
+            elseif d.state == "pickuptime" then
+                npc.Position = d.newpos
+                d.state = "appear"
+            elseif d.state == "youcanleavenow" then
+                d.state = "leavesecond"
+                d.baby:GetData().isRecieving = true
+                d.isRecieving = false
             end
     
             if sprite:IsFinished(extraanim .. "Leave") and d.state == "leave" then
                 d.state = "hiding"
             elseif sprite:IsFinished(extraanim .. "Appear") or sprite:IsFinished(extraanim .. "DepressedInit") then
-                if d.andSymbol and d.andSymbol:Exists() and not d.andSymbol:IsDead() then
-                    d.andSymbol:GetData().state = "dissapear"
-                    d.andSymbol = nil
-                end
+                d.state = "idle"
                 npc.StateFrame = 0
-                d.state = "leavesecond"
-                d.baby:GetData().isRecieving = true
-                d.isRecieving = false
             end
 
-            if d.andSymbol:IsDead() then
+            if d.andSymbol and d.andSymbol:IsDead() then
                 npc.Position = d.andSymbol.Position
                 mod:spritePlay(sprite, "Appear")
             end
@@ -251,7 +256,7 @@ function mod:TaintedSillyStringAI(npc, sprite, d)
 
             if npc.FrameCount % 5 == 0 then
                 d.rngshoot = math.random(100)
-                for i = 0, 5 do
+                for i = 0, 3 do
                     d.typeofShooting = "player"
                     local proj = Isaac.Spawn(9, ProjectileVariant.PROJECTILE_TEAR, 0, npc.Position + Vector(math.random(30, 120), 0):Rotated((60*i+d.rngshoot)), Vector(1, 0):Rotated((60*i+d.rngshoot)), npc):ToProjectile()
                     proj.Height = -5
@@ -280,8 +285,6 @@ function mod:TaintedSillyStringAI(npc, sprite, d)
 
     end
 
-    --print(d.state)
-
     if d.targisPlayer then
         findSillyStringBaby()
     end
@@ -302,7 +305,9 @@ function mod:andSymbolAI(npc, sprite, d)
     local path = npc.Pathfinder
     local room = game:GetRoom()
 
-    npc:AddHealth(npc.MaxHitPoints)
+    if npc.Parent or (d.baby and (not d.baby:IsDead() and d.baby.Type ~= 1)) then
+        npc:AddHealth(npc.MaxHitPoints)
+    end
 
     if not npc.Parent or (npc.Parent and (not npc.Parent:Exists() or npc.Parent:IsDead())) then
         if d.baby and d.baby.Type ~= 1 then
@@ -341,14 +346,42 @@ function mod:andSymbolAI(npc, sprite, d)
         num = 8
     end
 
+    if d.isAggressive and (not npc.Parent or npc.Parent:IsDead()) then
+        d.isAggressive = false
+    end
+
     if d.state == "appear" then
         
         mod:spritePlay(sprite, "Appear")
 
     elseif d.state == "walk" then
 
-        if npc.Position:Distance(d.newpos) < 5 then
-            d.newpos = andSymbolFindGrid()
+        if not d.walkinit then
+            if mod:isScare(npc) then
+                local targetvelocity = (d.newpos - npc.Position):Resized(-1 * num)
+                npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 1)
+            elseif path:HasPathToPos(d.newpos) then
+                local targetvelocity = (d.newpos - npc.Position):Resized(num)
+                npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 1)
+            else
+                path:FindGridPath(d.newpos, 0.7, 1, true)
+            end
+
+            d.walkinit = true
+        end
+
+        if (npc.Position:Distance(d.newpos) < 10 or game:GetRoom():CheckLine(d.newpos,npc.Position,3,900,false,false) == false) or (mod:isScareOrConfuse(npc) and npc.StateFrame % 10 == 0) then
+            if d.gettingPickedUp then
+                if d.baby and not d.baby:IsDead() and d.baby.Type ~= 1 and not npc.Parent:GetData().babyIsDead then
+                    d.newpos = d.baby.Position
+                elseif npc.Parent and not npc.Parent:IsDead() and not npc.Parent:GetData().babyIsDead then
+                    d.newpos = npc.Parent.Position
+                elseif not d.isAggressive then
+                    d.state = "dissapear"
+                end
+            else
+                d.newpos = andSymbolFindGrid()
+            end
         elseif (sprite:GetFrame() > 2 and sprite:GetFrame() < 25) or (sprite:GetFrame() > 27 and sprite:GetFrame() < 48) then
 
             if mod:isScare(npc) then
@@ -373,8 +406,8 @@ function mod:andSymbolAI(npc, sprite, d)
 
         else
             local creep = Isaac.Spawn(1000, 22,  0, npc.Position, Vector(0, 0), npc):ToEffect()
-            creep.Scale = creep.Scale * 1.3
-            creep:SetTimeout(creep.Timeout + 90)
+            creep.Scale = creep.Scale * 1.15
+            creep:SetTimeout(creep.Timeout + 60)
             creep:Update()
         end
 
@@ -386,25 +419,21 @@ function mod:andSymbolAI(npc, sprite, d)
             
         sprite:Update()
 
-        if npc.StateFrame > 200 and sprite:GetFrame() > 48 and not d.isAggressive then
-            d.state = "pickup"
-        end
-
     elseif d.state == "pickup" then
 
         if d.baby and not d.baby:IsDead() and d.baby.Type ~= 1 and not npc.Parent:GetData().babyIsDead then
             local dat = d.baby:GetData()
             dat.newpos = npc.Position
-            dat.state = "babyPickup"
+            --dat.state = "babyPickup"
             dat.isPickingUpChild = true
             d.state = nil
         elseif npc.Parent and not npc.Parent:IsDead() and not npc.Parent:GetData().babyIsDead then
             local dat = npc.Parent:GetData()
             dat.newpos = npc.Position
-            dat.state = "babyPickup"
+            --dat.state = "babyPickup"
             dat.isPickingUpChild = true
             d.state = nil
-        else
+        elseif not d.isAggressive then
             d.state = "dissapear"
         end
 
@@ -414,16 +443,43 @@ function mod:andSymbolAI(npc, sprite, d)
 
     elseif not d.state then
 
-        sprite:SetFrame("WalkVert", 0)
-
         if npc.Parent:IsDead() or npc.Parent:GetData().babyIsDead then
             d.state = "pickup"
         end
-    end
 
+        if d.baby and not d.baby:IsDead() and d.baby.Type ~= 1 and not npc.Parent:GetData().babyIsDead then
+            d.newpos = d.baby.Position
+        elseif npc.Parent and not npc.Parent:IsDead() and not npc.Parent:GetData().babyIsDead then
+            d.newpos = npc.Parent.Position
+        elseif not d.isAggressive then
+            d.state = "dissapear"
+        end
+
+        if mod:isScare(npc) then
+            local targetvelocity = (d.newpos - npc.Position):Resized(-1 * num)
+            npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 1)
+        elseif path:HasPathToPos(d.newpos) then
+            local targetvelocity = (d.newpos - npc.Position):Resized(num)
+            npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 1)
+        else
+            path:FindGridPath(d.newpos, 0.7, 1, true)
+        end
+    end
+    
     if sprite:IsFinished( "Appear") then
         d.state = "walk"
     elseif sprite:IsFinished("Dissapear") then
+        local dat
+        if d.baby and not d.baby:IsDead() and d.baby.Type ~= 1 and not npc.Parent:GetData().babyIsDead then
+            dat= d.baby:GetData()
+            dat.state = "youcanleavenow"
+            --dat.state = "babyPickup"
+        elseif npc.Parent and not npc.Parent:IsDead() and not npc.Parent:GetData().babyIsDead then
+            dat = npc.Parent:GetData()
+            dat.state = "youcanleavenow"
+            --dat.state = "babyPickup"
+        end
+        d.baby:GetData().youcanleavenow = true
         npc:Remove()
     end
 
@@ -449,10 +505,43 @@ function mod:andSymbolAI(npc, sprite, d)
         npc:MultiplyFriction(0.3)
     end
 
+    if npc.StateFrame > 150 and not d.gettingPickedUp then
+        local dat = nil
+
+        if d.baby and not d.baby:IsDead() and d.baby.Type ~= 1 and not npc.Parent:GetData().babyIsDead then
+            dat= d.baby:GetData()
+            d.newpos = d.baby.Position
+            --dat.state = "babyPickup"
+        elseif npc.Parent and not npc.Parent:IsDead() and not npc.Parent:GetData().babyIsDead then
+            dat = npc.Parent:GetData()
+            d.newpos = npc.Parent.Position
+            --dat.state = "babyPickup"
+        elseif not d.isAggressive then
+            d.state = "dissapear"
+        end
+
+        if dat then
+            dat.state = "pickuptime"
+            dat= d.baby:GetData()
+            dat.newpos = mod:freeGrid(npc, true, 500, 200)
+            --dat.state = "babyPickup"
+            dat.isPickingUpChild = true
+            d.gettingPickedUp = true
+        end
+        
+    end
+
 end
 
 function mod.andShot(p, d)
     if d.type == "andSymbol" and p:IsDead() then
         local creep = Isaac.Spawn(1000, 22,  0, game:GetRoom():GetClampedPosition(p.Position, 15), Vector(0, 0), p):ToEffect()
+        creep.Scale = creep.Scale * 0.5
     end
 end
+
+mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, function(_, npc, damage, flag, source)
+    if flag & DamageFlag.DAMAGE_EXPLOSION ~= 0 and mod:IsSourceofDamagePlayer(source, true) == false and npc.Variant == mod.Monsters.andEntity.Var then
+        return false
+    end
+end, mod.Monsters.andEntity.ID )
