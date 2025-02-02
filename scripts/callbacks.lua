@@ -49,8 +49,17 @@ function mod:ProjStuff(v)
     mod.SillyShot(v, d)
     mod:PatientShots(v, d)
     mod:SixheadShot(v, d)
+    mod.andShot(v, d)
 end
 FHAC:AddCallback(ModCallbacks.MC_POST_PROJECTILE_UPDATE, mod.ProjStuff)
+
+function mod:ProjStuffDeath(v)
+    local d = v:GetData();
+    mod.andShot(v, d)
+end
+
+FHAC:AddCallback(ModCallbacks.MC_POST_PROJECTILE_DEATH, mod.ProjStuffDeath)
+
 
 function mod:ProjCollStuff(v,c)
     local d = v:GetData();
