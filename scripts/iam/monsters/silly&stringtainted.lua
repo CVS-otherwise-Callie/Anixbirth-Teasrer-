@@ -20,6 +20,12 @@ mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
     end
 end, mod.Monsters.andEntity.ID)
 
+mod:AddCallback(ModCallbacks.MC_POST_NPC_RENDER, function(_, npc)
+    if npc.Variant == mod.Monsters.andEntity.Var then
+        mod:andSymbolRenderAI(npc, npc:GetSprite(), npc:GetData())
+    end
+end, mod.Monsters.andEntity.ID)
+
 function mod:TaintedSillyStringAI(npc, sprite, d)
     local extraanim = ""
     local target = npc:GetPlayerTarget()
@@ -72,7 +78,15 @@ function mod:TaintedSillyStringAI(npc, sprite, d)
     end
 
     local function sillyStringFindFreeGrid()
-        return mod:freeGrid(npc, true, 1000000, 100)
+        local pos = mod:freeGrid(npc, true, 1000000, 100)
+        if d.baby then
+            pos = mod:freeGrid(d.baby, true, 1000000, 100)
+        end
+        if game:GetRoom():CheckLine(pos,d.baby.Position,3,900,false,false) then
+            return pos
+        else
+            return sillyStringFindFreeGrid()
+        end
     end
 
     --init--
@@ -156,7 +170,15 @@ function mod:TaintedSillyStringAI(npc, sprite, d)
                 else
                     sprite:Play(extraanim .. "Init")
                 end
+            elseif d.state == "pickuptime" then
+                npc.Position = d.newpos
+                d.state = "appear"
+            elseif d.state == "youcanleavenow" then
+                d.state = "leavesecond"
+                d.baby:GetData().isRecieving = true
+                d.isRecieving = false
             end
+    
     
             if sprite:IsFinished(extraanim .. "Leave") and d.state == "leave" then
                 d.state = "hiding"
@@ -341,7 +363,7 @@ function mod:andSymbolAI(npc, sprite, d)
         npc.StateFrame = npc.StateFrame + 1
     end
 
-    local num = 6
+    local num = 5
     if d.isAggressive then
         num = 8
     end
@@ -370,6 +392,8 @@ function mod:andSymbolAI(npc, sprite, d)
             d.walkinit = true
         end
 
+        npc.SpriteOffset = mod:Lerp(npc.SpriteOffset, Vector(0, 0), 0.01)
+
         if (npc.Position:Distance(d.newpos) < 10 or game:GetRoom():CheckLine(d.newpos,npc.Position,3,900,false,false) == false) or (mod:isScareOrConfuse(npc) and npc.StateFrame % 10 == 0) then
             if d.gettingPickedUp then
                 if d.baby and not d.baby:IsDead() and d.baby.Type ~= 1 and not npc.Parent:GetData().babyIsDead then
@@ -382,7 +406,12 @@ function mod:andSymbolAI(npc, sprite, d)
             else
                 d.newpos = andSymbolFindGrid()
             end
-        elseif (sprite:GetFrame() > 2 and sprite:GetFrame() < 25) or (sprite:GetFrame() > 27 and sprite:GetFrame() < 48) then
+        elseif (sprite:GetFrame() < 2 or (sprite:GetFrame() > 25 and sprite:GetFrame() < 27) or sprite:GetFrame() > 48) then
+            local creep = Isaac.Spawn(1000, 22,  0, npc.Position, Vector(0, 0), npc):ToEffect()
+            creep.Scale = creep.Scale * 1.15
+            creep:SetTimeout(creep.Timeout - 20)
+            creep:Update() 
+        else
 
             if mod:isScare(npc) then
                 local targetvelocity = (d.newpos - npc.Position):Resized(-1 * num)
@@ -404,11 +433,7 @@ function mod:andSymbolAI(npc, sprite, d)
                 })
             end
 
-        else
-            local creep = Isaac.Spawn(1000, 22,  0, npc.Position, Vector(0, 0), npc):ToEffect()
-            creep.Scale = creep.Scale * 1.15
-            creep:SetTimeout(creep.Timeout + 60)
-            creep:Update()
+
         end
 
         if npc.Velocity:Length() > 0.5 then
@@ -479,7 +504,6 @@ function mod:andSymbolAI(npc, sprite, d)
             dat.state = "youcanleavenow"
             --dat.state = "babyPickup"
         end
-        d.baby:GetData().youcanleavenow = true
         npc:Remove()
     end
 
@@ -531,6 +555,37 @@ function mod:andSymbolAI(npc, sprite, d)
         
     end
 
+end
+
+function mod:andSymbolRenderAI(npc, sprite, d)
+    local function andEntityAppear()
+        d.var1 = d.var1 or 1
+        d.xvel = d.xvel or 20
+        d.yvel = d.yvel or 0
+        d.var1 = d.var1 + 0.1
+        if npc.FrameCount % 18 == 0 then
+            local random = math.random(1)
+
+            if random == 1 then
+                d.xvel = math.random(-20, -10)
+            else
+                d.xvel = math.random(10, 20)
+            end
+            random = math.random(1)
+            if random == 1 then
+                d.yvel = math.random(-20, -10)
+            else
+                d.yvel = math.random(10, 20)
+            end
+        end
+        npc.SpriteOffset = mod:Lerp(npc.SpriteOffset, (npc.SpriteOffset - Vector(npc.SpriteOffset.X + (math.cos(d.var1)*5), npc.SpriteOffset.Y + (math.cos(d.var1+90)*5))), 1)
+        npc.SpriteOffset = mod:Lerp(npc.SpriteOffset, (npc.SpriteOffset - Vector(d.xvel, d.yvel)), 0.5)
+        d.xvel = d.xvel + ((d.xvel + (0 - npc.SpriteOffset.X))-((d.xvel + (0 - npc.SpriteOffset.X))*2))*0.2
+        d.yvel = d.yvel + ((d.yvel + (0 - npc.SpriteOffset.Y))-((d.yvel + (0 - npc.SpriteOffset.Y))*2))*0.2
+    end
+    if sprite:IsPlaying("Appear") or sprite:IsPlaying("Dissapear") then
+        andEntityAppear()
+    end
 end
 
 function mod.andShot(p, d)

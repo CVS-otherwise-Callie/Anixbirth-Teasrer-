@@ -3,12 +3,11 @@ local game = Game()
 local rng = RNG()
 local sfx = SFXManager()
 
-
 mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
-    if npc.Variant == mod.Monsters.Toast.Var then
+    if npc.Variant == 1 then
         mod:ToastAI(npc, npc:GetSprite(), npc:GetData())
     end
-end, mod.Monsters.Toast.ID)
+end, 161)
 
 local function GetAliveEntitiesInDist(npc, dist)
 	local tab = {}
@@ -28,6 +27,7 @@ function mod:ToastAI(npc, sprite, d)
     if not d.init then
         d.state = "hiding"
         d.addon = 0
+        d.canBeHit = false
         d.init = true
     else
         npc.StateFrame = npc.StateFrame + 1
@@ -109,6 +109,8 @@ function mod:ToastAI(npc, sprite, d)
             d.state = "idle"
             npc.StateFrame = 0
         end
+    elseif sprite:GetAnimation() == "Appear" then
+        d.state = "hiding"
     end
 
     if sprite:IsFinished("SwitchedOff") then
@@ -160,9 +162,9 @@ function mod:ToastAI(npc, sprite, d)
 end
 
 mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, function(_, npc, amt, flag, source)
-    if npc.Type == mod.Monsters.Toast.ID and npc.Variant == mod.Monsters.Toast.Var then
+    if npc.Type == 161 and npc.Variant == 1 then
         if not npc:GetData().canBeHit then
-            if (flag & DamageFlag.DAMAGE_EXPLOSION ~= 0 and mod:IsSourceofDamagePlayer(source, true) == false and npc.Variant == mod.Monsters.Toast.Var) or amt > 20 then
+            if (flag & DamageFlag.DAMAGE_EXPLOSION ~= 0 and mod:IsSourceofDamagePlayer(source, true) == false and npc.Variant == 1) or amt > 20 then
                 npc:ToNPC():GetData().state = "bombed"
                 npc:ToNPC().StateFrame = 0
             end
