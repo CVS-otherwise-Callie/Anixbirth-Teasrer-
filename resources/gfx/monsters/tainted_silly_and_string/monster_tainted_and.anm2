@@ -1,5 +1,5 @@
 <AnimatedActor>
-	<Info CreatedBy="TheJacketPotato" CreatedOn="04/02/2025 21:13:32" Version="17" Fps="30"/>
+	<Info CreatedBy="TheJacketPotato" CreatedOn="04/02/2025 21:29:54" Version="18" Fps="30"/>
 	<Content>
 		<Spritesheets>
 			<Spritesheet Path="monster_tainted_silly_and_string.png" Id="0"/>
