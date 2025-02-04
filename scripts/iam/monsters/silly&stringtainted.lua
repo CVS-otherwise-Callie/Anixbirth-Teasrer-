@@ -79,8 +79,8 @@ function mod:TaintedSillyStringAI(npc, sprite, d)
 
     local function sillyStringFindFreeGrid()
         local pos = mod:freeGrid(npc, true, 1000000, 100)
-        if d.baby then
-            pos = mod:freeGrid(d.baby, true, 1000000, 100)
+        if d.baby and not d.baby:IsDead() and d.andSymbol then
+            pos = mod:freeGrid(d.baby, true, 1000, 100)
         end
         if game:GetRoom():CheckLine(pos,d.baby.Position,3,900,false,false) then
             return pos

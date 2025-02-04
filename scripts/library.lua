@@ -486,7 +486,6 @@ local DISTANCE_THRESHOLD = 20
 
 ---@param lineStart Vector
 ---@param lineEnd Vector
----@param entities Entity[]
 function mod:FindEntitiesInLine(lineStart, lineEnd, ent)
     local result = {}
     --for _, ent in ipairs(entities) do
@@ -500,7 +499,6 @@ end
 
 ---@param lineStart Vector
 ---@param lineEnd Vector
----@param entities Entity[]
 function mod:AreEntitiesInLine(lineStart, lineEnd, ent)
     local result = {}
     --for _, ent in ipairs(entities) do

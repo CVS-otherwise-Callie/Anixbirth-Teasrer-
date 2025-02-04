@@ -32,9 +32,9 @@ function mod.PostUpdateStuff()
     if not FHAC.FiendFolioCompactLoaded then
         mod.FiendFolioCompat()
     end
-    FHAC.PreSavedEntsLevel = SaveManager.GetRunSave().PreSavedEntsLevel
-    FHAC.SavedEntsLevel = SaveManager.GetRunSave().SavedEntsLevel
-    FHAC.ToBeSavedEnts = SaveManager.GetRunSave().ToBeSavedEnts
+    --FHAC.PreSavedEntsLevel = SaveManager.GetRunSave().PreSavedEntsLevel
+    --FHAC.SavedEntsLevel = SaveManager.GetRunSave().SavedEntsLevel
+    --FHAC.ToBeSavedEnts = SaveManager.GetRunSave().ToBeSavedEnts
 end
 FHAC:AddCallback(ModCallbacks.MC_POST_UPDATE, mod.PostUpdateStuff)
 
