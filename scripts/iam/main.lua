@@ -156,3 +156,16 @@ function mod:CVSNewRoom()
         mod:MysteryMilkRoomInit(player)
     end
 end
+
+--thx ff
+
+mod.CVSFamsToBeEvaluated = {
+	{mod.Collectibles.Items.MarketablePlushie, mod.Familiars.MarketablePlushie.Var}
+}
+
+function mod:CVSFamiliarCheck(player, itemconfig)
+	for i = 1, #mod.CVSFamsToBeEvaluated do
+		player= player:ToPlayer()
+		player:CheckFamiliar(mod.CVSFamsToBeEvaluated[i][2], mod.GetExpectedFamiliarNum(player, mod.CVSFamsToBeEvaluated[i][1]), player:GetCollectibleRNG(mod.CVSFamsToBeEvaluated[i][1]), itemconfig:GetCollectible(mod.CVSFamsToBeEvaluated[i][1]))
+	end
+end

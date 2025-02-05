@@ -26,12 +26,14 @@ function mod:MarketablePlushieAI(fam, sprite, d)
     velocity = velocity + player:GetTearMovementInheritance(velocity)
 
 	local direction = player:GetFireDirection()
+    d.lastdirection = (d.lastdirection ~= nil and d.lastdirection) or direction
+	d.lastdirection = (direction ~= Direction.NO_DIRECTION and direction) or d.lastdirection
 
     if d.state == "shoot" then
         local tear = Isaac.Spawn(EntityType.ENTITY_TEAR, 0, 0, fam.Position, velocity, fam):ToTear()
-        tear.Height = -30
+        tear.Height = -35
         tear.FallingSpeed = -1
-        tear.FallingAcceleration = 0.01 + (math.random() * 2 - 1) * 0.01
+        tear.FallingAcceleration = 0.01 + (math.random() * 2 - 1) * 0.001
         tear.CollisionDamage = player.Damage/2
         tear.Scale = 0.7
         if player:HasCollectible(CollectibleType.COLLECTIBLE_BFFS) then
@@ -44,9 +46,9 @@ function mod:MarketablePlushieAI(fam, sprite, d)
         tear.Color = tearcolor
         d.state = "float"
 
-        if player.Luck > math.random() then
+        if player.Luck > math.random(-1, 15) then
             tear:GetData().type = "marketableplushie"
-            tear:SetDeadEyeIntensity(0.5)
+            tear:SetDeadEyeIntensity(2)
         end
     end
 
@@ -55,66 +57,63 @@ function mod:MarketablePlushieAI(fam, sprite, d)
         fam.FireCooldown = 20
     end
 
-    local ents = Isaac.GetRoomEntities()
-    for k, v in ipairs(ents) do
-        if v.Type == 2  then
-            print(v:GetSprite():GetFilename())
-        end
-    end
-
     --whatever ff stuff
-    if d.state == "float" then
-		if direction == Direction.LEFT and not (sprite:IsPlaying("FloatSide") and sprite.FlipX == true) then
+    if d.state == "float" and fam.FireCooldown < 15 then
+		if direction == Direction.LEFT and (sprite:GetAnimation() ~= "FloatSide") and sprite.FlipX == true then
 			local frame = sprite:GetFrame()
-			sprite:Play("FloatSide", true)
+			mod:spritePlay(sprite, "FloatSide", true)
 			sprite:SetFrame(frame)
 			sprite.FlipX = true
-		elseif direction == Direction.RIGHT and not (sprite:IsPlaying("FloatSide") and sprite.FlipX == false) then
+		elseif direction == Direction.RIGHT and (sprite:GetAnimation() ~= "FloatSide") and sprite.FlipX == false then
 			local frame = sprite:GetFrame()
-			sprite:Play("FloatSide", true)
+			mod:spritePlay(sprite, "FloatSide", true)
 			sprite:SetFrame(frame)
 			sprite.FlipX = false
-		elseif direction == Direction.UP and not sprite:IsPlaying("FloatUp") then
+		elseif direction == Direction.UP and sprite:GetAnimation() ~= "FloatUp" then
 			local frame = sprite:GetFrame()
-			sprite:Play("FloatUp", true)
+			mod:spritePlay(sprite, "FloatUp", true)
 			sprite:SetFrame(frame)
 			sprite.FlipX = false
-		elseif (direction == Direction.DOWN or direction == Direction.NO_DIRECTION) and not sprite:IsPlaying("FloatDown") then
+		elseif (direction == Direction.DOWN or direction == Direction.NO_DIRECTION) and sprite:GetAnimation() ~= "FloatDown" then
 			local frame = sprite:GetFrame()
-			sprite:Play("FloatDown", true)
+			mod:spritePlay(sprite, "FloatDown", true)
 			sprite:SetFrame(frame)
 			sprite.FlipX = false
 		end
 	elseif d.state == "shoot" then
-		if d.lastdirection == Direction.LEFT and not (sprite:IsPlaying("FloatShootSide") and sprite.FlipX == true) then
+
+		if d.lastdirection == Direction.LEFT and (sprite:GetAnimation() ~= "FloatShootSide") then
 			local frame = sprite:GetFrame()
-			sprite:Play("FloatShootSide", true)
+			mod:spritePlay(sprite, "FloatShootSide", true)
 			sprite:SetFrame(frame)
 			sprite.FlipX = true
-		elseif d.lastdirection == Direction.RIGHT and not (sprite:IsPlaying("FloatShootSide") and sprite.FlipX == false) then
+		elseif d.lastdirection == Direction.RIGHT and (sprite:GetAnimation() ~= "FloatShootSide" and sprite.FlipX == false) then
 			local frame = sprite:GetFrame()
-			sprite:Play("FloatShootSide", true)
+			mod:spritePlay(sprite, "FloatShootSide", true)
 			sprite:SetFrame(frame)
 			sprite.FlipX = false
-		elseif d.lastdirection == Direction.UP and not sprite:IsPlaying("FloatShootUp") then
+		elseif d.lastdirection == Direction.UP and sprite:GetAnimation() ~= "FloatShootUp" then
 			local frame = sprite:GetFrame()
-			sprite:Play("FloatShootUp", true)
+			mod:spritePlay(sprite, "FloatShootUp", true)
 			sprite:SetFrame(frame)
 			sprite.FlipX = false
-		elseif (d.lastdirection == Direction.DOWN or d.lastdirection == Direction.NO_DIRECTION) and not sprite:IsPlaying("FloatShootDown") then
+		elseif (d.lastdirection == Direction.DOWN or d.lastdirection == Direction.NO_DIRECTION) and sprite:GetAnimation() ~= "FloatShootDown" then
 			local frame = sprite:GetFrame()
-			sprite:Play("FloatShootDown", true)
+			mod:spritePlay(sprite, "FloatShootDown", true)
 			sprite:SetFrame(frame)
 			sprite.FlipX = false
 		end
+
 	end
 
     fam:FollowParent()
 end
 
 function mod:MarketablePlushieTearDeathAI(p, d)
-    if d.type == "marketableplushie" and d:IsDead() then
+    if d.type == "marketableplushie" and p:IsDead() then
         local rfit = Isaac.Spawn(EntityType.ENTITY_EFFECT, EffectVariant.RIFT, -1, p.Position, Vector.Zero, p):ToEffect()
-        rfit.Scale = rfit.Scale * 0.8
+        rfit.Scale = rfit.Scale * 0.5
+        rfit:SetTimeout(50)
+        d.type = nil
     end
 end

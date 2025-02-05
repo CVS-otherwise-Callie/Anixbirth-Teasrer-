@@ -1,4 +1,3 @@
-local FHAC = FHAC
 local game = Game()
 
 function FHAC.DeathStuff(_, ent)
@@ -28,10 +27,12 @@ end
 
 FHAC:AddCallback(ModCallbacks.MC_POST_NEW_LEVEL, FHAC.NewLevelStuff)
 
-function FHAC:TearCollisionStuff()
+function FHAC:PostTearRenderStuff(tear, collider, bool)
+    local data = tear:GetData()
 
+    FHAC:MarketablePlushieTearDeathAI(tear, data)
 end
-FHAC:AddCallback(ModCallbacks.MC_PRE_TEAR_COLLISION, FHAC.TearCollisionStuff)
+FHAC:AddCallback(ModCallbacks.MC_POST_TEAR_RENDER, FHAC.PostTearRenderStuff)
 
 function FHAC.PostUpdateStuff()
     if not FHAC.FiendFolioCompactLoaded then
@@ -146,6 +147,7 @@ FHAC:AddCallback(ModCallbacks.MC_EVALUATE_CACHE,function(_, player, flag)
     elseif flag == CacheFlag.CACHE_WEAPON then
     elseif flag == CacheFlag.CACHE_FAMILIARS then
         local itemconfig = Isaac.GetItemConfig()
+        FHAC:CVSFamiliarCheck(player, itemconfig)
     elseif flag == CacheFlag.CACHE_LUCK then
     elseif flag == CacheFlag.CACHE_ALL then --everything after this is repenatcne only
     elseif flag == CacheFlag.CACHE_SIZE then --this will invalidate the size! only use in extremely rare cases!!!

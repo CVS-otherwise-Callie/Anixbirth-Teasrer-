@@ -1080,6 +1080,10 @@ mod:AddCallback(ModCallbacks.MC_PRE_PICKUP_COLLISION, function(_, pickup, collid
 	end
 end, PickupVariant.PICKUP_COLLECTIBLE)
 
+function mod.GetExpectedFamiliarNum(player, item)
+	return player:GetCollectibleNum(item) + player:GetEffects():GetCollectibleEffectNum(item)
+end
+
 mod:AddCallback(ModCallbacks.MC_POST_PEFFECT_UPDATE, function(_, player)
 	local ref = TrackedItems.Players[player:GetCollectibleRNG(1):GetSeed()]
 	if not ref then
@@ -1163,7 +1167,7 @@ mod:AddCallback(ModCallbacks.MC_POST_PEFFECT_UPDATE, function(_, player)
 
 	for item, callbacks in pairs(TrackedItems.Callbacks.Trinket) do
 		local has = player:HasTrinket(item)
-		local gulped = has and FiendFolio.GetTrinketSlot(player, item) < 0
+		local gulped = has
 		local skipUpdate = false
 		if ref.Trinket[item] ~= nil then
 			if has and playerIsHoldingItem then

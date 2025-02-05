@@ -276,7 +276,7 @@ function mod.SillyShot(p, d)
             d.dist = p.Position:Distance(d.targ.Position)
             d.shotinit = true
         end
-        if p.Height > -59 then p.Height = p.Height - 1 end
+        p.Height = -40
         p.GridCollisionClass = EntityGridCollisionClass.GRIDCOLL_NONE
     end
 end
