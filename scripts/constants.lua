@@ -66,6 +66,7 @@ FHAC.Grids = {
 
 FHAC.Familiars = { --YOU HAVE NO IDEA HOW MANY FUCKING TIMES I SPELLED THIS WRONG LMAO
     Snark = mod:ENT("Snark (Half Life)"),
+    MarketablePlushie = mod:ENT("Marketable Plushie Familiar")
 }
 
 FHAC.Effects = {
@@ -110,6 +111,14 @@ FHAC.Collectibles = {
     Trinkets = {
         MysteryMilk = Isaac.GetTrinketIdByName("Mystery Milk")
     }
+}
+
+
+FHAC.DirectionToVector = {
+	[Direction.DOWN]	= Vector(0, 1),
+	[Direction.UP]		= Vector(0, -1),
+	[Direction.LEFT]	= Vector(-1, 0),
+	[Direction.RIGHT]	= Vector(1, 0),
 }
 
 

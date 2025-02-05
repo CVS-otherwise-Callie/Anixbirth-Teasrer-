@@ -10,4 +10,7 @@
     <!--Trinkets-->
     <trinket name="Mystery Milk" description="From a trash farm near you" gfx="1_mystery_milk.png" />
 
+    <!--Familairsare 200-->
+    <familiar id="200" name="Marketable Plushie" description="This looks familiar" gfx="200_marketableplushie.png" quality="3" tags="summonable offensive" />
+
 </items>

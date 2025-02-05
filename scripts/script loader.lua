@@ -72,6 +72,7 @@ FHAC:LoadScripts("scripts.iam.effects", {
 
 FHAC:LoadScripts("scripts.iam.familiars", {
 	"snark",
+	"marketableplushie"
 })
 
 FHAC:LoadScripts("scripts.iam.items.actives", {

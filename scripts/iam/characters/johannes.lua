@@ -56,7 +56,7 @@ function mod:JohannesPostRender()
         local secstring = tostring(sec)
         local scale = 1
         local text = names[k] .. ": (" .. minstring .. ": " .. secstring .. ")"
-        mod.JohFont:DrawStringScaled(text,60,45 + (k-1) * 12,scale, scale,KColor(1,1,1,1,0,0,0),0,true)
+        mod.JohFont:DrawStringScaled(text,60,45 + (k-1) * 12,scale, scale,KColor(1,1,1,1),0,true)
         mod.JohRoomSprites:Play("roomicons")
         mod.JohRoomSprites:Render(Vector(50, 50 + (k-1) * 12), Vector.Zero, Vector.Zero)
     end

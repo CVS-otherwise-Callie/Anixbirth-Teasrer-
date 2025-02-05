@@ -12,7 +12,7 @@ function mod:WostAI(npc, sprite, d)
     local room = game:GetRoom()
     local target = npc:GetPlayerTarget()
     local targetpos = mod:confusePos(npc, target.Position, 5, nil, nil)
-    local roomTears = room:GetEntities(EntityType.ENTITY_TEAR)
+    local roomTears = room:GetEntities()
     for i = 0, #roomTears - 1 do
         local entity = roomTears:Get(i)
         if entity.Type == EntityType.ENTITY_TEAR then

@@ -1,137 +1,142 @@
-local mod = FHAC
+local FHAC = FHAC
 local game = Game()
 
-function mod.DeathStuff(_, ent)
-    mod.ShowFortuneDeath()
-    mod.SchmootDeath(ent)
-    mod.GassedFlyDeath(ent)
+function FHAC.DeathStuff(_, ent)
+    FHAC.ShowFortuneDeath()
+    FHAC.SchmootDeath(ent)
+    FHAC.GassedFlyDeath(ent)
 end
-FHAC:AddCallback(ModCallbacks.MC_POST_NPC_DEATH, mod.DeathStuff)
+FHAC:AddCallback(ModCallbacks.MC_POST_NPC_DEATH, FHAC.DeathStuff)
 
-function mod.PreChangeRooms()
-    mod:SavePreEnts()
-    mod:TransferSavedEnts()
+function FHAC.PreChangeRooms()
+    FHAC:SavePreEnts()
+    FHAC:TransferSavedEnts()
 end
-FHAC:AddCallback(ModCallbacks.MC_PRE_CHANGE_ROOM, mod.PreChangeRooms)
+FHAC:AddCallback(ModCallbacks.MC_PRE_CHANGE_ROOM, FHAC.PreChangeRooms)
 
-function mod.LeaveGame()
-    mod:SavePreEnts()
-    mod:TransferSavedEnts()
+function FHAC.LeaveGame()
+    FHAC:SavePreEnts()
+    FHAC:TransferSavedEnts()
 end
-FHAC:AddCallback(ModCallbacks.MC_PRE_GAME_EXIT, mod.LeaveGame)
+FHAC:AddCallback(ModCallbacks.MC_PRE_GAME_EXIT, FHAC.LeaveGame)
 
-function mod.NewLevelStuff()
-    mod.YouCanEndTheAltCutsceneNow = false
-    mod.StartCutscene = false
-    mod.RuinSecretMusicInit = false
+function FHAC.NewLevelStuff()
+    FHAC.YouCanEndTheAltCutsceneNow = false
+    FHAC.StartCutscene = false
+    FHAC.RuinSecretMusicInit = false
 end
 
-mod:AddCallback(ModCallbacks.MC_POST_NEW_LEVEL, mod.NewLevelStuff)
+FHAC:AddCallback(ModCallbacks.MC_POST_NEW_LEVEL, FHAC.NewLevelStuff)
 
-function mod.PostUpdateStuff()
+function FHAC:TearCollisionStuff()
+
+end
+FHAC:AddCallback(ModCallbacks.MC_PRE_TEAR_COLLISION, FHAC.TearCollisionStuff)
+
+function FHAC.PostUpdateStuff()
     if not FHAC.FiendFolioCompactLoaded then
-        mod.FiendFolioCompat()
+        FHAC.FiendFolioCompat()
     end
     --FHAC.PreSavedEntsLevel = SaveManager.GetRunSave().PreSavedEntsLevel
     --FHAC.SavedEntsLevel = SaveManager.GetRunSave().SavedEntsLevel
     --FHAC.ToBeSavedEnts = SaveManager.GetRunSave().ToBeSavedEnts
 end
-FHAC:AddCallback(ModCallbacks.MC_POST_UPDATE, mod.PostUpdateStuff)
+FHAC:AddCallback(ModCallbacks.MC_POST_UPDATE, FHAC.PostUpdateStuff)
 
-function mod.PlayersTearsPostUpdate(_, t)
-    mod.FloaterTearUpdate(t)
+function FHAC.PlayersTearsPostUpdate(_, t)
+    FHAC.FloaterTearUpdate(t)
 end
-FHAC:AddCallback(ModCallbacks.MC_POST_TEAR_UPDATE, mod.PlayersTearsPostUpdate)
+FHAC:AddCallback(ModCallbacks.MC_POST_TEAR_UPDATE, FHAC.PlayersTearsPostUpdate)
 
-function mod:ProjStuff(v)
+function FHAC:ProjStuff(v)
 	local d = v:GetData();
     
-	mod.SyntheticHorfShot(v, d)
-    mod.WostShot(v, d)
-    mod.PallunShot(v, d)
-    mod.SillyShot(v, d)
-    mod:PatientShots(v, d)
-    mod:SixheadShot(v, d)
-    mod.andShot(v, d)
+	FHAC.SyntheticHorfShot(v, d)
+    FHAC.WostShot(v, d)
+    FHAC.PallunShot(v, d)
+    FHAC.SillyShot(v, d)
+    FHAC:PatientShots(v, d)
+    FHAC:SixheadShot(v, d)
+    FHAC.andShot(v, d)
 end
-FHAC:AddCallback(ModCallbacks.MC_POST_PROJECTILE_UPDATE, mod.ProjStuff)
+FHAC:AddCallback(ModCallbacks.MC_POST_PROJECTILE_UPDATE, FHAC.ProjStuff)
 
-function mod:ProjStuffDeath(v)
+function FHAC:ProjStuffDeath(v)
     local d = v:GetData();
-    mod.andShot(v, d)
+    FHAC.andShot(v, d)
 end
 
-FHAC:AddCallback(ModCallbacks.MC_POST_PROJECTILE_DEATH, mod.ProjStuffDeath)
+FHAC:AddCallback(ModCallbacks.MC_POST_PROJECTILE_DEATH, FHAC.ProjStuffDeath)
 
 
-function mod:ProjCollStuff(v,c)
+function FHAC:ProjCollStuff(v,c)
     local d = v:GetData();
 
-    mod.RemoveWostProj(v, c, d)
-    mod.UpdateSillyStringProj(v, c, d)
+    FHAC.RemoveWostProj(v, c, d)
+    FHAC.UpdateSillyStringProj(v, c, d)
 end
 
-mod:AddCallback(ModCallbacks.MC_PRE_PROJECTILE_COLLISION, mod.ProjCollStuff)
+FHAC:AddCallback(ModCallbacks.MC_PRE_PROJECTILE_COLLISION, FHAC.ProjCollStuff)
 
-function mod:RenderedStuff()
+function FHAC:RenderedStuff()
     if not FiendFolio then
-        mod.ShowRoomText()
+        FHAC.ShowRoomText()
     end
-    mod.JohannesPostRender()
-    mod.MusicCheckCallback()
+    FHAC.JohannesPostRender()
+    FHAC.MusicCheckCallback()
 end
-mod:AddCallback(ModCallbacks.MC_POST_RENDER, mod.RenderedStuff)
+FHAC:AddCallback(ModCallbacks.MC_POST_RENDER, FHAC.RenderedStuff)
 
-function mod:PostNewRoom()
-    mod:LoadSavedRoomEnts()
+function FHAC:PostNewRoom()
+    FHAC:LoadSavedRoomEnts()
     FHAC.ToBeSavedEnts = {}
 
-    mod.spawnedDried = false
-    mod:SpawnRandomDried()
-    mod:BigBowlOfSauerkrautSpawn()
+    FHAC.spawnedDried = false
+    FHAC:SpawnRandomDried()
+    FHAC:BigBowlOfSauerkrautSpawn()
     
-    mod:RemoveAllSpecificItemEffects(Isaac.GetPlayer())
+    FHAC:RemoveAllSpecificItemEffects(Isaac.GetPlayer())
 end
-mod:AddCallback(ModCallbacks.MC_POST_NEW_ROOM, mod.PostNewRoom)
+FHAC:AddCallback(ModCallbacks.MC_POST_NEW_ROOM, FHAC.PostNewRoom)
 
-mod:AddCallback(ModCallbacks.MC_POST_PICKUP_INIT, function(_, pickup)
+FHAC:AddCallback(ModCallbacks.MC_POST_PICKUP_INIT, function(_, pickup)
 end)
 
-function mod:PostPlayerUpdate(player)
-    mod:PostUpdateRemoveTempItems(player)
-    mod:MysteryMilkRoomInit(player)
+function FHAC:PostPlayerUpdate(player)
+    FHAC:PostUpdateRemoveTempItems(player)
+    FHAC:MysteryMilkRoomInit(player)
 end
-mod:AddCallback(ModCallbacks.MC_POST_PLAYER_UPDATE, mod.PostPlayerUpdate)
+FHAC:AddCallback(ModCallbacks.MC_POST_PLAYER_UPDATE, FHAC.PostPlayerUpdate)
 
-function mod:PostGameStarted(bool)
-    mod.CheckForNewRoom(bool)
-    mod.YouCanEndTheAltCutsceneNow = false
-    mod.StartCutscene = false
-    mod.RuinSecretMusicInit = false
+function FHAC:PostGameStarted(bool)
+    FHAC.CheckForNewRoom(bool)
+    FHAC.YouCanEndTheAltCutsceneNow = false
+    FHAC.StartCutscene = false
+    FHAC.RuinSecretMusicInit = false
 end
-mod:AddCallback(ModCallbacks.MC_POST_GAME_STARTED, mod.PostGameStarted)
+FHAC:AddCallback(ModCallbacks.MC_POST_GAME_STARTED, FHAC.PostGameStarted)
 
-function mod:PostNPCColl(npc, coll)
-    return mod.SillyStringColl(npc, coll) or mod.WostColl(npc, coll)
+function FHAC:PostNPCColl(npc, coll)
+    return FHAC.SillyStringColl(npc, coll) or FHAC.WostColl(npc, coll)
 end
-mod:AddCallback(ModCallbacks.MC_PRE_NPC_COLLISION, mod.PostNPCColl)
+FHAC:AddCallback(ModCallbacks.MC_PRE_NPC_COLLISION, FHAC.PostNPCColl)
 
-function mod:EffectPostUpdate(effect)
+function FHAC:EffectPostUpdate(effect)
     local d = effect:GetData()
     local sprite = effect:GetSprite()
 
-    mod:PostDriedDripUpdate(effect, sprite, d)
+    FHAC:PostDriedDripUpdate(effect, sprite, d)
 end
-mod:AddCallback(ModCallbacks.MC_POST_EFFECT_UPDATE, mod.EffectPostUpdate)
+FHAC:AddCallback(ModCallbacks.MC_POST_EFFECT_UPDATE, FHAC.EffectPostUpdate)
 
-mod:AddCallback(ModCallbacks.MC_EVALUATE_CACHE,function(_, player, flag)
+FHAC:AddCallback(ModCallbacks.MC_EVALUATE_CACHE,function(_, player, flag)
 
     local dat = SaveManager.GetRunSave(player).anixbirthsaveData
 
     if flag == CacheFlag.CACHE_DAMAGE then
 
     elseif flag == CacheFlag.CACHE_FIREDELAY then
-        mod:JokeBookStats(player)
+        FHAC:JokeBookStats(player)
     elseif flag == CacheFlag.CACHE_SHOTSPEED then
     elseif flag == CacheFlag.CACHE_RANGE then
     elseif flag == CacheFlag.CACHE_SPEED then
@@ -149,57 +154,57 @@ mod:AddCallback(ModCallbacks.MC_EVALUATE_CACHE,function(_, player, flag)
     end
 end)
 
-function mod:NPCGetHurtStuff(npc, damage, flag, source, countdown)
-    mod:PatientGetHurt(npc, damage, flag, source,countdown)
-    mod:PallunLeaveWhenHit(npc)
-    mod:StrawDollActiveEffect(npc, damage, flag, countdown)
-    mod:LarryGetHurt(npc, damage, flag, source)
+function FHAC:NPCGetHurtStuff(npc, damage, flag, source, countdown)
+    FHAC:PatientGetHurt(npc, damage, flag, source,countdown)
+    FHAC:PallunLeaveWhenHit(npc)
+    FHAC:StrawDollActiveEffect(npc, damage, flag, countdown)
+    FHAC:LarryGetHurt(npc, damage, flag, source)
 
     if npc.Type == 1 then
         local d = npc:GetData()
 
         d.ColorectalCancerCreepInit = false
-        mod:StrawDollPassive(npc)
+        FHAC:StrawDollPassive(npc)
     end
 
     --extra item stuff
 end
-mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, mod.NPCGetHurtStuff)
+FHAC:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, FHAC.NPCGetHurtStuff)
 
-function mod:NPCPostInit(npc)
-    mod:NPCReplaceCallback(npc)
+function FHAC:NPCPostInit(npc)
+    FHAC:NPCReplaceCallback(npc)
 end
-mod:AddCallback(ModCallbacks.MC_POST_NPC_INIT, mod.NPCPostInit)
+FHAC:AddCallback(ModCallbacks.MC_POST_NPC_INIT, FHAC.NPCPostInit)
 
-function mod:PrePlayerColl(_, player, collider, low)
-    mod:PatientEuthInstaKill(_, player, collider, low)
-end
-
-mod:AddCallback(ModCallbacks.MC_PRE_PLAYER_COLLISION, mod.PrePlayerColl)
-
-function mod.PreNPCUpdate(npc)
+function FHAC:PrePlayerColl(_, player, collider, low)
+    FHAC:PatientEuthInstaKill(_, player, collider, low)
 end
 
-mod:AddCallback(ModCallbacks.MC_PRE_NPC_UPDATE, mod.PreNPCUpdate)
+FHAC:AddCallback(ModCallbacks.MC_PRE_PLAYER_COLLISION, FHAC.PrePlayerColl)
+
+function FHAC.PreNPCUpdate(npc)
+end
+
+FHAC:AddCallback(ModCallbacks.MC_PRE_NPC_UPDATE, FHAC.PreNPCUpdate)
 
 ---- custom utility callbacks! ----
 
-function mod:OnPostDataLoad(saveData, isLuamod)
+function FHAC:OnPostDataLoad(saveData, isLuamod)
     FHAC.PreSavedEntsLevel = saveData.game.roomFloor.PreSavedEntsLevel or {}
     FHAC.SavedEntsLevel = saveData.game.roomFloor.SavedEntsLevel or {}
     FHAC.ToBeSavedEnts = saveData.game.roomFloor.ToBeSavedEnts or {}
     saveData.file.other.HasLoaded = true
 end
 
-SaveManager.AddCallback(SaveManager.Utility.CustomCallback.POST_DATA_LOAD, mod.OnPostDataLoad)
+SaveManager.AddCallback(SaveManager.Utility.CustomCallback.POST_DATA_LOAD, FHAC.OnPostDataLoad)
 
 if REPENTOGON then
 
-    function mod:SongChangesToIngameOST(music, arg, arg2)
+    function FHAC:SongChangesToIngameOST(music, arg, arg2)
         local rDD = game:GetLevel():GetCurrentRoomDesc().Data
         return Isaac.GetMusicIdByName("AnixbirthFunctions")
     end
 
---mod:AddCallback(ModCallbacks.MC_PRE_MUSIC_PLAY, mod.SongChangesToIngameOST)
+--FHAC:AddCallback(ModCallbacks.MC_PRE_MUSIC_PLAY, FHAC.SongChangesToIngameOST)
 
 end
