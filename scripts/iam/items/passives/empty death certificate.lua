@@ -29,9 +29,6 @@ local blockActives = {
 local blockPockets = {
     Card.RUNE_PERTHRO,
     Card.CARD_DICE_SHARD,
-    Card.GLASS_D6,
-    Card.GLASS_D4,
-    Card.GLASS_D100,
     Card.CARD_REVERSE_WHEEL_OF_FORTUNE
 }
 
