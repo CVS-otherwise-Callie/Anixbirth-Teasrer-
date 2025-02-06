@@ -119,3 +119,8 @@ FHAC:LoadScripts("scripts.iam.challenges", {
 else
 	include("scripts.iam.misc.warning")
 end
+
+
+FHAC:LoadScripts("scripts.choom", {
+    "customgrids"
+})
