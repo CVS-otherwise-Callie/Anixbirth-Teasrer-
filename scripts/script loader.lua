@@ -56,7 +56,8 @@ FHAC:LoadScripts("scripts.iam.monsters", {
 	"sixhead",
 	"babble",
 	"toast",
-	"silly&stringtainted"
+	"silly&stringtainted",
+	"dunglivery"
 })
 
 FHAC:LoadScripts("scripts.iam", {
