@@ -328,7 +328,8 @@
         <bestiary transform="0,0,1" anim="Top" />
         <gibs amount="0" blood="1" bone="0" eye="0" gut="0" large="0" />
     </entity>
-
+    <entity anm2path="monsters/harmor/harmor.anm2" id="161" variant="273" subtype="" name="harmor" reroll="true" baseHP="15" boss="0" champion="0" collisionDamage="1" collisionMass="50" collisionRadius="20" friction="1" numGridCollisionPoints="0" shadowSize="24" stageHP="8" portrait=""
+    </entity>
     <!--Depths-->
     <entity id="161" variant="420" name="Babble" anm2path="monsters/babble/babble.anm2" hasFloorAlts="true" reroll="true" baseHP="13" boss="0" champion="1" collisionDamage="1" collisionMass="5" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="14" stageHP="7" portrait="420">
 		<bestiary transform="0,0,1" anim="WalkVert" overlay="Head" />
