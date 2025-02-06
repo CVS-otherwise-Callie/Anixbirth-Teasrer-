@@ -17,6 +17,7 @@ function mod:DungliveryAI(npc, sprite, d)
 
     if d.state == "idle" then
         mod:spritePlay(sprite, "Idle")
+        npc:MultiplyFriction(0.1)
     end
 end
 
