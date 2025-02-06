@@ -76,12 +76,13 @@ function mod.SyntheticHorfShot(p, d)
         local target = d.Baby
         p.GridCollisionClass = EntityGridCollisionClass.GRIDCOLL_NONE
         if not d.init then
+            target:GetData().rotShots = target:GetData().rotShots or 0
             target:GetData().rotShots = target:GetData().rotShots + 1
             d.init = true
         else
             d.StateFrame = d.StateFrame + 1
         end
-        if target:IsDead() then
+        if target:IsDead() or (d.shouldFall and d.StateFrame > d.shouldFall) then
             p.Velocity = p.Velocity * 0.9
 			p.FallingAccel = 0.1
         else

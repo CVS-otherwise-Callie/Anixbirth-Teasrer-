@@ -46,18 +46,19 @@ function mod:SixheadAI(npc, sprite, d)
     elseif d.state == "attacking" then
     
         if sprite:IsEventTriggered("Shoot") then
-            if d.wait%2 == 0 then
+            if d.wait%3 < math.random() then
                     if npc.Position:Distance(targetpos) <= npc.Position:Distance(d.ent.Position) then
                         for i = 0, 5 do
                             d.typeofShooting = "player"
-                            local proj = Isaac.Spawn(9, 0, 0, npc.Position, Vector(4, 0):Rotated((60*i+d.rngshoot)), npc):ToProjectile()
+                            local proj = Isaac.Spawn(9, 0, 0, npc.Position, Vector(5, 0):Rotated((60*i+d.rngshoot)), npc):ToProjectile()
                             proj:AddProjectileFlags(ProjectileFlags.BOOMERANG)
                             if d.shootleft then
                                 proj:AddProjectileFlags(ProjectileFlags.CURVE_LEFT)
                             else
                                 proj:AddProjectileFlags(ProjectileFlags.CURVE_RIGHT)
                             end
-                            proj.FallingSpeed = -15
+                            proj.Height = 0
+                            proj.FallingSpeed = -10
                             proj.FallingAccel = 0.5
                             proj:Update()
                         end
@@ -107,17 +108,11 @@ end
 function mod:SixheadShot(p, d)
     if d.type == "FromBottomToPlayer" then
 
-        if not d.init then
-            d.mult = math.random(80, 120)/100
-            d.mult2 = math.random(60, 80)/100
-            d.randVec = Vector(10, 0):Rotated((60*d.num+d.rngshoot))
-            d.init = true
-        end
-
-        d.targetpos = d.ent.Position + Vector(50, 0):Rotated((60*d.num+d.rngshoot))
-        local truepos = (d.targetpos - p.Position) + (d.targetpos - p.Position):Normalized()*d.mult
-        d.randVec = mod:Lerp(d.randVec, Vector(10, 0):Rotated((60*d.num+d.rngshoot)), 0.5)
-        p.Velocity = mod:Lerp(Vector.Zero, truepos + d.randVec, d.mult2*100/1500)
+        p:GetData().offyourfuckingheadset = 70 + math.random(-10, 10)
+        p:GetData().StateFrame = 0
+        p:GetData().Baby = d.ent
+        p:GetData().Player = d.target
+        p:GetData().type = "SyntheticHorf"
 
     elseif d.type == "GoToBottom" then
         
@@ -144,6 +139,8 @@ function mod:SixheadShot(p, d)
                 proj:GetData().type = "FromBottomToPlayer"
                 proj.FallingSpeed = -15
                 proj.FallingAccel = 0.5
+                proj:GetData().moveit = i*36
+                proj:GetData().shouldFall = 70
             end
             p:Kill()
         end
