@@ -124,3 +124,7 @@ end
 FHAC:LoadScripts("scripts.choom", {
     "customgrids"
 })
+
+FHAC:LoadScripts("scripts.choom.monsters", {
+    "Harmoor"
+})

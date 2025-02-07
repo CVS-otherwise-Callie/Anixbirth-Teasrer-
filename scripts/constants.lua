@@ -52,7 +52,8 @@ FHAC.Monsters = {
     TaintedSilly = mod:ENT("Tainted Silly"),
     TaintedString = mod:ENT("Tainted String"),
     andEntity = mod:ENT("&"),
-    Dunglivery = mod:ENT("Dunglivery")
+    Dunglivery = mod:ENT("Dunglivery"),
+    Harmoor = mod:ENT("Harmoor")
 }
 
 FHAC.Players = {
@@ -168,4 +169,5 @@ FHAC.Nonmale = {
     {ID = FHAC:SpecialEnt("Drosslet"), Affliction = "Aeroace"}, --cus quaquao said to make everyone secretly aeroace lol
     {ID = FHAC:SpecialEnt("PitPat"), Affliction = "Woman"},
     {ID = FHAC:SpecialEnt("Patient"), Affliction = "Woman"},
+    {ID = FHAC:SpecialEnt("Pinprick"), Affliction = "Dreamsexual"},
 }
