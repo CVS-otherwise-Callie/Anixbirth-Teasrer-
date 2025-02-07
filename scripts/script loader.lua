@@ -126,5 +126,5 @@ FHAC:LoadScripts("scripts.choom", {
 })
 
 FHAC:LoadScripts("scripts.choom.monsters", {
-    "Harmoor"
+    "harmoor"
 })
