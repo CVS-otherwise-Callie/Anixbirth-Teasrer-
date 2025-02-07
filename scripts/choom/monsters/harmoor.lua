@@ -10,6 +10,7 @@ end, mod.Monsters.Harmoor.ID)
 
 function mod:HarmoorAI(npc, sprite, d)
 
+
     if not d.init then
         d.myvar = "idle"
         d.init = true
@@ -27,5 +28,6 @@ function mod:HarmoorAI(npc, sprite, d)
 
         npc.StateFrame = 0
         d.state = "idle"
+        print(elo zelo)
     end
 end
