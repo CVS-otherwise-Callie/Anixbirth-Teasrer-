@@ -115,12 +115,20 @@ end
 
 function mod:CowpatPostAI(npc, _,  d)
     local target = npc:GetPlayerTarget()
+    local room = game:GetRoom()
+    local isFlood = (room:GetBackdropType() == BackdropType.DROSS)
+
 
     if npc:IsDead() and not d.hasSpawned then
 
-        local fly = Isaac.Spawn(EntityType.ENTITY_ATTACKFLY, 0, 0, npc.Position, (Vector(10, 0)):Rotated((target.Position - npc.Position):GetAngleDegrees() + 180 + math.random(-20, 20)), npc)
+        local fly
+        if isFlood then
+            fly = Isaac.Spawn(mod.Monsters.GassedFly.ID, mod.Monsters.GassedFly.Var, 0, npc.Position, (Vector(10, 0)):Rotated((target.Position - npc.Position):GetAngleDegrees() + 180 + math.random(-20, 20)), npc)
+        else
+            fly = Isaac.Spawn(EntityType.ENTITY_ATTACKFLY, 0, 0, npc.Position, (Vector(10, 0)):Rotated((target.Position - npc.Position):GetAngleDegrees() + 180 + math.random(-20, 20)), npc)
+            fly:GetData().type = "cowpat"
+        end
         fly:ClearEntityFlags(EntityFlag.FLAG_APPEAR)
-        fly:GetData().type = "cowpat"
         d.hasSpawned = true
 
     end
