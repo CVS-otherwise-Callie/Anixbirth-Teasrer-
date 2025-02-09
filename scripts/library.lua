@@ -688,7 +688,7 @@ function mod.scheduleCallback(foo, delay, callback, noCancelOnNewRoom)
 	table.insert(mod.funcs[callback], { Func = foo, Delay = delay, NoCancel = noCancelOnNewRoom })
 end
 
-
+--this is a shit function use the other one
 function mod:GetEntInRoom(ent, avoidnpc, npc, radius)
 	radius = radius or 350
 	local targets = {}
@@ -701,9 +701,9 @@ function mod:GetEntInRoom(ent, avoidnpc, npc, radius)
 			end
 		end
 	else
-		for _, ent in ipairs(Isaac.GetRoomEntities()) do
-			if ent:IsActiveEnemy() and ent:IsVulnerableEnemy() and not ent:IsDead()
-			and not ent:HasEntityFlags(EntityFlag.FLAG_FRIENDLY) and (ent.Position - npc.Position):Length() < radius  then
+		for _, entity in ipairs(Isaac.GetRoomEntities()) do
+			if entity:IsActiveEnemy() and entity:IsVulnerableEnemy() and not entity:IsDead()
+			and not entity:HasEntityFlags(EntityFlag.FLAG_FRIENDLY) and (entity.Position - npc.Position):Length() < radius  then
 				table.insert(targets, ent)
 			end
 		end
@@ -715,8 +715,8 @@ function mod:GetEntInRoom(ent, avoidnpc, npc, radius)
 	return answer
 end
 
+--the one above is a shit function use this
 function mod:GetSpecificEntInRoom(myent, npc, radius)
-	myent = mod:ENT(myent)
 	radius = radius or 350
 	local targets = {}
 	for _, ent in ipairs(Isaac.GetRoomEntities()) do
@@ -731,6 +731,8 @@ function mod:GetSpecificEntInRoom(myent, npc, radius)
 		local targetpos = mod:confusePos(npc, target.Position, 5, nil, nil)
 		npc:GetData().specificTargTypeIsPlayer = true
 		return target
+	else
+		npc:GetData().specificTargTypeIsPlayer = false
 	end
 	local answer = targets[math.random(1, #targets)]
 	return answer

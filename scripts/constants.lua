@@ -53,7 +53,8 @@ FHAC.Monsters = {
     TaintedString = mod:ENT("Tainted String"),
     andEntity = mod:ENT("&"),
     Dunglivery = mod:ENT("Dunglivery"),
-    Harmoor = mod:ENT("Harmoor")
+    Harmoor = mod:ENT("Harmoor"),
+    Cowpat = mod:ENT("Cowpat")
 }
 
 FHAC.Players = {

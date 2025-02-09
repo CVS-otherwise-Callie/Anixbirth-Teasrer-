@@ -1,4 +1,9 @@
 <data>
+    <stage Name="Dross">
+        <Gfx>
+            <Entity ID="161" Variant="5" SubType="0" Image="mah boys/cowpat_dross.png"/>
+        </Gfx>
+    </stage>
     <stage Name="Flooded Caves">
         <Gfx>
             <Entity ID="161" Variant="420" SubType="0" Image="mah boys/babble_downpour.png"/>

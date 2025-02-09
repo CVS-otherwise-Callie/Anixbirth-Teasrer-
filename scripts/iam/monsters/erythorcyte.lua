@@ -89,7 +89,7 @@ end
 --guys how do i make it effieicnt
 function mod:ErythorcytebabyAI(npc, sprite, d)
     local room = Game():GetRoom()
-    local targetpos = mod:GetSpecificEntInRoom("Erythorcyte", npc).Position or npc:GetPlayerTarget().Position
+    local targetpos = mod:GetSpecificEntInRoom({ID = mod.Monsters.Erythorcyte.ID, Var = mod.Monsters.Erythorcyte.Var}, npc).Position or npc:GetPlayerTarget().Position
     local params = ProjectileParams()
     local roomEntities = room:GetEntities()
 

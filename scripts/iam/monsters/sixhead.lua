@@ -23,7 +23,7 @@ function mod:SixheadAI(npc, sprite, d)
     end
 
     if not d.ent or d.ent:IsDead() or not d.ent:Exists() or d.ent.Type == 1 or d.ent.Position:Distance(npc.Position) < 75 then
-        d.ent = mod:GetSpecificEntInRoom("Bottom", npc, 75)
+        d.ent = mod:GetSpecificEntInRoom({ID = mod.Monsters.Bottom.ID, Var = mod.Monsters.Bottom.Var}, npc, 75)
     else
         d.ent = target
     end
