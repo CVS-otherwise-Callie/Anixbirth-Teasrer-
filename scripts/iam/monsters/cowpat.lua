@@ -161,7 +161,7 @@ end
 mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, function(_, npc, damage, flag, source)
     if npc:GetData().type == "cowpat" and flag ~= flag | DamageFlag.DAMAGE_CLONES then
         if not npc:GetData().Baby or (not npc:GetData().specificTargTypeIsPlayer and not npc:GetData().Baby:IsDead()) then
-            npc:TakeDamage(damage*005, flag | DamageFlag.DAMAGE_CLONES, source, 0)
+            npc:TakeDamage(damage*0.05, flag | DamageFlag.DAMAGE_CLONES, source, 0)
             return false
         end
     end
