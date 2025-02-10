@@ -179,7 +179,7 @@ function mod:PatientAI(npc, sprite, d)
         end
 
         if npc.StateFrame > tonumber(d.shootoffset) + tonumber(d.wait) and d.state ~= "EndShoot" 
-        and path:HasPathToPos(target.Position)
+        and  game:GetRoom():CheckLine(target.Position,npc.Position,3,900,false,false)
         and npc.Position:Distance(target.Position) < tonumber(d.detectrange) then
             d.state = "Shoot"
         end

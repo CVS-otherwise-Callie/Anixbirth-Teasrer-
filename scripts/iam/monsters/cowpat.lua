@@ -36,8 +36,10 @@ function mod:CowpatAI(npc, sprite, d)
     local path = npc.Pathfinder
     local params = ProjectileParams()
 
-    params.HeightModifier = 10
+    params.HeightModifier = 20
     params.Variant = ProjectileVariant.PROJECTILE_PUKE
+    params.FallingAccelModifier = 0.2
+    params.FallingSpeedModifier = -2
 
     if mod:isScare(npc) then
         if targetpos.X < npc.Position.X then
@@ -91,8 +93,10 @@ function mod:CowpatAI(npc, sprite, d)
 
         npc:PlaySound(SoundEffect.SOUND_FORESTBOSS_STOMPS, 0.5, 1, false, 0.8)
 
+        local num = math.random(0, 90)
+
         for i = 0, 5 do
-            npc:FireProjectiles(npc.Position, Vector(2.7,5):Rotated((60*i)), 0, params)
+            npc:FireProjectiles(npc.Position, Vector(2.7,5):Rotated((60*i+num)), 0, params)
         end
 
         if room:CheckLine(npc.Position,target.Position,0,1,false,false) then
@@ -169,7 +173,7 @@ end
 mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, function(_, npc, damage, flag, source)
     if npc:GetData().type == "cowpat" and flag ~= flag | DamageFlag.DAMAGE_CLONES then
         if not npc:GetData().Baby or (not npc:GetData().specificTargTypeIsPlayer and not npc:GetData().Baby:IsDead()) then
-            npc:TakeDamage(damage*0.05, flag | DamageFlag.DAMAGE_CLONES, source, 0)
+            npc:TakeDamage(damage*0.1, flag | DamageFlag.DAMAGE_CLONES, source, 0)
             return false
         end
     end

@@ -64,7 +64,7 @@
 		<bestiary transform="0,0,1" anim="Fly" />
         <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
     </entity>
-    <entity id="161" variant="1" name="Toast" anm2path="monsters/toast/monster_toast.anm2" reroll="true" baseHP="14" boss="0" champion="1" collisionDamage="0" collisionMass="15" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="25" stageHP="0" portrait="1">
+    <entity id="161" variant="1" name="Toast" anm2path="monsters/toast/monster_toast.anm2" reroll="true" baseHP="14" boss="0" champion="1" collisionDamage="0" collisionMass="15" collisionRadius="13" friction="0" numGridCollisionPoints="12" shadowSize="25" stageHP="0" portrait="1">
 		<bestiary transform="0,0,1" anim="Reveal" />
         <gibs amount="6" blood="1" bone="1" eye="0" gut="0" large="0" worm="1" />
         <preload-snd id="166" />
@@ -152,7 +152,7 @@
 		<bestiary transform="0,0,1" anim="Scream" />
         <gibs amount="6" blood="1" bone="1" eye="0" gut="1" large="0" />
     </entity-->
-    <entity id="161" variant="16" name="Log" anm2path="monsters/log/log.anm2" reroll="true" baseHP="5" boss="0" champion="1" collisionDamage="1" collisionMass="2" collisionRadius="3" friction="1" numGridCollisionPoints="4" shadowSize="5" stageHP="0" portrait="16">
+    <entity id="161" variant="16" name="Log" anm2path="monsters/log/log.anm2" reroll="true" baseHP="5" boss="0" champion="0" collisionDamage="1" collisionMass="2" collisionRadius="3" friction="1" numGridCollisionPoints="4" shadowSize="5" stageHP="0" portrait="16">
 		<bestiary transform="0,0,1" anim="Idle" />
         <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
     </entity>
