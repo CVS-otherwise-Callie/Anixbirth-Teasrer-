@@ -59,7 +59,7 @@ function mod:CowpatAI(npc, sprite, d)
         mod:spritePlay(sprite, "Idle")
         npc:MultiplyFriction(0.8)
         if npc.StateFrame > math.random(25, 45) then
-            if npc.Position:Distance(targetpos) < 100  then
+            if npc.Position:Distance(targetpos) < 100 or math.random(3) == 3 then
                 d.state = "shoot"
             else
                 d.state = "move"
