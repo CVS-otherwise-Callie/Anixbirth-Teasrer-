@@ -59,7 +59,7 @@ function mod:CowpatAI(npc, sprite, d)
         mod:spritePlay(sprite, "Idle")
         npc:MultiplyFriction(0.8)
         if npc.StateFrame > math.random(25, 45) then
-            if npc.Position:Distance(targetpos) < 130  then
+            if npc.Position:Distance(targetpos) < 100  then
                 d.state = "shoot"
             else
                 d.state = "move"
@@ -140,8 +140,11 @@ end
 
 function mod:CowpatFlyAI(npc, sprite, d)
 
+    npc.GridCollisionClass = GridCollisionClass.COLLISION_WALL
+
     if not d.Baby then
         d.Baby = mod:GetSpecificEntInRoom({ID = mod.Monsters.Cowpat.ID, Var = mod.Monsters.Cowpat.Var}, npc, 1000)
+        d.state = nil
     end
 
     npc.Mass = 0.1
@@ -153,6 +156,7 @@ function mod:CowpatFlyAI(npc, sprite, d)
     if target:IsDead() then
 
         d.Baby = mod:GetSpecificEntInRoom({ID = mod.Monsters.Cowpat.ID, Var = mod.Monsters.Cowpat.Var}, npc, 1000)
+        d.state = nil
 
     else
         d.newpos = target.Position
@@ -165,7 +169,14 @@ function mod:CowpatFlyAI(npc, sprite, d)
     if d.moveit >= 360 then d.moveit = 0 else d.moveit = d.moveit + 0.05 end
 
     local vel = mod:GetCirc(45, d.moveit)
-    npc.Velocity = mod:Lerp(npc.Velocity, Vector(d.newpos.X - vel.X, d.newpos.Y - vel.Y) - npc.Position, 0.1)
+    if d.state == "circling" then
+        npc.Velocity = mod:Lerp(npc.Velocity, Vector(d.newpos.X - vel.X, d.newpos.Y - vel.Y) - npc.Position, 0.1)
+    else
+        npc.Velocity = mod:Lerp(npc.Velocity,(target.Position - npc.Position):Resized(15), 0.1)
+        if npc.Position:Distance(target.Position) < 40 then
+            d.state = "circling"
+        end
+    end
 
     return
 end
