@@ -206,7 +206,7 @@ function mod:LarryKingJrAI(npc, sprite, d)
         --if not d.IsButt and d.state == "Pop" then
             d.state = npc.Parent:GetData().state
         --end
-        d.buttsanimoffset = npc.Parent:GetData().buttsanimoffset
+        d.buttsanimoffset = npc.Parent:GetData().buttsanimoffset or 0
 
         -- movement and movedelay --
         
@@ -250,7 +250,7 @@ function mod:LarryKingJrAI(npc, sprite, d)
         local mvstr =  mod:GetMoveString(npc.Velocity, true, false)
 
         d.elname = d.elname or d.name
-        d.extraNum = npc.Parent:GetData().extraNum or d.extraNum
+        d.extraNum = npc.Parent:GetData().extraNum or d.extraNum or 0
         if d.extraNum+1 == 0 or d.MoveDelay == 0 then
             return
         end
@@ -264,7 +264,7 @@ function mod:LarryKingJrAI(npc, sprite, d)
                 d.state = npc.Parent:GetData().state
             end
         else
-            if (d.extraNum+1)%(d.SegNumber*(7-d.buttsanimoffset)) == 0 then
+            if d.extraNum and d.SegNumber and d.buttsanimoffset and (d.extraNum+1)%(d.SegNumber*(7-d.buttsanimoffset)) == 0 then
                 if d.elname ~= d.name then d.elname = d.name end
                 if d.animExtraName ~= npc.Parent:GetData().animExtraName then d.animExtraName = npc.Parent:GetData().animExtraName end
                 if d.animExtraName2 ~= npc.Parent:GetData().animExtraName2 then d.animExtraName2 = npc.Parent:GetData().animExtraName2 end
@@ -277,7 +277,7 @@ function mod:LarryKingJrAI(npc, sprite, d)
 
         if not d.IsButt then
             mod:spritePlay(sprite, d.elname .. d.animExtraName .. mod:GetMoveString(npc.Velocity, true, true) .. d.animExtraName2)
-        else
+        elseif not (d.animExtraName == "Strain" and (sprite:IsPlaying("ButtStrainHori") or sprite:IsPlaying("ButtStrainUp") or sprite:IsPlaying("ButtStrainDown")) or (sprite:IsPlaying("ButtPopHori") or sprite:IsPlaying("ButPopUp") or sprite:IsPlaying("ButtPopDown"))) then
             mod:spritePlay(sprite, d.elname .. d.animExtraName .. mvstr)
         end
 
