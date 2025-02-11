@@ -261,7 +261,6 @@ function mod:PatientAI(npc, sprite, d)
                     local targetvelocity = (d.newpos - npc.Position):Resized(4)
                     npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, tonumber(d.speed))
                 else
-                    d.newpos = mod:freeGrid(npc, true, 200, 100)
                     path:FindGridPath(d.newpos, 0.7, 1, true)
                 end
 

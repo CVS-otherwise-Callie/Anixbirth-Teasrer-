@@ -34,7 +34,13 @@ function mod:UligAI(npc, sprite, d)
         mod:MakeVulnerable(npc)
         npc.GridCollisionClass = 5
         mod:spritePlay(sprite, "ComeUp")
+        npc:PlaySound(SoundEffect.SOUND_MAGGOT_ENTER_GROUND, 1, 0, false, 1)
+        d.state = nil
     elseif d.state == "chase" then
+
+        if npc.StateFrame%30 == 0 then
+            npc:PlaySound(SoundEffect.SOUND_ZOMBIE_WALKER_KID,1,0,false,1)
+        end
 
         if npc.StateFrame > 30 then
             if mod:isScare(npc) then

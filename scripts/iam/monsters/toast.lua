@@ -26,6 +26,7 @@ function mod:ToastAI(npc, sprite, d)
 
     if not d.init then
         d.state = "hiding"
+        npc:AddEntityFlags(EntityFlag.FLAG_NO_PHYSICS_KNOCKBACK | EntityFlag.FLAG_NO_KNOCKBACK)
         d.addon = 0
         d.canBeHit = false
         d.init = true
@@ -37,7 +38,7 @@ function mod:ToastAI(npc, sprite, d)
     if d.state == "hiding" then
         npc.DepthOffset = -100
         npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_NONE
-        npc:AddEntityFlags(EntityFlag.FLAG_NO_TARGET | EntityFlag.FLAG_NO_DEATH_TRIGGER)
+        npc:AddEntityFlags(EntityFlag.FLAG_NO_TARGET | EntityFlag.FLAG_NO_DEATH_TRIGGER| EntityFlag.FLAG_NO_STATUS_EFFECTS)
         mod:spritePlay(sprite, "Hidden")
         d.canBeHit = false
 
@@ -65,7 +66,7 @@ function mod:ToastAI(npc, sprite, d)
 
     elseif d.state == "popup" then
         npc.DepthOffset = 0
-        npc:ClearEntityFlags(EntityFlag.FLAG_NO_TARGET | EntityFlag.FLAG_NO_DEATH_TRIGGER)
+        npc:ClearEntityFlags(EntityFlag.FLAG_NO_TARGET | EntityFlag.FLAG_NO_DEATH_TRIGGER| EntityFlag.FLAG_NO_STATUS_EFFECTS)
         npc.GridCollisionClass = GridCollisionClass.COLLISION_WALL_EXCEPT_PLAYER
         mod:spritePlay(sprite, "Reveal")
 
