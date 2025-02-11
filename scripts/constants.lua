@@ -54,7 +54,8 @@ FHAC.Monsters = {
     andEntity = mod:ENT("&"),
     Dunglivery = mod:ENT("Dunglivery"),
     Harmoor = mod:ENT("Harmoor"),
-    Cowpat = mod:ENT("Cowpat")
+    Cowpat = mod:ENT("Cowpat"),
+    Ulig = mod:ENT("Ulig")
 }
 
 FHAC.Players = {

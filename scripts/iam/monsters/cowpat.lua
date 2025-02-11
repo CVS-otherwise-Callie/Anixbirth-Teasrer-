@@ -59,7 +59,7 @@ function mod:CowpatAI(npc, sprite, d)
         mod:spritePlay(sprite, "Idle")
         npc:MultiplyFriction(0.8)
         if npc.StateFrame > math.random(25, 45) then
-            if npc.Position:Distance(targetpos) < 100 or math.random(3) == 3 then
+            if npc.Position:Distance(targetpos) < 70 or math.random(3) == 3 then
                 d.state = "shoot"
             else
                 d.state = "move"
@@ -76,14 +76,12 @@ function mod:CowpatAI(npc, sprite, d)
         if mod:isScare(npc) then
             local targetvelocity = (targetpos - npc.Position):Resized(-7)
             npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 0.6)
-        elseif room:CheckLine(npc.Position,target.Position,0,1,false,false) then
+        elseif room:CheckLine(npc.Position,targetpos,0,1,false,false) then
             local targetvelocity = (targetpos - npc.Position):Resized(7)
             npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 0.6)
         else
-            local targetvelocity = (targetpos - npc.Position):Resized(5)
-            npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 1)
-            path:FindGridPath(targetpos, 0.5, 1, true)
-        end 
+            path:FindGridPath(targetpos, 1.3, 1, true)
+        end
 
         if npc.Position:Distance(targetpos) < 5 then
             d.state = "pickup"
@@ -93,7 +91,7 @@ function mod:CowpatAI(npc, sprite, d)
 
         npc:PlaySound(SoundEffect.SOUND_FORESTBOSS_STOMPS, 0.5, 1, false, 0.8)
 
-        local num = math.random(0, 90)
+        local num = (targetpos - npc.Position):GetAngleDegrees()
 
         for i = 0, 5 do
             npc:FireProjectiles(npc.Position, Vector(2.7,5):Rotated((60*i+num)), 0, params)

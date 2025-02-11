@@ -27,7 +27,7 @@
 <entity ID="161" Variant="6" Name="Snidge" Image="mah boys/snidge.png" BaseHP="0.1"/>
 <entity ID="161" Variant="11" Name="Floater" Image="mah boys/floater.png" BaseHP="10" StageHP="3" Tags="Champion"/>
 <entity ID="161" Variant="12" Name="Fivehead" Image="mah boys/fivehead.png" BaseHP="15" Tags="Champion"/>
-<entity ID="161" Variant="16" Name="Log" Image="mah boys/log.png" BaseHP="5" Tags="Champion">
+<entity ID="161" Variant="16" Name="Log" Image="mah boys/log.png" BaseHP="5">
 <bitfield Key="Subtype">
         <spinner Length="16" ValueOffset="1" Name="Amount of legs">
           <tooltip>
@@ -87,6 +87,7 @@ Don't be evil please.
 <entity ID="161" Variant="177" Subtype = "0" Name="Gassed Fly" Image="mah boys/gassedfly.png" BaseHP="8" Tags="Champion"/>
 <entity ID="161" Variant="189" Name="Synthetic Horf" Image="mah boys/synthetichorf.png" BaseHP="25" Tags="Champion"/>
 <entity ID="161" Variant="202" Name="Pallun" Image="mah boys/pallun.png" BaseHP="13" Tags="Champion"/>
+<entity ID="161" Variant="203" Name="Ulig" Image="mah boys/ulig.png" BaseHP="18" StageHP="1" Tags="Champion"/>
 <entity ID="161" Variant="210" Name="Sixhead" Image="mah boys/sixhead.png" BaseHP="15" StageHP="4" Tags="Champion"/>
 <entity ID="161" Variant="212" Name="Bottom" Image="mah boys/bottom.png" BaseHP="15" StageHP="4" Tags="Champion"/>
 <entity ID="161" Variant="224" Subtype = "0" Name="Mush Loom" Image="mah boys/mushloom.png" BaseHP="10" StageHP="2" Tags="Champion">
@@ -205,6 +206,7 @@ Use 2, 4, or 6 normally.
 		<group Name="HOPE Caves Enemies">
 			<entity Name="Synthetic Horf"/>
 			<entity Name="Pallun"/>
+			<entity Name="Ulig"/>
 			<entity Name = "Sixhead"/>
 		</group>
 	</group>

@@ -103,8 +103,14 @@ function mod.SyntheticHorfShot(p, d)
             p.Velocity = p.Velocity * 0.9
 			p.FallingAccel = 0.1
         end
-        p.Velocity = mod:Lerp(p.Velocity, Vector(d.newpos.X - vel.X, d.newpos.Y - vel.Y) - p.Position, 0.1)
-        if p:IsDead() and d.Baby:GetData().rotShots then
+        if d.state == "circling" then
+            p.Velocity = mod:Lerp(p.Velocity, Vector(d.newpos.X - vel.X, d.newpos.Y - vel.Y) - p.Position, 0.1)
+        else
+            p.Velocity = mod:Lerp(p.Velocity,(target.Position - p.Position):Resized(15), 0.1)
+            if p.Position:Distance(target.Position) < 40 then
+                d.state = "circling"
+            end
+        end        if p:IsDead() and d.Baby:GetData().rotShots then
             d.Baby:GetData().rotShots = d.Baby:GetData().rotShots - 1
         end
     end
