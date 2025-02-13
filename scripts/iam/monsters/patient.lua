@@ -251,15 +251,15 @@ function mod:PatientAI(npc, sprite, d)
 
             if npc.Position:Distance(d.newpos) < 5 then
                 d.wait = math.random(-5, 5)
-                d.newpos = mod:freeGrid(npc, true, 200, 100)
+                d.newpos = mod:freeGrid(npc, true, 400, 0)
                 npc.StateFrame = 0
             elseif npc.StateFrame > 10 + d.wait then
                 if mod:isScare(npc) then
                     local targetvelocity = (d.newpos - npc.Position):Resized(-4)
-                    npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, tonumber(d.speed))
-                elseif path:HasPathToPos(d.newpos) then
+                    npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, tonumber(d.speed)*0.8)
+                elseif room:CheckLine(npc.Position,d.newpos,0,1,false,false) then
                     local targetvelocity = (d.newpos - npc.Position):Resized(4)
-                    npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, tonumber(d.speed))
+                    npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, tonumber(d.speed)*0.8)
                 else
                     path:FindGridPath(d.newpos, 0.7, 1, true)
                 end

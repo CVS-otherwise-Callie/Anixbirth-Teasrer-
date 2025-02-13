@@ -114,10 +114,10 @@
 		<bestiary transform="0,0,1" anim="Idle" />
         <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
     </entity>
-	<!--entity id="161" variant="7" subtype="" name="Duddlepuph" anm2path="monsters/duddlepuph/duddlepuph.anm2" baseHP="15" stageHP="0" boss="0" champion="1" collisionDamage="1" collisionMass="5" collisionRadius="13" friction="1" numGridCollisionPoints="12" gridCollision="walls" shadowSize="15" bestiary="true" portrait="7">
+	<entity id="161" variant="7" subtype="0" name="Horf On A Stick" anm2path="monsters/horfonastick/horfonastick.anm2" baseHP="15" stageHP="0" boss="0" champion="1" collisionDamage="1" collisionMass="5" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="15" shutdoors="false" bestiary="false" portrait="7">
 		<bestiary transform="0,0,1" anim="Idle" />
         <gibs amount="3" blood="1" bone="0" eye="0" gut="1" large="0"/>
-	</entity-->
+	</entity>
     <!--entity id="161" variant="8" name="Fixture" anm2path="monsters/fixture/fixture.anm2" baseHP="10" stageHP="0" boss="0" champion="1" collisionDamage="1" collisionMass="14" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="0" portrait="8">
 		<bestiary transform="0,0,1" anim="Idle" />
         <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />

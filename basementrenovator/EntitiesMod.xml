@@ -25,6 +25,7 @@
 </entity>
 <entity ID="161" Variant="5" Name="Cowpat" Image="mah boys/cowpat.png" BaseHP="10" StageHP="4"/>
 <entity ID="161" Variant="6" Name="Snidge" Image="mah boys/snidge.png" BaseHP="0.1"/>
+<entity ID="161" Variant="7" Name="Horf On A Stick" Image="mah boys/horfonastick.png" BaseHP="15"/>
 <entity ID="161" Variant="11" Name="Floater" Image="mah boys/floater.png" BaseHP="10" StageHP="3" Tags="Champion"/>
 <entity ID="161" Variant="12" Name="Fivehead" Image="mah boys/fivehead.png" BaseHP="15" Tags="Champion"/>
 <entity ID="161" Variant="16" Name="Log" Image="mah boys/log.png" BaseHP="5">
@@ -154,6 +155,7 @@ Use 2, 4, or 6 normally.
 			<entity Name="Toast"/>
 			<entity Name="Cowpat"/>
 		    <entity Name="Snidge"/>
+		    <entity Name="Horf On A Stick"/>
 			<entity Name="Log"/>
 			<entity Name="Neutral Fly"/>
 		</group>

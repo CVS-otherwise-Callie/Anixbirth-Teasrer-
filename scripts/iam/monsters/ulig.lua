@@ -19,6 +19,8 @@ function mod:UligAI(npc, sprite, d)
 
     if not d.init then
         d.state = "hiding"
+        d.lerpnonsense = 0.08
+        d.coolaccel = 1.2
         d.CoolDown = npc.StateFrame + math.random(50, 70) - 3*num
         d.wait = math.random(20, 40) - 3*num
         d.init = true
@@ -42,15 +44,34 @@ function mod:UligAI(npc, sprite, d)
             npc:PlaySound(SoundEffect.SOUND_ZOMBIE_WALKER_KID,1,0,false,1)
         end
 
-        if npc.StateFrame > 30 then
+        if npc.StateFrame > 20 then
+
+            if d.coolaccel and d.coolaccel < 5 then
+                d.coolaccel = d.coolaccel + 0.1
+            end
             if mod:isScare(npc) then
-                local targetvelocity = (targetpos - npc.Position):Resized(-6)
-                npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 0.8)
-            elseif room:CheckLine(npc.Position,targetpos,0,1,false,false) then
-                local targetvelocity = (targetpos - npc.Position):Resized(6)
-                npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 0.8)
+                local targetvelocity = (targetpos - npc.Position):Resized(-10)
+                npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, d.lerpnonsense)
+            elseif path:HasPathToPos(targetpos) then
+                local targetvelocity = (targetpos - npc.Position):Resized(10)
+                npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, d.lerpnonsense)
             else
                 path:FindGridPath(targetpos, 0.7, 1, true)
+            end
+
+            npc.Velocity = mod:Lerp(npc.Velocity, npc.Velocity:Resized(d.coolaccel), d.lerpnonsense)
+            if npc:CollidesWithGrid() then
+                d.coolaccel = 1
+            end
+            mod:CatheryPathFinding(npc, target.Position, {
+                Speed = d.coolaccel,
+                Accel = d.lerpnonsense,
+                GiveUp = true
+            })
+            if rng:RandomInt(1, 2) == 2 then
+                d.lerpnonsense = mod:Lerp(d.lerpnonsense, 0.04, 0.05)
+            else
+                d.lerpnonsense = mod:Lerp(d.lerpnonsense, 0.01, 0.02)
             end
         else
             if npc.StateFrame <= d.CoolDown then
@@ -78,7 +99,7 @@ function mod:UligAI(npc, sprite, d)
             npc:MultiplyFriction(0.65+(0.016*num))
         end
 
-        if npc.Velocity:Length() > 1.3 then
+        if npc.Velocity:Length() > 0.5 then
             npc:AnimWalkFrame("WalkHori","WalkVert",0)
         else
             sprite:SetFrame("WalkHori", 0)
