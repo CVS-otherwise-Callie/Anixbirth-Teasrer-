@@ -14,11 +14,14 @@ function mod:GobboAI(npc, sprite, d)
     local targetpos = mod:confusePos(npc, target.Position, 5, nil, nil)
     local path = npc.Pathfinder
     local room = game:GetRoom()
+    
     if not d.init then
         
+         
         d.state = "chase"
         d.init = true
     end
+    
     if d.state == "chase" then
         if mod:isScare(npc) then
             local targetvelocity = (targetpos - npc.Position):Resized(-4)
@@ -29,7 +32,22 @@ function mod:GobboAI(npc, sprite, d)
         else
             path:FindGridPath(targetpos, 0.7, 1, true)
         end
-    print(d.state)
+    
+    
+    if npc.Velocity:Length() > 1.3 then
+        npc:AnimWalkFrame("WalkHori","WalkVert",0.)
+    else
+        if sprite:GetOverlayAnimation() == "Head" then sprite:SetOverlayFrame("head", 0) end
+        sprite:SetFrame("WalkHori", 0)
+    end
+    sprite:PlayOverlay("Head", true)
+
+    if sprite:IsOverlayFinished("Head") then
+        sprite:PlayOverlay("Head")
+        print("cvs STINKS")
+      end
+
+    sprite:Update()
     end
 end
 

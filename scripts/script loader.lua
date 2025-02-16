@@ -131,3 +131,7 @@ FHAC:LoadScripts("scripts.choom", {
 FHAC:LoadScripts("scripts.choom.monsters", {
     "harmoor"
 })
+
+FHAC:LoadScripts("scripts.TJP.monsters", {
+    "gobbo"
+})
