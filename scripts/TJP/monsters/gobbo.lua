@@ -37,15 +37,14 @@ function mod:GobboAI(npc, sprite, d)
     if npc.Velocity:Length() > 1.3 then
         npc:AnimWalkFrame("WalkHori","WalkVert",0.)
     else
-        if sprite:GetOverlayAnimation() == "Head" then sprite:SetOverlayFrame("head", 0) end
+        if sprite:GetOverlayAnimation() == "Head" then sprite:SetOverlayFrame("Head", 19) end
         sprite:SetFrame("WalkHori", 0)
     end
     sprite:PlayOverlay("Head", true)
 
     if sprite:IsOverlayFinished("Head") then
-        sprite:PlayOverlay("Head")
-        print("cvs STINKS")
-      end
+        sprite:SetOverlayFrame("Head", 20) --whatever the last frame of the animation is
+    end
 
     sprite:Update()
     end

@@ -1,5 +1,5 @@
 <AnimatedActor>
-	<Info CreatedBy="robot" CreatedOn="16/02/2025 20:04:37" Version="105" Fps="30"/>
+	<Info CreatedBy="robot" CreatedOn="16/02/2025 23:48:18" Version="106" Fps="30"/>
 	<Content>
 		<Spritesheets>
 			<Spritesheet Path="gobbo_body.png" Id="0"/>
