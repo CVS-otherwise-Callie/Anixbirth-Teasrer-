@@ -310,7 +310,7 @@ function mod:PatientAI(npc, sprite, d)
         if d.name == "growth" then
             shotspeed = 12
         else
-            shotspeed = 10
+            shotspeed = 9
         end
 
         npc:PlaySound(SoundEffect.SOUND_SHAKEY_KID_ROAR,1,0,false,1)
