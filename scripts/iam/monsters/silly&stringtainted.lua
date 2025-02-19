@@ -158,7 +158,7 @@ function mod:TaintedSillyStringAI(npc, sprite, d)
                 d.newpos = sillyStringFindFreeGrid()
                 npc.Position = d.newpos
                 npc.Visible = false
-                if npc.Position:Distance(d.newpos) < 10 then
+                if npc.Position:Distance(d.newpos) < 20 then
                     d.state = "appear"
                     d.isPickingUpChild = false
                 end
@@ -464,7 +464,9 @@ function mod:andSymbolAI(npc, sprite, d)
 
     elseif d.state == "dissapear" then
 
-        mod:spritePlay(sprite, "Dissapear")
+        sprite:Play("Disappear")
+        mod:spritePlay(sprite, "Disappear")
+        sprite:Update()
 
     elseif not d.state then
 
@@ -493,7 +495,7 @@ function mod:andSymbolAI(npc, sprite, d)
     
     if sprite:IsFinished( "Appear") then
         d.state = "walk"
-    elseif sprite:IsFinished("Dissapear") then
+    elseif sprite:IsFinished("Disappear") then
         local dat
         if d.baby and not d.baby:IsDead() and d.baby.Type ~= 1 and not npc.Parent:GetData().babyIsDead then
             dat= d.baby:GetData()
