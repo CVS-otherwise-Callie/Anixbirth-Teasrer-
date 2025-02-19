@@ -9,7 +9,7 @@ mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
 end, mod.Monsters.Dunglivery.ID)
 
 mod.DungliveryEnts = {
-    {EntityType.ENTITY_DIP, -1},
+    {EntityType.ENTITY_DIP, 0},
     {EntityType.ENTITY_DRIP, 0},
     {EntityType.ENTITY_MAGGOT, -1},
     {EntityType.ENTITY_SMALL_MAGGOT, -1},
@@ -17,42 +17,6 @@ mod.DungliveryEnts = {
     {EntityType.ENTITY_SPITTY, 0},
     {EntityType.ENTITY_CONJOINED_SPITTY, 0}
 }
-
-if FiendFolio then
-
-    mod.FiendFolioDungliveryEnts = {
-        {FiendFolio.FF.Morsel.ID, FiendFolio.FF.Morsel.Var},
-        {FiendFolio.FF.Limb.ID, FiendFolio.FF.Limb.Var},
-        {FiendFolio.FF.PaleLimb.ID, FiendFolio.FF.PaleLimb.Var},
-        {FiendFolio.FF.Drumstick.ID, FiendFolio.FF.Drumstick.Var},
-        {FiendFolio.FF.Spooter.ID, FiendFolio.FF.Spooter.Var},
-        {FiendFolio.FF.SuperSpooter.ID, FiendFolio.FF.SuperSpooter.Var},
-        {FiendFolio.FF.Spark.ID, FiendFolio.FF.Spark.Var},
-        {FiendFolio.FF.Buoy.ID, FiendFolio.FF.Buoy.Var},
-        {FiendFolio.FF.Litling.ID, FiendFolio.FF.Litling.Var},
-        {FiendFolio.FF.RolyPoly.ID, FiendFolio.FF.RolyPoly.Var},
-        {FiendFolio.FF.Shiitake.ID, FiendFolio.FF.Shiitake.Var},
-        {FiendFolio.FF.Smidgen.ID, FiendFolio.FF.Smidgen.Var},
-        {FiendFolio.FF.RedSmidgen.ID, FiendFolio.FF.RedSmidgen.Var},
-        {FiendFolio.FF.ErodedSmidgen.ID, FiendFolio.FF.ErodedSmidgen.Var},
-        {FiendFolio.FF.ErodedSmidgenNaked.ID, FiendFolio.FF.ErodedSmidgenNaked.Var},
-        {FiendFolio.FF.Frowny.ID, FiendFolio.FF.Fronwy.Var},
-        {FiendFolio.FF.Tot.ID, FiendFolio.FF.Tot.Var},
-        {FiendFolio.FF.CreepyMaggot.ID, FiendFolio.FF.CreepyMaggot.Var},
-        {FiendFolio.FF.Drop.ID, FiendFolio.FF.Drop.Var},
-        {FiendFolio.FF.Offal.ID, FiendFolio.FF.Offal.Var},
-        {FiendFolio.FF.DriedOffal.ID, FiendFolio.FF.DriedOffal.Var},
-        {FiendFolio.FF.Glob.ID, FiendFolio.FF.Glob.Var},
-        {FiendFolio.FF.Sternum.ID, FiendFolio.FF.Sternum.Var},
-        {FiendFolio.FF.Blot.ID, FiendFolio.FF.Blot.Var},
-        {FiendFolio.FF.SpicyDip.ID, FiendFolio.FF.SpicyDip.Var},
-        {FiendFolio.FF.Magleech.ID, FiendFolio.FF.Magleech.Var},
-        {FiendFolio.FF.Organelle.ID, FiendFolio.FF.Organelle.Var},
-        {FiendFolio.FF.InnerEye.ID, FiendFolio.FF.InnerEye.Var},
-    }
-
-    mod:MixTables(mod.DungliveryEnts, FHAC.FiendFolioDungliveryEnts)
-end
 
 function mod:DungliveryAI(npc, sprite, d)
 
@@ -77,13 +41,15 @@ function mod:DungliveryAI(npc, sprite, d)
         for k, v in ipairs(mod.DungliveryEnts) do
             local ent = mod:GetSpecificEntInRoom({ID = v[1], Var = v[2]}, npc, 1000)
             if not d.specificTargTypeIsPlayer then
-                table.insert(tab, ent)
+                if not ent:GetData().DungliveryParent then
+                    table.insert(tab, ent)
+                end
             end
         end
         return tab[math.random(#tab)]
     end
 
-    if not d.ent or d.ent:IsDead() or not d.ent:Exists() then
+    if d.ent and (d.ent:IsDead() or not d.ent:Exists()) then
         d.state = "idle"
     elseif d.state == "idle" and d.ent then
         d.state = "moving"
@@ -92,35 +58,98 @@ function mod:DungliveryAI(npc, sprite, d)
 
         targetpos = d.ent.Position
 
-        if mod:isScare(npc) then
-            local targetvelocity = (targetpos - npc.Position):Resized(-4)
-            npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, d.speed)
-        elseif room:CheckLine(npc.Position,target.Position,0,1,false,false) then
-            local targetvelocity = (targetpos - npc.Position):Resized(4)
-            npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, d.speed)
+        if npc.Position:Distance(d.ent.Position) < 2 then
+            mod:spritePlay(sprite, "GoDown")
+            npc.Position = d.ent.Position
         else
-            local targetvelocity = (targetpos - npc.Position):Resized(2)
-            npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, d.speed)
-            path:FindGridPath(target.Position, 0.5, 1, true)
-        end 
-
-        if npc.Position:Distance(d.ent.Position) < 5 then
-            d.state = "pickup"
+            if mod:isScare(npc) then
+                local targetvelocity = (targetpos - npc.Position):Resized(-7)
+                npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, d.speed)
+            elseif room:CheckLine(target.Position,npc.Position,3,900,false,false) then
+                local targetvelocity = (targetpos - npc.Position):Resized(7)
+                npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, d.speed)
+            else
+                local targetvelocity = (targetpos - npc.Position):Resized(2)
+                npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, d.speed)
+                path:FindGridPath(target.Position, 0.5, 1, true)
+            end
         end
 
+    elseif d.state == "pickup" then
+
+        npc:MultiplyFriction(0.95)
+
+        local targetvelocity = (targetpos - npc.Position)
+        npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 0.00175)
+
+        if math.abs(math.abs(npc.Velocity:GetAngleDegrees()) - math.abs((targetpos - npc.Position):GetAngleDegrees())) < 30 and npc.Velocity:Length() > 5 then
+            mod:spritePlay(sprite, "Sling")
+            npc.StateFrame = 0
+        end
+
+    elseif d.state == "throwtime" then
+
+
+    end
+
+    if targetpos.X < npc.Position.X then --future me pls don't fuck this up
+        sprite.FlipX = true
+    else
+        sprite.FlipX = false
     end
 
     if d.state == "idle" then
-        mod:spritePlay(sprite, "Idle")
-        npc:MultiplyFriction(0.5)
+        d.ent = nil
+        npc:MultiplyFriction(0.9)
 
         if npc.StateFrame > 30 then
             d.ent = GetSmallEnt()
+            if d.ent and not d.ent.Type == 1 then d.ent:GetData().DungliveryParent = npc end
         end
     end
 
-    if npc.Velocity:Length() > 1 and d.state == "idle" or d.state == "moving" then
-        mod:spritePlay(sprite, "FlySide")
-    end --
+    if npc.Velocity:Length() > 1 and sprite:GetAnimation() ~= "GoDown" and sprite:GetAnimation() ~= "Sling" then
+        if not sprite:IsFinished("FlySideInit") and not d.isFinishedFlySideInit then
+            mod:spritePlay(sprite, "FlySideInit")
+        else
+            d.isFinishedFlySideInit = true
+            mod:spritePlay(sprite, "FlySide")
+        end
+    elseif sprite:GetAnimation() ~= "GoDown" and (d.state == "idle" or d.state == "moving") then
+        d.isFinishedFlySideInit = false
+        mod:spritePlay(sprite, "Idle")
+    end
+
+    if sprite:IsFinished("GoDown") and d.state == "moving" then
+        
+        d.state = "pickup"
+        mod:spritePlay(sprite, "FlySideInit")
+
+    end
+
+    if sprite:IsEventTriggered("Pickup") and not d.ent:GetData().isbeingPickedUpByDunglivery then
+
+        d.ent:GetData().oldGridColl = d.ent.GridCollisionClass
+        d.ent.GridCollisionClass = npc.GridCollisionClass
+        d.ent:GetData().isbeingPickedUpByDunglivery = true
+
+    elseif sprite:IsEventTriggered("Launch") then
+
+        d.ent.GridCollisionClass = d.ent:GetData().oldGridColl
+        d.ent.Velocity = npc.Velocity + (targetpos - npc.Position):Normalized() * 10
+        d.ent:GetData().isbeingPickedUpByDunglivery = false
+        d.ent = nil
+
+        npc:MultiplyFriction(0.6)
+        npc.StateFrame = 0
+        d.state = "idle"
+
+    end
+    
+    if d.ent then
+        if d.ent:GetData().isbeingPickedUpByDunglivery then
+            d.ent.Position = npc.Position
+        end
+    end
 end
 

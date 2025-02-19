@@ -122,7 +122,7 @@
 		<bestiary transform="0,0,1" anim="Idle" />
         <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
     </entity-->
-    <entity id="161" variant="9" name="Dunglivery" anm2path="monsters/dunglivery/dunglivery.anm2" reroll="true" baseHP="15" boss="0" champion="1" collisionDamage="1" collisionMass="4" collisionRadius="10" friction="1" numGridCollisionPoints="12" shadowSize="11" stageHP="4" tags="fly" portrait="9">
+    <entity id="161" variant="9" name="Dunglivery" anm2path="monsters/dunglivery/dunglivery.anm2" reroll="true" baseHP="15" boss="0" champion="1" collisionDamage="1" collisionMass="4" collisionRadius="10" friction="1" numGridCollisionPoints="12" shadowSize="11" stageHP="2" gridCollision="walls" tags="fly" portrait="9">
 		<bestiary transform="0,0,1" anim="Idle" />
         <gibs amount="12" blood="1" bone="1" eye="0" gut="1" large="0" />
     </entity>

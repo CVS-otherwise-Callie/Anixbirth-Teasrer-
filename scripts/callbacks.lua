@@ -7,6 +7,16 @@ function FHAC.DeathStuff(_, ent)
 end
 FHAC:AddCallback(ModCallbacks.MC_POST_NPC_DEATH, FHAC.DeathStuff)
 
+function FHAC.FHACNPCUpdate(_, npc)
+
+    local sprite = npc:GetSprite()
+    local d = npc:GetData()
+
+    FHAC:GlobalCVSEntityStuff(npc, sprite, d)
+end
+
+FHAC:AddCallback(ModCallbacks.MC_NPC_UPDATE, FHAC.FHACNPCUpdate)
+
 function FHAC.PreChangeRooms()
     FHAC:SavePreEnts()
     FHAC:TransferSavedEnts()
