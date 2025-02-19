@@ -281,13 +281,14 @@ function mod:LarryKingJrAI(npc, sprite, d)
             mod:spritePlay(sprite, d.elname .. d.animExtraName .. mvstr)
         end
 
-        if d.IsButt and sprite:IsEventTriggered("Poop") and GetDipsWithSameDataLarry(npc) then
+        if d.IsButt and sprite:IsEventTriggered("Poop") and #GetDipsWithSameDataLarry(npc) <= 3 then
             local vec = (Vector(3, 0)):Rotated((npc.Parent.Position - npc.Position):GetAngleDegrees() + 180 + math.random(-20, 20))
             
             local var = 217
             if mod:CheckStage("Dross", {45}) then
                 var = 870
             end
+            
             local poop = Isaac.Spawn(var,0,0,npc.Position, vec, npc)
             poop:ClearEntityFlags(EntityFlag.FLAG_APPEAR)
             poop:GetData().InitSeed = d.InitSeed

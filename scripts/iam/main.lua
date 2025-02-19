@@ -139,6 +139,35 @@ function mod:SpawnRandomDried()
 	mod.spawnedDried = true
 end
 
+function mod:curRoomModGFX()
+
+	local level = game:GetLevel()
+	local room = game:GetRoom()
+	if level:GetStage() == LevelStage.STAGE7 then
+		rng:SetSeed(room:GetDecorationSeed(), 0)
+		local gridgfx = StageAPI.GridGfx()
+		gridgfx.Rocks = mod.FloorGrids[rng:RandomInt(#mod.FloorGrids) + 1].Rocks
+		gridgfx.PitFiles = mod.FloorGrids[rng:RandomInt(#mod.FloorGrids) + 1].PitFiles
+		gridgfx.AltPitFiles = mod.FloorGrids[rng:RandomInt(#mod.FloorGrids) + 1].AltPitFiles
+		return StageAPI.RoomGfx(nil, gridgfx, nil, nil)
+	end
+
+	local roomType = room:GetType()
+	local backdropType = game:GetRoom():GetBackdropType()
+	local existingGfx = (StageAPI.GetCurrentRoom() and StageAPI.GetCurrentRoom().Data.RoomGfx)
+	if roomType == RoomType.ROOM_SECRET then
+		--return mod.SecretBackdrop
+	elseif roomType == RoomType.ROOM_DUNGEON then
+		--return mod.CrawlspaceBackdrop
+	elseif (roomType == RoomType.ROOM_CHALLENGE) and not existingGfx  then
+		return mod.ChallengeBackdrop
+	elseif not existingGfx then
+		if backdropType == 1 then
+			return mod.BasementBackdrop
+		end
+	end
+end
+
 function mod:RemoveAllSpecificItemEffects(player)
 	local d = player:GetData()
 	if d.AnalFissureCreep then
@@ -151,10 +180,33 @@ function mod:RemoveAllSpecificItemEffects(player)
 end
 
 function mod:CVSNewRoom()
-	local players = Isaac.FindByType(1, -1, -1, false, false)
-	for _, player in ipairs(players) do
-        mod:MysteryMilkRoomInit(player)
-    end
+
+	if StageAPI then
+
+		if mod.roomBackdrop and mod.roomBackdropFrom then
+			if game:GetLevel():GetCurrentRoomDesc().ListIndex ~= mod.roomBackdropFrom 
+			or StageAPI.GetCurrentRoom() ~= mod.roomBackdropFromStageAPI 
+			or game:GetSeeds():GetStageSeed(game:GetLevel():GetStage()) ~= mod.roomBackdropFromLevel then
+				mod.roomBackdrop = nil
+				mod.roomBackdropFrom = nil
+				mod.roomBackdropFromStageAPI = nil
+				mod.roomBackdropFromLevel = nil
+			end
+		end
+
+		local roomGfx = mod:curRoomModGFX()
+
+		if roomGfx then
+			if type(roomGfx) == "function" then
+				local outGfx = roomGfx()
+				if outGfx then
+					StageAPI.ChangeRoomGfx(outGfx)
+				end
+			else
+				--StageAPI.ChangeRoomGfx(roomGfx)
+			end
+		end
+	end
 end
 
 --thx ff

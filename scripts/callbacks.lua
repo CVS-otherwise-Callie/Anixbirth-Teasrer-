@@ -107,6 +107,8 @@ function FHAC:PostNewRoom()
     FHAC:BigBowlOfSauerkrautSpawn()
     
     FHAC:RemoveAllSpecificItemEffects(Isaac.GetPlayer())
+
+    FHAC:CVSNewRoom()
 end
 FHAC:AddCallback(ModCallbacks.MC_POST_NEW_ROOM, FHAC.PostNewRoom)
 

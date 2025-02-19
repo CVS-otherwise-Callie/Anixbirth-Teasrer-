@@ -44,7 +44,7 @@ function mod:StonerAI(npc, sprite, d)
         rng:SetSeed(npc.DropSeed, 32)
         d.face = d.face or rng:RandomInt(0, 450)
         sprite:SetFrame("Idle", d.face)
-        npc:AddEntityFlags(EntityFlag.FLAG_NO_TARGET | EntityFlag.FLAG_NO_DEATH_TRIGGER)
+        npc:AddEntityFlags(EntityFlag.FLAG_NO_TARGET | EntityFlag.FLAG_NO_DEATH_TRIGGER | EntityFlag.FLAG_NO_STATUS_EFFECTS)
         npc.GridCollisionClass = GridCollisionClass.COLLISION_WALL_EXCEPT_PLAYER
         d.init = true
     else
@@ -76,6 +76,8 @@ function mod:StonerAI(npc, sprite, d)
         plate:GetSprite():Play("Switched", true)
         plate:ToPressurePlate():Reward()
     end
+
+    npc:RemoveStatusEffects()
 
 
     for i = 0, room:GetGridSize() do 

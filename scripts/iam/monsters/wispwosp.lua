@@ -23,7 +23,7 @@ mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
 
         d.newpos = npc:GetPlayerTarget().Position
         npc.SpriteOffset = Vector(0,0)
-        npc.Velocity = mod:Lerp(npc.Velocity, (d.newpos - npc.Position):Resized(d.coolaccel*10), 0.025 + d.moveoffset)
+        npc.Velocity = mod:Lerp(npc.Velocity, (d.newpos - npc.Position):Resized(d.coolaccel*3), 0.009 + d.moveoffset)
 
 
         if d.coolaccel and d.coolaccel < 10 then

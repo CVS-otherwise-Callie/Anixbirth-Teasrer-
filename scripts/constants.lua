@@ -121,6 +121,17 @@ FHAC.Collectibles = {
     }
 }
 
+FHAC.Grids = {
+    Pits = {
+        Basement = "gfx/grid/pit_basement.png"
+    },
+    GlobalGridSpawner = mod:ENT("HOPE Grid Spawner")
+}
+
+mod.FloorGrids = {
+    mod.BasementGrid
+}
+
 
 FHAC.DirectionToVector = {
 	[Direction.DOWN]	= Vector(0, 1),
@@ -176,3 +187,14 @@ FHAC.Nonmale = {
     {ID = FHAC:SpecialEnt("Patient"), Affliction = "Woman"},
     {ID = FHAC:SpecialEnt("Pinprick"), Affliction = "Dreamsexual"},
 }
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-- GRIDS --
+
+mod.BasementGrid = StageAPI.GridGfx()
+mod.BasementGrid:SetPits(mod.Grids.Pits.Basement, mod.Grids.Pits.Basement, true)
+--mod.BasementGrid:SetBridges("gfx/grid/rocks_basement.png")
+
+mod.BasementBackdrop = StageAPI.RoomGfx(nil, mod.BasementGrid, nil, nil)
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
