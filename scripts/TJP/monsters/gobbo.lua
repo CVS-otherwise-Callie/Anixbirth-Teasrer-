@@ -16,8 +16,6 @@ function mod:GobboAI(npc, sprite, d)
     local room = game:GetRoom()
     
     if not d.init then
-        
-         
         d.state = "chase"
         d.init = true
     end
@@ -32,8 +30,8 @@ function mod:GobboAI(npc, sprite, d)
         else
             path:FindGridPath(targetpos, 0.7, 1, true)
         end
-    
-    
+    end
+
     if npc.Velocity:Length() > 1.3 then
         npc:AnimWalkFrame("WalkHori","WalkVert",0.)
     else
@@ -47,6 +45,5 @@ function mod:GobboAI(npc, sprite, d)
     end
 
     sprite:Update()
-    end
 end
 

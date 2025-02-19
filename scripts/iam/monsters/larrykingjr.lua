@@ -277,7 +277,7 @@ function mod:LarryKingJrAI(npc, sprite, d)
 
         if not d.IsButt then
             mod:spritePlay(sprite, d.elname .. d.animExtraName .. mod:GetMoveString(npc.Velocity, true, true) .. d.animExtraName2)
-        elseif not (d.animExtraName == "Strain" and (sprite:IsPlaying("ButtStrainHori") or sprite:IsPlaying("ButtStrainUp") or sprite:IsPlaying("ButtStrainDown")) or (sprite:IsPlaying("ButtPopHori") or sprite:IsPlaying("ButPopUp") or sprite:IsPlaying("ButtPopDown"))) then
+        elseif not (d.animExtraName == "Strain" and ((sprite:IsPlaying("ButtPopHori") or sprite:IsPlaying("ButPopUp") or sprite:IsPlaying("ButtPopDown")))) then
             mod:spritePlay(sprite, d.elname .. d.animExtraName .. mvstr)
         end
 

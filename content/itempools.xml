@@ -3,6 +3,7 @@
 	<Pool Name="treasure">
 		<Item Name="Joke Book" Weight="2" DecreaseBy="1" RemoveOn="0.1"/>
 		<Item Name="Stinky Mushroom" Weight="3" DecreaseBy="1" RemoveOn="0.1"/>
+		<Item Name="Marketable Plushie" Weight="2" DecreaseBy="1" RemoveOn="0.1"/>
 	</Pool>
 	<Pool Name="shop">
 	</Pool>
@@ -24,6 +25,7 @@
 		<Item Name="Straw Doll" Weight="1" DecreaseBy="1" RemoveOn="0.1"/>
 	</Pool>
 	<Pool Name="beggar">
+		<Item Name="Marketable Plushie" Weight="2" DecreaseBy="1" RemoveOn="0.1"/>
 	</Pool>
 	<Pool Name="demonBeggar">
 		<Item Name="Straw Doll" Weight="1" DecreaseBy="1" RemoveOn="0.1"/>
@@ -38,6 +40,7 @@
 	<Pool Name="momsChest">
 	</Pool>
 	<Pool Name="greedTreasure"> <!--this is the golden room-->
+		<Item Name="Marketable Plushie" Weight="2" DecreaseBy="1" RemoveOn="0.1"/>
 	</Pool>
 	<Pool Name="greedBoss"> <!--this is the white room-->
 	</Pool>
@@ -52,6 +55,7 @@
 	<Pool Name="greedSecret">
 	</Pool>
 	<Pool Name="craneGame">
+		<Item Name="Marketable Plushie" Weight="2" DecreaseBy="1" RemoveOn="0.1"/>
 	</Pool>
 	<Pool Name="ultraSecret">
 	</Pool>

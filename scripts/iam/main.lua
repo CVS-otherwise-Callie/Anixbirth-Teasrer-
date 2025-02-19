@@ -169,3 +169,12 @@ function mod:CVSFamiliarCheck(player, itemconfig)
 		player:CheckFamiliar(mod.CVSFamsToBeEvaluated[i][2], mod.GetExpectedFamiliarNum(player, mod.CVSFamsToBeEvaluated[i][1]), player:GetCollectibleRNG(mod.CVSFamsToBeEvaluated[i][1]), itemconfig:GetCollectible(mod.CVSFamsToBeEvaluated[i][1]))
 	end
 end
+
+function mod:GlobalCVSEntityStuff(npc, sprite, d)
+
+	if d.isbeingPickedUpByDunglivery then
+		npc.State = NpcState.STATE_IDLE
+		return
+	end
+
+end
