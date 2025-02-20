@@ -200,11 +200,7 @@
 		<bestiary transform="0,0,1" anim="WalkVert" overlay="Head" />
         <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
     </entity>
-<<<<<<< Updated upstream
     <entity id="161" variant="27" name="Sho" anm2path="monsters\gobbo_and_sho/monster_sho.anm2" baseHP="10" boss="0" champion="0" collisionDamage="1" collisionMass="20" collisionRadius="13" numGridCollisionPoints="12" shadowSize="14" stageHP="1" portrait="27" friction="1">
-=======
-    <entity id="161" variant="27" name="Sho" anm2path="monsters\gobbo_and_sho/monster_sho.anm2" baseHP="10" boss="0" champion="0" collisionDamage="1" collisionMass="20" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="14" stageHP="1" portrait="27">
->>>>>>> Stashed changes
 		<bestiary transform="0,0,1" anim="idle" />
         <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
         <preload-snd id="25" />
