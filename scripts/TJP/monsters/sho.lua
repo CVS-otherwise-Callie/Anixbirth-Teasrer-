@@ -30,7 +30,7 @@ function mod:ShoAI(npc, sprite, d)
         path:MoveRandomly(false)
         npc:MultiplyFriction(0.65+(0.016))
         if npc.Parent then
-            if npc.Parent:IsDead()
+            if npc.Parent:IsDead() then
                 d.state = "angry"
             end
         end
