@@ -8,6 +8,16 @@ mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
     end
 end, mod.Monsters.Ulig.ID)
 
+local function GetFliesWithSameDataUlig(npc)
+    local tab = {}
+    for k, fly in ipairs(Isaac.FindByType(EntityType.ENTITY_DART_FLY)) do
+        if fly:GetData().InitSeed == npc:GetData().InitSeed and fly.Position:Distance(npc.Position) > 0 then
+            table.insert(tab, fly)
+        end
+    end
+    return tab
+end
+
 function mod:UligAI(npc, sprite, d)
 
     local target = npc:GetPlayerTarget()
@@ -19,6 +29,7 @@ function mod:UligAI(npc, sprite, d)
 
     if not d.init then
         d.state = "hiding"
+        d.InitSeed = npc.InitSeed
         d.lerpnonsense = 0.08
         d.coolaccel = 1.2
         d.CoolDown = npc.StateFrame + math.random(50, 70) - 3*num
@@ -32,12 +43,22 @@ function mod:UligAI(npc, sprite, d)
         npc:AddEntityFlags(EntityFlag.FLAG_NO_TARGET | EntityFlag.FLAG_NO_PHYSICS_KNOCKBACK | EntityFlag.FLAG_NO_KNOCKBACK | EntityFlag.FLAG_NO_STATUS_EFFECTS)
         npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_PLAYEROBJECTS
         npc.GridCollisionClass = GridCollisionClass.COLLISION_NONE
+
+        if npc.StateFrame > 30 then
+            mod:spritePlay(sprite, "Disappear")
+        end
+
     elseif d.state == "getup" then
         mod:MakeVulnerable(npc)
         npc.GridCollisionClass = 5
         mod:spritePlay(sprite, "ComeUp")
         npc:PlaySound(SoundEffect.SOUND_MAGGOT_ENTER_GROUND, 1, 0, false, 1)
         d.state = nil
+
+    elseif d.state== "shoot" then
+
+        mod:spritePlay(sprite, "SpawnEntity")
+
     elseif d.state == "chase" then
 
         if npc.StateFrame%30 == 0 then
@@ -116,6 +137,20 @@ function mod:UligAI(npc, sprite, d)
     if sprite:IsFinished("ComeUp") then
         npc.StateFrame = 0
         d.state = "chase"
+    elseif sprite:IsFinished("Disappear") then
+        npc.Position = mod:freeGrid(npc, true, 300, 0)
+        mod:spritePlay(sprite, "Appear")
+        d.state = "shoot"
+    elseif sprite:IsFinished("SpawnEntity") and d.state ~= "hiding" then
+        d.state = "hiding"
+        npc.StateFrame = 0
+    end
+
+    if sprite:IsEventTriggered("Shoot") then
+        if #GetFliesWithSameDataUlig(npc) <= 2 then
+            local fly = Isaac.Spawn(EntityType.ENTITY_DART_FLY, -1, -1, npc.Position, Vector.Zero, npc)
+            fly:GetData().InitSeed = npc.InitSeed
+        end
     end
 
 end
