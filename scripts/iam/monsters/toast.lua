@@ -136,6 +136,7 @@ function mod:ToastAI(npc, sprite, d)
     end
 
     if sprite:IsEventTriggered("Open") then
+        npc:ClearEntityFlags(EntityFlag.FLAG_NO_STATUS_EFFECTS)
         d.canBeHit = true
     elseif sprite:IsEventTriggered("Close") then
         d.canBeHit = false

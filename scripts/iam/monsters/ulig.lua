@@ -11,7 +11,7 @@ end, mod.Monsters.Ulig.ID)
 local function GetFliesWithSameDataUlig(npc)
     local tab = {}
     for k, fly in ipairs(Isaac.FindByType(EntityType.ENTITY_DART_FLY)) do
-        if fly:GetData().InitSeed == npc:GetData().InitSeed and fly.Position:Distance(npc.Position) > 0 then
+        if (fly:GetData().InitSeed == npc:GetData().InitSeed or fly:GetData().InitSeed == "TWW8XoULQRk") and fly.Position:Distance(npc.Position) > 0 then
             table.insert(tab, fly)
         end
     end
@@ -29,7 +29,7 @@ function mod:UligAI(npc, sprite, d)
 
     if not d.init then
         d.state = "hiding"
-        d.InitSeed = npc.InitSeed
+        d.InitSeed = math.random(1000000, 2000000)
         d.lerpnonsense = 0.08
         d.coolaccel = 1.2
         d.CoolDown = npc.StateFrame + math.random(50, 70) - 3*num
@@ -44,13 +44,14 @@ function mod:UligAI(npc, sprite, d)
         npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_PLAYEROBJECTS
         npc.GridCollisionClass = GridCollisionClass.COLLISION_NONE
 
-        if npc.StateFrame > 30 then
+        if npc.StateFrame > 30 + math.random(5, 15) then
             mod:spritePlay(sprite, "Disappear")
         end
 
     elseif d.state == "getup" then
         mod:MakeVulnerable(npc)
         npc.GridCollisionClass = 5
+        npc.StateFrame = 0
         mod:spritePlay(sprite, "ComeUp")
         npc:PlaySound(SoundEffect.SOUND_MAGGOT_ENTER_GROUND, 1, 0, false, 1)
         d.state = nil
@@ -94,7 +95,7 @@ function mod:UligAI(npc, sprite, d)
             else
                 d.lerpnonsense = mod:Lerp(d.lerpnonsense, 0.01, 0.02)
             end
-        else
+        elseif not sprite:IsPlaying("SpawnEntityStand") then
             if npc.StateFrame <= d.CoolDown then
                 if mod:isCharm(npc) then
                     if (Game():GetRoom():CheckLine(npc.Position, targetpos, 0, 1, false, false) and not npc:CollidesWithGrid()) or npc:GetChampionColorIdx() == 8 then
@@ -118,11 +119,13 @@ function mod:UligAI(npc, sprite, d)
                 d.wait = math.random(20, 40) - 3*num
             end
             npc:MultiplyFriction(0.65+(0.016*num))
+        else
+            npc:MultiplyFriction(0.8)
         end
 
-        if npc.Velocity:Length() > 0.5 then
+        if npc.Velocity:Length() > 0.5 and not sprite:IsPlaying("SpawnEntityStand") then
             npc:AnimWalkFrame("WalkHori","WalkVert",0)
-        else
+        elseif not sprite:IsPlaying("SpawnEntityStand") then
             sprite:SetFrame("WalkHori", 0)
         end
                 
@@ -130,6 +133,9 @@ function mod:UligAI(npc, sprite, d)
 
         if npc.StateFrame > 90 then
             npc.StateFrame = 0
+            if #GetFliesWithSameDataUlig(npc) <= 1 then
+                mod:spritePlay(sprite, "SpawnEntityStand")
+            end
         end
         
     end
@@ -144,12 +150,30 @@ function mod:UligAI(npc, sprite, d)
     elseif sprite:IsFinished("SpawnEntity") and d.state ~= "hiding" then
         d.state = "hiding"
         npc.StateFrame = 0
+    elseif sprite:IsFinished("SpawnEntityStand") then
+        sprite:SetFrame("WalkHori", 0)
+        npc.StateFrame = 0
     end
 
     if sprite:IsEventTriggered("Shoot") then
-        if #GetFliesWithSameDataUlig(npc) <= 2 then
+        local flynum = 1
+        local seed
+        if sprite:IsPlaying("SpawnEntity") then
+            flynum = 2
+            seed = d.InitSeed
+        else
+            seed = "TWW8XoULQRk"
+        end
+        if #GetFliesWithSameDataUlig(npc) < flynum and #Isaac.FindByType(EntityType.ENTITY_DART_FLY) <= 2 then
             local fly = Isaac.Spawn(EntityType.ENTITY_DART_FLY, -1, -1, npc.Position, Vector.Zero, npc)
-            fly:GetData().InitSeed = npc.InitSeed
+            fly:GetData().InitSeed = seed
+        else
+            local proj = Isaac.Spawn(9, 0, 0, npc.Position, (targetpos - npc.Position):Resized(10), npc):ToProjectile()
+            proj.Height = -5
+            proj.FallingSpeed = -20
+            proj.FallingAccel = 1
+            proj.Size = 1.5
+            proj:Update()
         end
     end
 
