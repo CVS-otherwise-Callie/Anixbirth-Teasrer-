@@ -17,6 +17,9 @@ function mod:GobboAI(npc, sprite, d)
     
     if not d.init then
         d.state = "chase"
+
+        local sho = Isaac.Spawn(161, 27, 0, npc.Position, npc.Velocity, npc):ToNPC()
+        sho.Parent = npc
         d.init = true
     end
     
