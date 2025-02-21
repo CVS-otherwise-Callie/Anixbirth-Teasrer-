@@ -41,10 +41,11 @@ function mod:GobboAI(npc, sprite, d)
         if sprite:GetOverlayAnimation() == "Head" then sprite:SetOverlayFrame("Head", 19) end
         sprite:SetFrame("WalkHori", 0)
     end
-    sprite:PlayOverlay("Head", true)
+
+    sprite:PlayOverlay("Head", false)
 
     if sprite:IsOverlayFinished("Head") then
-        sprite:SetOverlayFrame("Head", 20) --whatever the last frame of the animation is
+        sprite:SetOverlayFrame("Head", 19) --whatever the last frame of the animation is
     end
 
     sprite:Update()
