@@ -200,7 +200,7 @@ function mod:CVSNewRoom()
 			if type(roomGfx) == "function" then
 				local outGfx = roomGfx()
 				if outGfx then
-					StageAPI.ChangeRoomGfx(outGfx)
+					--StageAPI.ChangeRoomGfx(outGfx)
 				end
 			else
 				--StageAPI.ChangeRoomGfx(roomGfx)
