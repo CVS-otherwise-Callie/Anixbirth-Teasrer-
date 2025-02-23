@@ -164,6 +164,8 @@ function mod:curRoomModGFX()
 	elseif not existingGfx then
 		if backdropType == 1 then
 			return mod.BasementBackdrop
+		elseif backdropType == 5 then
+			return mod.CatacombsBackdrop
 		end
 	end
 end

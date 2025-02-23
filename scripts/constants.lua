@@ -123,7 +123,8 @@ FHAC.Collectibles = {
 
 FHAC.Grids = {
     Pits = {
-        Basement = "gfx/grid/pit_basement.png"
+        Basement = "gfx/grid/pit_basement.png",
+        Catacombs = "gfx/grid/pit_catacombs.png"
     },
     GlobalGridSpawner = mod:ENT("HOPE Grid Spawner")
 }
@@ -195,6 +196,11 @@ mod.BasementGrid = StageAPI.GridGfx()
 mod.BasementGrid:SetPits(mod.Grids.Pits.Basement, mod.Grids.Pits.Basement, true)
 --mod.BasementGrid:SetBridges("gfx/grid/rocks_basement.png")
 
+mod.CatacombsbGrid = StageAPI.GridGfx()
+mod.CatacombsbGrid:SetPits(mod.Grids.Pits.Catacombs, mod.Grids.Pits.Catacombs, true)
+--mod.BasementGrid:SetBridges("gfx/grid/rocks_basement.png")
+
 mod.BasementBackdrop = StageAPI.RoomGfx(nil, mod.BasementGrid, nil, nil)
+mod.CatacombsBackdrop = StageAPI.RoomGfx(nil, mod.CatacombsbGrid, nil, nil)
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
