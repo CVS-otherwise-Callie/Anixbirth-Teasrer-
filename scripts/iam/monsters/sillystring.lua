@@ -65,12 +65,12 @@ function mod:SillyStringAI(npc, sprite, d)
     end
 
     local function sillyStringFindFreeGrid()
-        local pos = mod:freeGrid(d.baby, true, 1000000, 100)
-        if game:GetRoom():CheckLine(pos,d.baby.Position,3,900,false,false) then
+        local pos = mod:freeGrid(d.baby, false, 500, 100)
+        --if game:GetRoom():CheckLine(pos,d.baby.Position,3,900,false,false) then --maybe redundant??
             return pos
-        else
-            return sillyStringFindFreeGrid()
-        end
+        --else
+            --return sillyStringFindFreeGrid()
+        --end
     end
 
     --init--
