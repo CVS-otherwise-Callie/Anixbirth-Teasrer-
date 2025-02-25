@@ -66,6 +66,7 @@ Up to groups of 3.
    </bitfield>
 </entity>
 <entity ID="161" Variant="91" Name="Schmoot" Image="mah boys/schmoot.png" BaseHP="16" Tags="Champion"/>
+<entity ID="161" Variant="101" Name="Soot" Image="mah boys/soot.png" BaseHP="3"/>
 <entity ID="161" Variant="119" Name="Wost" Image="mah boys/wost.png" BaseHP="8" Tags="Champion"/>
 <entity ID="161" Variant="133" Name="Zapper Teller" Image="mah boys/zapperteller.png" BaseHP="13" Tags="Champion">
 <bitfield Key="Subtype">
@@ -177,6 +178,7 @@ Use 2, 4, or 6 normally.
 	<group Name="HOPE Burning Basement" Label="Burning Basement">
 		<group Name="HOPE Burning Basement Enemies">
 			<entity Name="Schmoot"/>
+			<entity Name="Soot"/>
 		</group>
 	</group>
    

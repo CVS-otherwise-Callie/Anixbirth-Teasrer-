@@ -287,6 +287,10 @@
         <gibs amount="6" blood="1" bone="1" eye="0" gut="1" large="0" />
         <preload-snd id="146" />
     </entity>
+    <entity id="161" variant="101" name="Soot" anm2path="monsters/soot/soot.anm2" reroll="true" baseHP="5" boss="0" champion="" collisionDamage="1" collisionMass="3" collisionRadius="17" friction="1" numGridCollisionPoints="4" shadowSize="11" stageHP="0" gridCollision="walls" tags="fly" portrait="101">
+		<bestiary transform="0,0,1" anim="Idle" overlay="Eyes"/>
+        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
+    </entity>
 
     <!--Caves-->
     <entity anm2path="monsters/synthetichorf/synthetichorf.anm2" id="161" variant="189" reroll="true" baseHP="25" boss="0" champion="1" collisionDamage="1" collisionMass="40" collisionRadius="13" friction="0.1" name="Synthetic Horf" numGridCollisionPoints="12" shadowSize="14" stageHP="2" hasFloorAlts="true" bestiary="true" portrait="189">

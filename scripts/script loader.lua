@@ -60,7 +60,8 @@ FHAC:LoadScripts("scripts.iam.monsters", {
 	"dunglivery",
 	"cowpat",
 	"ulig",
-	"horfonastick"
+	"horfonastick",
+	"soot"
 })
 
 FHAC:LoadScripts("scripts.iam", {
