@@ -22,47 +22,6 @@ FHAC:LoadScripts("scripts", {
 	"otherapi.proapi.proapi",
 	"deathtransform",
 })
---iam stuff
-FHAC:LoadScripts("scripts.iam.monsters", {
-	"fivehead",
-	"floater",
-	"neutralfly",
-	"patient",
-	"dried",
-	"erythorcyte",
-	"wost",
-	"schmoot",
-	"snidge",
-	"drosslet",
-	"pitpat",
-	"mushloom",
-	"pinprick",
-	"synthetichorf",
-	"gassedfly",
-	"fly_ve-bomber", --HAHAHAH FUCK YOU EUAN TOO
-	"pallun",
-	"sillystring",
-	"stickyfly",
-	"wispwosp",
-	"stuckpoot",
-	"rainmonger",
-	"zapperteller",
-	"techgrudge",
-	"log",
-	"stoner",
-	"lightpressureplatenullent",
-	"larrykingjr",
-	"bottom",
-	"sixhead",
-	"babble",
-	"toast",
-	"silly&stringtainted",
-	"dunglivery",
-	"cowpat",
-	"ulig",
-	"horfonastick",
-	"soot"
-})
 
 FHAC:LoadScripts("scripts.iam", {
 	"cvsunlocks",
@@ -124,19 +83,10 @@ else
 	include("scripts.iam.misc.warning")
 end
 
-
 FHAC:LoadScripts("scripts.choom", {
-    "customgrids"
+    "main"
 })
 
-FHAC:LoadScripts("scripts.choom.monsters", {
-    "harmoor"
-})
-
-FHAC:LoadScripts("scripts.TJP.monsters", {
-    "gobbo"
-})
-
-FHAC:LoadScripts("scripts.TJP.monsters", {
-    "sho"
+FHAC:LoadScripts("scripts.TJP", {
+    "main"
 })

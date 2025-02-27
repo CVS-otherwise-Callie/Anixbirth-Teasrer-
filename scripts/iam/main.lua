@@ -1,3 +1,46 @@
+--iam stuff
+FHAC:LoadScripts("scripts.iam.monsters", {
+	"fivehead",
+	"floater",
+	"neutralfly",
+	"patient",
+	"dried",
+	"erythorcyte",
+	"wost",
+	"schmoot",
+	"snidge",
+	"drosslet",
+	"pitpat",
+	"mushloom",
+	"pinprick",
+	"synthetichorf",
+	"gassedfly",
+	"fly_ve-bomber", --HAHAHAH FUCK YOU EUAN TOO
+	"pallun",
+	"sillystring",
+	"stickyfly",
+	"wispwosp",
+	"stuckpoot",
+	"rainmonger",
+	"zapperteller",
+	"techgrudge",
+	"log",
+	"stoner",
+	"lightpressureplatenullent",
+	"larrykingjr",
+	"bottom",
+	"sixhead",
+	"babble",
+	"toast",
+	"silly&stringtainted",
+	"dunglivery",
+	"cowpat",
+	"ulig",
+	"horfonastick",
+	"soot",
+	"jim"
+})
+
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 local mod = FHAC
 local rng = RNG()

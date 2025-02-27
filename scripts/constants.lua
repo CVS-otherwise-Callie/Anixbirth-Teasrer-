@@ -59,7 +59,8 @@ FHAC.Monsters = {
     HorfOnAStick = mod:ENT("Horf On A Stick"),
     Gobbo = mod:ENT("Gobbo"),
     Sho = mod:ENT("Sho"),
-    Soot = mod:ENT("Soot")
+    Soot = mod:ENT("Soot"),
+    Jim = mod:ENT("Jim")
 }
 
 FHAC.Players = {

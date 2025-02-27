@@ -1,5 +1,6 @@
 <data>
 
+<entity ID="37" Variant="100" Name="Jim" Image="mah boys/jim.png" BaseHP="10"/>
 <entity ID="161" Variant="1" Name="Toast" Image="mah boys/toast.png" BaseHP="14"/>
 <entity ID="161" Variant="2" Name="Larry King Jr." Image="mah boys/larrykingjr.png" BaseHP="10">
 <bitfield Key="Subtype">
@@ -247,6 +248,12 @@ Use 2, 4, or 6 normally.
 		<group Name="HOPE Ascent Enemies">
 			<entity Name="Tainted Silly"/>
 			<entity Name="Tainted String"/>
+		</group>
+	</group>
+
+	<group Name="HOPE Joke Content" Label="Joke Content">
+		<group Name="HOPE Joke Content Enemies">
+			<entity Name="Jim"/>
 		</group>
 	</group>
 </tab>
