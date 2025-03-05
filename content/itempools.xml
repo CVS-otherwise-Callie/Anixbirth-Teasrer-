@@ -9,6 +9,7 @@
 	</Pool>
 	<Pool Name="boss">
 		<Item Name="Big Ol' Bowl of Sauerkraut" Weight="1" DecreaseBy="1" RemoveOn="0.1"/>
+		<Item Name="Stinky Socks" Weight="1" DecreaseBy="1" RemoveOn="0.1"/>
 	</Pool>
 	<Pool Name="devil">
 	</Pool>

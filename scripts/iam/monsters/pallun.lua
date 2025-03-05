@@ -93,7 +93,7 @@ function mod:PallunAI(npc, sprite, d)
         d.p:GetData().myrand1 = Vector(math.random(-30, 30), math.random(-30, 30))
         d.p:GetData().shotmovement = FHAC.DSSavedata.pallunShot+1 or 2
         if npc:IsChampion() then
-            d.p.ProjectileFlags = ProjectileFlags.BOUNCE_FLOOR | ProjectileFlags.RED_CREEP
+            d.p.ProjectileFlags = ProjectileFlags.SHIELDED
         end
     end
 

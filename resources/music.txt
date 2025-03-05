@@ -99,7 +99,7 @@
 	<track id="96" name="Nightmare" path="JINGLE OGG/boss fight intro jingle_01.ogg" loop="false" />
 	<track id="97" name="Boss Death Alternate (jingle)" path="shhh piano builds go away/sfx/Alt Boss Defeat.ogg" loop="false" />
 	<track id="98" name="Boss Hush Death (jingle)" path="Afterbirth/Morituros (dead womb boss) outro.ogg" loop="false" />
-	<track id="100" name="Intro Voiceover" path="shhh piano builds go away/Cut-Outline.ogg" loop="false" />
+	<track id="100" name="Intro Voiceover" path="shhh piano builds go away/Outline Intro.ogg" loop="false" />
 	<track id="101" name="Epilogue Voiceover" path="Epilogue_01m.ogg" loop="false" />
 	<!-- REPENTANCE BEGIN -->
 	<track id="104" name="Downpour" intro="shhh piano builds go away/River Ether.ogg" path="shhh piano builds go away/River Ether.ogg" loop="true" />

@@ -30,6 +30,7 @@ function mod:DungliveryAI(npc, sprite, d)
         d.speed = 1
 
         npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_PLAYEROBJECTS
+        npc.GridCollisionClass = GridCollisionClass.COLLISION_WALL
 
         d.init = true
     else
@@ -58,7 +59,7 @@ function mod:DungliveryAI(npc, sprite, d)
 
         targetpos = d.ent.Position
 
-        if npc.Position:Distance(d.ent.Position) < 2 then
+        if npc.Position:Distance(d.ent.Position) < 10 then
             mod:spritePlay(sprite, "GoDown")
             npc.Position = d.ent.Position
         else
@@ -79,10 +80,10 @@ function mod:DungliveryAI(npc, sprite, d)
 
         npc:MultiplyFriction(0.95)
 
-        local targetvelocity = (targetpos - npc.Position)
-        npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 0.00175)
+        local targetvelocity = (targetpos - npc.Position):Resized(100)
+        npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 0.0075)
 
-        if math.abs(math.abs(npc.Velocity:GetAngleDegrees()) - math.abs((targetpos - npc.Position):GetAngleDegrees())) < 30 and npc.Velocity:Length() > 5 then
+        if math.abs(math.abs(npc.Velocity:GetAngleDegrees()) - math.abs((targetpos - npc.Position):GetAngleDegrees())) < 20 and npc.Velocity:Length() > 5 then
             mod:spritePlay(sprite, "Sling")
             npc.StateFrame = 0
         end
@@ -103,7 +104,7 @@ function mod:DungliveryAI(npc, sprite, d)
         npc:MultiplyFriction(0.9)
 
         if npc.StateFrame > 30 then
-            d.ent = GetSmallEnt()
+            d.ent = GetSmallEnt():ToNPC()
             if d.ent and not d.ent.Type == 1 then d.ent:GetData().DungliveryParent = npc end
         end
     end
@@ -130,13 +131,16 @@ function mod:DungliveryAI(npc, sprite, d)
     if sprite:IsEventTriggered("Pickup") and not d.ent:GetData().isbeingPickedUpByDunglivery then
 
         d.ent:GetData().oldGridColl = d.ent.GridCollisionClass
+        d.ent:GetData().oldEntColl = d.ent:ToNPC().EntityCollisionClass
         d.ent.GridCollisionClass = npc.GridCollisionClass
+        d.ent.EntityCollisionClass = npc.EntityCollisionClass
         d.ent:GetData().isbeingPickedUpByDunglivery = true
 
     elseif sprite:IsEventTriggered("Launch") then
 
         d.ent.GridCollisionClass = d.ent:GetData().oldGridColl
-        d.ent.Velocity = npc.Velocity + (targetpos - npc.Position):Normalized() * 10
+        d.ent.EntityCollisionClass = d.ent:GetData().oldEntColl
+        d.ent.Velocity = npc.Velocity + (targetpos - npc.Position):Normalized() * 20
         d.ent:GetData().isbeingPickedUpByDunglivery = false
         d.ent = nil
 

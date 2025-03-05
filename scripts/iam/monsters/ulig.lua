@@ -62,7 +62,7 @@ function mod:UligAI(npc, sprite, d)
 
     elseif d.state == "chase" then
 
-        if npc.StateFrame%30 == 0 then
+        if npc.StateFrame%90 == 0 then
             npc:PlaySound(SoundEffect.SOUND_ZOMBIE_WALKER_KID,1,0,false,1)
         end
 
@@ -144,7 +144,7 @@ function mod:UligAI(npc, sprite, d)
         npc.StateFrame = 0
         d.state = "chase"
     elseif sprite:IsFinished("Disappear") then
-        npc.Position = mod:freeGrid(npc, true, 300, 0)
+        npc.Position = mod:freeGrid(npc, false, 300, 0)
         mod:spritePlay(sprite, "Appear")
         d.state = "shoot"
     elseif sprite:IsFinished("SpawnEntity") and d.state ~= "hiding" then

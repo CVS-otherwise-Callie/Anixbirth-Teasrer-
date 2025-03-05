@@ -28,6 +28,16 @@ FHAC.AltHomeTrapDoorUnlock = StageAPI.CustomGrid("FHACAltHomeTrapDoorUnlock", {
     SpawnerEntity = {Type = FHAC.Grids.GlobalGridSpawner.ID, Variant = 2901}
 })
 
+FHAC.BreakablePot = StageAPI.CustomGrid("FHACBreakablePot", {
+    BaseType = GridEntityType.GRID_STAIRS,
+    BaseVariant = 1,
+    Anm2 = "gfx/grid/breakablepot.anm2",
+    Animation = "pot1",
+    RemoveOnAnm2Change = true,
+    OverrideGridSpawns = true,
+    SpawnerEntity = {Type = FHAC.Grids.GlobalGridSpawner.ID, Variant = 2902}
+})
+
 function mod.lightpressurePlateAI(customGrid)
     local grid = customGrid.GridEntity
     local sprite = grid:GetSprite()

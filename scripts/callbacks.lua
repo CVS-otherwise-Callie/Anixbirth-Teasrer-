@@ -118,6 +118,7 @@ end)
 function FHAC:PostPlayerUpdate(player)
     FHAC:PostUpdateRemoveTempItems(player)
     FHAC:MysteryMilkRoomInit(player)
+    FHAC:StinkySocksPoisonCloud(player)
 end
 FHAC:AddCallback(ModCallbacks.MC_POST_PLAYER_UPDATE, FHAC.PostPlayerUpdate)
 
@@ -153,6 +154,7 @@ FHAC:AddCallback(ModCallbacks.MC_EVALUATE_CACHE,function(_, player, flag)
     elseif flag == CacheFlag.CACHE_SHOTSPEED then
     elseif flag == CacheFlag.CACHE_RANGE then
     elseif flag == CacheFlag.CACHE_SPEED then
+        FHAC:AddStinkySocksSpeed(player)
     elseif flag == CacheFlag.CACHE_TEARFLAG then
     elseif flag == CacheFlag.CACHE_TEARCOLOR then
     elseif flag == CacheFlag.CACHE_FLYING then

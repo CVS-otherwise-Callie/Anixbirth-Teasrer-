@@ -41,6 +41,7 @@ Up to groups of 3.
 </entity>
 <entity ID="161" Variant="21" Name="Neutral Fly" Image="mah boys/neutralfly.png" BaseHP="15" Tags="Champion"/>
 <entity ID="161" Variant="26" Name="Gobbo" Image="mah boys/gobbo.png" BaseHP="11"/>
+<entity ID="161" Variant="27" Name="Sho" Image="mah boys/sho.png" BaseHP="11"/>
 <entity ID="161" Variant="30" Name="Stoner" Image="mah boys/stoner.png" BaseHP="n/a"/>
 <entity ID="161" Variant="36" Name="Silly" Image="mah boys/silly.png" BaseHP="10" Tags="Champion">
    <bitfield Key="Subtype">
@@ -90,11 +91,11 @@ Don't be evil please.
 </entity>
 <entity ID="161" Variant="169" Subtype = "0" Name="Drosslet" Image="mah boys/drosslet.png" BaseHP="10" Tags="Champion"/>
 <entity ID="161" Variant="177" Subtype = "0" Name="Gassed Fly" Image="mah boys/gassedfly.png" BaseHP="8" Tags="Champion"/>
-<entity ID="161" Variant="189" Name="Synthetic Horf" Image="mah boys/synthetichorf.png" BaseHP="25" Tags="Champion"/>
+<entity ID="161" Variant="189" Name="Synthetic Horf" Image="mah boys/synthetichorf.png" BaseHP="13" Tags="Champion"/>
 <entity ID="161" Variant="202" Name="Pallun" Image="mah boys/pallun.png" BaseHP="13" Tags="Champion"/>
 <entity ID="161" Variant="203" Name="Ulig" Image="mah boys/ulig.png" BaseHP="18" StageHP="1" Tags="Champion"/>
-<entity ID="161" Variant="210" Name="Sixhead" Image="mah boys/sixhead.png" BaseHP="15" StageHP="4" Tags="Champion"/>
-<entity ID="161" Variant="212" Name="Bottom" Image="mah boys/bottom.png" BaseHP="15" StageHP="4" Tags="Champion"/>
+<entity ID="161" Variant="210" Name="Sixhead" Image="mah boys/sixhead.png" BaseHP="15" StageHP="2" Tags="Champion"/>
+<entity ID="161" Variant="212" Name="Bottom" Image="mah boys/bottom.png" BaseHP="15" StageHP="1" Tags="Champion"/>
 <entity ID="161" Variant="224" Subtype = "0" Name="Mush Loom" Image="mah boys/mushloom.png" BaseHP="10" StageHP="2" Tags="Champion">
 <bitfield Key="Subtype">
         <spinner Length="16" ValueOffset="2" Name="Time Wait">
@@ -163,7 +164,6 @@ Use 2, 4, or 6 normally.
 		    <entity Name="Horf On A Stick"/>
 			<entity Name="Log"/>
 			<entity Name="Neutral Fly"/>
-			<entity Name="Gobbo"/>
 		</group>
 	</group>
 
@@ -207,6 +207,7 @@ Use 2, 4, or 6 normally.
 
 	<group Name="HOPE Chapter 2 Enemies" Label="Chapter 2 Shared">
 		<group Name="HOPE Chapter 2 Shared Enemies">
+			<entity Name="Gobbo"/>
 			<entity Name = "Bottom"/>
 		</group>
 	</group>
@@ -214,6 +215,7 @@ Use 2, 4, or 6 normally.
 	<group Name="HOPE Caves" Label="Caves">
 		<group Name="HOPE Caves Enemies">
 			<entity Name="Synthetic Horf"/>
+			<entity Name="Sho"/>
 			<entity Name="Pallun"/>
 			<entity Name="Ulig"/>
 			<entity Name = "Sixhead"/>

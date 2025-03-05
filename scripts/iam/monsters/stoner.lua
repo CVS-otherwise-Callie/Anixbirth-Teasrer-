@@ -15,10 +15,10 @@ mod.OldStonerDirs = { --this shit is FUCKED!
 }
 
 mod.StonerDirs = { --this shit is FUCKED!
+    {180, 135, -135},
     {-90, -135, -45},
     {1, -45, 45},
     {90, 45, 135},
-    {180, 135, -135},
 }
 
 

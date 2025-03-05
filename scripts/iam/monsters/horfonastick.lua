@@ -42,7 +42,7 @@ function mod:HorfOnAStickAI(npc, sprite, d)
         npc:AddEntityFlags(EntityFlag.FLAG_NO_PHYSICS_KNOCKBACK | EntityFlag.FLAG_NO_KNOCKBACK)
         npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_PLAYEROBJECTS
         d.over = math.random(-10, 10)
-        d.InitSeed = npc.InitSeed
+        d.InitSeed = math.random(1000000, 2000000)
         d.state = "idle"
         npc.StateFrame = 89 + d.over
         d.init = true
