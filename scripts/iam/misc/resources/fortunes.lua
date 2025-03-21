@@ -1,5 +1,211 @@
 FHAC.Fortunes = 
 [=================[
+
+one new fortune
+for the emerald city
+
+look to the future
+cus you'll trip in
+the past!
+
+antibirth lovers?
+
+youuuuuur mom
+
+this isn't a fortune
+this is democracy!
+
+she's been such
+a horrible person
+
+that i can't even
+begin to describe
+
+that's true-
+Cal, what's rape?
+
+fuck that music!
+new age nevermoreeee!
+
+this fortune is on
+line 31 of the doc
+at this period
+
+i can hear
+the v o i c e s
+
+where the heck
+is the quote bank
+
+this isn't even
+code, goddamit!
+
+you're just being
+a asshole! which is
+a hole of asses
+
+(if you didn't know)
+
+they don't allow
+mandarin in these
+stupid fortunes?
+
+check it!
+the language is
+...swahilian?
+
+so that's why we
+are lost; that is
+a fucking clock!
+
+pear.
+
+get the pear.
+
+brian griffin,
+get the pear.
+
+what would happen
+if all of fiend folio's
+code were fortunes?
+
+june, contribute to
+fiend folio more often!
+
+i haven't showered
+IN A YEAR!!
+
+stop making your charts...
+
+start getting these parts...
+
+click the uh
+click the bart!
+
+the simpsons tell
+of many past glories
+
+that stupid
+whatchamacallit clown
+
+barney's cap was
+3 years ago now
+
+i suddenly feel
+lkie watching the simpsons...
+
+this is lewis; this is clark
+
+this is lewis clark; but we're 
+not talking about him today!
+
+this is the history
+of sideshow cob
+
+richard, what do
+you have under
+that banana?
+
+i don't even remember writing
+
+imagine being dyslexic
+
+being dyslexic imagine
+
+dyslexic being imagine
+
+so much effort put
+into the work!
+
+i'm so proud
+of your efforts
+
+isaac just fucking
+get dead god already
+
+playing online with
+anixbirth? really?
+
+play missing sound
+effects mod
+
+play annex (promo teaser)
+
+wow the annex theme
+is kinda bullshit
+
+hellio is back
+on track ad in tract
+
+140 lines
+of just fortunes...
+
+get a life bro...
+
+WHAT DO YOU MEAN
+BINEAS AND LERB
+
+i watched it during
+my childhood,
+didn't you???
+
+...NO????
+
+evan is calling
+me supa gay!
+
+isaac stop playing
+bike racing game
+do something important
+
+brian shut the fuck up
+really? really? really?
+
+brian be like
+"oOOoOoh YEAH???
+REEEAAALLLY?"
+
+like dude
+shut the fuck up
+
+yu're not even funny
+stop trying little bro
+
+do your goddamn history
+paper oh my god
+
+randy had a month
+and it still isn't done
+
+what the randy!
+
+what the isaac!
+
+isaac stop looking
+up different ribosomes
+
+and do something
+important with your life
+
+take tha stupid
+mask off rn
+
+HOP ON!
+BRAWL IS WAITING!
+
+no dude
+that's cringe!
+
+i want to look
+as cool as fiend...
+
+play as retribution!
+
+truly a have-not...
+
+despite your popularity,
+you got.... no votes.
+
 hey have you
 seen my ass?
 the horse, dumba-
