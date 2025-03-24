@@ -12,7 +12,11 @@ function mod:WoodheadAI(npc, sprite, d)
 
     if not d.init then
         sprite:PlayOverlay("Head")
+        d.wait = math.random(-5, 5)
+        d.newpos = mod:freeGrid(npc, true, 400, 0)
         d.init = true
+    else
+        npc.StateFrame = npc.StateFrame + 1
     end
 
     local target = npc:GetPlayerTarget()
@@ -54,10 +58,22 @@ function mod:WoodheadAI(npc, sprite, d)
             path:FindGridPath(targetpos, -0.85, 1, true)
         end
     else
-        npc.Velocity = npc.Velocity + npc.Velocity:Normalized() * 1.05
-        path:MoveRandomly(false)
+        if npc.Position:Distance(d.newpos) < 20 then
+            d.wait = 0
+            d.newpos = mod:freeGrid(npc, true, 400, 0)
+            npc.StateFrame = 0
+        elseif npc.StateFrame > 25 + d.wait then
+            if mod:isScare(npc) then
+                local targetvelocity = (d.newpos - npc.Position):Resized(-7)
+                npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 0.2)
+            elseif room:CheckLine(npc.Position,d.newpos,0,1,false,false) then
+                local targetvelocity = (d.newpos - npc.Position):Resized(7)
+                npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 0.2)
+            else
+                path:FindGridPath(d.newpos, 0.7, 1, true)
+            end
+        end
     end
-    npc:MultiplyFriction(0.8)
 
     path:EvadeTarget(targetpos)
 
@@ -69,5 +85,35 @@ function mod:WoodheadAI(npc, sprite, d)
         sprite:SetFrame("WalkHori", 0)
     end
 
+    local projtype = 0
+    if npc:IsDead() then
+        for i = 1, math.random(5, 7) do
+            local realshot = Isaac.Spawn(9, projtype, 0, npc.Position, Vector(10, 0):Rotated((targetpos - npc.Position):GetAngleDegrees() + math.random(1, 5)*(i-1)*10), npc):ToProjectile()
+            realshot.FallingAccel = 0.01
+            realshot.FallingSpeed = 0.1
+            realshot:GetData().type = "woodhead"
+            realshot:GetData().hat = d.name
+        end
+    end
+
+end
+
+function mod.WoodheadShots(v, d)
+    if d.type == "woodhead" then
+        v.SpriteRotation = v.Velocity:GetAngleDegrees()
+        local psprite = v:GetSprite()
+        psprite:ReplaceSpritesheet(0, "gfx/projectiles/woodplanklegacy_projectile.png")
+        psprite:LoadGraphics()
+
+        v.Height = -20
+
+        if v:IsDead() then
+            local ef = Isaac.Spawn(1000, EffectVariant.WOOD_PARTICLE, 0, v.Position, Vector.Zero, v):ToEffect()
+            ef:GetData().type = "temp"
+            v:Remove()  
+        end
+
+
+    end
 end
 

@@ -69,6 +69,7 @@ function FHAC:ProjStuff(v)
     FHAC:PatientShots(v, d)
     FHAC:SixheadShot(v, d)
     FHAC.andShot(v, d)
+    FHAC.WoodheadShots(v, d)
 end
 FHAC:AddCallback(ModCallbacks.MC_POST_PROJECTILE_UPDATE, FHAC.ProjStuff)
 
