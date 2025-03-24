@@ -1,5 +1,678 @@
 FHAC.Fortunes = 
 [=================[
+
+one new fortune
+for the emerald city
+
+look to the future
+cus you'll trip in
+the past!
+
+antibirth lovers?
+
+youuuuuur mom
+
+this isn't a fortune
+this is democracy!
+
+she's been such
+a horrible person
+
+that i can't even
+begin to describe
+
+that's true-
+Cal, what's rape?
+
+fuck that music!
+new age nevermoreeee!
+
+this fortune is on
+line 31 of the doc
+at this period
+
+i can hear
+the v o i c e s
+
+where the heck
+is the quote bank
+
+this isn't even
+code, goddamit!
+
+you're just being
+a asshole! which is
+a hole of asses
+
+(if you didn't know)
+
+they don't allow
+mandarin in these
+stupid fortunes?
+
+check it!
+the language is
+...swahilian?
+
+so that's why we
+are lost; that is
+a fucking clock!
+
+pear.
+
+get the pear.
+
+brian griffin,
+get the pear.
+
+what would happen
+if all of fiend folio's
+code were fortunes?
+
+june, contribute to
+fiend folio more often!
+
+i haven't showered
+IN A YEAR!!
+
+stop making your charts...
+
+start getting these parts...
+
+click the uh
+click the bart!
+
+the simpsons tell
+of many past glories
+
+that stupid
+whatchamacallit clown
+
+barney's cap was
+3 years ago now
+
+i suddenly feel
+lkie watching the simpsons...
+
+this is lewis; this is clark
+
+this is lewis clark; but we're 
+not talking about him today!
+
+this is the history
+of sideshow cob
+
+richard, what do
+you have under
+that banana?
+
+i don't even remember writing
+
+imagine being dyslexic
+
+being dyslexic imagine
+
+dyslexic being imagine
+
+so much effort put
+into the work!
+
+i'm so proud
+of your efforts
+
+isaac just fucking
+get dead god already
+
+playing online with
+anixbirth? really?
+
+play missing sound
+effects mod
+
+play annex (promo teaser)
+
+wow the annex theme
+is kinda bullshit
+
+hellio is back
+on track ad in tract
+
+140 lines
+of just fortunes...
+
+get a life bro...
+
+WHAT DO YOU MEAN
+BINEAS AND LERB
+
+i watched it during
+my childhood,
+didn't you???
+
+...NO????
+
+evan is calling
+me supa gay!
+
+isaac stop playing
+bike racing game
+do something important
+
+brian shut the fuck up
+really? really? really?
+
+brian be like
+"oOOoOoh YEAH???
+REEEAAALLLY?"
+
+like dude
+shut the fuck up
+
+yu're not even funny
+stop trying little bro
+
+do your goddamn history
+paper oh my god
+
+randy had a month
+and it still isn't done
+
+what the randy!
+
+what the isaac!
+
+isaac stop looking
+up different ribosomes
+
+and do something
+important with your life
+
+take tha stupid
+mask off rn
+
+HOP ON!
+BRAWL IS WAITING!
+
+no dude
+that's cringe!
+
+i want to look
+as cool as fiend...
+
+play as retribution!
+
+truly a have-not...
+
+despite your popularity,
+you got.... no votes.
+
+hey have you
+seen my ass?
+the horse, dumba-
+
+now i know
+why your parents won’t
+let you play Isaac
+
+this car ride
+sucks! bring me home!
+
+i am piss
+
+i am pee
+
+i will take
+your virginity
+
+wait, you actually
+somehow made it
+rhyme really well…
+
+dagggg
+NABBIT
+
+PRRREEEESENTING
+THE ARID. AND GLOOMY.
+FLAAAATTTTTSSSS!
+
+y’all should go
+back into the
+meat grinder
+
+yeah i see you
+reading me
+you pervert!!
+
+periculum has the
+best lyrics!
+
+nave has the
+best lyrics!
+
+20 minutes
+of JUST silence
+
+gloomy blight
+and anguished ruins
+
+wow your code
+really does suck
+
+did i tell you
+to eat cake,
+or not eat cake?
+
+this assignment
+is boring! onto
+the next one!
+
+there’s a invisible
+horf to your left
+
+some words take
+up too much space
+
+MAKE MY DESK
+LEBRON SHAPED
+
+error: terminated
+program. reason:
+ass code
+
+whar if i told you
+very secretly that
+these are from babel!
+
+put your hands in the air
+where i can see them
+
+only problem is
+i’m bilnd so…
+
+jackie you never
+responded, why do
+you need orange juice?
+
+stomp just keeps
+stomping all over
+
+jackie?
+…JACKIE!!
+
+hot model U.N. students:
+
+haha imagine
+dyselxic people:
+imagha ineha
+
+have you done your homework?
+oh wait your dyslexic
+homework your done done you have you home done work?
+
+grrrrrrrr!
+that made her
+another lesbian!
+
+we are just
+cogs in the machine
+
+so i was
+a little autsitic…
+
+yeah no shit
+sherlock the
+pisser
+
+im dyslexic
+but not dumb!
+
+im dumb
+but not dyslexic!
+
+you’re wasting
+your time on
+insignificant things
+
+FUCK. EVERYONE.
+IN. THE. ROOM.
+
+minceraft is the
+best game ever!
+
+beware the missingo
+
+i lost to
+the button turtle
+(who blew up)
+
+mark, top or bottom?
+
+NONE CVS SHUT UP
+
+ok so now
+it is time
+to write a conversation
+
+down below
+
+(sorry i forgot
+that in the
+last comment!)
+
+can you even
+high-five the wall?
+
+euan ur losing
+ur so slow
+
+it’s not a opal-
+micheal brought it
+to me!
+
+my job is both
+challenging and
+very stressful!
+
+just like
+go left the up
+are you dumb?
+
+did you know that
+1/100 americans are gay?
+200,000 children died this year
+
+if you’re reading this
+you're going to
+the IRS this year
+
+fun fact:
+France…?
+
+decandent cholocate
+best candy
+
+you have to be
+a member to shop
+here, frank
+
+but… but…
+we’re a nonprofit!
+
+oh my god
+this is so cute
+
+im making
+37,000 a month
+
+and yet
+im blind
+
+I Made Chess 2.0
+
+i just got
+Murderated
+
+i will now
+read every single
+system from tboi
+
+NAAAHHH
+WE’RE OUT OF
+APPLE FRITTERS
+
+a bit is
+too much eh?
+
+larry jrs sing
+in a cappella
+
+their a capriccio
+in singing “not like us”
+made me go wild!
+
+you’re such
+a freaking drag
+
+which they started
+to do a due!
+
+kerkel is such
+a far cry from me
+
+only more to
+a fortiori of
+doing that…
+
+are you a
+gooner or
+a goner?
+
+thats a
+good deal better
+than yesterday
+
+hard work is the key that
+unlocks the door to success
+
+the more doors that close
+the more opportunities will arise
+
+wolfi! oh, wolfi…
+
+hop on brawl
+RIGHT. NOW.
+
+wealth will increase
+in determination
+
+clear more rooms
+to get more pickups
+
+may the lord guide you
+in every step you take
+
+you will find the ladder
+to go up and up and up
+
+the sun shines on the holy
+
+the moon shines on the wicked
+
+rinse and repeat
+to climb infinitely
+
+i have your dog
+under wraps
+
+your associates consider you
+a amazing person
+and great friend
+
+this ladder…
+this ladder moves!
+
+so anyway he
+burst into my
+room and grabbed…
+
+i was getting
+a lot of
+ADD-itude
+
+hey man, i
+was just being
+sarcastic!
+
+rolling around the sidewalk
+screaming and bleeding
+
+roundabout way of
+saying it but…
+I. HATE. SAUERKRAUT.
+
+but he grabbed
+my esophagus!
+
+just dial your
+operator
+
+in…
+ALLLL-
+BUQUERQUE
+
+wait a minute
+i’ll go check
+
+well, what do you have?
+
+oh man…
+they were just
+going nuts!
+
+GET THEM OFF
+AAWWGHHH
+GET THEM OFFF
+
+running running running
+like a constipated
+weiner dog
+
+thats when i
+knew it was
+true love
+
+yeaaah…
+what do you want
+
+nahhhhhh
+we’re out of
+puverian cream donuts
+
+Xiodini jamei 
+-alexses butchered
+Chinese
+
+let us
+circumambulate
+around the fire
+
+the eleemosynary
+are the blessed in
+many fortunes
+
+you’ve been in
+my head all day; might 
+as well give you some
+
+i haven’t made
+a fortune in
+over a day
+
+i haven't made a
+fortune in over
+a month
+
+i havent made a
+fortune in over
+a fucking year!!!
+
+Ok Curley, 
+blink twice if 
+you want to be alive
+
+hey conboi
+no swearing
+
+the poopy
+mountain reference
+
+that's…
+wayy to many
+fortunes
+
+Pneumonoultramicroscopicsilicovolcaniosis
+…
+no way that’s right
+
+42
+
+i am the mailman
+i deliver mail
+this is the perfect town
+
+i am the plumber
+plumb plumb plumb
+this is the perfect town
+
+i am the neighbor
+neighboring around
+this is the perfect town
+
+nothing bad ever happens
+in our perfect town
+this is the perfect town
+
+i just came from denver
+I’m a sex offender
+this is the perfect town
+
+i am the teacher
+teachering about
+this is the perfect town
+
+i am the pastor
+catholic devout
+this is the perfect town
+
+i wont 
+touch your children
+thats without a doubt
+
+bro is pulling
+combo after combo
+
+you will spend
+your inheritance
+very quickly
+
+heh ha
+ha ha ha ha
+
+why does wolfi try
+saying “wwwww”
+so much
+
+hhhhhh
+wwwwww
+kkkkk
+
+i’m gonna beat you
+olina, because im soooo
+good at this game
+
+I’m selecting…
+monsters…
+
+that stupid…
+stupid BITCHHH
+
+fix it mark.
+FIX IT!
+
+i cant wait to
+fight fart monkey
+
+shoot it.
+put it down.
+with a gun.
+
+i wonder
+what it is…
+
+i must find a way
+to stop r*zzmas from coming!
+-gronch
+
 queen NEVER cry
 
 we could just
