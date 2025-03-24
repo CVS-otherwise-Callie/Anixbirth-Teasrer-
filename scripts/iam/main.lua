@@ -39,7 +39,8 @@ FHAC:LoadScripts("scripts.iam.monsters", {
 	"horfonastick",
 	"soot",
 	"jim",
-	"narcissism mirror"
+	"narcissism mirror",
+	"woodhead"
 })
 
 FHAC:LoadScripts("scripts.iam.minibosses", {
@@ -80,7 +81,8 @@ FHAC:LoadScripts("scripts.iam.items.passives", {
 })
 
 FHAC:LoadScripts("scripts.iam.items.pickups" , {
-	"bowl of sauerkraut"
+	"bowl of sauerkraut",
+	"birthday slice"
 })
 
 FHAC:LoadScripts("scripts.iam.jokes", {

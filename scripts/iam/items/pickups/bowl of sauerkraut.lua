@@ -5,7 +5,7 @@ local ms = MusicManager()
 
 mod:AddCallback(ModCallbacks.MC_POST_PICKUP_UPDATE, function(_, pickup)
     mod:BowlOfSauerkrautAI(pickup, pickup:GetSprite(), pickup:GetData())
-end, mod.Collectibles.Pickups.BowlOfSauerkraut.Var)
+end, mod.Collectibles.PickupsEnt.BowlOfSauerkraut.Var)
 
 mod:AddCallback(ModCallbacks.MC_PRE_PICKUP_COLLISION, function(_, pickup, collider)
     if collider.Type == 1 and collider.Variant == 0 then
@@ -15,11 +15,11 @@ mod:AddCallback(ModCallbacks.MC_PRE_PICKUP_COLLISION, function(_, pickup, collid
     else
         return true
     end
-end, mod.Collectibles.Pickups.BowlOfSauerkraut.Var)
+end, mod.Collectibles.PickupsEnt.BowlOfSauerkraut.Var)
 
 function mod:BowlOfSauerkrautAI(p, sprite, d)
     if not d.inut then
-        sprite:ReplaceSpritesheet(0, "gfx/items/pick ups/sauerkraut_pickups" .. math.random(2) .. ".png")
+        sprite:ReplaceSpritesheet(0, "gfx/items/pick ups/sauerkraut_PickupsEnt" .. math.random(2) .. ".png")
         sprite:LoadGraphics()
         sprite:Update()
         d.inut = true

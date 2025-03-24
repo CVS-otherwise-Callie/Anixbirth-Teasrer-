@@ -61,7 +61,8 @@ FHAC.Monsters = {
     Sho = mod:ENT("Sho"),
     Soot = mod:ENT("Soot"),
     Jim = mod:ENT("Jim"),
-    NarcissismMirror = mod:ENT("Narcissism Mirror")
+    NarcissismMirror = mod:ENT("Narcissism Mirror"),
+    Woodhead = mod:ENT("Woodhead")
 }
 
 FHAC.MiniBosses = {
@@ -121,8 +122,12 @@ FHAC.Collectibles = {
         MarketablePlushie = Isaac.GetItemIdByName("Marketable Plushie"),
         StinkySocks = Isaac.GetItemIdByName("Stinky Socks")
     },
+    PickupsEnt = {
+        BowlOfSauerkraut = mod:ENT("Bowl of Sauerkraut"),
+        BirthdaySlice = mod:ENT("Birthday Slice")
+    },
     Pickups = {
-        BowlOfSauerkraut = mod:ENT("Bowl of Sauerkraut")
+        BirthdaySlice = Isaac.GetCardIdByName("Birthday Slice")
     },
     Trinkets = {
         MysteryMilk = Isaac.GetTrinketIdByName("Mystery Milk")

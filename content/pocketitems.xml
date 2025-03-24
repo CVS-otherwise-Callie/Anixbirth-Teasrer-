@@ -1,0 +1,6 @@
+<pocketitems>
+
+	<card type="object" name="Birthday Slice" description="Only once a year!" hud="Birthday Slice Ace" pickup="451"/>
+	<card type="object" name="Birthday Slice" description="Only once a year!" hud="Birthday Slice JuliO" pickup="452"/>
+
+</pocketitems>

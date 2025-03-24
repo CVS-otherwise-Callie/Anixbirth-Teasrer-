@@ -594,6 +594,7 @@ function mod.andShot(p, d)
     if d.type == "andSymbol" and p:IsDead() then
         local creep = Isaac.Spawn(1000, 22,  0, game:GetRoom():GetClampedPosition(p.Position, 15), Vector(0, 0), p):ToEffect()
         creep.Scale = creep.Scale * 0.5
+        creep:Update()
     end
 end
 
