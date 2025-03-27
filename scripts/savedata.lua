@@ -1,15 +1,15 @@
 
-SaveManager  = include("scripts.save_manager")
+AnixbirthSaveManager  = include("scripts.save_manager")
 
-SaveManager.Utility.AddDefaultRunData(SaveManager.DefaultSaveKeys.PLAYER, {anixbirthsaveData = {}})
-SaveManager.Utility.AddDefaultRoomData(SaveManager.DefaultSaveKeys.PLAYER, {anixbirthsaveData = {}})
---SaveManager.Utility.AddDefaultRunData(SaveManager.DefaultSaveKeys.GLOBAL, {PreSavedEntsLevel = {}, SavedEntsLevel = {}, ToBeSavedEnts = {}})
+AnixbirthSaveManager.Utility.AddDefaultRunData(AnixbirthSaveManager.DefaultSaveKeys.PLAYER, {anixbirthsaveData = {}})
+AnixbirthSaveManager.Utility.AddDefaultRoomData(AnixbirthSaveManager.DefaultSaveKeys.PLAYER, {anixbirthsaveData = {}})
+--AnixbirthSaveManager.Utility.AddDefaultRunData(AnixbirthSaveManager.DefaultSaveKeys.GLOBAL, {PreSavedEntsLevel = {}, SavedEntsLevel = {}, ToBeSavedEnts = {}})
 
-SaveManager.Init(FHAC)
-FHAC.SaveManager = SaveManager
+AnixbirthSaveManager.Init(FHAC)
+FHAC.AnixbirthSaveManager = AnixbirthSaveManager
 
-SaveManager.AddCallback(SaveManager.Utility.CustomCallback.POST_DATA_LOAD, function()
-        FHAC.DSSavedata = SaveManager.GetSettingsSave()
+AnixbirthSaveManager.AddCallback(AnixbirthSaveManager.Utility.CustomCallback.POST_DATA_LOAD, function()
+        FHAC.DSSavedata = AnixbirthSaveManager.GetSettingsSave()
         FHAC.DSSavedata.monsterReplacements = FHAC.DSSavedata.monsterReplacements or 2
         FHAC.DSSavedata.customFortunes = FHAC.DSSavedata.customFortunes or 1
         FHAC.DSSavedata.fortuneDeathChance = FHAC.DSSavedata.fortuneDeathChance or 3

@@ -8,7 +8,7 @@ mod:AddCallback(ModCallbacks.MC_USE_CARD, function(_, cardID, player, useflags)
     print(cardID)
 
     if cardID == 98 then
-        local dat = SaveManager.GetRunSave(player).anixbirthsaveData
+        local dat = AnixbirthSaveManager.GetRunSave(player).anixbirthsaveData
         dat.aceCakePickup = dat.aceCakePickup or 1
         dat.aceCakePickup = dat.aceCakePickup + 1
 
@@ -20,7 +20,7 @@ end, mod.Collectibles.Pickups.BirthdaySlice)
 
 mod:AddCallback(ModCallbacks.MC_EVALUATE_CACHE,function(_, player, flag)
 
-    local dat = SaveManager.GetRunSave(player).anixbirthsaveData
+    local dat = AnixbirthSaveManager.GetRunSave(player).anixbirthsaveData
 
     if dat.aceCakePickup and dat.aceCakePickup > 0 and dat.aceCakePickup ~= dat.aceCakePickupOld then
         player.Damage = player.Damage + (1 * dat.aceCakePickup)

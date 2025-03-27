@@ -64,11 +64,9 @@ function mod:WoodheadAI(npc, sprite, d)
             npc.StateFrame = 0
         elseif npc.StateFrame > 25 + d.wait then
             if mod:isScare(npc) then
-                local targetvelocity = (d.newpos - npc.Position):Resized(-7)
-                npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 0.2)
+                npc.Velocity = mod:Lerp(npc.Velocity, Vector(-7, 0):Rotated((d.newpos - npc.Position):GetAngleDegrees()), 0.2)
             elseif room:CheckLine(npc.Position,d.newpos,0,1,false,false) then
-                local targetvelocity = (d.newpos - npc.Position):Resized(7)
-                npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 0.2)
+                npc.Velocity = mod:Lerp(npc.Velocity, Vector(7, 0):Rotated((d.newpos - npc.Position):GetAngleDegrees()), 0.2)
             else
                 path:FindGridPath(d.newpos, 0.7, 1, true)
             end
@@ -86,13 +84,13 @@ function mod:WoodheadAI(npc, sprite, d)
     end
 
     local projtype = 0
+
     if npc:IsDead() then
         for i = 1, math.random(5, 7) do
-            local realshot = Isaac.Spawn(9, projtype, 0, npc.Position, Vector(10, 0):Rotated((targetpos - npc.Position):GetAngleDegrees() + math.random(1, 5)*(i-1)*10), npc):ToProjectile()
+            local realshot = Isaac.Spawn(9, projtype, 0, npc.Position, Vector(10, 0):Rotated((targetpos - npc.Position):GetAngleDegrees() + math.random(1, 5)*(i-0.7)*10), npc):ToProjectile()
             realshot.FallingAccel = 0.01
             realshot.FallingSpeed = 0.1
             realshot:GetData().type = "woodhead"
-            realshot:GetData().hat = d.name
         end
     end
 

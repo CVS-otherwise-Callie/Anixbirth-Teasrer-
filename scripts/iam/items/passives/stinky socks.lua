@@ -11,7 +11,7 @@ function mod:StinkySocksPoisonCloud(player)
 
     if player:HasCollectible(mod.Collectibles.Items.StinkySocks) then
 
-        local d = SaveManager.GetRunSave(player).anixbirthsaveData
+        local d = AnixbirthSaveManager.GetRunSave(player).anixbirthsaveData
         local size = 100
         local damage = 0.3
         local time = 10

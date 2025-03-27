@@ -30,20 +30,28 @@ function mod:NarcissismMirrorAI(npc, sprite, d)
     end
 
     if npc:CollidesWithGrid() then
-        d.state = "broken"
-        sprite.Rotation = 0
+        npc:Remove()
+
         if npc.Parent:GetData().personalMirror.Position:Distance(npc.Position)  == 0 then
             npc.Parent:GetData().personalMirror = nil
         end
-        npc:MultiplyFriction(0)
+
+        for i = 1, 8 do
+            local realshot = Isaac.Spawn(9, 0, 0, npc.Position, Vector(10, 0):Rotated(45*i), npc):ToProjectile()
+            local psprite = realshot:GetSprite()
+            psprite:ReplaceSpritesheet(0, "gfx/projectiles/mirror shard.png")
+            psprite.Rotation = 45*i
+            psprite:LoadGraphics()
+        end
     end
 
 end
 
 mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, function(_, npc, damage, flag, source)
-    if npc.Variant == mod.Monsters.NarcissismMirror.Var and flag ~= flag | DamageFlag.DAMAGE_CLONES and npc:GetData().state == "hangingmidair" then
-        npc.Parent:GetData().state = "throwmirror"
+    if npc.Variant == mod.Monsters.NarcissismMirror.Var and flag ~= flag | DamageFlag.DAMAGE_CLONES then
+        if npc:GetData().state == "hangingmidair" then
+            npc.Parent:GetData().state = "throwmirror"
+        end
         return false
     end
 end, mod.Monsters.NarcissismMirror.ID)
-

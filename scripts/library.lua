@@ -1105,7 +1105,7 @@ end
 
 function mod:AddTempItem(item, player, callback)
 	player = player or Isaac.GetPlayer()
-	local dat = SaveManager.GetRunSave(player).anixbirthsaveData or player:GetData()
+	local dat = AnixbirthSaveManager.GetRunSave(player).anixbirthsaveData or player:GetData()
 
 	item = item or CollectibleType.COLLECTIBLE_SAD_ONION
 	callback = callback or ModCallbacks.MC_POST_NEW_ROOM
@@ -1134,7 +1134,7 @@ function mod:RemoveTempItem(items)
 end
 
 function mod:PostUpdateRemoveTempItems(player)
-	local dat = SaveManager.GetRunSave(player).anixbirthsaveData
+	local dat = AnixbirthSaveManager.GetRunSave(player).anixbirthsaveData
 	mod:RemoveTempItem(dat.TemporaryItems)
 end
 

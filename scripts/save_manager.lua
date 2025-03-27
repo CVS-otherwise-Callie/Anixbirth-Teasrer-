@@ -1,15 +1,15 @@
 ---@diagnostic disable: missing-fields
--- Check out everything here: https://github.com/maya-bee/IsaacSaveManager
+-- Check out everything here: https://github.com/maya-bee/IsaacAnixbirthSaveManager
 
 local game = Game()
-local SaveManager = {}
-SaveManager.VERSION = 2.14
-SaveManager.Utility = {}
+local AnixbirthSaveManager = {}
+AnixbirthSaveManager.VERSION = 2.14
+AnixbirthSaveManager.Utility = {}
 
 -- Used in the DEFAULT_SAVE table as a key with the value being the default save data for a player in this save type.
 
 ---@enum DefaultSaveKeys
-SaveManager.DefaultSaveKeys = {
+AnixbirthSaveManager.DefaultSaveKeys = {
 	PLAYER = "__DEFAULT_PLAYER",
 	FAMILIAR = "__DEFAULT_FAMILIAR",
 	PICKUP = "__DEFAULT_PICKUP",
@@ -35,9 +35,9 @@ local dataCache = {}
 ---@class GameSave
 local hourglassBackup = {}
 
-SaveManager.Utility.ERROR_MESSAGE_FORMAT = "[IsaacSaveManager:%s] ERROR: %s (%s)\n"
-SaveManager.Utility.WARNING_MESSAGE_FORMAT = "[IsaacSaveManager:%s] WARNING: %s (%s)\n"
-SaveManager.Utility.ErrorMessages = {
+AnixbirthSaveManager.Utility.ERROR_MESSAGE_FORMAT = "[IsaacAnixbirthSaveManager:%s] ERROR: %s (%s)\n"
+AnixbirthSaveManager.Utility.WARNING_MESSAGE_FORMAT = "[IsaacAnixbirthSaveManager:%s] WARNING: %s (%s)\n"
+AnixbirthSaveManager.Utility.ErrorMessages = {
 	NOT_INITIALIZED = "The save manager cannot be used without initializing it first!",
 	DATA_NOT_LOADED = "An attempt to use save data was made before it was loaded!",
 	BAD_DATA = "An attempt to save invalid data was made!",
@@ -48,7 +48,7 @@ SaveManager.Utility.ErrorMessages = {
 	INVALID_TYPE_WITH_SAVE =
 	"This entity type does not support this save data as it does not persist between floors/move between rooms."
 }
-SaveManager.Utility.JsonIncompatibilityType = {
+AnixbirthSaveManager.Utility.JsonIncompatibilityType = {
 	SPARSE_ARRAY = "Sparse arrays, or arrays with gaps between indexes, will fill gaps with null when encoded.",
 	INVALID_KEY_TYPE = "Tables that have non-string or non-integer (decimal or non-number) keys cannot be encoded.",
 	MIXED_TABLES = "Tables with mixed key types cannot be encoded.",
@@ -57,21 +57,21 @@ SaveManager.Utility.JsonIncompatibilityType = {
 	CIRCULAR_TABLE = "Tables that contain themselves cannot be encoded.",
 }
 
----@enum SaveManager.Utility.CustomCallback
-SaveManager.Utility.CustomCallback = {
-	PRE_DATA_SAVE = "ISAACSAVEMANAGER_PRE_DATA_SAVE",
-	POST_DATA_SAVE = "ISAACSAVEMANAGER_POST_DATA_SAVE",
-	PRE_DATA_LOAD = "ISAACSAVEMANAGER_PRE_DATA_LOAD",
-	POST_DATA_LOAD = "ISAACSAVEMANAGER_POST_DATA_LOAD",
+---@enum AnixbirthSaveManager.Utility.CustomCallback
+AnixbirthSaveManager.Utility.CustomCallback = {
+	PRE_DATA_SAVE = "ISAACAnixbirthSaveManager_PRE_DATA_SAVE",
+	POST_DATA_SAVE = "ISAACAnixbirthSaveManager_POST_DATA_SAVE",
+	PRE_DATA_LOAD = "ISAACAnixbirthSaveManager_PRE_DATA_LOAD",
+	POST_DATA_LOAD = "ISAACAnixbirthSaveManager_POST_DATA_LOAD",
 }
 
-SaveManager.Utility.CallbackPriority = {
+AnixbirthSaveManager.Utility.CallbackPriority = {
 	IMPORTANT = -1000,
 	EARLY = -199,
 	LATE = 1000
 }
 
-SaveManager.Utility.ValidityState = {
+AnixbirthSaveManager.Utility.ValidityState = {
 	VALID = 0,
 	VALID_WITH_WARNING = 1,
 	INVALID = 2,
@@ -104,7 +104,7 @@ SaveManager.Utility.ValidityState = {
 
 ---You can edit what is inside of these tables, but changing the overall structure of this table will break things.
 ---@class SaveData
-SaveManager.DEFAULT_SAVE = {
+AnixbirthSaveManager.DEFAULT_SAVE = {
 	game = {
 		run = {},
 		floor = {},
@@ -139,32 +139,32 @@ SaveManager.DEFAULT_SAVE = {
 
 --#region utility methods
 
-SaveManager.Debug = false
+AnixbirthSaveManager.Debug = false
 
-function SaveManager.Utility.SendError(msg)
+function AnixbirthSaveManager.Utility.SendError(msg)
 	local _, traceback = pcall(error, "", 5) -- 5 because it is 5 layers deep
-	Isaac.ConsoleOutput(SaveManager.Utility.ERROR_MESSAGE_FORMAT:format(modReference and modReference.Name or "???", msg,
+	Isaac.ConsoleOutput(AnixbirthSaveManager.Utility.ERROR_MESSAGE_FORMAT:format(modReference and modReference.Name or "???", msg,
 		traceback))
-	Isaac.DebugString(SaveManager.Utility.ERROR_MESSAGE_FORMAT:format(modReference and modReference.Name or "???", msg,
+	Isaac.DebugString(AnixbirthSaveManager.Utility.ERROR_MESSAGE_FORMAT:format(modReference and modReference.Name or "???", msg,
 		traceback))
 end
 
-function SaveManager.Utility.SendWarning(msg)
+function AnixbirthSaveManager.Utility.SendWarning(msg)
 	local _, traceback = pcall(error, "", 4) -- 4 because it is 4 layers deep
-	Isaac.ConsoleOutput(SaveManager.Utility.WARNING_MESSAGE_FORMAT:format(modReference and modReference.Name or "???",
+	Isaac.ConsoleOutput(AnixbirthSaveManager.Utility.WARNING_MESSAGE_FORMAT:format(modReference and modReference.Name or "???",
 		msg, traceback))
-	Isaac.DebugString(SaveManager.Utility.WARNING_MESSAGE_FORMAT:format(modReference and modReference.Name or "???", msg,
+	Isaac.DebugString(AnixbirthSaveManager.Utility.WARNING_MESSAGE_FORMAT:format(modReference and modReference.Name or "???", msg,
 		traceback))
 end
 
----A wrap for `print` that only triggers if `SaveManager.Debug` is set to `true`.
-function SaveManager.Utility.SendDebugMessage(...)
-	if SaveManager.Debug then
+---A wrap for `print` that only triggers if `AnixbirthSaveManager.Debug` is set to `true`.
+function AnixbirthSaveManager.Utility.SendDebugMessage(...)
+	if AnixbirthSaveManager.Debug then
 		print(...)
 	end
 end
 
-function SaveManager.Utility.IsCircular(tab, traversed)
+function AnixbirthSaveManager.Utility.IsCircular(tab, traversed)
 	traversed = traversed or {}
 
 	if traversed[tab] then
@@ -175,7 +175,7 @@ function SaveManager.Utility.IsCircular(tab, traversed)
 
 	for _, v in pairs(tab) do
 		if type(v) == "table" then
-			if SaveManager.Utility.IsCircular(v, traversed) then
+			if AnixbirthSaveManager.Utility.IsCircular(v, traversed) then
 				return true
 			end
 		end
@@ -184,14 +184,14 @@ function SaveManager.Utility.IsCircular(tab, traversed)
 	return false
 end
 
-function SaveManager.Utility.DeepCopy(tab)
+function AnixbirthSaveManager.Utility.DeepCopy(tab)
 	if type(tab) ~= "table" then
 		return tab
 	end
 
 	local final = setmetatable({}, getmetatable(tab))
 	for i, v in pairs(tab) do
-		final[i] = SaveManager.Utility.DeepCopy(v)
+		final[i] = AnixbirthSaveManager.Utility.DeepCopy(v)
 	end
 
 	return final
@@ -199,8 +199,8 @@ end
 
 ---Checks if the provided string is a default key
 ---@param key string
-function SaveManager.Utility.IsDefaultSaveKey(key)
-	for _, keyName in pairs(SaveManager.DefaultSaveKeys) do
+function AnixbirthSaveManager.Utility.IsDefaultSaveKey(key)
+	for _, keyName in pairs(AnixbirthSaveManager.DefaultSaveKeys) do
 		if keyName == key then
 			return true
 		end
@@ -210,7 +210,7 @@ end
 
 ---Gets the default save key matching with the entity's type.
 ---@param ent? Entity | Vector
-function SaveManager.Utility.GetDefaultSaveKey(ent)
+function AnixbirthSaveManager.Utility.GetDefaultSaveKey(ent)
 	local typeToName = {
 		[EntityType.ENTITY_PLAYER] = "__DEFAULT_PLAYER",
 		[EntityType.ENTITY_FAMILIAR] = "__DEFAULT_FAMILIAR",
@@ -230,7 +230,7 @@ end
 
 ---Gets a unique string as an identifier for the entity in the save data.
 ---@param ent? Entity | Vector
-function SaveManager.Utility.GetSaveIndex(ent)
+function AnixbirthSaveManager.Utility.GetSaveIndex(ent)
 	local typeToName = {
 		[EntityType.ENTITY_PLAYER] = "PLAYER_",
 		[EntityType.ENTITY_FAMILIAR] = "FAMILIAR_",
@@ -269,17 +269,17 @@ end
 ---Is mostly used with `deposit` as an empty table and `source` the default save data to overrite existing data with the default data.
 ---@param deposit table
 ---@param source table
-function SaveManager.Utility.PatchSaveFile(deposit, source)
+function AnixbirthSaveManager.Utility.PatchSaveFile(deposit, source)
 	for i, v in pairs(source) do
 		if i == "roomSave" then goto continue end --No default room-specific saves.
-		if SaveManager.Utility.IsDefaultSaveKey(i) then
-			SaveManager.Utility.PatchSaveFile(deposit, v)
+		if AnixbirthSaveManager.Utility.IsDefaultSaveKey(i) then
+			AnixbirthSaveManager.Utility.PatchSaveFile(deposit, v)
 		elseif type(v) == "table" then
 			if type(deposit[i]) ~= "table" then
 				deposit[i] = {}
 			end
 
-			deposit[i] = SaveManager.Utility.PatchSaveFile(deposit[i] ~= nil and deposit[i] or {}, v)
+			deposit[i] = AnixbirthSaveManager.Utility.PatchSaveFile(deposit[i] ~= nil and deposit[i] or {}, v)
 		elseif deposit[i] == nil then
 			deposit[i] = v
 		end
@@ -308,7 +308,7 @@ end
 
 -- Recursively validates if a table can be encoded into valid JSON.
 -- Returns 0 if it can be encoded, 1 if it can but has a warning, and 2 if item cannot. If 1 or 2, it will also return a message.
-function SaveManager.Utility.ValidateForJson(tab)
+function AnixbirthSaveManager.Utility.ValidateForJson(tab)
 	local hasWarning
 
 	-- check for mixed table
@@ -319,27 +319,27 @@ function SaveManager.Utility.ValidateForJson(tab)
 		end
 
 		if type(index) ~= indexType then
-			return SaveManager.Utility.ValidityState.INVALID, SaveManager.Utility.JsonIncompatibilityType.MIXED_TABLES
+			return AnixbirthSaveManager.Utility.ValidityState.INVALID, AnixbirthSaveManager.Utility.JsonIncompatibilityType.MIXED_TABLES
 		end
 
 		if type(index) ~= "string" and type(index) ~= "number" then
-			return SaveManager.Utility.ValidityState.INVALID,
-				SaveManager.Utility.JsonIncompatibilityType.INVALID_KEY_TYPE
+			return AnixbirthSaveManager.Utility.ValidityState.INVALID,
+				AnixbirthSaveManager.Utility.JsonIncompatibilityType.INVALID_KEY_TYPE
 		end
 
 		if type(index) == "number" and math.floor(index) ~= index then
-			return SaveManager.Utility.ValidityState.INVALID,
-				SaveManager.Utility.JsonIncompatibilityType.INVALID_KEY_TYPE
+			return AnixbirthSaveManager.Utility.ValidityState.INVALID,
+				AnixbirthSaveManager.Utility.JsonIncompatibilityType.INVALID_KEY_TYPE
 		end
 	end
 
 	-- check for sparse array
 	if isSparseArray(tab) then
-		hasWarning = SaveManager.Utility.JsonIncompatibilityType.SPARSE_ARRAY
+		hasWarning = AnixbirthSaveManager.Utility.JsonIncompatibilityType.SPARSE_ARRAY
 	end
 
-	if SaveManager.Utility.IsCircular(tab) then
-		return SaveManager.Utility.ValidityState.INVALID, SaveManager.Utility.JsonIncompatibilityType.CIRCULAR_TABLE
+	if AnixbirthSaveManager.Utility.IsCircular(tab) then
+		return AnixbirthSaveManager.Utility.ValidityState.INVALID, AnixbirthSaveManager.Utility.JsonIncompatibilityType.CIRCULAR_TABLE
 	end
 
 	for _, value in pairs(tab) do
@@ -347,39 +347,39 @@ function SaveManager.Utility.ValidateForJson(tab)
 		-- http://lua-users.org/wiki/InfAndNanComparisons
 		if type(value) == "number" then
 			if value == math.huge or value == -math.huge or value ~= value then
-				return SaveManager.Utility.ValidityState.INVALID, SaveManager.Utility.JsonIncompatibilityType.NAN_VALUE
+				return AnixbirthSaveManager.Utility.ValidityState.INVALID, AnixbirthSaveManager.Utility.JsonIncompatibilityType.NAN_VALUE
 			end
 		end
 
 		if type(value) == "function" then
-			return SaveManager.Utility.ValidityState.INVALID, SaveManager.Utility.JsonIncompatibilityType.NO_FUNCTIONS
+			return AnixbirthSaveManager.Utility.ValidityState.INVALID, AnixbirthSaveManager.Utility.JsonIncompatibilityType.NO_FUNCTIONS
 		end
 
 		if type(value) == "table" then
-			local valid, error = SaveManager.Utility.ValidateForJson(value)
-			if valid == SaveManager.Utility.ValidityState.INVALID then
+			local valid, error = AnixbirthSaveManager.Utility.ValidateForJson(value)
+			if valid == AnixbirthSaveManager.Utility.ValidityState.INVALID then
 				return valid, error
-			elseif valid == SaveManager.Utility.ValidityState.VALID_WITH_WARNING then
+			elseif valid == AnixbirthSaveManager.Utility.ValidityState.VALID_WITH_WARNING then
 				hasWarning = error
 			end
 		end
 	end
 
 	if hasWarning then
-		return SaveManager.Utility.ValidityState.VALID_WITH_WARNING, hasWarning
+		return AnixbirthSaveManager.Utility.ValidityState.VALID_WITH_WARNING, hasWarning
 	end
 
-	return SaveManager.Utility.ValidityState.VALID
+	return AnixbirthSaveManager.Utility.ValidityState.VALID
 end
 
 ---@return table | nil
-function SaveManager.Utility.RunCallback(callbackId, ...)
+function AnixbirthSaveManager.Utility.RunCallback(callbackId, ...)
 	if not modReference then
-		SaveManager.Utility.SendError(SaveManager.Utility.ErrorMessages.NOT_INITIALIZED)
+		AnixbirthSaveManager.Utility.SendError(AnixbirthSaveManager.Utility.ErrorMessages.NOT_INITIALIZED)
 		return
 	end
 
-	local id = modReference.__SAVEMANAGER_UNIQUE_KEY .. callbackId
+	local id = modReference.__AnixbirthSaveManager_UNIQUE_KEY .. callbackId
 	local returnVal = Isaac.RunCallback(id, ...)
 
 	return returnVal
@@ -390,14 +390,14 @@ end
 ---Checks if the entity type with the given save data's duration is permitted within the save manager.
 ---@param entType integer | Vector
 ---@param saveType DataDuration
-function SaveManager.Utility.IsDataTypeAllowed(entType, saveType)
+function AnixbirthSaveManager.Utility.IsDataTypeAllowed(entType, saveType)
 	if type(entType) == "number"
 		and entType ~= EntityType.ENTITY_PLAYER
 		and entType ~= EntityType.ENTITY_FAMILIAR
 		and entType ~= EntityType.ENTITY_PICKUP
 		and entType ~= EntityType.ENTITY_SLOT
 	then
-		SaveManager.Utility.SendError(SaveManager.Utility.ErrorMessages.INVALID_ENTITY_TYPE)
+		AnixbirthSaveManager.Utility.SendError(AnixbirthSaveManager.Utility.ErrorMessages.INVALID_ENTITY_TYPE)
 		return false
 	end
 	if (type(entType) == "userdata" --Vector for grid ents
@@ -408,24 +408,24 @@ function SaveManager.Utility.IsDataTypeAllowed(entType, saveType)
 			or saveType == "floor"
 		)
 	then
-		SaveManager.Utility.SendError(SaveManager.Utility.ErrorMessages.INVALID_TYPE_WITH_SAVE)
+		AnixbirthSaveManager.Utility.SendError(AnixbirthSaveManager.Utility.ErrorMessages.INVALID_TYPE_WITH_SAVE)
 		return false
 	end
 	return true
 end
 
 ---@param ignoreWarning? boolean
-function SaveManager.Utility.IsDataInitialized(ignoreWarning)
+function AnixbirthSaveManager.Utility.IsDataInitialized(ignoreWarning)
 	if not modReference then
 		if ignoreWarning then
-			SaveManager.Utility.SendError(SaveManager.Utility.ErrorMessages.NOT_INITIALIZED)
+			AnixbirthSaveManager.Utility.SendError(AnixbirthSaveManager.Utility.ErrorMessages.NOT_INITIALIZED)
 		end
 		return false
 	end
 
 	if not loadedData then
 		if ignoreWarning then
-			SaveManager.Utility.SendError(SaveManager.Utility.ErrorMessages.DATA_NOT_LOADED)
+			AnixbirthSaveManager.Utility.SendError(AnixbirthSaveManager.Utility.ErrorMessages.DATA_NOT_LOADED)
 		end
 		return false
 	end
@@ -448,22 +448,22 @@ end
 ---@param data table
 ---@param noHourglass? boolean
 local function addDefaultData(saveKey, saveType, data, noHourglass)
-	if not SaveManager.Utility.IsDefaultSaveKey(saveKey) then
+	if not AnixbirthSaveManager.Utility.IsDefaultSaveKey(saveKey) then
 		return
 	end
 	local keyToType = {
-		[SaveManager.DefaultSaveKeys.PLAYER] = EntityType.ENTITY_PLAYER,
-		[SaveManager.DefaultSaveKeys.FAMILIAR] = EntityType.ENTITY_FAMILIAR,
-		[SaveManager.DefaultSaveKeys.PICKUP] = EntityType.ENTITY_PICKUP,
-		[SaveManager.DefaultSaveKeys.SLOT] = EntityType.ENTITY_SLOT
+		[AnixbirthSaveManager.DefaultSaveKeys.PLAYER] = EntityType.ENTITY_PLAYER,
+		[AnixbirthSaveManager.DefaultSaveKeys.FAMILIAR] = EntityType.ENTITY_FAMILIAR,
+		[AnixbirthSaveManager.DefaultSaveKeys.PICKUP] = EntityType.ENTITY_PICKUP,
+		[AnixbirthSaveManager.DefaultSaveKeys.SLOT] = EntityType.ENTITY_SLOT
 	}
-	if saveKey ~= SaveManager.DefaultSaveKeys.GLOBAL
-		and not SaveManager.Utility.IsDataTypeAllowed(keyToType[saveKey], saveType)
+	if saveKey ~= AnixbirthSaveManager.DefaultSaveKeys.GLOBAL
+		and not AnixbirthSaveManager.Utility.IsDataTypeAllowed(keyToType[saveKey], saveType)
 	then
 		return
 	end
 
-	local gameFile = noHourglass and SaveManager.DEFAULT_SAVE.gameNoBackup or SaveManager.DEFAULT_SAVE.game
+	local gameFile = noHourglass and AnixbirthSaveManager.DEFAULT_SAVE.gameNoBackup or AnixbirthSaveManager.DEFAULT_SAVE.game
 	local dataTable = gameFile[saveType]
 
 	---@cast saveKey string
@@ -472,15 +472,15 @@ local function addDefaultData(saveKey, saveType, data, noHourglass)
 	end
 	dataTable = dataTable[saveKey]
 
-	SaveManager.Utility.PatchSaveFile(dataTable, data)
-	SaveManager.Utility.SendDebugMessage(saveKey, saveType)
+	AnixbirthSaveManager.Utility.PatchSaveFile(dataTable, data)
+	AnixbirthSaveManager.Utility.SendDebugMessage(saveKey, saveType)
 end
 
 ---Adds data that will be automatically added when the run data is first initialized.
 ---@param dataType DefaultSaveKeys
 ---@param data table
 ---@param noHourglass? boolean @If true, will load data in a separate game save that is not affected by Glowing Hourglass.
-function SaveManager.Utility.AddDefaultRunData(dataType, data, noHourglass)
+function AnixbirthSaveManager.Utility.AddDefaultRunData(dataType, data, noHourglass)
 	addDefaultData(dataType, "run", data, noHourglass)
 end
 
@@ -488,7 +488,7 @@ end
 ---@param dataType DefaultSaveKeys
 ---@param data table
 ---@param noHourglass? boolean @If true, will load data in a separate game save that is not affected by Glowing Hourglass.
-function SaveManager.Utility.AddDefaultFloorData(dataType, data, noHourglass)
+function AnixbirthSaveManager.Utility.AddDefaultFloorData(dataType, data, noHourglass)
 	addDefaultData(dataType, "floor", data, noHourglass)
 end
 
@@ -496,7 +496,7 @@ end
 ---@param dataType DefaultSaveKeys
 ---@param data table
 ---@param noHourglass? boolean @If true, will load data in a separate game save that is not affected by Glowing Hourglass.
-function SaveManager.Utility.AddDefaultRoomData(dataType, data, noHourglass)
+function AnixbirthSaveManager.Utility.AddDefaultRoomData(dataType, data, noHourglass)
 	addDefaultData(dataType, "room", data, noHourglass)
 end
 
@@ -510,120 +510,120 @@ end
 
 --#region core methods
 
-function SaveManager.IsLoaded()
+function AnixbirthSaveManager.IsLoaded()
 	return loadedData
 end
 
----@param callbackId SaveManager.Utility.CustomCallback
+---@param callbackId AnixbirthSaveManager.Utility.CustomCallback
 ---@param callback function
-function SaveManager.AddCallback(callbackId, callback)
+function AnixbirthSaveManager.AddCallback(callbackId, callback)
 	if not modReference then
-		SaveManager.Utility.SendError(SaveManager.Utility.ErrorMessages.NOT_INITIALIZED)
+		AnixbirthSaveManager.Utility.SendError(AnixbirthSaveManager.Utility.ErrorMessages.NOT_INITIALIZED)
 		return
 	end
 
-	local key = modReference.__SAVEMANAGER_UNIQUE_KEY
+	local key = modReference.__AnixbirthSaveManager_UNIQUE_KEY
 	modReference:AddCallback(key .. callbackId, callback)
 end
 
 -- Saves save data to the file.
-function SaveManager.Save()
-	if not SaveManager.Utility.IsDataInitialized() then return end
+function AnixbirthSaveManager.Save()
+	if not AnixbirthSaveManager.Utility.IsDataInitialized() then return end
 
 	-- Create backup
 	-- pcall deep copies the data to prevent errors from being thrown
 	-- errors thrown in unload callback crash isaac
 
-	local success, finalData = pcall(SaveManager.Utility.DeepCopy, dataCache)
+	local success, finalData = pcall(AnixbirthSaveManager.Utility.DeepCopy, dataCache)
 
 	if success then
-		finalData = SaveManager.Utility.PatchSaveFile(finalData, SaveManager.DEFAULT_SAVE)
+		finalData = AnixbirthSaveManager.Utility.PatchSaveFile(finalData, AnixbirthSaveManager.DEFAULT_SAVE)
 	else
-		SaveManager.Utility.SendError(SaveManager.Utility.ErrorMessages.COPY_ERROR)
+		AnixbirthSaveManager.Utility.SendError(AnixbirthSaveManager.Utility.ErrorMessages.COPY_ERROR)
 		return
 	end
 
-	local success2, backupData = pcall(SaveManager.Utility.DeepCopy, hourglassBackup)
+	local success2, backupData = pcall(AnixbirthSaveManager.Utility.DeepCopy, hourglassBackup)
 
 	if success2 then
 		finalData.hourglassBackup = backupData
 	else
-		SaveManager.Utility.SendError(SaveManager.Utility.ErrorMessages.COPY_ERROR)
+		AnixbirthSaveManager.Utility.SendError(AnixbirthSaveManager.Utility.ErrorMessages.COPY_ERROR)
 		return
 	end
 
-	local newFinalData = SaveManager.Utility.RunCallback(SaveManager.Utility.CustomCallback.PRE_DATA_SAVE, finalData)
+	local newFinalData = AnixbirthSaveManager.Utility.RunCallback(AnixbirthSaveManager.Utility.CustomCallback.PRE_DATA_SAVE, finalData)
 	if newFinalData then
 		finalData = newFinalData
 	end
 	if game:GetFrameCount() > 0 then
-		finalData.__SAVEMANAGER_LIST_INDEX = currentListIndex
+		finalData.__AnixbirthSaveManager_LIST_INDEX = currentListIndex
 	end
 
 	-- validate data
-	local valid, msg = SaveManager.Utility.ValidateForJson(finalData)
-	if valid == SaveManager.Utility.ValidityState.INVALID then
-		SaveManager.Utility.SendError(SaveManager.Utility.ErrorMessages.BAD_DATA)
-		SaveManager.Utility.SendError(msg)
+	local valid, msg = AnixbirthSaveManager.Utility.ValidateForJson(finalData)
+	if valid == AnixbirthSaveManager.Utility.ValidityState.INVALID then
+		AnixbirthSaveManager.Utility.SendError(AnixbirthSaveManager.Utility.ErrorMessages.BAD_DATA)
+		AnixbirthSaveManager.Utility.SendError(msg)
 		return
-	elseif valid == SaveManager.Utility.ValidityState.VALID_WITH_WARNING then
-		SaveManager.Utility.SendError(SaveManager.Utility.ErrorMessages.BAD_DATA_WARNING)
-		SaveManager.Utility.SendWarning(msg)
+	elseif valid == AnixbirthSaveManager.Utility.ValidityState.VALID_WITH_WARNING then
+		AnixbirthSaveManager.Utility.SendError(AnixbirthSaveManager.Utility.ErrorMessages.BAD_DATA_WARNING)
+		AnixbirthSaveManager.Utility.SendWarning(msg)
 	end
 
 	modReference:SaveData(json.encode(finalData))
 
-	SaveManager.Utility.RunCallback(SaveManager.Utility.CustomCallback.POST_DATA_SAVE, finalData)
+	AnixbirthSaveManager.Utility.RunCallback(AnixbirthSaveManager.Utility.CustomCallback.POST_DATA_SAVE, finalData)
 end
 
 -- Restores the game save with the data in the hourglass backup.
-function SaveManager.HourglassRestore()
+function AnixbirthSaveManager.HourglassRestore()
 	if shouldRestoreOnUse then
-		local newData = SaveManager.Utility.DeepCopy(hourglassBackup)
-		dataCache.game = SaveManager.Utility.PatchSaveFile(newData, SaveManager.DEFAULT_SAVE.game)
+		local newData = AnixbirthSaveManager.Utility.DeepCopy(hourglassBackup)
+		dataCache.game = AnixbirthSaveManager.Utility.PatchSaveFile(newData, AnixbirthSaveManager.DEFAULT_SAVE.game)
 		skipRoomReset = true
 	end
 end
 
 -- Loads save data from the file, overwriting what is already loaded.
 ---@param isLuamod? boolean
-function SaveManager.Load(isLuamod)
+function AnixbirthSaveManager.Load(isLuamod)
 	if not modReference then
-		SaveManager.Utility.SendError(SaveManager.Utility.ErrorMessages.NOT_INITIALIZED)
+		AnixbirthSaveManager.Utility.SendError(AnixbirthSaveManager.Utility.ErrorMessages.NOT_INITIALIZED)
 		return
 	end
 
-	local saveData = SaveManager.Utility.PatchSaveFile({}, SaveManager.DEFAULT_SAVE)
+	local saveData = AnixbirthSaveManager.Utility.PatchSaveFile({}, AnixbirthSaveManager.DEFAULT_SAVE)
 
 	if modReference:HasData() then
 		local data = json.decode(modReference:LoadData())
-		saveData = SaveManager.Utility.PatchSaveFile(data, SaveManager.DEFAULT_SAVE)
+		saveData = AnixbirthSaveManager.Utility.PatchSaveFile(data, AnixbirthSaveManager.DEFAULT_SAVE)
 	end
 
-	local newSaveData = SaveManager.Utility.RunCallback(SaveManager.Utility.CustomCallback.PRE_DATA_LOAD, saveData,
+	local newSaveData = AnixbirthSaveManager.Utility.RunCallback(AnixbirthSaveManager.Utility.CustomCallback.PRE_DATA_LOAD, saveData,
 		isLuamod)
 	if newSaveData then
 		saveData = newSaveData
 	end
 
 	if game:GetFrameCount() > 0 then
-		currentListIndex = saveData.__SAVEMANAGER_LIST_INDEX
-		saveData.__SAVEMANAGER_LIST_INDEX = nil
-		saveData.__SAVEMANAGER_STAGE = nil
+		currentListIndex = saveData.__AnixbirthSaveManager_LIST_INDEX
+		saveData.__AnixbirthSaveManager_LIST_INDEX = nil
+		saveData.__AnixbirthSaveManager_STAGE = nil
 	end
 
 	dataCache = saveData
 	--Would only fail to exist if you continued a run before creating save data for the first time
 	if dataCache.hourglassBackup then
-		hourglassBackup = SaveManager.Utility.DeepCopy(dataCache.hourglassBackup)
+		hourglassBackup = AnixbirthSaveManager.Utility.DeepCopy(dataCache.hourglassBackup)
 	else
-		hourglassBackup = SaveManager.Utility.PatchSaveFile({}, SaveManager.DEFAULT_SAVE)
+		hourglassBackup = AnixbirthSaveManager.Utility.PatchSaveFile({}, AnixbirthSaveManager.DEFAULT_SAVE)
 	end
 
 	loadedData = true
 	inRunButNotLoaded = false
 
-	SaveManager.Utility.RunCallback(SaveManager.Utility.CustomCallback.POST_DATA_LOAD, saveData, isLuamod)
+	AnixbirthSaveManager.Utility.RunCallback(AnixbirthSaveManager.Utility.CustomCallback.POST_DATA_LOAD, saveData, isLuamod)
 end
 
 --[[
@@ -650,12 +650,12 @@ local function getRoomFloorPickupData(pickup)
 	if not listIndexData then
 		return
 	end
-	return listIndexData[SaveManager.Utility.GetSaveIndex(pickup)]
+	return listIndexData[AnixbirthSaveManager.Utility.GetSaveIndex(pickup)]
 end
 
 ---Gets a unique string as an identifier for the pickup when outside of the room it's present in.
 ---@param pickup EntityPickup
-function SaveManager.Utility.GetPickupIndex(pickup)
+function AnixbirthSaveManager.Utility.GetPickupIndex(pickup)
 	local index = table.concat(
 		{ "PICKUP_FLOORDATA",
 			getListIndex(),
@@ -666,15 +666,15 @@ function SaveManager.Utility.GetPickupIndex(pickup)
 	if myosotisCheck or movingBoxCheck then
 		--Trick code to pulling previous floor's data only if initseed matches.
 		--Even with dupe initseeds pickups spawning, it'll go through and init data for each one
-		SaveManager.Utility.SendDebugMessage("Data active for a transferred pickup. Attempting to find data...")
+		AnixbirthSaveManager.Utility.SendDebugMessage("Data active for a transferred pickup. Attempting to find data...")
 
 		for backupIndex, _ in pairs(myosotisCheck and hourglassBackup.pickup.floor or dataCache.game.pickup.movingBox) do
 			local initSeed = pickup.InitSeed
 
 			if string.sub(backupIndex, -string.len(tostring(initSeed)), -1) == tostring(initSeed) then
 				index = backupIndex
-				SaveManager.Utility.SendDebugMessage("Stored data found for",
-					SaveManager.Utility.GetSaveIndex(pickup) .. ".")
+				AnixbirthSaveManager.Utility.SendDebugMessage("Stored data found for",
+					AnixbirthSaveManager.Utility.GetSaveIndex(pickup) .. ".")
 				break
 			end
 		end
@@ -683,7 +683,7 @@ function SaveManager.Utility.GetPickupIndex(pickup)
 end
 
 ---@param pickup EntityPickup
-function SaveManager.Utility.GetPickupAscentIndex(pickup)
+function AnixbirthSaveManager.Utility.GetPickupAscentIndex(pickup)
 	return table.concat(
 		{ "PICKUP_FLOORDATA",
 			math.floor(pickup.Position.X),
@@ -707,8 +707,8 @@ end
 ---Gets run-persistent pickup data if it was inside a boss room.
 ---@param pickup EntityPickup
 ---@return table?
-function SaveManager.Utility.GetPickupAscentBoss(pickup)
-	local pickupIndex = SaveManager.Utility.GetPickupAscentIndex(pickup)
+function AnixbirthSaveManager.Utility.GetPickupAscentBoss(pickup)
+	local pickupIndex = AnixbirthSaveManager.Utility.GetPickupAscentIndex(pickup)
 	local pickupData = getStoredPickupData("bossRoom", pickupIndex)
 	return pickupData
 end
@@ -716,8 +716,8 @@ end
 ---Gets run-persistent pickup data if it was inside a treasure room.
 ---@param pickup EntityPickup
 ---@return table?
-function SaveManager.Utility.GetPickupAscentTreasure(pickup)
-	local pickupIndex = SaveManager.Utility.GetPickupAscentIndex(pickup)
+function AnixbirthSaveManager.Utility.GetPickupAscentTreasure(pickup)
+	local pickupIndex = AnixbirthSaveManager.Utility.GetPickupAscentIndex(pickup)
 	local pickupData = getStoredPickupData("treasureRoom", pickupIndex)
 	return pickupData
 end
@@ -728,18 +728,18 @@ end
 ---You won't use this yourself as the pickup's persistent data is immediately nulled once the pickup in the room is loaded in. Use `GetFloorSave` instead.
 ---@param pickup EntityPickup
 ---@return table?, string
-function SaveManager.Utility.GetPickupData(pickup)
-	local pickupIndex = SaveManager.Utility.GetPickupIndex(pickup)
+function AnixbirthSaveManager.Utility.GetPickupData(pickup)
+	local pickupIndex = AnixbirthSaveManager.Utility.GetPickupIndex(pickup)
 	local pickupData = getStoredPickupData("floor", pickupIndex)
 
 	if not pickupData and game:GetLevel():IsAscent() then
-		SaveManager.Utility.SendDebugMessage("Was unable to locate floor-saved room data. Searching Ascent...")
+		AnixbirthSaveManager.Utility.SendDebugMessage("Was unable to locate floor-saved room data. Searching Ascent...")
 		if game:GetRoom():GetType() == RoomType.ROOM_BOSS then
-			pickupIndex = SaveManager.Utility.GetPickupAscentIndex(pickup)
-			pickupData = SaveManager.Utility.GetPickupAscentBoss(pickup)
+			pickupIndex = AnixbirthSaveManager.Utility.GetPickupAscentIndex(pickup)
+			pickupData = AnixbirthSaveManager.Utility.GetPickupAscentBoss(pickup)
 		elseif game:GetRoom():GetType() == RoomType.ROOM_TREASURE then
-			pickupIndex = SaveManager.Utility.GetPickupAscentIndex(pickup)
-			pickupData = SaveManager.Utility.GetPickupAscentTreasure(pickup)
+			pickupIndex = AnixbirthSaveManager.Utility.GetPickupAscentIndex(pickup)
+			pickupData = AnixbirthSaveManager.Utility.GetPickupAscentTreasure(pickup)
 		end
 	end
 	return pickupData, pickupIndex
@@ -750,28 +750,28 @@ end
 local function storePickupData(pickup)
 	local roomPickupData = getRoomFloorPickupData(pickup)
 	local listIndex = getListIndex()
-	local roomFloorIndex = SaveManager.Utility.GetSaveIndex(pickup)
+	local roomFloorIndex = AnixbirthSaveManager.Utility.GetSaveIndex(pickup)
 	if not roomPickupData then
-		SaveManager.Utility.SendDebugMessage("Failed to find room data for", roomFloorIndex,
+		AnixbirthSaveManager.Utility.SendDebugMessage("Failed to find room data for", roomFloorIndex,
 			"in ListIndex", listIndex)
 		return
 	end
-	local pickupIndex = SaveManager.Utility.GetPickupIndex(pickup)
+	local pickupIndex = AnixbirthSaveManager.Utility.GetPickupIndex(pickup)
 	local pickupData = dataCache.game.pickup
 	if movingBoxCheck then
 		pickupData.movingBox[pickupIndex] = roomPickupData
-		SaveManager.Utility.SendDebugMessage("Stored Moving Box pickup data for", pickupIndex)
+		AnixbirthSaveManager.Utility.SendDebugMessage("Stored Moving Box pickup data for", pickupIndex)
 	else
 		pickupData.floor[pickupIndex] = roomPickupData
-		SaveManager.Utility.SendDebugMessage("Stored pickup data for", pickupIndex)
+		AnixbirthSaveManager.Utility.SendDebugMessage("Stored pickup data for", pickupIndex)
 		if game:GetRoom():GetType() == RoomType.ROOM_TREASURE and not game:GetLevel():IsAscent() then
-			pickupIndex = SaveManager.Utility.GetPickupAscentIndex(pickup)
+			pickupIndex = AnixbirthSaveManager.Utility.GetPickupAscentIndex(pickup)
 			pickupData.treasureRoom[pickupIndex] = roomPickupData
-			SaveManager.Utility.SendDebugMessage("Stored additional Ascent Treasure Room pickup data for", pickupIndex)
+			AnixbirthSaveManager.Utility.SendDebugMessage("Stored additional Ascent Treasure Room pickup data for", pickupIndex)
 		elseif game:GetRoom():GetType() == RoomType.ROOM_BOSS and not game:GetLevel():IsAscent() then
-			pickupIndex = SaveManager.Utility.GetPickupAscentIndex(pickup)
+			pickupIndex = AnixbirthSaveManager.Utility.GetPickupAscentIndex(pickup)
 			pickupData.bossRoom[pickupIndex] = roomPickupData
-			SaveManager.Utility.SendDebugMessage("Stored additional Ascent Boss Room pickup data for", pickupIndex)
+			AnixbirthSaveManager.Utility.SendDebugMessage("Stored additional Ascent Boss Room pickup data for", pickupIndex)
 		end
 		dataCache.game.roomFloor[listIndex][roomFloorIndex] = nil
 	end
@@ -782,31 +782,31 @@ local bossAscentSaveIndexes = {}
 ---When re-entering a room, gives back floor-persistent data to valid pickups.
 ---@param pickup EntityPickup
 local function populatePickupData(pickup)
-	local pickupData, pickupIndex = SaveManager.Utility.GetPickupData(pickup)
+	local pickupData, pickupIndex = AnixbirthSaveManager.Utility.GetPickupData(pickup)
 	local listIndex = getListIndex()
-	local roomFloorIndex = SaveManager.Utility.GetSaveIndex(pickup)
+	local roomFloorIndex = AnixbirthSaveManager.Utility.GetSaveIndex(pickup)
 	if pickupData then
 		if dataCache.game.roomFloor[listIndex] == nil then
 			dataCache.game.roomFloor[listIndex] = {}
 		end
 		dataCache.game.roomFloor[listIndex][roomFloorIndex] = pickupData
-		SaveManager.Utility.SendDebugMessage("Successfully populated pickup data of index", roomFloorIndex,
+		AnixbirthSaveManager.Utility.SendDebugMessage("Successfully populated pickup data of index", roomFloorIndex,
 			"in ListIndex",
 			listIndex)
 		if movingBoxCheck then
 			dataCache.game.pickup.movingBox[pickupIndex] = nil
 		else
 			if game:GetRoom():GetType() == RoomType.ROOM_BOSS then
-				dataCache.game.pickup.bossRoom[SaveManager.Utility.GetPickupAscentIndex(pickup)] = nil
-				SaveManager.Utility.SendDebugMessage("Stored boss ascent backup floor data for", roomFloorIndex)
+				dataCache.game.pickup.bossRoom[AnixbirthSaveManager.Utility.GetPickupAscentIndex(pickup)] = nil
+				AnixbirthSaveManager.Utility.SendDebugMessage("Stored boss ascent backup floor data for", roomFloorIndex)
 				table.insert(bossAscentSaveIndexes, roomFloorIndex)
 			elseif game:GetRoom():GetType() == RoomType.ROOM_TREASURE then
-				dataCache.game.pickup.treasureRoom[SaveManager.Utility.GetPickupAscentIndex(pickup)] = nil
+				dataCache.game.pickup.treasureRoom[AnixbirthSaveManager.Utility.GetPickupAscentIndex(pickup)] = nil
 			end
 			dataCache.game.pickup.floor[pickupIndex] = nil
 		end
 	else
-		SaveManager.Utility.SendDebugMessage("Failed to find pickup data for index", pickupIndex, "in ListIndex",
+		AnixbirthSaveManager.Utility.SendDebugMessage("Failed to find pickup data for index", pickupIndex, "in ListIndex",
 			listIndex)
 	end
 end
@@ -824,7 +824,7 @@ end
 local function onGameLoad()
 	skipFloorReset = true
 	skipRoomReset = true
-	SaveManager.Load(false)
+	AnixbirthSaveManager.Load(false)
 	loadedData = true
 	inRunButNotLoaded = false
 end
@@ -832,17 +832,17 @@ end
 ---@param ent? Entity
 local function onEntityInit(_, ent)
 	local newGame = game:GetFrameCount() == 0 and not ent
-	local saveIndex = SaveManager.Utility.GetSaveIndex(ent)
+	local saveIndex = AnixbirthSaveManager.Utility.GetSaveIndex(ent)
 	checkLastIndex = false
 	if not loadedData or inRunButNotLoaded then
-		SaveManager.Utility.SendDebugMessage("Game Init")
+		AnixbirthSaveManager.Utility.SendDebugMessage("Game Init")
 		onGameLoad()
 	end
 
 	if newGame then
-		dataCache.game = SaveManager.Utility.PatchSaveFile({}, SaveManager.DEFAULT_SAVE.game)
-		dataCache.gameNoBackup = SaveManager.Utility.PatchSaveFile({}, SaveManager.DEFAULT_SAVE.gameNoBackup)
-		hourglassBackup = SaveManager.Utility.PatchSaveFile({}, SaveManager.DEFAULT_SAVE.game)
+		dataCache.game = AnixbirthSaveManager.Utility.PatchSaveFile({}, AnixbirthSaveManager.DEFAULT_SAVE.game)
+		dataCache.gameNoBackup = AnixbirthSaveManager.Utility.PatchSaveFile({}, AnixbirthSaveManager.DEFAULT_SAVE.gameNoBackup)
+		hourglassBackup = AnixbirthSaveManager.Utility.PatchSaveFile({}, AnixbirthSaveManager.DEFAULT_SAVE.game)
 	end
 
 	-- provide an array of keys to grab the target table from the original
@@ -866,35 +866,35 @@ local function onEntityInit(_, ent)
 	local function implementSaveKeys(tab, target, history)
 		history = history or {}
 		for i, v in pairs(tab) do
-			if i == SaveManager.Utility.GetDefaultSaveKey(ent) then
+			if i == AnixbirthSaveManager.Utility.GetDefaultSaveKey(ent) then
 				local targetTable = reconstructHistory(target, history)
 				if targetTable and not targetTable[saveIndex] then
-					SaveManager.Utility.SendDebugMessage("Attempting default data transfer")
+					AnixbirthSaveManager.Utility.SendDebugMessage("Attempting default data transfer")
 					-- create or patch the target table with the default save
 					local newData
-					if i == SaveManager.DefaultSaveKeys.PICKUP and ent then
+					if i == AnixbirthSaveManager.DefaultSaveKeys.PICKUP and ent then
 						local pickupData = {
 							InitSeed = ent.InitSeed,
-							RerollSave = SaveManager.Utility.PatchSaveFile(
+							RerollSave = AnixbirthSaveManager.Utility.PatchSaveFile(
 								targetTable.RerollSave and targetTable.RerollSave[saveIndex] or {}, v),
-							NoRerollSave = SaveManager.Utility.PatchSaveFile(
+							NoRerollSave = AnixbirthSaveManager.Utility.PatchSaveFile(
 								targetTable.NoRerollSave and targetTable.NoRerollSave[saveIndex] or {}, v)
 						}
 						target[saveIndex] = pickupData
 						newData = pickupData
 					else
-						newData = SaveManager.Utility.PatchSaveFile(targetTable[saveIndex] or {}, v)
+						newData = AnixbirthSaveManager.Utility.PatchSaveFile(targetTable[saveIndex] or {}, v)
 					end
 					-- Only creates data if it was filled with default data
 					if next(newData) ~= nil then
 						targetTable[saveIndex] = newData
-						SaveManager.Utility.SendDebugMessage("Default data copied for", saveIndex)
+						AnixbirthSaveManager.Utility.SendDebugMessage("Default data copied for", saveIndex)
 					else
-						SaveManager.Utility.SendDebugMessage("No default data found for", saveIndex)
+						AnixbirthSaveManager.Utility.SendDebugMessage("No default data found for", saveIndex)
 					end
 					targetTable[i] = nil
 				else
-					SaveManager.Utility.SendDebugMessage(
+					AnixbirthSaveManager.Utility.SendDebugMessage(
 						"Was unable to fetch target table or data is already loaded for",
 						saveIndex)
 				end
@@ -911,8 +911,8 @@ local function onEntityInit(_, ent)
 		---@cast pickup EntityPickup
 		populatePickupData(pickup)
 	end
-	implementSaveKeys(SaveManager.DEFAULT_SAVE.game, dataCache.game)
-	implementSaveKeys(SaveManager.DEFAULT_SAVE.gameNoBackup, dataCache.gameNoBackup)
+	implementSaveKeys(AnixbirthSaveManager.DEFAULT_SAVE.game, dataCache.game)
+	implementSaveKeys(AnixbirthSaveManager.DEFAULT_SAVE.gameNoBackup, dataCache.gameNoBackup)
 
 	local function resetNoRerollData(targetTable, defaultTable, checkIndex)
 		if checkIndex and targetTable[getListIndex()] then
@@ -924,25 +924,25 @@ local function onEntityInit(_, ent)
 			if data.InitSeedBackup and ent.InitSeed == data.InitSeedBackup then
 				local backupSave = data.NoRerollSaveBackup
 				local initSeed = data.InitSeedBackup
-				data.NoRerollSaveBackup = SaveManager.Utility.DeepCopy(data.NoRerollSave)
+				data.NoRerollSaveBackup = AnixbirthSaveManager.Utility.DeepCopy(data.NoRerollSave)
 				data.InitSeedBackup = data.InitSeed
 				data.NoRerollSave = backupSave
 				data.InitSeed = initSeed
-				SaveManager.Utility.SendDebugMessage("Detected flip in", saveIndex, "! Restored backup NoRerollSave.")
+				AnixbirthSaveManager.Utility.SendDebugMessage("Detected flip in", saveIndex, "! Restored backup NoRerollSave.")
 				return
 			end
-			data.NoRerollSaveBackup = SaveManager.Utility.DeepCopy(data.NoRerollSave)
+			data.NoRerollSaveBackup = AnixbirthSaveManager.Utility.DeepCopy(data.NoRerollSave)
 			data.InitSeedBackup = data.InitSeed
-			data.NoRerollSave = SaveManager.Utility.PatchSaveFile({}, defaultTable)
+			data.NoRerollSave = AnixbirthSaveManager.Utility.PatchSaveFile({}, defaultTable)
 			data.InitSeed = ent.InitSeed
-			SaveManager.Utility.SendDebugMessage("Detected init seed change in", saveIndex,
+			AnixbirthSaveManager.Utility.SendDebugMessage("Detected init seed change in", saveIndex,
 				"! NoRerollSave has been reset")
 		end
 	end
-	resetNoRerollData(dataCache.game.room, SaveManager.DEFAULT_SAVE.game.room)
-	resetNoRerollData(dataCache.game.roomFloor, SaveManager.DEFAULT_SAVE.game.roomFloor, true)
-	resetNoRerollData(dataCache.gameNoBackup.room, SaveManager.DEFAULT_SAVE.gameNoBackup.room)
-	resetNoRerollData(dataCache.gameNoBackup.roomFloor, SaveManager.DEFAULT_SAVE.gameNoBackup.roomFloor, true)
+	resetNoRerollData(dataCache.game.room, AnixbirthSaveManager.DEFAULT_SAVE.game.room)
+	resetNoRerollData(dataCache.game.roomFloor, AnixbirthSaveManager.DEFAULT_SAVE.game.roomFloor, true)
+	resetNoRerollData(dataCache.gameNoBackup.room, AnixbirthSaveManager.DEFAULT_SAVE.gameNoBackup.room)
+	resetNoRerollData(dataCache.gameNoBackup.roomFloor, AnixbirthSaveManager.DEFAULT_SAVE.gameNoBackup.roomFloor, true)
 end
 
 local function detectLuamod()
@@ -950,7 +950,7 @@ local function detectLuamod()
 		and (REPENTOGON and (not dontSaveModData and Isaac.GetFrameCount() > 0 and Console.GetHistory()[2] == "Success!")
 			or game:GetFrameCount() > 0)
 	then
-		SaveManager.Load(true)
+		AnixbirthSaveManager.Load(true)
 		inRunButNotLoaded = false
 		shouldRestoreOnUse = true
 		if game:GetFrameCount() > 0 then
@@ -969,22 +969,22 @@ local function resetData(saveType)
 			for _, index in pairs(bossAscentSaveIndexes) do
 				local listIndexSave = dataCache.game.roomFloor[listIndex]
 				if listIndexSave and listIndexSave[index] then
-					SaveManager.Utility.SendDebugMessage("Found boss ascent backup data for", index,
+					AnixbirthSaveManager.Utility.SendDebugMessage("Found boss ascent backup data for", index,
 						". Storing data for carry over after reset...")
 					transferBossAscentData[index] = listIndexSave[index]
 					listIndexSave[index] = nil
 				else
-					SaveManager.Utility.SendDebugMessage("No data found for", saveType, listIndex, index)
+					AnixbirthSaveManager.Utility.SendDebugMessage("No data found for", saveType, listIndex, index)
 				end
 			end
 			bossAscentSaveIndexes = {}
 		end
 		local listIndex = getListIndex()
-		hourglassBackup.run = SaveManager.Utility.DeepCopy(dataCache.game.run)
-		hourglassBackup[saveType] = SaveManager.Utility.DeepCopy(dataCache.game[saveType])
+		hourglassBackup.run = AnixbirthSaveManager.Utility.DeepCopy(dataCache.game.run)
+		hourglassBackup[saveType] = AnixbirthSaveManager.Utility.DeepCopy(dataCache.game[saveType])
 		if saveType == "floor" then
-			hourglassBackup.pickup.floor = SaveManager.Utility.DeepCopy(dataCache.game.pickup.floor)
-			SaveManager.Save()
+			hourglassBackup.pickup.floor = AnixbirthSaveManager.Utility.DeepCopy(dataCache.game.pickup.floor)
+			AnixbirthSaveManager.Save()
 		elseif saveType == "room" and listIndex ~= "509" then
 			--roomFloor data from gotoCommands should be removed, as if it were a room save. It is not persistent.
 			if dataCache.game.roomFloor["509"] then
@@ -994,17 +994,17 @@ local function resetData(saveType)
 				dataCache.gameNoBackup.roomFloor["509"] = nil
 			end
 		end
-		dataCache.game[saveType] = SaveManager.Utility.PatchSaveFile({}, SaveManager.DEFAULT_SAVE.game[saveType])
-		dataCache.gameNoBackup[saveType] = SaveManager.Utility.PatchSaveFile({},
-			SaveManager.DEFAULT_SAVE.gameNoBackup[saveType])
+		dataCache.game[saveType] = AnixbirthSaveManager.Utility.PatchSaveFile({}, AnixbirthSaveManager.DEFAULT_SAVE.game[saveType])
+		dataCache.gameNoBackup[saveType] = AnixbirthSaveManager.Utility.PatchSaveFile({},
+			AnixbirthSaveManager.DEFAULT_SAVE.gameNoBackup[saveType])
 		for index, data in pairs(transferBossAscentData) do
 			if not dataCache.game.roomFloor[listIndex] then
 				dataCache.game.roomFloor[listIndex] = {}
 			end
 			dataCache.game.roomFloor[listIndex][index] = data
-			SaveManager.Utility.SendDebugMessage("Saved data from reset, index", index)
+			AnixbirthSaveManager.Utility.SendDebugMessage("Saved data from reset, index", index)
 		end
-		SaveManager.Utility.SendDebugMessage("reset", saveType, "data")
+		AnixbirthSaveManager.Utility.SendDebugMessage("reset", saveType, "data")
 		shouldRestoreOnUse = true
 	end
 	if saveType == "room" then
@@ -1017,7 +1017,7 @@ end
 local saveFileWait = 3
 
 local function preGameExit(_, shouldSave)
-	SaveManager.Utility.SendDebugMessage("pre game exit")
+	AnixbirthSaveManager.Utility.SendDebugMessage("pre game exit")
 
 	if shouldSave then
 		for _, pickup in pairs(Isaac.FindByType(EntityType.ENTITY_PICKUP)) do
@@ -1025,11 +1025,11 @@ local function preGameExit(_, shouldSave)
 			storePickupData(pickup)
 		end
 	else
-		dataCache.game = SaveManager.Utility.PatchSaveFile({}, SaveManager.DEFAULT_SAVE.game)
-		dataCache.gameNoBackup = SaveManager.Utility.PatchSaveFile({}, SaveManager.DEFAULT_SAVE.gameNoBackup)
-		hourglassBackup = SaveManager.Utility.PatchSaveFile({}, SaveManager.DEFAULT_SAVE.game)
+		dataCache.game = AnixbirthSaveManager.Utility.PatchSaveFile({}, AnixbirthSaveManager.DEFAULT_SAVE.game)
+		dataCache.gameNoBackup = AnixbirthSaveManager.Utility.PatchSaveFile({}, AnixbirthSaveManager.DEFAULT_SAVE.gameNoBackup)
+		hourglassBackup = AnixbirthSaveManager.Utility.PatchSaveFile({}, AnixbirthSaveManager.DEFAULT_SAVE.game)
 	end
-	SaveManager.Save()
+	AnixbirthSaveManager.Save()
 	inRunButNotLoaded = false
 	shouldRestoreOnUse = false
 	saveFileWait = 0
@@ -1059,7 +1059,7 @@ local function postEntityRemove(_, ent)
 		end
 		return
 	end
-	local saveIndex = SaveManager.Utility.GetSaveIndex(ent)
+	local saveIndex = AnixbirthSaveManager.Utility.GetSaveIndex(ent)
 
 	---@param tab GameSave
 	local function removeSaveData(tab)
@@ -1067,7 +1067,7 @@ local function postEntityRemove(_, ent)
 			if saveType == "roomFloor" and dataTable[getListIndex()] then
 				removeSaveData(dataTable)
 			elseif dataTable[saveIndex] then
-				SaveManager.Utility.SendDebugMessage("Removed data", saveIndex)
+				AnixbirthSaveManager.Utility.SendDebugMessage("Removed data", saveIndex)
 				dataTable[saveIndex] = nil
 			end
 		end
@@ -1078,7 +1078,7 @@ end
 
 --A safety precaution to make sure data for entities that no longer exist are removed from room data.
 local function removeLeftoverEntityData()
-	SaveManager.Utility.SendDebugMessage("leftover ent data check")
+	AnixbirthSaveManager.Utility.SendDebugMessage("leftover ent data check")
 	local function removeLeftoverData(tab, isRoomFloor)
 		if isRoomFloor then
 			if tab[getListIndex()] then
@@ -1098,14 +1098,14 @@ local function removeLeftoverEntityData()
 				["SLOT"] = EntityType.ENTITY_SLOT,
 			}
 			local entType = nameToType[entName]
-			SaveManager.Utility.SendDebugMessage("Searching for leftover data under", entName)
+			AnixbirthSaveManager.Utility.SendDebugMessage("Searching for leftover data under", entName)
 			if entType then
 				for _, ent in pairs(Isaac.FindByType(entType)) do
-					local index = SaveManager.Utility.GetSaveIndex(ent)
+					local index = AnixbirthSaveManager.Utility.GetSaveIndex(ent)
 					if key == index then goto continue end --Found entity, no need to remove
 				end
 			end
-			SaveManager.Utility.SendDebugMessage("Leftover data removed for", key)
+			AnixbirthSaveManager.Utility.SendDebugMessage("Leftover data removed for", key)
 			tab[key] = nil
 			::continue::
 		end
@@ -1117,14 +1117,14 @@ local function removeLeftoverEntityData()
 end
 
 local function postNewRoom()
-	SaveManager.Utility.SendDebugMessage("new room")
+	AnixbirthSaveManager.Utility.SendDebugMessage("new room")
 	currentListIndex = game:GetLevel():GetCurrentRoomDesc().ListIndex
 	resetData("room")
 	removeLeftoverEntityData()
 end
 
 local function postNewLevel()
-	SaveManager.Utility.SendDebugMessage("new level")
+	AnixbirthSaveManager.Utility.SendDebugMessage("new level")
 	resetData("roomFloor")
 	resetData("floor")
 	for i = 0, game:GetNumPlayers() - 1 do
@@ -1157,7 +1157,7 @@ local function postSaveSlotLoad(_, _, isSlotSelected, _)
 	if saveFileWait < 3 then
 		saveFileWait = saveFileWait + 1
 	else
-		SaveManager.Load(false)
+		AnixbirthSaveManager.Load(false)
 	end
 end
 
@@ -1173,15 +1173,15 @@ end
 
 -- Initializes the save manager.
 ---@param mod table @The reference to your mod. This is the table that is returned when you call `RegisterMod`.
-function SaveManager.Init(mod)
+function AnixbirthSaveManager.Init(mod)
 	modReference = mod
-	modReference:AddPriorityCallback(ModCallbacks.MC_USE_ITEM, SaveManager.Utility.CallbackPriority.EARLY,
-		SaveManager.HourglassRestore,
+	modReference:AddPriorityCallback(ModCallbacks.MC_USE_ITEM, AnixbirthSaveManager.Utility.CallbackPriority.EARLY,
+		AnixbirthSaveManager.HourglassRestore,
 		CollectibleType.COLLECTIBLE_GLOWING_HOUR_GLASS)
 	-- Priority callbacks put in place to load data early and save data late.
 
 	--Global data
-	modReference:AddPriorityCallback(ModCallbacks.MC_POST_PLAYER_INIT, SaveManager.Utility.CallbackPriority.IMPORTANT,
+	modReference:AddPriorityCallback(ModCallbacks.MC_POST_PLAYER_INIT, AnixbirthSaveManager.Utility.CallbackPriority.IMPORTANT,
 		function(_, player)
 			if GetPtrHash(player) == GetPtrHash(Isaac.GetPlayer()) then
 				inRunButNotLoaded = true
@@ -1189,21 +1189,21 @@ function SaveManager.Init(mod)
 			onEntityInit()
 		end)
 
-	modReference:AddPriorityCallback(ModCallbacks.MC_POST_PLAYER_INIT, SaveManager.Utility.CallbackPriority.IMPORTANT,
+	modReference:AddPriorityCallback(ModCallbacks.MC_POST_PLAYER_INIT, AnixbirthSaveManager.Utility.CallbackPriority.IMPORTANT,
 		onEntityInit)
-	modReference:AddPriorityCallback(ModCallbacks.MC_FAMILIAR_INIT, SaveManager.Utility.CallbackPriority.IMPORTANT,
+	modReference:AddPriorityCallback(ModCallbacks.MC_FAMILIAR_INIT, AnixbirthSaveManager.Utility.CallbackPriority.IMPORTANT,
 		onEntityInit)
-	modReference:AddPriorityCallback(ModCallbacks.MC_POST_PICKUP_INIT, SaveManager.Utility.CallbackPriority.IMPORTANT,
+	modReference:AddPriorityCallback(ModCallbacks.MC_POST_PICKUP_INIT, AnixbirthSaveManager.Utility.CallbackPriority.IMPORTANT,
 		onEntityInit)
-	modReference:AddPriorityCallback(ModCallbacks.MC_POST_UPDATE, SaveManager.Utility.CallbackPriority.EARLY, postUpdate)
+	modReference:AddPriorityCallback(ModCallbacks.MC_POST_UPDATE, AnixbirthSaveManager.Utility.CallbackPriority.EARLY, postUpdate)
 
 	if REPENTOGON then
-		modReference:AddPriorityCallback(ModCallbacks.MC_POST_SLOT_INIT, SaveManager.Utility.CallbackPriority.IMPORTANT,
+		modReference:AddPriorityCallback(ModCallbacks.MC_POST_SLOT_INIT, AnixbirthSaveManager.Utility.CallbackPriority.IMPORTANT,
 			onEntityInit)
 		modReference:AddPriorityCallback(ModCallbacks.MC_POST_SAVESLOT_LOAD,
-			SaveManager.Utility.CallbackPriority.IMPORTANT, postSaveSlotLoad)
+			AnixbirthSaveManager.Utility.CallbackPriority.IMPORTANT, postSaveSlotLoad)
 		modReference:AddPriorityCallback(ModCallbacks.MC_MENU_INPUT_ACTION,
-			SaveManager.Utility.CallbackPriority.IMPORTANT, function()
+			AnixbirthSaveManager.Utility.CallbackPriority.IMPORTANT, function()
 				local success, currentMenu = pcall(MenuManager.GetActiveMenu)
 				if not success then return end
 				dontSaveModData = currentMenu == MainMenuType.TITLE or
@@ -1211,47 +1211,47 @@ function SaveManager.Init(mod)
 				detectLuamod()
 			end)
 	else
-		modReference:AddPriorityCallback(ModCallbacks.MC_POST_UPDATE, SaveManager.Utility.CallbackPriority.IMPORTANT,
+		modReference:AddPriorityCallback(ModCallbacks.MC_POST_UPDATE, AnixbirthSaveManager.Utility.CallbackPriority.IMPORTANT,
 			postSlotInitNoRGON)
 	end
 
 	--load luamod as early as possible.
-	modReference:AddPriorityCallback(ModCallbacks.MC_INPUT_ACTION, SaveManager.Utility.CallbackPriority.IMPORTANT,
+	modReference:AddPriorityCallback(ModCallbacks.MC_INPUT_ACTION, AnixbirthSaveManager.Utility.CallbackPriority.IMPORTANT,
 		function()
 			dontSaveModData = false
 			detectLuamod()
 		end)
 
-	modReference:AddPriorityCallback(ModCallbacks.MC_POST_NEW_ROOM, SaveManager.Utility.CallbackPriority.EARLY,
+	modReference:AddPriorityCallback(ModCallbacks.MC_POST_NEW_ROOM, AnixbirthSaveManager.Utility.CallbackPriority.EARLY,
 		postNewRoom)
-	modReference:AddPriorityCallback(ModCallbacks.MC_POST_NEW_LEVEL, SaveManager.Utility.CallbackPriority.EARLY,
+	modReference:AddPriorityCallback(ModCallbacks.MC_POST_NEW_LEVEL, AnixbirthSaveManager.Utility.CallbackPriority.EARLY,
 		postNewLevel)
-	modReference:AddPriorityCallback(ModCallbacks.MC_PRE_GAME_EXIT, SaveManager.Utility.CallbackPriority.LATE,
+	modReference:AddPriorityCallback(ModCallbacks.MC_PRE_GAME_EXIT, AnixbirthSaveManager.Utility.CallbackPriority.LATE,
 		preGameExit)
-	modReference:AddPriorityCallback(ModCallbacks.MC_POST_ENTITY_REMOVE, SaveManager.Utility.CallbackPriority.LATE,
+	modReference:AddPriorityCallback(ModCallbacks.MC_POST_ENTITY_REMOVE, AnixbirthSaveManager.Utility.CallbackPriority.LATE,
 		postEntityRemove)
-	modReference:AddPriorityCallback(ModCallbacks.MC_PRE_USE_ITEM, SaveManager.Utility.CallbackPriority.LATE,
+	modReference:AddPriorityCallback(ModCallbacks.MC_PRE_USE_ITEM, AnixbirthSaveManager.Utility.CallbackPriority.LATE,
 		function()
 			movingBoxCheck = true
 		end,
 		CollectibleType.COLLECTIBLE_MOVING_BOX)
 
-	modReference:AddPriorityCallback(ModCallbacks.MC_USE_ITEM, SaveManager.Utility.CallbackPriority.EARLY,
+	modReference:AddPriorityCallback(ModCallbacks.MC_USE_ITEM, AnixbirthSaveManager.Utility.CallbackPriority.EARLY,
 		function()
 			movingBoxCheck = false
 		end,
 		CollectibleType.COLLECTIBLE_MOVING_BOX)
 
 	-- used to detect if an unloaded mod is this mod for when saving for luamod
-	modReference.__SAVEMANAGER_UNIQUE_KEY = ("%s-%s"):format(Random(), Random())
-	modReference:AddPriorityCallback(ModCallbacks.MC_PRE_MOD_UNLOAD, SaveManager.Utility.CallbackPriority.EARLY,
+	modReference.__AnixbirthSaveManager_UNIQUE_KEY = ("%s-%s"):format(Random(), Random())
+	modReference:AddPriorityCallback(ModCallbacks.MC_PRE_MOD_UNLOAD, AnixbirthSaveManager.Utility.CallbackPriority.EARLY,
 		function(_, modToUnload)
-			if modToUnload.__SAVEMANAGER_UNIQUE_KEY and modToUnload.__SAVEMANAGER_UNIQUE_KEY == modReference.__SAVEMANAGER_UNIQUE_KEY
+			if modToUnload.__AnixbirthSaveManager_UNIQUE_KEY and modToUnload.__AnixbirthSaveManager_UNIQUE_KEY == modReference.__AnixbirthSaveManager_UNIQUE_KEY
 				and loadedData
 				and not dontSaveModData
 			then
 				saveFileWait = 0
-				SaveManager.Save()
+				AnixbirthSaveManager.Save()
 			end
 		end)
 end
@@ -1267,7 +1267,7 @@ end
 --#region save methods
 
 -- Returns the entire save table, including the file save.
-function SaveManager.GetEntireSave()
+function AnixbirthSaveManager.GetEntireSave()
 	return dataCache
 end
 
@@ -1278,8 +1278,8 @@ end
 ---@param listIndex? integer
 ---@return table
 local function getRespectiveSave(ent, noHourglass, initDataIfNotPresent, saveType, listIndex)
-	if not SaveManager.Utility.IsDataInitialized(not initDataIfNotPresent)
-		or (ent and not SaveManager.Utility.IsDataTypeAllowed(ent.Type, saveType))
+	if not AnixbirthSaveManager.Utility.IsDataInitialized(not initDataIfNotPresent)
+		or (ent and not AnixbirthSaveManager.Utility.IsDataTypeAllowed(ent.Type, saveType))
 	then
 		---@diagnostic disable-next-line: missing-return-value
 		return
@@ -1294,29 +1294,29 @@ local function getRespectiveSave(ent, noHourglass, initDataIfNotPresent, saveTyp
 	local stringIndex = tostring(listIndex or getListIndex())
 	if saveType == "roomFloor" then
 		if not saveTable[stringIndex] then
-			SaveManager.Utility.SendDebugMessage("Created index", stringIndex)
+			AnixbirthSaveManager.Utility.SendDebugMessage("Created index", stringIndex)
 			saveTable[stringIndex] = {}
 		end
 		saveTable = saveTable[stringIndex]
 	end
-	local saveIndex = SaveManager.Utility.GetSaveIndex(ent)
+	local saveIndex = AnixbirthSaveManager.Utility.GetSaveIndex(ent)
 	local data = saveTable[saveIndex]
 
 	if data == nil and initDataIfNotPresent then
 		local gameSave = noHourglass and "gameNoBackup" or "game"
-		local defaultKey = SaveManager.Utility.GetDefaultSaveKey(ent)
-		local defaultSave = SaveManager.DEFAULT_SAVE[gameSave][saveType][defaultKey] or {}
+		local defaultKey = AnixbirthSaveManager.Utility.GetDefaultSaveKey(ent)
+		local defaultSave = AnixbirthSaveManager.DEFAULT_SAVE[gameSave][saveType][defaultKey] or {}
 		if ent and getmetatable(ent).__type ~= "Vector" and ent.Type == EntityType.ENTITY_PICKUP then
 			local pickupData = {
 				InitSeed = ent.InitSeed,
-				RerollSave = SaveManager.Utility.PatchSaveFile({}, defaultSave),
-				NoRerollSave = SaveManager.Utility.PatchSaveFile({}, defaultSave)
+				RerollSave = AnixbirthSaveManager.Utility.PatchSaveFile({}, defaultSave),
+				NoRerollSave = AnixbirthSaveManager.Utility.PatchSaveFile({}, defaultSave)
 			}
 			saveTable[saveIndex] = pickupData
 		else
-			saveTable[saveIndex] = SaveManager.Utility.PatchSaveFile({}, defaultSave)
+			saveTable[saveIndex] = AnixbirthSaveManager.Utility.PatchSaveFile({}, defaultSave)
 		end
-		SaveManager.Utility.SendDebugMessage("Created new", saveType, "data for", saveIndex)
+		AnixbirthSaveManager.Utility.SendDebugMessage("Created new", saveType, "data for", saveIndex)
 	end
 	data = saveTable[saveIndex]
 
@@ -1326,21 +1326,21 @@ end
 ---@param ent? Entity @If an entity is provided, returns an entity specific save within the run save. Otherwise, returns arbitrary data in the save not attached to an entity.
 ---@param noHourglass false|boolean? @If true, it'll look in a separate game save that is not affected by the Glowing Hourglass.
 ---@return table @Can return nil if data has not been loaded, or the manager has not been initialized. Will create data if none exists.
-function SaveManager.GetRunSave(ent, noHourglass)
+function AnixbirthSaveManager.GetRunSave(ent, noHourglass)
 	return getRespectiveSave(ent, noHourglass, true, "run")
 end
 
 ---@param ent? Entity @If an entity is provided, returns an entity specific save within the run save. Otherwise, returns arbitrary data in the save not attached to an entity.
 ---@param noHourglass false|boolean? @If true, it'll look in a separate game save that is not affected by the Glowing Hourglass.
 ---@return table? @Can return nil if data has not been loaded, the manager has not been initialized, or if no data already existed.
-function SaveManager.TryGetRunSave(ent, noHourglass)
+function AnixbirthSaveManager.TryGetRunSave(ent, noHourglass)
 	return getRespectiveSave(ent, noHourglass, false, "run")
 end
 
 ---@param ent? Entity  @If an entity is provided, returns an entity specific save within the floor save. Otherwise, returns arbitrary data in the save not attached to an entity.
 ---@param noHourglass false|boolean? @If true, it'll look in a separate game save that is not affected by the Glowing Hourglass.
 ---@return table @Can return nil if data has not been loaded, or the manager has not been initialized. Will create data if none exists.
-function SaveManager.GetFloorSave(ent, noHourglass)
+function AnixbirthSaveManager.GetFloorSave(ent, noHourglass)
 	return getRespectiveSave(ent, noHourglass, true, "floor")
 end
 
@@ -1348,7 +1348,7 @@ end
 ---@param ent? Entity  @If an entity is provided, returns an entity specific save within the floor save. Otherwise, returns arbitrary data in the save not attached to an entity.
 ---@param noHourglass false|boolean? @If true, it'll look in a separate game save that is not affected by the Glowing Hourglass.
 ---@return table? @Can return nil if data has not been loaded, or the manager has not been initialized, or if no data already existed.
-function SaveManager.TryGetFloorSave(ent, noHourglass)
+function AnixbirthSaveManager.TryGetFloorSave(ent, noHourglass)
 	return getRespectiveSave(ent, noHourglass, false, "floor")
 end
 
@@ -1357,7 +1357,7 @@ end
 ---@param noHourglass false|boolean? @If true, it'll look in a separate game save that is not affected by the Glowing Hourglass.
 ---@param listIndex? integer @Returns data for the provided `listIndex` instead of the index of the current room.
 ---@return table @Can return nil if data has not been loaded, or the manager has not been initialized. Will create data if none exists.
-function SaveManager.GetRoomFloorSave(ent, noHourglass, listIndex)
+function AnixbirthSaveManager.GetRoomFloorSave(ent, noHourglass, listIndex)
 	return getRespectiveSave(ent, noHourglass, true, "roomFloor", listIndex)
 end
 
@@ -1365,63 +1365,63 @@ end
 ---@param noHourglass false|boolean? @If true, it'll look in a separate game save that is not affected by the Glowing Hourglass.
 ---@param listIndex? integer @Returns data for the provided `listIndex` instead of the index of the current room.
 ---@return table? @Can return nil if data has not been loaded, or the manager has not been initialized, or if no data already existed.
-function SaveManager.TryGetRoomFloorSave(ent, noHourglass, listIndex)
+function AnixbirthSaveManager.TryGetRoomFloorSave(ent, noHourglass, listIndex)
 	return getRespectiveSave(ent, noHourglass, false, "roomFloor", listIndex)
 end
 
 ---@param ent? Entity | Vector  @If an entity is provided, returns an entity specific save within the room save. If a Vector is provided, returns a grid index specific save. Otherwise, returns arbitrary data in the save not attached to an entity.
 ---@param noHourglass false|boolean? @If true, it'll look in a separate game save that is not affected by the Glowing Hourglass.
 ---@return table @Can return nil if data has not been loaded, or the manager has not been initialized. Will create data if none exists.
-function SaveManager.GetRoomSave(ent, noHourglass)
+function AnixbirthSaveManager.GetRoomSave(ent, noHourglass)
 	return getRespectiveSave(ent, noHourglass, true, "room")
 end
 
 ---@param ent? Entity | Vector  @If an entity is provided, returns an entity specific save within the room save. If a Vector is provided, returns a grid index specific save. Otherwise, returns arbitrary data in the save not attached to an entity.
 ---@param noHourglass false|boolean? @If true, it'll look in a separate game save that is not affected by the Glowing Hourglass.
 ---@return table? @Can return nil if data has not been loaded, or the manager has not been initialized, or if no data already existed.
-function SaveManager.TryGetRoomSave(ent, noHourglass)
+function AnixbirthSaveManager.TryGetRoomSave(ent, noHourglass)
 	return getRespectiveSave(ent, noHourglass, false, "room")
 end
 
 ---Returns uniquely-saved data for pickups when outside of the room they're stored in.
 ---@return table? @Can return nil if data has not been loaded, or the manager has not been initialized.
-function SaveManager.GetPickupSave()
-	if not SaveManager.Utility.IsDataInitialized() then return end
+function AnixbirthSaveManager.GetPickupSave()
+	if not AnixbirthSaveManager.Utility.IsDataInitialized() then return end
 
 	return dataCache.game.pickup
 end
 
 ---Please note that this is essentially a normal table with the connotation of being used with UnlockAPI.
 ---@return table? @Can return nil if data has not been loaded, or the manager has not been initialized.
-function SaveManager.GetUnlockAPISave()
-	if not SaveManager.Utility.IsDataInitialized() then return end
+function AnixbirthSaveManager.GetUnlockAPISave()
+	if not AnixbirthSaveManager.Utility.IsDataInitialized() then return end
 
 	return dataCache.file.unlockApi
 end
 
 ---Please note that this is essentially a normal table with the connotation of being used with Dead Sea Scrolls (DSS).
 ---@return table? @Can return nil if data has not been loaded, or the manager has not been initialized.
-function SaveManager.GetDeadSeaScrollsSave()
-	if not SaveManager.Utility.IsDataInitialized() then return end
+function AnixbirthSaveManager.GetDeadSeaScrollsSave()
+	if not AnixbirthSaveManager.Utility.IsDataInitialized() then return end
 
 	return dataCache.file.deadSeaScrolls
 end
 
 ---Please note that this is essentially a normal table with the connotation of being used to store settings.
 ---@return table? @Can return nil if data has not been loaded, or the manager has not been initialized.
-function SaveManager.GetSettingsSave()
-	if not SaveManager.Utility.IsDataInitialized() then return end
+function AnixbirthSaveManager.GetSettingsSave()
+	if not AnixbirthSaveManager.Utility.IsDataInitialized() then return end
 
 	return dataCache.file.settings
 end
 
 ---Gets the "type" save data within the file save. Basically just a table you can put anything it.
-function SaveManager.GetPersistentSave()
-	if not SaveManager.Utility.IsDataInitialized() then return end
+function AnixbirthSaveManager.GetPersistentSave()
+	if not AnixbirthSaveManager.Utility.IsDataInitialized() then return end
 
 	return dataCache.file.other
 end
 
 --#endregion
 
-return SaveManager
+return AnixbirthSaveManager

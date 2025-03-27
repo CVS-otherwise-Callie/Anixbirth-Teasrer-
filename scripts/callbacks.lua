@@ -48,9 +48,9 @@ function FHAC.PostUpdateStuff()
     if not FHAC.FiendFolioCompactLoaded then
         FHAC.FiendFolioCompat()
     end
-    --FHAC.PreSavedEntsLevel = SaveManager.GetRunSave().PreSavedEntsLevel
-    --FHAC.SavedEntsLevel = SaveManager.GetRunSave().SavedEntsLevel
-    --FHAC.ToBeSavedEnts = SaveManager.GetRunSave().ToBeSavedEnts
+    --FHAC.PreSavedEntsLevel = AnixbirthSaveManager.GetRunSave().PreSavedEntsLevel
+    --FHAC.SavedEntsLevel = AnixbirthSaveManager.GetRunSave().SavedEntsLevel
+    --FHAC.ToBeSavedEnts = AnixbirthSaveManager.GetRunSave().ToBeSavedEnts
 end
 FHAC:AddCallback(ModCallbacks.MC_POST_UPDATE, FHAC.PostUpdateStuff)
 
@@ -146,7 +146,7 @@ FHAC:AddCallback(ModCallbacks.MC_POST_EFFECT_UPDATE, FHAC.EffectPostUpdate)
 
 FHAC:AddCallback(ModCallbacks.MC_EVALUATE_CACHE,function(_, player, flag)
 
-    local dat = SaveManager.GetRunSave(player).anixbirthsaveData
+    local dat = AnixbirthSaveManager.GetRunSave(player).anixbirthsaveData
 
     if flag == CacheFlag.CACHE_DAMAGE then
 
@@ -213,7 +213,7 @@ function FHAC:OnPostDataLoad(saveData, isLuamod)
     saveData.file.other.HasLoaded = true
 end
 
-SaveManager.AddCallback(SaveManager.Utility.CustomCallback.POST_DATA_LOAD, FHAC.OnPostDataLoad)
+AnixbirthSaveManager.AddCallback(AnixbirthSaveManager.Utility.CustomCallback.POST_DATA_LOAD, FHAC.OnPostDataLoad)
 
 if REPENTOGON then
 

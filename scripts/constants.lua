@@ -62,7 +62,8 @@ FHAC.Monsters = {
     Soot = mod:ENT("Soot"),
     Jim = mod:ENT("Jim"),
     NarcissismMirror = mod:ENT("Narcissism Mirror"),
-    Woodhead = mod:ENT("Woodhead")
+    Woodhead = mod:ENT("Woodhead"),
+    NarcissismReflections = mod:ENT("Narcissism Reflections")
 }
 
 FHAC.MiniBosses = {

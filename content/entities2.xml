@@ -443,7 +443,11 @@
         <gibs amount="6" blood="2" bone="1" eye="1" gut="1" large="0" />
     </entity>
 
-    <entity id="37" variant="2" name="Narcissism Mirror" anm2path="minibosses/narcissism/narcissism.anm2" reroll="true" baseHP="10" boss="0" champion="0" collisionDamage="1" collisionMass="3" collisionRadius="17" friction="1" numGridCollisionPoints="4" shadowSize="11" stageHP="0" gridCollision="walls" tags="fly">
+    <entity id="37" variant="4" name="Narcissism Reflections" anm2path="minibosses/narcissism/narcissism.anm2" reroll="true" baseHP="10" boss="0" champion="0" collisionDamage="1" collisionMass="3" collisionRadius="10" friction="1" numGridCollisionPoints="4" shadowSize="11" stageHP="0" gridCollision="walls">
+        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
+    </entity>
+
+    <entity id="37" variant="2" name="Narcissism Mirror" anm2path="minibosses/narcissism/narcissism.anm2" reroll="true" baseHP="10" boss="0" champion="0" collisionDamage="1" collisionMass="3" collisionRadius="8" friction="1" numGridCollisionPoints="4" shadowSize="11" stageHP="0" gridCollision="walls" tags="fly">
         <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
     </entity>
 

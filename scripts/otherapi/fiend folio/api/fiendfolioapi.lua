@@ -144,7 +144,7 @@ mod:AddCallback(ModCallbacks.MC_PRE_PICKUP_COLLISION, function(_, pickup, collid
 		if player:GetPlayerType() == PlayerType.PLAYER_THESOUL_B and player:GetOtherTwin() ~= nil then
 			player = player:GetOtherTwin()
 		end
-		local data = SaveManager.GetRunSave(player).anixbirthsaveData
+		local data = AnixbirthSaveManager.GetRunSave(player).anixbirthsaveData
 
 		if player:CanPickupItem() and
 		   player:IsExtraAnimationFinished() and
@@ -184,7 +184,7 @@ mod:AddCallback(ModCallbacks.MC_POST_PEFFECT_UPDATE, function(_, player)
 	-- until the player is no longer holding an item, then reset it
 	-- interesting!!
 	local basedata = player:GetData()
-	local data = SaveManager.GetRunSave(player).anixbirthsaveData
+	local data = AnixbirthSaveManager.GetRunSave(player).anixbirthsaveData
 	local playerIsHoldingItem = player:IsHoldingItem()
 	if playerIsHoldingItem then
 		if not player:IsHeldItemVisible() then

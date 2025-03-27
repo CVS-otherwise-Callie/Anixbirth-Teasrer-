@@ -91,7 +91,7 @@ function mod:NeutralflyAI(npc, sprite, d)
             if mod:isScare(npc) then
                 npc.Velocity = mod:Lerp(npc.Velocity, myvec, 0.5):Resized(-7)
             else
-                npc.Velocity = mod:Lerp(npc.Velocity, myvec, 0.5):Resized(7)
+                npc.Velocity = mod:Lerp(npc.Velocity, Vector(7, 0):Rotated((d.newpos - npc.Position):GetAngleDegrees()), 0.2)
             end
             mod:spritePlay(sprite, d.spritedir)
         end

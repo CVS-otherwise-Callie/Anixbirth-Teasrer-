@@ -40,7 +40,8 @@ FHAC:LoadScripts("scripts.iam.monsters", {
 	"soot",
 	"jim",
 	"narcissism mirror",
-	"woodhead"
+	"woodhead",
+	"narcissim relfections"
 })
 
 FHAC:LoadScripts("scripts.iam.minibosses", {

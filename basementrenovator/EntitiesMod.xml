@@ -138,7 +138,7 @@ Use 2, 4, or 6 normally.
 <!--Tainted-->
 <entity ID="426" Variant="0" Name="Tainted Silly" Image="mah boys/sillytainted.png" BaseHP="70" StageHP="13" ShieldStrength="20" Tags="Champion"/>
 <entity ID="426" Variant="1" Name="Tainted String" Image="mah boys/stringtainted.png" BaseHP="70" StageHP="13" ShieldStrength="20" Tags="Champion"/>
-<entity ID="426" Variant="2" Name="&amp;" Image="mah boys/&amp;.png" BaseHP="20" StageHP="20" ShieldStrength="1000" Tags="Champion"/>
+<entity ID="426" Variant="2" Name="&amp;" Image="mah boys/&amp;tainted.png" BaseHP="20" StageHP="20" ShieldStrength="1000" Tags="Champion"/>
 
 <tab Name="Anixbirth (Hope)">
 

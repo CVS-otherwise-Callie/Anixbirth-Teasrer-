@@ -7,20 +7,20 @@ local DSSCoreVersion = 7
 local MenuProvider = {}
 
 function MenuProvider.SaveSaveData()
-    SaveManager.Save()
+    AnixbirthSaveManager.Save()
 end
 
 function MenuProvider.GetPaletteSetting()
-	return SaveManager.GetDeadSeaScrollsSave().MenuPalette
+	return AnixbirthSaveManager.GetDeadSeaScrollsSave().MenuPalette
 end
 
 function MenuProvider.SavePaletteSetting(var)
-	SaveManager.GetDeadSeaScrollsSave().MenuPalette = var
+	AnixbirthSaveManager.GetDeadSeaScrollsSave().MenuPalette = var
 end
 
 function MenuProvider.GetHudOffsetSetting()
 	if not REPENTANCE then
-		return SaveManager.GetDeadSeaScrollsSave().HudOffset
+		return AnixbirthSaveManager.GetDeadSeaScrollsSave().HudOffset
 	else
 		return Options.HUDOffset * 10
 	end
@@ -28,56 +28,56 @@ end
 
 function MenuProvider.SaveHudOffsetSetting(var)
 	if not REPENTANCE then
-		SaveManager.GetDeadSeaScrollsSave().HudOffset = var
+		AnixbirthSaveManager.GetDeadSeaScrollsSave().HudOffset = var
 	end
 end
 
 function MenuProvider.GetGamepadToggleSetting()
-	return SaveManager.GetDeadSeaScrollsSave().GamepadToggle
+	return AnixbirthSaveManager.GetDeadSeaScrollsSave().GamepadToggle
 end
 
 function MenuProvider.SaveGamepadToggleSetting(var)
-	SaveManager.GetDeadSeaScrollsSave().GamepadToggle = var
+	AnixbirthSaveManager.GetDeadSeaScrollsSave().GamepadToggle = var
 end
 
 function MenuProvider.GetMenuKeybindSetting()
-	return SaveManager.GetDeadSeaScrollsSave().MenuKeybind
+	return AnixbirthSaveManager.GetDeadSeaScrollsSave().MenuKeybind
 end
 
 function MenuProvider.SaveMenuKeybindSetting(var)
-	SaveManager.GetDeadSeaScrollsSave().MenuKeybind = var
+	AnixbirthSaveManager.GetDeadSeaScrollsSave().MenuKeybind = var
 end
 
 function MenuProvider.GetMenuHintSetting()
-    return FHAC.SaveManager.GetDeadSeaScrollsSave().MenuHint
+    return FHAC.AnixbirthSaveManager.GetDeadSeaScrollsSave().MenuHint
 end
 
 function MenuProvider.SaveMenuHintSetting(var)
-	SaveManager.GetDeadSeaScrollsSave().MenuHint = var
+	AnixbirthSaveManager.GetDeadSeaScrollsSave().MenuHint = var
 end
 
 function MenuProvider.GetMenuBuzzerSetting()
-	return SaveManager.GetDeadSeaScrollsSave().MenuBuzzer
+	return AnixbirthSaveManager.GetDeadSeaScrollsSave().MenuBuzzer
 end
 
 function MenuProvider.SaveMenuBuzzerSetting(var)
-	SaveManager.GetDeadSeaScrollsSave().MenuBuzzer = var
+	AnixbirthSaveManager.GetDeadSeaScrollsSave().MenuBuzzer = var
 end
 
 function MenuProvider.GetMenusNotified()
-	return SaveManager.GetDeadSeaScrollsSave().MenusNotified
+	return AnixbirthSaveManager.GetDeadSeaScrollsSave().MenusNotified
 end
 
 function MenuProvider.SaveMenusNotified(var)
-	SaveManager.GetDeadSeaScrollsSave().MenusNotified = var
+	AnixbirthSaveManager.GetDeadSeaScrollsSave().MenusNotified = var
 end
 
 function MenuProvider.GetMenusPoppedUp()
-	return SaveManager.GetDeadSeaScrollsSave().MenusPoppedUp
+	return AnixbirthSaveManager.GetDeadSeaScrollsSave().MenusPoppedUp
 end
 
 function MenuProvider.SaveMenusPoppedUp(var)
-	SaveManager.GetDeadSeaScrollsSave().MenusPoppedUp = var
+	AnixbirthSaveManager.GetDeadSeaScrollsSave().MenusPoppedUp = var
 end
 local DSSInitializerFunction = include("scripts.iam.deadseascrolls.dssmenucore")
 local Lore = include("scripts.iam.deadseascrolls.da lore")
@@ -130,10 +130,10 @@ FHAC.dmdirectory = {
                         variable = "monsterReplacements",
                         setting = 1,
                         load = function()
-                            return SaveManager.GetSettingsSave().monsterReplacements or 2
+                            return AnixbirthSaveManager.GetSettingsSave().monsterReplacements or 2
                         end,
                         store = function(var)
-                            SaveManager.GetSettingsSave().monsterReplacements = var
+                            AnixbirthSaveManager.GetSettingsSave().monsterReplacements = var
                         end,
                         tooltip = {strset = {'some enemies', 'can be','replaced by', 'floor variants', '', 'half anf half', 'by default'}}
         
@@ -157,10 +157,10 @@ FHAC.dmdirectory = {
                         variable = "customFortunes",
                         setting = 1,
                         load = function()
-                            return SaveManager.GetSettingsSave().customFortunes or 1
+                            return AnixbirthSaveManager.GetSettingsSave().customFortunes or 1
                         end,
                         store = function(var)
-                            SaveManager.GetSettingsSave().customFortunes = var
+                            AnixbirthSaveManager.GetSettingsSave().customFortunes = var
                         end,
                         tooltip = {strset = {'allow for', 'fortune', 'replacements', '', 'on by', 'default'}}
                     },
@@ -182,10 +182,10 @@ FHAC.dmdirectory = {
                         slider = true,
                         setting = 3,
                         load = function()
-                            return SaveManager.GetSettingsSave().fortuneDeathChance or 3
+                            return AnixbirthSaveManager.GetSettingsSave().fortuneDeathChance or 3
                         end,
                         store = function(var)
-                            SaveManager.GetSettingsSave().fortuneDeathChance = var
+                            AnixbirthSaveManager.GetSettingsSave().fortuneDeathChance = var
                         end,
                         displayif = function(_, item)
                             if item and item.buttons then
@@ -217,10 +217,10 @@ FHAC.dmdirectory = {
                         variable = "fortuneLanguage",
                         setting = 1,
                         load = function()
-                            return SaveManager.GetSettingsSave().fortuneLanguage or 1
+                            return AnixbirthSaveManager.GetSettingsSave().fortuneLanguage or 1
                         end,
                         store = function(var)
-                            SaveManager.GetSettingsSave().fortuneLanguage = var
+                            AnixbirthSaveManager.GetSettingsSave().fortuneLanguage = var
                         end,
                         displayif = function(_, item)
                             if item and item.buttons then
@@ -244,10 +244,10 @@ FHAC.dmdirectory = {
                         variable = "customRoomMusic",
                         setting = 1,
                         load = function()
-                            return SaveManager.GetSettingsSave().customRoomMusic or 2
+                            return AnixbirthSaveManager.GetSettingsSave().customRoomMusic or 2
                         end,
                         store = function(var)
-                            SaveManager.GetSettingsSave().customRoomMusic = var
+                            AnixbirthSaveManager.GetSettingsSave().customRoomMusic = var
                         end,
                         tooltip = {strset = {'allow for', 'rooms music', 'replacements', '', 'off by', 'default'}}
                     },
@@ -269,10 +269,10 @@ FHAC.dmdirectory = {
                 variable = "randomDried",
                 setting = 1,
                 load = function()
-                    return SaveManager.GetSettingsSave().randomDried or 1
+                    return AnixbirthSaveManager.GetSettingsSave().randomDried or 1
                 end,
                 store = function(var)
-                    SaveManager.GetSettingsSave().randomDried = var
+                    AnixbirthSaveManager.GetSettingsSave().randomDried = var
                 end,
                 tooltip = {strset = {'affects dried', 'spawn rate', 'in cellar' ,'','rarely by', 'default'}}
             },
@@ -286,10 +286,10 @@ FHAC.dmdirectory = {
                 variable = "prettyMushlooms",
                 setting = 1,
                 load = function()
-                    return SaveManager.GetSettingsSave().pallunShot or 1
+                    return AnixbirthSaveManager.GetSettingsSave().pallunShot or 1
                 end,
                 store = function(var)
-                    SaveManager.GetSettingsSave().pallunShot = var
+                    AnixbirthSaveManager.GetSettingsSave().pallunShot = var
                 end,
                 tooltip = {strset = {'changes the', 'pallun shot', 'behavior', 'to version', 'made by', 'kerkel','','normal by', 'default'}}
             },
@@ -303,10 +303,10 @@ FHAC.dmdirectory = {
                 variable = "prettyMushlooms",
                 setting = 1,
                 load = function()
-                    return SaveManager.GetSettingsSave().prettyMushlooms or 1
+                    return AnixbirthSaveManager.GetSettingsSave().prettyMushlooms or 1
                 end,
                 store = function(var)
-                    SaveManager.GetSettingsSave().prettyMushlooms = var
+                    AnixbirthSaveManager.GetSettingsSave().prettyMushlooms = var
                 end,
                 tooltip = {strset = {'pretty','mushloom', 'made by', 'onxc_kryptid','','normal by', 'default'}}
             },

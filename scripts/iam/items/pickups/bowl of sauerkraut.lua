@@ -48,7 +48,7 @@ function mod.CollectBowlOfSauerkraut(player, pickup)
         --sfx:Play(SoundEffect.SOUND_KEYPICKUP_GAUNTLET, 1, 0, false, math.random(147,153)/100)
 
 
-        local dat = SaveManager.GetRunSave(player).anixbirthsaveData
+        local dat = AnixbirthSaveManager.GetRunSave(player).anixbirthsaveData
         dat.BowlOfSauerkraut = dat.BowlOfSauerkraut or 1
         dat.BowlOfSauerkraut = dat.BowlOfSauerkraut + 1
 
@@ -59,7 +59,7 @@ end
 
 mod:AddCallback(ModCallbacks.MC_EVALUATE_CACHE,function(_, player, flag)
 
-    local dat = SaveManager.GetRunSave(player).anixbirthsaveData
+    local dat = AnixbirthSaveManager.GetRunSave(player).anixbirthsaveData
 
     if dat.BowlOfSauerkraut and dat.BowlOfSauerkraut > 0 and dat.BowlOfSauerkraut ~= dat.BowlOfSauerkrautOld then
         player.Damage = player.Damage + (0.003+(0.002*dat.BowlOfSauerkraut))*dat.BowlOfSauerkraut
