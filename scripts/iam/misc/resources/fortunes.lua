@@ -1,5 +1,282 @@
 FHAC.Fortunes = 
 [=================[
+we should stop writing
+fiend folio's own fortunes
+
+hey! have you
+given up yet?
+
+just checking in:
+are you done?
+
+all hope is lost
+
+but I'M the boss
+
+bow down to me!
+
+listen to the story
+
+write your life
+
+has the class time
+for this english
+essay been helpful
+
+i don't want to
+do my homework
+at home!
+
+I want to do
+my homework at
+school
+
+why does ena need
+to go to the bathroom?
+
+we ain't bringing
+the tadpoles home
+
+CVS you should be
+like waaay more
+productive
+
+dude, that's so mean...
+
+all marge did was
+blame blame blame
+
+wow!
+bazinga!
+
+flying cows
+make pies and dow(ries)
+
+wait until
+isaac gets back
+
+heeeeeeyyy everest
+wassup big boy
+
+do you like
+kfc (kentucky fried chicken)
+or kfc (korean fried children)
+
+damn shes hot
+
+CVS STOP BEING
+SUCH A PERV
+
+hi alice remember
+remember the uh 
+the uhm uh the uh
+
+you know how
+dom rolls don't you?
+
+we'll meet again
+
+dunno where dunno when
+
+but i know we'll
+meet again some
+rainy day
+
+bro what the hell
+is that cabbage doing?
+
+do you play
+basketball?
+(room erupts in laughter)
+
+hey kids its me
+your old pal and overlord
+biiiillll cipher!
+
+meat my
+meet computer
+
+bro i wanna print something
+but ryan here is too pissy
+to do it with me!
+
+I HATE YOU ALL.
+
+ughhhh so many
+weird ass fortunes
+
+and like only 5
+fortunes keep
+going through anyway
+
+i hate these fortunes
+
+i love these fortunes!
+
+this isn't a fortune
+this is commerce!
+
+this isn't a basement
+it's a communist party!
+
+have you had the
+marx cake at the
+communist party?
+
+hey brian did you
+miss the party?
+huh? huh? huh?
+
+alice stop yapping
+about tnt oh my god
+
+thanks for coming
+irene (look i have
+so much social anxiety)
+
+look i wanna get
+good grades to get
+into a good college
+to get into a good job
+so i can go
+to more TNT concerts!
+
+haha the poll
+called you a bitch
+
+ah yes iron god
+grinders are nice
+
+no! no! no!
+i can't sell
+these to ENA!
+
+that's the last
+person i wanted
+to smell today
+
+shut up bitch
+i just fucked
+your nurse
+
+i'm gonna go
+and buy chess 2.0
+
+who wants to
+play with me?
+
+and now the room
+is flippin silent
+
+this sounds like
+three drunk men
+drinking piss
+
+silent on my hill
+till i uh uhm
+
+uh yeah
+yeah he's uh
+he's sigma ig
+
+are you getting the W
+this town deserves, alan
+
+stop looking
+at my forehead!1!
+
+who left their skin
+flakes on my table
+
+that's not particularly
+clean or nice
+
+ok bro these fortunes
+have got to stop
+
+they say a chili dog
+a day keeps
+the eggman away!
+
+stop yapping about
+fucking bibles!
+
+they're books bro!
+
+cut this bullcrap
+and start cleaning
+the damn toilet!
+
+bro im like
+so allergic to
+many people
+
+stop playing antibirth
+start playing anixbirth
+
+stop playing anixbirth
+start playing givebirth
+
+stop playing givebirth
+and start giving birth
+
+start giving uh
+what now
+
+if it's not a
+malformed isaac then
+i don't know what it is
+
+ew bad fortune
+
+the last fortune
+was made by
+renren trust
+
+dedicated to
+the spider
+on my wall
+
+but we are bringing
+the autism home!
+
+the godzilla kid?
+the aucostic guy??
+
+yeah, he's a big
+solid boi
+
+play as ramasses
+
+play ramasses mod trust
+
+play missing sfx mod trust
+
+play annex trust
+
+wait... why's it called
+annex and not anixbirth
+
+cus it's made by
+a pule of games
+
+if we uproot the government
+maybe we'll get stuff done
+
+too generalized!
+get better lah!
+
+i'm just down the hall!
+
+wow when's the last time
+someone's mentioned
+the fnf hex mod
+
+damn why doens't
+language work now
+
+cus gay people
+ate it first ig
 
 one new fortune
 for the emerald city
@@ -57,6 +334,86 @@ the language is
 so that's why we
 are lost; that is
 a fucking clock!
+
+0O0O00OH YEAH
+SO SHUT UP
+
+why do you love
+the chicken nugget
+and not me???
+
+isaac tends towards
+favortisim
+
+alright, chat, who here
+likes greed mode? (silence)
+
+i am wasting my life
+
+you are wasting your life!
+
+euan stop spamming
+shitposts in fortunes
+
+is euan in the server?
+no? that's what i thought
+
+haha you died
+to a creeper
+
+haha you died
+to a patient
+
+haha you died
+to a bear
+
+wait a second
+where are the bears
+in anixbirth?
+
+no bears? what a shame
+
+just commit to
+the document already
+
+bro anixbirth rooms
+are named so weirdly
+
+like what does gary
+have to do with this
+
+i'm going to steal
+all of fiend's ideas
+and he'll never know!
+
+ehehehe!
+- a fiend
+
+you added how
+many rocks to
+fiend folio?!
+
+johannes is worse
+than fiend folio
+- not fiend
+
+look at lenny
+sitting over there!
+
+this sunset looks
+god awful just
+come inside bro
+
+haha your dodging
+skills are so shit
+
+bro hit the rind
+then parry
+parry! parry! parry!
+
+ultrakill fans when
+they can't parry
+their dad's belt:
 
 pear.
 
