@@ -1,5 +1,190 @@
 FHAC.Fortunes = 
 [=================[
+
+all marge did
+was blame blame blame
+
+mankind is dead
+blood is fuel
+hell is full
+
+isaac, remember what
+I said about 
+pre-marital sex!
+
+Personal data
+Is the new gold
+
+dude, i cannot believe
+you would say that
+awful fawful thing
+
+He said to the man
+Running the stand
+
+dust falls
+choking the air
+
+do you like how i walk? 
+do you like how i talk?
+
+god, what the
+sigma, bro!
+
+There's no stopping 
+Curiosity
+
+You...
+Got.....
+Eliminated.
+
+I have a
+message for
+you, loser...
+
+bfdi spotted??????????
+
+im sorry for saying
+such rude and hurtful
+suggestions!
+
+is that whiteface
+is that blackface
+
+good lord fiend,
+what is happening
+in there?
+
+Yang does a lion 
+Daaance for him
+
+cus all the
+big kids are gay
+
+"oh life, oh life"
+i said, and the
+very word seemed sweet
+
+I've played these 
+games before!!!
+
+i watched a video
+of ksi, which made
+me play piano!
+
+damn
+
+who lil ol me
+
+you little rapscallion
+im going to go
+after you!!!!
+
+I saw that
+ping little bro
+
+hey! no shadow
+pinging on MY server
+
+i feel
+so angery
+
+it says gullible 
+on the ceiling
+
+did you realize
+how high you are
+on the gay-o-meter?
+
+If I'm here...
+And you're there....
+Then whose chaining Esau?!?
+
+that could also
+be a fortune yk...
+
+oh so it do--
+ah you stole my lungs...
+
+
+the big anchovie is
+making me see things
+
+from the screen
+to the ring
+
+to the pen
+to the king
+
+wheres my crown
+that's my bling
+
+always drama
+when i ring
+
+I don't have a favourite number
+I really dont
+
+tennis balls arent the
+only ones with lines
+
+Hehe well I do
+
+i thought no-one would get it lol
+
+I feel insulted
+
+abracadabra amor oo na na
+abra ca da bra morta oo gaga
+
+He's a Certified Vaccine Licker
+I think I'll call him
+CVS...
+
+i told my mom
+that yesterday
+
+do you think
+the rat
+is lying?
+
+better wear some
+more jacket
+"potaotes", hehe
+
+you should be skibidi
+before youre a beta
+
+green eggs, or ham
+
+did you know: 
+You can smell your lungs. 
+
+tis ANIXBIRTH, my good friend!
+
+did you know: 
+Refrigerators are magnetic 
+because kids used to 
+die inside them.
+
+did you know: The last 
+execution by guillotine 
+was in 1977. 
+
+YOU musT
+
+we should stop
+making fortunes
+but that would
+
+it would beeee
+UNNNN-FORTUNATE
+
+You can't do anything, 
+you're in a friggin wheelchair
+
+did you know:
+
 we should stop writing
 fiend folio's own fortunes
 
