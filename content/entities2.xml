@@ -64,7 +64,7 @@
 		<bestiary transform="0,0,1" anim="Fly" />
         <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
     </entity>
-    <entity id="161" variant="1" name="Toast" anm2path="monsters/toast/monster_toast.anm2" reroll="true" baseHP="14" boss="0" champion="1" collisionDamage="0" collisionMass="15" collisionRadius="13" friction="0" numGridCollisionPoints="12" shadowSize="25" stageHP="0" portrait="1">
+    <entity id="161" variant="1" name="Toast" anm2path="monsters/toast/monster_toast.anm2" reroll="true" baseHP="10" boss="0" champion="1" collisionDamage="0" collisionMass="15" collisionRadius="13" friction="0" numGridCollisionPoints="12" shadowSize="25" stageHP="0" portrait="1">
 		<bestiary transform="0,0,1" anim="Reveal" />
         <gibs amount="6" blood="1" bone="1" eye="0" gut="0" large="0" worm="1" />
         <preload-snd id="166" />
@@ -439,6 +439,11 @@
     <!-- Minibosses -->
 
     <entity anm2path="minibosses/narcissism/narcissism.anm2" id="95" variant="0" subtype="0" reroll="false" baseHP="130" boss="1" champion="0" collisionDamage="1" collisionMass="40" collisionRadius="10" friction="1" name="Narcissism" numGridCollisionPoints="12" shadowSize="15" stageHP="13" shieldStrength="10" bestiary="true" portrait="1020" >
+        <bestiary transform="0,0,1" anim="WalkVert" />
+        <gibs amount="6" blood="2" bone="1" eye="1" gut="1" large="0" />
+    </entity>
+
+    <entity anm2path="minibosses/chomb/monster_chomb.anm2" id="95" variant="1" subtype="0" reroll="false" baseHP="40" boss="1" champion="0" collisionDamage="1" collisionMass="40" collisionRadius="10" friction="1" name="Chomb" numGridCollisionPoints="12" shadowSize="15" stageHP="5" shieldStrength="10" bestiary="true" portrait="1021" >
         <bestiary transform="0,0,1" anim="WalkVert" />
         <gibs amount="6" blood="2" bone="1" eye="1" gut="1" large="0" />
     </entity>

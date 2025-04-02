@@ -1117,7 +1117,7 @@ function mod:AddTempItem(item, player, callback)
 end
 
 function mod:RemoveTempItem(items)
-	if not items or #items == 0 then return end
+	if not items or #items == 0 then return end 
 	for i = 1, #items do
 		local tab = items[i]
 		if not tab then return end
@@ -1125,16 +1125,23 @@ function mod:RemoveTempItem(items)
 		if tab.hasGone then return end
 
 		tab.hasGone = true
+
 		tab.Player = tab.Player or Isaac.GetPlayer()
 		mod.scheduleCallback(function()
-			tab.Player:RemoveCollectible(tab.Item, true)
-			table.remove(items, tab.Num)
+			if tab and tab.Num then		
+				tab.Player:RemoveCollectible(tab.Item, true)
+				if tab.Num <= #items then
+					table.remove(items, tab.Num)
+				end
+			end
 		end, 1, tab.Callback)
 	end
 end
 
 function mod:PostUpdateRemoveTempItems(player)
 	local dat = AnixbirthSaveManager.GetRunSave(player).anixbirthsaveData
+
+	if not dat.TemporaryItems then return end
 	mod:RemoveTempItem(dat.TemporaryItems)
 end
 

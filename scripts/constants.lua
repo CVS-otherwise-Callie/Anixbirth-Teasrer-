@@ -67,7 +67,8 @@ FHAC.Monsters = {
 }
 
 FHAC.MiniBosses = {
-    Narcissism = mod:ENT("Narcissism")
+    Narcissism = mod:ENT("Narcissism"),
+    Chomb = mod:ENT("Chomb")
 }
 
 FHAC.Players = {

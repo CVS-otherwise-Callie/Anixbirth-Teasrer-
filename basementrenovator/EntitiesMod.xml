@@ -2,6 +2,8 @@
 
 <entity ID="37" Variant="3" Name="Woodhead" Image="mah boys/woodhead.png" BaseHP="12"/>
 <entity ID="37" Variant="100" Name="Jim" Image="mah boys/jim.png" BaseHP="10"/>
+<entity ID="95" Variant="0" Name="Narcissism" Image="mah boys/narcissism.png" BaseHP="130" ShieldStrength="15" StageHP="10"/>
+<entity ID="95" Variant="1" Name="Chomb" Image="mah boys/chomb.png" BaseHP="40" ShieldStrength="15" StageHP="10"/>
 <entity ID="161" Variant="1" Name="Toast" Image="mah boys/toast.png" BaseHP="14"/>
 <entity ID="161" Variant="2" Name="Larry King Jr." Image="mah boys/larrykingjr.png" BaseHP="10">
 <bitfield Key="Subtype">
@@ -140,9 +142,18 @@ Use 2, 4, or 6 normally.
 <entity ID="426" Variant="1" Name="Tainted String" Image="mah boys/stringtainted.png" BaseHP="70" StageHP="13" ShieldStrength="20" Tags="Champion"/>
 <entity ID="426" Variant="2" Name="&amp;" Image="mah boys/&amp;tainted.png" BaseHP="20" StageHP="20" ShieldStrength="1000" Tags="Champion"/>
 
-<tab Name="Anixbirth (Hope)">
+<group Name="HOPE Sin Minibosses">
+	<entity Name="Narcissism"/>
+</group>
 
-	<group Name="FHAC Buttons">
+<group Name="HOPE Minibosses" Label="Minibosses">
+	<entity Name="Chomb"/>
+	<group Name="HOPE Sin Minibosses"/>
+</group>
+
+<tab Name="Anixbirth (HOPE)">
+
+	<group Name="HOPE Buttons">
 		<entity Name="Light Pressure Plate" />
 	</group>
 
@@ -216,7 +227,6 @@ Use 2, 4, or 6 normally.
 
 	<group Name="HOPE Caves" Label="Caves">
 		<group Name="HOPE Caves Enemies">
-			<entity Name="Synthetic Horf"/>
 			<entity Name="Sho"/>
 			<entity Name="Pallun"/>
 			<entity Name="Ulig"/>
@@ -245,6 +255,7 @@ Use 2, 4, or 6 normally.
 	<group Name="HOPE Depths" Label="Depths">
 		<group Name="HOPE Depths Enemies">
 			<entity Name="Babble"/>
+			<entity Name="Synthetic Horf"/>
 		</group>
 	</group>
 
@@ -260,7 +271,24 @@ Use 2, 4, or 6 normally.
 			<entity Name="Jim"/>
 		</group>
 	</group>
+
+	<group Name="HOPE Chapter 6 Enemies">
+		<group Name="HOPE Minibosses"/>
+	</group>
+
 </tab>
+
+<group Name="Chapter 1 Bosses (Main Path) Shared">
+	<group Name="HOPE Chapter 1 Big Boys"/>
+</group>
+
+<group Name="The Sins">
+	<group Name="HOPE Sin Minibosses"/>
+</group>
+
+<group Name="Chapter 6 (Main Path) Enemies">
+	<group Name="HOPE Chapter 6 Bosses"/>
+</group>
 
 <group Name="Chapter 1 (Alt Path) Enemies">
 	<group Name="HOPE Chapter 1 Alt Enemies"/>
@@ -315,7 +343,7 @@ Use 2, 4, or 6 normally.
 </group>
 
 <group Name="Pressure Plates">
-	<group Name="FHAC Buttons"/>
+	<group Name="HOPE Buttons"/>
 </group>
 
 <group Name="Ascent Enemies">

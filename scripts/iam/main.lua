@@ -46,6 +46,7 @@ FHAC:LoadScripts("scripts.iam.monsters", {
 
 FHAC:LoadScripts("scripts.iam.minibosses", {
 	"narcissism", --narc!!
+	"chomb"
 })
 
 FHAC:LoadScripts("scripts.iam", {
