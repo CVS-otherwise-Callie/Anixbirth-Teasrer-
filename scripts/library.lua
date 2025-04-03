@@ -16,6 +16,16 @@ function mod:getMinSec(totalSeconds)
     return minutes, seconds
 end
 
+function mod:AnyPlayerHasCollectible(coll)
+	for i = 1, game:GetNumPlayers() do
+        if game:GetPlayer(i):ToPlayer():HasCollectible(coll) then
+            return true
+        end
+    end
+
+    return false
+end
+
 function mod:GetCirc(rad, per)
 	return Vector(rad * math.sin(per), rad * math.cos(per))
 end
