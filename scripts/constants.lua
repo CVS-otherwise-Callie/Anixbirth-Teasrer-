@@ -133,6 +133,7 @@ FHAC.Collectibles = {
     },
     Trinkets = {
         MysteryMilk = Isaac.GetTrinketIdByName("Mystery Milk")
+	TheLeftBall = Isaac.GetTrinketIdByName("The Left Ball")
     }
 }
 
