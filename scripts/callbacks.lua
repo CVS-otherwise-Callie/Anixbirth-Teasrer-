@@ -114,6 +114,7 @@ end
 FHAC:AddCallback(ModCallbacks.MC_POST_NEW_ROOM, FHAC.PostNewRoom)
 
 FHAC:AddCallback(ModCallbacks.MC_POST_PICKUP_INIT, function(_, pickup)
+    FHAC:ReplaceItemTheLeftBall(pickup)
 end)
 
 function FHAC:PostPlayerUpdate(player)

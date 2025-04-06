@@ -72,6 +72,7 @@ FHAC:LoadScripts("scripts.iam.items.actives", {
 
 FHAC:LoadScripts("scripts.iam.items.trinkets", {
 	"mystery milk",
+	"the left ball"
 })
 
 FHAC:LoadScripts("scripts.iam.items.passives", {

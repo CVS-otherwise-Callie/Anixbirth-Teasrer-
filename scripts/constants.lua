@@ -8,9 +8,8 @@ FHAC.font = Font()
 --needed rn, likely will delete later
 
 function FHAC:ENT(name)
-	return {ID = Isaac.GetEntityTypeByName(name), Var = Isaac.GetEntityVariantByName(name), 0}
+    return { ID = Isaac.GetEntityTypeByName(name), Var = Isaac.GetEntityVariantByName(name), 0 }
 end
-
 
 FHAC.Monsters = {
     Fivehead = mod:ENT("Fivehead"),
@@ -132,8 +131,8 @@ FHAC.Collectibles = {
         BirthdaySlice = Isaac.GetCardIdByName("Birthday Slice")
     },
     Trinkets = {
-        MysteryMilk = Isaac.GetTrinketIdByName("Mystery Milk")
-	TheLeftBall = Isaac.GetTrinketIdByName("The Left Ball")
+        MysteryMilk = Isaac.GetTrinketIdByName("Mystery Milk"),
+	    TheLeftBall = Isaac.GetTrinketIdByName("The Left Ball")
     }
 }
 
@@ -151,19 +150,19 @@ mod.FloorGrids = {
 
 
 FHAC.DirectionToVector = {
-	[Direction.DOWN]	= Vector(0, 1),
-	[Direction.UP]		= Vector(0, -1),
-	[Direction.LEFT]	= Vector(-1, 0),
-	[Direction.RIGHT]	= Vector(1, 0),
+    [Direction.DOWN]  = Vector(0, 1),
+    [Direction.UP]    = Vector(0, -1),
+    [Direction.LEFT]  = Vector(-1, 0),
+    [Direction.RIGHT] = Vector(1, 0),
 }
 
 
 if REPENTOGON then
-FHAC.Unlocks = {
-    Floater = Isaac.GetAchievementIdByName("Floater"),
-    Fivehead = Isaac.GetAchievementIdByName("Fivehead"),
-    Bohannes = Isaac.GetAchievementIdByName("JohannesB")
-}
+    FHAC.Unlocks = {
+        Floater = Isaac.GetAchievementIdByName("Floater"),
+        Fivehead = Isaac.GetAchievementIdByName("Fivehead"),
+        Bohannes = Isaac.GetAchievementIdByName("JohannesB")
+    }
 end
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -172,37 +171,37 @@ end
 -- i should make a section on colors, that'd be fun i told myself
 -- some of these colors are from other mods or devs, fiend folio for the msot part as they have a really good colorpallate. If it's from a mod, I'll put the mod name and creator of color (if i can find who!) next to it. I.e.
 FHAC.Color = {
-    CrackleOrange = Color(1,1,1,1,1,0.3,0), --FIEND FOLIO; XALUM DONT USE THIS FOR SPLATS USE IT FOR CRACKLE
-    FireJuicy = 	Color(0,0,0,1,1,0.5,0), -- also xalum?
-    Charred =  Color(0.1,0.1,0.1,1,0,0,0), -- FIEND FOLIO; XALUM
-    Invisible = Color(1,1,1,0,0,0,0),
+    CrackleOrange = Color(1, 1, 1, 1, 1, 0.3, 0), --FIEND FOLIO; XALUM DONT USE THIS FOR SPLATS USE IT FOR CRACKLE
+    FireJuicy = Color(0, 0, 0, 1, 1, 0.5, 0), -- also xalum?
+    Charred = Color(0.1, 0.1, 0.1, 1, 0, 0, 0), -- FIEND FOLIO; XALUM
+    Invisible = Color(1, 1, 1, 0, 0, 0, 0),
     Color = Color(1, 1, 1, 1, 1, 1, 1),
 
     --colorixzed ones
-    ColorDankBlackReal = Color(1,1,1,1,0,0,0),
+    ColorDankBlackReal = Color(1, 1, 1, 1, 0, 0, 0),
 }
 
 --time to colorize
-mod.Color.ColorDankBlackReal:SetColorize(1,1,1,1)
-mod.Color.ColorDankBlackReal:SetTint(0.5,0.5,0.5,1)
+mod.Color.ColorDankBlackReal:SetColorize(1, 1, 1, 1)
+mod.Color.ColorDankBlackReal:SetTint(0.5, 0.5, 0.5, 1)
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 function mod:SpecialEnt(name)
-    return {Isaac.GetEntityTypeByName(name), Isaac.GetEntityVariantByName(name)} --no repentagon fuck it
+    return { Isaac.GetEntityTypeByName(name), Isaac.GetEntityVariantByName(name) } --no repentagon fuck it
 end
 
 FHAC.Nonmale = {
-    {ID = FHAC:SpecialEnt("Floater"), Affliction = "Woman"},
-    {ID = FHAC:SpecialEnt("Fivehead"), Affliction = "Trans"},
-    {ID = FHAC:SpecialEnt("Neutral Fly"), Affliction = "Aeroace"},
-    {ID = FHAC:SpecialEnt("Erythorcyte"), Affliction = "Woman"},
-    {ID = FHAC:SpecialEnt("Wost"), Affliction = "Woman"},
-    {ID = FHAC:SpecialEnt("Schmoot"), Affliction = "Woman"},
-    {ID = FHAC:SpecialEnt("Drosslet"), Affliction = "Aeroace"}, --cus quaquao said to make everyone secretly aeroace lol
-    {ID = FHAC:SpecialEnt("PitPat"), Affliction = "Woman"},
-    {ID = FHAC:SpecialEnt("Patient"), Affliction = "Woman"},
-    {ID = FHAC:SpecialEnt("Pinprick"), Affliction = "Dreamsexual"},
+    { ID = FHAC:SpecialEnt("Floater"),     Affliction = "Woman" },
+    { ID = FHAC:SpecialEnt("Fivehead"),    Affliction = "Trans" },
+    { ID = FHAC:SpecialEnt("Neutral Fly"), Affliction = "Aeroace" },
+    { ID = FHAC:SpecialEnt("Erythorcyte"), Affliction = "Woman" },
+    { ID = FHAC:SpecialEnt("Wost"),        Affliction = "Woman" },
+    { ID = FHAC:SpecialEnt("Schmoot"),     Affliction = "Woman" },
+    { ID = FHAC:SpecialEnt("Drosslet"),    Affliction = "Aeroace" }, --cus quaquao said to make everyone secretly aeroace lol
+    { ID = FHAC:SpecialEnt("PitPat"),      Affliction = "Woman" },
+    { ID = FHAC:SpecialEnt("Patient"),     Affliction = "Woman" },
+    { ID = FHAC:SpecialEnt("Pinprick"),    Affliction = "Dreamsexual" },
 }
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
