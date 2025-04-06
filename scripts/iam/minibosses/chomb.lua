@@ -44,6 +44,8 @@ end
 function mod:ChombAI(npc, sprite, d)
 
     local room = game:GetRoom()
+    local target = npc:GetPlayerTarget()
+    local targetpos = target.Position
 
     if not d.larryKJinit then
 
@@ -54,6 +56,7 @@ function mod:ChombAI(npc, sprite, d)
         if not d.bodyInit and not d.IsSegment then
             d.InitSeed = npc.InitSeed
             d.extraNum = 0
+            d.name = nil
             d.MovementLog = d.MovementLog or {}
             local num = math.random(3)+1
             if npc.SubType == 0 then
@@ -85,6 +88,7 @@ function mod:ChombAI(npc, sprite, d)
                 table.insert(d.MovementLog, butt.Position)
                 butt:GetData().butts = d.butts
             end
+            d.randWait = math.random(-20, 20)
         elseif not d.IsSegment then
             d.SegNumber = 1
         end
@@ -107,6 +111,26 @@ function mod:ChombAI(npc, sprite, d)
 
         npc.Color = npc.Parent.Color
         sprite.Color = npc.Parent:GetSprite().Color
+
+        if d.state == "Hidden" then
+            npc.Visible = false
+            if npc.StateFrame > 60 - npc:GetData().MoveDelay + npc.Parent:GetData().randWait then
+                d.state = "Appearing"
+            end
+        elseif d.state == "Appearing" then
+            mod:spritePlay(sprite, d.name .. "UnBurrow")
+            npc.Visible = true
+        elseif d.state == "Hiding" then
+            npc:MultiplyFriction(0.9)
+            mod:spritePlay(sprite, d.name .. "Burrow")
+        else
+            mod:spritePlay(sprite, d.name .. "Vert")
+        end
+
+        if sprite:IsFinished(d.name .. "UnBurrow") then
+            d.state = "Moving"
+        end
+
     elseif not d.IsSegment then
 
         if d.state == "Moving" then
@@ -132,19 +156,39 @@ function mod:ChombAI(npc, sprite, d)
 
             npc:MultiplyFriction(0.9)
 
+        elseif d.state == "Hidden" then
+            if npc.StateFrame > 60 + d.randWait then
+                    npc.Position = Vector((targetpos + RandomVector()*3).X, room:GetTopLeftPos().Y)
+                    npc.Velocity = Vector.Zero
+                d.state = "Appearing"
+            end
+        elseif d.state == "Appearing" then
+            mod:spritePlay(sprite, "UnBurrow")
+            npc.Visible = true
         end
-
-        if sprite:IsEventTriggered("Dissapear") then
-            npc.EntityCollisionClass = EntityCollisionClass.COLLISION_NONE
-        end
-
-        if room:GetGridCollisionAtPos(npc.Position + Vector(0, 10)) == GridCollisionClass.COLLISION_WALL or room:GetGridCollisionAtPos(npc.Position + Vector(0, 10)) == GridCollisionClass.COLLISION_WALL_EXCEPT_PLAYER then
-            npc.GridCollisionClass = GridCollisionClass.COLLISION_NONE
-            d.state = "Hiding"
-        end
-
 
         d.MovementLog[npc.FrameCount] = npc.Position
+    end
+
+    if room:GetGridCollisionAtPos(npc.Position + Vector(0, 10)) == GridCollisionClass.COLLISION_WALL or room:GetGridCollisionAtPos(npc.Position + Vector(0, 10)) == GridCollisionClass.COLLISION_WALL_EXCEPT_PLAYER then
+        npc.GridCollisionClass = GridCollisionClass.COLLISION_NONE
+        d.state = "Hiding"
+    end
+
+    if sprite:IsEventTriggered("Dissapear") then
+        npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_NONE
+        npc.Visible = false
+
+        npc.StateFrame = 0
+        d.state = "Hidden"
+    end
+
+    if sprite:IsEventTriggered("Appear") then
+        npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_ALL
+    end
+
+    if sprite:IsFinished("UnBurrow") then
+        d.state = "Moving"
     end
 
 end
