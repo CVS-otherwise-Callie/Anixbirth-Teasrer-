@@ -237,6 +237,35 @@ function mod:HasDamageFlag(damageFlag, damageFlags)
     return damageFlags & damageFlag ~= 0
 end
 
+function mod:FindClosestNextEntitySpawn(npc, dist, random)
+	local room = game:GetRoom()
+	local vec = Vector(0, dist)
+	local positions = {}
+	for i = 1, 4 do
+		local pos = npc.Position + vec:Rotated((i+1)*90)
+		if (room:GetGridCollisionAtPos(pos)== 0 and mod:IsTableEmpty(Isaac.FindInRadius(pos, dist, EntityPartition.PLAYER)) and mod:IsTableEmpty(Isaac.FindInRadius(pos, dist, EntityPartition.ENEMY))) then
+			table.insert(positions, pos)
+		end
+	end
+	--[[for i = 1, #positions do
+		Isaac.Spawn(5, 40, 0, positions[i], nilvector, npc):ToEffect()
+	end]]
+	if random then
+		if #positions > 0 then
+			return positions[math.random(#positions)]
+		else
+			return npc.Position
+		end
+	else
+		if #positions > 0 then
+			return positions[1]
+		else
+			print("aww")
+			return npc.Position
+		end
+	end
+end
+
 
 function mod:GetClosestGridEntAlongAxis(pos, axis, ignorepoop, ignorehole, rocktab)
 	local room = game:GetRoom()

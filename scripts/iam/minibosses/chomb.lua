@@ -9,6 +9,12 @@ mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
     end
 end, mod.MiniBosses.Chomb.ID)
 
+mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, function(_, npc, amount , damage, source)
+    if npc.Variant == mod.MiniBosses.Chomb.Var then
+        mod:ChombHurt(npc, amount, damage, source)
+    end
+end, mod.MiniBosses.Chomb.ID)
+
 local function ChombYAxisAligned(pos, ignorerocks)
     local room = game:GetRoom()
     local vec = Vector(0, 1)
@@ -65,7 +71,13 @@ function mod:ChombAI(npc, sprite, d)
                 npc.SubType = num
             end
             for i = 1, npc.SubType do
-                local butt = Isaac.Spawn(mod.MiniBosses.Chomb.ID, mod.MiniBosses.Chomb.Var, (i > 1 and mod.MiniBosses.Chomb.Sub or 0), npc.Position, Vector.Zero, npc)
+                local pos
+                if #d.butts > 0 then
+                    pos = d.butts[#d.butts]
+                else
+                    pos = npc
+                end
+                local butt = Isaac.Spawn(mod.MiniBosses.Chomb.ID, mod.MiniBosses.Chomb.Var, (i > 1 and mod.MiniBosses.Chomb.Sub or 0), mod:FindClosestNextEntitySpawn(pos, 50, false), Vector.Zero, npc)
                 butt.Parent = npc
                 butt:GetData().InitSeed  = npc.InitSeed
                 butt:GetData().OldPos = butt.Position
@@ -101,20 +113,22 @@ function mod:ChombAI(npc, sprite, d)
 
     if d.IsSegment then
 
-        npc:GetData().MoveDelay = (d.SegNumber-1) * 8
-        npc.DepthOffset = (-8 * d.SegNumber-1)
+        npc:GetData().MoveDelay = (d.SegNumber-1) * 6
+        npc.DepthOffset = (-6 * d.SegNumber-1)
 
         local targpos = npc.Parent:GetData().MovementLog[npc.FrameCount - d.MoveDelay]
         if targpos then
             npc.Velocity = targpos - npc.Position
+        elseif npc.Parent:GetData().butts[d.SegNumber - 1] then
+            npc:AddEntityFlags(EntityFlag.FLAG_NO_KNOCKBACK | EntityFlag.FLAG_NO_PHYSICS_KNOCKBACK)
+            npc.Velocity = mod:Lerp(npc.Velocity, (npc.Parent:GetData().butts[d.SegNumber - 1].Position - npc.Position):Resized(15), 1)
         end
 
         npc.Color = npc.Parent.Color
         sprite.Color = npc.Parent:GetSprite().Color
 
         if d.state == "Hidden" then
-            npc.Visible = false
-            if npc.StateFrame > 60 - npc:GetData().MoveDelay + npc.Parent:GetData().randWait then
+            if npc.StateFrame > 60 + npc.Parent:GetData().randWait then
                 d.state = "Appearing"
             end
         elseif d.state == "Appearing" then
@@ -132,8 +146,18 @@ function mod:ChombAI(npc, sprite, d)
         end
 
     elseif not d.IsSegment then
+        
+        if npc:HasMortalDamage() then
+            for k, v in ipairs(d.butts) do
+                v:Kill()
+            end
+        end
 
         if d.state == "Moving" then
+
+            npc:ClearEntityFlags(EntityFlag.FLAG_NO_KNOCKBACK | EntityFlag.FLAG_NO_PHYSICS_KNOCKBACK)
+
+            d.killernewpos = nil
 
             d.newpos = d.newpos or ChombYAxisAligned(npc.Position, false)
             if (npc.Position:Distance(d.newpos) < 10 or npc.Velocity:Length() == 0) or (mod:isScareOrConfuse(npc) and npc.StateFrame % 10 == 0)then
@@ -165,19 +189,57 @@ function mod:ChombAI(npc, sprite, d)
         elseif d.state == "Appearing" then
             mod:spritePlay(sprite, "UnBurrow")
             npc.Visible = true
+        elseif d.state == "Charging" then
+
+            d.hasCharged = true
+
+            if not d.chargeInit then
+                d.dir = nil
+                if target.Position.X < npc.Position.X then --future me pls don't fuck this up
+                    sprite.FlipX = true
+                    d.dir = -10
+                else
+                    sprite.FlipX = false
+                    d.dir =10
+                end
+                d.chargeInit = true
+            end
+
+            mod:spritePlay(sprite, "Charge")
+
+            local targetvelocity = (Vector(npc.Position.X + d.dir, npc.Position.Y) - npc.Position):Resized(10)
+            npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 1)
+
+            if npc:CollidesWithGrid() and (room:GetGridCollisionAtPos(npc.Position + Vector(d.dir*2, 0)) == GridCollisionClass.COLLISION_WALL or room:GetGridCollisionAtPos(npc.Position + Vector(d.dir*2, 0)) == GridCollisionClass.COLLISION_WALL_EXCEPT_PLAYER) then
+                d.state = "ChargeOffset"
+                game:ShakeScreen(10)
+                d.chargeInit = false
+            end
+
+        elseif d.state == "ChargeOffset" then
+
+            npc:MultiplyFriction(0)
+            mod:spritePlay(sprite, "Slam")
+
+        end
+
+        if d.state == "Moving" and not (room:GetGridCollisionAtPos(npc.Position + Vector(0, 10)) == GridCollisionClass.COLLISION_WALL or room:GetGridCollisionAtPos(npc.Position + Vector(0, 10)) == GridCollisionClass.COLLISION_WALL_EXCEPT_PLAYER) and
+        math.abs(npc.Position.Y - targetpos.Y) < 20 and not d.hasCharged then
+            d.state = "Charging"
         end
 
         d.MovementLog[npc.FrameCount] = npc.Position
     end
 
-    if room:GetGridCollisionAtPos(npc.Position + Vector(0, 10)) == GridCollisionClass.COLLISION_WALL or room:GetGridCollisionAtPos(npc.Position + Vector(0, 10)) == GridCollisionClass.COLLISION_WALL_EXCEPT_PLAYER then
+    if d.state == "Moving" and (room:GetGridCollisionAtPos(npc.Position + Vector(0, 10)) == GridCollisionClass.COLLISION_WALL or room:GetGridCollisionAtPos(npc.Position + Vector(0, 10)) == GridCollisionClass.COLLISION_WALL_EXCEPT_PLAYER) then
         npc.GridCollisionClass = GridCollisionClass.COLLISION_NONE
         d.state = "Hiding"
     end
 
-    if sprite:IsEventTriggered("Dissapear") then
+    if sprite:IsEventTriggered("Dissapear") and d.state ~= "Hidden" then
         npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_NONE
         npc.Visible = false
+        d.hasCharged = false
 
         npc.StateFrame = 0
         d.state = "Hidden"
@@ -185,10 +247,30 @@ function mod:ChombAI(npc, sprite, d)
 
     if sprite:IsEventTriggered("Appear") then
         npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_ALL
+        npc.GridCollisionClass = GridCollisionClass.COLLISION_WALL_EXCEPT_PLAYER
     end
 
     if sprite:IsFinished("UnBurrow") then
         d.state = "Moving"
+    elseif sprite:IsFinished("Slam") then
+        d.state = "Moving"
     end
 
+end
+
+function mod:ChombHurt(npc, amount, damageFlags, source)
+    local d = npc:GetData()
+    local room = game:GetRoom()
+    local rng = npc:GetDropRNG()
+
+        if not d.IsSegment then
+            for _, butt in ipairs(Isaac.FindByType(mod.MiniBosses.Chomb.ID, mod.MiniBosses.Chomb.Var)) do
+                if butt.Parent and butt.Parent.InitSeed == npc.InitSeed then
+                    butt:TakeDamage(amount, damageFlags | DamageFlag.DAMAGE_CLONES, source, 0)
+                end
+            end
+        elseif not mod:HasDamageFlag(DamageFlag.DAMAGE_CLONES, damageFlags) then
+            npc.Parent:TakeDamage(amount, damageFlags, source, 0)
+            return false
+        end
 end
