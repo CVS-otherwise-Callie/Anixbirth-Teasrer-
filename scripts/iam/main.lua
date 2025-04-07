@@ -67,7 +67,8 @@ FHAC:LoadScripts("scripts.iam.familiars", {
 
 FHAC:LoadScripts("scripts.iam.items.actives", {
 	"joke book",
-	"straw doll"
+	"straw doll",
+	"hamer",
 })
 
 FHAC:LoadScripts("scripts.iam.items.trinkets", {
