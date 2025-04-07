@@ -115,13 +115,13 @@ mod.Sounds = {
 FHAC.Collectibles = {
     Items = {
         StinkyMushroom = Isaac.GetItemIdByName("Stinky Mushroom"),
-        AnalFissure = Isaac.GetItemIdByName("Anal Fissure"),
         BigBowlOfSauerkraut = Isaac.GetItemIdByName("Big Ol' Bowl of Sauerkraut"),
         JokeBook = Isaac.GetItemIdByName("Joke Book"),
         StrawDoll = Isaac.GetItemIdByName("Straw Doll"),
         EmptyDeathCertificate = Isaac.GetItemIdByName("Empty Death Certificate"),
         MarketablePlushie = Isaac.GetItemIdByName("Marketable Plushie"),
-        StinkySocks = Isaac.GetItemIdByName("Stinky Socks")
+        StinkySocks = Isaac.GetItemIdByName("Stinky Socks"),
+	TheHamer = Isaac.GetItemIdByName("The Hamer"),
     },
     PickupsEnt = {
         BowlOfSauerkraut = mod:ENT("Bowl of Sauerkraut"),
