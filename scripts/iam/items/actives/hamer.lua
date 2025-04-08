@@ -8,7 +8,7 @@ function mod:TheHamerActive(player)
 
     if not ent:GetData().ishamerSmooshed and ent:IsActiveEnemy() and ent:IsVulnerableEnemy() then
       ent:GetData().ishamerSmooshed = true
-      ent:TakeDamage(player:ToPlayer().Damage * (1+player:ToPlayer():GetEffects():GetCollectibleEffectNum(mod.Collectibles.Items.TheHamer))*0.10, flag, EntityRef(Isaac.GetPlayer()), countdown)    
+      --ent:TakeDamage(player:ToPlayer().Damage * 0.10, flag, EntityRef(Isaac.GetPlayer()), countdown)    
     end
   end
 end
