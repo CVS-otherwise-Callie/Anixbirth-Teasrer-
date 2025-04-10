@@ -213,12 +213,31 @@ function mod:ChombAI(npc, sprite, d)
             if npc:CollidesWithGrid() and (room:GetGridCollisionAtPos(npc.Position + Vector(d.dir*2, 0)) == GridCollisionClass.COLLISION_WALL or room:GetGridCollisionAtPos(npc.Position + Vector(d.dir*2, 0)) == GridCollisionClass.COLLISION_WALL_EXCEPT_PLAYER) then
                 d.state = "ChargeOffset"
                 game:ShakeScreen(10)
+
+                for i = 1, 2 do
+
+                    for k = 1, math.random(5, 20) do
+                        local projtype = math.random(0, 1)
+
+                        local realshot = Isaac.Spawn(9, projtype, 0, npc.Position + Vector(math.random(1, 10), 0):Rotated((targetpos - npc.Position):GetAngleDegrees()), npc.Velocity:Rotated(45+(90*i) + math.random(-20, 20)):Resized(math.random(10, 15)), npc)
+                        realshot:ToProjectile().FallingAccel = math.random(1, 100)/10000
+                        realshot:ToProjectile().FallingSpeed = math.random(1, 100)/10000
+    
+                        if projtype then
+                            realshot:GetSprite():Load("gfx/projectiles/tooth_projectile", true) --you autsitsic piece of poop LOAD
+                            mod:spritePlay(realshot:GetSprite(), "Tooth" .. math.random(2, 4) .. "Move")
+                            realshot:GetSprite():Update()
+                        end
+                    end
+                end
+
                 d.chargeInit = false
             end
 
         elseif d.state == "ChargeOffset" then
 
             npc:MultiplyFriction(0)
+            npc:AddEntityFlags(EntityFlag.FLAG_NO_PHYSICS_KNOCKBACK | EntityFlag.FLAG_NO_KNOCKBACK)
             mod:spritePlay(sprite, "Slam")
 
         end

@@ -456,6 +456,11 @@
         <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
     </entity>
 
+    <entity anm2path="monsters/chomblet/chomblet.anm2" reroll="true" baseHP="15" boss="0" champion="1" collisionDamage="1" collisionMass="7" collisionRadius="13" friction="1" id="37" name="Chomblet" numGridCollisionPoints="12" shadowSize="17" stageHP="0" variant="5" portrait="14">
+		<bestiary transform="0,-3,1" anim="Move Hori" />
+        <gibs amount="4" blood="1" bone="0" eye="0" gut="1" large="0" />
+    </entity>
+
     <!--Jokes-->
     <entity anm2path="jokes/enemies/gaperrr/gaperrr.anm2" id="10" variant="5938" reroll="false" baseHP="13" boss="0" champion="1" collisionDamage="1" collisionMass="40" collisionRadius="13" friction="1" name="A gaper w/ three legs, why did we do this" numGridCollisionPoints="12" shadowSize="12" stageHP="3">
         <gibs amount="6" blood="2" bone="1" eye="1" gut="1" large="0" />
