@@ -41,7 +41,8 @@ FHAC:LoadScripts("scripts.iam.monsters", {
 	"jim",
 	"narcissism mirror",
 	"woodhead",
-	"narcissim relfections"
+	"narcissim relfections",
+	"chomblet"
 })
 
 FHAC:LoadScripts("scripts.iam.minibosses", {

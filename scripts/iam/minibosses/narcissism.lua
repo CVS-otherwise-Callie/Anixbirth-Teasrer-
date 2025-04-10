@@ -172,10 +172,8 @@ function mod:NarcissismAI(npc, sprite, d)
         if d.summon == "mirror" or d.summon == nil then
             SpawnMirror()
         elseif d.summon == "reflection" then
-            for i = 0, math.random(1, 2) do
-                local ent = Isaac.Spawn(mod.Monsters.NarcissismReflections.ID, mod.Monsters.NarcissismReflections.Var, 0, npc.Position + Vector(10, 0):Rotated((targetpos - npc.Position):GetAngleDegrees()), Vector.Zero, npc)
-                ent.Parent = npc
-            end
+            local ent = Isaac.Spawn(mod.Monsters.NarcissismReflections.ID, mod.Monsters.NarcissismReflections.Var, 0, npc.Position + Vector(10, 0):Rotated((targetpos - npc.Position):GetAngleDegrees()), Vector.Zero, npc)
+            ent.Parent = npc
         end
     end
 
