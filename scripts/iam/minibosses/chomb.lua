@@ -52,6 +52,7 @@ function mod:ChombAI(npc, sprite, d)
     local room = game:GetRoom()
     local target = npc:GetPlayerTarget()
     local targetpos = target.Position
+    local hasspawnedBabies
 
     if not d.larryKJinit then
 
@@ -189,6 +190,10 @@ function mod:ChombAI(npc, sprite, d)
         elseif d.state == "Appearing" then
             mod:spritePlay(sprite, "UnBurrow")
             npc.Visible = true
+
+            d.roomtoPosdist = math.random(20, 50)
+            d.shouldCharge = math.random(1, 2)
+            d.hasspawnedBabies = false
         elseif d.state == "Charging" then
 
             d.hasCharged = true
@@ -240,12 +245,38 @@ function mod:ChombAI(npc, sprite, d)
             npc:AddEntityFlags(EntityFlag.FLAG_NO_PHYSICS_KNOCKBACK | EntityFlag.FLAG_NO_KNOCKBACK)
             mod:spritePlay(sprite, "Slam")
 
+        elseif d.state == "SpawnBabiesInit" then
+
+            npc:MultiplyFriction(0)
+            npc:AddEntityFlags(EntityFlag.FLAG_NO_PHYSICS_KNOCKBACK | EntityFlag.FLAG_NO_KNOCKBACK)
+            mod:spritePlay(sprite, "Poop")
+
+        elseif d.state == "SpawnBabiesLoop" then
+
+            mod:spritePlay(sprite, "Poop_Loop")
+
+            if sprite:IsFinished("Poop_Loop") then
+                d.spawnedBabies = d.spawnedBabies + 1
+                mod:spritePlay(sprite, "Poop_Loop")
+            end
+
+            if d.spawnedBabies > (200-d.roomtoPosdist)/27 then
+                mod:spritePlay(sprite, "Poop_End")
+                d.state = nil
+                d.hasspawnedBabies = true
+            end
+
         end
 
         if d.state == "Moving" and not (room:GetGridCollisionAtPos(npc.Position + Vector(0, 10)) == GridCollisionClass.COLLISION_WALL or room:GetGridCollisionAtPos(npc.Position + Vector(0, 10)) == GridCollisionClass.COLLISION_WALL_EXCEPT_PLAYER) and
-        math.abs(npc.Position.Y - targetpos.Y) < 20 and not d.hasCharged then
+        math.abs(npc.Position.Y - targetpos.Y) < 20 and not d.hasCharged and d.shouldCharge == 2 then
             d.state = "Charging"
         end
+
+        if d.state == "Moving" and d.shouldCharge == 1 and math.abs(npc.Position.Y - room:GetCenterPos().Y) < d.roomtoPosdist and not d.hasspawnedBabies then
+            d.state = "SpawnBabiesInit"
+        end
+        
 
         d.MovementLog[npc.FrameCount] = npc.Position
     end
@@ -262,16 +293,22 @@ function mod:ChombAI(npc, sprite, d)
 
         npc.StateFrame = 0
         d.state = "Hidden"
-    end
-
-    if sprite:IsEventTriggered("Appear") then
+    elseif sprite:IsEventTriggered("Appear") then
         npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_ALL
         npc.GridCollisionClass = GridCollisionClass.COLLISION_WALL_EXCEPT_PLAYER
+    elseif sprite:IsEventTriggered("Shoot") then
+        --for now
+        Isaac.Spawn(mod.Monsters.Chomblet.ID, mod.Monsters.Chomblet.Var, 0, mod:freeGrid(npc, true, 400, 0), Vector.Zero, npc)
     end
 
     if sprite:IsFinished("UnBurrow") then
         d.state = "Moving"
     elseif sprite:IsFinished("Slam") then
+        d.state = "Moving"
+    elseif sprite:IsFinished("Poop") then
+        d.spawnedBabies = 0
+        d.state = "SpawnBabiesLoop"
+    elseif sprite:IsFinished("Poop_End") then
         d.state = "Moving"
     end
 

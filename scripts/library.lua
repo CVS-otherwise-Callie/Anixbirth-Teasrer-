@@ -260,7 +260,6 @@ function mod:FindClosestNextEntitySpawn(npc, dist, random)
 		if #positions > 0 then
 			return positions[1]
 		else
-			print("aww")
 			return npc.Position
 		end
 	end
