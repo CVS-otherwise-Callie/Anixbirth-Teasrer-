@@ -13,6 +13,8 @@ function mod:ClatterTellerAI(npc, sprite, d)
 
     local target = npc:GetPlayerTarget()
 
+    
+
     if not d.init then
 
         npc:AddEntityFlags(EntityFlag.FLAG_NO_KNOCKBACK | EntityFlag.FLAG_NO_PHYSICS_KNOCKBACK)
@@ -42,8 +44,10 @@ function mod:ClatterTellerAI(npc, sprite, d)
 
     if d.state == "chasing" then
         mod:spritePlay(sprite, "Chasing")
-        if npc.StateFrame >= 80 then
-            d.state = "attack"
+        for _, enemy in ipairs(Isaac.FindInRadius(npc.Position, 999, EntityPartition.ENEMY)) do
+            if enemy:IsDead() and npc.StateFrame >= 80 and not npc.Variant == mod.Monsters.ClatterTeller.Var then
+                d.state = "attack"
+            end
         end
     end
 
