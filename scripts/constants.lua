@@ -64,6 +64,7 @@ FHAC.Monsters = {
     Woodhead = mod:ENT("Woodhead"),
     NarcissismReflections = mod:ENT("Narcissism Reflections"),
     Chomblet = mod:ENT("Chomblet"),
+    Trilo = mod:ENT("Trilo"),
     ClatterTeller = mod:ENT("Clatter Teller")
 }
 
