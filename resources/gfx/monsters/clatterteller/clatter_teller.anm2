@@ -1,5 +1,5 @@
 <AnimatedActor>
-	<Info CreatedBy="TJP" CreatedOn="12/04/2025 20:47:37" Version="14" Fps="45"/>
+	<Info CreatedBy="TJP" CreatedOn="12/04/2025 22:42:16" Version="15" Fps="45"/>
 	<Content>
 		<Spritesheets>
 			<Spritesheet Path="clatter_teller_mausoleum.png" Id="0"/>
@@ -14,7 +14,9 @@
 			<Layer Name="Glint" Id="5" SpritesheetId="1"/>
 		</Layers>
 		<Nulls/>
-		<Events/>
+		<Events>
+			<Event Name="target" Id="0"/>
+		</Events>
 	</Content>
 	<Animations DefaultAnimation="Idle">
 		<Animation Name="Idle" FrameNum="60" Loop="true">
@@ -85,7 +87,9 @@
 				<LayerAnimation LayerId="5" Visible="true"/>
 			</LayerAnimations>
 			<NullAnimations/>
-			<Triggers/>
+			<Triggers>
+				<Trigger EventId="0" AtFrame="20"/>
+			</Triggers>
 		</Animation>
 		<Animation Name="Chasing" FrameNum="81" Loop="true">
 			<RootAnimation>

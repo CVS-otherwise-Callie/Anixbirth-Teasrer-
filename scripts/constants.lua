@@ -90,6 +90,7 @@ FHAC.Familiars = { --YOU HAVE NO IDEA HOW MANY FUCKING TIMES I SPELLED THIS WRON
 
 FHAC.Effects = {
     ZapperTellerLightning = mod:ENT("Zapper Teller Lightning"),
+    ClatterTellerTarget = mod:ENT("Clatter Teller Target"),
     BlackOverlayBox = mod:ENT("BlackOverlayBox"),
     NormalTextBox = mod:ENT("Text Box")
 }

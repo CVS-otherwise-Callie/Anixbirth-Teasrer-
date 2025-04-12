@@ -10,8 +10,15 @@ end)
 function mod:ClatterTellerTargetAI(ef, sprite, d)
 
     if not d.init then
-        print("hii")
+        ef.DepthOffset = -100
+        d.state = "chase"
+
         d.init = true
+    end
+
+    if d.state == "chase" then
+        mod:spritePlay(sprite, "Idle")
+        --ef.Position:Lerp(target, 0.1)
     end
 
 end

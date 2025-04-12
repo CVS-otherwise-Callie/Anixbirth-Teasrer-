@@ -35,10 +35,16 @@ function mod:ClatterTellerAI(npc, sprite, d)
 
     if d.state == "switch" then
         mod:spritePlay(sprite, "Idle_Switch")
+        
+        if sprite:IsEventTriggered("target") then
+            local targetb = Isaac.Spawn(1000, 425, 55, npc.Position, npc.Velocity, npc):ToNPC()
+            targetb.Parent = npc
+        end
 
         if sprite:IsFinished() then
             npc.StateFrame = 0
             d.state = "chasing"
+            d.target_spawned = false
         end
     end
 
