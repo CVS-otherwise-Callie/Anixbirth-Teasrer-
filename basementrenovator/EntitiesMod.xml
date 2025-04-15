@@ -70,6 +70,7 @@ Up to groups of 3.
       <checkbox Name="Moves After Shooting" Length="1"/>
    </bitfield>
 </entity>
+<entity ID="161" Variant="84" Name="Trilo" Image="mah boys/trilo.png" BaseHP="10"/>
 <entity ID="161" Variant="91" Name="Schmoot" Image="mah boys/schmoot.png" BaseHP="16" Tags="Champion"/>
 <entity ID="161" Variant="101" Name="Soot" Image="mah boys/soot.png" BaseHP="3"/>
 <entity ID="161" Variant="119" Name="Wost" Image="mah boys/wost.png" BaseHP="8" Tags="Champion"/>
@@ -191,6 +192,7 @@ Use 2, 4, or 6 normally.
 
 	<group Name="HOPE Burning Basement" Label="Burning Basement">
 		<group Name="HOPE Burning Basement Enemies">
+			<entity Name="Trilo"/>
 			<entity Name="Schmoot"/>
 			<entity Name="Soot"/>
 		</group>

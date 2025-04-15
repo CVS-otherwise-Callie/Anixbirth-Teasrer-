@@ -74,7 +74,7 @@ function mod:UligAI(npc, sprite, d)
             if mod:isScare(npc) then
                 local targetvelocity = (targetpos - npc.Position):Resized(-10)
                 npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, d.lerpnonsense)
-            elseif path:HasPathToPos(targetpos) then
+            elseif game:GetRoom():CheckLine(npc.Position,targetpos,0,1,false,false) then
                 local targetvelocity = (targetpos - npc.Position):Resized(10)
                 npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, d.lerpnonsense)
             else

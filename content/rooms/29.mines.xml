@@ -1,0 +1,5073 @@
+<?xml version="1.0" ?>
+<rooms>
+	<room variant="45000" name="CVS - Tech Grudge - Stonies up my ass-" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="7"/>
+		<door exists="True" x="13" y="3"/>
+		<spawn x="2" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="1">
+			<entity type="161" variant="311" subtype="3" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="3">
+			<entity type="823" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="5">
+			<entity type="161" variant="311" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="45001" name="CVS - Tech Grudge - What the fluff" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+		<door exists="False" x="-1" y="3"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="7"/>
+		<door exists="False" x="13" y="3"/>
+		<spawn x="0" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="1">
+			<entity type="6000" variant="2" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="1">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="1">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="1">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="1">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="1">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="1">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="1">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="1">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="1">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="1">
+			<entity type="6000" variant="3" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="2">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="2">
+			<entity type="161" variant="311" subtype="3" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="2">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="3">
+			<entity type="827" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="3">
+			<entity type="6000" variant="17" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="3">
+			<entity type="161" variant="311" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="3">
+			<entity type="6000" variant="33" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="3">
+			<entity type="827" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="4">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="4">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="5">
+			<entity type="6000" variant="4" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="5">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="5">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="5">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="5">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="5">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="5">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="5">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="5">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="5">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="5">
+			<entity type="6000" variant="5" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="45002" name="CVS - Tech Grudge - Gay peeps" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="7"/>
+		<door exists="True" x="13" y="3"/>
+		<spawn x="2" y="0">
+			<entity type="6000" variant="9" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="0">
+			<entity type="6000" variant="9" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="1">
+			<entity type="161" variant="311" subtype="4" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="1">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="1">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="2">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="2">
+			<entity type="6000" variant="2" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="2">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="2">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="2">
+			<entity type="6000" variant="5" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="3">
+			<entity type="6000" variant="4" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="3">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="3">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="3">
+			<entity type="6000" variant="6" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="3">
+			<entity type="6000" variant="32" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="3">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="3">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="3">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="3">
+			<entity type="6000" variant="3" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="4">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="4">
+			<entity type="821" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="4">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="5">
+			<entity type="6000" variant="4" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="5">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="5">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="5">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="5">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="5">
+			<entity type="6000" variant="5" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="5">
+			<entity type="161" variant="311" subtype="2" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="0" name="Random - Stoner - Haha fun room (yes you are)" type="1" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="1.0" lastTestTime="2025-04-13T03:11+00:00">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="False" x="6" y="-1"/>
+		<door exists="False" x="6" y="7"/>
+		<door exists="True" x="13" y="3"/>
+		<spawn x="6" y="0">
+			<entity type="162" variant="2900" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="1">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="1">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="1">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="1">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="1">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="1">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="1">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="1">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="1">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="1">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="1">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="1">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="1">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="2">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="2">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="2">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="2">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="2">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="2">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="2">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="2">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="2">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="2">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="2">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="2">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="2">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="3">
+			<entity type="161" variant="30" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="3">
+			<entity type="162" variant="2900" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="3">
+			<entity type="809" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="4">
+			<entity type="969" variant="9" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="45003" name="CVS - Tech Grudge - Up and Down-er" type="1" subtype="0" shape="5" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<spawn x="4" y="1">
+			<entity type="161" variant="311" subtype="4" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="3">
+			<entity type="25" variant="3" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="7">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="7">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="10">
+			<entity type="25" variant="3" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="11">
+			<entity type="161" variant="311" subtype="2" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="45004" name="CVS - Tech Grudge - Vitamin C and D" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="False" x="6" y="7"/>
+		<door exists="False" x="13" y="3"/>
+		<spawn x="0" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="0">
+			<entity type="161" variant="311" subtype="4" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="1">
+			<entity type="829" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="1">
+			<entity type="1901" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="2">
+			<entity type="804" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="3">
+			<entity type="1901" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="4">
+			<entity type="1901" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="6">
+			<entity type="804" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="6">
+			<entity type="1300" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="45005" name="CVS - Tech Grudge - What happens if I go to Taco Bell?" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+		<door exists="False" x="-1" y="3"/>
+		<door exists="False" x="6" y="-1"/>
+		<door exists="True" x="6" y="7"/>
+		<door exists="False" x="13" y="3"/>
+		<spawn x="0" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="2">
+			<entity type="823" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="4">
+			<entity type="161" variant="311" subtype="1" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="45006" name="CVS - Tech Grudge - I have a grudge against homogays" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="7"/>
+		<door exists="True" x="13" y="3"/>
+		<spawn x="2" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="2">
+			<entity type="161" variant="311" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="3">
+			<entity type="826" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="4">
+			<entity type="161" variant="311" subtype="3" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="45007" name="CVS - Tech Grudge - Me and my bud when we're playing hide and seek" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="False" x="6" y="7"/>
+		<door exists="False" x="13" y="3"/>
+		<spawn x="0" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="1">
+			<entity type="809" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="6">
+			<entity type="161" variant="311" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="6">
+			<entity type="822" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="45008" name="CVS - Tech Grudge - This is not going to work." type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="7"/>
+		<door exists="True" x="13" y="3"/>
+		<spawn x="4" y="1">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="1">
+			<entity type="161" variant="311" subtype="3" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="1">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="2">
+			<entity type="161" variant="311" subtype="4" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="4">
+			<entity type="161" variant="311" subtype="2" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="5">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="5">
+			<entity type="161" variant="311" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="5">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="45009" name="CVS - Tech Grudge - Grrrr get me out of here" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="7"/>
+		<door exists="True" x="13" y="3"/>
+		<spawn x="2" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="0">
+			<entity type="161" variant="311" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="0">
+			<entity type="161" variant="311" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="2">
+			<entity type="6000" variant="2" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="2">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="2">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="2">
+			<entity type="6000" variant="3" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="2">
+			<entity type="6000" variant="2" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="2">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="2">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="2">
+			<entity type="6000" variant="3" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="3">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="3">
+			<entity type="6000" variant="33" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="3">
+			<entity type="823" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="3">
+			<entity type="6000" variant="33" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="3">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="4">
+			<entity type="6000" variant="4" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="4">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="4">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="4">
+			<entity type="6000" variant="5" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="4">
+			<entity type="6000" variant="4" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="4">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="4">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="4">
+			<entity type="6000" variant="5" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="6">
+			<entity type="161" variant="311" subtype="3" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="6">
+			<entity type="161" variant="311" subtype="3" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="45010" name="CVS - Tech Grudge - Biggie Room" type="1" subtype="0" shape="8" width="26" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="19" y="-1"/>
+		<door exists="True" x="19" y="14"/>
+		<door exists="True" x="26" y="3"/>
+		<door exists="True" x="26" y="10"/>
+		<spawn x="0" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="13" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="14" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="15" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="16" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="17" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="24" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="25" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="13" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="14" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="15" y="1">
+			<entity type="820" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="24" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="25" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="2">
+			<entity type="822" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="2">
+			<entity type="827" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="25" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="3">
+			<entity type="6000" variant="2" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="3">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="3">
+			<entity type="6000" variant="16" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="3">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="3">
+			<entity type="6000" variant="3" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="15" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="16" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="17" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="18" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="4">
+			<entity type="6000" variant="2" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="4">
+			<entity type="6000" variant="5" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="4">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="4">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="4">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="4">
+			<entity type="6001" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="13" y="4">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="14" y="4">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="15" y="4">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="16" y="4">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="17" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="18" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="25" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="5">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="5">
+			<entity type="6000" variant="2" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="5">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="5">
+			<entity type="6000" variant="5" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="5">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="5">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="5">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="5">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="5">
+			<entity type="6001" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="13" y="5">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="14" y="5">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="15" y="5">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="16" y="5">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="17" y="5">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="18" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="19" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="25" y="5">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="6">
+			<entity type="1300" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="6">
+			<entity type="161" variant="311" subtype="4" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="6">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="6">
+			<entity type="6000" variant="2" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="6">
+			<entity type="6001" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="6">
+			<entity type="6001" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="6">
+			<entity type="6001" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="6">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="6">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="6">
+			<entity type="6000" variant="6" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="13" y="6">
+			<entity type="6000" variant="3" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="16" y="6">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="17" y="6">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="18" y="6">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="19" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="25" y="6">
+			<entity type="1300" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="7">
+			<entity type="1300" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="7">
+			<entity type="6000" variant="4" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="7">
+			<entity type="6000" variant="6" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="7">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="7">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="7">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="7">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="7">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="7">
+			<entity type="6000" variant="6" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="13" y="7">
+			<entity type="6000" variant="6" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="14" y="7">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="15" y="7">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="16" y="7">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="17" y="7">
+			<entity type="6001" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="18" y="7">
+			<entity type="6001" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="19" y="7">
+			<entity type="6000" variant="3" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="24" y="7">
+			<entity type="161" variant="311" subtype="2" weight="1.0"/>
+		</spawn>
+		<spawn x="25" y="7">
+			<entity type="1300" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="8">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="8">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="8">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="8">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="8">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="8">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="13" y="8">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="16" y="8">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="17" y="8">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="18" y="8">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="19" y="8">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="25" y="8">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="9">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="9">
+			<entity type="6000" variant="4" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="9">
+			<entity type="6000" variant="3" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="9">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="9">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="9">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="9">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="9">
+			<entity type="6001" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="13" y="9">
+			<entity type="6001" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="14" y="9">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="15" y="9">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="16" y="9">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="17" y="9">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="18" y="9">
+			<entity type="6000" variant="2" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="19" y="9">
+			<entity type="6000" variant="5" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="25" y="9">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="10">
+			<entity type="6000" variant="4" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="10">
+			<entity type="6000" variant="3" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="10">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="10">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="10">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="10">
+			<entity type="6001" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="13" y="10">
+			<entity type="6001" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="14" y="10">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="15" y="10">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="16" y="10">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="17" y="10">
+			<entity type="6000" variant="2" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="18" y="10">
+			<entity type="6000" variant="5" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="11">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="11">
+			<entity type="6000" variant="4" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="11">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="11">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="11">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="11">
+			<entity type="6000" variant="5" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="13" y="11">
+			<entity type="6000" variant="4" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="14" y="11">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="15" y="11">
+			<entity type="6000" variant="32" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="16" y="11">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="17" y="11">
+			<entity type="6000" variant="5" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="12">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="12">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="12">
+			<entity type="820" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="12">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="12">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="13" y="12">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="14" y="12">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="15" y="12">
+			<entity type="161" variant="311" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="23" y="12">
+			<entity type="822" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="24" y="12">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="25" y="12">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="13">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="13">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="13">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="13">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="13">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="13">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="13">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="13" y="13">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="14" y="13">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="15" y="13">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="16" y="13">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="17" y="13">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="24" y="13">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="25" y="13">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="45011" name="CVS - Tech Grudge - Grr im coming after you" type="1" subtype="0" shape="2" width="13" height="7" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="13" y="3"/>
+		<spawn x="12" y="2">
+			<entity type="161" variant="311" subtype="3" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="3">
+			<entity type="292" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="3">
+			<entity type="826" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="3">
+			<entity type="292" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="4">
+			<entity type="161" variant="311" subtype="1" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="45012" name="CVS - Tech Grudge - Playground" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="7"/>
+		<door exists="True" x="13" y="3"/>
+		<spawn x="0" y="0">
+			<entity type="161" variant="311" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="0">
+			<entity type="1300" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="2">
+			<entity type="818" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="2">
+			<entity type="1300" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="4">
+			<entity type="1300" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="4">
+			<entity type="161" variant="311" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="4">
+			<entity type="818" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="6">
+			<entity type="1300" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="45013" name="CVS - Tech Grudge - Going after the big man himself" type="1" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="6" y="0">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="1">
+			<entity type="25" variant="3" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="1">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="2">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="3">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="4">
+			<entity type="161" variant="311" subtype="3" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="4">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="5">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="6">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="6">
+			<entity type="824" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="7">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="7">
+			<entity type="824" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="7">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="7">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="8">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="9">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="9">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="9">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="9">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="9">
+			<entity type="161" variant="311" subtype="3" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="9">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="10">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="10">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="10">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="10">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="10">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="10">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="10">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="11">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="12">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="12">
+			<entity type="25" variant="3" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="13">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="45014" name="CVS - Tech Grudge - Splidey" type="1" subtype="0" shape="7" width="26" height="7" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="26" y="3"/>
+		<spawn x="5" y="2">
+			<entity type="240" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="3">
+			<entity type="161" variant="311" subtype="2" weight="1.0"/>
+		</spawn>
+		<spawn x="13" y="3">
+			<entity type="824" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="14" y="3">
+			<entity type="161" variant="311" subtype="4" weight="1.0"/>
+		</spawn>
+		<spawn x="20" y="4">
+			<entity type="240" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="45015" name="CVS - Tech Grudge - Header" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="7"/>
+		<door exists="True" x="13" y="3"/>
+		<spawn x="0" y="0">
+			<entity type="1300" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="0">
+			<entity type="161" variant="311" subtype="4" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="0">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="1">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="1">
+			<entity type="827" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="2">
+			<entity type="6000" variant="2" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="2">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="2">
+			<entity type="6000" variant="6" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="2">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="2">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="2">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="2">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="2">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="3">
+			<entity type="1300" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="3">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="3">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="3">
+			<entity type="1300" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="4">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="4">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="4">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="4">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="4">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="4">
+			<entity type="6000" variant="6" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="4">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="4">
+			<entity type="6000" variant="5" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="5">
+			<entity type="827" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="5">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="6">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="6">
+			<entity type="161" variant="311" subtype="2" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="6">
+			<entity type="1300" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="45016" name="CVS - Tech Grudge - Headless!!! (jk jk its 3am)" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+		<door exists="False" x="-1" y="3"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="7"/>
+		<door exists="True" x="13" y="3"/>
+		<spawn x="0" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="0">
+			<entity type="6000" variant="2" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="0">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="0">
+			<entity type="6000" variant="3" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="0">
+			<entity type="161" variant="311" subtype="3" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="1">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="1">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="1">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="2">
+			<entity type="818" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="2">
+			<entity type="827" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="2">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="2">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="2">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="3">
+			<entity type="161" variant="311" subtype="4" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="3">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="3">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="4">
+			<entity type="818" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="4">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="4">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="4">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="5">
+			<entity type="827" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="5">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="5">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="5">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="6">
+			<entity type="6000" variant="4" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="6">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="6">
+			<entity type="6000" variant="5" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="45017" name="CVS - Tech Grudge - I still need to make anims for these guys" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="7"/>
+		<door exists="True" x="13" y="3"/>
+		<spawn x="0" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="1">
+			<entity type="6000" variant="9" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="2">
+			<entity type="161" variant="311" subtype="4" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="2">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="2">
+			<entity type="27" variant="3" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="3">
+			<entity type="6000" variant="7" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="3">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="3">
+			<entity type="6000" variant="6" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="3">
+			<entity type="6000" variant="32" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="3">
+			<entity type="6000" variant="8" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="4">
+			<entity type="27" variant="3" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="4">
+			<entity type="6000" variant="17" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="5">
+			<entity type="6000" variant="10" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="5">
+			<entity type="161" variant="311" subtype="2" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="45018" name="CVS - Tech Grudge - Me at cold brew when 4" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="False" x="6" y="-1"/>
+		<door exists="True" x="6" y="7"/>
+		<door exists="True" x="13" y="3"/>
+		<spawn x="6" y="0">
+			<entity type="4500" variant="9" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="2">
+			<entity type="292" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="3">
+			<entity type="161" variant="311" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="3">
+			<entity type="161" variant="311" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="3">
+			<entity type="161" variant="311" subtype="2" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="4">
+			<entity type="161" variant="311" subtype="3" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="4">
+			<entity type="161" variant="311" subtype="3" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="4">
+			<entity type="161" variant="311" subtype="4" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="45019" name="CVS - Tech Grudge - Me-at? MEAT??" type="1" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="0" y="0">
+			<entity type="25" variant="3" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="0">
+			<entity type="6000" variant="9" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="1">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="2">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="2">
+			<entity type="6000" variant="9" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="3">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="3">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="4">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="4">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="5">
+			<entity type="161" variant="311" subtype="4" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="5">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="5">
+			<entity type="6000" variant="2" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="5">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="5">
+			<entity type="6000" variant="5" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="6">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="6">
+			<entity type="161" variant="311" subtype="4" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="6">
+			<entity type="820" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="6">
+			<entity type="6000" variant="33" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="7">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="7">
+			<entity type="6000" variant="17" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="7">
+			<entity type="820" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="7">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="7">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="8">
+			<entity type="6000" variant="2" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="8">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="8">
+			<entity type="6000" variant="5" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="8">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="8">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="8">
+			<entity type="161" variant="311" subtype="2" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="9">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="9">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="9">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="10">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="10">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="11">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="11">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="11">
+			<entity type="6000" variant="10" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="11">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="12">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="12">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="12">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="12">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="13">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="13">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="13">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="13">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="13">
+			<entity type="6000" variant="10" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="13">
+			<entity type="25" variant="3" subtype="1" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="45020" name="CVS - Tech Grudge - I've got a mole in my garden get him the fuck out out OUT" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="False" x="6" y="-1"/>
+		<door exists="False" x="6" y="7"/>
+		<door exists="True" x="13" y="3"/>
+		<spawn x="0" y="0">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="0">
+			<entity type="161" variant="311" subtype="4" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="0">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="0">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="0">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="0">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="3">
+			<entity type="829" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="6">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="6">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="6">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="6">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="6">
+			<entity type="161" variant="311" subtype="2" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="6">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="45021" name="CVS - Tech Grudge - Time to break it" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="False" x="6" y="7"/>
+		<door exists="True" x="13" y="3"/>
+		<spawn x="4" y="0">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="0">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="0">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="1">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="1">
+			<entity type="829" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="1">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="2">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="2">
+			<entity type="161" variant="311" subtype="3" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="3">
+			<entity type="6000" variant="4" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="3">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="3">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="3">
+			<entity type="6000" variant="3" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="4">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="5">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="5">
+			<entity type="6000" variant="4" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="5">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="5">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="5">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="5">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="6">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="6">
+			<entity type="161" variant="311" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="6">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="45022" name="CVS - Tech Grudge - I just tried to spell shocking with a c in the front" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="7"/>
+		<door exists="True" x="13" y="3"/>
+		<spawn x="12" y="0">
+			<entity type="161" variant="311" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="1">
+			<entity type="6000" variant="7" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="1">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="1">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="1">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="1">
+			<entity type="6000" variant="3" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="2">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="3">
+			<entity type="822" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="3">
+			<entity type="6000" variant="17" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="4">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="5">
+			<entity type="6000" variant="4" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="5">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="5">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="5">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="5">
+			<entity type="6000" variant="8" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="6">
+			<entity type="161" variant="311" subtype="3" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="45023" name="CVS - Tech Grudge - Weirdmageddon" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="7"/>
+		<door exists="True" x="13" y="3"/>
+		<spawn x="0" y="0">
+			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="0">
+			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="1">
+			<entity type="820" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="2">
+			<entity type="1300" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="2">
+			<entity type="161" variant="311" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="3">
+			<entity type="1300" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="3">
+			<entity type="1300" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="4">
+			<entity type="161" variant="311" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="4">
+			<entity type="1300" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="6">
+			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="6">
+			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="45024" name="CVS - Tech Grudge - Now, a word from our sponser" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="7"/>
+		<door exists="True" x="13" y="3"/>
+		<spawn x="0" y="0">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="1">
+			<entity type="804" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="2">
+			<entity type="161" variant="311" subtype="3" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="3">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="3">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="4">
+			<entity type="161" variant="311" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="5">
+			<entity type="804" variant="0" subtype="2" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="6">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="45025" name="CVS - Tech Grudge - Werid cycle thing i did today" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="False" x="6" y="-1"/>
+		<door exists="True" x="6" y="7"/>
+		<door exists="True" x="13" y="3"/>
+		<spawn x="0" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="3">
+			<entity type="826" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="5">
+			<entity type="161" variant="311" subtype="4" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="6">
+			<entity type="161" variant="311" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="45026" name="CVS - Tech Grudge - Rocker down the steet (misspelled correctly google SHUT UP)" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="7"/>
+		<door exists="True" x="13" y="3"/>
+		<spawn x="0" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="0">
+			<entity type="161" variant="311" subtype="4" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="1">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="1">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="1">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="1">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="1">
+			<entity type="161" variant="311" subtype="3" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="1">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="2">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="2">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="2">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="3">
+			<entity type="818" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="4">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="4">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="4">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="5">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="5">
+			<entity type="161" variant="311" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="5">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="5">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="5">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="5">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="6">
+			<entity type="161" variant="311" subtype="2" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="45027" name="CVS - Tech Grudge - Watch every single one somehow enter the same line" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="7"/>
+		<door exists="True" x="13" y="3"/>
+		<spawn x="0" y="0">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="0">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="0">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="1">
+			<entity type="161" variant="311" subtype="4" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="1">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="1">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="1">
+			<entity type="6000" variant="6" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="1">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="1">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="1">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="1">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="1">
+			<entity type="6000" variant="5" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="2">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="3">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="3">
+			<entity type="161" variant="311" subtype="3" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="3">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="4">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="4">
+			<entity type="161" variant="311" subtype="2" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="5">
+			<entity type="6000" variant="2" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="5">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="5">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="5">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="5">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="5">
+			<entity type="6000" variant="6" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="5">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="5">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="6">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="6">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="6">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="45028" name="CVS - Tech Grudge - I like eating gyros theyr'e amazinggggg" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="7"/>
+		<door exists="True" x="13" y="3"/>
+		<spawn x="12" y="0">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="3">
+			<entity type="161" variant="311" subtype="4" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="3">
+			<entity type="824" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="3">
+			<entity type="824" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="3">
+			<entity type="161" variant="311" subtype="2" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="6">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="45029" name="CVS - Tech Grudge - Ew who tf likes gyros you deserve to die" type="1" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="1" y="0">
+			<entity type="818" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="0">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="1">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="2">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="2">
+			<entity type="818" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="3">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="4">
+			<entity type="161" variant="311" subtype="3" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="4">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="5">
+			<entity type="161" variant="311" subtype="3" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="5">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="6">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="7">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="7">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="7">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="7">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="7">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="7">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="7">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="7">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="7">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="7">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="7">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="8">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="8">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="8">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="8">
+			<entity type="161" variant="311" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="8">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="8">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="9">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="9">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="9">
+			<entity type="161" variant="311" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="9">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="10">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="10">
+			<entity type="818" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="11">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="12">
+			<entity type="818" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="12">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="13">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="45030" name="CVS - Tech Grudge - Just some random rocks and brain and stuff" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="7"/>
+		<door exists="True" x="13" y="3"/>
+		<spawn x="0" y="0">
+			<entity type="161" variant="311" subtype="4" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="0">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="1">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="1">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="4">
+			<entity type="840" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="5">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="6">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="6">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="6">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="45031" name="CVS - Tech Grudge - arrghhh i'm constipated" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="False" x="6" y="-1"/>
+		<door exists="False" x="6" y="7"/>
+		<door exists="True" x="13" y="3"/>
+		<spawn x="0" y="0">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="0">
+			<entity type="826" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="0">
+			<entity type="6000" variant="2" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="0">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="0">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="1">
+			<entity type="6000" variant="4" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="1">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="1">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="1">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="1">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="1">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="1">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="1">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="1">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="1">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="1">
+			<entity type="6000" variant="5" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="1">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="2">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="3">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="5">
+			<entity type="161" variant="311" subtype="2" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="5">
+			<entity type="1300" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="5">
+			<entity type="1300" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="5">
+			<entity type="161" variant="311" subtype="3" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="45032" name="CVS - Tech Grudge - angy bois" type="1" subtype="0" shape="2" width="13" height="7" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="13" y="3"/>
+		<spawn x="0" y="2">
+			<entity type="6000" variant="2" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="2">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="2">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="2">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="2">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="2">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="2">
+			<entity type="6000" variant="32" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="2">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="2">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="2">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="2">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="2">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="2">
+			<entity type="6000" variant="3" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="3">
+			<entity type="6000" variant="6" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="3">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="3">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="3">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="3">
+			<entity type="6000" variant="8" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="3">
+			<entity type="161" variant="311" subtype="4" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="3">
+			<entity type="821" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="3">
+			<entity type="161" variant="311" subtype="2" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="3">
+			<entity type="6000" variant="7" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="3">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="3">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="3">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="3">
+			<entity type="6000" variant="6" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="4">
+			<entity type="6000" variant="4" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="4">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="4">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="4">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="4">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="4">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="4">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="4">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="4">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="4">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="4">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="4">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="4">
+			<entity type="6000" variant="5" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="45033" name="CVS - Tech Grudge - Gideon kinda" type="1" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="0.10000000149011612">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="False" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="0" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="0">
+			<entity type="804" variant="0" subtype="3" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="0">
+			<entity type="804" variant="0" subtype="3" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="1">
+			<entity type="822" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="1">
+			<entity type="969" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="1">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="1">
+			<entity type="161" variant="311" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="1">
+			<entity type="4500" variant="10" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="1">
+			<entity type="161" variant="311" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="1">
+			<entity type="969" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="1">
+			<entity type="822" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="2">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="2">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="2">
+			<entity type="25" variant="3" subtype="100" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="2">
+			<entity type="969" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="2">
+			<entity type="969" variant="2" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="2">
+			<entity type="25" variant="3" subtype="100" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="2">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="3">
+			<entity type="969" variant="2" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="3">
+			<entity type="829" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="3">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="3">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="3">
+			<entity type="829" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="3">
+			<entity type="969" variant="3" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="4">
+			<entity type="1009" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="4">
+			<entity type="1009" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="4">
+			<entity type="6000" variant="4" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="4">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="4">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="4">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="4">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="4">
+			<entity type="6000" variant="3" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="4">
+			<entity type="1009" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="4">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="5">
+			<entity type="4500" variant="11" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="5">
+			<entity type="1009" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="5">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="5">
+			<entity type="969" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="5">
+			<entity type="827" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="5">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="5">
+			<entity type="969" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="5">
+			<entity type="1009" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="5">
+			<entity type="4500" variant="13" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="6">
+			<entity type="823" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="6">
+			<entity type="969" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="6">
+			<entity type="969" variant="2" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="6">
+			<entity type="824" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="6">
+			<entity type="969" variant="2" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="6">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="6">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="6">
+			<entity type="827" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="7">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="7">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="7">
+			<entity type="827" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="7">
+			<entity type="824" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="7">
+			<entity type="969" variant="2" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="7">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="7">
+			<entity type="969" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="7">
+			<entity type="823" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="7">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="7">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="8">
+			<entity type="4500" variant="12" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="8">
+			<entity type="1009" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="8">
+			<entity type="969" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="8">
+			<entity type="840" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="8">
+			<entity type="824" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="8">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="8">
+			<entity type="1009" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="8">
+			<entity type="4500" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="9">
+			<entity type="1009" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="9">
+			<entity type="1009" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="9">
+			<entity type="969" variant="3" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="9">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="9">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="9">
+			<entity type="840" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="9">
+			<entity type="1009" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="9">
+			<entity type="1009" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="10">
+			<entity type="969" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="10">
+			<entity type="829" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="10">
+			<entity type="6000" variant="2" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="10">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="10">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="10">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="10">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="10">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="10">
+			<entity type="6000" variant="5" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="10">
+			<entity type="969" variant="3" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="10">
+			<entity type="829" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="10">
+			<entity type="969" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="11">
+			<entity type="969" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="11">
+			<entity type="25" variant="3" subtype="100" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="11">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="11">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="11">
+			<entity type="827" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="11">
+			<entity type="827" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="11">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="11">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="12">
+			<entity type="161" variant="311" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="12">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="12">
+			<entity type="969" variant="3" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="12">
+			<entity type="969" variant="2" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="12">
+			<entity type="25" variant="3" subtype="100" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="12">
+			<entity type="969" variant="3" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="12">
+			<entity type="161" variant="311" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="13">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="13">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="13">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="45034" name="CVS - Tech Grudge - Hmmm i say GRRRR" type="1" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="4" y="2">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="2">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="4">
+			<entity type="161" variant="311" subtype="3" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="5">
+			<entity type="161" variant="311" subtype="2" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="6">
+			<entity type="1300" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="6">
+			<entity type="1300" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="6">
+			<entity type="1300" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="7">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="7">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="7">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="7">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="7">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="7">
+			<entity type="1300" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="7">
+			<entity type="1300" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="7">
+			<entity type="1300" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="7">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="7">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="7">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="7">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="7">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="8">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="8">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="8">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="8">
+			<entity type="161" variant="311" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="8">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="8">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="8">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="9">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="9">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="9">
+			<entity type="161" variant="311" subtype="4" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="9">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="9">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="11">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="11">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="45035" name="CVS - Tech Grudge - these are tight around the knees" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="7"/>
+		<door exists="True" x="13" y="3"/>
+		<spawn x="0" y="0">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="0">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="3">
+			<entity type="161" variant="311" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="6">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="6">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="45036" name="CVS - Tech Grudge - OoMmoGgGgG we're SOFTLOCKED!!!" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="7"/>
+		<door exists="True" x="13" y="3"/>
+		<spawn x="0" y="0">
+			<entity type="4500" variant="10" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="1">
+			<entity type="969" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="2">
+			<entity type="161" variant="311" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="2">
+			<entity type="1009" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="2">
+			<entity type="1009" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="3">
+			<entity type="1009" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="3">
+			<entity type="1009" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="3">
+			<entity type="1009" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="4">
+			<entity type="1009" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="4">
+			<entity type="1009" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="5">
+			<entity type="161" variant="311" subtype="3" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="6">
+			<entity type="4500" variant="10" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="45037" name="CVS - Tech Grudge - Funny little thing" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="False" x="6" y="-1"/>
+		<door exists="False" x="6" y="7"/>
+		<door exists="True" x="13" y="3"/>
+		<spawn x="5" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="0">
+			<entity type="161" variant="311" subtype="4" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="1">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="2">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="2">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="3">
+			<entity type="61" variant="3" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="4">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="4">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="5">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="6">
+			<entity type="161" variant="311" subtype="2" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="45038" name="CVS - Tech Grudge - i mean do you want to be nice or not" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="False" x="6" y="-1"/>
+		<door exists="True" x="6" y="7"/>
+		<door exists="True" x="13" y="3"/>
+		<spawn x="0" y="0">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="0">
+			<entity type="161" variant="311" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="0">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="1">
+			<entity type="1009" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="1">
+			<entity type="1009" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="1">
+			<entity type="1009" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="1">
+			<entity type="1009" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="1">
+			<entity type="1009" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="1">
+			<entity type="1009" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="1">
+			<entity type="1009" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="1">
+			<entity type="1009" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="1">
+			<entity type="1009" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="1">
+			<entity type="1009" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="1">
+			<entity type="1009" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="2">
+			<entity type="969" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="3">
+			<entity type="827" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="5">
+			<entity type="4500" variant="10" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="5">
+			<entity type="827" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="45039" name="CVS - Tech Grudge - ooop i got a margerita stuck in my throat" type="1" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="-1" y="10"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="14"/>
+		<door exists="True" x="13" y="3"/>
+		<door exists="True" x="13" y="10"/>
+		<spawn x="4" y="0">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="3">
+			<entity type="161" variant="311" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="4">
+			<entity type="1300" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="5">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="6">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="8">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="9">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="9">
+			<entity type="1300" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="9">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="9">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="9">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="9">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="10">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="10">
+			<entity type="161" variant="311" subtype="3" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="10">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="11">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="11">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="13">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="45040" name="CVS - Tech Grudge - Everyone do the cha cha cha" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="7"/>
+		<door exists="True" x="13" y="3"/>
+		<spawn x="0" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="2">
+			<entity type="161" variant="311" subtype="3" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="2">
+			<entity type="161" variant="311" subtype="3" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="3">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="3">
+			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="4">
+			<entity type="161" variant="311" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="4">
+			<entity type="161" variant="311" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="45041" name="CVS - Tech Grudge - railed in" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="False" x="6" y="7"/>
+		<door exists="True" x="13" y="3"/>
+		<spawn x="0" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="0">
+			<entity type="161" variant="311" subtype="4" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="0">
+			<entity type="6000" variant="2" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="0">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="0">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="0">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="0">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="0">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="0">
+			<entity type="6000" variant="3" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="1">
+			<entity type="6000" variant="2" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="1">
+			<entity type="6000" variant="32" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="1">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="1">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="1">
+			<entity type="6000" variant="6" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="1">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="1">
+			<entity type="6000" variant="3" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="1">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="2">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="2">
+			<entity type="827" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="2">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="2">
+			<entity type="6001" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="2">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="2">
+			<entity type="6001" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="2">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="2">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="3">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="3">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="3">
+			<entity type="6001" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="3">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="3">
+			<entity type="6001" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="3">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="3">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="4">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="4">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="4">
+			<entity type="6001" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="4">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="4">
+			<entity type="6001" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="4">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="4">
+			<entity type="6000" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="5">
+			<entity type="6000" variant="4" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="5">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="5">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="5">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="5">
+			<entity type="6000" variant="6" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="5">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="5">
+			<entity type="6000" variant="6" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="5">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="5">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="5">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="5">
+			<entity type="6000" variant="5" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="6">
+			<entity type="6000" variant="4" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="6">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="6">
+			<entity type="6000" variant="5" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="6">
+			<entity type="161" variant="311" subtype="2" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="45042" name="CVS - Tech Grudge - Funny rock thing" type="1" subtype="0" shape="2" width="13" height="7" difficulty="5" weight="1.0">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="13" y="3"/>
+		<spawn x="5" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="3">
+			<entity type="161" variant="311" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="3">
+			<entity type="27" variant="3" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="3">
+			<entity type="161" variant="311" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="45043" name="CVS - Tech Grudge - Whats gonna happen huh???" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+		<door exists="False" x="-1" y="3"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="7"/>
+		<door exists="True" x="13" y="3"/>
+		<spawn x="0" y="0">
+			<entity type="804" variant="0" subtype="2" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="1">
+			<entity type="161" variant="311" subtype="4" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="3">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="3">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="3">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="3">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="3">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="3">
+			<entity type="6000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="3">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="5">
+			<entity type="161" variant="311" subtype="2" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="6">
+			<entity type="804" variant="0" subtype="2" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+</rooms>

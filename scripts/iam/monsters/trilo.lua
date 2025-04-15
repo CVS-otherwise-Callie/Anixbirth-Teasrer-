@@ -8,6 +8,16 @@ mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
     end
 end, mod.Monsters.Trilo.ID)
 
+function FindAllTrilo()
+    local tab = {}
+    for k, v in ipairs(Isaac.GetRoomEntities()) do
+        if v.Type == 161 and v.Variant == mod.Monsters.Trilo.Var and v:IsActiveEnemy() then
+            table.insert(tab, v)
+        end
+    end
+    return tab
+end
+
 function mod:TriloAI(npc, sprite, d)
 
     local target = npc:GetPlayerTarget()
@@ -19,6 +29,17 @@ function mod:TriloAI(npc, sprite, d)
 
     if not d.init then
         d.heatLevel = 1
+        d.amountofTriloInRoom = #FindAllTrilo()
+
+        for k, v in ipairs(Isaac.GetRoomEntities()) do
+            if v.Type == 161 and v.Variant == mod.Monsters.Trilo.Var and v:GetData().amountofTriloInRoom == nil then
+                v:GetData().amountofTriloInRoom = #FindAllTrilo()
+            elseif v.Type == 161 and v.Variant == mod.Monsters.Trilo.Var and v:GetData().amountofTriloInRoom ~= d.amountofTriloInRoom then
+                v:GetData().amountofTriloInRoom = v:GetData().amountofTriloInRoom + 1
+            end
+        end
+
+        d.bodyHeat = 1
         d.state = "Chase"
         sprite:SetOverlayAnimation("Head" .. d.heatLevel)
         d.init = true
@@ -26,22 +47,32 @@ function mod:TriloAI(npc, sprite, d)
 
     if d.state == "Chase" then
 
-        if sprite:IsOverlayFinished("Head"  .. d.heatLevel) then
+        if d.heatLevel < 5 and not d.isBlowingUp then
             sprite:PlayOverlay("Head"  .. d.heatLevel, true)
         end
 
         if mod:isScare(npc) then
-            local targetvelocity = (targetpos - npc.Position):Resized(-3 - d.heatLevel)
-            npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 1)
-        elseif path:HasPathToPos(targetpos) then
-            local targetvelocity = (targetpos - npc.Position):Resized(3 + d.heatLevel)
-            npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 1)
+            local targetvelocity = (targetpos - npc.Position):Resized(-4 - d.heatLevel)
+            npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 0.25)
+        elseif game:GetRoom():CheckLine(npc.Position,targetpos,0,1,false,false) then
+            local targetvelocity = (targetpos - npc.Position):Resized(4 + d.heatLevel)
+            npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 0.25)
         else
-            path:FindGridPath(targetpos, 0.7, 1, true)
+            path:FindGridPath(targetpos, (0.5+(d.heatLevel/3))*0.7, 900, true)
         end
+        
     elseif d.state == "Blowup" then
-        npc:MultiplyFriction(0.8)
+        npc:MultiplyFriction(0.9)
         sprite:PlayOverlay("HeadTransition".. (d.heatLevel-1))
+    end
+
+    if #FindAllTrilo() == 1 and d.heatLevel > 1 then
+        d.state = "Chase"
+        d.state = nil
+        npc:MultiplyFriction(0.99)
+        d.isBlowingUp = true
+        sprite:PlayOverlay("HeadTransition4")
+        d.bodyHeat = 3
     end
 
     if sprite:IsOverlayFinished("HeadTransition".. (d.heatLevel-1)) then
@@ -49,14 +80,17 @@ function mod:TriloAI(npc, sprite, d)
     end
 
     if npc.Velocity:Length() > 0.5 then
-        npc:AnimWalkFrame("WalkHori"  .. d.heatLevel,"WalkVert"  .. d.heatLevel,0)
+        npc:AnimWalkFrame("WalkHori"  .. d.bodyHeat,"WalkVert"  .. d.bodyHeat,0)
     else
-        sprite:SetFrame("WalkHori"  .. d.heatLevel, 0)
+        sprite:SetFrame("WalkHori"  .. d.bodyHeat, 0)
     end
 
     if sprite:IsOverlayPlaying("HeadTransition4") and sprite:GetOverlayFrame() == 17 then
-        Isaac.Explode(npc.Position, npc, 10)
+        Isaac.Explode(npc.Position, npc, 40)
         npc:Kill()
+    elseif sprite:GetOverlayFrame() == 17 and string.find(sprite:GetOverlayAnimation(), "HeadTransition") then
+        npc:PlaySound(SoundEffect.SOUND_MONSTER_GRUNT_1, 1, 0, false, 1.5)
+        d.bodyHeat = d.bodyHeat + 1
     end
 
 end
@@ -64,11 +98,37 @@ end
 mod:AddCallback(ModCallbacks.MC_POST_NPC_DEATH, function (_, npc)
     if npc.Type == 161 and npc.Variant == mod.Monsters.Trilo.Var and npc:IsDead() then
         for k, v in ipairs(Isaac.GetRoomEntities()) do
-            if v.Type == 161 and v.Variant == mod.Monsters.Trilo.Var and not v:IsDead() then
-                v:GetData().heatLevel = v:GetData().heatLevel + 1
-                v:GetData().state = "Blowup"
-            end
+            mod.scheduleCallback(function()
+                if v.Type == 161 and v.Variant == mod.Monsters.Trilo.Var and not v:IsDead() then
+                    local oldheat = v:GetData().heatLevel
+
+                    if v:GetData().amountofTriloInRoom < 3 then
+                        v:GetData().heatLevel = v:GetData().heatLevel + 1
+                    else
+                        v:GetData().heatLevel = math.ceil((4 * (1+math.abs(v:GetData().amountofTriloInRoom - #FindAllTrilo())))/v:GetData().amountofTriloInRoom, 1)
+                    end
+
+                    if v:GetData().heatLevel > 5 then v:GetData().heatLevel = 5 end
+                    if oldheat ~= v:GetData().heatLevel then
+                        v:GetData().state = "Blowup"
+                    end
+                end
+            end, (k-1)*10, ModCallbacks.MC_NPC_UPDATE)     
         end
     end
 end)
 
+mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, function (_, npc, amount, damageFlags, source)
+    if npc.Type == 161 and npc.Variant == mod.Monsters.Trilo.Var and (npc:GetData().isBlowingUp or string.find(npc:GetSprite():GetOverlayAnimation(), "HeadTransition")) and not mod:HasDamageFlag(DamageFlag.DAMAGE_CLONES, damageFlags) then
+        npc:TakeDamage(amount*0.1, damageFlags | DamageFlag.DAMAGE_CLONES, source, 0)
+        return false
+    end
+end)
+
+-- i LOVE his animations
+-- i always wanted to be a animator
+-- so a ton of rspect
+-- yeah but no drawing pen so uh :pensive: what did u think i wrote? ok then
+-- hmmmm
+-- i mean i should fix the numebr systme cus clearly it's kinda weird
+-- no not even that this one internally
