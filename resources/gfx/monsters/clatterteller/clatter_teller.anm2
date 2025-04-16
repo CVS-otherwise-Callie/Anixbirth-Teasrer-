@@ -1,5 +1,5 @@
 <AnimatedActor>
-	<Info CreatedBy="TJP" CreatedOn="12/04/2025 22:42:16" Version="15" Fps="45"/>
+	<Info CreatedBy="TJP" CreatedOn="15/04/2025 22:42:01" Version="18" Fps="45"/>
 	<Content>
 		<Spritesheets>
 			<Spritesheet Path="clatter_teller_mausoleum.png" Id="0"/>
@@ -16,6 +16,7 @@
 		<Nulls/>
 		<Events>
 			<Event Name="target" Id="0"/>
+			<Event Name="X attack" Id="1"/>
 		</Events>
 	</Content>
 	<Animations DefaultAnimation="Idle">
@@ -220,7 +221,9 @@
 				</LayerAnimation>
 			</LayerAnimations>
 			<NullAnimations/>
-			<Triggers/>
+			<Triggers>
+				<Trigger EventId="1" AtFrame="4"/>
+			</Triggers>
 		</Animation>
 	</Animations>
 </AnimatedActor>

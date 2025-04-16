@@ -10,10 +10,30 @@ mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
 end, mod.Monsters.ClatterTeller.ID)
 
 function mod:ClatterTellerAI(npc, sprite, d)
+    local tear = ProjectileParams()
+    local myawesomepurplecolor = Color(1,1,1,1,0.3,0,0.6)
+    myawesomepurplecolor:SetColorize(1,1,1,1)
+    tear.Color = myawesomepurplecolor
+    tear.VelocityMulti = 7
+    tear.FallingSpeedModifier = 1.5
 
-    local target = npc:GetPlayerTarget()
+    d.playerpos = npc:GetPlayerTarget().Position
+    d.stateframe = npc.StateFrame
 
-    
+    if d.target and npc.Child then
+            d.target = npc.Child:GetData()
+    end
+
+    d.order = 0
+    for _, enemy in ipairs(Isaac.FindInRadius(npc.Position, 999, EntityPartition.ENEMY)) do
+        if enemy.Variant == npc.Variant then
+            if GetPtrHash(enemy) ~= GetPtrHash(npc) then
+                if GetPtrHash(enemy) < GetPtrHash(npc) then
+                    d.order = d.order + 1
+                end
+            end
+        end
+    end
 
     if not d.init then
 
@@ -35,10 +55,13 @@ function mod:ClatterTellerAI(npc, sprite, d)
 
     if d.state == "switch" then
         mod:spritePlay(sprite, "Idle_Switch")
-        
+
         if sprite:IsEventTriggered("target") then
-            local targetb = Isaac.Spawn(1000, 425, 55, npc.Position, npc.Velocity, npc):ToNPC()
-            targetb.Parent = npc
+            npc.StateFrame = 0
+            local target = Isaac.Spawn(1000, 425, 55, npc.Position, npc.Velocity, npc):ToEffect()
+            target.Parent = npc
+            npc.Child = target
+            d.target = npc.Child:GetData()
         end
 
         if sprite:IsFinished() then
@@ -50,20 +73,43 @@ function mod:ClatterTellerAI(npc, sprite, d)
 
     if d.state == "chasing" then
         mod:spritePlay(sprite, "Chasing")
-        for _, enemy in ipairs(Isaac.FindInRadius(npc.Position, 999, EntityPartition.ENEMY)) do
-            if enemy:IsDead() and npc.StateFrame >= 80 and not npc.Variant == mod.Monsters.ClatterTeller.Var then
-                d.state = "attack"
-            end
+
+        if FindDeadEnemyName(npc) ~= "none" and npc.StateFrame > 80 then
+            d.deadenemy = FindDeadEnemyName(npc)
+
+            d.delay = 0
+            
+            d.state = "attack"
         end
     end
 
     if d.state == "attack" then
-        mod:spritePlay(sprite, "Attack")
-        if sprite:IsFinished() then
-            npc.StateFrame = 0
-            d.state = "idle"
+        if d.delay > d.order*10 then
+            if sprite:IsEventTriggered("X attack") then
+                npc:FireProjectiles(d.target.effectpos, Vector(1,1), 7, tear)
+            end
+            mod:spritePlay(sprite, "Attack")
+            if sprite:IsFinished() then
+                npc.StateFrame = 0
+                d.state = "idle"
+            end
+        else
+            d.delay = d.delay + 1
         end
     end
 
 end
 
+function FindDeadEnemyName(npc)
+    for _, enemy in ipairs(Isaac.FindInRadius(npc.Position, 999, EntityPartition.ENEMY)) do
+        if enemy:IsDead() then
+
+            if enemy.Type == 25 and enemy.Variant == 0 then
+                return "Boom Fly"
+            else
+                return "no death effect"
+            end
+        end
+    end
+    return "none"
+end
