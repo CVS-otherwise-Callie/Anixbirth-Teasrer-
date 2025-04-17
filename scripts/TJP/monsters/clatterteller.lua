@@ -79,7 +79,10 @@ function mod:ClatterTellerAI(npc, sprite, d)
         if d.delay > 10 then
             if sprite:IsEventTriggered("X attack") then
                 if d.deadenemy then
-                    local ent = Isaac.Spawn(d.deadenemy.ID, d.deadenemy.Var, d.deadenemy.Sub, d.deadenemy.Pos, d.deadenemy.Vel, d.deadenemy.Par)
+                    print(d.deadenemy.Type, d.deadenemy.Var, d.deadenemy.Sub, d.deadenemy.Pos, d.deadenemy.Vel, d.deadenemy.Par)
+                    local ent = Isaac.Spawn(d.deadenemy.ID, d.deadenemy.Var, d.deadenemy.Sub, d.target.Position, d.deadenemy.Vel, d.deadenemy.Par)
+                    ent:GetData().isClatterTellerKilled = true
+                    print(ent:GetData().isClatterTellerKilled)
                     ent:Kill()
                 else
                     npc:FireProjectiles(d.tardat.effectpos, Vector(1,1), 7, tear)
@@ -114,12 +117,14 @@ end
 end]]
 
 mod:AddCallback(ModCallbacks.MC_POST_NPC_DEATH, function (_, npc)
-    if npc:IsDead() then
+    print(npc:GetData().isClatterTellerKilled)
+    if npc:IsDead() and not npc:GetData().isClatterTellerKilled then
         for k, v in ipairs(Isaac.GetRoomEntities()) do
+            local d = v:GetData()
             mod.scheduleCallback(function()
-                if v.Type == 161 and v.Variant == mod.Monsters.ClatterTeller.Var and not v:IsDead() and v.StateFrame > 80 then
+                if v.Type == 161 and v.Variant == mod.Monsters.ClatterTeller.Var and not v:IsDead() and v:ToNPC().StateFrame > 80 then
                     d.delay = 0
-                    d.deadenemy = {ID = npc.ID, Var = npc.Variant, Sub = npc.SubType, Pos = npc.Position, Vel = npc.Velocity, Par = npc.Parent}
+                    d.deadenemy = {ID = npc.Type, Var = npc.Variant, Sub = npc.SubType, Pos = npc.Position, Vel = npc.Velocity, Par = npc.Parent}
                     d.state = "attack"
                 end
             end, (k-1)*10, ModCallbacks.MC_NPC_UPDATE)     
