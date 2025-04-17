@@ -38,7 +38,7 @@ function mod:ClatterTellerTargetAI(ef, sprite, d)
                     ef.Position = mod:Lerp(ef.Position, d.playerpos, d.speed)
                 end
 
-                if d.clatter_teller.state == "attack" and d.clatter_teller.delay > d.clatter_teller.order*10 then
+                if d.clatter_teller.state == "attack" and d.clatter_teller.delay > 10 then
                     d.state = "summon"
                 end
             end
