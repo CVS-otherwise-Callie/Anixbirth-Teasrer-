@@ -20,7 +20,7 @@ function mod:FearFlowerFearAI(ef, sprite, d)
 
     local par = ef
 
-    if ef.Parent and ef.Parent:Exists() and ef.Parent:IsAlive() then
+    if ef.Parent and ef.Parent:Exists() then
         par = ef.Parent
     end
 
