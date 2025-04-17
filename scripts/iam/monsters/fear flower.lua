@@ -11,6 +11,8 @@ end, mod.Monsters.FearFlower.ID)
 function mod:FearFlowerAI(npc, sprite, d)
 
     if not d.init then
+        npc:AddEntityFlags(EntityFlag.FLAG_NO_KNOCKBACK | EntityFlag.FLAG_NO_PHYSICS_KNOCKBACK)
+
         mod:spritePlay(sprite, "Open")
         d.fearEffect = Isaac.Spawn(1000, mod.Effects.FearFlowerFear.Var, 55, npc.Position, Vector.Zero, npc):ToEffect()
         d.fearEffect:GetData().state = "appear"
