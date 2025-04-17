@@ -59,8 +59,8 @@ function mod:ClatterTellerAI(npc, sprite, d)
         if sprite:IsEventTriggered("target") then
             npc.StateFrame = 0
             d.target = Isaac.Spawn(1000, 425, 55, npc.Position, npc.Velocity, npc):ToEffect()
-            target.Parent = npc
-            npc.Child = target
+            d.target.Parent = npc
+            npc.Child = d.target
             d.tardat = npc.Child:GetData()
         end
 
