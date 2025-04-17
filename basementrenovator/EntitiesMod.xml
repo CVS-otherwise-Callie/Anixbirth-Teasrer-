@@ -136,6 +136,8 @@ Use 2, 4, or 6 normally.
    </bitfield>
 </entity>
 <entity ID="161" Variant="420" Name="Babble" Image="mah boys/babble.png" BaseHP="20" StageHP="7" Tags="Champion" />
+<entity ID="161" Variant="532" Name="Fear Flower" Image="mah boys/fear flower.png" BaseHP="30"/>
+<entity ID="161" Variant="535" Name="Clatter Teller" Image="mah boys/clatter teller.png" BaseHP="40" StageHP="3"/>
 <!--162-->
 <entity ID="162" Metadata="1" Image="mah boys/lightpressureplate.png" Name="Light Pressure Plate" Subtype="0" Variant="2900" Group="Stage"/>
 <!--Tainted-->
@@ -261,6 +263,18 @@ Use 2, 4, or 6 normally.
 		</group>
 	</group>
 
+	<group Name="HOPE Chapter 3 Alt" Label="Chapter 3 Alt">
+		<group Name="HOPE Chapter 3 Alt Enemies">
+			<entity Name="Clatter Teller"/>
+		</group>
+	</group>
+
+	<group Name="HOPE Mausoleum" Label="Mausoleum">
+		<group Name="HOPE Mausoleum Enemies">
+			<entity Name="Fear Flower"/>
+		</group>
+	</group>
+
 	<group Name="HOPE Ascent" Label="Ascent">
 		<group Name="HOPE Ascent Enemies">
 			<entity Name="Tainted Silly"/>
@@ -342,6 +356,14 @@ Use 2, 4, or 6 normally.
 
 <group Name="Depths Enemies">
 	<group Name="HOPE Depths Enemies"/>
+</group>
+
+<group Name="Mausoleum Enemies">
+	<group Name="HOPE Mausoleum Enemies"/>
+</group>
+
+<group Name="Chapter 3 (Alt Path) Enemies">
+	<group Name="HOPE Chapter 3 Alt Enemies"/>
 </group>
 
 <group Name="Pressure Plates">

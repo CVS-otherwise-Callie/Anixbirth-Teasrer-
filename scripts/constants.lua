@@ -65,7 +65,8 @@ FHAC.Monsters = {
     NarcissismReflections = mod:ENT("Narcissism Reflections"),
     Chomblet = mod:ENT("Chomblet"),
     Trilo = mod:ENT("Trilo"),
-    ClatterTeller = mod:ENT("Clatter Teller")
+    ClatterTeller = mod:ENT("Clatter Teller"),
+    FearFlower = mod:ENT("Fear Flower"),
 }
 
 FHAC.MiniBosses = {
@@ -91,6 +92,7 @@ FHAC.Familiars = { --YOU HAVE NO IDEA HOW MANY FUCKING TIMES I SPELLED THIS WRON
 FHAC.Effects = {
     ZapperTellerLightning = mod:ENT("Zapper Teller Lightning"),
     ClatterTellerTarget = mod:ENT("Clatter Teller Target"),
+    FearFlowerFear = mod:ENT("Fear Flower Fear Effect"),
     BlackOverlayBox = mod:ENT("BlackOverlayBox"),
     NormalTextBox = mod:ENT("Text Box")
 }

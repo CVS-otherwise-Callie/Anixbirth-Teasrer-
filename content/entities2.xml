@@ -206,10 +206,6 @@
         <preload-snd id="25" />
         <preload-snd id="318" />
     </entity>
-    <entity id="161" variant="31" name="Clatter Teller" anm2path="monsters\clatterteller/clatter_teller.anm2" hasFloorAlts="true" reroll="true" baseHP="40" boss="0" champion="0" collisionDamage="1" collisionMass="5" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="14" stageHP="3" portrait="31">
-		<bestiary transform="0,0,1" anim="Idle" />
-        <gibs amount="10" bone="1"/>
-    </entity>
     <!--entity anm2path="monsters/mr belly/mr belly.anm2" reroll="true" baseHP="18" boss="0" champion="1" collisionDamage="1" collisionMass="10" collisionRadius="13" friction="1" id="161" name="Mr Belly" numGridCollisionPoints="12" shadowSize="16" stageHP="0" variant="28" portrait="28">
 		<bestiary transform="0,0,1" anim="RunHori" />
         <gibs amount="16" blood="1" bone="1" eye="1" gut="1" large="0" />
@@ -424,6 +420,19 @@
         <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0"/>
 	</entity>
 
+    <!--Alt - Mausoleum-->
+
+    <entity anm2path="monsters/fear flower/fear flower.anm2" id="161" variant="532" reroll="true" baseHP="30" boss="0" champion="1" collisionDamage="1" collisionMass="40" collisionRadius="13" friction="0" name="Fear Flower" numGridCollisionPoints="12" shadowSize="14" stageHP="0" hasFloorAlts="true" bestiary="true" portrait="532">
+        <bestiary transform="0,0,1" anim="Idle" />
+        <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
+        <devolve id="12.0.0" weight="1" />
+    </entity>
+
+    <entity id="161" variant="535" name="Clatter Teller" anm2path="monsters\clatterteller/clatter_teller.anm2" hasFloorAlts="true" reroll="true" baseHP="40" boss="0" champion="0" collisionDamage="1" collisionMass="5" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="14" stageHP="3" portrait="31">
+		<bestiary transform="0,0,1" anim="Idle" />
+        <gibs amount="10" bone="1"/>
+    </entity>
+
     <!--Tainted Enemies-->
 
     <entity anm2path="monsters/tainted_silly_and_string/monster_tainted_silly.anm2" id="426" variant="0" subtype="0" reroll="false" baseHP="70" boss="0" champion="0" collisionDamage="1" collisionMass="40" collisionRadius="10" friction="1" name="Tainted Silly" numGridCollisionPoints="12" shadowSize="15" stageHP="13" shieldStrength="20" bestiary="true" portrait="36" >
@@ -505,6 +514,7 @@
     <entity anm2path="effects/blackscreen.anm2" name="BlackOverlayBox" id="1000" variant="421" subtype="55" baseHP="0" stageHP="0" shieldStrength="0" boss="0" champion="0" collisionDamage="0" collisionMass="0" collisionRadius="0" friction="1" numGridCollisionPoints="0" shadowSize="0"/>
     <entity anm2path="effects/ruin/normaltextbox.anm2" name="Text Box" id="1000" variant="424" subtype="55" baseHP="0" stageHP="0" shieldStrength="0" boss="0" champion="0" collisionDamage="0" collisionMass="0" collisionRadius="0" friction="1" numGridCollisionPoints="0" shadowSize="0"/>
     <entity anm2path="effects/target/clatterteller/effect_clatterteller_target.anm2" name="Clatter Teller Target" id="1000" variant="425" subtype="55" baseHP="0" stageHP="0" shieldStrength="0" boss="0" champion="0" collisionDamage="0" collisionMass="0" collisionRadius="0" friction="1" numGridCollisionPoints="0" shadowSize="0"/>
+    <entity anm2path="effects/fear effect/fear flower/effect_fearflowerfear.anm2" name="Fear Flower Fear Effect" id="1000" variant="426" subtype="55" baseHP="0" stageHP="0" shieldStrength="0" boss="0" champion="0" collisionDamage="0" collisionMass="0" collisionRadius="0" friction="1" numGridCollisionPoints="0" shadowSize="0"/>
 
     <!--NPCS-->
 

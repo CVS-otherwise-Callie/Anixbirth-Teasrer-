@@ -43,7 +43,8 @@ FHAC:LoadScripts("scripts.iam.monsters", {
 	"woodhead",
 	"narcissim relfections",
 	"chomblet",
-	"trilo"
+	"trilo",
+	"fear flower"
 })
 
 FHAC:LoadScripts("scripts.iam.minibosses", {
@@ -59,7 +60,8 @@ FHAC:LoadScripts("scripts.iam", {
 
 FHAC:LoadScripts("scripts.iam.effects", {
 	"zapperteller_lightning",
-	"blackboxoverlay"
+	"blackboxoverlay",
+	"fear_flower_fear_effect"
 })
 
 FHAC:LoadScripts("scripts.iam.familiars", {

@@ -105,7 +105,7 @@ mod:AddCallback(ModCallbacks.MC_POST_NPC_DEATH, function (_, npc)
                     if v:GetData().amountofTriloInRoom < 3 then
                         v:GetData().heatLevel = v:GetData().heatLevel + 1
                     else
-                        v:GetData().heatLevel = math.ceil((4 * (1+math.abs(v:GetData().amountofTriloInRoom - #FindAllTrilo())))/v:GetData().amountofTriloInRoom, 1)
+                        v:GetData().heatLevel = math.ceil((4 * (1+math.abs(v:GetData().amountofTriloInRoom - #FindAllTrilo())))/v:GetData().amountofTriloInRoom)
                     end
 
                     if v:GetData().heatLevel > 5 then v:GetData().heatLevel = 5 end

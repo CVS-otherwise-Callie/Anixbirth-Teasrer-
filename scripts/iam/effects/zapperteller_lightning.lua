@@ -16,6 +16,7 @@ function mod:ZapperTellerLightningAI(ef, sprite, d)
     if not d.lightningtimeout then d.lightningtimeout = 20 end
 
     if not d.init then
+        ef.DepthOffset = -100
         if d.isLightning and not d.state then
             mod:spritePlay(sprite, "LightningInit")
             Game():ShakeScreen(int)
