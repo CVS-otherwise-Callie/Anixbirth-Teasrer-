@@ -22,6 +22,7 @@ function mod:FearFlowerFearAI(ef, sprite, d)
 
     if ef.Parent and ef.Parent:Exists() then
         par = ef.Parent
+        ef.Postition = ef.Parent.Position
     end
 
     for _, player in ipairs(Isaac.FindInRadius(ef.Position, d.fearRad, EntityPartition.PLAYER)) do
