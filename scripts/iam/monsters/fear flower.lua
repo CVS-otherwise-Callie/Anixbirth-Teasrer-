@@ -39,6 +39,7 @@ function mod:FearFlowerAI(npc, sprite, d)
             if d.fearEffect.SpriteScale.X <= 0.5 then
                 d.fearEffect.SpriteScale = Vector(0.5, 0.5)
             else
+                print("im getting smol")
                 d.fearEffect.SpriteScale = d.fearEffect.SpriteScale*0.99
             end
         end
