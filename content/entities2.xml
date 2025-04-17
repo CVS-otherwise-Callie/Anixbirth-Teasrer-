@@ -422,7 +422,7 @@
 
     <!--Alt - Mausoleum-->
 
-    <entity anm2path="monsters/fear flower/fear flower.anm2" id="161" variant="532" reroll="true" baseHP="30" boss="0" champion="1" collisionDamage="1" collisionMass="40" collisionRadius="13" friction="0" name="Fear Flower" numGridCollisionPoints="12" shadowSize="14" stageHP="0" hasFloorAlts="true" bestiary="true" portrait="532">
+    <entity anm2path="monsters/fear flower/fear flower.anm2" id="161" variant="532" reroll="true" baseHP="30" boss="0" champion="1" collisionDamage="1" collisionMass="40" collisionRadius="13" friction="0" name="Fear Flower" numGridCollisionPoints="12" shadowSize="23" stageHP="0" hasFloorAlts="true" bestiary="true" portrait="532">
         <bestiary transform="0,0,1" anim="Idle" />
         <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
         <devolve id="12.0.0" weight="1" />
