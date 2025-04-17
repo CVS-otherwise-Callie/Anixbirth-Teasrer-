@@ -42,13 +42,13 @@ function mod:FearFlowerAI(npc, sprite, d)
                 d.fearEffect.SpriteScale = Vector(0.5, 0.5)
             else
                 print("im getting smol")
-                d.fearEffect.SpriteScale = d.fearEffect.SpriteScale*0.99
+                d.fearEffect.SpriteScale = d.fearEffect.SpriteScale*0.90
             end
         end
 
         mod:spritePlay(sprite, "ClosedLoop")
 
-        if npc.StateFrame > 100 then
+        if npc.StateFrame > 30 then
             d.state = "opening"
         end
 
