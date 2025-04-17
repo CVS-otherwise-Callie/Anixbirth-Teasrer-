@@ -85,7 +85,7 @@ mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, function (_, npc, amount, damag
         if not npc:GetData().canbeHit then
 
             if d.state == "hiding" then
-                npc.StateFrame = npc.StateFrame/3
+                npc.StateFrame = npc.StateFrame * 0.3
             end
 
             return false
