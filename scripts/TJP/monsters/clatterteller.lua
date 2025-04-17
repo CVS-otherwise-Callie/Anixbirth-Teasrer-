@@ -20,11 +20,11 @@ function mod:ClatterTellerAI(npc, sprite, d)
     d.playerpos = npc:GetPlayerTarget().Position
     d.stateframe = npc.StateFrame
 
-    if d.target and npc.Child then
-            d.target = npc.Child:GetData()
+    if d.tardat and npc.Child then
+            d.tardat = npc.Child:GetData()
     end
 
-    d.order = 0
+    --[[d.order = 0
     for _, enemy in ipairs(Isaac.FindInRadius(npc.Position, 999, EntityPartition.ENEMY)) do
         if enemy.Variant == npc.Variant then
             if GetPtrHash(enemy) ~= GetPtrHash(npc) then
@@ -33,7 +33,7 @@ function mod:ClatterTellerAI(npc, sprite, d)
                 end
             end
         end
-    end
+    end]]
 
     if not d.init then
 
@@ -48,7 +48,7 @@ function mod:ClatterTellerAI(npc, sprite, d)
 
     if d.state == "idle" then
         mod:spritePlay(sprite, "Idle")
-        if npc.StateFrame >= 80 then
+        if npc.StateFrame >= 40 then
             d.state = "switch"
         end
     end
@@ -58,35 +58,32 @@ function mod:ClatterTellerAI(npc, sprite, d)
 
         if sprite:IsEventTriggered("target") then
             npc.StateFrame = 0
-            local target = Isaac.Spawn(1000, 425, 55, npc.Position, npc.Velocity, npc):ToEffect()
+            d.target = Isaac.Spawn(1000, 425, 55, npc.Position, npc.Velocity, npc):ToEffect()
             target.Parent = npc
             npc.Child = target
-            d.target = npc.Child:GetData()
+            d.tardat = npc.Child:GetData()
         end
 
         if sprite:IsFinished() then
             npc.StateFrame = 0
             d.state = "chasing"
-            d.target_spawned = false
+            d.tardat_spawned = false
         end
     end
 
     if d.state == "chasing" then
         mod:spritePlay(sprite, "Chasing")
-
-        if FindDeadEnemyName(npc) ~= "none" and npc.StateFrame > 80 then
-            d.deadenemy = FindDeadEnemyName(npc)
-
-            d.delay = 0
-            
-            d.state = "attack"
-        end
     end
 
     if d.state == "attack" then
-        if d.delay > d.order*10 then
+        if d.delay > 10 then
             if sprite:IsEventTriggered("X attack") then
-                npc:FireProjectiles(d.target.effectpos, Vector(1,1), 7, tear)
+                if d.deadenemy then
+                    local ent = Isaac.Spawn(d.deadenemy.ID, d.deadenemy.Var, d.deadenemy.Sub, d.deadenemy.Pos, d.deadenemy.Vel, d.deadenemy.Par)
+                    ent:Kill()
+                else
+                    npc:FireProjectiles(d.tardat.effectpos, Vector(1,1), 7, tear)
+                end
             end
             mod:spritePlay(sprite, "Attack")
             if sprite:IsFinished() then
@@ -100,9 +97,11 @@ function mod:ClatterTellerAI(npc, sprite, d)
 
 end
 
-function FindDeadEnemyName(npc)
+--[[function FindDeadEnemyName(npc)
     for _, enemy in ipairs(Isaac.FindInRadius(npc.Position, 999, EntityPartition.ENEMY)) do
         if enemy:IsDead() then
+
+            
 
             if enemy.Type == 25 and enemy.Variant == 0 then
                 return "Boom Fly"
@@ -112,4 +111,18 @@ function FindDeadEnemyName(npc)
         end
     end
     return "none"
-end
+end]]
+
+mod:AddCallback(ModCallbacks.MC_POST_NPC_DEATH, function (_, npc)
+    if npc:IsDead() then
+        for k, v in ipairs(Isaac.GetRoomEntities()) do
+            mod.scheduleCallback(function()
+                if v.Type == 161 and v.Variant == mod.Monsters.ClatterTeller.Var and not v:IsDead() and v.StateFrame > 80 then
+                    d.delay = 0
+                    d.deadenemy = {ID = npc.ID, Var = npc.Variant, Sub = npc.SubType, Pos = npc.Position, Vel = npc.Velocity, Par = npc.Parent}
+                    d.state = "attack"
+                end
+            end, (k-1)*10, ModCallbacks.MC_NPC_UPDATE)     
+        end
+    end
+end)
