@@ -39,6 +39,7 @@ function mod:ClatterTellerAI(npc, sprite, d)
 
         npc:AddEntityFlags(EntityFlag.FLAG_NO_KNOCKBACK | EntityFlag.FLAG_NO_PHYSICS_KNOCKBACK)
 
+        d.blacListents = {}
         d.state = "idle"
 
         d.init = true
@@ -67,7 +68,6 @@ function mod:ClatterTellerAI(npc, sprite, d)
         if sprite:IsFinished() then
             npc.StateFrame = 0
             d.state = "chasing"
-            d.tardat_spawned = false
         end
     end
 
@@ -79,10 +79,10 @@ function mod:ClatterTellerAI(npc, sprite, d)
         if d.delay > 10 then
             if sprite:IsEventTriggered("X attack") then
                 if d.deadenemy then
-                    print(d.deadenemy.Type, d.deadenemy.Var, d.deadenemy.Sub, d.deadenemy.Pos, d.deadenemy.Vel, d.deadenemy.Par)
-                    local ent = Isaac.Spawn(d.deadenemy.ID, d.deadenemy.Var, d.deadenemy.Sub, d.target.Position, d.deadenemy.Vel, d.deadenemy.Par)
+                    print("h")
+                    local ent = Isaac.Spawn(d.deadenemy.Type, d.deadenemy.Variant, d.deadenemy.SubType, d.target.Position, d.deadenemy.Velocity, d.deadenemy.Parent)
                     ent:GetData().isClatterTellerKilled = true
-                    print(ent:GetData().isClatterTellerKilled)
+                    table.insert(d.blacListents, ent.InitSeed)
                     ent:Kill()
                 else
                     npc:FireProjectiles(d.tardat.effectpos, Vector(1,1), 7, tear)
@@ -91,11 +91,16 @@ function mod:ClatterTellerAI(npc, sprite, d)
             mod:spritePlay(sprite, "Attack")
             if sprite:IsFinished() then
                 npc.StateFrame = 0
+                d.deadenemy = nil
                 d.state = "idle"
             end
         else
             d.delay = d.delay + 1
         end
+    end
+
+    if not d.target or d.target:IsDead() or not d.target:Exists() then
+        d.target = nil
     end
 
 end
@@ -116,18 +121,53 @@ end
     return "none"
 end]]
 
-mod:AddCallback(ModCallbacks.MC_POST_NPC_DEATH, function (_, npc)
-    print(npc:GetData().isClatterTellerKilled)
-    if npc:IsDead() and not npc:GetData().isClatterTellerKilled then
+--[[mod:AddCallback(ModCallbacks.MC_POST_NPC_DEATH, function (_, npc)
+    if npc:IsDead() and npc:GetData().isClatterTellerKilled == nil then
         for k, v in ipairs(Isaac.GetRoomEntities()) do
             local d = v:GetData()
             mod.scheduleCallback(function()
-                if v.Type == 161 and v.Variant == mod.Monsters.ClatterTeller.Var and not v:IsDead() and v:ToNPC().StateFrame > 80 then
+                if v.Type == 161 and v.Variant == mod.Monsters.ClatterTeller.Var and not v:IsDead() and d.target and d.blacListents and not mod:CheckTableContents(d.blacListents, npc.InitSeed) then
                     d.delay = 0
-                    d.deadenemy = {ID = npc.Type, Var = npc.Variant, Sub = npc.SubType, Pos = npc.Position, Vel = npc.Velocity, Par = npc.Parent}
+                    d.deadenemy = npc --{ID = npc.Type, Var = npc.Variant, Sub = npc.SubType, Pos = npc.Position, Vel = npc.Velocity, Par = npc.Parent, Dat = npc:GetData()}
+                    table.insert(d.blacListents, npc.InitSeed)
                     d.state = "attack"
                 end
             end, (k-1)*10, ModCallbacks.MC_NPC_UPDATE)     
         end
     end
+end)]]
+
+mod:AddCallback(ModCallbacks.MC_POST_NPC_RENDER, function (_, npc)
+
+
+    if npc:HasMortalDamage() and npc:GetData().isClatterTellerKilled == nil then
+        local count = 1
+        for k, v in ipairs(Isaac.GetRoomEntities()) do
+            if v.Type == 161 and v.Variant == mod.Monsters.ClatterTeller.Var then
+                ClatterTellerDeathThingy(npc, k, v, count)
+                count = count + 1
+            end
+        end
+    end
 end)
+
+function ClatterTellerDeathThingy(npc, k, v, count)
+    local d = v:GetData()
+    mod.scheduleCallback(function()
+        if v.Type == 161 and v.Variant == mod.Monsters.ClatterTeller.Var and not v:IsDead() and d.target and d.blacListents then
+            print(not mod:CheckTableContents(d.blacListents, npc.InitSeed) , not CheckIfSchmootRollin(npc) , npc:GetData().ClatterTellerHighPriority , npc:GetData().ClatterTellerLowPriority)
+            if not mod:CheckTableContents(d.blacListents, npc.InitSeed) and not CheckIfSchmootRollin(npc) and (npc:GetData().ClatterTellerHighPriority or npc:GetData().ClatterTellerLowPriority) then
+                d.deadenemy = npc --{ID = npc.Type, Var = npc.Variant, Sub = npc.SubType, Pos = npc.Position, Vel = npc.Velocity, Par = npc.Parent, Dat = npc:GetData()}
+            end
+            d.delay = 0
+            table.insert(d.blacListents, npc.InitSeed)
+            d.state = "attack"
+        end
+    end, (count-1)*10, ModCallbacks.MC_NPC_UPDATE)
+end
+
+function CheckIfSchmootRollin(npc)
+    if npc.Type == 161 and npc.Variant == mod.Monsters.Schmoot.Var and npc:GetData().secondinit then
+        return true
+    end
+end

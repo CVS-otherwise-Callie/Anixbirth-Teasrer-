@@ -1212,3 +1212,23 @@ function mod:ReplacePedestal(num, item, poof)
 		end
 	end
 end
+
+--reused for the Clatter Teller
+function mod:ClatterTellerWhitelistCheck(npc) 
+    for _, entry in pairs(mod.ClatterTellerWhitelist) do
+        if npc.Type == entry[1] then
+            if entry[4] then
+                npc:GetData().ClatterTellerHighPriority = true
+            else
+                npc:GetData().ClatterTellerLowPriority = true
+            end
+            if entry[5] then
+                npc:GetData().ClatterTellerDontClearAppear = true
+            end
+            if entry[6] then
+                npc:GetData().ClatterTellerGoEasyOnMe = true
+            end
+            return true
+        end
+    end
+end

@@ -41,13 +41,13 @@ function mod:FearFlowerAI(npc, sprite, d)
             if d.fearEffect.SpriteScale.X <= 0.5 then
                 d.fearEffect.SpriteScale = Vector(0.5, 0.5)
             else
-                d.fearEffect.SpriteScale = d.fearEffect.SpriteScale*0.94
+                d.fearEffect.SpriteScale = d.fearEffect.SpriteScale*0.99
             end
         end
 
         mod:spritePlay(sprite, "ClosedLoop")
 
-        if npc.StateFrame > 30 then
+        if npc.StateFrame > 100 then
             d.state = "opening"
         end
 
@@ -84,7 +84,7 @@ mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, function (_, npc, amount, damag
         if not npc:GetData().canbeHit then
 
             if d.state == "hiding" then
-                npc.StateFrame = npc.StateFrame * 0.3
+                npc:ToNPC().StateFrame = 10
             end
 
             return false

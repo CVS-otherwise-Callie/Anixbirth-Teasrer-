@@ -154,6 +154,33 @@ mod.FloorGrids = {
     mod.BasementGrid
 }
 
+mod.ClatterTellerWhitelist = { --pretty much just the skullitsit whitelist LMAO
+	{EntityType.ENTITY_GLOBIN,-1,-1,true,true},
+	{EntityType.ENTITY_MOTER,-1,-1,true,true},
+	{EntityType.ENTITY_BLACK_BONY,-1,-1,true,true},
+    {29,2,-1,true,true},
+	{EntityType.ENTITY_BOOMFLY,-1,-1,true,true}, 
+	{EntityType.ENTITY_SUCKER,2,-1,true}, --Soul Sucker
+	{EntityType.ENTITY_SUCKER,-1,-1,false}, 
+	{EntityType.ENTITY_FULL_FLY,-1,-1,false}, 
+	{EntityType.ENTITY_BLACK_BONY,-1,-1,false,true},
+	{EntityType.ENTITY_POOFER,-1,-1,true}, 
+	{EntityType.ENTITY_MIGRAINE,-1,-1,true,true},
+	{EntityType.ENTITY_DUKE,-1,-1,true}, 
+	{EntityType.ENTITY_MULLIGAN,-1,-1,true,true},
+	{EntityType.ENTITY_NEST,-1,-1,true,true},
+	{EntityType.ENTITY_HIVE,-1,-1,true,true},
+	{EntityType.ENTITY_PREY,-1,-1,true,true},
+	{EntityType.ENTITY_MEMBRAIN,-1,-1,true,true},
+	{EntityType.ENTITY_SQUIRT,-1,-1,true,true},
+	{EntityType.ENTITY_TICKING_SPIDER,-1,-1,false,true},
+	{EntityType.ENTITY_MAW,1,-1,false,true}, --Red Maw
+	{EntityType.ENTITY_MRMAW,3,-1,false,true}, --Mr. Red Maw's Head (why is it a seperate entity?)
+    {37, 3, -1, true, true},
+    {161, 84, -1, true, true},
+    {161, 91, -1, true, true},
+}
+
 
 FHAC.DirectionToVector = {
     [Direction.DOWN]  = Vector(0, 1),

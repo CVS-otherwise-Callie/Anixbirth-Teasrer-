@@ -191,6 +191,7 @@ FHAC:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, FHAC.NPCGetHurtStuff)
 
 function FHAC:NPCPostInit(npc)
     FHAC:NPCReplaceCallback(npc)
+    FHAC:ClatterTellerWhitelistCheck(npc) 
 end
 FHAC:AddCallback(ModCallbacks.MC_POST_NPC_INIT, FHAC.NPCPostInit)
 
