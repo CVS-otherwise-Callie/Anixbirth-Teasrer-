@@ -3,6 +3,7 @@
     <passive id="2" name="Big Ol' Bowl of Sauerkraut" gfx="2_bigolbowlofsauerkraut.png" description="Every day for breakfast..." quality="2" cache="offensive" />
     <!--passive id="3" name="Empty Death Certificate" gfx="3_empty_death_Certificate.png" description="Every itme is every item" quality="4" cache="offensive" /-->
     <passive id="4" name="Stinky Socks" gfx="3_stinkysocks.png" description="Stinks like heaven" quality="2" cache="speed" />
+    <passive id="5" name="Moldy Bread" gfx="4_moldybread.png" description="Still edible" quality="2"/>
 
     <!--Actives are 100+-->
     <active id="100" name="Joke Book" gfx="100_joke_book.png" description="Xocolate's finest" quality="1" maxcharges="2" cache="firedelay" />

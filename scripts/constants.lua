@@ -127,6 +127,7 @@ FHAC.Collectibles = {
         EmptyDeathCertificate = Isaac.GetItemIdByName("Empty Death Certificate"),
         MarketablePlushie = Isaac.GetItemIdByName("Marketable Plushie"),
         StinkySocks = Isaac.GetItemIdByName("Stinky Socks"),
+        MoldyBread = Isaac.GetItemIdByName("Moldy Bread"),
 	TheHamer = Isaac.GetItemIdByName("The Hamer"),
     },
     PickupsEnt = {

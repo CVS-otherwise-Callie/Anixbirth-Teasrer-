@@ -85,7 +85,8 @@ FHAC:LoadScripts("scripts.iam.items.passives", {
 	"anal fissure",
 	"big ol' bowl of sauerkraut",
 	"empty death certificate",
-	"stinky socks"
+	"stinky socks",
+	"moldy bread"
 })
 
 FHAC:LoadScripts("scripts.iam.items.pickups" , {

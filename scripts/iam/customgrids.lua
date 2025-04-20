@@ -11,7 +11,7 @@ end, mod.Grids.GlobalGridSpawner.ID)
 FHAC.LightPressurePlate = StageAPI.CustomGrid("FHACLightPressurePlate", {
     BaseType = GridEntityType.GRID_PRESSURE_PLATE,
     BaseVariant = 0,
-    Anm2 = "gfx/grid/lightpressureplate.anm2",
+    Anm2 = "gfx/grid/_lightpressureplate.anm2",
     Animation = "Off",
     RemoveOnAnm2Change = true,
     OverrideGridSpawns = true,
@@ -21,21 +21,11 @@ FHAC.LightPressurePlate = StageAPI.CustomGrid("FHACLightPressurePlate", {
 FHAC.AltHomeTrapDoorUnlock = StageAPI.CustomGrid("FHACAltHomeTrapDoorUnlock", {
     BaseType = GridEntityType.GRID_STAIRS,
     BaseVariant = 1,
-    Anm2 = "gfx/grid/althomeunlocktrapdoor.anm2",
+    Anm2 = "gfx/grid/_althomeunlocktrapdoor.anm2",
     Animation = "Closed",
     RemoveOnAnm2Change = true,
     OverrideGridSpawns = true,
     SpawnerEntity = {Type = FHAC.Grids.GlobalGridSpawner.ID, Variant = 2901}
-})
-
-FHAC.BreakablePot = StageAPI.CustomGrid("FHACBreakablePot", {
-    BaseType = GridEntityType.GRID_STAIRS,
-    BaseVariant = 1,
-    Anm2 = "gfx/grid/breakablepot.anm2",
-    Animation = "pot1",
-    RemoveOnAnm2Change = true,
-    OverrideGridSpawns = true,
-    SpawnerEntity = {Type = FHAC.Grids.GlobalGridSpawner.ID, Variant = 2902}
 })
 
 function mod.lightpressurePlateAI(customGrid)
@@ -139,7 +129,7 @@ function mod.AltHomeTrapDoorUnlock(customGrid)
         end
     end
 
-    local bangtabs = {
+    local bangcustomPotTabs = {
         10,
         14,
         34,
@@ -160,11 +150,11 @@ function mod.AltHomeTrapDoorUnlock(customGrid)
         207,
     }
 
-    if game:GetLevel():GetAbsoluteStage() == LevelStage.STAGE8 and useVar == 6 and mod.ImInAClosetPleaseHelp then
-            if d.StateFrame == bangtabs[d.Num] then
+    if game:GetLevel():GecustomPotTabsoluteStage() == LevelStage.STAGE8 and useVar == 6 and mod.ImInAClosetPleaseHelp then
+            if d.StateFrame == bangcustomPotTabs[d.Num] then
                 Knock()
                 d.Num = d.Num + 1
-            elseif d.StateFrame > bangtabs[#bangtabs] and d.StateFrame%1 == 0 then
+            elseif d.StateFrame > bangcustomPotTabs[#bangcustomPotTabs] and d.StateFrame%1 == 0 then
                 Knock()
             end
     end
@@ -191,6 +181,94 @@ function mod.lightpressurePlateAIPost(customGrid)
     end
 
 end
+
+-- Custom Pot --
+
+local customPotTab = {
+    {{PickupVariant.PICKUP_KEY, 0, 1}, {PickupVariant.PICKUP_BOMB, 0, 1}},
+    {{PickupVariant.PICKUP_BOMB, 0, 2}},
+}
+
+mod:AddCallback(ModCallbacks.MC_POST_NPC_INIT, function(_, npc)
+	if npc.Variant == 161 then
+		npc.GridCollisionClass = EntityGridCollisionClass.GRIDCOLL_WALLS
+		npc:AddEntityFlags(EntityFlag.FLAG_NO_PHYSICS_KNOCKBACK | EntityFlag.FLAG_NO_KNOCKBACK)
+		npc.Velocity = Vector.Zero
+	end
+end, 313)
+
+mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
+    local d = npc:GetData()
+    local sprite = npc:GetSprite()
+    local room = game:GetRoom()
+
+    if d.anixbirthDONOTDOANYTHING then
+
+        if npc.Variant == 161 then
+            mod:spritePlay(sprite, "Base")
+        end
+
+        return
+    end
+
+    if npc.Variant == 161 then
+
+        sprite:ReplaceSpritesheet(0, "gfx/grid/breakablepots/chapter" .. room:GetBackdropType() .. "/breakablepot.png")
+        sprite:LoadGraphics()
+
+        if npc.HitPoints/npc.MaxHitPoints > 0.75 then
+            d.gridPotLevel = 1
+        elseif npc.HitPoints/npc.MaxHitPoints > 0.50 and npc.HitPoints/npc.MaxHitPoints < 0.75 then
+            d.gridPotLevel = 2
+        elseif npc.HitPoints/npc.MaxHitPoints < 0.5 and npc.HitPoints/npc.MaxHitPoints > 0.1 then
+            d.gridPotLevel = 3
+        else
+            npc.HitPoints = 0.01
+        end
+
+        if npc.HitPoints > 0.1 then
+            mod:spritePlay(sprite, "Stage" .. d.gridPotLevel)
+        else
+            mod:spritePlay(sprite, "Base")
+        end
+    end
+end, 292)
+
+mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, function(_, npc, amount, flags)
+
+    local d = npc:GetData()
+    local sprite = npc:GetSprite()
+
+    if d.anixbirthDONOTDOANYTHING then
+        return
+    end
+
+    if npc.Variant == 161 then
+		local amt = math.min(math.max(math.floor(amount / 60), 1), 3)
+        if npc.HitPoints - amt <= 1 or flags & (DamageFlag.DAMAGE_TNT | DamageFlag.DAMAGE_EXPLOSION) ~= 0 then
+            for k, v in ipairs(customPotTab[math.random(#customPotTab)]) do
+                for i = 1, v[3] do
+                    if v[1] == 20 then
+                        Isaac.Spawn(5, 20, 0, npc.Position, RandomVector()*math.random(2,5), nil)
+                    else
+                        Isaac.Spawn(EntityType.ENTITY_PICKUP, v[1], v[2], npc.Position, RandomVector()*math.random(2,5), nil)
+                    end
+                end
+            end
+
+			local t = Isaac.Spawn(npc.Type, npc.Variant, npc.SubType, npc.Position, Vector.Zero, nil)
+			t.HitPoints = 0
+			t:GetData().anixbirthDONOTDOANYTHING = true
+			npc:Remove()
+			t:Update()
+        else
+            npc.HitPoints = npc.HitPoints - amt
+        end
+        return false
+    end
+
+end, 292)
+
 
 StageAPI.AddCallback("FHAC", "POST_CUSTOM_GRID_UPDATE", 1, mod.lightpressurePlateAI, "FHACLightPressurePlate")
 StageAPI.AddCallback("FHAC", "POST_CUSTOM_GRID_UPDATE", 1, mod.AltHomeTrapDoorUnlock, "FHACAltHomeTrapDoorUnlock")

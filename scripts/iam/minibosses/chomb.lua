@@ -107,6 +107,7 @@ function mod:ChombAI(npc, sprite, d)
         end
         npc.StateFrame = 0
         d.state = "Moving"
+        d.MovementDelay = 0
         d.larryKJinit = true
     else
         npc.StateFrame = npc.StateFrame + 1
@@ -117,13 +118,18 @@ function mod:ChombAI(npc, sprite, d)
         npc:GetData().MoveDelay = (d.SegNumber-1) * 6
         npc.DepthOffset = (-6 * d.SegNumber-1)
 
-        local targpos = npc.Parent:GetData().MovementLog[npc.FrameCount - d.MoveDelay]
-        if targpos then
+        local targpos = npc.Parent:GetData().MovementLog[npc.FrameCount - npc.Parent:GetData().MovementDelay - d.MoveDelay]
+        if targpos and (npc.Parent:GetData().state and not string.find(npc.Parent:GetData().state, "Spawn")) then
             npc.Velocity = targpos - npc.Position
-        elseif npc.Parent:GetData().butts[d.SegNumber - 1] then
+        elseif npc.Parent:GetData().butts[d.SegNumber - 1] and (npc.Parent:GetData().state and not string.find(npc.Parent:GetData().state, "Spawn")) then
             npc:AddEntityFlags(EntityFlag.FLAG_NO_KNOCKBACK | EntityFlag.FLAG_NO_PHYSICS_KNOCKBACK)
             npc.Velocity = mod:Lerp(npc.Velocity, (npc.Parent:GetData().butts[d.SegNumber - 1].Position - npc.Position):Resized(15), 1)
+        else
+            npc:AddEntityFlags(EntityFlag.FLAG_NO_KNOCKBACK | EntityFlag.FLAG_NO_PHYSICS_KNOCKBACK)
+            npc.Velocity = Vector.Zero
         end
+
+        --print(targpos, npc.FrameCount, npc.FrameCount - npc.Parent:GetData().MovementDelay - d.MoveDelay, #npc.Parent:GetData().MovementLog)
 
         npc.Color = npc.Parent.Color
         sprite.Color = npc.Parent:GetSprite().Color
@@ -145,6 +151,8 @@ function mod:ChombAI(npc, sprite, d)
         if sprite:IsFinished(d.name .. "UnBurrow") then
             d.state = "Moving"
         end
+
+        npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_PLAYEROBJECTS
 
     elseif not d.IsSegment then
         
@@ -192,7 +200,7 @@ function mod:ChombAI(npc, sprite, d)
             npc.Visible = true
 
             d.roomtoPosdist = math.random(20, 50)
-            d.shouldCharge = math.random(1, 2)
+            d.shouldCharge = 1 --math.random(1, 2)
             d.hasspawnedBabies = false
         elseif d.state == "Charging" then
 
@@ -276,9 +284,17 @@ function mod:ChombAI(npc, sprite, d)
         if d.state == "Moving" and d.shouldCharge == 1 and math.abs(npc.Position.Y - room:GetCenterPos().Y) < d.roomtoPosdist and not d.hasspawnedBabies then
             d.state = "SpawnBabiesInit"
         end
-        
 
-        d.MovementLog[npc.FrameCount] = npc.Position
+        if d.state and not string.find(d.state, "Spawn") then
+            d.MovementLog[npc.FrameCount] = npc.Position
+        else
+            d.MovementDelay = npc.FrameCount - #d.MovementLog
+        end
+
+        for k, v in pairs(d.MovementLog) do
+            print(k, v)
+        end
+        
     end
 
     if d.state == "Moving" and (room:GetGridCollisionAtPos(npc.Position + Vector(0, 10)) == GridCollisionClass.COLLISION_WALL or room:GetGridCollisionAtPos(npc.Position + Vector(0, 10)) == GridCollisionClass.COLLISION_WALL_EXCEPT_PLAYER) then
