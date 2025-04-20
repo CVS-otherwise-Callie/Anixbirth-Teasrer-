@@ -195,7 +195,7 @@ mod:AddCallback(ModCallbacks.MC_POST_NPC_INIT, function(_, npc)
 		npc:AddEntityFlags(EntityFlag.FLAG_NO_PHYSICS_KNOCKBACK | EntityFlag.FLAG_NO_KNOCKBACK)
 		npc.Velocity = Vector.Zero
 	end
-end, 313)
+end, 292)
 
 mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
     local d = npc:GetData()
@@ -223,7 +223,7 @@ mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
         elseif npc.HitPoints/npc.MaxHitPoints < 0.5 and npc.HitPoints/npc.MaxHitPoints > 0.1 then
             d.gridPotLevel = 3
         else
-            npc.HitPoints = 0.01
+            --npc.HitPoints = 0.01
         end
 
         if npc.HitPoints > 0.1 then
