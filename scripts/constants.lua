@@ -8,7 +8,7 @@ FHAC.font = Font()
 --needed rn, likely will delete later
 
 function FHAC:ENT(name)
-    return { ID = Isaac.GetEntityTypeByName(name), Var = Isaac.GetEntityVariantByName(name), 0 }
+    return { ID = Isaac.GetEntityTypeByName(name), Var = Isaac.GetEntityVariantByName(name), Sub = Isaac.GetEntitySubTypeByName(name) }
 end
 
 FHAC.Monsters = {
@@ -97,7 +97,8 @@ FHAC.Effects = {
     ClatterTellerTarget = mod:ENT("Clatter Teller Target"),
     FearFlowerFear = mod:ENT("Fear Flower Fear Effect"),
     BlackOverlayBox = mod:ENT("BlackOverlayBox"),
-    NormalTextBox = mod:ENT("Text Box")
+    NormalTextBox = mod:ENT("Text Box"),
+    DekatesseraEffect = mod:ENT("Dekatessera Effect")
 }
 
 FHAC.NPCS = {

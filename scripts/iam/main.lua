@@ -45,7 +45,7 @@ FHAC:LoadScripts("scripts.iam.monsters", {
 	"chomblet",
 	"trilo",
 	"fear flower",
-	"sack kid"
+	"sack kid",
 })
 
 FHAC:LoadScripts("scripts.iam.minibosses", {
@@ -62,7 +62,8 @@ FHAC:LoadScripts("scripts.iam", {
 FHAC:LoadScripts("scripts.iam.effects", {
 	"zapperteller_lightning",
 	"blackboxoverlay",
-	"fear_flower_fear_effect"
+	"fear_flower_fear_effect",
+	"dekatessera effect"
 })
 
 FHAC:LoadScripts("scripts.iam.familiars", {
