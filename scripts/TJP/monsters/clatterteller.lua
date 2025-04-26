@@ -79,7 +79,6 @@ function mod:ClatterTellerAI(npc, sprite, d)
         if d.delay > 10 then
             if sprite:IsEventTriggered("X attack") then
                 if d.deadenemy then
-                    print("h")
                     local ent = Isaac.Spawn(d.deadenemy.Type, d.deadenemy.Variant, d.deadenemy.SubType, d.target.Position, d.deadenemy.Velocity, d.deadenemy.Parent)
                     ent:GetData().isClatterTellerKilled = true
                     table.insert(d.blacListents, ent.InitSeed)
@@ -155,7 +154,6 @@ function ClatterTellerDeathThingy(npc, k, v, count)
     local d = v:GetData()
     mod.scheduleCallback(function()
         if v.Type == 161 and v.Variant == mod.Monsters.ClatterTeller.Var and not v:IsDead() and d.target and d.blacListents then
-            print(not mod:CheckTableContents(d.blacListents, npc.InitSeed) , not CheckIfSchmootRollin(npc) , npc:GetData().ClatterTellerHighPriority , npc:GetData().ClatterTellerLowPriority)
             if not mod:CheckTableContents(d.blacListents, npc.InitSeed) and not CheckIfSchmootRollin(npc) and (npc:GetData().ClatterTellerHighPriority or npc:GetData().ClatterTellerLowPriority) then
                 d.deadenemy = npc --{ID = npc.Type, Var = npc.Variant, Sub = npc.SubType, Pos = npc.Position, Vel = npc.Velocity, Par = npc.Parent, Dat = npc:GetData()}
             end

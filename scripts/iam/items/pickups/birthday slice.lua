@@ -5,8 +5,6 @@ local sfx = SFXManager()
 mod:AddCallback(ModCallbacks.MC_USE_CARD, function(_, cardID, player, useflags)
 	local r = player:GetCardRNG(cardID)
 
-    print(cardID)
-
     if cardID == 98 then
         local dat = AnixbirthSaveManager.GetRunSave(player).anixbirthsaveData
         dat.aceCakePickup = dat.aceCakePickup or 1

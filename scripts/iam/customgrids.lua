@@ -191,9 +191,9 @@ local customPotTab = {
 
 mod:AddCallback(ModCallbacks.MC_POST_NPC_INIT, function(_, npc)
 	if npc.Variant == 161 then
-		npc.GridCollisionClass = EntityGridCollisionClass.GRIDCOLL_WALLS
 		npc:AddEntityFlags(EntityFlag.FLAG_NO_PHYSICS_KNOCKBACK | EntityFlag.FLAG_NO_KNOCKBACK)
 		npc.Velocity = Vector.Zero
+        npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_ALL
 	end
 end, 292)
 
@@ -212,6 +212,8 @@ mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
     end
 
     if npc.Variant == 161 then
+
+        npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_ALL
 
         sprite:ReplaceSpritesheet(0, "gfx/grid/breakablepots/chapter" .. room:GetBackdropType() .. "/breakablepot.png")
         sprite:LoadGraphics()
@@ -244,7 +246,7 @@ mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, function(_, npc, amount, flags)
     end
 
     if npc.Variant == 161 then
-		local amt = math.min(math.max(math.floor(amount / 60), 1), 3)
+		local amt = math.min(math.max(math.floor(amount / 120), 1)/3, 3)
         if npc.HitPoints - amt <= 1 or flags & (DamageFlag.DAMAGE_TNT | DamageFlag.DAMAGE_EXPLOSION) ~= 0 then
             for k, v in ipairs(customPotTab[math.random(#customPotTab)]) do
                 for i = 1, v[3] do
