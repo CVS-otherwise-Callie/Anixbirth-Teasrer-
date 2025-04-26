@@ -1,4 +1,4 @@
-local mod = FHAC
+--[[local mod = FHAC
 local game = Game()
 local rng = RNG()
 
@@ -10,9 +10,52 @@ end, mod.Monsters.SackKid.ID)
 
 function mod:SackKidAI(npc, sprite, d)
 
+    local target = npc:GetPlayerTarget()
+    local targetpos = target.Position
+    local room = game:GetRoom()
+    local path = npc.Pathfinder
+
     if not d.init then
+        d.state = "idle"
         d.init = true
+    else
+        npc.StateFrame = npc.StateFrame + 1
     end
 
-end
+    if d.state == "idle" then
+        mod:spritePlay(sprite, "Idle")
+        npc:AddEntityFlags(EntityFlag.FLAG_NO_PHYSICS_KNOCKBACK | EntityFlag.FLAG_NO_KNOCKBACK)
 
+        npc.Velocity = Vector.Zero
+        if npc.StateFrame > 50 then
+            d.state = "hop"
+        end
+    elseif d.state == "hop" then
+        mod:spritePlay(sprite, "Jump")
+    end
+
+    if sprite:IsEventTriggered("Jump") then
+        d.icanMove = true
+    elseif sprite:IsEventTriggered("Fall") then
+        d.icanMove = false
+    end
+
+    if sprite:IsFinished("Jump") then
+        d.state = "idle"
+    end
+
+    if d.icanMove then
+        if mod:isScare(npc) then
+            local targetvelocity = (targetpos - npc.Position):Resized(-7)
+            npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 0.6)
+        elseif room:CheckLine(npc.Position,targetpos,0,1,false,false) then
+            local targetvelocity = (targetpos - npc.Position):Resized(7)
+            npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 0.6)
+        else
+            path:FindGridPath(targetpos, 1.3, 1, true)
+        end
+    else
+        npc:MultiplyFriction(0.8)
+    end
+
+end]]
