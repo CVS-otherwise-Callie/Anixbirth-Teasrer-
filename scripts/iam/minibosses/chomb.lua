@@ -239,6 +239,7 @@ function mod:ChombAI(npc, sprite, d)
                         if projtype then
                             realshot:GetSprite():Load("gfx/projectiles/tooth_projectile", true) --you autsitsic piece of poop LOAD
                             mod:spritePlay(realshot:GetSprite(), "Tooth" .. math.random(2, 4) .. "Move")
+                            realshot:GetSprite():LoadGraphics()
                             realshot:GetSprite():Update()
                         end
                     end

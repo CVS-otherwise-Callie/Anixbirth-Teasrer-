@@ -1,5 +1,9 @@
 FHAC.Fortunes = 
 [=================[
+
+Curse of Where 
+The Fuck is my Map
+
 we should add more
 fortunes about adding
 more fortunes

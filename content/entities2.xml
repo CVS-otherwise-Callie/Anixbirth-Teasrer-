@@ -519,7 +519,7 @@
     </entity>
 
     <!--Grids-->
-    <entity anm2path="grid/_breakablepot.anm2" id="292" variant="161" name="Breakable Pot" baseHP="8" stageHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="20" collisionRadius="20" friction="1" numGridCollisionPoints="12" shadowSize="0" portrait="438" shutdoors="false">
+    <entity anm2path="grid/_breakablepot.anm2" id="292" variant="161" name="Breakable Pot" baseHP="8" stageHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="10" collisionRadius="20" friction="1" numGridCollisionPoints="20" shadowSize="0" portrait="438" shutdoors="false">
         <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" worm="0" />
     </entity>
 

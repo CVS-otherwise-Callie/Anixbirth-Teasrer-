@@ -140,6 +140,7 @@ Use 2, 4, or 6 normally.
 <entity ID="161" Variant="535" Name="Clatter Teller" Image="mah boys/clatter teller.png" BaseHP="40" StageHP="3"/>
 <!--162-->
 <entity ID="162" Metadata="1" Image="mah boys/lightpressureplate.png" Name="Light Pressure Plate" Subtype="0" Variant="2900" Group="Stage"/>
+<entity ID="292" Metadata="1" Image="mah boys/breakablepot.png" Name="Breakable Pot" Subtype="0" Variant="161" Group="Stage"/>
 <!--Tainted-->
 <entity ID="426" Variant="0" Name="Tainted Silly" Image="mah boys/sillytainted.png" BaseHP="70" StageHP="13" ShieldStrength="20" Tags="Champion"/>
 <entity ID="426" Variant="1" Name="Tainted String" Image="mah boys/stringtainted.png" BaseHP="70" StageHP="13" ShieldStrength="20" Tags="Champion"/>
@@ -158,6 +159,10 @@ Use 2, 4, or 6 normally.
 
 	<group Name="HOPE Buttons">
 		<entity Name="Light Pressure Plate" />
+	</group>
+
+	<group Name="HOPE Grid Objects Alt">
+		<entity Name="Breakable Pot" />
 	</group>
 
 	<group Name="HOPE Chapter 1 Enemies" Label="Chapter 1 Shared">
@@ -293,6 +298,10 @@ Use 2, 4, or 6 normally.
 	</group>
 
 </tab>
+
+<group Name="Alt Rocks">
+	<group Name="HOPE Grid Objects Alt"/>
+</group>
 
 <group Name="Chapter 1 Bosses (Main Path) Shared">
 	<group Name="HOPE Chapter 1 Big Boys"/>

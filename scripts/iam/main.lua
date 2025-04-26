@@ -233,7 +233,7 @@ function mod:ShowRoomText()
 end
 
 function mod:ShowFortuneDeath()
-	if mod.DSSavedata.fortuneDeathChance ~= 0 and mod.DSSavedata.customFortunes == 1 then
+	if AnixbirthSaveManager.GetSettingsSave().fortunesonDeath and AnixbirthSaveManager.GetSettingsSave().fortunesonDeath == 1 and mod.DSSavedata.fortuneDeathChance ~= 0 and mod.DSSavedata.customFortunes == 1 then
 		if math.random(mod.DSSavedata.fortuneDeathChance, 10) == 10 then 
 			FHAC:ShowFortune()
 		end 

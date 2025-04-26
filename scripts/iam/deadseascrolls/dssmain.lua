@@ -177,6 +177,42 @@ FHAC.dmdirectory = {
                     end},
                     {
                         str = 'fortunes on death',
+                        choices = {'off', 'on'},
+                        variable = "fortunesonDeath",
+                        slider = true,
+                        setting = 1,
+                        load = function()
+                            return AnixbirthSaveManager.GetSettingsSave().fortunesonDeath or 1
+                        end,
+                        store = function(var)
+                            AnixbirthSaveManager.GetSettingsSave().fortunesonDeath = var
+                        end,
+                        displayif = function(_, item)
+                            if item and item.buttons then
+                                for _, button in ipairs(item.buttons) do
+                                    if button.str == 'custom fortunes' then
+                                        return button.setting == 1
+                                    end
+                                end
+                            end
+        
+                            return false
+                        end,
+                        tooltip = {strset = {'enemies can', 'show fortunes', 'on death','', 'default is', 'off'}}
+                    },
+                    {str = '', nosel = true, fsize=2,displayif = function(_, item)
+                        if item and item.buttons then
+                            for _, button in ipairs(item.buttons) do
+                                if button.str == 'custom fortunes' then
+                                    return button.setting == 1
+                                end
+                            end
+                        end
+    
+                        return false
+                    end},
+                    {
+                        str = 'chance',
                         increment = 1, max = 10,
                         variable = "fortuneDeathChance",
                         slider = true,
