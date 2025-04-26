@@ -13,6 +13,9 @@ end
 
 FHAC.Monsters = {
     Fivehead = mod:ENT("Fivehead"),
+    Sixheadtop= mod:ENT("Sixhead Top"),
+    Sixheadbottom = mod:ENT("Sixhead Bottom"),
+    Onehead = mod:ENT("Onehead"),
     Floater = mod:ENT("Floater"),
     Dried = mod:ENT("Dried"),
     Neutralfly = mod:ENT("Neutral Fly"),
@@ -44,8 +47,6 @@ FHAC.Monsters = {
     Stoner = mod:ENT("Stoner"),
     LightPressurePlateEntNull = mod:ENT("Light Pressure Plate Null Entity"),
     LarryKingJr = mod:ENT("Larry King Jr."),
-    Sixhead = mod:ENT("Sixhead"),
-    Bottom = mod:ENT("Bottom"),
     Babble = mod:ENT("Babble"),
     Toast = mod:ENT("Toast"),
     TaintedSilly = mod:ENT("Tainted Silly"),
@@ -67,6 +68,7 @@ FHAC.Monsters = {
     Trilo = mod:ENT("Trilo"),
     ClatterTeller = mod:ENT("Clatter Teller"),
     FearFlower = mod:ENT("Fear Flower"),
+    Dekatessera = mod:ENT("Dekatessera")
 }
 
 FHAC.MiniBosses = {

@@ -106,7 +106,6 @@ function FHAC:PostNewRoom()
     FHAC.spawnedDried = false
     FHAC:SpawnRandomDried()
     FHAC:BigBowlOfSauerkrautSpawn()
-    
     FHAC:RemoveAllSpecificItemEffects(Isaac.GetPlayer())
 
     FHAC:CVSNewRoom()

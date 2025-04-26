@@ -3,16 +3,16 @@ local game = Game()
 local rng = RNG()
 
 mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
-    if npc.Variant == mod.Monsters.Sixhead.Var then
-        mod:SixheadAI(npc, npc:GetSprite(), npc:GetData())
+    if npc.Variant == mod.Monsters.Sixheadtop.Var then
+        mod:SixheadtopAI(npc, npc:GetSprite(), npc:GetData())
     end
-end, mod.Monsters.Sixhead.ID)
+end, mod.Monsters.Sixheadtop.ID)
 
-function mod:SixheadAI(npc, sprite, d)
+function mod:SixheadtopAI(npc, sprite, d)
 
     local target = npc:GetPlayerTarget()
     local targetpos = mod:confusePos(npc, target.Position, 5, nil, nil)
-    
+
     if not d.init then
         d.rngshoot = Vector(100, 100):GetAngleDegrees() 
         d.wait = 1
@@ -22,19 +22,30 @@ function mod:SixheadAI(npc, sprite, d)
         npc.StateFrame = npc.StateFrame + 1
     end
 
-    if not d.ent or d.ent:IsDead() or not d.ent:Exists() or d.ent.Type == 1 or d.ent.Position:Distance(npc.Position) < 75 then
-        d.ent = mod:GetSpecificEntInRoom({ID = mod.Monsters.Bottom.ID, Var = mod.Monsters.Bottom.Var}, npc, 75)
-    else
-        d.ent = target
+
+
+    if not d.ent or d.ent.Position:Distance(npc.Position) < 75 then
+        d.ent = mod:GetSpecificEntInRoom({ID = mod.Monsters.Sixheadbottom.ID, Var = mod.Monsters.Sixheadbottom.Var}, npc, 75)
     end
 
+    d.isbottominroom = false
+    for _, v in ipairs(Isaac.GetRoomEntities()) do
+
+        if v.Type == mod.Monsters.Sixheadbottom.ID and v.Variant == mod.Monsters.Sixheadbottom.Var then
+            d.isbottominroom = true
+        end
+    end
+
+    if d.ent:IsDead() or not d.ent:Exists()  or not d.isbottominroom then
+        npc:Kill()
+    end
     local params = ProjectileParams()    
     params.Scale = 1
     params.BulletFlags = params.BulletFlags | ProjectileFlags.BOOMERANG | ProjectileFlags.CURVE_LEFT
 
     if d.state == "shake" then
 
-        if (targetpos:Distance(npc.Position) < 150 or d.ent.Position:Distance(npc.Position) < 75) and game:GetRoom():CheckLine(target.Position,npc.Position,3,900,false,false) then
+        if (targetpos:Distance(npc.Position) < 75 or d.ent.Position:Distance(npc.Position) < 75) and game:GetRoom():CheckLine(target.Position,npc.Position,3,900,false,false) then
             mod:spritePlay(sprite, "AttackStart")
             d.state = "nullstate"
         else
@@ -44,13 +55,13 @@ function mod:SixheadAI(npc, sprite, d)
         end
 
     elseif d.state == "attacking" then
-    
+
         if sprite:IsEventTriggered("Shoot") then
             if d.wait%3 < math.random() then
                     if npc.Position:Distance(targetpos) <= npc.Position:Distance(d.ent.Position) then
                         for i = 0, 5 do
                             d.typeofShooting = "player"
-                            local proj = Isaac.Spawn(9, 0, 0, npc.Position, Vector(5, 0):Rotated((60*i+d.rngshoot)), npc):ToProjectile()
+                            local proj = Isaac.Spawn(9, 0, 0, npc.Position, Vector(3, 0):Rotated((60*i+d.rngshoot)), npc):ToProjectile()
                             proj:AddProjectileFlags(ProjectileFlags.BOOMERANG)
                             if d.shootleft then
                                 proj:AddProjectileFlags(ProjectileFlags.CURVE_LEFT)
@@ -88,7 +99,7 @@ function mod:SixheadAI(npc, sprite, d)
             end
         end
 
-        if ((targetpos:Distance(npc.Position) > 150 and d.typeofShooting == "player") or (d.ent.Position:Distance(npc.Position) > 75) and d.typeofShooting == "bottom") then
+        if ((targetpos:Distance(npc.Position) > 100 and d.typeofShooting == "player") or (d.ent.Position:Distance(npc.Position) > 100) and d.typeofShooting == "bottom") then
             d.state = "shake"
             npc.StateFrame = 0
             d.wait = 1
@@ -115,7 +126,7 @@ function mod:SixheadShot(p, d)
         p:GetData().type = "SyntheticHorf"
 
     elseif d.type == "GoToBottom" then
-        
+
         if not d.init then
             d.mult = math.random(80, 120)/100
             d.mult2 = math.random(60, 80)/100
@@ -147,4 +158,3 @@ function mod:SixheadShot(p, d)
 
     end
 end
-

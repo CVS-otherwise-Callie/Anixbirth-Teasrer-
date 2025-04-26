@@ -23,9 +23,9 @@ function mod:ShoAI(npc, sprite, d)
     end
 
     if d.state == "scared" then
-        
+
         mod:spritePlay(sprite, "idle")
-        
+
         npc.Velocity = npc.Velocity + npc.Velocity:Normalized() * 1.05
         path:MoveRandomly(false)
         npc:MultiplyFriction(0.65+(0.016))
@@ -37,9 +37,9 @@ function mod:ShoAI(npc, sprite, d)
     end
 
     if d.state == "angry" then
-        
+
         mod:spritePlay(sprite, "angry")
-        
+
         if d.coolaccel and d.coolaccel < 5 then
             d.coolaccel = d.coolaccel + 0.1
         end

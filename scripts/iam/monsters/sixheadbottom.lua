@@ -3,12 +3,12 @@ local game = Game()
 local rng = RNG()
 
 mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
-    if npc.Variant == mod.Monsters.Bottom.Var then
-        mod:BottomAI(npc, npc:GetSprite(), npc:GetData())
+    if npc.Variant == mod.Monsters.Sixheadbottom.Var then
+        mod:SixheadbottomAI(npc, npc:GetSprite(), npc:GetData())
     end
-end, mod.Monsters.Bottom.ID)
+end, mod.Monsters.Sixheadbottom.ID)
 
-function mod:BottomAI(npc, sprite, d)
+function mod:SixheadbottomAI(npc, sprite, d)
 
     local rng = npc:GetDropRNG()
     local target = npc:GetPlayerTarget()
@@ -72,6 +72,7 @@ function mod:BottomAI(npc, sprite, d)
     if npc.StateFrame%var > 0 then
         d.num = d.num + 1*d.secondnum
         local creep = Isaac.Spawn(1000, 22,  0, npc.Position, Vector(0, 0), npc):ToEffect()
+        creep.Scale = 0.6
         creep:SetTimeout(creep.Timeout - 45)
         creep:Update()
         if d.num > 12 then

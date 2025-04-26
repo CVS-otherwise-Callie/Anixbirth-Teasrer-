@@ -1,7 +1,9 @@
 FHAC:LoadScripts("scripts.TJP.monsters", {
     "gobbo",
     "sho",
-    "clatterteller"
+    "clatterteller",
+    "dekatessera",
+    "onehead"
 })
 
 FHAC:LoadScripts("scripts.TJP.effects", {
