@@ -1,5 +1,5 @@
 <AnimatedActor>
-	<Info CreatedBy="Iam" CreatedOn="4/26/2025 1:11:15 PM" Version="113" Fps="30"/>
+	<Info CreatedBy="Iam" CreatedOn="26/04/2025 23:25:20" Version="114" Fps="30"/>
 	<Content>
 		<Spritesheets>
 			<Spritesheet Path="sack kid.png" Id="0"/>
@@ -12,7 +12,7 @@
 			<Null Name="OverlayEffect" Id="0" ShowRect="false"/>
 		</Nulls>
 		<Events>
-			<Event Name="Jump" Id="0"/>
+			<Event Name="Rise" Id="0"/>
 			<Event Name="Fall" Id="1"/>
 		</Events>
 	</Content>
