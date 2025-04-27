@@ -413,7 +413,7 @@
         <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
     </entity>
 
-    <entity id="161" variant="167" name="Stuckpoot" baseHP="12" stageHP="0" boss="0" champion="1" collisionDamage="1" collisionMass="14" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="0" portrait="93" anm2path="monsters/stuckpoot/stuckpoot.anm2" tags="spider">
+    <entity id="161" variant="167" name="Stuckpoot" baseHP="12" stageHP="0" boss="0" champion="1" collisionDamage="1" collisionMass="14" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="0" portrait="93" anm2path="monsters/stuckpoot/stuckpoot.anm2">
 		<bestiary transform="0,0,1" anim="Idle" />
         <gibs amount="4" blood="1" bone="0" eye="0" gut="1" large="0" />
     </entity>
@@ -446,6 +446,13 @@
 		<bestiary transform="0,0,1" anim="Idle" />
         <gibs amount="10" colorblood="1"/>
     </entity>
+
+    <!-- Alt - Gehenna-->
+
+    <entity id="161" variant="564" name="Mutilated" anm2path="monsters/mutilated/mutilated.anm2" hasFloorAlts="false" reroll="true" baseHP="30" boss="0" champion="1" collisionDamage="1" collisionMass="5" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="14" stageHP="0" portrait="564">
+		<bestiary transform="0,0,1" anim="WalkVert" overlay="Head" />
+        <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
+    </entity-->
 
     <!--Tainted Enemies-->
 

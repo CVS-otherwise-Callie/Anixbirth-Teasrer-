@@ -46,6 +46,7 @@ FHAC:LoadScripts("scripts.iam.monsters", {
 	"trilo",
 	"fear flower",
 	"sack kid",
+	"mutilated"
 })
 
 FHAC:LoadScripts("scripts.iam.minibosses", {

@@ -136,9 +136,10 @@ Use 2, 4, or 6 normally.
    </bitfield>
 </entity>
 <entity ID="161" Variant="420" Name="Babble" Image="mah boys/babble.png" BaseHP="20" StageHP="7" Tags="Champion" />
-<entity ID="161" Variant="532" Name="Fear Flower" Image="mah boys/fear flower.png" BaseHP="30"/>
+<entity ID="161" Variant="532" Name="Fear Flower" Image="mah boys/fear flower.png" BaseHP="30" />
 <entity ID="161" Variant="535" Name="Clatter Teller" Image="mah boys/clatter teller.png" BaseHP="40" StageHP="3"/>
-<entity ID="161" Variant="537" Name="Dekatessera" Image="mah boys/dekatessera.png" BaseHP="24" StageHP="3"/>
+<entity ID="161" Variant="537" Name="Dekatessera" Image="mah boys/dekatessera.png" BaseHP="24" StageHP="3" Tags="Champion"/>
+<entity ID="161" Variant="564" Name="Mutilated" Image="mah boys/mutilated.png" BaseHP="30" StageHP="3" Tags="Champion"/>
 <!--162-->
 <entity ID="162" Metadata="1" Image="mah boys/lightpressureplate.png" Name="Light Pressure Plate" Subtype="0" Variant="2900" Group="Stage"/>
 <entity ID="292" Metadata="1" Image="mah boys/breakablepot.png" Name="Breakable Pot" Subtype="0" Variant="161" Group="Stage"/>
@@ -282,6 +283,12 @@ Use 2, 4, or 6 normally.
 		</group>
 	</group>
 
+	<group Name="HOPE Gehenna" Label="Gehenna">
+		<group Name="HOPE Gehenna Enemies">
+			<entity Name="Mutilated"/>
+		</group>
+	</group>
+
 	<group Name="HOPE Ascent" Label="Ascent">
 		<group Name="HOPE Ascent Enemies">
 			<entity Name="Tainted Silly"/>
@@ -371,6 +378,10 @@ Use 2, 4, or 6 normally.
 
 <group Name="Mausoleum Enemies">
 	<group Name="HOPE Mausoleum Enemies"/>
+</group>
+
+<group Name="Gehenna Enemies">
+	<group Name="HOPE Gehenna Enemies"/>
 </group>
 
 <group Name="Chapter 3 (Alt Path) Enemies">
