@@ -9,4 +9,9 @@
             <Entity ID="161" Variant="420" SubType="0" Image="mah boys/babble_downpour.png"/>
         </Gfx>
     </stage>
+    <stage Name="Gehenna">
+        <Gfx>
+            <Entity ID="161" Variant="537" SubType="0" Image="mah boys/dekatessera_gehenna.png"/>
+        </Gfx>
+    </stage>
 </data>

@@ -138,6 +138,7 @@ Use 2, 4, or 6 normally.
 <entity ID="161" Variant="420" Name="Babble" Image="mah boys/babble.png" BaseHP="20" StageHP="7" Tags="Champion" />
 <entity ID="161" Variant="532" Name="Fear Flower" Image="mah boys/fear flower.png" BaseHP="30"/>
 <entity ID="161" Variant="535" Name="Clatter Teller" Image="mah boys/clatter teller.png" BaseHP="40" StageHP="3"/>
+<entity ID="161" Variant="537" Name="Dekatessera" Image="mah boys/dekatessera.png" BaseHP="24" StageHP="3"/>
 <!--162-->
 <entity ID="162" Metadata="1" Image="mah boys/lightpressureplate.png" Name="Light Pressure Plate" Subtype="0" Variant="2900" Group="Stage"/>
 <entity ID="292" Metadata="1" Image="mah boys/breakablepot.png" Name="Breakable Pot" Subtype="0" Variant="161" Group="Stage"/>
@@ -271,6 +272,7 @@ Use 2, 4, or 6 normally.
 	<group Name="HOPE Chapter 3 Alt" Label="Chapter 3 Alt">
 		<group Name="HOPE Chapter 3 Alt Enemies">
 			<entity Name="Clatter Teller"/>
+			<entity Name="Dekatessera"/>
 		</group>
 	</group>
 

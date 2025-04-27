@@ -442,7 +442,7 @@
         <gibs amount="6" bone="1"/>
     </entity>
 
-    <entity id="161" variant="536" name="Dekatessera" anm2path="monsters\dekatessera/dekatessera.anm2" hasFloorAlts="true" reroll="true" baseHP="24" boss="0" champion="0" collisionDamage="1" collisionMass="25" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="25" stageHP="3" portrait="536">
+    <entity id="161" variant="537" name="Dekatessera" anm2path="monsters\dekatessera/dekatessera.anm2" hasFloorAlts="true" reroll="true" baseHP="24" boss="0" champion="0" collisionDamage="1" collisionMass="25" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="25" stageHP="3" portrait="536">
 		<bestiary transform="0,0,1" anim="Idle" />
         <gibs amount="10" colorblood="1"/>
     </entity>
