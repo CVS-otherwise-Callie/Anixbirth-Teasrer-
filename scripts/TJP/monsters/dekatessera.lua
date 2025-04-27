@@ -1,6 +1,5 @@
 local mod = FHAC
 local game = Game()
-local rng = RNG()
 
 mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
     if npc.Variant == mod.Monsters.Dekatessera.Var then
@@ -9,8 +8,16 @@ mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
 end, mod.Monsters.Dekatessera.ID)
 
 function mod:DekatesseraAI(npc, sprite, d)
-    local room = game:GetRoom()
     local player = npc:GetPlayerTarget()
+    local room = game:GetRoom()
+    local isGehenna = (room:GetBackdropType() == BackdropType.GEHENNA)
+    local myawesomepurplecolor = Color(1,1,1,1,0.6,0,0.5)
+    myawesomepurplecolor:SetColorize(1,1,1,1)
+
+    if isGehenna then
+        mod:ReplaceEnemySpritesheet(npc, "gfx/monsters/dekatessera/dekatessera_gehenna", 0)
+        mod:ReplaceEnemySpritesheet(npc, "gfx/monsters/dekatessera/dekatessera_gehenna", 1)
+    end
 
     if npc.StateFrame > 100 then
         d.targetpos =  mod:freeGrid(npc, false, 200, 100)
@@ -44,7 +51,10 @@ function mod:DekatesseraAI(npc, sprite, d)
     end
 
     if d.state == "Attack" then
-        npc.Velocity = npc.Velocity/2
+
+        npc:AddEntityFlags(EntityFlag.FLAG_NO_PHYSICS_KNOCKBACK | EntityFlag.FLAG_NO_KNOCKBACK)
+
+        npc:MultiplyFriction(0.5)
         mod:spritePlay(sprite, "Attack")
         if sprite:IsFinished() then
             d.cooldown = 0
@@ -54,6 +64,8 @@ function mod:DekatesseraAI(npc, sprite, d)
 
     if d.state == "Recharge" then
 
+        npc:MultiplyFriction(0.5)
+
         if d.cooldown > 200 then
             mod:spritePlay(sprite, "Reset")
             if sprite:IsFinished() then
@@ -62,6 +74,41 @@ function mod:DekatesseraAI(npc, sprite, d)
             end
         else
             mod:spritePlay(sprite, "Recharge")
+        end
+    end
+
+    if sprite:IsEventTriggered("summon") then
+        d.dekBall = Isaac.Spawn(mod.Effects.DekatesseraEffect.ID, mod.Effects.DekatesseraEffect.Var, mod.Effects.DekatesseraEffect.Sub, npc.Position, Vector.Zero, npc)
+        local dat = d.dekBall:GetData()
+        dat.stageTypeDekka = isGehenna
+        dat.dekkaTears = {}
+        for i = 1, 8 do
+            local p = Isaac.Spawn(9, 0, 0, npc.Position, Vector.Zero, npc):ToProjectile()
+
+            p:GetData().offyourfuckingheadset = 70 + math.random(-10, 10) --fuuuuu THIS WONT BREAK TRUST!!!!
+            p:GetData().StateFrame = 0
+            p:GetData().Baby = d.dekBall
+            p:GetData().moveit = (360/10) * i
+            p:GetData().type = "SyntheticHorf"
+            p:GetData().Player = player --d.dekBall
+
+            if not isGehenna then
+                p:GetSprite().Color = myawesomepurplecolor
+            end
+
+            table.insert(dat.dekkaTears, p)
+        end
+    end
+
+    if sprite:IsEventTriggered("attack") then
+        if d.dekBall then
+
+            if isGehenna then
+                d.dekBall:GetData().target = mod:GetEntInRoom(npc, true, npc)
+            else
+                d.dekBall:GetData().target = player
+            end
+            d.dekBall = nil
         end
     end
 end
