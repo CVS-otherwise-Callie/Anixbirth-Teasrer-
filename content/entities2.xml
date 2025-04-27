@@ -231,7 +231,7 @@
 
     <!--Cellar-->
 
-    <entity anm2path="monsters/sackkid/sackkid.anm2" reroll="true" baseHP="5" boss="0" champion="1" collisionDamage="1" collisionMass="2" collisionRadius="8" friction="1" id="37" name="Sack Kid" numGridCollisionPoints="8" shadowSize="12" stageHP="0" variant="6" portrait="556" bestiary="true" bestiaryTransform="0,0,1" bestiaryAnim="Jump" hasFloorAlts="true">
+    <entity anm2path="monsters/sackkid/sackkid.anm2" reroll="true" baseHP="5" boss="0" champion="1" collisionDamage="1" collisionMass="2" collisionRadius="8" friction="1" id="161" name="Sack Kid" numGridCollisionPoints="8" shadowSize="12" stageHP="0" variant="35" portrait="35" bestiary="true" bestiaryTransform="0,0,1" bestiaryAnim="Jump" hasFloorAlts="true">
         <gibs amount="3" blood="1" bone="1" eye="1" gut="1" large="0" />
     </entity>
 
@@ -239,6 +239,18 @@
         <bestiary transform="0,0,1" anim="Idle" />
         <gibs amount="6" blood="2" bone="1" eye="1" gut="1" large="0" />
         <devolve id="161.0.0" weight="1" />
+    </entity>
+
+    <entity anm2path="monsters/sillyandstring/string.anm2" id="161" variant="37" subtype="0" reroll="false" baseHP="10" boss="0" champion="0" collisionDamage="1" collisionMass="40" collisionRadius="10" friction="1" name="String" numGridCollisionPoints="12" shadowSize="15" stageHP="0" bestiary="true" portrait="37" >
+        <bestiary transform="0,0,1" anim="Idle" />
+        <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
+        <devolve id="161.0.0" weight="1" />
+    </entity>
+
+    <entity anm2path="monsters/roach/roach.anm2" id="161" variant="38" subtype="0" reroll="false" baseHP="5" boss="0" champion="0" collisionDamage="1" collisionMass="5" collisionRadius="7" friction="1" name="Roach" numGridCollisionPoints="12" shadowSize="10" stageHP="0" bestiary="true" portrait="38" >
+        <bestiary transform="0,0,1" anim="Appear" />
+        <gibs amount="0"/>
+        <devolve id="85.0.0" weight="1" />
     </entity>
 
     <!--omg i have to make like 10-->
@@ -282,12 +294,6 @@
 		<bestiary transform="0,0,1" anim="Idle" />
         <gibs amount="0" blood="1" bone="0" eye="1" gut="0" large="0" />
         <devolve id="214.0.0" weight="1" />
-    </entity>
-
-    <entity anm2path="monsters/sillyandstring/string.anm2" id="161" variant="47" subtype="0" reroll="false" baseHP="10" boss="0" champion="0" collisionDamage="1" collisionMass="40" collisionRadius="10" friction="1" name="String" numGridCollisionPoints="12" shadowSize="15" stageHP="0" bestiary="true" portrait="47" >
-        <bestiary transform="0,0,1" anim="Idle" />
-        <gibs amount="6" blood="2" bone="1" eye="1" gut="1" large="0" />
-        <devolve id="161.0.0" weight="1" />
     </entity>
 
     <entity id="37" variant="3" name="Woodhead" anm2path="monsters\woodhead/woodhead.anm2" hasFloorAlts="false" reroll="true" baseHP="12" boss="0" champion="1" collisionDamage="1" collisionMass="5" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="14" stageHP="1" portrait="26">
