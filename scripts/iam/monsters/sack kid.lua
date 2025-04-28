@@ -10,7 +10,6 @@ end, mod.Monsters.SackKid.ID)
 
 function mod:SackKidAI(npc, sprite, d)
 
-
     local player = npc:GetPlayerTarget()
     local playerpos = player.Position
     local room = game:GetRoom()
@@ -56,7 +55,6 @@ function mod:SackKidAI(npc, sprite, d)
         else
 
             path:FindGridPath(playerpos, 1.3, 1, true)
-            print(npc.Velocity)
 
         end
     else
@@ -68,3 +66,21 @@ function mod:SackKidAI(npc, sprite, d)
     end
 
 end
+
+mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, function(_, npc, dmg, flags, source)
+    if npc.Type == 161 and npc.Variant == mod.Monsters.SackKid.Var and npc.HitPoints - dmg <= 0 then
+        local room = Game():GetRoom()
+        local gridEntity = room:GetGridEntityFromPos(npc.Position)
+        local gridIndex = room:GetGridIndex(npc.Position)
+        local gridType = nil
+        if gridEntity then
+            gridType = gridEntity:GetType()
+        else
+            gridType = 0
+        end
+        if gridType < 2 then
+            room:SpawnGridEntity(gridIndex, 10, 0, math.random(1,4294967295), 0)
+        end
+        return true
+    end
+end, 161)
