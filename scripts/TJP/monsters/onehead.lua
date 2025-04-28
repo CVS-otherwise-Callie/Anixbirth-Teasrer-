@@ -56,7 +56,7 @@ function mod:OneheadAI(npc, sprite, d)
         if sprite:IsEventTriggered("Shoot") then
             if d.wait == 1 then
 
-                npc:FireProjectiles(npc.Position, Vector(1.5,3):Rotated((76*d.rngshoot)), 0, params)
+                npc:FireProjectiles(npc.Position, Vector(1.5,3):Rotated(math.random(1, 360)), 0, params)
 
                 d.rngshoot = d.rngshoot + 1
                 d.wait = d.wait + 1
