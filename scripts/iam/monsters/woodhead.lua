@@ -28,6 +28,7 @@ function mod:WoodheadAI(npc, sprite, d)
     local isBurningBasement = (room:GetBackdropType() == BackdropType.CELLAR)
 
     if isBurningBasement then
+        mod:ReplaceEnemySpritesheet(npc, "gfx/monsters/woodhead/woodheadbodyburningbase", 1)
         mod:ReplaceEnemySpritesheet(npc, "gfx/monsters/woodhead/hoodenheadburningbase", 1)
     end
 
