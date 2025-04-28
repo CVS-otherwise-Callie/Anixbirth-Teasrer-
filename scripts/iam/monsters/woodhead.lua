@@ -25,6 +25,12 @@ function mod:WoodheadAI(npc, sprite, d)
     local path = npc.Pathfinder
     local teartab = {}
 
+    local isBurningBasement = (room:GetBackdropType() == BackdropType.CELLAR)
+
+    if isBurningBasement then
+        mod:ReplaceEnemySpritesheet(npc, "gfx/monsters/woodhead/hoodenheadburningbase", 1)
+    end
+
     for k, v in ipairs(Isaac.GetRoomEntities()) do
         if v.Type == 2 then
             table.insert(teartab, v)
