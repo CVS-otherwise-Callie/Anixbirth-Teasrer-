@@ -29,7 +29,7 @@ function mod:WoodheadAI(npc, sprite, d)
 
     if isBurningBasement then
         mod:ReplaceEnemySpritesheet(npc, "gfx/monsters/woodhead/woodheadbodyburningbase", 1)
-        mod:ReplaceEnemySpritesheet(npc, "gfx/monsters/woodhead/hoodenheadburningbase", 1)
+        mod:ReplaceEnemySpritesheet(npc, "gfx/monsters/woodhead/woodheadburningbase", 1)
     end
 
     for k, v in ipairs(Isaac.GetRoomEntities()) do
