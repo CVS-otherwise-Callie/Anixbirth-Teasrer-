@@ -1,5 +1,5 @@
 <AnimatedActor>
-	<Info CreatedBy="Iam" CreatedOn="9/11/2024 11:24:00 PM" Version="124" Fps="30"/>
+	<Info CreatedBy="Iam" CreatedOn="29/04/2025 23:03:30" Version="125" Fps="30"/>
 	<Content>
 		<Spritesheets>
 			<Spritesheet Path="plier.png" Id="0"/>
@@ -120,7 +120,7 @@
 				<NullAnimation NullId="0" Visible="true"/>
 			</NullAnimations>
 			<Triggers>
-				<Trigger EventId="0" AtFrame="24"/>
+				<Trigger EventId="0" AtFrame="16"/>
 			</Triggers>
 		</Animation>
 	</Animations>

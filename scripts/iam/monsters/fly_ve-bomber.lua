@@ -101,8 +101,7 @@ function mod:FlyveBomberAI(npc, sprite, d) --thanks euan lmaooooooooooo
     if sprite:IsEventTriggered("spawn") then
         npc:ClearEntityFlags(EntityFlag.FLAG_NO_TARGET | EntityFlag.FLAG_NO_PHYSICS_KNOCKBACK | EntityFlag.FLAG_NO_KNOCKBACK | EntityFlag.FLAG_NO_STATUS_EFFECTS)
         npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_PLAYEROBJECTS
-        local bug = Isaac.Spawn(85, 0, 0, npc.Position, npc.Velocity, npc)
-        bug:ClearEntityFlags(EntityFlag.FLAG_APPEAR)
+        local bug = EntityNPC.ThrowSpider(npc.Position, npc, Vector(npc.Position.X+math.random(-30,30), npc.Position.Y+math.random(-30,30)), false, 4)
     end
 
     if sprite:IsFinished("Down") then
