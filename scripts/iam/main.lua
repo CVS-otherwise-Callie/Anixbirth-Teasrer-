@@ -44,8 +44,8 @@ FHAC:LoadScripts("scripts.iam.monsters", {
 	"narcissim relfections",
 	"chomblet",
 	"trilo",
-	"fear flower",
-	"sack kid",
+	"fearflower",
+	"sackkid",
 	"mutilated"
 })
 

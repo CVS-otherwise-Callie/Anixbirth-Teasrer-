@@ -46,11 +46,18 @@ Up to groups of 3.
 <entity ID="161" Variant="26" Name="Gobbo" Image="mah boys/gobbo.png" BaseHP="11"/>
 <entity ID="161" Variant="27" Name="Sho" Image="mah boys/sho.png" BaseHP="11"/>
 <entity ID="161" Variant="30" Name="Stoner" Image="mah boys/stoner.png" BaseHP="n/a"/>
+<entity ID="161" Variant="35" Name="Sack Kid" Image="mah boys/sack kid.png" BaseHP="10"/>
 <entity ID="161" Variant="36" Name="Silly" Image="mah boys/silly.png" BaseHP="10" Tags="Champion">
    <bitfield Key="Subtype">
       <checkbox Name="Moves After Shooting" Length="1"/>
    </bitfield>
 </entity>
+<entity ID="161" Variant="37" Name="String" Image="mah boys/string.png" BaseHP="10" Tags="Champion">
+   <bitfield Key="Subtype">
+      <checkbox Name="Moves After Shooting" Length="1"/>
+   </bitfield>
+</entity>
+<entity ID="161" Variant="38" Name="Roach" Image="mah boys/roach.png" BaseHP="5"/>
 <entity ID="161" Variant="41" Subtype="6" Name="Dried (Red)" Image="mah boys/dried.png" Tags="Champion">
    <bitfield Key="Subtype">
       <dropdown Name="Color of Creep that the Dried drops" Length="7">
@@ -65,11 +72,6 @@ Up to groups of 3.
    </bitfield>
 </entity>
 <entity ID="161" Variant="42" Name="Plier" Image="mah boys/plier.png" BaseHP="10" Tags="Champion"/>
-<entity ID="161" Variant="47" Name="String" Image="mah boys/string.png" BaseHP="10" Tags="Champion">
-   <bitfield Key="Subtype">
-      <checkbox Name="Moves After Shooting" Length="1"/>
-   </bitfield>
-</entity>
 <entity ID="161" Variant="84" Name="Trilo" Image="mah boys/trilo.png" BaseHP="10"/>
 <entity ID="161" Variant="91" Name="Schmoot" Image="mah boys/schmoot.png" BaseHP="16" Tags="Champion"/>
 <entity ID="161" Variant="101" Name="Soot" Image="mah boys/soot.png" BaseHP="3"/>
@@ -191,11 +193,13 @@ Use 2, 4, or 6 normally.
 
 	<group Name="HOPE Cellar" Label="Cellar">
 		<group Name="HOPE Cellar Enemies">
-			<entity Name="Dried (Red)" />
-      			<entity Name="Plier" />
-      			<entity Name="Silly" />
-      			<entity Name="String" />
+			<entity Name="Roach" />
 			<entity Name="Woodhead" />
+			<entity Name="Sack Kid" />
+			<entity Name="Dried (Red)" />
+      		<entity Name="Plier" />
+      		<entity Name="Silly" />
+      		<entity Name="String" />
 		</group>
   	</group>
 

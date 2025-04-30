@@ -34,6 +34,10 @@ function mod:FlyveBomberAI(npc, sprite, d) --thanks euan lmaooooooooooo
         end
     end
 
+    if not d.newpos then
+        d.newpos = mod:freeGrid(npc, true, 200, 100)        
+    end
+
     if d.state == "idle" then
         mod:spritePlay(sprite, "Idle")
             

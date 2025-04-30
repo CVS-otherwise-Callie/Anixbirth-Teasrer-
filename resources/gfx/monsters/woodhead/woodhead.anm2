@@ -1,9 +1,9 @@
 <AnimatedActor>
-	<Info CreatedBy="robot" CreatedOn="3/24/2025 8:35:15 PM" Version="107" Fps="30"/>
+	<Info CreatedBy="robot" CreatedOn="4/29/2025 10:32:08 PM" Version="108" Fps="30"/>
 	<Content>
 		<Spritesheets>
 			<Spritesheet Path="woodheadbody.png" Id="0"/>
-			<Spritesheet Path="hoodenhead.png" Id="1"/>
+			<Spritesheet Path="woodhead.png" Id="1"/>
 		</Spritesheets>
 		<Layers>
 			<Layer Name="body" Id="0" SpritesheetId="0"/>

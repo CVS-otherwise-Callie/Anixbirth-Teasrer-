@@ -35,5 +35,7 @@ function mod:MutilatedAI(npc, sprite, d)
         npc:AnimWalkFrame("WalkHori", "WalkVert", 0.1)
     end
 
+    sprite:PlayOverlay("Head")
+
 end
 
