@@ -1,5 +1,5 @@
 <AnimatedActor>
-	<Info CreatedBy="Iam" CreatedOn="30/04/2025 20:07:42" Version="124" Fps="45"/>
+	<Info CreatedBy="Iam" CreatedOn="30/04/2025 20:09:31" Version="125" Fps="45"/>
 	<Content>
 		<Spritesheets>
 			<Spritesheet Path="..\rebirth\monster_000_bodies01.png" Id="0"/>
