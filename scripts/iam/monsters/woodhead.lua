@@ -25,7 +25,7 @@ function mod:WoodheadAI(npc, sprite, d)
     local path = npc.Pathfinder
     local teartab = {}
 
-    local isBurningBasement = (room:GetBackdropType() == BackdropType.CELLAR)
+    local isBurningBasement = (room:GetBackdropType() == BackdropType.BURNT_BASEMENT)
 
     if isBurningBasement then
         mod:ReplaceEnemySpritesheet(npc, "gfx/monsters/woodhead/woodheadbodyburningbase", 1)

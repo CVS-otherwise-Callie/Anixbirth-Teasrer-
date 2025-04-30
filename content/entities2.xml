@@ -231,7 +231,7 @@
 
     <!--Cellar-->
 
-    <entity anm2path="monsters/sackkid/sackkid.anm2" reroll="true" baseHP="5" boss="0" champion="1" collisionDamage="1" collisionMass="2" collisionRadius="8" friction="1" id="161" name="Sack Kid" numGridCollisionPoints="8" shadowSize="12" stageHP="0" variant="35" portrait="35" bestiary="true" bestiaryTransform="0,0,1" bestiaryAnim="Jump" hasFloorAlts="true">
+    <entity anm2path="monsters/sackkid/sackkid.anm2" reroll="true" baseHP="10" boss="0" champion="1" collisionDamage="1" collisionMass="2" collisionRadius="8" friction="1" id="161" name="Sack Kid" numGridCollisionPoints="8" shadowSize="12" stageHP="0" variant="35" portrait="35" bestiary="true" bestiaryTransform="0,0,1" bestiaryAnim="Jump" hasFloorAlts="true">
         <gibs amount="3" blood="1" bone="1" eye="1" gut="1" large="0" />
     </entity>
 
