@@ -145,6 +145,9 @@ Use 2, 4, or 6 normally.
 <!--162-->
 <entity ID="162" Metadata="1" Image="mah boys/lightpressureplate.png" Name="Light Pressure Plate" Subtype="0" Variant="2900" Group="Stage"/>
 <entity ID="292" Metadata="1" Image="mah boys/breakablepot.png" Name="Breakable Pot" Subtype="0" Variant="161" Group="Stage"/>
+<!--240-->
+<entity ID="240" Variant="359" Name="Stall Creep" Image="mah boys/stall_creep.png" BaseHP="10" Tags="Champion" PlaceVisual="WallSnap"/>
+<entity ID="240" Variant="368" Name="Webbed Creep" Image="mah boys/webbed_creep.png" BaseHP="10" Tags="Champion" PlaceVisual="WallSnap"/>
 <!--Tainted-->
 <entity ID="426" Variant="0" Name="Tainted Silly" Image="mah boys/sillytainted.png" BaseHP="70" StageHP="13" ShieldStrength="20" Tags="Champion"/>
 <entity ID="426" Variant="1" Name="Tainted String" Image="mah boys/stringtainted.png" BaseHP="70" StageHP="13" ShieldStrength="20" Tags="Champion"/>
@@ -200,6 +203,8 @@ Use 2, 4, or 6 normally.
       		<entity Name="Plier" />
       		<entity Name="Silly" />
       		<entity Name="String" />
+			<entity Name="Stall Creep" />
+			<entity Name="Webbed Creep" />
 		</group>
   	</group>
 

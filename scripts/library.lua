@@ -123,7 +123,7 @@ function mod:freeGrid(npc, path, far, close, closest)
 	path = path or false
 	far = far or 300
 	close = close or 250
-	closest = closest or nil
+	closest = closest or false
 
 	local closestgridpoint
 
@@ -133,6 +133,8 @@ function mod:freeGrid(npc, path, far, close, closest)
 		for i = 0, room:GetGridSize() do
 			if room:GetGridPosition(i) ~= nil then
 			local gridpoint = room:GetGridPosition(i)
+			print(gridpoint , gridpoint:Distance(npc.Position) < far , gridpoint:Distance(npc.Position) > close , room:GetGridEntity(i) == nil , 
+			room:IsPositionInRoom(gridpoint, 0) , patherReal(npc, gridpoint))
 			if gridpoint and gridpoint:Distance(npc.Position) < far and gridpoint:Distance(npc.Position) > close and room:GetGridEntity(i) == nil and 
 			room:IsPositionInRoom(gridpoint, 0) and patherReal(npc, gridpoint) then
 				if closest then
@@ -141,6 +143,7 @@ function mod:freeGrid(npc, path, far, close, closest)
 						closestgridpoint = gridpoint
 					end
 				else
+					print("eh")
 					table.insert(tab, gridpoint)
 				end
 				end
@@ -158,6 +161,7 @@ function mod:freeGrid(npc, path, far, close, closest)
 							closestgridpoint = gridpoint
 						end
 					else
+						print("uh")
 						table.insert(tab, gridpoint)
 					end
 				end
@@ -166,7 +170,7 @@ function mod:freeGrid(npc, path, far, close, closest)
 	end
 	if closest and closestgridpoint then return closestgridpoint end
 	if #tab <= 0 then
-		return nil
+		return npc.Position
 	end
 	return tab[math.random(1, #tab)]
 end

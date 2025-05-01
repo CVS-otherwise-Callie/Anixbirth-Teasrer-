@@ -1,5 +1,5 @@
 <AnimatedActor>
-	<Info CreatedBy="Unknown" CreatedOn="29/04/2025 21:09:29" Version="1" Fps="30"/>
+	<Info CreatedBy="Unknown" CreatedOn="4/30/2025 8:16:06 PM" Version="4" Fps="30"/>
 	<Content>
 		<Spritesheets>
 			<Spritesheet Path="stall_creep.png" Id="0"/>
@@ -58,10 +58,8 @@
 				</NullAnimation>
 			</NullAnimations>
 			<Triggers>
-				<Trigger EventId="1" AtFrame="10"/>
+				<Trigger EventId="1" AtFrame="9"/>
 				<Trigger EventId="0" AtFrame="10"/>
-				<Trigger EventId="0" AtFrame="13"/>
-				<Trigger EventId="0" AtFrame="16"/>
 			</Triggers>
 		</Animation>
 	</Animations>

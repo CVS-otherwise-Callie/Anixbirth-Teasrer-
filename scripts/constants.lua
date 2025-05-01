@@ -71,7 +71,9 @@ FHAC.Monsters = {
     Dekatessera = mod:ENT("Dekatessera"),
     SackKid = mod:ENT("Sack Kid"),
     Mutilated = mod:ENT("Mutilated"),
-    Roach = mod:ENT("Roach")
+    Roach = mod:ENT("Roach"),
+    StallCreep = mod:ENT("Stall Creep"),
+    WebbedCreep = mod:ENT("Webbed Creep")
 }
 
 FHAC.MiniBosses = {
