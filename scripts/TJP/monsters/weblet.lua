@@ -25,7 +25,7 @@ function mod:WebletAI(npc, sprite, d)
         d.emotion = "Excited"
         d.player = npc:GetPlayerTarget()
         d.playerpos = d.player.Position
-        d.targetpos = mod:GetClosestMinisaacAttackPos(npc.Position, d.playerpos, 175)
+        d.targetpos = mod:GetClosestMinisaacAttackPos(npc.Position, d.playerpos, 150)
 
         if (d.targetpos- npc.Position):Length() > 5 then
             if room:CheckLine(npc.Position,d.targetpos,0,1,false,false) then
@@ -70,9 +70,6 @@ function mod:WebletAI(npc, sprite, d)
         sprite:SetFrame("WalkDown",0)
         sprite:SetOverlayFrame("HeadDown"..d.emotion, d.faceframe)
     end
-
-    --print(d.targetpos)
-    print(mod:GetClosestMinisaacAttackPos(npc.Position, d.targetpos, 50))
 
 end
 
