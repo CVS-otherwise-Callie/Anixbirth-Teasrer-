@@ -26,6 +26,26 @@ function mod:AnyPlayerHasTrinket(trinketType)
     return false
 end
 
+function mod:GetClosestMinisaacAttackPos(pos, targetpos, distfromtarget)
+	local closest = Vector(9999999999999999, 9999999999999999) --just a absurdly big number
+
+	options = {
+		targetpos + Vector(distfromtarget,0),
+		targetpos - Vector(distfromtarget,0),
+		targetpos + Vector(0,distfromtarget),
+		targetpos - Vector(0,distfromtarget)
+	}
+	for i, option  in ipairs(options) do
+
+		if pos:Distance(option) < pos:Distance(closest) then
+			closest = option
+			winner = i
+		end
+	end
+
+	return options[winner]
+end
+
 function mod:AnyPlayerHasCollectible(coll)
 	for i = 1, game:GetNumPlayers() do
         if game:GetPlayer(i):ToPlayer():HasCollectible(coll) then
@@ -201,7 +221,7 @@ function mod:freeHole(npc, path, far, close, closest)
 					end
 				else
 					table.insert(tab, gridpoint)
-				end			
+				end
 				end
 			end
 		end

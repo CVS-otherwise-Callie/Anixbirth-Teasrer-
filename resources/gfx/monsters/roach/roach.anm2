@@ -1,5 +1,5 @@
 <AnimatedActor>
-	<Info CreatedBy="TJP" CreatedOn="27/04/2025 20:21:10" Version="11" Fps="45"/>
+	<Info CreatedBy="TJP" CreatedOn="02/05/2025 19:58:06" Version="12" Fps="45"/>
 	<Content>
 		<Spritesheets>
 			<Spritesheet Path="roach.png" Id="0"/>
@@ -9,7 +9,7 @@
 		</Layers>
 		<Nulls/>
 		<Events>
-			<Event Name="blood" Id="0"/>
+			<Event Name="Blood" Id="0"/>
 		</Events>
 	</Content>
 	<Animations DefaultAnimation="Hori">

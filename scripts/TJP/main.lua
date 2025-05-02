@@ -4,7 +4,10 @@ FHAC:LoadScripts("scripts.TJP.monsters", {
     "clatterteller",
     "dekatessera",
     "onehead",
-    "roach"
+    "roach",
+    "weblet",
+    "webmother",
+    "stumblingnest"
 })
 
 FHAC:LoadScripts("scripts.TJP.effects", {

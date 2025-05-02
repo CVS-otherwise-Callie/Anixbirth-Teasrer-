@@ -51,8 +51,8 @@ function mod:RoachAI(npc, sprite, d)
         npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_NONE
         npc.Velocity = Vector.Zero
         mod:spritePlay(sprite, "Death")
-        if sprite:IsEventTriggered("blood") then
-            game:SpawnParticles ( npc.Position, 5, 5, 5, Color(1,0,0,0), 10, 0 )
+        if sprite:IsEventTriggered("Blood") then
+            game:SpawnParticles ( npc.Position, 5, 5, math.random(1,5), Color.Default, 10, 0 )
             npc:PlaySound(SoundEffect.SOUND_DEATH_BURST_SMALL, 1, 2, false, 1.5)
         end
         if sprite:IsFinished() then
