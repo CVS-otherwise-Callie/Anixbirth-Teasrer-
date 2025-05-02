@@ -29,7 +29,7 @@ end
 function mod:GetClosestMinisaacAttackPos(pos, targetpos, distfromtarget)
 	local closest = Vector(9999999999999999, 9999999999999999) --just a absurdly big number
 
-	options = {
+	local options = {
 		targetpos + Vector(distfromtarget,0),
 		targetpos - Vector(distfromtarget,0),
 		targetpos + Vector(0,distfromtarget),
