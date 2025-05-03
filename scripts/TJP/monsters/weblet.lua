@@ -11,7 +11,7 @@ end, mod.Monsters.Weblet.ID)
 function mod:WebletAI(npc, sprite, d)
     local path = npc.Pathfinder
     local room = game:GetRoom()
-
+    local player = npc:GetPlayerTarget()
 
     if not d.init then
         d.speed = 10
@@ -23,8 +23,7 @@ function mod:WebletAI(npc, sprite, d)
 
     if d.state == "chase" then
         d.emotion = "Excited"
-        d.player = npc:GetPlayerTarget()
-        d.playerpos = d.player.Position
+        d.playerpos = mod:confusePos(npc, player.Position,5 , nil, nil)
         d.targetpos = mod:GetClosestMinisaacAttackPos(npc.Position, d.playerpos, 150, true, 60)
 
         if npc.Position:Distance(d.playerpos) < 20 then

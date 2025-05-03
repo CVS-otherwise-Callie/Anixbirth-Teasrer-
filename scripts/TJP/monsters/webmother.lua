@@ -23,9 +23,9 @@ function mod:WebMotherAI(npc, sprite, d)
         npc.StateFrame = npc.StateFrame + 1
     end
 
-    --for num, child in pairs(d.children) do
-    --    print(child.Parent)
-    --end
+    for num, child in pairs(d.children) do
+        print(child:GetData().sign)
+    end
 
     if d.state == "idle" then
         mod:spritePlay(sprite,"Idle")
@@ -34,13 +34,14 @@ function mod:WebMotherAI(npc, sprite, d)
                 print("cmere")
                 d.childrennumber = 0
             else
-                d.weblet = Isaac.Spawn(mod.Monsters.Weblet.ID, mod.Monsters.Weblet.Var, mod.Monsters.Weblet.Sub, npc.Position, Vector.Zero, npc)
-                d.weblet.Parent = npc
-                d.webletdata = d.weblet:GetData()
-                print(d.weblet)
-                print(d.webletdata.Initseed)
-                table.insert(d.children, d.webletdata)
-                d.childrennumber = d.childrennumber+1
+                for i = 1, 2 do
+                    local weblet = Isaac.Spawn(mod.Monsters.Weblet.ID, mod.Monsters.Weblet.Var, mod.Monsters.Weblet.Sub, npc.Position, Vector.Zero, npc)
+                    weblet.Parent = npc
+                    local webletdata = weblet:GetData()
+                    webletdata.sign = "I SAW THE SIGN"
+                    table.insert(d.children, weblet)
+                    d.childrennumber = d.childrennumber+1
+                end
 
             end
             d.randomtimer = 100000000
