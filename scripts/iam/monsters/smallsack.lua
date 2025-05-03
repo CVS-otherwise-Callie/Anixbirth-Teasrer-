@@ -18,9 +18,9 @@ function mod:SmallSackAI(npc, sprite, d)
                 d.state = "idle"
             end
         else
-            npc.HitPoints = npc.MaxHitPoints/2
-            npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_NONE
+            npc.HitPoints = npc.MaxHitPoints/1.5
         end
+        npc.SplatColor = Color(100, 100, 100, 255, 0, 0, 0)
         d.lev = 1
         d.stage = 1
         npc:AddEntityFlags(EntityFlag.FLAG_NO_PHYSICS_KNOCKBACK | EntityFlag.FLAG_NO_KNOCKBACK)
@@ -78,4 +78,12 @@ function mod:SmallSackAI(npc, sprite, d)
         end
     end
 end
+
+mod:AddCallback(ModCallbacks.MC_PRE_NPC_COLLISION, function(_, npc, coll)
+    if npc.Type == mod.Monsters.SmallSack.ID and npc.Variant == mod.Monsters.SmallSack.Var then
+        if coll.Type == 1 then
+            return false
+        end
+    end
+end)
 
