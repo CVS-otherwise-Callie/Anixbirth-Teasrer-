@@ -17,6 +17,9 @@ function mod:SmallSackAI(npc, sprite, d)
             else
                 d.state = "idle"
             end
+        else
+            npc.HitPoints = npc.MaxHitPoints/2
+            npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_NONE
         end
         d.lev = 1
         d.stage = 1
@@ -46,6 +49,7 @@ function mod:SmallSackAI(npc, sprite, d)
         mod:spritePlay(sprite, "Idle" .. d.lev .. "Stage" .. d.stage)
     elseif d.state == "die" then
         mod:spritePlay(sprite, "Death" .. d.stage)
+        mod:MakeInvulnerable(npc)
     end
 
     if sprite:IsFinished("Death" .. d.stage) then
