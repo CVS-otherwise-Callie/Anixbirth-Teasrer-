@@ -17,39 +17,47 @@ function mod:WebMotherAI(npc, sprite, d)
             npc.SubType = 1
         end
 
-        d.randomtimer = 5
-        d.childrennumber = 0
+        d.comeback = false
+        d.randomtimer = math.random(100,200)
+        d.webletgroupsamount = 0
         d.children = {}
-        d.childrendata = {}
         d.init = true
         d.state = "idle"
     else
         npc.StateFrame = npc.StateFrame + 1
     end
 
-    for num, child in pairs(d.children) do
-        print(child:GetData().sign)
-    end
-
     if d.state == "idle" then
         mod:spritePlay(sprite,"Idle")
         if npc.StateFrame > d.randomtimer then
-            if math.random(1,5-d.childrennumber) == 1 and d.childrennumber > 0 then
-                d.childrennumber = 0
+
+            if math.random(1,5-d.webletgroupsamount) == 1 and d.webletgroupsamount > 0 then
+                d.state = "scream"
             else
-                for i = 1, 2 do
+                for i = 1, npc.SubType do
                     local weblet = Isaac.Spawn(mod.Monsters.Weblet.ID, mod.Monsters.Weblet.Var, mod.Monsters.Weblet.Sub, npc.Position, Vector.Zero, npc)
                     weblet.Parent = npc
-                    local webletdata = weblet:GetData()
-                    webletdata.sign = "I SAW THE SIGN"
                     table.insert(d.children, weblet)
-                    d.childrennumber = d.childrennumber+1
                 end
-
+                d.webletgroupsamount = d.webletgroupsamount+1
             end
-            d.randomtimer = 100000000
+            d.randomtimer = math.random(100,200)
             npc.StateFrame = 0
         end
+    end
+
+    if d.state == "scream" then
+        mod:spritePlay(sprite,"Scream")
+        if sprite:IsEventTriggered("Recall") then
+            d.comeback = true
+        end
+        if sprite:IsFinished() then
+            d.state = "waiting"
+        end
+    end
+
+    if d.state == "waiting" then
+        mod:spritePlay(sprite,"Idle")
     end
 
     if d.state == "dead" then
@@ -62,7 +70,6 @@ function mod:WebMotherAI(npc, sprite, d)
         npc.Velocity = Vector.Zero
         mod:spritePlay(sprite, "Death")
         if sprite:IsEventTriggered("Blood") then
-            --13 207 300 418!!!       316 for weblet
             game:SpawnParticles ( npc.Position, 7, 3, 4, Color.Default, 10, 0 )
             game:SpawnParticles ( npc.Position, 77, 1, 0, Color.Default, 10, 0 )
             game:SpawnParticles ( npc.Position, 5, 5, 5, Color.Default, 10, 0 )
