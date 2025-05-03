@@ -14,7 +14,7 @@ function mod:WebletAI(npc, sprite, d)
 
 
     if not d.init then
-        d.speed = 5
+        d.speed = 10
         d.init = true
         d.state = "chase"
     else
