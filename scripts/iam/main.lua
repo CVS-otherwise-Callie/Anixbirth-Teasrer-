@@ -214,7 +214,7 @@ function mod:ShowRoomText()
 			glitchedvar = nil
 		end
 
-		local y = Isaac.GetScreenHeight() / 3 - 104
+		local y = Isaac.GetScreenHeight() / 3 - 95
 
 		if not glitchedtext then
 			if text and #text ~= 0 then text = "- " .. text .. " -" end

@@ -32,6 +32,8 @@ function mod:StallCreepAI(npc, sprite, d)
 			npc:PlaySound(SoundEffect.SOUND_BLOODSHOOT,1,2,false,math.random(9,11)/10)
             for i = 1, 3 do
                 local projectile = Isaac.Spawn(9, 0, 0, npc.Position + Vector(-50 + (25*i), 0):Rotated(npc.SpriteRotation), Vector(0,8):Rotated(npc.SpriteRotation), npc):ToProjectile();
+				projectile.FallingAccel = -0.01
+				projectile.FallingSpeed = -0.01
             end
 		else
 			mod:spritePlay(sprite, "Attack")
