@@ -10,7 +10,7 @@ end)
 function mod:ClatterTellerTargetAI(ef, sprite, d)
 
     if not d.init then
-        ef.DepthOffset = -100
+        ef.SortingLayer = 0
         d.state = "chase"
 
         d.init = true

@@ -14,63 +14,166 @@ function mod:WebletAI(npc, sprite, d)
     local player = npc:GetPlayerTarget()
 
     if not d.init then
+
         d.speed = 10
         d.init = true
-        d.state = "chase"
+        d.emotion = "Excited"
+        d.randomtimer = math.random(25,50)
+        d.zvel = -2
+        if npc.Parent then
+            npc.EntityCollisionClass = 0
+            npc:ClearEntityFlags(EntityFlag.FLAG_APPEAR)
+
+            if npc.Parent.Type == 161 and npc.Parent.Variant == mod.Monsters.WebMother.Var then
+                npc.Position = Vector(npc.Parent.Position.X + math.random(-20,15), npc.Position.Y)
+                npc.DepthOffset = 1
+                npc.SpriteOffset = Vector(0,math.random(-10,10))
+            end
+            d.state = "escapingappear"
+        else
+            d.state = "chase"
+        end
     else
         npc.StateFrame = npc.StateFrame + 1
-    end
-
-    if d.state == "chase" then
-        d.emotion = "Excited"
-        d.playerpos = mod:confusePos(npc, player.Position,5 , nil, nil)
-        d.targetpos = mod:GetClosestMinisaacAttackPos(npc.Position, d.playerpos, 150, true, 60)
-
-        if npc.Position:Distance(d.playerpos) < 20 then
-            path:EvadeTarget(d.playerpos)
-        elseif npc.Position:Distance(d.targetpos) > 5 then
-            if room:CheckLine(npc.Position,d.targetpos,0,1,false,false) then
-                local targetvelocity = (d.targetpos - npc.Position):Resized(d.speed)
-                npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 0.1)
-            else
-                path:FindGridPath(d.targetpos, d.speed/7, 0, false)
-            end
-        else
-            if npc.Velocity:Length() < 0.01 then
-                npc.Velocity = npc.Velocity*0
-            else
-                npc.Velocity = npc.Velocity*0.75
-            end
-        end
-
     end
 
     if npc.StateFrame%3 == 0 then
         d.faceframe = npc.StateFrame%2
     end
 
-    if npc.Velocity:Length() > 1 then
-        if math.abs(npc.Velocity.X) > math.abs(npc.Velocity.Y) then
-            if npc.Velocity.X > 0 then
-                mod:spritePlay(sprite, "WalkRight")
-                sprite:SetOverlayFrame("HeadRight"..d.emotion,d.faceframe)
-            else
-                mod:spritePlay(sprite, "WalkLeft")
-                sprite:SetOverlayFrame("HeadLeft"..d.emotion,d.faceframe)
-            end
-        else
-            if npc.Velocity.Y > 0 then
-                mod:spritePlay(sprite, "WalkDown")
-                sprite:SetOverlayFrame("HeadDown"..d.emotion,d.faceframe)
-            else
-                mod:spritePlay(sprite, "WalkUp")
-                sprite:SetOverlayFrame("HeadUp"..d.emotion,d.faceframe)
-            end
+    if d.state == "escapingappear" then
+        mod:spritePlay(sprite, "HeadAppear")
+        if sprite:IsFinished() then
+            d.state = "escapingidle"
         end
-    else
-        sprite:SetFrame("WalkDown",0)
-        sprite:SetOverlayFrame("HeadDown"..d.emotion, d.faceframe)
     end
 
-end
+    if d.state == "escapingidle" then
+        sprite:SetFrame("HeadDown"..d.emotion, d.faceframe)
+        if npc.StateFrame > d.randomtimer then
+            if npc.Parent.Type == 161 and npc.Parent.Variant == mod.Monsters.WebMother.Var then
+                d.state = "escape"
+            end
+        end
+    end
 
+    if d.state == "escape" then
+        mod:spritePlay(sprite, "Escape")
+        if sprite:IsFinished() then
+            npc.Velocity = Vector(math.random(-5,5)/5,math.random(1,5)/5)
+            d.state = "chase"
+        end
+    end
+
+    if d.state == "chase" then
+        if npc.Parent and (npc.SpriteOffset.Y < 0 or d.zvel < 0) then
+            npc.SpriteOffset = npc.SpriteOffset + Vector(0,d.zvel)
+            d.zvel = d.zvel + 0.2
+        else
+            npc.EntityCollisionClass = 4
+            d.playerpos = mod:confusePos(npc, player.Position, 5, nil, nil)
+            d.targetpos = mod:GetClosestMinisaacAttackPos(npc.Position, player.Position, 150, true, 60)
+
+            if npc.Position:Distance(d.playerpos) < 20 then
+                path:EvadeTarget(d.playerpos)
+            elseif npc.Position:Distance(d.targetpos) > 5 then
+                if room:CheckLine(npc.Position,d.targetpos,0,1,false,false) then
+                    local targetvelocity = (d.targetpos - npc.Position):Resized(d.speed)
+                    npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 0.1)
+                else
+                    path:FindGridPath(d.targetpos, d.speed/7, 0, false)
+                end
+            else
+                if npc.Velocity:Length() < 0.01 then
+                    npc.Velocity = npc.Velocity*0
+                else
+                    npc.Velocity = npc.Velocity*0.75
+                end
+            end
+
+            if npc.Parent and not npc.Parent:IsDead() then
+                if npc.Parent:GetData().comeback == true then
+                    if math.random(10) == 1 then
+                        npc.StateFrame = 0
+                        d.randomtimer = math.random(25)
+                        d.state = "getbored"
+                    end
+                end
+            end
+        end
+
+    end
+
+    if d.state == "getbored" then
+        mod:spriteOverlayPlay(sprite, "SwitchToBored")
+        if sprite:IsOverlayFinished() then
+            d.emotion = "Bored"
+            if npc.StateFrame > d.randomtimer then
+                d.state = "return"
+            end
+        end
+        npc:MultiplyFriction(0.8)
+    end
+
+    if d.state == "return" then
+        if npc.Parent and not npc.Parent:IsDead() then
+            d.targetpos = npc.Parent.Position
+                if npc.Position:Distance(d.targetpos) > 5 then
+                    if room:CheckLine(npc.Position,d.targetpos,0,1,false,false) then
+                        local targetvelocity = (d.targetpos - npc.Position):Resized(d.speed)
+                        npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 0.1)
+                    else
+                        path:FindGridPath(d.targetpos, d.speed/7, 0, false)
+                    end
+                else
+                    if npc.Velocity:Length() < 0.01 then
+                        npc.Velocity = npc.Velocity*0
+                    else
+                        npc.Velocity = npc.Velocity*0.75
+                    end
+                end
+        else
+            d.emotion = "Excited"
+            d.state = "chase"
+        end
+    end
+
+    if d.state == "chase" or d.state == "return" then
+        --head
+        if npc.Velocity:Length() > 1 then
+            if math.abs(npc.Velocity.X) > math.abs(npc.Velocity.Y) then
+                if npc.Velocity.X > 0 then
+                    sprite:SetOverlayFrame("HeadRight"..d.emotion,d.faceframe)
+                else
+                    sprite:SetOverlayFrame("HeadLeft"..d.emotion,d.faceframe)
+                end
+            else
+                if npc.Velocity.Y > 0 then
+                    sprite:SetOverlayFrame("HeadDown"..d.emotion,d.faceframe)
+                else
+                    sprite:SetOverlayFrame("HeadUp"..d.emotion,d.faceframe)
+                end
+            end
+        else
+            sprite:SetOverlayFrame("HeadDown"..d.emotion, d.faceframe)
+        end
+        --body
+        if npc.Velocity:Length() > 1 then
+            if math.abs(npc.Velocity.X) > math.abs(npc.Velocity.Y) then
+                if npc.Velocity.X > 0 then
+                    mod:spritePlay(sprite, "WalkRight")
+                else
+                    mod:spritePlay(sprite, "WalkLeft")
+                end
+            else
+                if npc.Velocity.Y > 0 then
+                    mod:spritePlay(sprite, "WalkDown")
+                else
+                    mod:spritePlay(sprite, "WalkUp")
+                end
+            end
+        else
+            sprite:SetFrame("WalkDown",0)
+        end
+    end
+end
