@@ -25,12 +25,14 @@ function mod:WebletAI(npc, sprite, d)
         d.emotion = "Excited"
         d.player = npc:GetPlayerTarget()
         d.playerpos = d.player.Position
-        d.targetpos = mod:GetClosestMinisaacAttackPos(npc.Position, d.playerpos, 150)
+        d.targetpos = mod:GetClosestMinisaacAttackPos(npc.Position, d.playerpos, 150, true, 60)
 
-        if (d.targetpos- npc.Position):Length() > 5 then
+        if npc.Position:Distance(d.playerpos) < 20 then
+            path:EvadeTarget(d.playerpos)
+        elseif npc.Position:Distance(d.targetpos) > 5 then
             if room:CheckLine(npc.Position,d.targetpos,0,1,false,false) then
                 local targetvelocity = (d.targetpos - npc.Position):Resized(d.speed)
-                npc.Velocity = (npc.Velocity + (targetvelocity - npc.Velocity))
+                npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 0.1)
             else
                 path:FindGridPath(d.targetpos, d.speed/7, 0, false)
             end

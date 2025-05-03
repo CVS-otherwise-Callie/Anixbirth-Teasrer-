@@ -26,24 +26,38 @@ function mod:AnyPlayerHasTrinket(trinketType)
     return false
 end
 
-function mod:GetClosestMinisaacAttackPos(pos, targetpos, distfromtarget)
+function mod:GetClosestMinisaacAttackPos(pos, targetpos, distfromtarget, lineofsight, closelimit) --lineofsight is if you should be able to draw a line from winner to targetpos, closelimit is how small the value can be
+	local room = game:GetRoom()
 	local closest = Vector(9999999999999999, 9999999999999999) --just a absurdly big number
-
+	local winner = nil
 	local options = {
 		targetpos + Vector(distfromtarget,0),
 		targetpos - Vector(distfromtarget,0),
 		targetpos + Vector(0,distfromtarget),
 		targetpos - Vector(0,distfromtarget)
 	}
+
+	if lineofsight then
+
+		for i, option in pairs(options) do
+			_, options[i] = room:CheckLine(targetpos, option,0,1,false,false)
+		end
+
+	end
+
 	for i, option  in ipairs(options) do
 
-		if pos:Distance(option) < pos:Distance(closest) then
+		if pos:Distance(options[i]) < pos:Distance(closest) and targetpos:Distance(options[i]) > closelimit then
 			closest = option
 			winner = i
 		end
 	end
 
-	return options[winner]
+	if lineofsight then
+		return mod:Lerp(targetpos, options[winner], 0.90)
+	else
+		return options[winner]
+	end
 end
 
 function mod:AnyPlayerHasCollectible(coll)
