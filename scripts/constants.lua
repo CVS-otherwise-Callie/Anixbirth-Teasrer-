@@ -76,7 +76,8 @@ FHAC.Monsters = {
     WebbedCreep = mod:ENT("Webbed Creep"),
     Weblet = mod:ENT("Weblet"),
     WebMother = mod:ENT("Web Mother"),
-    StumblingNest = mod:ENT("Stumbling Nest")
+    StumblingNest = mod:ENT("Stumbling Nest"),
+    SmallSack = mod:ENT("Small Nest")
 }
 
 FHAC.MiniBosses = {

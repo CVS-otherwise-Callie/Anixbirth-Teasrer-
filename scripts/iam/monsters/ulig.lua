@@ -11,7 +11,7 @@ end, mod.Monsters.Ulig.ID)
 local function GetFliesWithSameDataUlig(npc)
     local tab = {}
     for k, fly in ipairs(Isaac.FindByType(EntityType.ENTITY_DART_FLY)) do
-        if (fly:GetData().InitSeed == npc:GetData().InitSeed or fly:GetData().InitSeed == "TWW8XoULQRk") and fly.Position:Distance(npc.Position) > 0 then
+        if not fly:IsDead() and fly:Exists() and (fly:GetData().InitSeed == npc:GetData().InitSeed or fly:GetData().InitSeed == "TWW8XoULQRk") and fly.Position:Distance(npc.Position) > 0 then
             table.insert(tab, fly)
         end
     end
@@ -155,7 +155,7 @@ function mod:UligAI(npc, sprite, d)
         npc.StateFrame = 0
     end
 
-    if sprite:IsEventTriggered("Shoot") then
+    if sprite:IsEventTriggered("Shoot") or (sprite:IsPlaying("SpawnEntityStand") and sprite:GetFrame()  == 10) then
         local flynum = 1
         local seed
         if sprite:IsPlaying("SpawnEntity") then

@@ -13,6 +13,10 @@ function mod:WebMotherAI(npc, sprite, d)
     if not d.init then
         npc:AddEntityFlags(EntityFlag.FLAG_NO_KNOCKBACK | EntityFlag.FLAG_NO_PHYSICS_KNOCKBACK)
 
+        if npc.SubType == 0 then
+            npc.SubType = 1
+        end
+
         d.randomtimer = 5
         d.childrennumber = 0
         d.children = {}
@@ -31,7 +35,6 @@ function mod:WebMotherAI(npc, sprite, d)
         mod:spritePlay(sprite,"Idle")
         if npc.StateFrame > d.randomtimer then
             if math.random(1,5-d.childrennumber) == 1 and d.childrennumber > 0 then
-                print("cmere")
                 d.childrennumber = 0
             else
                 for i = 1, 2 do
