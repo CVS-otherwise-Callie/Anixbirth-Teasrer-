@@ -1,5 +1,5 @@
 <AnimatedActor>
-	<Info CreatedBy="Iam" CreatedOn="5/3/2025 3:18:40 PM" Version="113" Fps="30"/>
+	<Info CreatedBy="Iam" CreatedOn="5/3/2025 4:24:28 PM" Version="114" Fps="30"/>
 	<Content>
 		<Spritesheets>
 			<Spritesheet Path="webbedcreepshot.png" Id="0"/>

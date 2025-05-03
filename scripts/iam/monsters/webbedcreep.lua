@@ -44,7 +44,11 @@ end
 function mod.webbedCreepProj(v, d)
     if d.isWebbedCreep then
 
+        local sprite = v:GetSprite()
+
         if not d.init then
+            sprite:Load("gfx/projectiles/webbedcreepshot.anm2", true)
+            sprite:Update()
             if math.abs(v.Velocity.X) > math.abs(v.Velocity.Y) then
                 d.isX = true
             else
@@ -59,13 +63,8 @@ function mod.webbedCreepProj(v, d)
             v.Velocity = mod:Lerp(v.Velocity, Vector(0, (d.targ.Position - v.Position):Resized(10).Y), 0.1)
         end
 
-        local sprite = v:GetSprite()
 
-        sprite:Load("gfx/projectiles/webbedcreepshot.anm2", true)
-        sprite:LoadGraphics()
-        sprite:Update()
-
-        sprite:Play(sprite:GetDefaultAnimationName(), true)
+        mod:spritePlay(sprite, sprite:GetDefaultAnimation())
 
         if v.Height > -2 then
             local nutsack = Isaac.Spawn(mod.Monsters.SmallSack.ID, mod.Monsters.SmallSack.Var, 1, v.Position, v.Velocity, v)

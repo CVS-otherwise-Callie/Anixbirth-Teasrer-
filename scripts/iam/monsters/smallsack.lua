@@ -26,14 +26,16 @@ function mod:SmallSackAI(npc, sprite, d)
         npc.StateFrame = npc.StateFrame + 1
     end
 
+    npc:MultiplyFriction(0)
+
     if d.state == "appear" then
         mod:spritePlay(sprite, "SackAppear")
     elseif d.state == "idle" then
         mod:spritePlay(sprite, "Idle" .. d.lev .. "Stage" .. d.stage)
     elseif d.state == "wait" then
-        if npc.StateFrame > 260 then
+        if npc.StateFrame > 200 then
             d.state = "die"
-        elseif npc.StateFrame > 240 then
+        elseif npc.StateFrame > 180 then
             d.lev = 4
         elseif npc.StateFrame > 120 then
             d.lev = 3
