@@ -220,6 +220,7 @@ Use 2, 4, or 6 normally.
 			<entity Name="Stall Creep" />
 			<entity Name="Webbed Creep" />
 			<entity Name="Web Mother" />
+			<entity Name="Weblet" />
 			<entity Name="Small Nest" />
 		</group>
   	</group>
