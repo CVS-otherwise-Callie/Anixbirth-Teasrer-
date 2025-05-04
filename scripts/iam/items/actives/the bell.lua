@@ -6,4 +6,4 @@ function FHAC:RingingOfTheBell(player)
         player:RemoveCollectible(CollectibleType.COLLECTIBLE_ASTRAL_PROJECTION, 0, false, nil)
 end
 
-mod:AddCallback(ModCallbacks.MC_USE_ITEM, mod.RingingOfTheBell, mod.Collectibles.Items.TheBell)
+FHAC:AddCallback(ModCallbacks.MC_USE_ITEM, FHAC.RingingOfTheBell, FHAC.Collectibles.Items.TheBell)
