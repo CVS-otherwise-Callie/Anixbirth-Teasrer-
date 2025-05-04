@@ -31,6 +31,7 @@ function mod:WebletAI(npc, sprite, d)
             end
             d.state = "escapingappear"
         else
+            npc.HitPoints = 6
             d.state = "chase"
         end
     else
@@ -66,13 +67,15 @@ function mod:WebletAI(npc, sprite, d)
     end
 
     if d.state == "chase" then
-        if npc.Parent and (npc.SpriteOffset.Y < 0 or d.zvel < 0) then
+        if npc.SpriteOffset.Y < 0 or d.zvel < 0 then
             npc.SpriteOffset = npc.SpriteOffset + Vector(0,d.zvel)
             d.zvel = d.zvel + 0.2
         else
             npc.EntityCollisionClass = 4
             d.playerpos = mod:confusePos(npc, player.Position, 5, nil, nil)
-            d.targetpos = mod:GetClosestMinisaacAttackPos(npc.Position, player.Position, 150, true, 60)
+            if player.Position then
+                d.targetpos = mod:GetClosestMinisaacAttackPos(npc.Position, player.Position, 150, true, 60)
+            end
 
             if npc.Position:Distance(d.playerpos) < 20 then
                 path:EvadeTarget(d.playerpos)
@@ -109,6 +112,7 @@ function mod:WebletAI(npc, sprite, d)
         if sprite:IsOverlayFinished() then
             d.emotion = "Bored"
             if npc.StateFrame > d.randomtimer then
+                d.speed = 3
                 d.state = "return"
             end
         end
@@ -135,6 +139,14 @@ function mod:WebletAI(npc, sprite, d)
         else
             d.emotion = "Excited"
             d.state = "chase"
+        end
+    end
+
+    if d.state == "disappear" then
+        sprite:RemoveOverlay()
+        mod:spritePlay(sprite, "Disappear")
+        if sprite:IsFinished() then
+            npc:Remove()
         end
     end
 
@@ -177,3 +189,14 @@ function mod:WebletAI(npc, sprite, d)
         end
     end
 end
+
+mod:AddCallback(ModCallbacks.MC_PRE_NPC_COLLISION, function(_, npc, collider, low)
+    if npc.Type == mod.Monsters.Weblet.ID and npc.Variant == mod.Monsters.Weblet.Var and npc:GetData().state == "return" then
+        if collider.InitSeed == npc.Parent.InitSeed then
+            npc.Velocity = Vector.Zero
+            npc.EntityCollisionClass = 0
+            npc.Position = mod:Lerp(npc.Position, npc.Parent.Position, 0.4)
+            npc:GetData().state = "disappear"
+        end
+    end
+end, 161)

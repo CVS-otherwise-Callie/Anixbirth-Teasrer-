@@ -18,7 +18,7 @@ function mod:WebMotherAI(npc, sprite, d)
         end
 
         d.comeback = false
-        d.randomtimer = math.random(100,200)
+        d.randomtimer = math.random(50,100)
         d.webletgroupsamount = 0
         d.children = {}
         d.init = true
@@ -49,6 +49,7 @@ function mod:WebMotherAI(npc, sprite, d)
     if d.state == "scream" then
         mod:spritePlay(sprite,"Scream")
         if sprite:IsEventTriggered("Recall") then
+            npc:PlaySound(SoundEffect.SOUND_MONSTER_YELL_B, 1, 2, false, 1)
             d.comeback = true
         end
         if sprite:IsFinished() then
@@ -57,7 +58,23 @@ function mod:WebMotherAI(npc, sprite, d)
     end
 
     if d.state == "waiting" then
+        local canrestart = true
         mod:spritePlay(sprite,"Idle")
+        if #(d.children) > 0 then
+            for i = 1, #(d.children) do
+                if not d.children[i]:IsDead() and d.children[i]:Exists() then
+                    canrestart = false
+                end
+            end
+        end
+        if canrestart then
+            npc.StateFrame = 0
+            d.randomtimer = math.random(75,100)
+            d.webletgroupsamount = 0
+            d.children = {}
+            d.comeback = false
+            d.state = "idle"
+        end
     end
 
     if d.state == "dead" then
