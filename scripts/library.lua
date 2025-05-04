@@ -40,7 +40,7 @@ function mod:GetClosestMinisaacAttackPos(pos, targetpos, distfromtarget, lineofs
 	if lineofsight then
 
 		for i, option in pairs(options) do
-			_, options[i] = room:CheckLine(targetpos, option,0,1,false,false)
+			_, options[i] = room:CheckLine(targetpos, option,3,1,false,false)
 		end
 
 	end
