@@ -7,8 +7,9 @@
 
     <!--Actives are 100+-->
     <active id="100" name="Joke Book" gfx="100_joke_book.png" description="Xocolate's finest" quality="1" maxcharges="2" cache="firedelay" />
-    <active id="101" name="The Hamer" gfx="101_hamer.png" description="It hamers" quality="2" />
+    <!--active id="101" name="The Hamer" gfx="101_hamer.png" description="It hamers" quality="2" /-->
     <active id="102" name="Straw Doll" gfx="102_voodoo_doll.png" description="Give them your suffering" quality="3" maxcharges="4" cache="damage nogreed offensive"/>
+    <active id="103" name="The Bell" gfx="103_thebell.png" description="It commands you" quality="1" />
 
     <!--Trinkets-->
     <trinket name="Mystery Milk" description="From a trash farm near you" gfx="1_mystery_milk.png" />
