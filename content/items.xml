@@ -1,13 +1,13 @@
 <items gfxroot="gfx/items/" version="1">
     <passive id="1" name="Stinky Mushroom" gfx="Stinky_Mushroom.png" description="It smells revolting!" quality="3" cache="damage offensive" />
     <passive id="2" name="Big Ol' Bowl of Sauerkraut" gfx="2_bigolbowlofsauerkraut.png" description="Every day for breakfast..." quality="2" cache="offensive" />
-    <!--passive id="3" name="Empty Death Certificate" gfx="3_empty_death_Certificate.png" description="Every itme is every item" quality="4" cache="offensive" /-->
+    <passive id="3" name="Empty Death Certificate" gfx="3_empty_death_Certificate.png" description="Every itme is every item" quality="4" cache="offensive" />
     <passive id="4" name="Stinky Socks" gfx="3_stinkysocks.png" description="Stinks like heaven" quality="2" cache="speed" />
     <passive id="5" name="Moldy Bread" gfx="4_moldybread.png" description="Still edible" quality="2"/>
 
     <!--Actives are 100+-->
     <active id="100" name="Joke Book" gfx="100_joke_book.png" description="Xocolate's finest" quality="1" maxcharges="2" cache="firedelay" />
-    <!--active id="101" name="The Hamer" gfx="101_hamer.png" description="It hamers" quality="2" /-->
+    <active id="101" name="The Hamer" gfx="101_hamer.png" description="It hamers" quality="2" />
     <active id="102" name="Straw Doll" gfx="102_voodoo_doll.png" description="Give them your suffering" quality="3" maxcharges="4" cache="damage nogreed offensive"/>
     <active id="103" name="The Bell" gfx="103_thebell.png" description="It commands you" quality="1" />
 
