@@ -1,6 +1,237 @@
 FHAC.Fortunes = 
 [=================[
 
+i think i broke
+the energy again
+
+bro he's finally
+out of town...?
+
+BOOORRA bora bora
+bora bora boorraa
+
+that autistic shit
+eating monkey
+
+ahh, auction day
+these are the upmost
+grand of days!
+
+hello there
+today we will be
+looking for a bathroom
+
+d!edith is totally unbalanced
+
+d!edith is 100% balanced
+
+d!edith was never balanced
+
+d!edith's balances are
+in the patch notes dum dum
+
+d!edith deserves some balances
+
+d!edith will never be balanced
+
+why are we talking
+about d!edith
+
+did you know?
+haha you didnt
+
+i am!
+peeeerpetual!
+
+happiness is a sin
+repent isaac
+
+why does fiend
+folio look so
+fiendy?? huh?
+
+that really grinded
+my gears super hard
+
+haha, imagine if
+your jacket had
+a potato inside
+
+peatos stop making
+cum jokes pretty please
+
+goofygoobers in the
+goofygoober factory
+
+goobers and goobers
+it never really ends
+
+goobers and floovers-
+wait what? a floover?
+
+one fortunes in anixbirth
+equals a thousand in fiend folio
+
+these formats are
+all! so! terrible!
+
+waiter, there's a fiend
+in my soup! get me another
+
+waiter, there's some hope
+in my soup! get me another
+
+waiter, there's a child
+in my soup! get me another
+
+waiter, you're in my soup!
+i dont need you to 
+get me another...
+
+Use Control + Shift + m to 
+toggle the tab key moving focus. 
+
+Alternatively, use esc then tab 
+to move to the next 
+interactive element on the page.
+
+bob dylan was so ugly
+
+hello? the sign says
+everyone is welcome here
+
+hello? is anybody home?
+
+now i can ransack this
+place all to myself
+
+i love being a orphan
+24/7 jerkoff with no
+one to stop me!
+
+i guess isaac is
+a orphan
+
+what is the implication
+of killing it lives?
+
+it lives?
+nahhhh more like
+it dies
+
+emoticons shouldnt be
+in any fortunes
+
+i said with full certainty
+
+XDDDD
+;-; :p
+<o-o>
+
+ok stop the
+emoticons from
+going in!
+
+stupid fortunes always
+obstructing my view
+
+why is miku in
+fortnite?????
+
+why ISNT miku
+in fortnite?
+
+when will they add
+john sorrow to isaac
+
+john sorrow?
+never heard of him
+
+you will soon meet
+john borrow
+
+you will soon meet
+john coreow
+
+you will soon meet
+the conning squad
+
+conboi! stop it
+with all the conning!
+
+can't i be
+a ff dev?
+
+why shouldnt isaac
+be mining blocks
+and shit anyway?
+
+gummy worms are CIA agents.
+
+don't trust gummy worms
+
+i have a riddle for you:
+awww you were too late
+
+i don't wanna go to
+the gym! i have code
+to write!
+
+i don't want to
+write code! i have
+to go to the gym!
+
+you should always 
+have a healthy balance
+of going to the gym
+
+warawarawarawarawarawarawara
+
+why is the japanese "lol"
+just the grass symbol??
+
+i am so confused by anime lovers
+
+i understand all anime lovers
+
+how could you be
+with the anime club?
+
+you turned your back
+on ym sandwich shop
+now you must pay
+
+get in the bag!!
+
+tainted cain gameplay:
+get in the bag!!
+
+tainted maggy gameplay:
+get out of the bag!
+
+chat, are we going
+to delirium today?
+
+the bell, the bell
+oh how i hate the bell
+
+i am improving my leg
+muscles so i can get
+out of here faster
+
+what about the clay
+creatures, do they
+just die?
+
+awful. its going
+to be awful.
+
+today's item is going
+to be super special!
+
+this run is lame!
+hooollllld r!!
+
 Curse of Where 
 The Fuck is my Map
 
