@@ -90,22 +90,26 @@ function mod:SackKidAI(npc, sprite, d)
         npc.StateFrame = 10
     end
 
+    if d.shouldShortHop then
+        targpos = mod:freeGrid(player, true, 100, 0, 0)
+    else
+        targpos = playerpos
+    end
+
     if d.icanMove then
-        local targpos = d.targetpos
-        if d.shouldShortHop then
-            targpos = mod:freeGrid(player, true, 100, 0, 0)
-        end
         if mod:isScare(npc) then
-            local targetvelocity = (targpos - npc.Position):Resized(-7)
-            npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 0.6)
+            npc.Velocity = mod:Lerp(npc.Velocity, d.targetvelocity, 0.6)
         elseif room:CheckLine(npc.Position,targpos,0,1,false,false) then
-            local targetvelocity = (targpos - npc.Position):Resized(7)
-            npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 0.6)
+            npc.Velocity = mod:Lerp(npc.Velocity, d.targetvelocity, 0.6)
         else
             path:FindGridPath(playerpos, 1.3, 1, true)
         end
     else
-        d.targetpos = playerpos
+        if mod:isScare(npc) then
+            d.targetvelocity = (targpos - npc.Position):Resized(-7)
+        elseif room:CheckLine(npc.Position,targpos,0,1,false,false) then
+            d.targetvelocity = (targpos - npc.Position):Resized(7)
+        end
         npc:MultiplyFriction(0.8)
     end
 
