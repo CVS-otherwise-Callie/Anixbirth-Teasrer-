@@ -19,7 +19,12 @@ function mod:WebletAI(npc, sprite, d)
         d.init = true
         d.emotion = "Excited"
         d.randomtimer = math.random(25,50)
-        d.zvel = -2
+        if npc.Parent then
+            d.zvel = -2
+        else
+            d.zvel = 0
+        end
+
         if npc.Parent then
             npc.EntityCollisionClass = 0
             npc:ClearEntityFlags(EntityFlag.FLAG_APPEAR)
