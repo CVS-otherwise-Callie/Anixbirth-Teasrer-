@@ -79,7 +79,17 @@ function mod:WebletAI(npc, sprite, d)
             npc.EntityCollisionClass = 4
             d.playerpos = mod:confusePos(npc, player.Position, 5, nil, nil)
             if player.Position then
-                d.targetpos = mod:GetClosestMinisaacAttackPos(npc.Position, player.Position, 150, true, 60)
+                if mod:GetClosestMinisaacAttackPos(npc.Position, player.Position, 150, true, 75) then
+                    d.targetpos = mod:GetClosestMinisaacAttackPos(npc.Position, player.Position, 150, true, 75)
+                else
+                    d.targetpos = npc.Position
+                end
+                local _, direction = mod:GetClosestMinisaacAttackPos(npc.Position, player.Position, 150, true, 75)
+                if direction == nil then
+                    d.direction = "Down"
+                else
+                    d.direction = direction
+                end
             end
 
             if npc.Position:Distance(d.playerpos) < 20 then

@@ -37,6 +37,13 @@ function mod:GetClosestMinisaacAttackPos(pos, targetpos, distfromtarget, lineofs
 		targetpos - Vector(0,distfromtarget)
 	}
 
+	local directions = {
+		"Left",
+		"Right",
+		"Up",
+		"Down"
+	}
+
 	if lineofsight then
 
 		for i, option in pairs(options) do
@@ -53,10 +60,13 @@ function mod:GetClosestMinisaacAttackPos(pos, targetpos, distfromtarget, lineofs
 		end
 	end
 
+	if not winner then
+		return nil, nil
+	end
 	if lineofsight then
-		return mod:Lerp(targetpos, options[winner], 0.90)
+		return mod:Lerp(targetpos, options[winner], 0.90), directions[winner]
 	else
-		return options[winner]
+		return options[winner], directions[winner]
 	end
 end
 
