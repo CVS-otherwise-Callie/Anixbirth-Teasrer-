@@ -27,7 +27,7 @@ function mod:OneheadAI(npc, sprite, d)
 
     local params = ProjectileParams()
     params.FallingAccelModifier = 0.4
-    params.Scale = 1
+    params.Scale = 0.3
     params.HeightModifier = 10
 
     if d.state == "shake" then

@@ -70,6 +70,19 @@ function mod:GetClosestMinisaacAttackPos(pos, targetpos, distfromtarget, lineofs
 	end
 end
 
+function mod:convertWordDirectionToVector(direction)
+	direction = string.lower(direction)
+	if direction == "up" then
+		return Vector(0,-1)
+	elseif direction == "down" then
+		return Vector(0,1)
+	elseif direction == "left" then
+		return Vector(-1,0)
+	elseif direction == "right" then
+		return Vector(1,0)
+	end
+end
+
 function mod:AnyPlayerHasCollectible(coll)
 	for i = 1, game:GetNumPlayers() do
         if game:GetPlayer(i):ToPlayer():HasCollectible(coll) then
@@ -211,6 +224,59 @@ function mod:freeGrid(npc, path, far, close, closest) -- the npc, should it be a
 	if closest and closestgridpoint then return closestgridpoint end
 	if #tab <= 0 then
 		return npc.Position
+	end
+	return tab[math.random(1, #tab)]
+end
+
+function mod:freeGridToPos(pos, path, far, close, closest) -- the npc, should it be able to pathfind there, max dist from gridpoint, min dist from gridpoint, should it just find the closest avaible space
+	local room = game:GetRoom()
+	path = path or false
+	far = far or 300
+	close = close or 250
+	closest = closest or false
+
+	local closestgridpoint
+
+	local imtheclosest = 9999999999999999538762658202121142272 --just a absurdly big number
+	local tab = {}
+	if path then
+		for i = 0, room:GetGridSize() do
+			if room:GetGridPosition(i) ~= nil then
+			local gridpoint = room:GetGridPosition(i)
+			if gridpoint and gridpoint:Distance(pos) < far and gridpoint:Distance(pos) > close and room:GetGridEntity(i) == nil and 
+			room:IsPositionInRoom(gridpoint, 0) and patherReal(npc, gridpoint) then
+				if closest then
+					if gridpoint:Distance(pos) < imtheclosest then
+						imtheclosest = gridpoint:Distance(pos)
+						closestgridpoint = gridpoint
+					end
+				else
+					table.insert(tab, gridpoint)
+				end
+				end
+			end
+		end
+	else
+		for i = 0, room:GetGridSize() do
+			if room:GetGridPosition(i) ~= nil then
+				local gridpoint = room:GetGridPosition(i)
+				if gridpoint and gridpoint:Distance(pos) < far and gridpoint:Distance(pos) > close 
+				and (room:GetGridEntity(i) == nil or room:GetGridEntity(i) == true) and room and room:IsPositionInRoom(gridpoint, 0) then
+					if closest then
+						if gridpoint:Distance(pos) < imtheclosest then
+							imtheclosest = gridpoint:Distance(pos)
+							closestgridpoint = gridpoint
+						end
+					else
+						table.insert(tab, gridpoint)
+					end
+				end
+			end
+		end
+	end
+	if closest and closestgridpoint then return closestgridpoint end
+	if #tab <= 0 then
+		return pos
 	end
 	return tab[math.random(1, #tab)]
 end

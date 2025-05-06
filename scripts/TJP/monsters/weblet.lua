@@ -12,6 +12,12 @@ function mod:WebletAI(npc, sprite, d)
     local path = npc.Pathfinder
     local room = game:GetRoom()
     local player = npc:GetPlayerTarget()
+    local params = ProjectileParams()
+    params.HeightModifier = 10
+    params.Scale = 0.3
+    params.FallingSpeedModifier = -0.1
+    params.FallingAccelModifier = 0
+
 
     if not d.init then
 
@@ -19,6 +25,8 @@ function mod:WebletAI(npc, sprite, d)
         d.init = true
         d.emotion = "Excited"
         d.randomtimer = math.random(25,50)
+        d.shootcooldown = 0
+        d.holdshoot = 10
         if npc.Parent then
             d.zvel = -2
         else
@@ -41,6 +49,7 @@ function mod:WebletAI(npc, sprite, d)
         end
     else
         npc.StateFrame = npc.StateFrame + 1
+        d.shootcooldown = d.shootcooldown - 1
     end
 
     if npc.StateFrame%3 == 0 then
@@ -48,6 +57,9 @@ function mod:WebletAI(npc, sprite, d)
     end
 
     if d.state == "escapingappear" then
+        if npc.Parent:GetData().state == "dead" then
+            npc:Kill()
+        end
         mod:spritePlay(sprite, "HeadAppear")
         if sprite:IsFinished() then
             d.state = "escapingidle"
@@ -55,6 +67,9 @@ function mod:WebletAI(npc, sprite, d)
     end
 
     if d.state == "escapingidle" then
+        if npc.Parent:GetData().state == "dead" then
+            npc:Kill()
+        end
         sprite:SetFrame("HeadDown"..d.emotion, d.faceframe)
         if npc.StateFrame > d.randomtimer then
             if npc.Parent.Type == 161 and npc.Parent.Variant == mod.Monsters.WebMother.Var then
@@ -64,12 +79,16 @@ function mod:WebletAI(npc, sprite, d)
     end
 
     if d.state == "escape" then
+        if npc.Parent:GetData().state == "dead" then
+            npc:Kill()
+        end
         mod:spritePlay(sprite, "Escape")
         if sprite:IsFinished() then
             npc.Velocity = Vector(math.random(-5,5)/5,math.random(1,5)/5)
             d.state = "chase"
         end
     end
+
 
     if d.state == "chase" then
         if npc.SpriteOffset.Y < 0 or d.zvel < 0 then
@@ -80,9 +99,11 @@ function mod:WebletAI(npc, sprite, d)
             d.playerpos = mod:confusePos(npc, player.Position, 5, nil, nil)
             if player.Position then
                 if mod:GetClosestMinisaacAttackPos(npc.Position, player.Position, 150, true, 75) then
+                    d.speed = 10
                     d.targetpos = mod:GetClosestMinisaacAttackPos(npc.Position, player.Position, 150, true, 75)
                 else
-                    d.targetpos = npc.Position
+                    d.speed = 7
+                    d.targetpos = player.Position
                 end
                 local _, direction = mod:GetClosestMinisaacAttackPos(npc.Position, player.Position, 150, true, 75)
                 if direction == nil then
@@ -109,7 +130,7 @@ function mod:WebletAI(npc, sprite, d)
                 end
             end
 
-            if npc.Parent and not npc.Parent:IsDead() then
+            if npc.Parent and not npc.Parent:GetData().state == "dead" then
                 if npc.Parent:GetData().comeback == true then
                     if math.random(10) == 1 then
                         npc.StateFrame = 0
@@ -135,7 +156,7 @@ function mod:WebletAI(npc, sprite, d)
     end
 
     if d.state == "return" then
-        if npc.Parent and not npc.Parent:IsDead() then
+        if npc.Parent and not npc.Parent:GetData().state == "dead" then
             d.targetpos = npc.Parent.Position
                 if npc.Position:Distance(d.targetpos) > 5 then
                     if room:CheckLine(npc.Position,d.targetpos,0,1,false,false) then
@@ -202,6 +223,36 @@ function mod:WebletAI(npc, sprite, d)
         else
             sprite:SetFrame("WalkDown",0)
         end
+
+        --shooting
+        if d.targetpos then
+            if npc.Position:Distance(d.targetpos) < 30 then
+                sprite:SetOverlayFrame("Head"..d.direction..d.emotion,d.faceframe)
+            end
+
+            if mod:canshoot(npc.Position, d.targetpos, d.shootcooldown) and d.holdshoot > 0 then
+                if not d.hasshot then
+                    d.hasshot = true
+                    npc:FireProjectiles(npc.Position, mod:convertWordDirectionToVector(d.direction):Resized(5), 0, params)
+                end
+                sprite:SetOverlayFrame("Head"..d.direction..d.emotion,2)
+                d.holdshoot = d.holdshoot - 1
+            else
+                d.holdshoot = 10
+                d.hasshot = false
+            end
+            if d.holdshoot <= 0 and d.shootcooldown <= 0 then
+                d.shootcooldown = math.random(100,150)
+            end
+        end
+    end
+end
+
+function mod:canshoot(position, targetposition, cooldown)
+    if position:Distance(targetposition) < 30 and cooldown <= 0 then
+        return true
+    else
+        return false
     end
 end
 
