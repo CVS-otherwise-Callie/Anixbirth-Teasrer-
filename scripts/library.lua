@@ -16,6 +16,18 @@ function mod:getMinSec(totalSeconds)
     return minutes, seconds
 end
 
+function mod:GetPlayerCollectibles(player)
+	local tab = {}
+	for i = 1, CollectibleType.NUM_COLLECTIBLES do
+		if player:HasCollectible(i, true) then
+			for j = 1, player:GetCollectibleNum(i, false) do
+				table.insert(tab, i)
+			end
+		end
+	end
+	return tab
+end
+
 function mod:AnyPlayerHasTrinket(trinketType)
 	for i = 1, game:GetNumPlayers() do
         if game:GetPlayer(i):ToPlayer():HasTrinket(trinketType) then

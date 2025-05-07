@@ -3,7 +3,7 @@ local game = Game()
 local rng = RNG()
 
 mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
-    if npc.Variant == mod.Monsters.Onehead.Var then
+    if npc.Variant == mod.Monsters.Onehead.Var and npc.SubType == 1 then
         mod:OneheadAI(npc, npc:GetSprite(), npc:GetData())
 	end
 end, mod.Monsters.Onehead.ID)

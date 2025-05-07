@@ -1,6 +1,8 @@
 local mod = FHAC
 local game = Game()
 
+--[[
+
 --thanks fiend folio for allowing me to save my sanituy :D
 local perthrod = perthrod or false
 local actived = actived or false
@@ -146,3 +148,4 @@ mod:AddCallback(ModCallbacks.MC_POST_UPDATE, function()
         end
     end
   end)
+]]

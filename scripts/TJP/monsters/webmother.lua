@@ -14,7 +14,7 @@ function mod:WebMotherAI(npc, sprite, d)
         npc:AddEntityFlags(EntityFlag.FLAG_NO_KNOCKBACK | EntityFlag.FLAG_NO_PHYSICS_KNOCKBACK)
 
         if npc.SubType == 0 then
-            npc.SubType = 1
+            npc.SubType = math.random(1, 3)
         end
 
         d.comeback = false

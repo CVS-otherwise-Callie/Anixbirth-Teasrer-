@@ -2,7 +2,7 @@ local mod = FHAC
 local game = Game()
 local ms = MusicManager()
 
-mod.AddItemCallback(function(p, added)
+--[[mod.AddItemCallback(function(p, added)
 	local player = p
 	if player:GetPlayerType() == PlayerType.PLAYER_THESOUL_B then
 		if player:GetOtherTwin() ~= nil then
@@ -15,4 +15,4 @@ mod.AddItemCallback(function(p, added)
 	local redHearts = player:GetHearts()
 	player:AddHearts(-redHearts)
 	player:AddRottenHearts(redHearts)
-end, nil, mod.Collectibles.Items.MoldyBread)
+end, nil, mod.Collectibles.Items.MoldyBread)]]

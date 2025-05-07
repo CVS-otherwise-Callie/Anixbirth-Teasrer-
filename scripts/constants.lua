@@ -140,8 +140,8 @@ FHAC.Collectibles = {
         MarketablePlushie = Isaac.GetItemIdByName("Marketable Plushie"),
         StinkySocks = Isaac.GetItemIdByName("Stinky Socks"),
         MoldyBread = Isaac.GetItemIdByName("Moldy Bread"),
-	TheHamer = Isaac.GetItemIdByName("The Hamer"),
-	TheBell = Isaac.GetItemIdByName("The Bell"),
+	    CorruptedFile = Isaac.GetItemIdByName("Corrupted File"),
+	    TheBell = Isaac.GetItemIdByName("The Bell"),
     },
     PickupsEnt = {
         BowlOfSauerkraut = mod:ENT("Bowl of Sauerkraut"),

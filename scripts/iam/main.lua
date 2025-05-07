@@ -78,8 +78,7 @@ FHAC:LoadScripts("scripts.iam.familiars", {
 FHAC:LoadScripts("scripts.iam.items.actives", {
 	"joke book",
 	"straw doll",
-	"hamer",
-	"the bell",
+	"corrupted file"
 })
 
 FHAC:LoadScripts("scripts.iam.items.trinkets", {
@@ -356,3 +355,12 @@ function mod:GlobalCVSEntityStuff(npc, sprite, d)
 	end
 
 end
+
+--thx catinsurance
+
+mod:AddCallback(ModCallbacks.MC_PRE_ENTITY_SPAWN, function (_, entType, var, sub, pos, vel, spawner, seed)
+    local enemy = EntityConfig.GetEntity(entType, var)
+    if not enemy then
+        --return {EntityType.ENTITY_EFFECT, EffectVariant.POOF01, 0, seed} -- replace with whatever entity
+    end
+end)

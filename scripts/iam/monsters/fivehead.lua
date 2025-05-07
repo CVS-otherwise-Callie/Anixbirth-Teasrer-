@@ -3,7 +3,7 @@ local game = Game()
 local rng = RNG()
 
 mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
-    if npc.Variant == mod.Monsters.Fivehead.Var then
+    if npc.Variant == mod.Monsters.Fivehead.Var and npc.SubType == 0 then
         mod:FiveheadAI(npc, npc:GetSprite(), npc:GetData())
 	end
 end, mod.Monsters.Fivehead.ID)
