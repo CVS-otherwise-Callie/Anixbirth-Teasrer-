@@ -26,7 +26,8 @@ function mod:StumblingNestAI(npc, sprite, d)
 
 
     if d.state == "idle" then
-        npc.Velocity = npc.Velocity:Resized(5)
+        d.targetvelocity = npc.Velocity:Resized(2)
+        npc.Velocity = mod:Lerp(npc.Velocity, d.targetvelocity, 0.1)
         mod:spritePlay(sprite, "Walk"..mod:ConvertVectorToWordDirection(npc.Velocity, 1, 1))
         if d.webletcooldown <= 0 then
             d.weblet = Isaac.Spawn(mod.Monsters.Weblet.ID, mod.Monsters.Weblet.Var, mod.Monsters.Weblet.Sub, npc.Position, Vector.Zero, npc)
