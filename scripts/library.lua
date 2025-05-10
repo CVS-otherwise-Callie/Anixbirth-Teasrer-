@@ -82,7 +82,7 @@ function mod:GetClosestMinisaacAttackPos(pos, targetpos, distfromtarget, lineofs
 	end
 end
 
-function mod:convertWordDirectionToVector(direction)
+function mod:ConvertWordDirectionToVector(direction)
 	direction = string.lower(direction)
 	if direction == "up" then
 		return Vector(0,-1)
@@ -92,6 +92,22 @@ function mod:convertWordDirectionToVector(direction)
 		return Vector(-1,0)
 	elseif direction == "right" then
 		return Vector(1,0)
+	end
+end
+
+function mod:ConvertVectorToWordDirection(velocity, Xpriority, Ypriority)
+	if math.abs(velocity.X)*Xpriority < math.abs(velocity.Y)*Ypriority then
+		if velocity.Y < 0 then
+			return "Up"
+		else
+			return "Down"
+		end
+	else
+		if velocity.X < 0 then
+			return "Left"
+		else
+			return "Right"
+		end
 	end
 end
 

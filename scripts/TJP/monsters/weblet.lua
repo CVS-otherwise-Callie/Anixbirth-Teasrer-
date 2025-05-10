@@ -20,7 +20,7 @@ function mod:WebletAI(npc, sprite, d)
 
 
     if not d.init then
-
+        npc.EntityCollisionClass = 0
         d.speed = 10
         d.init = true
         d.emotion = "Excited"
@@ -34,17 +34,20 @@ function mod:WebletAI(npc, sprite, d)
         end
 
         if npc.Parent then
-            npc.EntityCollisionClass = 0
-            npc:ClearEntityFlags(EntityFlag.FLAG_APPEAR)
 
-            if npc.Parent.Type == 161 and npc.Parent.Variant == mod.Monsters.WebMother.Var then
-                npc.Position = Vector(npc.Parent.Position.X + math.random(-20,15), npc.Position.Y)
+            npc:ClearEntityFlags(EntityFlag.FLAG_APPEAR)
+            if (npc.Parent.Type == 161 and npc.Parent.Variant == mod.Monsters.WebMother.Var) or (npc.Parent.Type == 161 and npc.Parent.Variant == mod.Monsters.StumblingNest.Var)then
+                if npc.Parent.Variant == mod.Monsters.WebMother.Var then
+                    d.spriteoffset = Vector(math.random(-20,15),math.random(-10,10))
+                elseif npc.Parent.Variant == mod.Monsters.StumblingNest.Var then
+                    d.spriteoffset = Vector(math.random(-4,4),math.random(-4,4))
+                end
+                npc.Position = npc.Parent.Position
                 npc.DepthOffset = 1
-                npc.SpriteOffset = Vector(0,math.random(-10,10))
+                npc.SpriteOffset = d.spriteoffset
             end
             d.state = "escapingappear"
         else
-            npc.HitPoints = 6
             d.state = "chase"
         end
     else
@@ -60,6 +63,16 @@ function mod:WebletAI(npc, sprite, d)
         if npc.Parent:GetData().state == "dead" then
             npc:Kill()
         end
+
+        if npc.Parent.Variant == mod.Monsters.StumblingNest.Var and npc.Parent:IsDead() then
+            npc:Kill()
+        end
+
+        if d.spriteoffset then
+            npc.Position = npc.Parent.Position
+            npc.SpriteOffset = d.spriteoffset
+        end
+
         mod:spritePlay(sprite, "HeadAppear")
         if sprite:IsFinished() then
             d.state = "escapingidle"
@@ -70,18 +83,68 @@ function mod:WebletAI(npc, sprite, d)
         if npc.Parent:GetData().state == "dead" then
             npc:Kill()
         end
+
+        if npc.Parent.Variant == mod.Monsters.StumblingNest.Var and npc.Parent:IsDead() then
+            npc:Kill()
+        end
+
+        if d.spriteoffset then
+            npc.Position = npc.Parent.Position
+            npc.SpriteOffset = d.spriteoffset
+        end
+
         sprite:SetFrame("HeadDown"..d.emotion, d.faceframe)
         if npc.StateFrame > d.randomtimer then
-            if npc.Parent.Type == 161 and npc.Parent.Variant == mod.Monsters.WebMother.Var then
+            if npc.Parent.Variant == mod.Monsters.WebMother.Var then
                 d.state = "escape"
+            elseif npc.Parent.Variant == mod.Monsters.StumblingNest.Var then
+                d.state = "shoot"
             end
         end
+    end
+
+    if d.state == "shoot" then
+        if npc.Parent:IsDead() then
+            npc:Kill()
+        end
+
+        if d.spriteoffset then
+            npc.Position = npc.Parent.Position
+            npc.SpriteOffset = d.spriteoffset
+        end
+
+        mod:spritePlay(sprite, "Shoot")
+        if sprite:IsFinished() then
+            d.state = "headdisappear"
+        end
+    end
+
+    if d.state == "headdisappear" then
+        if npc.Parent:IsDead() then
+            npc:Kill()
+        end
+
+        if d.spriteoffset then
+            npc.Position = npc.Parent.Position
+            npc.SpriteOffset = d.spriteoffset
+        end
+
+        mod:spritePlay(sprite, "HeadDisappear")
+            if sprite:IsFinished() then
+                npc:Remove()
+            end
     end
 
     if d.state == "escape" then
         if npc.Parent:GetData().state == "dead" then
             npc:Kill()
         end
+
+        if d.spriteoffset then
+            npc.Position = npc.Parent.Position
+            npc.SpriteOffset = d.spriteoffset
+        end
+
         mod:spritePlay(sprite, "Escape")
         if sprite:IsFinished() then
             npc.Velocity = Vector(math.random(-5,5)/5,math.random(1,5)/5)
@@ -189,19 +252,7 @@ function mod:WebletAI(npc, sprite, d)
     if d.state == "chase" or d.state == "return" then
         --head
         if npc.Velocity:Length() > 1 then
-            if math.abs(npc.Velocity.X) > math.abs(npc.Velocity.Y) then
-                if npc.Velocity.X > 0 then
-                    sprite:SetOverlayFrame("HeadRight"..d.emotion,d.faceframe)
-                else
-                    sprite:SetOverlayFrame("HeadLeft"..d.emotion,d.faceframe)
-                end
-            else
-                if npc.Velocity.Y > 0 then
-                    sprite:SetOverlayFrame("HeadDown"..d.emotion,d.faceframe)
-                else
-                    sprite:SetOverlayFrame("HeadUp"..d.emotion,d.faceframe)
-                end
-            end
+            sprite:SetOverlayFrame("Head"..mod:ConvertVectorToWordDirection(npc.Velocity, 1, 1)..d.emotion,d.faceframe)
         else
             sprite:SetOverlayFrame("HeadDown"..d.emotion, d.faceframe)
         end
@@ -233,7 +284,7 @@ function mod:WebletAI(npc, sprite, d)
             if mod:canshoot(npc.Position, d.targetpos, d.shootcooldown) and d.holdshoot > 0 then
                 if not d.hasshot then
                     d.hasshot = true
-                    npc:FireProjectiles(npc.Position, mod:convertWordDirectionToVector(d.direction):Resized(5), 0, params)
+                    npc:FireProjectiles(npc.Position, mod:ConvertWordDirectionToVector(d.direction):Resized(5) + npc.Velocity*0.2, 0, params)
                 end
                 sprite:SetOverlayFrame("Head"..d.direction..d.emotion,2)
                 d.holdshoot = d.holdshoot - 1

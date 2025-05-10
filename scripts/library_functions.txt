@@ -1,0 +1,72 @@
+-----------------------------------------------------------------------------------------------------------------
+LIBRARY FUNCTIONS!!!!!!
+ok cvs im making a start to this before we add like 100 more functions well never remember to use again
+-TJP
+
+NOTES:
+remember to keep things alphabetical (by that i mean the titles AND the functions within them)
+remember to describe what each parameter does AND what the output could look like
+try to keep the spacing consistent
+-----------------------------------------------------------------------------------------------------------------
+
+
+
+------------------------------------------------------------------------------------------------
+                                            POSITION
+------------------------------------------------------------------------------------------------
+---
+GetClosestMinisaacAttackPos(pos, targetpos, distfromtarget, lineofsight, closelimit)
+
+This function checks the 4 cardinal directions around a chosen position and returns the closest one,
+as well the the direction you'd need the face to be facing targetpos
+ 
+"pos" is the initial position. It is compared to each option to find the closest one
+"targetpos" is the target position (no shit)
+"distfromtarget" is how big the distance from the targetpos can be
+"lineofsight" is if you should be able to draw a line from winner to targetpos
+"closelimit" is how small the distance from the targetpos can be
+
+RETURN EXAMPLE:
+(144, 50), "Down"
+
+Ask TJP for further questions
+---
+
+
+------------------------------------------------------------------------------------------------
+                                            SPRITE
+------------------------------------------------------------------------------------------------
+---
+ConvertVectorToWordDirection(velocity, Xpriority, Ypriority)
+
+This function grabs a Vector and turns it into either "up", "down", "left" or "right"
+If Xpriority and Ypriority are both 0, it will return act as if only Ypriority is 0
+
+"velocity" is the velocity.
+"Xpriority" controls how much the function prefers X over Y. if Xpriority is 0, then the function will only return "Up" or "Down"
+"Ypriority" controls how much the function prefers Y over X. if Ypriority is 0, then the function will only return "Left" or "Right"
+
+RETURN EXAMPLE:
+"Up"
+"Down"
+"Left"
+"Right"
+
+Ask TJP for further questions
+---
+
+---
+ConvertWordDirectionToVector(direction)
+
+This function takes either "up", "down", "left" or "right" and turns them into a vector
+
+"direction" is one of the four directions i literally just mentioned
+
+RETURN EXAMPLE:
+(0,-1)
+(0,1)
+(-1,0)
+(1,0)
+
+Ask TJP for further questions
+---
