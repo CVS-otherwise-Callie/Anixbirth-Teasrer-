@@ -3665,7 +3665,7 @@
 			<entity type="161" variant="43" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="The Jacket Potato - i just googled it community is on prime for £1.8" type="1" subtype="0" shape="1" width="13" height="7" difficulty="7" weight="1.0" lastTestTime="2025-05-04T20:13+00:00">
+	<room variant="0" name="The Jacket Potato - i just googled it community is on prime for 1.8 pounds" type="1" subtype="0" shape="1" width="13" height="7" difficulty="7" weight="1.0" lastTestTime="2025-05-04T20:13+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
