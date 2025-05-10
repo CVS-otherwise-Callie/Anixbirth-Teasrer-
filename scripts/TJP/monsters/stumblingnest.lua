@@ -13,12 +13,16 @@ function mod:StumblingNestAI(npc, sprite, d)
     if not d.init then
         d.init = true
         d.state = "idle"
-        d.webletcooldown = 50
+        d.webletcooldown = math.random(50,75)
     else
         npc.StateFrame = npc.StateFrame + 1
         d.webletcooldown = d.webletcooldown - 1
     end
-
+    print()
+    print()
+    print(npc.Position, "Nest")
+    print(npc.Velocity)
+    print()
 
 
     if d.state == "idle" then
@@ -30,7 +34,7 @@ function mod:StumblingNestAI(npc, sprite, d)
             d.webletsprite = d.weblet:GetSprite()
             d.webletsprite:Play("HeadAppear")
             d.weblet.EntityCollisionClass = 0
-            d.webletcooldown = 125
+            d.webletcooldown = math.random(200,250)
         end
     end
 

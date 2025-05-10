@@ -16,7 +16,7 @@ function mod:WebletAI(npc, sprite, d)
     params.HeightModifier = 10
     params.Scale = 0.3
     params.FallingSpeedModifier = -0.1
-    params.FallingAccelModifier = 0
+
 
 
     if not d.init then
@@ -27,6 +27,8 @@ function mod:WebletAI(npc, sprite, d)
         d.randomtimer = math.random(25,50)
         d.shootcooldown = 0
         d.holdshoot = 10
+
+
         if npc.Parent then
             d.zvel = -2
         else
@@ -42,9 +44,9 @@ function mod:WebletAI(npc, sprite, d)
                 elseif npc.Parent.Variant == mod.Monsters.StumblingNest.Var then
                     d.spriteoffset = Vector(math.random(-4,4),math.random(-4,4))
                 end
-                npc.Position = npc.Parent.Position
+                npc.Position = npc.Parent.Position + Vector(d.spriteoffset.X,0)
                 npc.DepthOffset = 1
-                npc.SpriteOffset = d.spriteoffset
+                npc.SpriteOffset = Vector(0, d.spriteoffset.Y)
             end
             d.state = "escapingappear"
         else
@@ -54,6 +56,7 @@ function mod:WebletAI(npc, sprite, d)
         npc.StateFrame = npc.StateFrame + 1
         d.shootcooldown = d.shootcooldown - 1
     end
+    d.test= 1
 
     if npc.StateFrame%3 == 0 then
         d.faceframe = npc.StateFrame%2
@@ -69,8 +72,14 @@ function mod:WebletAI(npc, sprite, d)
         end
 
         if d.spriteoffset then
-            npc.Position = npc.Parent.Position
-            npc.SpriteOffset = d.spriteoffset
+            if npc.Parent.Variant == mod.Monsters.StumblingNest.Var then
+                npc.Position = npc.Parent.Position - npc.Parent.Velocity
+                npc.SpriteOffset = d.spriteoffset
+            else
+                npc.Position = npc.Parent.Position + Vector(d.spriteoffset.X,0)
+                npc.SpriteOffset = Vector(0, d.spriteoffset.Y)
+            end
+            npc.Velocity = npc.Parent.Velocity:Resized(npc.Parent.Velocity:Length()/d.test)
         end
 
         mod:spritePlay(sprite, "HeadAppear")
@@ -89,8 +98,14 @@ function mod:WebletAI(npc, sprite, d)
         end
 
         if d.spriteoffset then
-            npc.Position = npc.Parent.Position
-            npc.SpriteOffset = d.spriteoffset
+            if npc.Parent.Variant == mod.Monsters.StumblingNest.Var then
+                npc.Position = npc.Parent.Position - npc.Parent.Velocity
+                npc.SpriteOffset = d.spriteoffset
+            else
+                npc.Position = npc.Parent.Position + Vector(d.spriteoffset.X,0)
+                npc.SpriteOffset = Vector(0, d.spriteoffset.Y)
+            end
+            npc.Velocity = npc.Parent.Velocity:Resized(npc.Parent.Velocity:Length()/d.test)
         end
 
         sprite:SetFrame("HeadDown"..d.emotion, d.faceframe)
@@ -109,11 +124,21 @@ function mod:WebletAI(npc, sprite, d)
         end
 
         if d.spriteoffset then
-            npc.Position = npc.Parent.Position
-            npc.SpriteOffset = d.spriteoffset
+            if npc.Parent.Variant == mod.Monsters.StumblingNest.Var then
+                npc.Position = npc.Parent.Position - npc.Parent.Velocity
+                npc.SpriteOffset = d.spriteoffset
+            else
+                npc.Position = npc.Parent.Position + Vector(d.spriteoffset.X,0)
+                npc.SpriteOffset = Vector(0, d.spriteoffset.Y)
+            end
+            npc.Velocity = npc.Parent.Velocity:Resized(npc.Parent.Velocity:Length()/d.test)
         end
 
         mod:spritePlay(sprite, "Shoot")
+        if sprite:IsEventTriggered("Shoot") then
+            params.FallingSpeedModifier = 0.1
+            npc:FireProjectiles(npc.Position, (player.Position-npc.Position):Resized(6) + npc.Velocity*0.2, 0, params)
+        end
         if sprite:IsFinished() then
             d.state = "headdisappear"
         end
@@ -125,8 +150,14 @@ function mod:WebletAI(npc, sprite, d)
         end
 
         if d.spriteoffset then
-            npc.Position = npc.Parent.Position
-            npc.SpriteOffset = d.spriteoffset
+            if npc.Parent.Variant == mod.Monsters.StumblingNest.Var then
+                npc.Position = npc.Parent.Position - npc.Parent.Velocity
+                npc.SpriteOffset = d.spriteoffset
+            else
+                npc.Position = npc.Parent.Position + Vector(d.spriteoffset.X,0)
+                npc.SpriteOffset = Vector(0, d.spriteoffset.Y)
+            end
+            npc.Velocity = npc.Parent.Velocity:Resized(npc.Parent.Velocity:Length()/d.test)
         end
 
         mod:spritePlay(sprite, "HeadDisappear")
@@ -141,8 +172,14 @@ function mod:WebletAI(npc, sprite, d)
         end
 
         if d.spriteoffset then
-            npc.Position = npc.Parent.Position
-            npc.SpriteOffset = d.spriteoffset
+            if npc.Parent.Variant == mod.Monsters.StumblingNest.Var then
+                npc.Position = npc.Parent.Position - npc.Parent.Velocity
+                npc.SpriteOffset = d.spriteoffset
+            else
+                npc.Position = npc.Parent.Position + Vector(d.spriteoffset.X,0)
+                npc.SpriteOffset = Vector(0, d.spriteoffset.Y)
+            end
+            npc.Velocity = npc.Parent.Velocity:Resized(npc.Parent.Velocity:Length()/d.test)
         end
 
         mod:spritePlay(sprite, "Escape")
@@ -151,7 +188,7 @@ function mod:WebletAI(npc, sprite, d)
             d.state = "chase"
         end
     end
-
+    print(npc.Position)
 
     if d.state == "chase" then
         if npc.SpriteOffset.Y < 0 or d.zvel < 0 then
