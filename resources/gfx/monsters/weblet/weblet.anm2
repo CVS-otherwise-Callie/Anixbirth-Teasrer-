@@ -1,5 +1,5 @@
 <AnimatedActor>
-	<Info CreatedBy="TJP" CreatedOn="10/05/2025 18:24:55" Version="31" Fps="45"/>
+	<Info CreatedBy="TJP" CreatedOn="11/05/2025 18:58:46" Version="32" Fps="45"/>
 	<Content>
 		<Spritesheets>
 			<Spritesheet Path="weblet.png" Id="0"/>
@@ -10,9 +10,7 @@
 		</Layers>
 		<Nulls/>
 		<Events>
-			<Event Name="Land" Id="0"/>
-			<Event Name="Jump" Id="1"/>
-			<Event Name="Shoot" Id="2"/>
+			<Event Name="Shoot" Id="0"/>
 		</Events>
 	</Content>
 	<Animations DefaultAnimation="HeadDownBored">
@@ -345,7 +343,7 @@
 			</LayerAnimations>
 			<NullAnimations/>
 			<Triggers>
-				<Trigger EventId="2" AtFrame="15"/>
+				<Trigger EventId="0" AtFrame="15"/>
 			</Triggers>
 		</Animation>
 	</Animations>

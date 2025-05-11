@@ -258,7 +258,7 @@ Use 2, 4, or 6 normally.
 	<group Name="HOPE Chapter 2 Enemies" Label="Chapter 2 Shared">
 		<group Name="HOPE Chapter 2 Shared Enemies">
 			<entity Name="Gobbo"/>
-			<entity Name = "Bottom"/>
+			<entity Name = "SixHead Bottom"/>
 		</group>
 	</group>
 
@@ -267,7 +267,7 @@ Use 2, 4, or 6 normally.
 			<entity Name="Sho"/>
 			<entity Name="Pallun"/>
 			<entity Name="Ulig"/>
-			<entity Name = "Sixhead"/>
+			<entity Name = "Sixhead Top"/>
 		</group>
 	</group>
 
