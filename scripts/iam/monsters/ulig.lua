@@ -28,6 +28,7 @@ function mod:UligAI(npc, sprite, d)
     local params = ProjectileParams()
 
     if not d.init then
+        npc.DepthOffset = -2
         d.state = "hiding"
         d.InitSeed = math.random(1000000, 2000000)
         d.lerpnonsense = 0.08
@@ -49,14 +50,18 @@ function mod:UligAI(npc, sprite, d)
         end
 
     elseif d.state == "getup" then
-        mod:MakeVulnerable(npc)
         npc.GridCollisionClass = 5
         npc.StateFrame = 0
         mod:spritePlay(sprite, "ComeUp")
         npc:PlaySound(SoundEffect.SOUND_MAGGOT_ENTER_GROUND, 1, 0, false, 1)
         d.state = nil
 
-    elseif d.state== "shoot" then
+    elseif d.state == "appear" then
+        mod:spritePlay(sprite, "Appear")
+        if sprite:IsFinished() then
+            d.state = "shoot"
+        end
+    elseif d.state == "shoot" then
 
         mod:spritePlay(sprite, "SpawnEntity")
 
@@ -128,7 +133,7 @@ function mod:UligAI(npc, sprite, d)
         elseif not sprite:IsPlaying("SpawnEntityStand") then
             sprite:SetFrame("WalkHori", 0)
         end
-                
+
         sprite:Update()
 
         if npc.StateFrame > 90 then
@@ -137,16 +142,16 @@ function mod:UligAI(npc, sprite, d)
                 mod:spritePlay(sprite, "SpawnEntityStand")
             end
         end
-        
+
     end
 
     if sprite:IsFinished("ComeUp") then
+        mod:MakeVulnerable(npc)
         npc.StateFrame = 0
         d.state = "chase"
     elseif sprite:IsFinished("Disappear") then
         npc.Position = mod:freeGrid(npc, false, 300, 0)
-        mod:spritePlay(sprite, "Appear")
-        d.state = "shoot"
+        d.state = "appear"
     elseif sprite:IsFinished("SpawnEntity") and d.state ~= "hiding" then
         d.state = "hiding"
         npc.StateFrame = 0
