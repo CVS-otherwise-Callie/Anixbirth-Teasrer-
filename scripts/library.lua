@@ -782,94 +782,76 @@ function mod:removeSubstring(str, substr)
     return str
 end
 
-FHAC.PreSavedEntsLevel = FHAC.PreSavedEntsLevel or {}
-FHAC.SavedEntsLevel = FHAC.SavedEntsLevel or {}
-FHAC.ToBeSavedEnts = FHAC.ToBeSavedEnts or {}
+function mod:SaveEntToRoom(npc)
+	
+	local ta = AnixbirthSaveManager.GetRunSave().anixbirthsaveData
+	ta.PreSavedEnts = ta.PreSavedEnts or {}
 
-function mod:SaveEntToRoom(enttable)
-	for k, v in ipairs(FHAC.ToBeSavedEnts) do
-		if v[3] == GetPtrHash(enttable.NPC) then
-			v.NPC = enttable.NPC
-			return
+	for k, v in ipairs(Isaac.FindInRadius(npc.Position, 10, EntityPartition.ENEMY)) do
+		if v.Position == npc.Position and v:GetData().isanixbirthCopy then
+			print("true")
+			npc:Remove()
 		end
 	end
-	if enttable.NPC:ToNPC():GetData().isPrevEntCopy then
-		for k, v in ipairs(FHAC.SavedEntsLevel) do
-			if v.Position:Distance(enttable.NPC.Position) < 0.001 then
-				table.remove(FHAC.SavedEntsLevel, k)
-				table.remove(FHAC.PreSavedEntsLevel, k)
-				enttable.NPC:ToNPC():GetData().isPrevEntCopy = false
-			end
-		end
+
+	if not ta.PreSavedEnts[tostring(npc.InitSeed)] then
+		local tab = {}
+		tab.Room = game:GetLevel():GetCurrentRoomDesc().Data
+		tab.ListIndex = game:GetLevel():GetCurrentRoomDesc().ListIndex
+		tab.Level = game:GetLevel():GetAbsoluteStage()
+		tab.Stage = game:GetLevel():GetStage()
+		ta.PreSavedEnts[tostring(npc.InitSeed)] = tab
 	end
-	enttable[3] = GetPtrHash(enttable.NPC)-- this turns into the thrid part of the table
-	enttable.Room = game:GetLevel():GetCurrentRoomDesc().Data
-	enttable.ListIndex = game:GetLevel():GetCurrentRoomDesc().ListIndex
-	enttable.Stage = game:GetLevel():GetStage()
-	table.insert(FHAC.ToBeSavedEnts, enttable)
+
+
+	local tab = {
+		Type = npc.Type,
+		Variant = npc.Variant,
+		Subtype = npc.SubType,
+		Position = npc.Position,
+		Velocity = npc.Velocity,
+		Spanwner = npc.Spawner,
+	}
+
+	if npc:GetData() then
+		tab.Data = npc:GetData()
+	end
+
+	for k, v in pairs(tab) do
+		ta.PreSavedEnts[tostring(npc.InitSeed)][k] = v
+	end
+
+	ta.PreSavedEnts[tostring(npc.InitSeed)].NPC = npc
+
 end
 
-function mod:SavePreEnts()
-
-	for k, v in ipairs(FHAC.ToBeSavedEnts) do
-		if type(v) == "table" then
-
-			local enttable = v
-
-			local tab = {
-				NPC = enttable.NPC,
-				Room = enttable.Room,
-				ListIndex = enttable.ListIndex,
-				Stage = enttable.Stage,
-				Subtype = enttable.NPC.SubType,
-				Position = enttable.NPC.Position,
-				Velocity = enttable.NPC.Velocity,
-				Spanwner = enttable.NPC.Spawner,
-				Data = enttable.NPC:GetData()
-			}
-
-			if enttable.NPC:ToNPC():GetData().isPrevEntCopy then
-				for j, h in pairs(v) do
-					enttable[j] = v[j]
-				end
-			return end
-
-			mod:MixTables(tab, enttable)
-				
-			table.insert(FHAC.PreSavedEntsLevel, tab)
-		end
-	end
-	FHAC.ToBeSavedEnts = {}
-end
-
-function mod:TransferSavedEnts()
-	for k, v in ipairs(FHAC.PreSavedEntsLevel) do
-		if not mod:CheckTableContents(FHAC.SavedEntsLevel, v) then
-			table.insert(FHAC.SavedEntsLevel, v)
-		end
-	end
-	FHAC.SavedEntsLevel = FHAC.SavedEntsLevel
-end
 
 function mod:LoadSavedRoomEnts()
-	local ents = FHAC.SavedEntsLevel or {}
-	for k, v in pairs(ents) do
-		if v.Room and v.ListIndex == game:GetLevel():GetCurrentRoomDesc().ListIndex and v.Stage == game:GetLevel():GetStage() then
-			local ent = Isaac.Spawn(Isaac.GetEntityTypeByName(v.Name), Isaac.GetEntityVariantByName(v.Name), v.Subtype, v.Position, v.Velocity, nil)
+	local tab = AnixbirthSaveManager.GetRunSave().anixbirthsaveData
+
+	if not tab then print("b") return end
+	if not tab.PreSavedEnts then print("a") return end
+
+	for k, v in pairs(tab.PreSavedEnts) do
+		print( v.Room , 
+		v.ListIndex , game:GetLevel():GetCurrentRoomDesc().ListIndex , 
+		v.Stage , game:GetLevel():GetStage())
+		if v.Room and 
+		v.ListIndex == game:GetLevel():GetCurrentRoomDesc().ListIndex and 
+		v.Stage == game:GetLevel():GetStage() then
+			tab.PreSavedEnts[k] = nil
+			local ent = Isaac.Spawn(v.Type, v.Variant, v.Subtype, v.Position, v.Velocity, nil)
 			local d = ent:GetData()
-			d.isPrevEntCopy = true
-			for k, v in pairs(v.Data) do
-				if not d[k] then
-					d[k] = v
+			for h, i in pairs(v.Data) do
+				if not d[h] then
+					d[h] = i
 				end
 			end
+			d.isanixbirthCopy = true
 			ent:ClearEntityFlags(EntityFlag.FLAG_APPEAR)
 			d.init = false
 		end
 	end
-end
-
-function mod:CheckForNewRoom(bool)
 end
 
 -- i had no idea how to set up a registered callback to be set up later unitl fiend folio, thank yall ^-^

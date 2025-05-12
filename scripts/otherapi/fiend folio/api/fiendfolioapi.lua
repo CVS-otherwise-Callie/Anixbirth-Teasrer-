@@ -117,7 +117,6 @@ function mod.AddItemCallback(onAdd, onRemove, item, forceAddOnRepickup)
 	local entry = TrackedItems.Callbacks.Collect[item]
 	local listing = { Add = onAdd, Remove = onRemove, ForceAddOnRepickup = forceAddOnRepickup }
 	if not entry then
-		print(item, listing)
 		TrackedItems.Callbacks.Collect[item] = { listing }
 	else
 		table.insert(entry, listing)

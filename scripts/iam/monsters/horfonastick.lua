@@ -33,10 +33,7 @@ function mod:HorfOnAStickAI(npc, sprite, d)
 
     local room = game:GetRoom()
 
-    mod:SaveEntToRoom({
-        Name="Horf On A Stick",
-        NPC = npc,
-    })
+    mod:SaveEntToRoom(npc)
 
     if not d.init then
         npc:AddEntityFlags(EntityFlag.FLAG_NO_PHYSICS_KNOCKBACK | EntityFlag.FLAG_NO_KNOCKBACK)

@@ -10,8 +10,8 @@ StageAPI.UnregisterCallbacks("FHAC")
 FHAC:LoadScripts("scripts", {
 	"savedata",
 	"otherapi.fiend folio.api.fiendfolioapi",
-	"constants",
 	"library",
+	"constants",
 	"iam.main",
 	"callbacks",
 	"iam.misc.resources.fortunes",

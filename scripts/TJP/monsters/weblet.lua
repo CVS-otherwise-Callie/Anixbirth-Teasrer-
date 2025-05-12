@@ -188,7 +188,6 @@ function mod:WebletAI(npc, sprite, d)
             d.state = "chase"
         end
     end
-    print(npc.Position)
 
     if d.state == "chase" then
         if npc.SpriteOffset.Y < 0 or d.zvel < 0 then

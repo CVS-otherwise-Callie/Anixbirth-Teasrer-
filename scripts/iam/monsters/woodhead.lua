@@ -136,8 +136,8 @@ function mod.WoodheadShots(v, d)
 end
 
 mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, function(_, npc, dmg, flags, source)
-    if npc.Type == 161 and npc.Variant == mod.Monsters.Woodhead.Var and npc.HitPoints - dmg <= 0 then
+    if npc.Type == mod.Monsters.Woodhead.ID and npc.Variant == mod.Monsters.Woodhead.Var and npc.HitPoints - dmg <= 0 then
         npc:GetData().state = "dead"
         return false
     end
-end, 161)
+end, mod.Monsters.Woodhead.ID)

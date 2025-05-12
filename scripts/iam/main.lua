@@ -1,3 +1,71 @@
+--chore: merge this by throwing it back into the constants file at the end
+local mod = FHAC
+FHAC.CVSMonsters = {
+	Fivehead = mod:ENT("Fivehead"),
+    Sixheadtop= mod:ENT("Sixhead Top"),
+    Sixheadbottom = mod:ENT("Sixhead Bottom"),
+    Onehead = mod:ENT("Onehead"),
+    Floater = mod:ENT("Floater"),
+    Dried = mod:ENT("Dried"),
+	Mutilated = FHAC:ENT("Mutilated"),
+    Neutralfly = mod:ENT("Neutral Fly"),
+    Patient = mod:ENT("Patient"),
+    Erythorcyte = mod:ENT("Erythorcyte"),
+    Erythorcytebaby = mod:ENT("Erythorcytebaby"),
+    Wost = mod:ENT("Wost"),
+    Schmoot = mod:ENT("Schmoot"),
+    Snidge = mod:ENT("Snidge"),
+    --Dangler = mod:ENT("Dangler"),
+    Drosslet = mod:ENT("Drosslet"),
+    PitPatSpawner = mod:ENT("Pit Pat Spawner"),
+    PitPat = mod:ENT("Pit Pat"),
+    MushLoom = mod:ENT("Mush Loom"),
+    Pinprick = mod:ENT("Pinprick"),
+    SyntheticHorf = mod:ENT("Synthetic Horf"),
+    GassedFly = mod:ENT("Gassed Fly"),
+    FlyveBomber = mod:ENT("Plier"),
+    Pallun = mod:ENT("Pallun"),
+    Silly = mod:ENT("Silly"),
+    String = mod:ENT("String"),
+    StickyFly = mod:ENT("Sticky Fly"),
+    WispWosp = mod:ENT("Wisp Wosp"),
+    Stuckpoot = mod:ENT("Stuckpoot"),
+    RainMonger = mod:ENT("Rain Monger"),
+    TechGrudge = mod:ENT("Tech Grudge"),
+    ZapperTeller = mod:ENT("Zapper Teller"),
+    Log = mod:ENT("Log"),
+    Stoner = mod:ENT("Stoner"),
+    LightPressurePlateEntNull = mod:ENT("Light Pressure Plate Null Entity"),
+    LarryKingJr = mod:ENT("Larry King Jr."),
+    Babble = mod:ENT("Babble"),
+    Toast = mod:ENT("Toast"),
+    TaintedSilly = mod:ENT("Tainted Silly"),
+    TaintedString = mod:ENT("Tainted String"),
+    andEntity = mod:ENT("&"),
+    Dunglivery = mod:ENT("Dunglivery"),
+    Harmoor = mod:ENT("Harmoor"),
+    Cowpat = mod:ENT("Cowpat"),
+    Ulig = mod:ENT("Ulig"),
+    HorfOnAStick = mod:ENT("Horf On A Stick"),
+    Gobbo = mod:ENT("Gobbo"),
+    Sho = mod:ENT("Sho"),
+    Soot = mod:ENT("Soot"),
+    Jim = mod:ENT("Jim"),
+    NarcissismMirror = mod:ENT("Narcissism Mirror"),
+    Woodhead = mod:ENT("Woodhead"),
+    NarcissismReflections = mod:ENT("Narcissism Reflections"),
+    Chomblet = mod:ENT("Chomblet"),
+    Trilo = mod:ENT("Trilo"),
+	SmallSack = mod:ENT("Small Nest"),
+	SackKid = mod:ENT("Sack Kid"),
+	FearFlower = mod:ENT("Fear Flower"),
+    StallCreep = mod:ENT("Stall Creep"),
+    WebbedCreep = mod:ENT("Webbed Creep"),
+	AngeryMan = mod:ENT("Angery Man")
+}
+
+mod:MixTables(FHAC.Monsters, FHAC.CVSMonsters)
+
 --iam stuff
 FHAC:LoadScripts("scripts.iam.monsters", {
 	"fivehead",
@@ -49,7 +117,8 @@ FHAC:LoadScripts("scripts.iam.monsters", {
 	"mutilated",
 	"stallcreep",
 	"webbedcreep",
-	"smallsack"
+	"smallsack",
+	"angeryman"
 })
 
 FHAC:LoadScripts("scripts.iam.minibosses", {
