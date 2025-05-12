@@ -1,3 +1,5 @@
+print("hi")
+
 function FHAC:LoadScripts(includestart, t)
     for k, v in ipairs(t) do
         if includestart then v= includestart.."." .. v end
