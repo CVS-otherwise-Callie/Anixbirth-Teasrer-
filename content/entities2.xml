@@ -364,16 +364,16 @@
         <gibs amount="6" blood="1" bone="0" eye="1" gut="1" large="0" />
         <preload-snd id="318" /> <!-- SOUND_WORM_SPIT -->
     </entity>
-    <entity id="161" variant="203" subtype="0" name="Ulig" anm2path="monsters/ulig/ulig.anm2" hasFloorAlts="false" reroll="true" baseHP="18" boss="0" champion="1" collisionDamage="1" collisionMass="5" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="14" stageHP="1" portrait="203">
+    <entity id="161" variant="203" subtype="0" name="Ulig" anm2path="monsters/ulig/ulig.anm2" hasFloorAlts="false" reroll="true" baseHP="18" boss="0" champion="1" collisionDamage="1" collisionMass="5" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="0" stageHP="1" portrait="203">
 		<bestiary transform="0,0,1" anim="ComeUp" />
         <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
     </entity>
-    <entity anm2path="monsters/sixhead/sixhead top.anm2" id="161" variant="210" subtype="0" reroll="true" baseHP="15" boss="0" champion="1" collisionDamage="1" collisionMass="40" collisionRadius="13" friction="0.1" name="Sixhead Top" numGridCollisionPoints="12" shadowSize="14" stageHP="4" hasFloorAlts="false" bestiary="true" gridCollision="walls" portrait="212">
+    <entity anm2path="monsters/sixhead/sixhead top.anm2" id="161" variant="210" subtype="0" reroll="true" baseHP="15" boss="0" champion="1" collisionDamage="1" collisionMass="40" collisionRadius="13" friction="0.1" name="Sixhead Top" numGridCollisionPoints="12" shadowSize="14" stageHP="4" hasFloorAlts="false" bestiary="true" gridCollision="walls" portrait="210">
         <bestiary transform="0,0,1" anim="Shake" />
         <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
         <devolve id="1000.15.0" weight="1" />
     </entity>
-    <entity anm2path="monsters/sixhead/sixhead bottom.anm2" id="161" variant="211" subtype="0" reroll="true" baseHP="15" boss="0" champion="1" collisionDamage="1" collisionMass="10" collisionRadius="13" friction="1" name="Sixhead Bottom" numGridCollisionPoints="12" shadowSize="14" stageHP="1" hasFloorAlts="false" bestiary="true" gridCollision="walls" portrait="212">
+    <entity anm2path="monsters/sixhead/sixhead bottom.anm2" id="161" variant="211" subtype="0" reroll="true" baseHP="15" boss="0" champion="1" collisionDamage="1" collisionMass="10" collisionRadius="13" friction="1" name="Sixhead Bottom" numGridCollisionPoints="12" shadowSize="14" stageHP="1" hasFloorAlts="false" bestiary="true" gridCollision="walls" portrait="211">
         <bestiary transform="0,0,1" anim="Shake00" />
         <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
         <devolve id="161.12.0" weight="1" />

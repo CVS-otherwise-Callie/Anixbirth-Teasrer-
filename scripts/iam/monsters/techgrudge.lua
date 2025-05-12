@@ -37,7 +37,7 @@ function mod:TechGrudgeAI(npc, sprite, d)
         end
 
     end
-        
+
     if not d.init then
         d.state = "above"
         if npc.SubType >=1 and npc.SubType <= 4 then
@@ -60,7 +60,7 @@ function mod:TechGrudgeAI(npc, sprite, d)
 
     d.grid = TechGrudgeEnt(d.direction)
     local grid = d.grid
-    
+
     if d.state == "above" then
 
         npc.Velocity = mod:Lerp(npc.Velocity, Vector(0, 8.5):Rotated(-90*d.direction), 0.35)
@@ -128,7 +128,7 @@ function mod:TechGrudgeAI(npc, sprite, d)
         local bsprite = Sprite()
         bsprite:Load("gfx/007.002_thin red laser.anm2", true)
         bsprite:Play("Laser0", false)
-        
+
         local beam = d.beam
         if not beam then
             d.beam = Beam(bsprite, "laser", false, false)

@@ -114,8 +114,8 @@ Don't be evil please.
 <entity ID="161" Variant="189" Name="Synthetic Horf" Image="mah boys/synthetichorf.png" BaseHP="13" Tags="Champion"/>
 <entity ID="161" Variant="202" Name="Pallun" Image="mah boys/pallun.png" BaseHP="13" Tags="Champion"/>
 <entity ID="161" Variant="203" Name="Ulig" Image="mah boys/ulig.png" BaseHP="18" StageHP="1" Tags="Champion"/>
-<entity ID="161" Variant="210" Name="Sixhead" Image="mah boys/sixhead.png" BaseHP="15" StageHP="2" Tags="Champion"/>
-<entity ID="161" Variant="212" Name="Bottom" Image="mah boys/bottom.png" BaseHP="15" StageHP="1" Tags="Champion"/>
+<entity ID="161" Variant="210" Name="SixHead Top" Image="mah boys/sixheadtop.png" BaseHP="15" StageHP="2" Tags="Champion"/>
+<entity ID="161" Variant="211" Name="SixHead Bottom" Image="mah boys/sixheadbottom.png" BaseHP="15" StageHP="1" Tags="Champion"/>
 <entity ID="161" Variant="224" Subtype = "0" Name="Mush Loom" Image="mah boys/mushloom.png" BaseHP="10" StageHP="2" Tags="Champion">
 <bitfield Key="Subtype">
         <spinner Length="16" ValueOffset="2" Name="Time Wait">
@@ -258,7 +258,7 @@ Use 2, 4, or 6 normally.
 	<group Name="HOPE Chapter 2 Enemies" Label="Chapter 2 Shared">
 		<group Name="HOPE Chapter 2 Shared Enemies">
 			<entity Name="Gobbo"/>
-			<entity Name = "Bottom"/>
+			<entity Name = "SixHead Bottom"/>
 		</group>
 	</group>
 
@@ -267,7 +267,7 @@ Use 2, 4, or 6 normally.
 			<entity Name="Sho"/>
 			<entity Name="Pallun"/>
 			<entity Name="Ulig"/>
-			<entity Name = "Sixhead"/>
+			<entity Name = "Sixhead Top"/>
 		</group>
 	</group>
 
