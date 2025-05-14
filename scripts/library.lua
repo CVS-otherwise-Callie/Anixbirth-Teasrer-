@@ -833,12 +833,10 @@ function mod:LoadSavedRoomEnts()
 	if not tab.PreSavedEnts then print("a") return end
 
 	for k, v in pairs(tab.PreSavedEnts) do
-		print( v.Room , 
-		v.ListIndex , game:GetLevel():GetCurrentRoomDesc().ListIndex , 
-		v.Stage , game:GetLevel():GetStage())
 		if v.Room and 
 		v.ListIndex == game:GetLevel():GetCurrentRoomDesc().ListIndex and 
-		v.Stage == game:GetLevel():GetStage() then
+		v.Stage == game:GetLevel():GetStage() and v.Type and v.Variant and v.Subtype
+		and v.Position and v.Velocity then
 			tab.PreSavedEnts[k] = nil
 			local ent = Isaac.Spawn(v.Type, v.Variant, v.Subtype, v.Position, v.Velocity, nil)
 			local d = ent:GetData()
