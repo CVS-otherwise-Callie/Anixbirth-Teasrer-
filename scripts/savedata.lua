@@ -2,8 +2,8 @@
 AnixbirthSaveManager  = include("scripts.save_manager")
 
 AnixbirthSaveManager.Utility.AddDefaultRunData(AnixbirthSaveManager.DefaultSaveKeys.PLAYER, {anixbirthsaveData = {}})
+AnixbirthSaveManager.Utility.AddDefaultFloorData(AnixbirthSaveManager.DefaultSaveKeys.PLAYER, {anixbirthsaveData = {}})
 AnixbirthSaveManager.Utility.AddDefaultRoomData(AnixbirthSaveManager.DefaultSaveKeys.PLAYER, {anixbirthsaveData = {}})
---AnixbirthSaveManager.Utility.AddDefaultRunData(AnixbirthSaveManager.DefaultSaveKeys.GLOBAL, {PreSavedEntsLevel = {}, SavedEntsLevel = {}, ToBeSavedEnts = {}})
 
 AnixbirthSaveManager.Init(FHAC)
 FHAC.AnixbirthSaveManager = AnixbirthSaveManager

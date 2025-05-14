@@ -18,7 +18,6 @@ function mod:WebletAI(npc, sprite, d)
     params.FallingSpeedModifier = -0.1
 
 
-
     if not d.init then
         npc.EntityCollisionClass = 0
         d.speed = 10
@@ -27,6 +26,7 @@ function mod:WebletAI(npc, sprite, d)
         d.randomtimer = math.random(25,50)
         d.shootcooldown = 0
         d.holdshoot = 10
+        d.shotvectormult = d.shotvectormult or 0
 
 
         if npc.Parent then
@@ -57,6 +57,8 @@ function mod:WebletAI(npc, sprite, d)
         d.shootcooldown = d.shootcooldown - 1
     end
     d.test= 1
+
+    params.FallingAccelModifier = -0.02 * d.shotvectormult
 
     if npc.StateFrame%3 == 0 then
         d.faceframe = npc.StateFrame%2
@@ -325,7 +327,7 @@ function mod:WebletAI(npc, sprite, d)
             if mod:canshoot(npc.Position, d.targetpos, d.shootcooldown, d.state) and d.holdshoot > 0 then
                 if not d.hasshot then
                     d.hasshot = true
-                    npc:FireProjectiles(npc.Position, mod:ConvertWordDirectionToVector(d.direction):Resized(5) + npc.Velocity*0.2, 0, params)
+                    npc:FireProjectiles(npc.Position, mod:ConvertWordDirectionToVector(d.direction):Resized(5 + d.shotvectormult) + npc.Velocity*0.2*(1+d.shotvectormult), 0, params)
                 end
                 sprite:SetOverlayFrame("Head"..d.direction..d.emotion,2)
                 d.holdshoot = d.holdshoot - 1

@@ -115,7 +115,8 @@ FHAC:AddCallback(ModCallbacks.MC_POST_PLAYER_UPDATE, FHAC.PostPlayerUpdate)
 function FHAC:PostGameStarted(bool)
 
     AnixbirthSaveManager.GetRunSave().anixbirthsaveData = AnixbirthSaveManager.GetRunSave().anixbirthsaveData or {}
-    
+    AnixbirthSaveManager.GetFloorSave().anixbirthsaveData = AnixbirthSaveManager.GetFloorSave().anixbirthsaveData or {}
+
     FHAC.YouCanEndTheAltCutsceneNow = false
     FHAC.StartCutscene = false
     FHAC.RuinSecretMusicInit = false

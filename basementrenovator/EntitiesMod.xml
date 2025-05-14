@@ -80,6 +80,7 @@ Up to groups of 3.
    </bitfield>
 </entity>
 <entity ID="161" Variant="42" Name="Plier" Image="mah boys/plier.png" BaseHP="10" Tags="Champion"/>
+<entity ID="161" Variant="43" Name="Stumbling Nest" Image="mah boys/stumblingnest.png" BaseHP="12" Tags="Champion"/>
 <entity ID="161" Variant="44" Name="Weblet" Image="mah boys/weblet.png" BaseHP="8"/>
 <entity ID="161" Variant="45" Name="Small Nest" Image="mah boys/small nest.png" BaseHP="7">
    <bitfield Key="Subtype">
@@ -221,6 +222,7 @@ Use 2, 4, or 6 normally.
 			<entity Name="Web Mother" />
 			<entity Name="Weblet" />
 			<entity Name="Small Nest" />
+			<entity Name="Stumbling Nest" />
 		</group>
   	</group>
 

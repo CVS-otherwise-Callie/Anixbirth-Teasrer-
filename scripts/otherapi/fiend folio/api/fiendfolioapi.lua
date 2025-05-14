@@ -287,7 +287,7 @@ end)
 
 --ok i must be super lazy tonight but ye gain ff 
 function mod:GetMoveString(vec, doFlipX, doFlipY)
-	doFlipX = doFlipX or true
+	doFlipX = doFlipX or false
 	doFlipY = doFlipY or false
     if math.abs(vec.Y) > math.abs(vec.X) then
         if vec.Y > 0 then

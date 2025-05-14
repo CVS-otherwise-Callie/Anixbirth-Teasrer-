@@ -784,12 +784,11 @@ end
 
 function mod:SaveEntToRoom(npc)
 	
-	local ta = AnixbirthSaveManager.GetRunSave().anixbirthsaveData
+	local ta = AnixbirthSaveManager.GetFloorSave().anixbirthsaveData
 	ta.PreSavedEnts = ta.PreSavedEnts or {}
 
-	for k, v in ipairs(Isaac.FindInRadius(npc.Position, 10, EntityPartition.ENEMY)) do
-		if v.Position == npc.Position and v:GetData().isanixbirthCopy then
-			print("true")
+	for k, v in ipairs(Isaac.GetRoomEntities()) do
+		if v.Position:Distance(npc.Position) == 0 and v:GetData().isanixbirthCopy then
 			npc:Remove()
 		end
 	end
@@ -808,8 +807,10 @@ function mod:SaveEntToRoom(npc)
 		Type = npc.Type,
 		Variant = npc.Variant,
 		Subtype = npc.SubType,
-		Position = npc.Position,
-		Velocity = npc.Velocity,
+		PositionX = npc.Position.X,
+		PositionY = npc.Position.Y,
+		VelocityX = npc.Velocity.X,
+		VelocityY = npc.Velocity.Y,
 		Spanwner = npc.Spawner,
 	}
 
@@ -827,18 +828,17 @@ end
 
 
 function mod:LoadSavedRoomEnts()
-	local tab = AnixbirthSaveManager.GetRunSave().anixbirthsaveData
+	local tab = AnixbirthSaveManager.GetFloorSave().anixbirthsaveData
 
-	if not tab then print("b") return end
-	if not tab.PreSavedEnts then print("a") return end
+	if not tab then return end
+	if not tab.PreSavedEnts then return end
 
 	for k, v in pairs(tab.PreSavedEnts) do
-		if v.Room and 
+		if
 		v.ListIndex == game:GetLevel():GetCurrentRoomDesc().ListIndex and 
-		v.Stage == game:GetLevel():GetStage() and v.Type and v.Variant and v.Subtype
-		and v.Position and v.Velocity then
+		v.Stage == game:GetLevel():GetStage() and v.Type and v.Variant and v.Subtype  then
 			tab.PreSavedEnts[k] = nil
-			local ent = Isaac.Spawn(v.Type, v.Variant, v.Subtype, v.Position, v.Velocity, nil)
+			local ent = Isaac.Spawn(v.Type, v.Variant, v.Subtype, Vector(v.PositionX, v.PositionY), Vector(v.VelocityX, v.VelocityY), nil)
 			local d = ent:GetData()
 			for h, i in pairs(v.Data) do
 				if not d[h] then
