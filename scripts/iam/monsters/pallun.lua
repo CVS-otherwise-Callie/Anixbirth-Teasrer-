@@ -131,15 +131,15 @@ function mod.PallunShot(v, d)
 
 
             else
-                --kerkel suggested i use this but since i dont feel loke blantantly rewriting everything to match another person nowadays; ill make this a dss thing - old shots and new shots
+                --kerkel suggested i use this but since i dont feel like blantantly rewriting everything to match another person nowadays; ill make this a dss thing - old shots and new shots
                 if v.FrameCount % 30 == 0 or v.FrameCount == 1 then
                     local player = Game():GetNearestPlayer(v.Position)
-            
+
                     d.TargetPosition = v.Position + (player.Position - v.Position):Resized(40 * 3)
                 end
-            
+
                 v.Velocity = v.Velocity * 0.2 + (d.TargetPosition - v.Position) * (v.FrameCount % 30) * 0.01
-            
+
                 v.FallingSpeed = 0
                 v.FallingAccel = -0.1
             end
@@ -150,7 +150,7 @@ function mod.PallunShot(v, d)
             end
         else
             v.Velocity = v.Velocity * 0.9
-            v.FallingAccel = 0.1  
+            v.FallingAccel = 0.1
         end
     end
 end

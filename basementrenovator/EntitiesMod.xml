@@ -199,7 +199,6 @@ Use 2, 4, or 6 normally.
 	<group Name="HOPE Basement" Label="Basement">
 		<group Name="HOPE Basement Enemies">
 			<entity Name="Larry King Jr."/>
-			<entity Name="Toast"/>
 			<entity Name="Cowpat"/>
 		    <entity Name="Snidge"/>
 		    <entity Name="Horf On A Stick"/>
@@ -257,17 +256,18 @@ Use 2, 4, or 6 normally.
 
 	<group Name="HOPE Chapter 2 Enemies" Label="Chapter 2 Shared">
 		<group Name="HOPE Chapter 2 Shared Enemies">
+			<entity Name="Toast"/>
 			<entity Name="Gobbo"/>
+			<entity Name="Sho"/>
 			<entity Name = "SixHead Bottom"/>
+			<entity Name = "SixHead Top"/>
 		</group>
 	</group>
 
 	<group Name="HOPE Caves" Label="Caves">
 		<group Name="HOPE Caves Enemies">
-			<entity Name="Sho"/>
 			<entity Name="Pallun"/>
 			<entity Name="Ulig"/>
-			<entity Name = "Sixhead Top"/>
 		</group>
 	</group>
 
