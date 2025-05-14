@@ -31,7 +31,7 @@ function mod:WebMotherAI(npc, sprite, d)
         mod:spritePlay(sprite,"Idle")
         if npc.StateFrame > d.randomtimer then
 
-            if math.random(1,5-d.webletgroupsamount) == 1 and d.webletgroupsamount > 0 then
+            if math.random(1,3-d.webletgroupsamount) == 1 and d.webletgroupsamount > 0 then
                 d.state = "scream"
             else
                 for i = 1, npc.SubType do
