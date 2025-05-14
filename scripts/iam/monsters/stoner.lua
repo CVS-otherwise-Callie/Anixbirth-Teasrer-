@@ -35,10 +35,7 @@ function mod:StonerAI(npc, sprite, d)
     local targetpos = mod:confusePos(npc, target.Position, 5, nil, nil)
     local enemydir = (targetpos - npc.Position):GetAngleDegrees()
 
-    mod:SaveEntToRoom({
-        Name="Stoner",
-        NPC = npc,
-    })
+    mod:SaveEntToRoom(npc)
 
     if not d.init then
         rng:SetSeed(npc.DropSeed, 32)

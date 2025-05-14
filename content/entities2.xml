@@ -138,7 +138,7 @@
     <entity anm2path="monsters/fivehead/fivehead.anm2" id="161" variant="12" reroll="true" baseHP="15" boss="0" champion="1" collisionDamage="1" collisionMass="40" collisionRadius="13" friction="0.1" name="Fivehead" numGridCollisionPoints="12" shadowSize="14" stageHP="0" hasFloorAlts="true" bestiary="true" portrait="12">
         <bestiary transform="0,0,1" anim="Shake" />
         <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
-        <devolve id="161.12.1" weight="1" />
+        <devolve id="161.13.1" weight="1" />
     </entity>
     <entity anm2path="monsters/onehead/onehead.anm2" id="161" variant="13" subtype="1" reroll="true" baseHP="7" boss="0" champion="0" collisionDamage="1" collisionMass="20" collisionRadius="6" friction="0.1" name="Onehead" numGridCollisionPoints="12" shadowSize="7" stageHP="0" hasFloorAlts="true" bestiary="true" portrait="13">
         <bestiary transform="0,0,1" anim="Shake" />
@@ -324,6 +324,11 @@
         <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
     </entity>
 
+    <entity id="161" variant="47" subtype="0" name="Angery Man" anm2path="monsters/angeryman/angeryman.anm2" hasFloorAlts="false" reroll="true" baseHP="15" boss="0" champion="1" collisionDamage="1" collisionMass="5" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="14" stageHP="0" portrait="4">
+		<bestiary transform="0,0,1" anim="Bestiary" />
+        <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
+    </entity>
+
     <entity id="240" variant="359" name="Stall Creep" baseHP="10" stageHP="0" boss="0" champion="0" collisionDamage="1" collisionMass="14" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="0" portrait="660" anm2path="monsters/stallcreep/stall_creep.anm2" bestiary="true" bestiaryTransform="0,0,1" bestiaryAnim="Walk">
         <gibs amount="4" blood="1" bone="0" eye="0" gut="1" large="0" />
         <devolve id="240.0.0" weight="1" />
@@ -366,7 +371,7 @@
     <entity anm2path="monsters/sixhead/sixhead top.anm2" id="161" variant="210" subtype="0" reroll="true" baseHP="15" boss="0" champion="1" collisionDamage="1" collisionMass="40" collisionRadius="13" friction="0.1" name="Sixhead Top" numGridCollisionPoints="12" shadowSize="14" stageHP="4" hasFloorAlts="false" bestiary="true" gridCollision="walls" portrait="210">
         <bestiary transform="0,0,1" anim="Shake" />
         <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
-        <devolve id="1000.15.0" weight="1" />
+        <devolve id="212.0.0" weight="1" />
     </entity>
     <entity anm2path="monsters/sixhead/sixhead bottom.anm2" id="161" variant="211" subtype="0" reroll="true" baseHP="15" boss="0" champion="1" collisionDamage="1" collisionMass="10" collisionRadius="13" friction="1" name="Sixhead Bottom" numGridCollisionPoints="12" shadowSize="14" stageHP="1" hasFloorAlts="false" bestiary="true" gridCollision="walls" portrait="211">
         <bestiary transform="0,0,1" anim="Shake00" />

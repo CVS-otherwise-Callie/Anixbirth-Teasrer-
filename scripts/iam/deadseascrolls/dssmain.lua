@@ -141,16 +141,6 @@ FHAC.dmdirectory = {
                     {str = '', fsize=2, nosel = true},
                     {str = '-----fortunes-----', fsize=2, nosel = true},
                     {str = '', fsize=2, nosel = true},
-
-                    --[[str = 'rocks',      
-                    dest = 'rocks',
-                    tooltip = {strset = {'edit what', 'rock pallate', 'you want to','show', '', 'currently', 'does not', 'work yet'}}
-                    }}
-
-                    {str = 'room names',      
-                    dest = 'room_names',
-                    tooltip = {strset = {'edit the', 'room names', 'settings', '', 'currently', 'does not', 'work yet'}}
-                    }},]]
                     {
                         str = 'custom fortunes',
                         choices = {'on', 'off'},
@@ -177,12 +167,11 @@ FHAC.dmdirectory = {
                     end},
                     {
                         str = 'fortunes on death',
-                        choices = {'off', 'on'},
+                        choices = {'on', 'off'},
                         variable = "fortunesonDeath",
-                        slider = true,
                         setting = 1,
                         load = function()
-                            return AnixbirthSaveManager.GetSettingsSave().fortunesonDeath or 1
+                            return AnixbirthSaveManager.GetSettingsSave().fortunesonDeath or 2
                         end,
                         store = function(var)
                             AnixbirthSaveManager.GetSettingsSave().fortunesonDeath = var
@@ -198,7 +187,7 @@ FHAC.dmdirectory = {
         
                             return false
                         end,
-                        tooltip = {strset = {'enemies can', 'show fortunes', 'on death','', 'default is', 'off'}}
+                        tooltip = {strset = {'whether a', 'custom fortune', 'should happen', 'on a', 'enemys death','', 'off by','default'}}
                     },
                     {str = '', nosel = true, fsize=2,displayif = function(_, item)
                         if item and item.buttons then
@@ -226,7 +215,7 @@ FHAC.dmdirectory = {
                         displayif = function(_, item)
                             if item and item.buttons then
                                 for _, button in ipairs(item.buttons) do
-                                    if button.str == 'custom fortunes' then
+                                    if button.str == 'fortunes on death' then
                                         return button.setting == 1
                                     end
                                 end
@@ -239,7 +228,7 @@ FHAC.dmdirectory = {
                     {str = '', nosel = true, fsize=2,displayif = function(_, item)
                         if item and item.buttons then
                             for _, button in ipairs(item.buttons) do
-                                if button.str == 'custom fortunes' then
+                                if button.str == 'fortunes on death' then
                                     return button.setting == 1
                                 end
                             end
@@ -261,7 +250,7 @@ FHAC.dmdirectory = {
                         displayif = function(_, item)
                             if item and item.buttons then
                                 for _, button in ipairs(item.buttons) do
-                                    if button.str == 'custom fortunes' then
+                                    if button.str == 'fortunes on death' then
                                         return button.setting == 1
                                     end
                                 end

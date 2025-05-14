@@ -66,10 +66,7 @@ local room = game:GetRoom()
         }  
     }
 
-    mod:SaveEntToRoom({
-        Name="Dried",
-        NPC = npc,
-    })
+    mod:SaveEntToRoom(npc)
 
     if not d.init then
         if d.isPrevEntCopy then

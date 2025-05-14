@@ -188,7 +188,6 @@ function mod:WebletAI(npc, sprite, d)
             d.state = "chase"
         end
     end
-    print(npc.Position)
 
     if d.state == "chase" then
         if npc.SpriteOffset.Y < 0 or d.zvel < 0 then
@@ -230,7 +229,7 @@ function mod:WebletAI(npc, sprite, d)
                 end
             end
 
-            if npc.Parent and not npc.Parent:GetData().state == "dead" then
+            if npc.Parent and not (npc.Parent:GetData().state == "dead") then
                 if npc.Parent:GetData().comeback == true then
                     if math.random(10) == 1 then
                         npc.StateFrame = 0
@@ -256,7 +255,7 @@ function mod:WebletAI(npc, sprite, d)
     end
 
     if d.state == "return" then
-        if npc.Parent and not npc.Parent:GetData().state == "dead" then
+        if npc.Parent and not (npc.Parent:GetData().state == "dead") then
             d.targetpos = npc.Parent.Position
                 if npc.Position:Distance(d.targetpos) > 5 then
                     if room:CheckLine(npc.Position,d.targetpos,0,1,false,false) then
@@ -280,6 +279,11 @@ function mod:WebletAI(npc, sprite, d)
 
     if d.state == "disappear" then
         sprite:RemoveOverlay()
+        if npc.Position.X < npc.Parent.Position.X then
+            sprite.FlipX = true
+        else
+            sprite.FlipX = false
+        end
         mod:spritePlay(sprite, "Disappear")
         if sprite:IsFinished() then
             npc:Remove()
@@ -318,7 +322,7 @@ function mod:WebletAI(npc, sprite, d)
                 sprite:SetOverlayFrame("Head"..d.direction..d.emotion,d.faceframe)
             end
 
-            if mod:canshoot(npc.Position, d.targetpos, d.shootcooldown) and d.holdshoot > 0 then
+            if mod:canshoot(npc.Position, d.targetpos, d.shootcooldown, d.state) and d.holdshoot > 0 then
                 if not d.hasshot then
                     d.hasshot = true
                     npc:FireProjectiles(npc.Position, mod:ConvertWordDirectionToVector(d.direction):Resized(5) + npc.Velocity*0.2, 0, params)
@@ -336,8 +340,8 @@ function mod:WebletAI(npc, sprite, d)
     end
 end
 
-function mod:canshoot(position, targetposition, cooldown)
-    if position:Distance(targetposition) < 30 and cooldown <= 0 then
+function mod:canshoot(position, targetposition, cooldown, state)
+    if position:Distance(targetposition) < 30 and cooldown <= 0 and (state == "chase" or state == "return") then
         return true
     else
         return false

@@ -17,18 +17,6 @@ end
 
 FHAC:AddCallback(ModCallbacks.MC_NPC_UPDATE, FHAC.FHACNPCUpdate)
 
-function FHAC.PreChangeRooms()
-    FHAC:SavePreEnts()
-    FHAC:TransferSavedEnts()
-end
-FHAC:AddCallback(ModCallbacks.MC_PRE_CHANGE_ROOM, FHAC.PreChangeRooms)
-
-function FHAC.LeaveGame()
-    FHAC:SavePreEnts()
-    FHAC:TransferSavedEnts()
-end
-FHAC:AddCallback(ModCallbacks.MC_PRE_GAME_EXIT, FHAC.LeaveGame)
-
 function FHAC.NewLevelStuff()
     FHAC.YouCanEndTheAltCutsceneNow = false
     FHAC.StartCutscene = false
@@ -125,7 +113,9 @@ end
 FHAC:AddCallback(ModCallbacks.MC_POST_PLAYER_UPDATE, FHAC.PostPlayerUpdate)
 
 function FHAC:PostGameStarted(bool)
-    FHAC.CheckForNewRoom(bool)
+
+    AnixbirthSaveManager.GetRunSave().anixbirthsaveData = AnixbirthSaveManager.GetRunSave().anixbirthsaveData or {}
+    
     FHAC.YouCanEndTheAltCutsceneNow = false
     FHAC.StartCutscene = false
     FHAC.RuinSecretMusicInit = false
@@ -173,6 +163,7 @@ FHAC:AddCallback(ModCallbacks.MC_EVALUATE_CACHE,function(_, player, flag)
 end)
 
 function FHAC:NPCGetHurtStuff(npc, damage, flag, source, countdown)
+    FHAC:AngeryManTakeDamage(npc, damage, flag, source)
     FHAC:PatientGetHurt(npc, damage, flag, source,countdown)
     FHAC:PallunLeaveWhenHit(npc)
     FHAC:StrawDollActiveEffect(npc, damage, flag, countdown)
@@ -209,9 +200,6 @@ FHAC:AddCallback(ModCallbacks.MC_PRE_NPC_UPDATE, FHAC.PreNPCUpdate)
 ---- custom utility callbacks! ----
 
 function FHAC:OnPostDataLoad(saveData, isLuamod)
-    FHAC.PreSavedEntsLevel = saveData.game.roomFloor.PreSavedEntsLevel or {}
-    FHAC.SavedEntsLevel = saveData.game.roomFloor.SavedEntsLevel or {}
-    FHAC.ToBeSavedEnts = saveData.game.roomFloor.ToBeSavedEnts or {}
     saveData.file.other.HasLoaded = true
 end
 

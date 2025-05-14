@@ -3666,7 +3666,7 @@ return {
 			{TYPE=161, VARIANT=43, SUBTYPE=0, WEIGHT=1, METADATA=nil},
 		},
 	},
-	{TYPE=1, VARIANT=0, SUBTYPE=0, NAME="The Jacket Potato - i just googled it community is on prime for £1.8", DIFFICULTY=7, WEIGHT=1, WIDTH=13, HEIGHT=7, SHAPE=1, METADATA=nil,
+	{TYPE=1, VARIANT=0, SUBTYPE=0, NAME="The Jacket Potato - i just googled it community is on prime for £1", DIFFICULTY=7, WEIGHT=1, WIDTH=13, HEIGHT=7, SHAPE=1, METADATA=nil,
 		{ISDOOR=true, GRIDX=-1, GRIDY=3, SLOT=0, EXISTS=true},
 		{ISDOOR=true, GRIDX=6, GRIDY=-1, SLOT=1, EXISTS=true},
 		{ISDOOR=true, GRIDX=6, GRIDY=7, SLOT=3, EXISTS=true},

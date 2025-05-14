@@ -80,7 +80,7 @@ Up to groups of 3.
    </bitfield>
 </entity>
 <entity ID="161" Variant="42" Name="Plier" Image="mah boys/plier.png" BaseHP="10" Tags="Champion"/>
-<entity ID="161" Variant="43" Name="Weblet" Image="mah boys/weblet.png" BaseHP="8"/>
+<entity ID="161" Variant="44" Name="Weblet" Image="mah boys/weblet.png" BaseHP="8"/>
 <entity ID="161" Variant="45" Name="Small Nest" Image="mah boys/small nest.png" BaseHP="7">
    <bitfield Key="Subtype">
       <checkbox Name="Doesnt Grow" Length="1"/>
