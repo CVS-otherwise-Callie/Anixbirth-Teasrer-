@@ -38,10 +38,10 @@ function mod:AngerymanAI(npc, sprite, d)
 
         if mod:isScare(npc) then
             local targetvelocity = (targetpos - npc.Position):Resized(-4)
-            npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 1)
+            npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 0.2)
         elseif room:CheckLine(npc.Position,targetpos,0,1,false,false) then
             local targetvelocity = (targetpos - npc.Position):Resized(4)
-            npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 1)
+            npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 0.2)
         else
             path:FindGridPath(targetpos, 0.7, 1, true)
         end

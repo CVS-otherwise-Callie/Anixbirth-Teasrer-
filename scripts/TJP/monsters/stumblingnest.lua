@@ -45,7 +45,7 @@ function mod:StumblingNestAI(npc, sprite, d)
         d.dist = 60
         d.frame = 0
         d.webletcooldown = math.random(50,75)
-        npc:AddEntityFlags(EntityFlag.FLAG_NO_KNOCKBACK | EntityFlag.FLAG_NO_PHYSICS_KNOCKBACK)
+        --npc:AddEntityFlags(EntityFlag.FLAG_NO_KNOCKBACK | EntityFlag.FLAG_NO_PHYSICS_KNOCKBACK)
 
         d.init = true
     else
