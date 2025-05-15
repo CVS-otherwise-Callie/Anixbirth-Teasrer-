@@ -182,6 +182,47 @@ function mod.lightpressurePlateAIPost(customGrid)
 
 end
 
+-- allows stoners to activate StageAPI pressure plates --
+
+mod:AddCallback(ModCallbacks.MC_POST_EFFECT_UPDATE, function(_, button)
+        local sprite, data = button:GetSprite(), button:GetData()
+
+    for k, v in ipairs(Isaac.FindInRadius(button.Position, 100, EntityPartition.ENEMY)) do
+        if v.Type == mod.Monsters.Stoner.ID and v.Variant == mod.Monsters.Stoner.Var and v.Position:DistanceSquared(button.Position) < (20 + v.Size) ^ 2 and not button:GetData().ButtonGridData.Triggered then
+            sfx:Play(SoundEffect.SOUND_BUTTON_PRESS)
+            button:GetData().ButtonGridData.Triggered = true
+            button:GetSprite():Play("Switched", true)
+
+            local currentRoom = StageAPI.GetCurrentRoom()
+            if currentRoom then
+                local triggerable = currentRoom.Metadata:Search({
+                    Groups = currentRoom.Metadata:GroupsWithIndex(data.ButtonIndex),
+                    Index = data.ButtonIndex,
+                    IndicesOrGroups = true,
+                    Tag = "Triggerable"
+                })
+
+                for _, metaEnt in ipairs(triggerable) do
+                    metaEnt.Triggered = true
+                end
+            end
+        end
+    end
+end, StageAPI.E.Button.V)
+
+
+function mod.AllStageAPITrapdoors(customGrid)
+    local grid = customGrid.GridEntity
+
+    for k, v in ipairs(Isaac.FindInRadius(grid.Position, 100, EntityPartition.ENEMY)) do
+        if v.Type == mod.Monsters.Stoner.ID and v.Variant == mod.Monsters.Stoner.Var and  v.Position:DistanceSquared(v.Position) < (20 + v.Size) ^ 2 then
+            sfx:Play(SoundEffect.SOUND_BUTTON_PRESS)
+            grid:GetData().ButtonGridData.Triggered = true
+            grid:GetSprite():Play("Switched", true)
+        end
+    end
+end
+
 -- Custom Pot --
 
 local customPotTab = {

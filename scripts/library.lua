@@ -784,11 +784,13 @@ end
 
 function mod:SaveEntToRoom(npc)
 	
+	AnixbirthSaveManager.GetFloorSave().anixbirthsaveData = AnixbirthSaveManager.GetFloorSave().anixbirthsaveData or {}
 	local ta = AnixbirthSaveManager.GetFloorSave().anixbirthsaveData
 	ta.PreSavedEnts = ta.PreSavedEnts or {}
 
 	for k, v in ipairs(Isaac.GetRoomEntities()) do
-		if v.Position:Distance(npc.Position) == 0 and v:GetData().isanixbirthCopy then
+		if v.Position:Distance(npc.Position) == 0 and v:GetData().isanixbirthCopy and npc.InitSeed ~= v.InitSeed then
+			ta.PreSavedEnts[tostring(v.InitSeed)] = nil
 			npc:Remove()
 		end
 	end
@@ -828,6 +830,7 @@ end
 
 
 function mod:LoadSavedRoomEnts()
+
 	local tab = AnixbirthSaveManager.GetFloorSave().anixbirthsaveData
 
 	if not tab then return end
@@ -836,7 +839,7 @@ function mod:LoadSavedRoomEnts()
 	for k, v in pairs(tab.PreSavedEnts) do
 		if
 		v.ListIndex == game:GetLevel():GetCurrentRoomDesc().ListIndex and 
-		v.Stage == game:GetLevel():GetStage() and v.Type and v.Variant and v.Subtype  then
+		v.Stage == game:GetLevel():GetStage() and v.Type and v.Variant and v.Subtype and #Isaac.FindInRadius(Vector(v.PositionX, v.PositionY), 1, EntityPartition.ENEMY) == 0 then
 			tab.PreSavedEnts[k] = nil
 			local ent = Isaac.Spawn(v.Type, v.Variant, v.Subtype, Vector(v.PositionX, v.PositionY), Vector(v.VelocityX, v.VelocityY), nil)
 			local d = ent:GetData()

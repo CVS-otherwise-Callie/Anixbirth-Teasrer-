@@ -164,7 +164,6 @@ FHAC:AddCallback(ModCallbacks.MC_EVALUATE_CACHE,function(_, player, flag)
 end)
 
 function FHAC:NPCGetHurtStuff(npc, damage, flag, source, countdown)
-    FHAC:AngeryManTakeDamage(npc, damage, flag, source)
     FHAC:PatientGetHurt(npc, damage, flag, source,countdown)
     FHAC:PallunLeaveWhenHit(npc)
     FHAC:StrawDollActiveEffect(npc, damage, flag, countdown)

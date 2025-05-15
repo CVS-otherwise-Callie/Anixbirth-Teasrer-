@@ -59,7 +59,7 @@ function mod:StonerAI(npc, sprite, d)
             ef:SetTimeout(10)
             ef.SpriteScale = Vector(0.03,0.03)
         end
-        npc:PlaySound(mod.Sounds.TombstoneMove, math.random(3, 5)/10, 0, false, math.random(80, 101)/100, 0)
+        npc:PlaySound(mod.Sounds.TombstoneMove, math.random(3, 5)/10, 0, false, math.random(40, 65)/100, 0)
     else
         d.movementinit= false
     end
