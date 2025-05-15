@@ -45,7 +45,7 @@ function mod:WebletAI(npc, sprite, d)
                     d.spriteoffset = Vector(math.random(-4,4),math.random(-4,4))
                 end
                 npc.Position = npc.Parent.Position + Vector(d.spriteoffset.X,0)
-                npc.DepthOffset = 1
+                npc.DepthOffset = 4
                 npc.SpriteOffset = Vector(0, d.spriteoffset.Y)
             end
             d.state = "escapingappear"
