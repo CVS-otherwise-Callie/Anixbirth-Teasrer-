@@ -32,7 +32,7 @@
 	        canShoot="true"
                 hp="6"
                 portrait="pongon.png"
-                skinColor="-1"
+                skinColor="0"
         />
 </players>
 
