@@ -80,7 +80,17 @@ Up to groups of 3.
    </bitfield>
 </entity>
 <entity ID="161" Variant="42" Name="Plier" Image="mah boys/plier.png" BaseHP="10" Tags="Champion"/>
-<entity ID="161" Variant="43" Name="Stumbling Nest" Image="mah boys/stumblingnest.png" BaseHP="12" Tags="Champion"/>
+<entity ID="161" Variant="43" Name="Stumbling Nest" Image="mah boys/stumblingnest.png" BaseHP="12" Tags="Champion">
+   <bitfield Key="Subtype">
+      <dropdown Name="Direction" Length="5">
+         <choice Value="0">Random</choice>
+         <choice Value="1">Right</choice>
+         <choice Value="2">Up</choice>
+         <choice Value="3">Left</choice>
+         <choice Value="4">Down</choice>
+      </dropdown>
+   </bitfield>
+</entity>
 <entity ID="161" Variant="44" Name="Weblet" Image="mah boys/weblet.png" BaseHP="8"/>
 <entity ID="161" Variant="45" Name="Small Nest" Image="mah boys/small nest.png" BaseHP="7">
    <bitfield Key="Subtype">

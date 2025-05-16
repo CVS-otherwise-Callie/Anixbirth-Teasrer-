@@ -1,4 +1,9 @@
 <data>
+    <stage Name="Cellar">
+        <Gfx>
+        	<Entity ID="1900" Image="grids/1900.0.0 - Block Cellar.png" />
+        </Gfx>
+    </stage>
     <stage Name="Dross">
         <Gfx>
             <Entity ID="161" Variant="5" SubType="0" Image="mah boys/cowpat_dross.png"/>

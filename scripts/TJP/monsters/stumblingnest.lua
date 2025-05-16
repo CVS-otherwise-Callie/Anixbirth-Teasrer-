@@ -16,7 +16,7 @@ function mod:StumblingNestAI(npc, sprite, d)
 
         local room = game:GetRoom()
 
-        local tab = {GridEntityType.GRID_ROCK, GridEntityType.GRID_ROCKT, GridEntityType.GRID_ROCK_BOMB, GridEntityType.GRID_ROCK_ALT, GridEntityType.GRID_LOCK, GridEntityType.GRID_TNT, GridEntityType.GRID_FIREPLACE,
+        local tab = {GridEntityType.GRID_ROCK, GridEntityType.GRID_ROCKB, GridEntityType.GRID_ROCKT, GridEntityType.GRID_ROCK_BOMB, GridEntityType.GRID_ROCK_ALT, GridEntityType.GRID_LOCK, GridEntityType.GRID_TNT, GridEntityType.GRID_FIREPLACE,
         GridEntityType.GRID_WALL, GridEntityType.GRID_DOOR, GridEntityType.GRID_STATUE, GridEntityType.GRID_ROCK_SS, GridEntityType.GRID_PILLAR, GridEntityType.GRID_ROCK_SPIKED, GridEntityType.GRID_ROCK_ALT2,
         GridEntityType.GRID_ROCK_GOLD}
 
@@ -42,7 +42,7 @@ function mod:StumblingNestAI(npc, sprite, d)
         d.oldtarget = Isaac.WorldToScreen(npc.Position)
         d.oldtrailend = npc.Position
         d.grid = StumblingNestEntAI(d.direction)
-        d.dist = 60
+        d.dist = 50
         d.frame = 0
         d.webletcooldown = math.random(50,75)
         --npc:AddEntityFlags(EntityFlag.FLAG_NO_KNOCKBACK | EntityFlag.FLAG_NO_PHYSICS_KNOCKBACK)
@@ -59,7 +59,7 @@ function mod:StumblingNestAI(npc, sprite, d)
 
     if d.state == "idle" then
 
-        npc.Velocity = mod:Lerp(npc.Velocity, Vector(0, 8.5):Rotated(-90*d.direction), 0.05)
+        npc.Velocity = mod:Lerp(npc.Velocity, Vector(0, 5):Rotated(-90*d.direction), 0.1)
 
         --this last part
         if not mod:GetClosestGridEntToPos(npc.Position, true, true) then return end
@@ -67,7 +67,7 @@ function mod:StumblingNestAI(npc, sprite, d)
 
         if d.direction == 1 or d.direction == 3 then
             if grid and grid.Position:Distance(npc.Position) < d.dist then
-                npc:MultiplyFriction(0.8)
+                --npc:MultiplyFriction(0.8)
                 if d.direction >= 4 then
                     d.direction = 1
                 else
@@ -78,7 +78,7 @@ function mod:StumblingNestAI(npc, sprite, d)
         else
             if grid and grid.Position:Distance(npc.Position) < d.dist then
                 npc.StateFrame = 11
-                npc:MultiplyFriction(0.8)
+                --npc:MultiplyFriction(0.8)
                 if d.direction >= 4 then
                     d.direction = 1
                 else
