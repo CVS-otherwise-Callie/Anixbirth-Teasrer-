@@ -22,6 +22,12 @@ FHAC:LoadScripts("scripts.TJP.monsters", {
     "stumblingnest"
 })
 
+FHAC:LoadScripts("scripts.TJP.bosses", {
+    "hop",
+    "skip",
+    "jump"
+})
+
 FHAC:LoadScripts("scripts.TJP.effects", {
 	"clatterteller_target"
 })
