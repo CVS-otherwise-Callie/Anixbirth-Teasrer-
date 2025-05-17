@@ -6,6 +6,7 @@ FHAC.TJPMonsters = {
     Weblet = FHAC:ENT("Weblet"),
     WebMother = FHAC:ENT("Web Mother"),
     StumblingNest = FHAC:ENT("Stumbling Nest"),
+    TaintedWebMother = FHAC:ENT("Tainted Web Mother")
 }
 
 FHAC:MixTables(FHAC.Monsters, FHAC.TJPMonsters)
@@ -19,7 +20,8 @@ FHAC:LoadScripts("scripts.TJP.monsters", {
     "roach",
     "weblet",
     "webmother",
-    "stumblingnest"
+    "stumblingnest",
+    "taintedwebmother"
 })
 
 FHAC:LoadScripts("scripts.TJP.bosses", {
