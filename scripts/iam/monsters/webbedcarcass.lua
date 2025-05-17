@@ -21,7 +21,7 @@ bsprite:Load("gfx/monsters/webbedcarcass/webbedcarcass.anm2", true)
 function mod:WebbedCarcassAI(npc, sprite, d)
 
     if not d.init then
-        d.sprite = tostring(math.random(2))
+        d.sprite = d.sprite or tostring(math.random(2))
         d.init = true
     end
 
@@ -33,10 +33,11 @@ function mod:WebbedCarcassAI(npc, sprite, d)
         mod:spritePlay(sprite, "Dead" .. d.sprite)
     end
 
-    if npc.MaxHitPoints / npc.HitPoints < 0.3 then
+    if npc.MaxHitPoints / npc.HitPoints > 2 and not d.isDead then
         d.isDead = true
         Isaac.Spawn(EntityType.ENTITY_EFFECT, EffectVariant.BLOOD_EXPLOSION, 0, npc.Position, Vector.Zero, npc)
         SFXManager():Play(SoundEffect.SOUND_DEATH_BURST_SMALL, 1, 2, false, 1, 0)
+        npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_NONE
     end
 
 end
