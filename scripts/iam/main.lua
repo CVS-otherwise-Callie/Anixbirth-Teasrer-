@@ -61,7 +61,8 @@ FHAC.CVSMonsters = {
 	FearFlower = mod:ENT("Fear Flower"),
     StallCreep = mod:ENT("Stall Creep"),
     WebbedCreep = mod:ENT("Webbed Creep"),
-	AngeryMan = mod:ENT("Angery Man")
+	AngeryMan = mod:ENT("Angery Man"),
+	WebbedCarcass = mod:ENT("Webbed Carcass")
 }
 
 mod:MixTables(FHAC.Monsters, FHAC.CVSMonsters)
@@ -118,7 +119,8 @@ FHAC:LoadScripts("scripts.iam.monsters", {
 	"stallcreep",
 	"webbedcreep",
 	"smallsack",
-	"angeryman"
+	"angeryman",
+	"webbedcarcass"
 })
 
 FHAC:LoadScripts("scripts.iam.minibosses", {
@@ -401,6 +403,20 @@ function mod:CVSNewRoom()
 			end
 		end
 	end
+
+	local levelswithBlocks = {
+		"basement",
+		"cellar"
+	}
+
+	local room = game:GetRoom()
+    for i = 0, room:GetGridSize() do
+        if room:GetGridEntity(i) and room:GetGridEntity(i):GetType() == GridEntityType.GRID_ROCKB and mod:CheckTableContents(levelswithBlocks, mod:removeSubstring(string.lower(game:GetLevel():GetName()), " i")) then
+            local sprite = room:GetGridEntity(i):GetSprite()
+			sprite:ReplaceSpritesheet(0, "gfx/grid/stages/rocks_" .. mod:removeSubstring(string.lower(game:GetLevel():GetName()), " i") .. ".png")
+			sprite:LoadGraphics()
+        end
+    end
 end
 
 --thx ff

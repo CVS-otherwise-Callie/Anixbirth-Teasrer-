@@ -329,6 +329,12 @@
         <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
     </entity>
 
+    <entity anm2path="monsters/webbedcarcass/webbedcarcass.anm2" id="161" variant="59" reroll="true" baseHP="10" boss="0" champion="1" collisionDamage="1" collisionMass="40" collisionRadius="13" friction="0" name="Webbed Carcass" numGridCollisionPoints="12" shadowSize="23" stageHP="0" shutdoors="false" hasFloorAlts="true" bestiary="true" portrait="532">
+        <bestiary transform="0,0,1" anim="Idle" />
+        <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
+        <devolve id="12.0.0" weight="1" />
+    </entity>
+
     <entity id="240" variant="359" name="Stall Creep" baseHP="10" stageHP="0" boss="0" champion="0" collisionDamage="1" collisionMass="14" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="0" portrait="660" anm2path="monsters/stallcreep/stall_creep.anm2" bestiary="true" bestiaryTransform="0,0,1" bestiaryAnim="Walk">
         <gibs amount="4" blood="1" bone="0" eye="0" gut="1" large="0" />
         <devolve id="240.0.0" weight="1" />
