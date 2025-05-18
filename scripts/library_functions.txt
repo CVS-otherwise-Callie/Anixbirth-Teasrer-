@@ -34,7 +34,7 @@ Ask TJP for further questions
 
 
 ------------------------------------------------------------------------------------------------
-                                            SPRITE
+                                            MOVEMENT
 ------------------------------------------------------------------------------------------------
 ---
 ConvertVectorToWordDirection(velocity, Xpriority, Ypriority)
