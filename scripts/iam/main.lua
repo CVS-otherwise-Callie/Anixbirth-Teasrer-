@@ -62,7 +62,8 @@ FHAC.CVSMonsters = {
     StallCreep = mod:ENT("Stall Creep"),
     WebbedCreep = mod:ENT("Webbed Creep"),
 	AngeryMan = mod:ENT("Angery Man"),
-	WebbedCarcass = mod:ENT("Webbed Carcass")
+	WebbedCarcass = mod:ENT("Webbed Carcass"),
+	Bewebbed = mod:ENT("Bewebbed")
 }
 
 mod:MixTables(FHAC.Monsters, FHAC.CVSMonsters)
@@ -120,7 +121,8 @@ FHAC:LoadScripts("scripts.iam.monsters", {
 	"webbedcreep",
 	"smallsack",
 	"angeryman",
-	"webbedcarcass"
+	"webbedcarcass",
+	"bewebbed"
 })
 
 FHAC:LoadScripts("scripts.iam.minibosses", {
