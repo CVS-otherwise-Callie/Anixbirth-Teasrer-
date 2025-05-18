@@ -14,6 +14,12 @@ end
 FHAC.Monsters = {
 }
 
+FHAC.Bosses = {
+    Hop = mod:ENT("Hop"),
+    Skip = mod:ENT("Skip"),
+    Jump = mod:ENT("Jump")
+}
+
 FHAC.MiniBosses = {
     Narcissism = mod:ENT("Narcissism"),
     Chomb = mod:ENT("Chomb")

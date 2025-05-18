@@ -523,6 +523,11 @@
     	<devolve id="9.0.0" weight="1" />
 	</entity>
 
+    <entity anm2path="monsters/taintedwebmother/taintedwebmother.anm2" id="426" variant="3" subtype="0" reroll="false" baseHP="100" boss="0" champion="0" collisionDamage="1" collisionMass="1" collisionRadius="1" friction="1" name="Tainted Web Mother" numGridCollisionPoints="12" shadowSize="15" stageHP="13" shieldStrength="20" bestiary="true" portrait="36" >
+        <bestiary transform="0,0,1" anim="MiddleLegsDown" />
+        <gibs amount="6" blood="2" bone="1" eye="1" gut="1" large="0" />
+        <devolve id="161.47.0" weight="1" />
+    </entity>
     <!-- Minibosses -->
 
     <entity anm2path="minibosses/narcissism/narcissism.anm2" id="95" variant="0" subtype="0" reroll="false" baseHP="130" boss="1" champion="0" collisionDamage="1" collisionMass="40" collisionRadius="10" friction="1" name="Narcissism" numGridCollisionPoints="12" shadowSize="15" stageHP="13" shieldStrength="10" bestiary="true" portrait="1020" >
@@ -547,6 +552,20 @@
 		<bestiary transform="0,-3,1" anim="Move Hori" />
         <gibs amount="4" blood="1" bone="0" eye="0" gut="1" large="0" />
     </entity>
+
+    <!-- Bosses -->
+
+    <entity id="139" variant="48"  name="Hop" anm2path="bosses\hopperbrothers\hop.anm2" hasFloorAlts="false" reroll="false" baseHP="120" boss="1" champion="0" collisionDamage="1" collisionMass="24" collisionRadius="25" collisionRadiusXMulti="1.5" friction="0" numGridCollisionPoints="12" shadowSize="45" stageHP="20" portrait="0" tags="noreroll">
+        <gibs amount="20" blood="1" bone="1" eye="1" gut="1" large="1" />
+    </enitity>
+
+    <entity id="139" variant="49"  name="Skip" anm2path="bosses\hopperbrothers\skip.anm2" hasFloorAlts="false" reroll="false" baseHP="90" boss="1" champion="0" collisionDamage="1" collisionMass="16" collisionRadius="20" collisionRadiusXMulti="2.5" friction="0" numGridCollisionPoints="12" shadowSize="60" stageHP="20" portrait="0" tags="noreroll">
+        <gibs amount="20" blood="1" bone="1" eye="1" gut="1" large="1" />
+    </enitity>
+
+    <entity id="139" variant="50"  name="Jump" anm2path="bosses\hopperbrothers\jump.anm2" hasFloorAlts="false" reroll="false" baseHP="90" boss="1" champion="0" collisionDamage="1" collisionMass="8" collisionRadius="20" collisionRadiusXMulti="1.5" friction="0" numGridCollisionPoints="12" shadowSize="32" stageHP="20" portrait="0" tags="noreroll">
+        <gibs amount="20" blood="1" bone="1" eye="1" gut="1" large="1" />
+    </enitity>
 
     <!--Jokes-->
     <entity anm2path="jokes/enemies/gaperrr/gaperrr.anm2" id="10" variant="5938" reroll="false" baseHP="13" boss="0" champion="1" collisionDamage="1" collisionMass="40" collisionRadius="13" friction="1" name="A gaper w/ three legs, why did we do this" numGridCollisionPoints="12" shadowSize="12" stageHP="3">

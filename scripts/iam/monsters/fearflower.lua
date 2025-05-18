@@ -41,13 +41,13 @@ function mod:FearFlowerAI(npc, sprite, d)
             if d.fearEffect.SpriteScale.X <= 0.5 then
                 d.fearEffect.SpriteScale = Vector(0.5, 0.5)
             else
-                d.fearEffect.SpriteScale = d.fearEffect.SpriteScale*0.99
+                d.fearEffect.SpriteScale = d.fearEffect.SpriteScale*0.93
             end
         end
 
         mod:spritePlay(sprite, "ClosedLoop")
 
-        if npc.StateFrame > 100 then
+        if npc.StateFrame > 30 then
             d.state = "opening"
         end
 
@@ -64,10 +64,10 @@ function mod:FearFlowerAI(npc, sprite, d)
         npc.StateFrame = 0
         d.state = "hiding"
     end
-    
+
     if sprite:IsEventTriggered("Open") then
         d.canbeHit = true
-        
+
     elseif sprite:IsEventTriggered("Close") then
         d.canbeHit = false
     end
