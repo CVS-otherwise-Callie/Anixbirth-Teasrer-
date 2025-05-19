@@ -2,4 +2,4 @@ hey yall, pongon here! this is a mod for "The Binding of Isaac Repentance", i do
 
 discord: https://discord.gg/Fke75npxeJ
 
-also btw this the testing thing not the actual mod, if you want the actual one goto the dang steam workshop and download it there.
+this is the unreleased version that has more content than the steam version atm but has more bugs n broken stuff
