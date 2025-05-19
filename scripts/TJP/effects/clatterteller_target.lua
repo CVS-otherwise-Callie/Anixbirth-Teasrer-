@@ -21,7 +21,7 @@ function mod:ClatterTellerTargetAI(ef, sprite, d)
             d.clatter_teller = ef.Parent:GetData()
             d.playerpos = d.clatter_teller.playerpos
             d.effectpos = ef.Position
-    
+
             if d.state == "chase" then
                 if not d.speed then
                     d.speed = 0

@@ -110,6 +110,7 @@ function mod:BabbleAI(npc, sprite, d)
         if not d.charginginit then
             sprite:PlayOverlay("ChargeInit")
         else
+            sprite.PlaybackSpeed = 1+(num*0.2)
             sprite:PlayOverlay("Charge")
             if npc:IsChampion() or game.Difficulty == 1 and npc.StateFrame < 10 then
                 npc:AddEntityFlags(EntityFlag.FLAG_NO_PHYSICS_KNOCKBACK)
@@ -163,6 +164,7 @@ function mod:BabbleAI(npc, sprite, d)
             end
 
             if npc:CollidesWithGrid() then
+                sprite.PlaybackSpeed = 1
                 d.state = "slam"
                 npc:PlaySound(SoundEffect.SOUND_FORESTBOSS_STOMPS, 1, 1, false, 1)
                 Game():ShakeScreen(3)

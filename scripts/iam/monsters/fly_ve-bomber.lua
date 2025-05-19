@@ -40,7 +40,7 @@ function mod:FlyveBomberAI(npc, sprite, d) --thanks euan lmaooooooooooo
 
     if d.state == "idle" then
         mod:spritePlay(sprite, "Idle")
-            
+
         if d.coolaccel and d.coolaccel < 5 then
             d.coolaccel = 0.5
             d.coolaccel = d.coolaccel + 0.1
@@ -79,22 +79,15 @@ function mod:FlyveBomberAI(npc, sprite, d) --thanks euan lmaooooooooooo
             npc.StateFrame = 0
             d.spawnPreInit = true
         end
-        if (npc.Position:Distance(npc:GetPlayerTarget().Position) < 3 or npc.StateFrame > 40 + d.FlyveBomberoffset) and (not d.stopMovingAsshole) then
-            d.stopMovingAsshole = true
+        if (npc.Position:Distance(npc:GetPlayerTarget().Position) < 3 or npc.StateFrame > 40 + d.FlyveBomberoffset) then
             npc.StateFrame = 0
-        end
-        if npc.StateFrame > 30 + d.FlyveBomberoffset and d.stopMovingAsshole then
             d.state = "spawn"
         end
     end
 
     if sprite:IsFinished("Up") then
-        if not d.stopMovingAsshole then
-            d.newpos = npc:GetPlayerTarget().Position - npc.Position
-            npc.Velocity = mod:Lerp(npc.Velocity, d.newpos, 0.5):Resized(10)
-        else
-            npc.Velocity = npc.Velocity * 0.3
-        end
+        d.newpos = npc:GetPlayerTarget().Position - npc.Position
+        npc.Velocity = mod:Lerp(npc.Velocity, d.newpos, 0.5):Resized(10)
     end
 
     if d.state == "spawn" then
@@ -112,7 +105,6 @@ function mod:FlyveBomberAI(npc, sprite, d) --thanks euan lmaooooooooooo
         npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_ALL
         d.state = "idle"
         d.count = 0
-        d.stopMovingAsshole = false
         d.spawnPreInit = false
         npc.StateFrame = 0
     end
