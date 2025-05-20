@@ -4,9 +4,8 @@ local ms = MusicManager()
 
 function mod:MusicCheckCallback()
     local rDD = game:GetLevel():GetCurrentRoomDesc().Data
-	local useVar = rDD.Variant
+    local customMusicID
     if mod.DSSavedata and mod.DSSavedata.customRoomMusic == 1 then
-    local customMusicID = nil
 
     
 
@@ -28,10 +27,20 @@ function mod:MusicCheckCallback()
         end
     end
 
+    end
+    if mod:IsAnyPlayerPongon() then
+        if mod:GetRoomNameByType(rDD.Type) == "Boss" then
+            if Isaac.GetCurrentStageConfigId() > 26 then
+                customMusicID = Isaac.GetMusicIdByName("PongonBossAlt")
+            else
+                customMusicID = Isaac.GetMusicIdByName("PongonBoss")
+            end
+        end
+    end
+
     if customMusicID and customMusicID~=-1 and ms:GetCurrentMusicID() ~= customMusicID and ms:GetCurrentMusicID() < 118 then
         ms:Play(customMusicID, 0)
         ms:UpdateVolume()
-    end
     end
 end
 
@@ -68,13 +77,17 @@ function mod:NPCReplaceCallback(npc)
     end
 end
 
-function mod:SongChangesToIngameOST(music, arg, arg2)
+function mod:SongChangesToIngameOST()
+
     local lev = game:GetLevel():GetAbsoluteStage()
     local back = game:GetRoom():GetBackdropType()
-    local song
-    if lev ~= LevelStage.STAGE7 then
-        if back == BackdropType.BASEMENT then
-            song = Isaac.GetMusicIdByName("AnixbirthBasement")
+    local roomConfigStage = RoomConfig.GetStage(Isaac.GetCurrentStageConfigId())
+    if mod:IsAnyPlayerPongon() then
+
+        if Isaac.GetCurrentStageConfigId() > 26 then
+            roomConfigStage:SetMusic(Isaac.GetMusicIdByName("PongonLevelAlt"))
+        else
+            roomConfigStage:SetMusic(Isaac.GetMusicIdByName("PongonLevel"))
         end
     end
 end

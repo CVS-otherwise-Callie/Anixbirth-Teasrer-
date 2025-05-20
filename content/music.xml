@@ -12,6 +12,11 @@
         <!--Floor Music-->
         <track name="AnixbirthBasement" path="shhh piano builds go away/AnixbirthBuild3.ogg" loop="true"/>
 
+        <!-- We are so getting copyrighted for this -->
+        <track name="PongonLevel" path="pongonlevel.ogg" loop="true"/>
+        <track name="PongonBoss" path="pongonboss.ogg" loop="true"/>
+        <track name="PongonLevelAlt" path="pongonflooralt.ogg" loop="true"/>
+        <track name="PongonBossAlt" path="pongonbossalt.ogg" loop="true"/>
         <!--Cutscene Music-->
         <track name="ruinsecret" path="hmksecret.ogg" loop="true"/>
 

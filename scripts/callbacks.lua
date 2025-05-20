@@ -97,6 +97,7 @@ function FHAC:PostNewRoom()
     FHAC:SpawnRandomDried()
     FHAC:BigBowlOfSauerkrautSpawn()
     FHAC:RemoveAllSpecificItemEffects(Isaac.GetPlayer())
+    FHAC:SongChangesToIngameOST()
 
     FHAC:CVSNewRoom()
 end
@@ -208,10 +209,6 @@ AnixbirthSaveManager.AddCallback(AnixbirthSaveManager.Utility.CustomCallback.POS
 
 if REPENTOGON then
 
-    function FHAC:SongChangesToIngameOST(music, arg, arg2)
-        local rDD = game:GetLevel():GetCurrentRoomDesc().Data
-        return Isaac.GetMusicIdByName("AnixbirthFunctions")
-    end
 
 --FHAC:AddCallback(ModCallbacks.MC_PRE_MUSIC_PLAY, FHAC.SongChangesToIngameOST)
 

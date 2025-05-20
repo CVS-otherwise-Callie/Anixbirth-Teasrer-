@@ -443,6 +443,17 @@ function mod:GlobalCVSEntityStuff(npc, sprite, d)
 
 end
 
+function mod:IsAnyPlayerPongon()
+    local var = false
+    for i = 1, game:GetNumPlayers() do
+        if Isaac.GetPlayer(i):GetPlayerType() == Isaac.GetPlayerTypeByName("Pongon") then
+            return true
+        end
+    end
+    return false
+end
+
+
 --thx catinsurance
 
 mod:AddCallback(ModCallbacks.MC_PRE_ENTITY_SPAWN, function (_, entType, var, sub, pos, vel, spawner, seed)
