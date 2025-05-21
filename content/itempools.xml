@@ -5,6 +5,7 @@
 		<Item Name="Stinky Mushroom" Weight="3" DecreaseBy="1" RemoveOn="0.1"/>
 		<Item Name="Marketable Plushie" Weight="2" DecreaseBy="1" RemoveOn="0.1"/>
 		<Item Name="The Bell" Weight="0.1" DecreaseBy="1" RemoveOn="0.1"/>
+		<Item Name="Lil Ana" Weight="1" DecreaseBy="1" RemoveOn="0.1"/>
 	</Pool>
 	<Pool Name="shop">
 	</Pool>
@@ -44,7 +45,8 @@
 	<Pool Name="momsChest">
 	</Pool>
 	<Pool Name="greedTreasure"> <!--this is the golden room-->
-		<Item Name="Marketable Plushie" Weight="2" DecreaseBy="1" RemoveOn="0.1"/>
+		<Item Name="Marketable Plushie" Weight="1" DecreaseBy="1" RemoveOn="0.1"/>
+		<Item Name="Lil Ana" Weight="1" DecreaseBy="1" RemoveOn="0.1"/>
 	</Pool>
 	<Pool Name="greedBoss"> <!--this is the white room-->
 	</Pool>
@@ -59,11 +61,12 @@
 	<Pool Name="greedSecret">
 	</Pool>
 	<Pool Name="craneGame">
-		<Item Name="Marketable Plushie" Weight="2" DecreaseBy="1" RemoveOn="0.1"/>
+		<Item Name="Marketable Plushie" Weight="1" DecreaseBy="1" RemoveOn="0.1"/>
 	</Pool>
 	<Pool Name="ultraSecret">
 	</Pool>
 	<Pool Name="bombBum">
+		<Item Name="Lil Ana" Weight="0.1" DecreaseBy="1" RemoveOn="0.1"/> <!--cus of lore-->
 	</Pool>
 	<Pool Name="planetarium">
 	</Pool>

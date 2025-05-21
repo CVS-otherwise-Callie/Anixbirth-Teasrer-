@@ -3,6 +3,10 @@ local game = Game()
 function FHAC.FiendFolioCompat()
     if not FiendFolio then return false end
 
+	FHAC:LoadScripts("scripts.compatability.fiend folio", {
+		"music"
+	})
+
     FHAC.FiendFolioDungliveryEnts = {
         {FiendFolio.FF.Morsel.ID, FiendFolio.FF.Morsel.Var},
         {FiendFolio.FF.Limb.ID, FiendFolio.FF.Limb.Var},

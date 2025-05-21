@@ -37,7 +37,8 @@ FHAC.Grids = {
 
 FHAC.Familiars = { --YOU HAVE NO IDEA HOW MANY FUCKING TIMES I SPELLED THIS WRONG LMAO
     Snark = mod:ENT("Snark (Half Life)"),
-    MarketablePlushie = mod:ENT("Marketable Plushie Familiar")
+    MarketablePlushie = mod:ENT("Marketable Plushie Familiar"),
+    LilAna = mod:ENT("Lil' Ana")
 }
 
 FHAC.Effects = {
@@ -82,6 +83,7 @@ FHAC.Collectibles = {
         MoldyBread = Isaac.GetItemIdByName("Moldy Bread"),
 	    CorruptedFile = Isaac.GetItemIdByName("Corrupted File"),
 	    TheBell = Isaac.GetItemIdByName("The Bell"),
+    	LilAna = Isaac.GetItemIdByName("Lil Ana"),
     },
     PickupsEnt = {
         BowlOfSauerkraut = mod:ENT("Bowl of Sauerkraut"),

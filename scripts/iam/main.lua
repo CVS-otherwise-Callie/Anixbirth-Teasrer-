@@ -145,7 +145,8 @@ FHAC:LoadScripts("scripts.iam.effects", {
 
 FHAC:LoadScripts("scripts.iam.familiars", {
 	"snark",
-	"marketableplushie"
+	"marketableplushie",
+	"lilana"
 })
 
 FHAC:LoadScripts("scripts.iam.items.actives", {
@@ -424,7 +425,8 @@ end
 --thx ff
 
 mod.CVSFamsToBeEvaluated = {
-	{mod.Collectibles.Items.MarketablePlushie, mod.Familiars.MarketablePlushie.Var}
+	{mod.Collectibles.Items.MarketablePlushie, mod.Familiars.MarketablePlushie.Var},
+	{mod.Collectibles.Items.LilAna, mod.Familiars.LilAna.Var}
 }
 
 function mod:CVSFamiliarCheck(player, itemconfig)

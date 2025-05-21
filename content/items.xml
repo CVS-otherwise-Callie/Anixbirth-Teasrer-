@@ -16,5 +16,6 @@
 
     <!--Familairsare 200-->
     <familiar id="200" name="Marketable Plushie" description="This looks familiar" gfx="200_marketableplushie.png" quality="3" tags="summonable offensive" />
+    <familiar id="201" name="Lil Ana" description="What a cutie pie!" gfx="201_lilana.png" quality="2" tags="summonable offensive" />
 
 </items>

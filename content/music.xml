@@ -22,4 +22,5 @@
 
         <!--Misc Music-->
         <track name="albuquerque" path="albuquerque.ogg" loop="false"/>
+        <track name="petermation" path="petermation.ogg" loop="true"/>
 </music>
