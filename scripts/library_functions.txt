@@ -3,11 +3,102 @@ LIBRARY FUNCTIONS!!!!!!
 ok cvs im making a start to this before we add like 100 more functions well never remember to use again
 -TJP
 
+yiipeeeeeeeeeeee time to destory my keyboard
+-CVS
+
 NOTES:
 remember to keep things alphabetical (by that i mean the titles AND the functions within them)
 remember to describe what each parameter does AND what the output could look like
 try to keep the spacing consistent
 -----------------------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------
+                                               MISC
+------------------------------------------------------------------------------------------------
+
+---
+removeSubstring(str, substr)
+
+Removes the subtring from the string. Returns that...
+
+"str" - main string.
+"substr" - the string you want to remove.
+
+RETURNS string
+---
+
+
+------------------------------------------------------------------------------------------------
+                                             TABLES
+------------------------------------------------------------------------------------------------
+im playing table games! - CVS
+---
+CheckTableContents(table, element)
+
+Checks if the element is in the table. DOES NOT work with arrays! (As far as I know)
+
+"table" - is the table
+"element" - what you're looking for in the table
+
+RETURNS boolean TRUE or FALSE.
+
+---
+
+---
+FindLongerorShorterTable(tables, long, longest)
+
+Finds you the longer or shorter table. 
+
+"tables" is a table of tables. 
+"long" is a boolean value! If it's FALSE, it means you will get the shortest table. If it's TRUE, it means you'll get the longest table.
+"longest" is a number variable. Setting it means it caps how large the "longest" table can be (that gets returned to you)
+
+RETURNS table
+
+Ask CVS for any more questions :)
+---
+
+---
+getSeveralDifferentNumbers(needed, totalAmount, customRNG, blacklist)
+
+Gives you a table of a bunch of different numbers. How neat!
+
+"needed" is the amount of numbers you actually want to be variable (not 1)
+"totalAmount" is the amount of numbers you want. 
+"customRNG" is any specific RNG you want to feed it! This include room RNG and entity RNG.
+"blacklist" is a list of numbers you don't want to show up. Oh, well.
+
+RETURNS table
+
+Ask CVS for any more questions.
+---
+
+---
+MixTables(input, table)
+
+Does what you think it does. It will MIX the FIRST table into the SECOND.
+
+This means the SECOND TABLE will have data from the FIRST, 
+but the FIRST WILL NOT have data from the second.
+
+"input" is the FIRST TABLE.
+"table" is the SECOND TABLE.
+
+I really dont know how you would have further questions but ¯\_(ツ)_/¯ 
+---
+
+---
+ValidifyTables(table1, table2, basedonlength)
+
+Checks if two tables are the same.
+If the "basedonlength" variable is TRUE, it will ALWAYS check the longer table to the shorter table, instead of just the first to the second.
+
+"table1" - first table!
+"table2" - second table. 
+"basedonlength" - if set to true, the first table will be checked against the second, instead of in order.
+
+RETURNS table
+---
 
 
 
@@ -69,4 +160,18 @@ RETURN EXAMPLE:
 (1,0)
 
 Ask TJP for further questions
+---
+
+---
+Lerp(first, second, percent, smoothIn, smoothOut)
+
+Changes a Vector by getting the percent of a vector via shifting it's velocity to the "second" (treating second as a position)
+
+"first" is your velocity or the velocity you want to move.
+"second" is the position you want to go to. Sick!
+"percent" is the percent of the distance you want to move. 1 means it will go there instantly. Anything less and it "moves" there.
+"smoothIn" will make it square the percent by the smoothIn!
+"smoothOut" kinda does the same, but backwards.
+
+Ask CVS for further info :P
 ---
