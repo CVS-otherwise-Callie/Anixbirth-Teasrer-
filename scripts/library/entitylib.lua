@@ -1,6 +1,7 @@
 local mod = FHAC
 local rng = RNG()
 local game = Game()
+local sfx = SFXManager()
 
 function mod:reverseIfFear(npc, vec, multiplier)
 	multiplier = multiplier or 1
@@ -90,7 +91,7 @@ function mod:freeGridToPos(pos, path, far, close, closest) -- the npc, should it
 			if room:GetGridPosition(i) ~= nil then
 			local gridpoint = room:GetGridPosition(i)
 			if gridpoint and gridpoint:Distance(pos) < far and gridpoint:Distance(pos) > close and room:GetGridEntity(i) == nil and 
-			room:IsPositionInRoom(gridpoint, 0) and patherReal(npc, gridpoint) then
+			room:IsPositionInRoom(gridpoint, 0)  then
 				if closest then
 					if gridpoint:Distance(pos) < imtheclosest then
 						imtheclosest = gridpoint:Distance(pos)
@@ -295,17 +296,3 @@ end
 
 
 --Burslake Bestiary's Handy Dandy Code for morphing on death
-function FHAC:MorphOnDeath(npc, morphType, morphVariant, morphSub, sound, chance, times)
-	if not chance then chance = 1 end
-	if math.random() <= chance then
-		npc:Morph(morphType, morphVariant, morphSub, npc:GetChampionColorIdx())
-		if sound then
-			sfx:Play(sound)
-		end
-		npc:BloodExplode()
-		npc:GetData().anixbirthRespawned = true
-		npc.HitPoints = npc.MaxHitPoints
-	end
-
-	return npc
-end

@@ -1,4 +1,3 @@
-if FiendFolio then
 
     FiendFolio:AddCallback(ModCallbacks.MC_POST_PLAYER_UPDATE, function(_, player)
         local data = player:GetData()
@@ -21,5 +20,3 @@ if FiendFolio then
     end)
 
     --fittingly, i this is fiend folio code you are looking at!
-
-end
