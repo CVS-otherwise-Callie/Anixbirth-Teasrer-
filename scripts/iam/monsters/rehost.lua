@@ -18,7 +18,7 @@ function mod:ReHostAI(npc, sprite, d)
     local speed = 0
 
     if not d.init then
-        
+
 
         d.state = "chase"
 

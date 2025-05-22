@@ -17,8 +17,8 @@ function mod:WebletAI(npc, sprite, d)
     params.Scale = 0.3
     params.FallingSpeedModifier = -0.1
 
-
     if not d.init then
+
         npc.EntityCollisionClass = 0
         d.speed = 10
         d.init = true
@@ -42,7 +42,7 @@ function mod:WebletAI(npc, sprite, d)
                 if npc.Parent.Variant == mod.Monsters.WebMother.Var then
                     d.spriteoffset = Vector(math.random(-20,15),math.random(-10,10))
                 elseif npc.Parent.Variant == mod.Monsters.StumblingNest.Var then
-                    d.spriteoffset = Vector(math.random(-4,4),math.random(-4,4))
+                    d.spriteoffset = Vector(math.random(-4,4), math.random(-4,4))
                 end
                 npc.Position = npc.Parent.Position + Vector(d.spriteoffset.X,0)
                 npc.DepthOffset = 4
@@ -139,6 +139,7 @@ function mod:WebletAI(npc, sprite, d)
         mod:spritePlay(sprite, "Shoot")
         if sprite:IsEventTriggered("Shoot") then
             params.FallingSpeedModifier = 0.1
+            params.HeightModifier = 20
             npc:FireProjectiles(npc.Position, (player.Position-npc.Position):Resized(6) + npc.Velocity*0.2, 0, params)
         end
         if sprite:IsFinished() then
