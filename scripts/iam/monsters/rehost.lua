@@ -15,6 +15,7 @@ function mod:ReHostAI(npc, sprite, d)
     local path = npc.Pathfinder
     local room = game:GetRoom()
 
+
     local speed = 0
 
     if not d.init then
@@ -68,6 +69,7 @@ function mod:ReHostAI(npc, sprite, d)
         local realshot = Isaac.Spawn(9, 0, 0, npc.Position, Vector(10, 0):Rotated(((targetpos + target.Velocity) - npc.Position):GetAngleDegrees()), npc):ToProjectile()
         realshot.Scale = 0.8
         realshot.Color = Color(0.9, 0.3, 0.08, 1, 0, 0, 0)
+        realshot.Height = -50
         realshot:AddProjectileFlags(ProjectileFlags.BURST)
     end
 

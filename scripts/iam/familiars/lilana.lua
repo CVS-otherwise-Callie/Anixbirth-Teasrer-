@@ -15,6 +15,7 @@ function mod:LilAnaAI(fam, sprite, d)
     if not d.init then
 		d.stateframe = 0
 		d.animation = "Move"
+		d.num = 0
 		d.state = "chase"
 		d.XP = 1
 
@@ -67,9 +68,9 @@ function mod:LilAnaAI(fam, sprite, d)
 
 				d.animation = "Attack"
 
-				local num = player:GetFireDirection()
+				local num = player:GetFireDirection() or 1
 				if num ~= -1 then
-					d.num = num
+					d.num = num or 1
 				end
 				local targetpos = fam.Position + Vector(-10, 0):Rotated(90*d.num)
 
