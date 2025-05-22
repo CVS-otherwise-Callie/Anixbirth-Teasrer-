@@ -1,10 +1,10 @@
 <AnimatedActor>
-	<Info CreatedBy="Iam/TJP" CreatedOn="22/05/2025 21:23:54" Version="144" Fps="45"/>
+	<Info CreatedBy="Iam/TJP" CreatedOn="22/05/2025 21:30:23" Version="145" Fps="45"/>
 	<Content>
 		<Spritesheets>
-			<Spritesheet Path="rehost_downpour.png" Id="0"/>
+			<Spritesheet Path="rehost.png" Id="0"/>
 			<Spritesheet Path="..\rebirth\monster_000_bodies01.png" Id="1"/>
-			<Spritesheet Path="rererehost_downpour.png" Id="2"/>
+			<Spritesheet Path="rererehost.png" Id="2"/>
 		</Spritesheets>
 		<Layers>
 			<Layer Name="body" Id="0" SpritesheetId="1"/>
@@ -14,7 +14,9 @@
 		<Nulls>
 			<Null Name="OverlayEffect" Id="0" ShowRect="false"/>
 		</Nulls>
-		<Events/>
+		<Events>
+			<Event Name="blood" Id="0"/>
+		</Events>
 	</Content>
 	<Animations DefaultAnimation="WalkHori">
 		<Animation Name="WalkHori" FrameNum="34" Loop="true">
@@ -132,7 +134,9 @@
 			<NullAnimations>
 				<NullAnimation NullId="0" Visible="true"/>
 			</NullAnimations>
-			<Triggers/>
+			<Triggers>
+				<Trigger EventId="0" AtFrame="39"/>
+			</Triggers>
 		</Animation>
 		<Animation Name="HeadReIdle" FrameNum="76" Loop="true">
 			<RootAnimation>
