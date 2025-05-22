@@ -18,7 +18,7 @@ function mod:StumblingNestAI(npc, sprite, d)
 
         local tab = {GridEntityType.GRID_ROCK, GridEntityType.GRID_ROCKB, GridEntityType.GRID_ROCKT, GridEntityType.GRID_ROCK_BOMB, GridEntityType.GRID_ROCK_ALT, GridEntityType.GRID_LOCK, GridEntityType.GRID_TNT, GridEntityType.GRID_FIREPLACE,
         GridEntityType.GRID_WALL, GridEntityType.GRID_DOOR, GridEntityType.GRID_STATUE, GridEntityType.GRID_ROCK_SS, GridEntityType.GRID_PILLAR, GridEntityType.GRID_ROCK_SPIKED, GridEntityType.GRID_ROCK_ALT2,
-        GridEntityType.GRID_ROCK_GOLD}
+        GridEntityType.GRID_ROCK_GOLD, GridEntityType.GRID_POOP, GridEntityType.GRID_PIT, GridEntityType.GRID_SPIKES}
 
         --local tab = {GridEntityType.GRID_WALL, GridEntityType.GRID_DOOR}
         --1 is right, 2 is up, 3 is left, 4 is down
@@ -27,7 +27,7 @@ function mod:StumblingNestAI(npc, sprite, d)
         end
 
         if pos == 1 or pos == 3 then
-            return mod:GetClosestGridEntAlongAxisDirection(npc.Position, "X", true, true, d.direction*-90, tab, nil, room)        
+            return mod:GetClosestGridEntAlongAxisDirection(npc.Position, "X", true, true, d.direction*-90, tab, nil, room)
         end
 
     end
