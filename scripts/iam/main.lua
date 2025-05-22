@@ -1050,11 +1050,13 @@ function mod:CVSNewRoom()
 		"cellar"
 	}
 
+
 	local room = game:GetRoom()
     for i = 0, room:GetGridSize() do
         if room:GetGridEntity(i) and room:GetGridEntity(i):GetType() == GridEntityType.GRID_ROCKB and mod:CheckTableContents(levelswithBlocks, mod:removeSubstring(string.lower(game:GetLevel():GetName()), " i")) then
             local sprite = room:GetGridEntity(i):GetSprite()
 			sprite:ReplaceSpritesheet(0, "gfx/grid/stages/rocks_" .. mod:removeSubstring(string.lower(game:GetLevel():GetName()), " i") .. ".png")
+			print("gfx/grid/stages/rocks_" .. mod:removeSubstring(string.lower(game:GetLevel():GetName()), " i") .. ".png")
 			sprite:LoadGraphics()
         end
     end

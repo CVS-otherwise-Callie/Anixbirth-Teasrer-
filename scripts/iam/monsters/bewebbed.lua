@@ -15,24 +15,43 @@ function mod:BewebbedAI(npc, sprite, d)
     local params = ProjectileParams()
     local room = game:GetRoom()
 
-    if not d.init then
+    local function GetBewebbedGrid(pos)
+        local vec = Vector(0, 1)
+        local distance = 100000
 
-        npc:AddEntityFlags(EntityFlag.FLAG_NO_PHYSICS_KNOCKBACK | EntityFlag.FLAG_NO_KNOCKBACK)
-
-        local dist = 1000000000
         local pick
-
+        local rot 
         for i = 1, 4 do
-            local attachPos = room:GetLaserTarget(npc.Position, Vector(10, 0):Rotated((i-1)*90))
-
-            if attachPos:Distance(npc.Position) < dist then
-                dist = attachPos:Distance(npc.Position)
-                pick = {attachPos, i}
+            local gridvalid = true
+            local dist = 1
+            while gridvalid == true do
+                local newpos = pos + (vec:Rotated(i*90) * dist)
+                local gridColl = room:GetGridCollisionAtPos(newpos)
+                if gridColl == GridCollisionClass.COLLISION_WALL or not room:IsPositionInRoom(newpos, 15) then
+                    gridvalid = false
+                    if newpos:Distance(pos) < distance then
+                        pick = newpos
+                        distance = newpos:Distance(pos)
+                        rot = i+2
+                    end
+                else
+                    dist = dist + 1
+                end
             end
         end
+        return pick, rot
+    end
 
-        d.WallPosition = pick[1]
-        d.Direction = pick[2]
+    if not d.init then
+
+        d.init = true
+
+
+        npc:AddEntityFlags(EntityFlag.FLAG_NO_PHYSICS_KNOCKBACK | EntityFlag.FLAG_NO_KNOCKBACK)
+        npc.GridCollisionClass = GridCollisionClass.COLLISION_NONE
+
+        d.WallPosition,d.Direction = GetBewebbedGrid(npc.Position)
+        d.WallPosition = d.WallPosition + Vector(0, -10):Rotated(d.Direction*90)
 
         d.state = "idle"
 
@@ -63,7 +82,6 @@ function mod:BewebbedAI(npc, sprite, d)
 
         npc:FireProjectiles(npc.Position + (targetpos - npc.Position):Resized(1), (targetpos - npc.Position):Resized(7), 0, params)
     end
-
 
 end
 
