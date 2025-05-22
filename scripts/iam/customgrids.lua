@@ -269,6 +269,8 @@ mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
             --npc.HitPoints = 0.01
         end
 
+        d.gridPotLevel = d.gridPotLevel or 3
+
         if npc.HitPoints > 0.1 then
             mod:spritePlay(sprite, "Stage" .. d.gridPotLevel)
         else

@@ -315,7 +315,7 @@
     </entity>
 
     <entity id="37" variant="3" name="Woodhead" anm2path="monsters\woodhead/woodhead.anm2" hasFloorAlts="false" reroll="true" baseHP="12" boss="0" champion="1" collisionDamage="1" collisionMass="5" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="14" stageHP="1" portrait="26">
-		<bestiary transform="0,0,1" anim="WalkVert" overlay="Head" />
+		<bestiary transform="0,0,1" anim="WalkVert" overlay="HeadReIdle" />
         <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
     </entity>
 
@@ -331,6 +331,11 @@
 
     <entity id="161" variant="48" subtype="0" name="Bewebbed" anm2path="monsters/bewebbed/bewebbed.anm2" hasFloorAlts="false" reroll="true" baseHP="12" boss="0" champion="1" collisionDamage="1" collisionMass="5" collisionRadius="13" collisionRadiusXMulti="1.5" friction="1" numGridCollisionPoints="12" shadowSize="14" stageHP="0" portrait="4">
 		<bestiary transform="0,0,1" anim="Idle" />
+        <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
+    </entity>
+
+    <entity id="161" variant="49" name="Rehost" anm2path="monsters/rehost/rehost.anm2" hasFloorAlts="true" reroll="true" baseHP="12" boss="0" champion="1" collisionDamage="1" collisionMass="5" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="14" stageHP="0" portrait="">
+		<bestiary transform="0,0,1" anim="WalkVert" overlay="Head" />
         <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
     </entity>
 
