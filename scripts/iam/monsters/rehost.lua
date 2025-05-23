@@ -21,13 +21,20 @@ function mod:ReHostAI(npc, sprite, d)
     if not d.init then
 
 
-        d.state = "chase"
+        d.state = "spawned"
 
         npc.StateFrame = 30
 
         d.init = true
     else
         npc.StateFrame = npc.StateFrame + 1
+    end
+
+    if d.state == "spawned" then
+        mod:spritePlay(sprite, "HeadReComeoutSlow")
+        if sprite:IsFinished() then
+            d.state = "chase"
+        end
     end
 
     if d.state == "chase" then
@@ -42,8 +49,17 @@ function mod:ReHostAI(npc, sprite, d)
 
     end
 
-    if npc.StateFrame > 80 then
+    if npc.StateFrame > 80 and d.state == "chase" then
         d.state = "shoot"
+    end
+
+    if not (d.state == "spawned") then
+        if npc.Velocity:Length() > 1 then
+            npc:AnimWalkFrame("WalkHori","WalkVert",0)
+        else
+            if sprite:GetOverlayAnimation() == "Head" then sprite:SetOverlayFrame("Head", 19) end
+            sprite:SetFrame("WalkHori", 0)
+        end
     end
 
     if mod:isScare(npc) then
@@ -54,13 +70,6 @@ function mod:ReHostAI(npc, sprite, d)
         npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 0.3)
     else
         path:FindGridPath(targetpos, 0.7, 1, true)
-    end
-
-    if npc.Velocity:Length() > 1 then
-        npc:AnimWalkFrame("WalkHori","WalkVert",0)
-    else
-        if sprite:GetOverlayAnimation() == "Head" then sprite:SetOverlayFrame("Head", 19) end
-        sprite:SetFrame("WalkHori", 0)
     end
 
     if sprite:IsOverlayPlaying("HeadReShoot") and sprite:GetOverlayFrame() == 10 then
@@ -76,6 +85,13 @@ function mod:ReHostAI(npc, sprite, d)
     if sprite:IsOverlayFinished("HeadReShoot") then
         d.state = "chase"
         npc.StateFrame = 0
+    end
+
+    if sprite:IsEventTriggered("Blood") then
+        --game:SpawnParticles ( npc.Position, 7, 3, 4, Color.Default, 10, 0 )
+       -- game:SpawnParticles ( npc.Position, 77, 1, 0, Color.Default, 10, 0 )
+        game:SpawnParticles ( npc.Position, 5, 5, 5, Color.Default, 10, 0 )
+        npc:PlaySound(SoundEffect.SOUND_DEATH_BURST_LARGE, 1, 2, false, 1.5)
     end
 
 end
