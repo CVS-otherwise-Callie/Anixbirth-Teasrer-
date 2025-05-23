@@ -75,9 +75,13 @@ function mod:ReHostAI(npc, sprite, d)
     if sprite:IsOverlayPlaying("HeadReShoot") and sprite:GetOverlayFrame() == 10 then
         npc:PlaySound(SoundEffect.SOUND_WHIP, 1, 2, false, 1.5)
         npc:PlaySound(SoundEffect.SOUND_WORM_SPIT, 1, 2, false, 1.3)
-        local realshot = Isaac.Spawn(9, 0, 0, npc.Position, Vector(10, 0):Rotated(((targetpos + target.Velocity) - npc.Position):GetAngleDegrees()), npc):ToProjectile()
+        local realshot = Isaac.Spawn(9, ProjectileVariant.PROJECTILE_TEAR, 0, npc.Position, Vector(10, 0):Rotated(((targetpos + target.Velocity) - npc.Position):GetAngleDegrees()), npc):ToProjectile()
         realshot.Scale = 0.8
-        realshot.Color = Color(0.9, 0.3, 0.08, 1, 0, 0, 0)
+        if room:GetBackdropType() == BackdropType.DROSS then
+            realshot.Color = Color(0.4, 0.3, 0.08, 1, 0, 0, 0)
+        elseif not (room:GetBackdropType() == BackdropType.DOWNPOUR) then
+            realshot.Color = Color(0.9, 0.3, 0.08, 1, 0, 0, 0)
+        end
         realshot.Height = -50
         realshot:AddProjectileFlags(ProjectileFlags.BURST)
     end
