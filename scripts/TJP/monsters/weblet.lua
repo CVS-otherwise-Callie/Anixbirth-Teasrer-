@@ -344,7 +344,7 @@ function mod:WebletAI(npc, sprite, d)
 end
 
 function mod:canshoot(position, targetposition, cooldown, state)
-    if position:Distance(targetposition) < 30 and cooldown <= 0 and (state == "chase" or state == "return") then
+    if position:Distance(targetposition) < 30 and cooldown <= 0 and state == "chase" then
         return true
     else
         return false
