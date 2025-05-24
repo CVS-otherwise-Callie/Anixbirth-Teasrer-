@@ -1,0 +1,31 @@
+-----------------------------------------------------------------------------------------------------------------
+LIBRARY FUNCTIONS!!!!!!
+ok cvs im making a start to this before we add like 100 more functions well never remember to use again
+-TJP
+
+yiipeeeeeeeeeeee time to destory my keyboard
+-CVS
+
+NOTES:
+remember to keep things alphabetical (by that i mean the titles AND the functions within them)
+remember to describe what each parameter does AND what the output could look like
+try to keep the spacing consistent
+-----------------------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------
+                                            POSITION
+------------------------------------------------------------------------------------------------
+---
+GetClosestPositionInArea(areacentrepos, arealimit, pos)
+
+This function grabs a chosen position, and sets it to be within a certain radius around a chosen point.
+If the chosen position is already within the chosen point's radius, then the chosen position will be returned instead.
+ 
+"areacentrepos" is the centre of the radius
+"arealimit" is the max distance the returned position can be from the centrepos
+"pos" is the starting position that is changed
+
+RETURN EXAMPLE:
+(93, 35)
+Ask TJP for further questions
+---

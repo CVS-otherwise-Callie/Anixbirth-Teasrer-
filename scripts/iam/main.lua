@@ -437,7 +437,7 @@ function mod:GetClosestGridEntAlongAxisDirection(pos, axis, ignorepoop, ignoreho
 end
 
 function mod:SaveEntToRoom(npc)
-	
+
 	AnixbirthSaveManager.GetFloorSave().anixbirthsaveData = AnixbirthSaveManager.GetFloorSave().anixbirthsaveData or {}
 	local ta = AnixbirthSaveManager.GetFloorSave().anixbirthsaveData
 	ta.PreSavedEnts = ta.PreSavedEnts or {}
@@ -787,7 +787,7 @@ function mod:AltLockedClosetCutscene()
 		game.Challenge = 6
 		game:GetPlayer(i):UpdateCanShoot()
 	end
-	
+
 	if mod:CheckForEntInRoom({Type = mod.Monsters.LightPressurePlateEntNull.ID, Variant = mod.Monsters.LightPressurePlateEntNull.Var, SubType = 0}, true, true, false) == false then
 		local ent = Isaac.Spawn(mod.Monsters.LightPressurePlateEntNull.ID, mod.Monsters.LightPressurePlateEntNull.Var, 0, Vector.Zero, Vector.Zero, nil)
 		ent:GetData().wasSpawned = true

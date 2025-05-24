@@ -1,0 +1,129 @@
+local mod = FHAC
+local game = Game()
+local rng = RNG()
+
+mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
+    if npc.Variant == mod.Monsters.Yoyader.Var then
+        mod:YoyaderAI(npc, npc:GetSprite(), npc:GetData())
+    end
+end, mod.Monsters.Yoyader.ID)
+
+function mod:YoyaderAI(npc, sprite, d)
+
+    local player = npc:GetPlayerTarget()
+    local playerpos = mod:confusePos(npc, player.Position, 5, nil, nil)
+    local path = npc.Pathfinder
+    local room = game:GetRoom()
+
+    local speed = 3
+
+    if not d.init then
+        d.init = true
+        if npc.Parent then
+            d.state = "spider"
+            npc:ClearEntityFlags(EntityFlag.FLAG_APPEAR)
+        else
+            d.state = "chase"
+        end
+        d.wait = math.random(25)
+    else
+        npc.StateFrame = npc.StateFrame + 1
+    end
+
+    if d.state == "chase" then
+
+        if mod:isScare(npc) then
+            local targetvelocity = (playerpos - npc.Position):Resized(speed * -1)
+            npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 0.3)
+        elseif room:CheckLine(npc.Position,playerpos,0,1,false,false) then
+            local targetvelocity = (playerpos - npc.Position):Resized(speed)
+            npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 0.3)
+        else
+            path:FindGridPath(playerpos, 0.7, 1, true)
+        end
+
+        sprite:SetOverlayFrame("Head", 0)
+        if npc.Velocity:Length() > 1 then
+            if mod:ConvertVectorToWordDirection(npc.Velocity) == "Up" or mod:ConvertVectorToWordDirection(npc.Velocity) == "Down" then
+                mod:spritePlay(sprite, "WalkVert")
+            else
+                mod:spritePlay(sprite, "Walk"..mod:ConvertVectorToWordDirection(npc.Velocity))
+            end
+        else
+            sprite:SetFrame("WalkVert", 0)
+        end
+        if npc.StateFrame > 75 + d.wait and npc.Position:Distance(playerpos) < 125 then
+            d.wait = math.random(25)
+            if npc.Position.X < playerpos.X then
+                sprite.FlipX = true
+            else
+                sprite.FlipX = false
+            end
+            d.state = "throwstart"
+        end
+    end
+
+    if d.state == "throwstart" then
+
+        npc.Velocity = npc.Velocity * 0.4
+        mod:spritePlay(sprite, "Throw")
+        sprite:RemoveOverlay()
+        if sprite:IsFinished("Throw") then
+            npc.StateFrame = 0
+            d.state = "throwloop"
+        end
+    end
+
+    if d.state == "throwloop" then
+
+        npc.Velocity = npc.Velocity * 0.4
+        mod:spritePlay(sprite, "ThrowLoop")
+        sprite:RemoveOverlay()
+
+        if npc.StateFrame > 125 + d.wait then
+            d.wait  = math.random(1)
+            d.state = "throwend"
+        end
+    end
+
+    if d.state == "throwend" then
+
+        npc.Velocity = npc.Velocity * 0.4
+        mod:spritePlay(sprite, "ThrowEnd")
+        sprite:RemoveOverlay()
+
+        if sprite:IsFinished("ThrowEnd") then
+            sprite.FlipX = false
+            npc.StateFrame = 0
+            d.state = "chase"
+        end
+    end
+    print(d.state)
+    if d.state == "spider" then
+        mod:spritePlay(sprite, "SpinningSpider")
+        --npc.Velocity = Vector.Zero
+
+        local targetpos = mod:GetClosestPositionInArea(npc.Parent.Position, 125, playerpos)
+        local targetvelocity = (targetpos-npc.Position):Resized(math.min(7, (npc.Position:Distance(targetpos))))
+
+        npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 0.1)
+    end
+
+    if sprite:IsEventTriggered("Spider") then
+        if sprite.FlipX then
+            d.startingvelocity = Vector(25,1)
+        else
+            d.startingvelocity = Vector(-25,1)
+        end
+        local spider = Isaac.Spawn(mod.Monsters.Yoyader.ID, mod.Monsters.Yoyader.Var, mod.Monsters.Yoyader.Sub, npc.Position + d.startingvelocity, d.startingvelocity:Resized(10), npc)
+        spider.Parent = npc
+        spider.EntityCollisionClass = 0
+        local spidersprite = spider:GetSprite()
+        spidersprite:Play("SpinningSpider")
+        print("release")
+    end
+    if sprite:IsEventTriggered("HideSpider") then
+        print("hide")
+    end
+end
+

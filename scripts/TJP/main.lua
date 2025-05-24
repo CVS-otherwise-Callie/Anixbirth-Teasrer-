@@ -6,7 +6,8 @@ FHAC.TJPMonsters = {
     Weblet = FHAC:ENT("Weblet"),
     WebMother = FHAC:ENT("Web Mother"),
     StumblingNest = FHAC:ENT("Stumbling Nest"),
-    TaintedWebMother = FHAC:ENT("Tainted Web Mother")
+    TaintedWebMother = FHAC:ENT("Tainted Web Mother"),
+    Yoyader = FHAC:ENT("Yoyader")
 }
 
 FHAC:MixTables(FHAC.Monsters, FHAC.TJPMonsters)
@@ -21,7 +22,8 @@ FHAC:LoadScripts("scripts.TJP.monsters", {
     "weblet",
     "webmother",
     "stumblingnest",
-    "taintedwebmother"
+    "taintedwebmother",
+    "yoyader"
 })
 
 FHAC:LoadScripts("scripts.TJP.bosses", {
@@ -33,3 +35,14 @@ FHAC:LoadScripts("scripts.TJP.bosses", {
 FHAC:LoadScripts("scripts.TJP.effects", {
 	"clatterteller_target"
 })
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--FUNCTIOOOOOONSSSSSSAAH
+
+local mod = FHAC
+local rng = RNG()
+local game = Game()
+
+function mod:GetClosestPositionInArea(areacentrepos, arealimit, pos)
+    return areacentrepos+(pos-areacentrepos):Resized(math.min(areacentrepos:Distance(pos), arealimit))--outdid myself with this one
+end

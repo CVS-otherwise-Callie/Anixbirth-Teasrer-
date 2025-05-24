@@ -266,9 +266,15 @@
     </entity>
 
     <entity anm2path="monsters/stumblingnest/stumblingnest.anm2" id="161" variant="43" subtype="0" reroll="false" baseHP="12" boss="0" champion="0" collisionDamage="1" collisionMass="40" collisionRadius="10" friction="1" name="Stumbling Nest" numGridCollisionPoints="12" shadowSize="20" stageHP="0" bestiary="true" portrait="43" >
-        <bestiary transform="0,0,1" anim="WalkDown" />
+        <bestiary transform="0,0,1" anim="ThrowLoop" />
+        <gibs amount="2" blood="1" bone="1" eye="1" gut="1" large="0" />
+        <devolve id="10.1.0" weight="1" />
+    </entity>
+
+    <entity anm2path="monsters/yoyader/yoyader.anm2" id="161" variant="46" subtype="0" reroll="false" baseHP="15" boss="0" champion="0" collisionDamage="1" collisionMass="5" collisionRadius="13" friction="1" name="Yoyader" numGridCollisionPoints="12" shadowSize="14" stageHP="0" bestiary="true" portrait="46" >
+        <bestiary transform="0,0,1" anim="WalkDown" overlay="Head" />
         <gibs amount="0"/>
-        <devolve id="85.0.0" weight="1" />
+        <devolve id="284.0.0" weight="1" />
     </entity>
 
     <!--omg i have to make like 10-->
@@ -324,19 +330,20 @@
         <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
     </entity>
 
-    <entity id="161" variant="47" subtype="0" name="Angery Man" anm2path="monsters/angeryman/angeryman.anm2" hasFloorAlts="false" reroll="true" baseHP="15" boss="0" champion="1" collisionDamage="1" collisionMass="5" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="14" stageHP="0" portrait="4">
+    <entity id="161" variant="47" subtype="0" name="Angery Man" anm2path="monsters/angeryman/angeryman.anm2" hasFloorAlts="false" reroll="true" baseHP="15" boss="0" champion="1" collisionDamage="1" collisionMass="5" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="14" stageHP="0" portrait="47">
 		<bestiary transform="0,0,1" anim="WalkVert" overlay = "Idle1" />
         <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
     </entity>
 
-    <entity id="161" variant="48" subtype="0" name="Bewebbed" anm2path="monsters/bewebbed/bewebbed.anm2" hasFloorAlts="false" reroll="true" baseHP="12" boss="0" champion="1" collisionDamage="1" collisionMass="5" collisionRadius="13" collisionRadiusXMulti="1.5" friction="1" numGridCollisionPoints="12" shadowSize="14" stageHP="0" portrait="4">
+    <entity id="161" variant="48" subtype="0" name="Bewebbed" anm2path="monsters/bewebbed/bewebbed.anm2" hasFloorAlts="false" reroll="true" baseHP="12" boss="0" champion="1" collisionDamage="1" collisionMass="5" collisionRadius="13" collisionRadiusXMulti="1.5" friction="1" numGridCollisionPoints="12" shadowSize="14" stageHP="0" portrait="48">
 		<bestiary transform="0,0,1" anim="Idle" />
         <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
     </entity>
 
-    <entity id="161" variant="49" name="Rehost" anm2path="monsters/rehost/rehost.anm2" hasFloorAlts="true" reroll="true" baseHP="12" boss="0" champion="1" collisionDamage="1" collisionMass="5" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="14" stageHP="0" portrait="">
+    <entity id="161" variant="49" name="Rehost" anm2path="monsters/rehost/rehost.anm2" hasFloorAlts="true" reroll="true" baseHP="15" boss="0" champion="1" collisionDamage="1" collisionMass="5" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="14" stageHP="0" portrait="49">
 		<bestiary transform="0,0,1" anim="WalkVert" overlay="Head" />
         <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
+        <devolve id="284.0.0" weight="1" />
     </entity>
 
     <entity anm2path="monsters/webbedcarcass/webbedcarcass.anm2" id="161" variant="59" reroll="true" baseHP="10" boss="0" champion="1" collisionDamage="1" collisionMass="40" collisionRadius="13" friction="0" name="Webbed Carcass" numGridCollisionPoints="12" stageHP="0" shutdoors="false" hasFloorAlts="true" bestiary="true" portrait="532">

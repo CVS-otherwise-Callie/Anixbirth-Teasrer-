@@ -30,12 +30,12 @@ function mod:FlyveBomberAI(npc, sprite, d) --thanks euan lmaooooooooooo
         else
             d.count = d.count + 1
             npc.StateFrame = 0
-            d.newpos = mod:freeGrid(npc, true, 200, 100)        
+            d.newpos = mod:freeGrid(npc, true, 200, 100)
         end
     end
 
     if not d.newpos then
-        d.newpos = mod:freeGrid(npc, true, 200, 100)        
+        d.newpos = mod:freeGrid(npc, true, 200, 100)
     end
 
     if d.state == "idle" then
@@ -86,9 +86,12 @@ function mod:FlyveBomberAI(npc, sprite, d) --thanks euan lmaooooooooooo
     end
 
     if sprite:IsFinished("Up") then
-        d.newpos = npc:GetPlayerTarget().Position - npc.Position
-        npc.Velocity = mod:Lerp(npc.Velocity, d.newpos, 0.5):Resized(10)
+        npc.Velocity = Vector.Zero
+        d.newpos = npc:GetPlayerTarget().Position-- - npc.Position
+        npc.Position = mod:Lerp(npc.Position, npc:GetPlayerTarget().Position, 0.2)--:Resized(10)
     end
+    print(d.state)
+    print(sprite:IsFinished("Up"))
 
     if d.state == "spawn" then
         mod:spritePlay(sprite, "Down")
