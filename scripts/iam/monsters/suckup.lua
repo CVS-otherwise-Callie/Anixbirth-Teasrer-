@@ -27,6 +27,7 @@ function mod:SuckupAI(npc, sprite, d)
             d.ENT = ent
         else
             d.ENT = mod:GetClosestPlayer(npc.Position, npc)
+	    d.isentPlayer = true
         end
 
         d.state = "idle"
@@ -35,6 +36,10 @@ function mod:SuckupAI(npc, sprite, d)
         d.init = true
     else
         npc.StateFrame = npc.StateFrame + 1
+    end
+
+    if d.isentPlayer then
+	rot = 70
     end
 
     if d.shouldCirc then
@@ -48,6 +53,7 @@ function mod:SuckupAI(npc, sprite, d)
                 d.ENT = ent
             else
                 d.ENT = mod:GetClosestPlayer(npc.Position)
+	        d.isentPlayer = true
             end
         end
 
@@ -103,7 +109,7 @@ mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, function(_, npc, amt , flag, so
             npc:GetData().state = "recieve"
             return false
         elseif not mod:HasDamageFlag(DamageFlag.DAMAGE_CLONES, flag) then
-            npc:TakeDamage(amt*0.3 , flag | DamageFlag.DAMAGE_CLONES, source, 0)
+            npc:TakeDamage(amt*0.7 , flag | DamageFlag.DAMAGE_CLONES, source, 0)
             return false
         end
     end
