@@ -13,11 +13,13 @@ function mod:SuckupAI(npc, sprite, d)
     local target = npc:GetPlayerTarget()
     local targetpos = mod:confusePos(npc, target.Position, 5, nil, nil)
     local room = game:GetRoom()
+    local params = ProjectileParams()
     local rot = 40
 
     if not d.init then
 
         npc:AddEntityFlags(EntityFlag.FLAG_NO_STATUS_EFFECTS | EntityFlag.FLAG_NO_PHYSICS_KNOCKBACK | EntityFlag.FLAG_NO_KNOCKBACK)
+        npc:ClearEntityFlags(EntityFlag.FLAG_APPEAR)
 	    npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_PLAYEROBJECTS
 	    npc.GridCollisionClass = EntityGridCollisionClass.GRIDCOLL_NONE
 
@@ -25,13 +27,14 @@ function mod:SuckupAI(npc, sprite, d)
 
         if ent then
             d.ENT = ent
+            d.shouldCirc = true
         else
             d.ENT = mod:GetClosestPlayer(npc.Position, npc)
-	    d.isentPlayer = true
+	        d.isentPlayer = true
+            d.shouldCirc = false
         end
 
         d.state = "idle"
-        d.shouldCirc = false
 
         d.init = true
     else
@@ -47,7 +50,7 @@ function mod:SuckupAI(npc, sprite, d)
     else
 
         if not d.ENT then
-            local ent = mod:GetClosestEnt(npc.Position)
+            local ent = mod:GetClosestEnt(npc.Position, npc)
 
             if ent then
                 d.ENT = ent
@@ -61,6 +64,13 @@ function mod:SuckupAI(npc, sprite, d)
         if npc.Position:Distance(d.ENT.Position) < rot then
             d.shouldCirc = true
         end
+    end
+
+    local tr = mod:GetClosestEnt(npc.Position, npc)
+
+    if tr and tr.Type == 2 and npc.Position:Distance(tr.Position) < 5 then
+        npc:GetData().state = "recieve"
+        tr:Remove()
     end
 
     if d.ENT and (d.ENT:IsDead() or not d.ENT:Exists()) then
@@ -77,7 +87,7 @@ function mod:SuckupAI(npc, sprite, d)
     elseif d.state == "holding" then
         mod:spritePlay(sprite, "Hold")
         
-        if npc.StateFrame > 100 and room:CheckLine(npc.Position,targetpos,0,1,false,false) then
+        if npc.StateFrame > 60 and room:CheckLine(npc.Position,targetpos,0,1,false,false) then
             d.state = "shoot"
         end
     elseif d.state == "shoot" then
@@ -98,7 +108,13 @@ function mod:SuckupAI(npc, sprite, d)
     end
 
     if sprite:IsEventTriggered("Shoot") then
-        local realshot = Isaac.Spawn(9, 0, 0, npc.Position, Vector(7, 0):Rotated((targetpos - npc.Position):GetAngleDegrees()), npc):ToProjectile()
+
+        params.Scale = 0.8
+
+        npc:FireProjectiles(npc.Position, (targetpos - npc.Position):Resized(10), 0, params)
+        npc:PlaySound(SoundEffect.SOUND_BLOODSHOOT, 0.8,2, false, 1.5)
+    elseif sprite:IsEventTriggered("Recieve") then
+        npc:PlaySound(SoundEffect.SOUND_VAMP_GULP,(math.random(2, 8))/10,0,false,1.5)
     end
 
 end
@@ -108,7 +124,7 @@ mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, function(_, npc, amt , flag, so
         if (npc:GetData().state == "waiting" or npc:GetData().state == "idle") then
             npc:GetData().state = "recieve"
             return false
-        elseif not mod:HasDamageFlag(DamageFlag.DAMAGE_CLONES, flag) then
+        elseif not mod:HasDamageFlag(DamageFlag.DAMAGE_CLONES, flag) and not (npc:GetData().state == "idle" or npc:GetData().state == "waiting") then
             npc:TakeDamage(amt*0.7 , flag | DamageFlag.DAMAGE_CLONES, source, 0)
             return false
         end

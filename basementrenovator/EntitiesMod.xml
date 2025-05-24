@@ -99,7 +99,14 @@ Up to groups of 3.
 </entity>
 <entity ID="161" Variant="47" Name="Angery Man" Image="mah boys/angeryman.png" BaseHP="15"/>
 <entity ID="161" Variant="48" Name="Bewebbed" Image="mah boys/bewebbed.png" BaseHP="12" PlaceVisual="WallSnap"/>
-<entity ID="161" Variant="49" Name="Rehost" Image="mah boys/rehost.png" BaseHP="12"/>
+<entity ID="161" Variant="49" Name="Rehost" Image="mah boys/rehost.png" BaseHP="12">
+<bitfield Key="Subtype">
+        <spinner Length="16" ValueOffset="1" Name="Delay of Rerere Popping Out">
+          <tooltip>
+          </tooltip>
+        </spinner>
+      </bitfield>
+</entity>
 <entity ID="161" Variant="59" Name="Webbed Carcass" Image="mah boys/webbedcarcass.png" BaseHP="10"/>
 <entity ID="161" Variant="65" Name="Suck Up" Image="mah boys/suckup.png" BaseHP="10"/>
 <entity ID="161" Variant="84" Name="Trilo" Image="mah boys/trilo.png" BaseHP="10"/>
@@ -205,9 +212,8 @@ Use 2, 4, or 6 normally.
 	<group Name="HOPE Chapter 1 Enemies" Label="Chapter 1 Shared">
       	<group Name="HOPE Chapter 1 Shared Enemies">
 		    <entity Name="Patient"/>
-		   	<entity Name="Floater"/>
 			<entity Name="Fivehead"/>
-         	<entity Name="Dunglivery"/>
+         	<!--entity Name="Dunglivery"/-->
 			<entity Name="Stoner"/>
     	</group>
 	</group>
@@ -215,6 +221,7 @@ Use 2, 4, or 6 normally.
 	<group Name="HOPE Basement" Label="Basement">
 		<group Name="HOPE Basement Enemies">
 			<entity Name="Larry King Jr."/>
+			<entity Name="Floater"/>
 			<entity Name="Cowpat"/>
 		    <entity Name="Snidge"/>
 		    <entity Name="Horf On A Stick"/>

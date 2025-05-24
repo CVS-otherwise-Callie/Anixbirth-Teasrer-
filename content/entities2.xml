@@ -345,7 +345,7 @@
         <devolve id="12.0.0" weight="1" />
     </entity>
 
-    <entity id="161" variant="65" name="Suck Up" anm2path="monsters/suckup/suckup.anm2" reroll="true" baseHP="10" boss="0" champion="false" collisionDamage="1" collisionMass="3" collisionRadius="20" friction="1" numGridCollisionPoints="5" shadowSize="13" stageHP="0" gridCollision="walls" tags="fly" portrait="">
+    <entity id="161" variant="65" name="Suck Up" anm2path="monsters/suckup/suckup.anm2" reroll="true" baseHP="10" boss="0" champion="false" collisionDamage="1" collisionMass="3" collisionRadius="11" friction="1" numGridCollisionPoints="5" shadowSize="13" stageHP="0" gridCollision="walls" tags="fly" portrait="">
 		<bestiary transform="0,0,1" anim="Idle" />
         <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
     </entity>

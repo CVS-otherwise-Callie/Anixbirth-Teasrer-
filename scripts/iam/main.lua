@@ -302,24 +302,30 @@ function mod:Orbit(npc, ent, speed, orb)
 
 	ent:GetData().anixbirthEntitiesOrbiting = ent:GetData().anixbirthEntitiesOrbiting or {}
 
-	if not ent:GetData().anixbirthEntitiesOrbiting[tostring(npc.InitSeed)] then
-		ent:GetData().anixbirthEntitiesOrbitingNum = ent:GetData().anixbirthEntitiesOrbitingNum or 0
-		ent:GetData().anixbirthEntitiesOrbitingNum = ent:GetData().anixbirthEntitiesOrbitingNum + 1
-		npc:GetData().anixbirthEntitiesOrbitingNumPar = ent:GetData().anixbirthEntitiesOrbitingNum
-		ent:GetData().anixbirthEntitiesOrbiting[tostring(npc.InitSeed)] = npc
-		for k, v in pairs(ent:GetData().anixbirthEntitiesOrbiting) do
-			v:GetData().anixbirthOrbitFuncVar = (360/ent:GetData().anixbirthEntitiesOrbitingNum) * v:GetData().anixbirthEntitiesOrbitingNumPar
-		end
-	end
-
     d.anixbirthOrbitFuncVar = d.anixbirthOrbitFuncVar or 0
 
     if d.anixbirthOrbitFuncVar >= 360 then d.anixbirthOrbitFuncVar = 0 else d.anixbirthOrbitFuncVar = d.anixbirthOrbitFuncVar + 0.05 end
 
     local vel = mod:GetCirc(orb, d.anixbirthOrbitFuncVar)
 
+	if not ent:GetData().anixbirthEntitiesOrbiting[tostring(npc.InitSeed)] then
+		npc:GetData().anixbirthEntitiesOrbitingNumPar = 0
+		ent:GetData().anixbirthEntitiesOrbitingNum = ent:GetData().anixbirthEntitiesOrbitingNum or 0
+		ent:GetData().anixbirthEntitiesOrbitingNum = ent:GetData().anixbirthEntitiesOrbitingNum + 1
+		npc:GetData().anixbirthEntitiesOrbitingNumPar = ent:GetData().anixbirthEntitiesOrbitingNum
+		ent:GetData().anixbirthEntitiesOrbiting[tostring(npc.InitSeed)] = npc
+		for k, v in pairs(ent:GetData().anixbirthEntitiesOrbiting) do
+			if not v:GetData().anixbirthEntitiesOrbitingNumPar then
+				ent:GetData().anixbirthEntitiesOrbiting[k] = nil
+			else
+				v:GetData().anixbirthOrbitFuncVar = (360/(ent:GetData().anixbirthEntitiesOrbitingNum+1)) * v:GetData().anixbirthEntitiesOrbitingNumPar
+			end
+		end
+		npc.Position = Vector(target.Position.X - vel.X, target.Position.Y - vel.Y) - npc.Position	
+	end
+
     if not target:IsDead() then
-		npc.Velocity = Vector(target.Position.X - vel.X, target.Position.Y - vel.Y) - npc.Position
+		npc.Velocity = Vector(target.Position.X - vel.X, target.Position.Y - vel.Y) - npc.Position	
     end
 end
 
@@ -1152,7 +1158,6 @@ function mod:GlobalCVSEntityStuff(npc, sprite, d)
 	end
 
 	npc:GetData().anixbirthEntitiesOrbitingNum = npc:GetData().anixbirthEntitiesOrbitingNum or 0
-	npc:GetData().anixbirthEntitiesOrbitingNumPar = npc:GetData().anixbirthEntitiesOrbitingNumPar or 0
 
 	d.anixbirthEntitiesOrbiting = d.anixbirthEntitiesOrbiting or {}
 

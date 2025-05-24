@@ -20,7 +20,6 @@ function mod:ReHostAI(npc, sprite, d)
 
     if not d.init then
 
-
         d.state = "spawned"
 
         npc.StateFrame = 30
@@ -31,9 +30,14 @@ function mod:ReHostAI(npc, sprite, d)
     end
 
     if d.state == "spawned" then
-        mod:spritePlay(sprite, "HeadReComeoutSlow")
-        if sprite:IsFinished() then
-            d.state = "chase"
+
+        if npc.StateFrame > npc.SubType then
+            mod:spriteOverlayPlay(sprite, "HeadReComeoutSlow")
+            if sprite:IsOverlayFinished() then
+                d.state = "chase"
+            end
+        else
+            mod:spriteOverlayPlay(sprite, "HeadNoRe")
         end
     end
 
@@ -60,6 +64,13 @@ function mod:ReHostAI(npc, sprite, d)
             if sprite:GetOverlayAnimation() == "Head" then sprite:SetOverlayFrame("Head", 19) end
             sprite:SetFrame("WalkHori", 0)
         end
+    else
+        if npc.Velocity:Length() > 1 then
+            npc:AnimWalkFrame("WalkHori","WalkVert",0)
+        else
+            sprite:SetFrame("WalkHori", 0)
+        end
+        speed = 1.5
     end
 
     if mod:isScare(npc) then
@@ -69,7 +80,7 @@ function mod:ReHostAI(npc, sprite, d)
         local targetvelocity = (targetpos - npc.Position):Resized(speed * 1.2)
         npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 0.3)
     else
-        path:FindGridPath(targetpos, 0.7, 1, true)
+        path:FindGridPath(targetpos, speed * 0.2, 1, true)
     end
 
     if sprite:IsOverlayPlaying("HeadReShoot") and sprite:GetOverlayFrame() == 10 then
@@ -99,3 +110,12 @@ function mod:ReHostAI(npc, sprite, d)
     end
 
 end
+
+mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, function(_, npc, amt , flag, source)
+    if npc.Type == mod.Monsters.ReHost.ID and npc.Variant == mod.Monsters.ReHost.Var then
+        if not mod:HasDamageFlag(DamageFlag.DAMAGE_CLONES, flag) and npc:GetData().state == "spawned" then
+            npc:TakeDamage(amt*0.4 , flag | DamageFlag.DAMAGE_CLONES, source, 0)
+            return false
+        end
+    end
+end)
