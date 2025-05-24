@@ -64,7 +64,8 @@ FHAC.CVSMonsters = {
 	AngeryMan = mod:ENT("Angery Man"),
 	WebbedCarcass = mod:ENT("Webbed Carcass"),
 	Bewebbed = mod:ENT("Bewebbed"),
-	ReHost = mod:ENT("Rehost")
+	ReHost = mod:ENT("Rehost"),
+	Suckup = mod:ENT("Suck Up")
 }
 
 mod:MixTables(FHAC.Monsters, FHAC.CVSMonsters)
@@ -124,7 +125,8 @@ FHAC:LoadScripts("scripts.iam.monsters", {
 	"angeryman",
 	"webbedcarcass",
 	"bewebbed",
-	"rehost"
+	"rehost",
+	"suckup"
 })
 
 FHAC:LoadScripts("scripts.iam.minibosses", {
@@ -251,6 +253,74 @@ function mod:MakeBossDeath(npc, extragore, frame, sfx1, sfx2)
 			end
 			d.hasBloodGibsExploded = true
 		end
+    end
+end
+
+function mod:GetClosestEnt(pos, npc)
+	-- REMINDER TO ADD A CHECK TO BLACKLISTS!!!!!!!
+	local dist = 9999999
+	local ent
+
+	for k, v in ipairs(Isaac.GetRoomEntities()) do
+		if v.Position:Distance(pos) < dist and v:IsActiveEnemy() and v:IsVulnerableEnemy() and not v:IsDead()
+		and not v:HasEntityFlags(EntityFlag.FLAG_FRIENDLY) and v.Position:Distance(pos) ~= 0 then
+			if npc then
+				if not (v.Type == npc.Type and v.Variant == npc.Variant and v.SubType == npc.SubType) then
+					ent = v
+					dist = v.Position:Distance(pos)
+				end
+			else
+				ent = v
+				dist = v.Position:Distance(pos)
+			end
+		end
+	end
+	return ent
+end
+
+function mod:GetClosestPlayer(pos)
+	local dist = 9999999
+	local ent
+
+	for i= 1, game:GetNumPlayers() do
+
+		local v = Isaac.GetPlayer(i)
+
+		if v.Position:Distance(pos) < dist then
+			ent = v
+			dist = v.Position:Distance(pos)
+		end
+	end
+	return ent
+end
+
+function mod:Orbit(npc, ent, speed, orb)
+    local target = ent
+	local d = npc:GetData()
+	orb = orb or 70
+	speed = speed or 1
+
+	ent:GetData().anixbirthEntitiesOrbiting = ent:GetData().anixbirthEntitiesOrbiting or {}
+
+	if not ent:GetData().anixbirthEntitiesOrbiting[tostring(npc.InitSeed)] then
+		npc:GetData().anixbirthEntitiesOrbitingNumPar = 0
+		ent:GetData().anixbirthEntitiesOrbitingNum = ent:GetData().anixbirthEntitiesOrbitingNum or 0
+		ent:GetData().anixbirthEntitiesOrbitingNum = ent:GetData().anixbirthEntitiesOrbitingNum + 1
+		npc:GetData().anixbirthEntitiesOrbitingNumPar = ent:GetData().anixbirthEntitiesOrbitingNum
+		ent:GetData().anixbirthEntitiesOrbiting[tostring(npc.InitSeed)] = npc
+		for k, v in pairs(ent:GetData().anixbirthEntitiesOrbiting) do
+			v:GetData().anixbirthOrbitFuncVar = (360/ent:GetData().anixbirthEntitiesOrbitingNum) * v:GetData().anixbirthEntitiesOrbitingNumPar
+		end
+	end
+
+    d.anixbirthOrbitFuncVar = d.anixbirthOrbitFuncVar or 0
+
+    if d.anixbirthOrbitFuncVar >= 360 then d.anixbirthOrbitFuncVar = 0 else d.anixbirthOrbitFuncVar = d.anixbirthOrbitFuncVar + 0.05 end
+
+    local vel = mod:GetCirc(orb, d.anixbirthOrbitFuncVar)
+
+    if not target:IsDead() then
+		npc.Velocity = Vector(target.Position.X - vel.X, target.Position.Y - vel.Y) - npc.Position
     end
 end
 
@@ -1046,17 +1116,16 @@ function mod:CVSNewRoom()
 	end
 
 	local levelswithBlocks = {
-		"basement",
-		"cellar"
+		BackdropType.BASEMENT,
+		BackdropType.CELLAR
 	}
 
 
 	local room = game:GetRoom()
     for i = 0, room:GetGridSize() do
-        if room:GetGridEntity(i) and room:GetGridEntity(i):GetType() == GridEntityType.GRID_ROCKB and mod:CheckTableContents(levelswithBlocks, mod:removeSubstring(string.lower(game:GetLevel():GetName()), " i")) then
+        if room:GetGridEntity(i) and room:GetGridEntity(i):GetType() == GridEntityType.GRID_ROCKB and mod:CheckTableContents(levelswithBlocks, room:GetBackdropType()) then
             local sprite = room:GetGridEntity(i):GetSprite()
-			sprite:ReplaceSpritesheet(0, "gfx/grid/stages/rocks_" .. mod:removeSubstring(string.lower(game:GetLevel():GetName()), " i") .. ".png")
-			print("gfx/grid/stages/rocks_" .. mod:removeSubstring(string.lower(game:GetLevel():GetName()), " i") .. ".png")
+			sprite:ReplaceSpritesheet(0, "gfx/grid/stages/rocks_" .. room:GetBackdropType() .. ".png")
 			sprite:LoadGraphics()
         end
     end
@@ -1083,6 +1152,18 @@ function mod:GlobalCVSEntityStuff(npc, sprite, d)
 		return
 	end
 
+	npc:GetData().anixbirthEntitiesOrbitingNum = npc:GetData().anixbirthEntitiesOrbitingNum or 0
+
+	d.anixbirthEntitiesOrbiting = d.anixbirthEntitiesOrbiting or {}
+
+	if #d.anixbirthEntitiesOrbiting > 1 then
+		for k, v in pairs(d.anixbirthEntitiesOrbiting) do
+			if v:IsDead() or not v:Exists() then
+				table.remove(d.anixbirthEntitiesOrbiting, k)
+			end
+		end
+	end
+
 end
 
 function mod:IsAnyPlayerPongon()
@@ -1094,13 +1175,3 @@ function mod:IsAnyPlayerPongon()
     end
     return false
 end
-
-
---thx catinsurance
-
-mod:AddCallback(ModCallbacks.MC_PRE_ENTITY_SPAWN, function (_, entType, var, sub, pos, vel, spawner, seed)
-    local enemy = EntityConfig.GetEntity(entType, var)
-    if not enemy then
-        --return {EntityType.ENTITY_EFFECT, EffectVariant.POOF01, 0, seed} -- replace with whatever entity
-    end
-end)

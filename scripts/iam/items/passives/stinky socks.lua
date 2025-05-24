@@ -13,7 +13,7 @@ function mod:StinkySocksPoisonCloud(player)
 
         local d = AnixbirthSaveManager.GetRunSave(player).anixbirthsaveData
         local size = 100
-        local damage = 0.3
+        local damage = 0.01
         local time = 10
 
         if not d.stinkySocksTimerDat then d.stinkySocksTimerDat = 0 end
@@ -23,10 +23,12 @@ function mod:StinkySocksPoisonCloud(player)
             d.stinkySocksTimerDat = d.stinkySocksTimerDat + 1
 
             if d.stinkySocksTimerDat > 50 then
-                size = size + d.stinkySocksTimerDat
+                size = d.stinkySocksTimerDat
             end
             d.stinkySocksTimerDatTwo = 0
         else
+            size = d.stinkySocksTimerDat
+
             time = math.ceil(5+(d.stinkySocksTimerDatTwo/2))
             if time > 10 then
                 time = 10
@@ -38,11 +40,12 @@ function mod:StinkySocksPoisonCloud(player)
         end
     
         if game.TimeCounter%time == 0 then
+
             local cloud = Isaac.Spawn(1000, 141, 0, player.Position + player.Velocity:Normalized() * 2 + Vector(0, 5), Vector.Zero, player):ToEffect()
-            cloud.Scale = size
             cloud:SetTimeout(50)
             cloud:GetSprite().Scale = Vector(((size*2)+800)/1000, ((size*2)+800)/1000)
-            cloud.CollisionDamage = (player.Damage*(size/400))+damage
+            cloud.Scale = math.ceil(d.stinkySocksTimerDat/100)
+            cloud.CollisionDamage = ((player.Damage/25)*(size/600))+damage
             cloud:GetSprite():Update()
             cloud:Update()
         end

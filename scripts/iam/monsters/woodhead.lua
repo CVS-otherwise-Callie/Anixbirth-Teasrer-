@@ -104,7 +104,7 @@ function mod:WoodheadAI(npc, sprite, d)
         mod:spritePlay(sprite, "Death")
         if sprite:IsEventTriggered("Shoot") then
             for i = 1, math.random(5, 7) do
-                local realshot = Isaac.Spawn(9, 0, 0, npc.Position, Vector(10, 0):Rotated(math.random(1,360)), npc):ToProjectile()
+                local realshot = Isaac.Spawn(9, 0, 0, npc.Position, Vector(-10, 0):Rotated(math.random(1,360)), npc):ToProjectile()
                 realshot.FallingAccel = 0.01
                 realshot.FallingSpeed = 0.1
                 realshot:GetData().type = "woodhead"

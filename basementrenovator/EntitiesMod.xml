@@ -101,6 +101,7 @@ Up to groups of 3.
 <entity ID="161" Variant="48" Name="Bewebbed" Image="mah boys/bewebbed.png" BaseHP="12" PlaceVisual="WallSnap"/>
 <entity ID="161" Variant="49" Name="Rehost" Image="mah boys/rehost.png" BaseHP="12"/>
 <entity ID="161" Variant="59" Name="Webbed Carcass" Image="mah boys/webbedcarcass.png" BaseHP="10"/>
+<entity ID="161" Variant="65" Name="Suck Up" Image="mah boys/suckup.png" BaseHP="10"/>
 <entity ID="161" Variant="84" Name="Trilo" Image="mah boys/trilo.png" BaseHP="10"/>
 <entity ID="161" Variant="91" Name="Schmoot" Image="mah boys/schmoot.png" BaseHP="16" Tags="Champion"/>
 <entity ID="161" Variant="101" Name="Soot" Image="mah boys/soot.png" BaseHP="3"/>
@@ -241,6 +242,7 @@ Use 2, 4, or 6 normally.
 			<entity Name="Bewebbed"/>
 			<entity Name="Angery Man"/>
 			<entity Name="Rehost"/>
+			<entity Name="Suck Up"/>
 		</group>
   	</group>
 

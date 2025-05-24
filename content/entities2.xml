@@ -345,6 +345,11 @@
         <devolve id="12.0.0" weight="1" />
     </entity>
 
+    <entity id="161" variant="65" name="Suck Up" anm2path="monsters/suckup/suckup.anm2" reroll="true" baseHP="10" boss="0" champion="false" collisionDamage="1" collisionMass="3" collisionRadius="20" friction="1" numGridCollisionPoints="5" shadowSize="13" stageHP="0" gridCollision="walls" tags="fly" portrait="">
+		<bestiary transform="0,0,1" anim="Idle" />
+        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
+    </entity>
+
     <entity id="240" variant="359" name="Stall Creep" baseHP="10" stageHP="0" boss="0" champion="0" collisionDamage="1" collisionMass="14" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="0" portrait="660" anm2path="monsters/stallcreep/stall_creep.anm2" bestiary="true" bestiaryTransform="0,0,1" bestiaryAnim="Walk">
         <gibs amount="4" blood="1" bone="0" eye="0" gut="1" large="0" />
         <devolve id="240.0.0" weight="1" />
