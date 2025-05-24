@@ -303,7 +303,6 @@ function mod:Orbit(npc, ent, speed, orb)
 	ent:GetData().anixbirthEntitiesOrbiting = ent:GetData().anixbirthEntitiesOrbiting or {}
 
 	if not ent:GetData().anixbirthEntitiesOrbiting[tostring(npc.InitSeed)] then
-		npc:GetData().anixbirthEntitiesOrbitingNumPar = 0
 		ent:GetData().anixbirthEntitiesOrbitingNum = ent:GetData().anixbirthEntitiesOrbitingNum or 0
 		ent:GetData().anixbirthEntitiesOrbitingNum = ent:GetData().anixbirthEntitiesOrbitingNum + 1
 		npc:GetData().anixbirthEntitiesOrbitingNumPar = ent:GetData().anixbirthEntitiesOrbitingNum
@@ -1153,6 +1152,7 @@ function mod:GlobalCVSEntityStuff(npc, sprite, d)
 	end
 
 	npc:GetData().anixbirthEntitiesOrbitingNum = npc:GetData().anixbirthEntitiesOrbitingNum or 0
+	npc:GetData().anixbirthEntitiesOrbitingNumPar = npc:GetData().anixbirthEntitiesOrbitingNumPar or 0
 
 	d.anixbirthEntitiesOrbiting = d.anixbirthEntitiesOrbiting or {}
 
