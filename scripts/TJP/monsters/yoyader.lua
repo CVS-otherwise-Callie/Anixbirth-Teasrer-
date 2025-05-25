@@ -82,8 +82,16 @@ function mod:YoyaderAI(npc, sprite, d)
 
         if npc.StateFrame > 125 + d.wait then
             d.wait  = math.random(1)
-            d.state = "throwend"
+            d.state = "waitforreturn"
         end
+    end
+
+    if d.state == "waitforreturn" then
+
+        npc.Velocity = npc.Velocity * 0.4
+        mod:spritePlay(sprite, "ThrowLoop")
+        sprite:RemoveOverlay()
+
     end
 
     if d.state == "throwend" then
@@ -98,32 +106,44 @@ function mod:YoyaderAI(npc, sprite, d)
             d.state = "chase"
         end
     end
-    print(d.state)
+
     if d.state == "spider" then
+        if not npc.Parent or npc.Parent:IsDead() then
+            npc:Kill()
+        end
         mod:spritePlay(sprite, "SpinningSpider")
         --npc.Velocity = Vector.Zero
 
-        local targetpos = mod:GetClosestPositionInArea(npc.Parent.Position, 125, playerpos)
-        local targetvelocity = (targetpos-npc.Position):Resized(math.min(7, (npc.Position:Distance(targetpos))))
+        local targetpos
+        local targetvelocity
+        if npc.Parent:GetData().state ~= "waitforreturn" then
+            targetpos = mod:GetClosestPositionInArea(npc.Parent.Position, 125, playerpos)
+            targetvelocity = (targetpos-npc.Position):Resized(math.min(7, (npc.Position:Distance(targetpos))))
+        else
+            targetpos = npc.Parent.Position + (npc.Parent:GetData().startingvelocity):Resized(25)
+            targetvelocity = (targetpos-npc.Position):Resized(math.min(7, (npc.Position:Distance(targetpos))))
+            npc.GridCollisionClass = 0
+        end
 
         npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 0.1)
+
+        if npc.Position:Distance(targetpos) < 3 and npc.Parent:GetData().state == "waitforreturn" then
+            npc.Parent:GetData().state = "throwend"
+            npc:Remove()
+        end
     end
 
     if sprite:IsEventTriggered("Spider") then
         if sprite.FlipX then
-            d.startingvelocity = Vector(25,1)
+            d.startingvelocity = Vector(35,1)
         else
-            d.startingvelocity = Vector(-25,1)
+            d.startingvelocity = Vector(-35,1)
         end
         local spider = Isaac.Spawn(mod.Monsters.Yoyader.ID, mod.Monsters.Yoyader.Var, mod.Monsters.Yoyader.Sub, npc.Position + d.startingvelocity, d.startingvelocity:Resized(10), npc)
         spider.Parent = npc
-        spider.EntityCollisionClass = 0
+        spider.EntityCollisionClass = 1
         local spidersprite = spider:GetSprite()
         spidersprite:Play("SpinningSpider")
-        print("release")
-    end
-    if sprite:IsEventTriggered("HideSpider") then
-        print("hide")
+        --mod:AttachCord(npc, spider, 0, "Cord", Color.Default, d.startingvelocity, Vector.Zero)
     end
 end
-
