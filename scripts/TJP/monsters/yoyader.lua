@@ -8,6 +8,14 @@ mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
     end
 end, mod.Monsters.Yoyader.ID)
 
+if REPENTOGON then
+mod:AddCallback(ModCallbacks.MC_PRE_NPC_RENDER, function(_, npc)
+    if npc.Variant == mod.Monsters.Yoyader.Var then
+        mod:YoyaderBeamAI(npc, npc:GetSprite(), npc:GetData())
+    end
+end, mod.Monsters.Yoyader.ID)
+end
+
 function mod:YoyaderAI(npc, sprite, d)
 
     local player = npc:GetPlayerTarget()
@@ -131,6 +139,20 @@ function mod:YoyaderAI(npc, sprite, d)
             npc.Parent:GetData().state = "throwend"
             npc:Remove()
         end
+
+        if REPENTOGON then
+            local bsprite = Sprite()
+            bsprite:Load("gfx/monsters/yoyader/yoyader.anm2", true)
+            bsprite:Play("Cord", false)
+
+            local beam = d.beam
+            if not beam then
+                d.beam = Beam(bsprite, "cord", false, false)
+                beam = d.beam
+            end 
+            
+            d.beam:GetSprite():Update()
+        end
     end
 
     if sprite:IsEventTriggered("Spider") then
@@ -140,10 +162,33 @@ function mod:YoyaderAI(npc, sprite, d)
             d.startingvelocity = Vector(-35,1)
         end
         local spider = Isaac.Spawn(mod.Monsters.Yoyader.ID, mod.Monsters.Yoyader.Var, mod.Monsters.Yoyader.Sub, npc.Position + d.startingvelocity, d.startingvelocity:Resized(10), npc)
+        spider.GridCollisionClass = EntityGridCollisionClass.GRIDCOLL_NOPITS
         spider.Parent = npc
         spider.EntityCollisionClass = 1
         local spidersprite = spider:GetSprite()
         spidersprite:Play("SpinningSpider")
         --mod:AttachCord(npc, spider, 0, "Cord", Color.Default, d.startingvelocity, Vector.Zero)
+    end
+end
+
+function mod:YoyaderBeamAI(npc, sprite, d)
+
+    if d.beam and npc.Parent and not npc.Parent:IsDead() and npc.Parent:Exists() then
+
+        local off = -1
+
+        if npc.Parent.FlipX then
+            off = 1
+        end
+
+        local origin = Isaac.WorldToScreen(npc.Parent.Position + Vector(25 * off, -4))
+        local target = Isaac.WorldToScreen(npc.Position)
+
+        d.beam:Add(origin,0)
+        d.beam:Add(target,64)
+
+
+        d.beam:Render()
+
     end
 end

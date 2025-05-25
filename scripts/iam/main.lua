@@ -304,7 +304,7 @@ function mod:Orbit(npc, ent, speed, orb)
 
     d.anixbirthOrbitFuncVar = d.anixbirthOrbitFuncVar or 0
 
-    if d.anixbirthOrbitFuncVar >= 360 then d.anixbirthOrbitFuncVar = 0 else d.anixbirthOrbitFuncVar = d.anixbirthOrbitFuncVar + 0.05 end
+    if d.anixbirthOrbitFuncVar >= 360 then d.anixbirthOrbitFuncVar = 0 else d.anixbirthOrbitFuncVar = d.anixbirthOrbitFuncVar + (0.05 * speed) end
 
     local vel = mod:GetCirc(orb, d.anixbirthOrbitFuncVar)
 
@@ -321,12 +321,13 @@ function mod:Orbit(npc, ent, speed, orb)
 				v:GetData().anixbirthOrbitFuncVar = (360/(ent:GetData().anixbirthEntitiesOrbitingNum+1)) * v:GetData().anixbirthEntitiesOrbitingNumPar
 			end
 		end
-		npc.Position = Vector(target.Position.X - vel.X, target.Position.Y - vel.Y) - npc.Position	
+		npc.Position = Vector(target.Position.X - vel.X, target.Position.Y - vel.Y)
+		npc:MultiplyFriction(0)
+	else
+		if not target:IsDead() then
+			npc.Velocity = Vector(target.Position.X - vel.X, target.Position.Y - vel.Y) - npc.Position
+    	end
 	end
-
-    if not target:IsDead() then
-		npc.Velocity = Vector(target.Position.X - vel.X, target.Position.Y - vel.Y) - npc.Position	
-    end
 end
 
 function mod:GetClosestGridEntToPos(pos, ignorepoop, ignorehole, rocktab)

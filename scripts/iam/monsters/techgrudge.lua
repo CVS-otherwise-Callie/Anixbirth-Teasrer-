@@ -179,7 +179,7 @@ function mod:TechGrudgeLaser(npc, sprite, d)
         d.oldtrailend = tarilend
 
         d.beam:Add(origin,0)
-        d.beam:Add(target,64)
+        d.beam:Add(Isaac.WorldToScreen(tarilend),64)
 
         if d.endpoint == nil or (d.endpoint:IsDead() and not d.endpoint:Exists()) == true then
             d.endpoint = Isaac.Spawn(EntityType.ENTITY_EFFECT, EffectVariant.LASER_IMPACT, 0, tarilend, Vector.Zero, npc):ToEffect()

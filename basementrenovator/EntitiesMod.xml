@@ -97,6 +97,7 @@ Up to groups of 3.
       <checkbox Name="Doesnt Grow" Length="1"/>
    </bitfield>
 </entity>
+<entity ID="161" Variant="46" Name="Yoyader" Image="mah boys/yoyader.png" BaseHP="15"/>
 <entity ID="161" Variant="47" Name="Angery Man" Image="mah boys/angeryman.png" BaseHP="15"/>
 <entity ID="161" Variant="48" Name="Bewebbed" Image="mah boys/bewebbed.png" BaseHP="12" PlaceVisual="WallSnap"/>
 <entity ID="161" Variant="49" Name="Rehost" Image="mah boys/rehost.png" BaseHP="12">
@@ -250,6 +251,7 @@ Use 2, 4, or 6 normally.
 			<entity Name="Angery Man"/>
 			<entity Name="Rehost"/>
 			<entity Name="Suck Up"/>
+			<entity Name="Yoyader"/>
 		</group>
   	</group>
 

@@ -15,6 +15,7 @@ function mod:SuckupAI(npc, sprite, d)
     local room = game:GetRoom()
     local params = ProjectileParams()
     local rot = 40
+    local speed = 1
 
     if not d.init then
 
@@ -42,28 +43,15 @@ function mod:SuckupAI(npc, sprite, d)
     end
 
     if d.isentPlayer then
-	rot = 70
+	rot = 120
+    speed = 0.5
     end
 
     if d.shouldCirc then
-        mod:Orbit(npc, d.ENT, 1, rot)
+        mod:Orbit(npc, d.ENT, speed, rot)
     else
-
-        if not d.ENT then
-            local ent = mod:GetClosestEnt(npc.Position, npc)
-
-            if ent then
-                d.ENT = ent
-            else
-                d.ENT = mod:GetClosestPlayer(npc.Position)
-	        d.isentPlayer = true
-            end
-        end
-
-        npc.Velocity = mod:Lerp(npc.Velocity,(d.ENT.Position - npc.Position):Resized(15), 0.1)
-        if npc.Position:Distance(d.ENT.Position) < rot then
-            d.shouldCirc = true
-        end
+        local targetvelocity = (targetpos - npc.Position):Resized(4)
+        npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 1)
     end
 
     local tr = mod:GetClosestEnt(npc.Position, npc)
@@ -74,12 +62,11 @@ function mod:SuckupAI(npc, sprite, d)
     end
 
     if d.ENT and (d.ENT:IsDead() or not d.ENT:Exists()) then
-        d.shouldCirc = false
-        d.ENT = nil
+        npc:Kill()
     end
 
     if d.state == "idle" then
-        mod:spritePlay(sprite, "Idle")
+        mod:spritePlay(sprite, "Suck")
     elseif d.state == "waiting" then
         mod:spritePlay(sprite, "Suck")
     elseif d.state == "recieve" then
@@ -114,7 +101,7 @@ function mod:SuckupAI(npc, sprite, d)
         npc:FireProjectiles(npc.Position, (targetpos - npc.Position):Resized(10), 0, params)
         npc:PlaySound(SoundEffect.SOUND_BLOODSHOOT, 0.8,2, false, 1.5)
     elseif sprite:IsEventTriggered("Recieve") then
-        npc:PlaySound(SoundEffect.SOUND_VAMP_GULP,(math.random(2, 8))/10,0,false,1.5)
+        npc:PlaySound(SoundEffect.SOUND_VAMP_GULP,1,0,false,1.5)
     end
 
 end
