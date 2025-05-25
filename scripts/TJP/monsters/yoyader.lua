@@ -125,10 +125,10 @@ function mod:YoyaderAI(npc, sprite, d)
         local targetpos
         local targetvelocity
         if npc.Parent:GetData().state ~= "waitforreturn" then
-            targetpos = mod:GetClosestPositionInArea(npc.Parent.Position, 125, playerpos)
+            targetpos = mod:GetClosestPositionInArea(npc.Parent.Position + (npc.Parent:GetData().startingvelocity):Resized(26), 125, playerpos)
             targetvelocity = (targetpos-npc.Position):Resized(math.min(7, (npc.Position:Distance(targetpos))))
         else
-            targetpos = npc.Parent.Position + (npc.Parent:GetData().startingvelocity):Resized(25)
+            targetpos = npc.Parent.Position + (npc.Parent:GetData().startingvelocity):Resized(26)
             targetvelocity = (targetpos-npc.Position):Resized(math.min(7, (npc.Position:Distance(targetpos))))
             npc.GridCollisionClass = 0
         end
@@ -149,8 +149,8 @@ function mod:YoyaderAI(npc, sprite, d)
             if not beam then
                 d.beam = Beam(bsprite, "cord", false, false)
                 beam = d.beam
-            end 
-            
+            end
+
             d.beam:GetSprite():Update()
         end
     end
@@ -181,8 +181,8 @@ function mod:YoyaderBeamAI(npc, sprite, d)
             off = 1
         end
 
-        local origin = Isaac.WorldToScreen(npc.Parent.Position + Vector(25 * off, -4))
-        local target = Isaac.WorldToScreen(npc.Position)
+        local origin = Isaac.WorldToScreen(npc.Parent.Position + Vector(25 * off, -8))
+        local target = Isaac.WorldToScreen(npc.Position+Vector(0,-8))
 
         d.beam:Add(origin,0)
         d.beam:Add(target,64)

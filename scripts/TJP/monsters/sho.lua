@@ -38,6 +38,12 @@ function mod:ShoAI(npc, sprite, d)
 
     if d.state == "angry" then
 
+        if npc.Position.X < targetpos.X then
+                sprite.FlipX = true
+            else
+                sprite.FlipX = false
+            end
+
         mod:spritePlay(sprite, "angry")
 
         if d.coolaccel and d.coolaccel < 5 then
