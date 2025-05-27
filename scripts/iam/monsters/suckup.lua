@@ -25,6 +25,7 @@ function mod:SuckupAI(npc, sprite, d)
 
         if ent then
             d.ENT = ent
+            d.hasHadEnt = true
             d.shouldCirc = true
         else
             d.ENT = mod:GetClosestPlayer(npc.Position, npc)
