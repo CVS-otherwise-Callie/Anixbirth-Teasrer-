@@ -19,10 +19,7 @@ function mod:SuckupAI(npc, sprite, d)
 
     if not d.init then
 
-        npc:AddEntityFlags(EntityFlag.FLAG_NO_STATUS_EFFECTS | EntityFlag.FLAG_NO_PHYSICS_KNOCKBACK | EntityFlag.FLAG_NO_KNOCKBACK)
         npc:ClearEntityFlags(EntityFlag.FLAG_APPEAR)
-	    npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_PLAYEROBJECTS
-	    npc.GridCollisionClass = EntityGridCollisionClass.GRIDCOLL_NONE
 
         local ent = mod:GetClosestEnt(npc.Position, npc)
 
@@ -43,15 +40,21 @@ function mod:SuckupAI(npc, sprite, d)
     end
 
     if d.isentPlayer then
-	rot = 120
-    speed = 0.5
+	    rot = 120
+        speed = 0.5
     end
 
     if d.shouldCirc then
         mod:Orbit(npc, d.ENT, speed, rot)
+
+        npc:AddEntityFlags(EntityFlag.FLAG_NO_STATUS_EFFECTS | EntityFlag.FLAG_NO_PHYSICS_KNOCKBACK | EntityFlag.FLAG_NO_KNOCKBACK)
+	    npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_PLAYEROBJECTS
+	    npc.GridCollisionClass = EntityGridCollisionClass.GRIDCOLL_NONE
     else
-        local targetvelocity = (targetpos - npc.Position):Resized(4)
-        npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 1)
+        npc:ClearEntityFlags(EntityFlag.FLAG_NO_STATUS_EFFECTS | EntityFlag.FLAG_NO_PHYSICS_KNOCKBACK | EntityFlag.FLAG_NO_KNOCKBACK)
+        npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_ALL
+        local targetvelocity = (targetpos - npc.Position):Resized(5)
+        npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 0.1)
     end
 
     local tr = mod:GetClosestEnt(npc.Position, npc)
@@ -62,11 +65,22 @@ function mod:SuckupAI(npc, sprite, d)
     end
 
     if d.ENT and (d.ENT:IsDead() or not d.ENT:Exists()) then
-        npc:Kill()
+        d.shouldCirc = false
+        d.ENT = target
+    end
+
+    if d.ENT and d.ENT.Type == 1 then
+        if mod:GetClosestEnt(npc.Position, npc) and not d.hasHadEnt then
+            d.ENT = mod:GetClosestEnt(npc.Position, npc)
+            d.shouldCirc = true
+            d.isentPlayer = false
+            d.hasHadEnt = true
+        end
+    else
     end
 
     if d.state == "idle" then
-        mod:spritePlay(sprite, "Suck")
+        mod:spritePlay(sprite, "Idle")
     elseif d.state == "waiting" then
         mod:spritePlay(sprite, "Suck")
     elseif d.state == "recieve" then
@@ -100,6 +114,12 @@ function mod:SuckupAI(npc, sprite, d)
 
         npc:FireProjectiles(npc.Position, (targetpos - npc.Position):Resized(10), 0, params)
         npc:PlaySound(SoundEffect.SOUND_BLOODSHOOT, 0.8,2, false, 1.5)
+
+        local effect = Isaac.Spawn(1000, 2, 5, npc.Position, Vector.Zero, npc):ToEffect()
+        effect.SpriteOffset = Vector(0,-6)
+        effect.DepthOffset = npc.Position.Y * 1.25
+        effect.Scale = 0.7
+        effect:FollowParent(npc)
     elseif sprite:IsEventTriggered("Recieve") then
         npc:PlaySound(SoundEffect.SOUND_VAMP_GULP,1,0,false,1.5)
     end
@@ -115,5 +135,13 @@ mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, function(_, npc, amt , flag, so
             npc:TakeDamage(amt*0.7 , flag | DamageFlag.DAMAGE_CLONES, source, 0)
             return false
         end
+    end
+end)
+
+mod:AddCallback(ModCallbacks.MC_PRE_NPC_COLLISION, function(_, npc, coll, bool)
+    if npc.Type == mod.Monsters.Suckup.ID and npc.Variant == mod.Monsters.Suckup.Var and coll.Type == 2 and npc:GetData().state == "recieve" then
+        coll.Position = Vector(0, 0)
+        coll:GetSprite():ReplaceSpritesheet(0, "gfx/nothing.png")
+        coll:Remove()
     end
 end)

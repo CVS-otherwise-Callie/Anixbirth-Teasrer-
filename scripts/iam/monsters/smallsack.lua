@@ -20,7 +20,8 @@ function mod:SmallSackAI(npc, sprite, d)
         else
             npc.HitPoints = npc.MaxHitPoints/1.5
         end
-        npc.SplatColor = Color(100, 100, 100, 255, 0, 0, 0)
+        npc.SplatColor = Color(1, 1, 1, 1, 1, 1, 1)
+        npc.SplatColor:SetColorize(1,1,1,1)
         d.lev = 1
         d.stage = 1
         npc:AddEntityFlags(EntityFlag.FLAG_NO_PHYSICS_KNOCKBACK | EntityFlag.FLAG_NO_KNOCKBACK)

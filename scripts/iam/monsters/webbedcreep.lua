@@ -12,6 +12,10 @@ function mod:WebbedCreepAI(npc, sprite, d)
 
     if not d.init then
 		d.state = "idle"
+
+        npc.SplatColor = Color(1, 1, 1, 1, 1, 1, 1)
+        npc.SplatColor:SetColorize(1,1,1,1)
+
 		d.init = true
 		npc.StateFrame = 60
 	end
