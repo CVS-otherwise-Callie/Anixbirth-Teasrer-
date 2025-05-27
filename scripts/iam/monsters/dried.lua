@@ -110,7 +110,7 @@ local room = game:GetRoom()
         if sprite:IsFinished("BagIdle" .. d.baganim) then
             d.baganim = math.random(3)
         end
-   
+
         npc.Velocity = npc.Velocity:Rotated(d.entitypos)
         if not d.creep == 22 then
             npc.SplatColor = d.splat

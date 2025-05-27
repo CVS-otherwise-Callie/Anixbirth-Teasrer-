@@ -24,7 +24,7 @@ function mod:WebletAI(npc, sprite, d)
         d.init = true
         d.emotion = "Excited"
         d.randomtimer = math.random(25,50)
-        d.shootcooldown = 0
+        d.shootcooldown = math.random(0,100)
         d.holdshoot = 10
         d.shotvectormult = d.shotvectormult or 0
 

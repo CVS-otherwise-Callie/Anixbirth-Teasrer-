@@ -277,6 +277,33 @@
         <devolve id="284.0.0" weight="1" />
     </entity>
 
+    <!--the hanges-->
+    <entity anm2path="monsters/hanges/hanges.anm2" id="161" variant="50" subtype="0" reroll="false" baseHP="15" boss="0" champion="0" collisionDamage="1" collisionMass="5" collisionRadius="13" friction="1" name="Hangeslip" numGridCollisionPoints="12" shadowSize="14" stageHP="0" bestiary="true" portrait="50" >
+        <bestiary transform="0,0,1" anim="WalkVert" overlay="Head" />
+        <gibs amount="0"/>
+        <devolve id="10.1.0" weight="1" />
+    </entity>
+
+    <entity anm2path="monsters/hanges/hanges.anm2" id="161" variant="50" subtype="1" reroll="false" baseHP="15" boss="0" champion="0" collisionDamage="1" collisionMass="5" collisionRadius="13" friction="1" name="Hangejump" numGridCollisionPoints="12" shadowSize="14" stageHP="0" bestiary="true" portrait="50" >
+        <bestiary transform="0,0,1" anim="WalkVert" overlay="Head" />
+        <gibs amount="0"/>
+        <devolve id="10.1.0" weight="1" />
+    </entity>
+
+    <entity anm2path="monsters/hanges/hanges.anm2" id="161" variant="50" subtype="2" reroll="false" baseHP="15" boss="0" champion="0" collisionDamage="1" collisionMass="5" collisionRadius="13" friction="1" name="Hangethrow" numGridCollisionPoints="12" shadowSize="14" stageHP="0" bestiary="true" portrait="50" >
+        <bestiary transform="0,0,1" anim="WalkVert" overlay="Head" />
+        <gibs amount="0"/>
+        <devolve id="10.1.0" weight="1" />
+    </entity>
+
+    <entity anm2path="monsters/hanges/hanges.anm2" id="161" variant="50" subtype="3" reroll="false" baseHP="15" boss="0" champion="0" collisionDamage="1" collisionMass="5" collisionRadius="13" friction="1" name="Hangekick" numGridCollisionPoints="12" shadowSize="14" stageHP="0" bestiary="true" portrait="50" >
+        <bestiary transform="0,0,1" anim="WalkVert" overlay="Head" />
+        <gibs amount="0"/>
+        <devolve id="10.1.0" weight="1" />
+    </entity>
+
+    <!--end of hanges-->
+
     <!--omg i have to make like 10-->
     <entity anm2path="monsters/dried/dried.anm2" id="161" variant="41" subtype="0" reroll="false" baseHP="20" boss="0" champion="0" collisionDamage="1" collisionMass="40" collisionRadius="10" friction="1" name="Dried" shutdoors="false" numGridCollisionPoints="12" shadowSize="20" stageHP="0" portrait="41" >
         <bestiary transform="0,0,1" anim="bag1" />
