@@ -13,94 +13,39 @@ try to keep the spacing consistent
 -----------------------------------------------------------------------------------------------------------------
 
 ------------------------------------------------------------------------------------------------
-                                               MISC
+                                             CALLBACKS
 ------------------------------------------------------------------------------------------------
-
 ---
-removeSubstring(str, substr)
+scheduleCallback(foo, delay, callback, noCancelOnNewRoom)
 
-Removes the subtring from the string. Returns that...
+This function schedules a callback to run after a certain amount of time! Very good for special collision (i.e. Stoner's interactions with Brimstone) and certain renders (such as text that slowly appears and dissapears)
 
-"str" - main string.
-"substr" - the string you want to remove.
+Also normally used for certain effects in items, i.e. Stinky Socks cloud or Urn of Souls wisp thingies.
 
-RETURNS string
+"foo" is the function you're running.
+"delay" is the amount of frames that should pass before the function is called.
+"callback" is the callback this belongs to. KEEP IN MIND! Varibales from that callback WILL NOT be used in the function.
+"noCancelOnNewRoom" makes it so the callback isn't overriden when changing rooms.
+
+Ask CVS for more questions.
 ---
-
 
 ------------------------------------------------------------------------------------------------
-                                             TABLES
+                                        FLOORS N' STAGES
 ------------------------------------------------------------------------------------------------
-im playing table games! - CVS
 ---
-CheckTableContents(table, element)
+CheckStage(stagename, backdroptypes)
 
-Checks if the element is in the table. DOES NOT work with arrays! (As far as I know)
+Checks for a stage based on either the name of the stage or the backdrop.
+HIGHLY recommended to use backdrop as different languages of the game return different names for the stage, somewhat breaking stagename.
 
-"table" - is the table
-"element" - what you're looking for in the table
+"stagename" is the name of the stage (such as "Cellar" or "Basement", be sure to capatalize!)
+"backdroptypes" is a TABLE of backdrops it checks through
 
-RETURNS boolean TRUE or FALSE.
+RETURNS boolean TRUE or FALSE
 
+Ask CVS for more questions!
 ---
-
----
-FindLongerorShorterTable(tables, long, longest)
-
-Finds you the longer or shorter table. 
-
-"tables" is a table of tables. 
-"long" is a boolean value! If it's FALSE, it means you will get the shortest table. If it's TRUE, it means you'll get the longest table.
-"longest" is a number variable. Setting it means it caps how large the "longest" table can be (that gets returned to you)
-
-RETURNS table
-
-Ask CVS for any more questions :)
----
-
----
-getSeveralDifferentNumbers(needed, totalAmount, customRNG, blacklist)
-
-Gives you a table of a bunch of different numbers. How neat!
-
-"needed" is the amount of numbers you actually want to be variable (not 1)
-"totalAmount" is the amount of numbers you want. 
-"customRNG" is any specific RNG you want to feed it! This include room RNG and entity RNG.
-"blacklist" is a list of numbers you don't want to show up. Oh, well.
-
-RETURNS table
-
-Ask CVS for any more questions.
----
-
----
-MixTables(input, table)
-
-Does what you think it does. It will MIX the FIRST table into the SECOND.
-
-This means the SECOND TABLE will have data from the FIRST, 
-but the FIRST WILL NOT have data from the second.
-
-"input" is the FIRST TABLE.
-"table" is the SECOND TABLE.
-
-I really dont know how you would have further questions but ¯\_(ツ)_/¯ 
----
-
----
-ValidifyTables(table1, table2, basedonlength)
-
-Checks if two tables are the same.
-If the "basedonlength" variable is TRUE, it will ALWAYS check the longer table to the shorter table, instead of just the first to the second.
-
-"table1" - first table!
-"table2" - second table. 
-"basedonlength" - if set to true, the first table will be checked against the second, instead of in order.
-
-RETURNS table
----
-
-
 
 ------------------------------------------------------------------------------------------------
                                             POSITION
@@ -122,6 +67,71 @@ RETURN EXAMPLE:
 
 Ask TJP for further questions
 ---
+
+---
+getDistanceToLineSegment(point, lineStart, lineEnd)
+
+Gives you the distance to a certain line segment. You can choose where it starts or stops. 
+(Surprsingly unconventional)
+
+"point" is the position you start at.
+"lineStart" is where the segment starts
+"lineEnd" is where the segment ends
+
+RETURN EXAMPLE:
+134.532
+
+Ask CVS for further questions!
+---
+
+---
+FindEntitiesInLine(lineStart, lineEnd, ent)
+
+Gives you all the entities in a line.
+
+"lineStart" is where the line starts
+"lineEnd" is where the line ends
+"ent" is a OPTIONAL value. If used, it will ONLY find that entity in the line. Otherwise, it will find EVERY entity in the line.
+
+RETURN EXAMPLE:
+{userdata: 3298798df,
+userdata: 239df98389S}
+
+^^^ those are pointer values for entites
+
+Ask CVS for more questions
+---
+
+---
+AreEntitiesInLine(lineStart, lineEnd, ent)
+
+Finds if a specific entity is in a line.
+Unfortunately, kinda useless since FindEntitiesInLine already does that.
+
+"lineStart" is where the line starts
+"lineEnd" is where the line ends
+"ent" is the NPC userdata value of a entity.
+
+RETURNS boolean TRUE or FALSE
+
+Ask CVS for more questions
+---
+------------------------------------------------------------------------------------------------
+                                               MISC
+------------------------------------------------------------------------------------------------
+
+---
+removeSubstring(str, substr)
+
+Removes the subtring from the string. Returns that...
+
+"str" - main string.
+"substr" - the string you want to remove.
+
+RETURN EXAMPLE
+"I have a goldfish" -> "i a goldfish"
+---
+
 
 
 ------------------------------------------------------------------------------------------------
@@ -173,5 +183,83 @@ Changes a Vector by getting the percent of a vector via shifting it's velocity t
 "smoothIn" will make it square the percent by the smoothIn!
 "smoothOut" kinda does the same, but backwards.
 
+RETURN EXAMPLE:
+Vector(-10, 10)
+
 Ask CVS for further info :P
 ---
+
+------------------------------------------------------------------------------------------------
+                                             TABLES
+------------------------------------------------------------------------------------------------
+im playing table games! - CVS
+---
+CheckTableContents(table, element)
+
+Checks if the element is in the table. DOES NOT work with arrays! (As far as I know)
+
+"table" - is the table
+"element" - what you're looking for in the table
+
+RETURNS boolean TRUE or FALSE.
+
+---
+
+---
+FindLongerorShorterTable(tables, long, longest)
+
+Finds you the longer or shorter table. 
+
+"tables" is a table of tables. 
+"long" is a boolean value! If it's FALSE, it means you will get the shortest table. If it's TRUE, it means you'll get the longest table.
+"longest" is a number variable. Setting it means it caps how large the "longest" table can be (that gets returned to you)
+
+RETURNS EXAMPLE
+{table 2, table 1}
+
+Ask CVS for any more questions :)
+---
+
+---
+getSeveralDifferentNumbers(needed, totalAmount, customRNG, blacklist)
+
+Gives you a table of a bunch of different numbers. How neat!
+
+"needed" is the amount of numbers you actually want to be variable (not 1)
+"totalAmount" is the amount of numbers you want. 
+"customRNG" is any specific RNG you want to feed it! This include room RNG and entity RNG.
+"blacklist" is a list of numbers you don't want to show up. Oh, well.
+
+RETURN EXAMPLE
+{1, 4, 6, 2, 7}
+
+Ask CVS for any more questions.
+---
+
+---
+MixTables(input, table)
+
+Does what you think it does. It will MIX the FIRST table into the SECOND.
+
+This means the SECOND TABLE will have data from the FIRST, 
+but the FIRST WILL NOT have data from the second.
+
+"input" is the FIRST TABLE.
+"table" is the SECOND TABLE.
+
+I really dont know how you would have further questions but ¯\_(ツ)_/¯ 
+---
+
+---
+ValidifyTables(table1, table2, basedonlength)
+
+Checks if two tables are the same.
+If the "basedonlength" variable is TRUE, it will ALWAYS check the longer table to the shorter table, instead of just the first to the second.
+
+"table1" - first table!
+"table2" - second table. 
+"basedonlength" - if set to true, the first table will be checked against the second, instead of in order.
+
+RETURNS boolean TRUE or FALSE.
+---
+
