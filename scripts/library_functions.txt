@@ -31,6 +31,167 @@ Ask CVS for more questions.
 ---
 
 ------------------------------------------------------------------------------------------------
+                                           ENTITIES
+------------------------------------------------------------------------------------------------
+
+---
+confusePos(npc, pos, frameCountCheck, isVec, alwaysConfuse)
+
+Returns the same position as given if the NPC is not confused.
+
+If the npc is confused, returns either a random position, or if "isVec", returns either a random position or the NPC'S position
+
+"npc" is the NPC
+"pos" is the given position you wish to manitpulate
+-- OPTIONAL --
+"frameCountCheck" makes it so the entity doesn't behave like this if the frame is perfectly divisble by the number you give.
+"isVec" means that the NPC will not be comepltely confused if the new position is incredibly close to it.
+"alwaysConfuse" just means the function should act as if the npc is always confused.
+
+RETURN EXAMPLE:
+Vector(-123, 43)
+
+Ask CVS for any more questions!
+
+---
+reverseIfFear(npc, vec, multiplier)
+
+Checks if a entity is scared. If it is, reverses the entity's velocity. The multiplier, well, multiplies the backwards velocity.
+
+"npc" is the NPC.
+"vec" is the NPC's velocity OR another thing's velocity.
+-- OPTIONAL --
+"multiplier" is the negative multiplier. It is set to 1 if not given a value
+
+RETURN EXAMPLE:
+Vector(-220, -120)
+
+Ask CVS for more questions
+---
+
+---
+FindClosestNextEntitySpawn(npc, dist, random)
+
+Currently does not work.
+
+Do not ask CVS for more questions.
+---
+
+---
+freeGrid(npc, path, far, close, closest)
+
+Finds a free grid for the entity.
+
+"npc" is the NPC.
+-- OPTIONAL --
+"path" is a BOOLEAN. If true, the npc will only find positions it can travel to via walking. It is set to false if not given a value
+"far" is the farthest the entity can search for a grid position. It is set to 300 if not given a value
+"close" is the closest a entity can search for a grid position. It is set to 250 if not given a value
+"closest" is a BOOLEAN value which states if the entity should only get the closest position possble. It is set to false if not given a value
+
+RETURN EXAMPLE:
+(200, 200)
+
+Ask CVS for more questions.
+---
+
+---
+freeHole(npc, path, far, close, closest)
+
+Returns a random hole grid.
+
+This function does not work currently.
+
+闭嘴。
+
+---
+
+---
+HasDamageFlag(damageFlag, damageFlags)
+
+Checks if a entity has a damage flag.
+
+"damageFlag" is the flag you're looking for
+"damageFlags" is the entity's damage flags
+
+RETURNS boolean TRUE or FALSE
+
+Ask CVS for more questions.
+---
+
+---
+isConfuse(npc)
+
+Checks if a entity is confused.
+
+RETURNS boolean TRUE or FALSE
+
+Ask CVS for more questions.
+---
+
+---
+isFriend(npc)
+
+Checks if a entity is friendly.
+
+RETURNS boolean TRUE or FALSE
+
+Ask CVS for more questions.
+---
+
+---
+isCharm(npc)
+
+Checks if a entity is charmed and friendly (which resides within charmed).
+
+RETURNS boolean TRUE or FALSE
+
+Ask CVS for more questions.
+---
+
+---
+isScare(npc)
+
+Checks if a entity is scared.
+
+RETURNS boolean TRUE or FALSE
+
+Ask CVS for more questions.
+---
+
+---
+isScaredOrConfuse(npc)
+
+Checks if a entity is scared or confused.
+
+RETURNS boolean TRUE or FALSE
+
+Ask CVS for more questions.
+---
+
+---
+isBaited(npc)
+
+Checks if a entity is baited (rotten tomato).
+
+RETURNS boolean TRUE or FALSE
+
+Ask CVS for more questions.
+---
+
+---
+onEntityTick(type, fn, variant, subtype)
+
+Adds a function to play on entity tick.
+YES I'm gonna change all entities to play under this once we finish cellar
+
+"type" is the ID, or Type, of the entity
+"fn" is the function, which runs with the npc variable given by FindByType
+-- OPTIONAL --
+"variant" is the variant of the entity. It is set to -1 (any) if not given a value
+"subtype" is the subtype of the entity. It is set to -1 (any) if not given a value
+
+------------------------------------------------------------------------------------------------
                                         FLOORS N' STAGES
 ------------------------------------------------------------------------------------------------
 ---
