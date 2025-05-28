@@ -68,7 +68,18 @@ FHAC.CVSMonsters = {
 	Suckup = mod:ENT("Suck Up")
 }
 
+FHAC.CVSEffects = {
+	ZapperTellerLightning = mod:ENT("Zapper Teller Lightning"),
+    ClatterTellerTarget = mod:ENT("Clatter Teller Target"),
+    FearFlowerFear = mod:ENT("Fear Flower Fear Effect"),
+    BlackOverlayBox = mod:ENT("BlackOverlayBox"),
+    NormalTextBox = mod:ENT("Text Box"),
+    DekatesseraEffect = mod:ENT("Dekatessera Effect"),
+	WideWeb = mod:ENT("Large Spiderweb")
+}
+
 mod:MixTables(FHAC.Monsters, FHAC.CVSMonsters)
+mod:MixTables(FHAC.Effects, FHAC.CVSEffects)
 
 --iam stuff
 FHAC:LoadScripts("scripts.iam.monsters", {
@@ -144,7 +155,8 @@ FHAC:LoadScripts("scripts.iam.effects", {
 	"zapperteller_lightning",
 	"blackboxoverlay",
 	"fear_flower_fear_effect",
-	"dekatessera effect"
+	"dekatessera effect",
+	"wideweb"
 })
 
 FHAC:LoadScripts("scripts.iam.familiars", {
@@ -310,7 +322,6 @@ function mod:Orbit(npc, ent, speed, orb)
 
 	if not ent:GetData().anixbirthEntitiesOrbiting[tostring(npc.InitSeed)] then
 		npc:GetData().anixbirthEntitiesOrbitingNumPar = 0
-		ent:GetData().anixbirthEntitiesOrbitingNum = ent:GetData().anixbirthEntitiesOrbitingNum or 0
 		ent:GetData().anixbirthEntitiesOrbitingNum = ent:GetData().anixbirthEntitiesOrbitingNum + 1
 		npc:GetData().anixbirthEntitiesOrbitingNumPar = ent:GetData().anixbirthEntitiesOrbitingNum
 		ent:GetData().anixbirthEntitiesOrbiting[tostring(npc.InitSeed)] = npc
@@ -318,11 +329,12 @@ function mod:Orbit(npc, ent, speed, orb)
 			if not v:GetData().anixbirthEntitiesOrbitingNumPar then
 				ent:GetData().anixbirthEntitiesOrbiting[k] = nil
 			else
-				v:GetData().anixbirthOrbitFuncVar = (360/(ent:GetData().anixbirthEntitiesOrbitingNum+1)) * v:GetData().anixbirthEntitiesOrbitingNumPar
+				v:GetData().anixbirthOrbitFuncVar = ((360/(ent:GetData().anixbirthEntitiesOrbitingNum+1)) * (v:GetData().anixbirthEntitiesOrbitingNumPar))
+				print(v:GetData().anixbirthOrbitFuncVar)
 			end
 		end
 		npc.Position = Vector(target.Position.X - vel.X, target.Position.Y - vel.Y)
-		npc:MultiplyFriction(0)
+		--npc:MultiplyFriction(0)
 	else
 		if not target:IsDead() then
 			npc.Velocity = Vector(target.Position.X - vel.X, target.Position.Y - vel.Y) - npc.Position
@@ -1167,6 +1179,13 @@ function mod:GlobalCVSEntityStuff(npc, sprite, d)
 			if v:IsDead() or not v:Exists() then
 				table.remove(d.anixbirthEntitiesOrbiting, k)
 			end
+		end
+	end
+
+	if d.isClatterTellerKilled then
+		for i = 1, 10 do
+			sprite:ReplaceSpritesheet(i-1 , "gfx/nothing.png")
+			sprite:LoadGraphics()
 		end
 	end
 

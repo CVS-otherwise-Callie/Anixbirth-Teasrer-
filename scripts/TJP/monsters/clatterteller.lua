@@ -80,6 +80,13 @@ function mod:ClatterTellerAI(npc, sprite, d)
             if sprite:IsEventTriggered("X attack") then
                 if d.deadenemy then
                     local ent = Isaac.Spawn(d.deadenemy.Type, d.deadenemy.Variant, d.deadenemy.SubType, d.target.Position, d.deadenemy.Velocity, d.deadenemy.Parent)
+                    ent:AddEntityFlags(EntityFlag.FLAG_REDUCE_GIBS)
+
+                	for i = 1, 10 do
+			            ent:GetSprite():ReplaceSpritesheet(i-1 , "gfx/nothing.png")
+			            ent:GetSprite():LoadGraphics()
+		            end
+
                     ent:GetData().isClatterTellerKilled = true
                     table.insert(d.blacListents, ent.InitSeed)
                     ent:Kill()

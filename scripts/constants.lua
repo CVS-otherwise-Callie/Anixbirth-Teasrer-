@@ -35,19 +35,14 @@ FHAC.Grids = {
     GlobalGridSpawner = mod:ENT("HOPE Grid Spawner")
 }
 
-FHAC.Familiars = { --YOU HAVE NO IDEA HOW MANY FUCKING TIMES I SPELLED THIS WRONG LMAO
+FHAC.Familiars = {
     Snark = mod:ENT("Snark (Half Life)"),
     MarketablePlushie = mod:ENT("Marketable Plushie Familiar"),
     LilAna = mod:ENT("Lil' Ana")
 }
 
 FHAC.Effects = {
-    ZapperTellerLightning = mod:ENT("Zapper Teller Lightning"),
-    ClatterTellerTarget = mod:ENT("Clatter Teller Target"),
-    FearFlowerFear = mod:ENT("Fear Flower Fear Effect"),
-    BlackOverlayBox = mod:ENT("BlackOverlayBox"),
-    NormalTextBox = mod:ENT("Text Box"),
-    DekatesseraEffect = mod:ENT("Dekatessera Effect")
+
 }
 
 FHAC.NPCS = {

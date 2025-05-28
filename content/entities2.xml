@@ -671,7 +671,7 @@
     <entity anm2path="effects/target/clatterteller/effect_clatterteller_target.anm2" name="Clatter Teller Target" id="1000" variant="425" subtype="55" baseHP="0" stageHP="0" shieldStrength="0" boss="0" champion="0" collisionDamage="0" collisionMass="0" collisionRadius="0" friction="1" numGridCollisionPoints="0" shadowSize="0"/>
     <entity anm2path="effects/fear effect/fear flower/effect_fearflowerfear.anm2" name="Fear Flower Fear Effect" id="1000" variant="426" subtype="55" baseHP="0" stageHP="0" shieldStrength="0" boss="0" champion="0" collisionDamage="0" collisionMass="0" collisionRadius="0" friction="1" numGridCollisionPoints="0" shadowSize="0"/>
     <entity anm2path="effects/nothing.anm2" name="Dekatessera Effect" id="1000" variant="427" subtype="55" baseHP="0" stageHP="0" shieldStrength="0" boss="0" champion="0" collisionDamage="0" collisionMass="0" collisionRadius="0" friction="1" numGridCollisionPoints="0" shadowSize="0"/>
-    <entity anm2path="effects/largespiderweb.anm2" name="Large Spiderweb" id="1000" variant="428" subtype="55" baseHP="0" stageHP="0" shieldStrength="0" boss="0" champion="0" collisionDamage="0" collisionMass="0" collisionRadius="0" friction="1" numGridCollisionPoints="0" shadowSize="0"/>
+    <entity anm2path="effects/effect_wideweb.anm2" name="Large Spiderweb" id="1000" variant="428" subtype="55" baseHP="0" stageHP="0" shieldStrength="0" boss="0" champion="0" collisionDamage="0" collisionMass="0" collisionRadius="0" friction="1" numGridCollisionPoints="0" shadowSize="0"/>
 
     <!--NPCS-->
 

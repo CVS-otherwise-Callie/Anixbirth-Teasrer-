@@ -133,7 +133,7 @@ mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, function(_, npc, amt , flag, so
             npc:GetData().state = "recieve"
             return false
         elseif not mod:HasDamageFlag(DamageFlag.DAMAGE_CLONES, flag) and not (npc:GetData().state == "idle" or npc:GetData().state == "waiting") then
-            npc:TakeDamage(amt*0.7 , flag | DamageFlag.DAMAGE_CLONES, source, 0)
+            npc:TakeDamage(amt*0.8 , flag | DamageFlag.DAMAGE_CLONES, source, 0)
             return false
         end
     end
@@ -141,7 +141,6 @@ end)
 
 mod:AddCallback(ModCallbacks.MC_PRE_NPC_COLLISION, function(_, npc, coll, bool)
     if npc.Type == mod.Monsters.Suckup.ID and npc.Variant == mod.Monsters.Suckup.Var and coll.Type == 2 and npc:GetData().state == "recieve" then
-        coll.Position = Vector(0, 0)
         coll:GetSprite():ReplaceSpritesheet(0, "gfx/nothing.png")
         coll:Remove()
     end
