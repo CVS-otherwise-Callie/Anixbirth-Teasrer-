@@ -158,7 +158,7 @@ function mod:PatientAI(npc, sprite, d)
             end
         end
         d.rounds = 0
-        npc.Scale = d.size
+        npc.Scale = npc.Scale * d.size
         d.newpos = npc.Position
         sprite:SetOverlayAnimation("head" .. d.name)
         d.init = true

@@ -108,6 +108,7 @@ Up to groups of 3.
         </spinner>
       </bitfield>
 </entity>
+<entity ID="161" Variant="51" Name="Potted Fatty" Image="mah boys/pottedfatty.png" BaseHP="20"/>
 <entity ID="161" Variant="59" Name="Webbed Carcass" Image="mah boys/webbedcarcass.png" BaseHP="10"/>
 <entity ID="161" Variant="65" Name="Suck Up" Image="mah boys/suckup.png" BaseHP="10"/>
 <entity ID="161" Variant="84" Name="Trilo" Image="mah boys/trilo.png" BaseHP="10"/>
@@ -252,6 +253,7 @@ Use 2, 4, or 6 normally.
 			<entity Name="Rehost"/>
 			<entity Name="Suck Up"/>
 			<entity Name="Yoyader"/>
+			<entity Name="Potted Fatty"/>
 		</group>
   	</group>
 

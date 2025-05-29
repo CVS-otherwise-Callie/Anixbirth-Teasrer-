@@ -65,7 +65,8 @@ FHAC.CVSMonsters = {
 	WebbedCarcass = mod:ENT("Webbed Carcass"),
 	Bewebbed = mod:ENT("Bewebbed"),
 	ReHost = mod:ENT("Rehost"),
-	Suckup = mod:ENT("Suck Up")
+	Suckup = mod:ENT("Suck Up"),
+	PottedFatty = mod:ENT("Potted Fatty")
 }
 
 FHAC.CVSEffects = {
@@ -137,7 +138,8 @@ FHAC:LoadScripts("scripts.iam.monsters", {
 	"webbedcarcass",
 	"bewebbed",
 	"rehost",
-	"suckup"
+	"suckup",
+	"pottedfatty"
 })
 
 FHAC:LoadScripts("scripts.iam.minibosses", {
@@ -313,6 +315,7 @@ function mod:Orbit(npc, ent, speed, orb)
 	speed = speed or 1
 
 	ent:GetData().anixbirthEntitiesOrbiting = ent:GetData().anixbirthEntitiesOrbiting or {}
+	ent:GetData().anixbirthEntitiesOrbitingNum = ent:GetData().anixbirthEntitiesOrbitingNum or 0
 
     d.anixbirthOrbitFuncVar = d.anixbirthOrbitFuncVar or 0
 
@@ -326,11 +329,10 @@ function mod:Orbit(npc, ent, speed, orb)
 		npc:GetData().anixbirthEntitiesOrbitingNumPar = ent:GetData().anixbirthEntitiesOrbitingNum
 		ent:GetData().anixbirthEntitiesOrbiting[tostring(npc.InitSeed)] = npc
 		for k, v in pairs(ent:GetData().anixbirthEntitiesOrbiting) do
-			if not v:GetData().anixbirthEntitiesOrbitingNumPar then
+			if not v:GetData().anixbirthEntitiesOrbitingNumPar or not ent:GetData().anixbirthEntitiesOrbitingNum then
 				ent:GetData().anixbirthEntitiesOrbiting[k] = nil
-			else
+			elseif ent:GetData().anixbirthEntitiesOrbitingNum and v:GetData().anixbirthEntitiesOrbitingNumPar then
 				v:GetData().anixbirthOrbitFuncVar = ((360/(ent:GetData().anixbirthEntitiesOrbitingNum+1)) * (v:GetData().anixbirthEntitiesOrbitingNumPar))
-				print(v:GetData().anixbirthOrbitFuncVar)
 			end
 		end
 		npc.Position = Vector(target.Position.X - vel.X, target.Position.Y - vel.Y)
