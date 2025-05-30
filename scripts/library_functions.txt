@@ -35,6 +35,35 @@ Ask CVS for more questions.
 ------------------------------------------------------------------------------------------------
 
 ---
+CheckForEntInRoom(npc, id, var, sub)
+
+A very scuffed version of Isaac.FindByType
+Recommended not to use.
+
+"npc" is the entity that is being checked for, in the same format as mod:ENT() (i.e. a table that looks like {ID = , Var = ,Sub = 0}).
+-- OPTIONAL --
+"id" states if the ID of a entity should be checked for. It is set to true if not given a value
+"var" states of the Variant of a entity should be checked for. It is set to false if not given a value
+"sub" states of the Subtype of a entity should be checked for. It is set to false if not given a value
+
+RETURNS boolean TRUE or FALSE
+---
+
+---
+CheckForOnlyEntInRoom(npcs, id, var, sub)
+
+Checks if ONLY the table of npc's is in the room
+
+"npcs" is a list of entities that is being checked for, with each one in the same format as mod:ENT() (i.e. a table that looks like {ID = , Var = ,Sub = 0}).
+-- OPTIONAL --
+"id" states if the ID of a entity should be checked for. It is set to true if not given a value
+"var" states of the Variant of a entity should be checked for. It is set to false if not given a value
+"sub" states of the Subtype of a entity should be checked for. It is set to false if not given a value
+
+RETURNS boolean TRUE or FALSE
+---
+
+---
 confusePos(npc, pos, frameCountCheck, isVec, alwaysConfuse)
 
 Returns the same position as given if the NPC is not confused.
@@ -104,6 +133,99 @@ This function does not work currently.
 
 闭嘴。
 
+---
+
+---
+GetClosestEnt(pos, npc)
+
+Gets the closest entity. If the NPC variable is in the function, makes it so the npc does not try to get itself.
+ONLY GETS ACTIVE ENTITIES!!
+
+"pos" is the position you're checking at.
+-- OPTIONAL--
+"npc" is the npc you blacklist from the check. It is set to nil if not given a value
+
+RETURN EXAMPLE:
+userdata:ssagd776gwa7
+
+Ask CVS for more questions.
+---
+
+---
+GetClosestGridEntToPos(pos, ignorepoop, ignorehole, rocktab)
+
+Gets the closest grid entity.
+
+"pos" is the position you're checking at.
+-- OPTIONAL --
+"ignorepoop" allows the check to ignore poop. It is set to false if not given a value
+"ignorehole" allows the check to ignore holes. It is set to false if not given a value
+"rocktab" is the table of rocks the entity is checking. It is set to a incredibly long table i will not put here if not given a value
+
+RETURN EXAMPLE:
+(260, -180)
+
+Ask CVS for further info.
+---
+
+---
+GetClosestGridEntAlongAxis(pos, axis, ignorepoop, ignorehole, rocktab)
+
+Gets the closest grid entity along a axis.
+
+"pos" is the position you're checking at.
+"axis" is the axis you're looking on.
+-- OPTIONAL --
+"ignorepoop" allows the check to ignore poop. It is set to false if not given a value
+"ignorehole" allows the check to ignore holes. It is set to false if not given a value
+"rocktab" is the table of rocks the entity is checking. It is set to a incredibly long table i will not put here if not given a value
+
+RETURN EXAMPLE:
+(260, -180)
+
+Ask CVS for further info.
+---
+
+---
+GetClosestGridEntAlongAxisDirection(pos, axis, ignorepoop, ignorehole, dir, rocktab, dist, room)
+
+Gets the closest grid entity along a axis.
+
+"pos" is the position you're checking at.
+"axis" is the axis you're looking on.
+"dir" is the direction you're looking to. 90 and -90 are for X, 180 and 0 are for Y.
+"dist" is the cloest the search can be. The larger the number, the larger the space from how close the grid can be.
+-- OPTIONAL --
+"ignorepoop" allows the check to ignore poop. It is set to false if not given a value
+"ignorehole" allows the check to ignore holes. It is set to false if not given a value
+"rocktab" is the table of rocks the entity is checking. It is set to a incredibly long table i will not put here if not given a value
+"room" is the room it checks. It is set to current room if not given a value
+
+RETURN EXAMPLE:
+(260, -180)
+
+Ask CVS for further info.
+---
+
+---
+GetEntInRoom(ent, avoidnpc, npc, radius)
+
+Highly recommended not to be used.
+
+No seriosuly im not writing something for this it legitimately doesnt work
+---
+
+---
+GetSpecificEntInRoom(myent, npc, radius)
+
+Gets a random entity that matches the qualifications for the "myent" stats.
+
+"myent" is the entity you're looking for.
+"npc" is the npc that is checking.
+-- OPTIONAL--
+"radius" is the max radius the entity can look for the ent. It is 350 if not given a value.
+
+Ask CVS for further info.
 ---
 
 ---
@@ -180,6 +302,14 @@ Ask CVS for more questions.
 ---
 
 ---
+LoadSavedRoomEnts()
+
+Loads ents saved to the current room.
+
+Ask CVS for further info.
+---
+
+---
 onEntityTick(type, fn, variant, subtype)
 
 Adds a function to play on entity tick.
@@ -209,6 +339,21 @@ Ask CVS for more questions.
 ---
 
 ---
+MakeBossDeath(npc, extragore, frame, sfx1, sfx2)
+
+Adds effects and sounds for a animated NPC death. It is supposed to be played under the render function for NPCs instead of the update function.
+
+"npc" is the NPC you're affecting.
+-- OPTIONAL --
+"extragore", if turned on, adds extra smaller gibs during the animation. It is set to true if not given a value
+"frame" is the consistency between frames for when gibs fly out. It is set to 4 if not given a value
+"sfx1" is the sounds that play while small gibs come out. It is set to SoundEffect.SOUND_MEAT_JUMPS if not given a value
+"sfx2" is the sound that plays once the boss fully dies. It is set to SoundEffect.SOUND_DEATH_BURST_LARGE if not given a value
+
+Ask CVS for further info.
+---
+
+---
 MakeInvulnerable(npc)
 
 Make a entity comepltely invulenrable; it has no collision with anything.
@@ -227,6 +372,30 @@ Generally recommended if you use the "MakeInvulnerable" function.
 "npc" is the NPC thats being manipulated.
 
 Ask CVS for more questions.
+---
+
+---
+Orbit(npc, ent, speed, orb)
+
+Makes a entity orbit another entity.
+
+"npc" is the NPC you're making orbit.
+"ent" is the entity the NPC is orbiting.
+-- OPTIONAL --
+"speed" is the speed in which the NPC orbits. It is set to 1 if not given a value
+"orb" is the distance the NPC rotates from the entity. It is set to 70 if not given a value
+
+Ask CVS for further info.
+---
+
+---
+SaveEntToRoom(npc)
+
+Saves a entity to the current room. This data gets overridden on a new floor.
+
+"npc" is the NPC you're saving.
+
+Ask CVS for further info.
 ---
 
 ------------------------------------------------------------------------------------------------
@@ -270,6 +439,42 @@ Ask CVS for more questions!
 ------------------------------------------------------------------------------------------------
 
 ---
+DeliriumRoom()
+
+Checks if the room spawns with delirium (said room being ONLY demiirum's boss room)
+
+RETURNS boolean TRUE or FALSE
+
+Ask CVS for further info.
+---
+
+---
+getMinSec(totalSeconds)
+
+Splits any number into a amount of minutes and leftover seconds.
+
+"totalSeconds" is the total amount of seconds you're inputting in.
+
+RETURN EXAMPLE
+2, 45
+
+Ask CVS for further info.
+---
+
+---
+GetRoomNameByType(type)
+
+Gets the name of a room by it's Type Value.
+
+"type" is the type of the room.
+
+RETURN EXAMPLE:
+"Secret Exit"
+
+Ask CVS for further info.
+---
+
+---
 removeSubstring(str, substr)
 
 Removes the subtring from the string. Returns that...
@@ -280,8 +485,6 @@ Removes the subtring from the string. Returns that...
 RETURN EXAMPLE
 "I have a goldfish" -> "i a goldfish"
 ---
-
-
 
 ------------------------------------------------------------------------------------------------
                                             MOVEMENT
@@ -341,6 +544,21 @@ Ask CVS for further info :P
 ------------------------------------------------------------------------------------------------
                                             PLAYER
 ------------------------------------------------------------------------------------------------
+
+---
+AddTempItem(item, player, callback)
+
+Gives a temporary item to the given player.
+Shockingly, technically EVERYTHING in this callback is optional.
+
+-- OPTIONAL --
+"player" is the player you are providing the item for. It is set to the first player in Isaac.GetPlayer() if not given a value
+"item" is the item you are providing. It is set to CollectibleType.COLLECTIBLE_SAD_ONION if not given a value
+"callback" is the callback the player should recieve the item on. It is set to ModCallbacks.MC_POST_NEW_ROOM if not given a value
+
+Ask CVS for further info.
+---
+
 ---
 AnyPlayerHasCollectible(collectibleType)
 
@@ -366,6 +584,19 @@ Ask CVS for more questions.
 ---
 
 ---
+GetClosestPlayer(pos)
+
+Gets the closest player to a position.
+
+"pos" is the position you're checking at.
+
+RETURN EXAMPLE
+userdata: asiduh7wydw
+
+Ask CVS for further info.
+---
+
+---
 GetPlayerCollectibles(player)
 
 Returns a table of all the collectibles a player owns, in ID. DOES NOT, and i repeat, DOES NOT return wisp items.
@@ -378,6 +609,7 @@ RETURN EXAMPLE:
 Ask CVS for further info.
 ---
 
+
 ---
 IsSourceofDamagePlayer(source, bomb)
 
@@ -388,6 +620,30 @@ Checks if a source of damage is from a player.
 "bomb" is a optonal varibale. If set to true, it will also check if damage come from a player's bomb. It is set to false if not given a value
 
 RETURNS boolean TRUE or FALSE
+
+Ask CVS for further info.
+---
+
+---
+PostUpdateRemoveTempItems(player)
+
+Removes temporary items from a player.
+
+This is what makes the mod:RemoveTempItem(items) function useful.
+
+"player" is the player you are removing temporary items from.
+
+Ask CVS for further info.
+---
+
+---
+RemoveTempItem(items)
+
+You acually will never need to use this.
+
+Reads over the given items. Removes them on the callback they were given.
+
+"items" are the items being taken away.
 
 Ask CVS for further info.
 ---
@@ -552,4 +808,5 @@ If the "basedonlength" variable is TRUE, it will ALWAYS check the longer table t
 
 RETURNS boolean TRUE or FALSE.
 ---
+
 
