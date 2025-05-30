@@ -90,8 +90,6 @@ function mod:FlyveBomberAI(npc, sprite, d) --thanks euan lmaooooooooooo
         d.newpos = npc:GetPlayerTarget().Position-- - npc.Position
         npc.Position = mod:Lerp(npc.Position, npc:GetPlayerTarget().Position, 0.2)--:Resized(10)
     end
-    print(d.state)
-    print(sprite:IsFinished("Up"))
 
     if d.state == "spawn" then
         mod:spritePlay(sprite, "Down")

@@ -1,7 +1,18 @@
 <data>
+    <stage Name="Basement">
+        <Gfx>
+            <Entity ID="753" Variant="950" SubType="0" Image="grids/breakablepotbasement.png"/>
+        </Gfx>
+    </stage>
     <stage Name="Cellar">
         <Gfx>
         	<Entity ID="1900" Image="grids/1900.0.0 - Block Cellar.png" />
+            <Entity ID="753" Variant="950" SubType="0" Image="grids/breakablepotcellar.png"/>
+        </Gfx>
+    </stage>
+    <stage Name="Burning Basement">
+        <Gfx>
+            <Entity ID="753" Variant="950" SubType="0" Image="grids/breakablepotburningbasement.png"/>
         </Gfx>
     </stage>
     <stage Name="Dross">

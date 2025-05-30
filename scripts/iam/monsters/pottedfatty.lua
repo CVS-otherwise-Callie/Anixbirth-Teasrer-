@@ -71,7 +71,7 @@ function mod:PottedFattyAI(npc, sprite, d)
         npc:Remove()
         local ent = Isaac.Spawn(EntityType.ENTITY_FATTY, 0, 0, npc.Position, npc.Velocity, npc)
         ent:ClearEntityFlags(EntityFlag.FLAG_APPEAR)
-        ent:AddConfusion(EntityRef(npc), 100, false)
+        ent:AddConfusion(EntityRef(npc), 40, false)
     end
 
 end
@@ -79,6 +79,7 @@ end
 mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, function(_, ent, dmg, flag, source)
     if ent.Type == mod.Monsters.PottedFatty.ID and ent.Variant == mod.Monsters.PottedFatty.Var then
         ent:GetData().crackedPer = ent:GetData().crackedPer + dmg
+        ent:ToNPC():PlaySound(SoundEffect.SOUND_SCYTHE_BREAK, 0.5, 0, false, 0.3)
         ent:SetColor(Color(2,2,2,1,0,0,0),5,2,true,false)
         return false
     end

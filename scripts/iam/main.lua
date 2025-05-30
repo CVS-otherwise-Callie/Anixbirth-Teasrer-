@@ -196,13 +196,6 @@ FHAC:LoadScripts("scripts.iam.jokes", {
 	"gaprrr",
 })
 
-if not FHAC.hasloadedDSS then
-	FHAC:LoadScripts("scripts.iam.deadseascrolls", {
-		"dssmain",
-	})
-	FHAC.hasloadedDSS = true
-end
-
 FHAC:LoadScripts("scripts.iam.characters", {
 	"johannes",
 	"johannesb",
@@ -461,6 +454,7 @@ function mod:SaveEntToRoom(npc)
 		local tab = {}
 		tab.Room = game:GetLevel():GetCurrentRoomDesc().Data
 		tab.ListIndex = game:GetLevel():GetCurrentRoomDesc().ListIndex
+		tab.RoomVar = game:GetLevel():GetCurrentRoomDesc().Variant
 		tab.Level = game:GetLevel():GetAbsoluteStage()
 		tab.Stage = game:GetLevel():GetStage()
 		ta.PreSavedEnts[tostring(npc.InitSeed)] = tab
@@ -508,7 +502,7 @@ function mod:LoadSavedRoomEnts()
 	end
 
 	for k, v in pairs(tab.PreSavedEnts) do
-		if
+		if v.RoomVar == game:GetLevel():GetCurrentRoomDesc().Variant and
 		v.ListIndex == game:GetLevel():GetCurrentRoomDesc().ListIndex and 
 		v.Stage == game:GetLevel():GetStage() and v.Type and v.Variant and v.Subtype and CheckNPCInitDat(v) then
 			tab.PreSavedEnts[k] = nil

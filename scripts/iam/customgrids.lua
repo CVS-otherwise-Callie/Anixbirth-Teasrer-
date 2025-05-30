@@ -243,20 +243,44 @@ mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
     local sprite = npc:GetSprite()
     local room = game:GetRoom()
 
+    mod:SaveEntToRoom(npc)
+
     if d.anixbirthDONOTDOANYTHING then
 
-        if npc.Variant == 161 then
+        npc.GridCollisionClass = GridCollisionClass.COLLISION_NONE
+        npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_NONE
+        npc:AddEntityFlags(EntityFlag.FLAG_NO_PHYSICS_KNOCKBACK | EntityFlag.FLAG_NO_KNOCKBACK)
+
+        if npc.Variant == 950 then
+
+            local var = ""
+
+            if AnixbirthSaveManager.GetSettingsSave().newGrids and AnixbirthSaveManager.GetSettingsSave().newGrids == 1 then
+                var = "new"
+            end
+
+            sprite:ReplaceSpritesheet(0, "gfx/grid/breakablepots/chapter" .. room:GetBackdropType() .. "/breakablepot" .. var .. ".png")
+            sprite:LoadGraphics()
+
             mod:spritePlay(sprite, "Base")
         end
 
         return
     end
 
-    if npc.Variant == 161 then
+    if npc.Variant == 950 then
+
+        npc:AddEntityFlags(EntityFlag.FLAG_NO_PHYSICS_KNOCKBACK | EntityFlag.FLAG_NO_KNOCKBACK)
 
         npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_ALL
 
-        sprite:ReplaceSpritesheet(0, "gfx/grid/breakablepots/chapter" .. room:GetBackdropType() .. "/breakablepot.png")
+        local var = ""
+
+        if AnixbirthSaveManager.GetSettingsSave().newGrids and AnixbirthSaveManager.GetSettingsSave().newGrids == 1 then
+            var = "new"
+        end
+
+        sprite:ReplaceSpritesheet(0, "gfx/grid/breakablepots/chapter" .. room:GetBackdropType() .. "/breakablepot" .. var .. ".png")
         sprite:LoadGraphics()
 
         if npc.HitPoints/npc.MaxHitPoints > 0.75 then
@@ -277,7 +301,7 @@ mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
             mod:spritePlay(sprite, "Base")
         end
     end
-end, 292)
+end, 753)
 
 mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, function(_, npc, amount, flags)
 
@@ -288,8 +312,9 @@ mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, function(_, npc, amount, flags)
         return
     end
 
-    if npc.Variant == 161 then
-		local amt = math.min(math.max(math.floor(amount / 120), 1)/3, 3)
+    if npc.Variant == 950 then
+        
+		local amt = math.min(math.max(math.floor(amount / 60), 1), 3)
         if npc.HitPoints - amt <= 1 or flags & (DamageFlag.DAMAGE_TNT | DamageFlag.DAMAGE_EXPLOSION) ~= 0 then
             for k, v in ipairs(customPotTab[math.random(#customPotTab)]) do
                 for i = 1, v[3] do
@@ -301,18 +326,41 @@ mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, function(_, npc, amount, flags)
                 end
             end
 
-			local t = Isaac.Spawn(npc.Type, npc.Variant, npc.SubType, npc.Position, Vector.Zero, nil)
-			t.HitPoints = 0
-			t:GetData().anixbirthDONOTDOANYTHING = true
-			npc:Remove()
-			t:Update()
+            for i = 1, math.random(3, 5) do
+                local bucketGib = Isaac.Spawn(1000, 4, 0, npc.Position, Vector(math.random(15,30)/10, 0):Rotated(i*75 + math.random(45)), nil)
+                bucketGib:GetSprite():SetFrame("rubble_alt", math.random(4))
+                bucketGib:SetColor(Color(2, 1, 1, 1, 0, 0,0,0), 5, 2, true, false)
+                bucketGib:Update()
+
+                local ef = Isaac.Spawn(EntityType.ENTITY_EFFECT, EffectVariant.DUST_CLOUD, -1, npc.Position + Vector(math.random(-25, 25), 10),Vector.Zero, npc):ToEffect()
+                ef:SetTimeout(50)
+                ef.SpriteScale = Vector(0.05,0.05)
+                ef:Update()
+            end
+            npc:ToNPC():PlaySound(78, 1, 0, false, 1)
+
+            d.anixbirthDONOTDOANYTHING = true
         else
+
+            local bucketGib = Isaac.Spawn(1000, 4, 0, npc.Position, Vector(math.random(15,30)/10, 0):Rotated(math.random(360)), nil)
+
+            local ef = Isaac.Spawn(EntityType.ENTITY_EFFECT, EffectVariant.DUST_CLOUD, -1, npc.Position + Vector(math.random(-25, 25), 10),Vector.Zero, npc):ToEffect()
+            ef:SetTimeout(10)
+            ef.SpriteScale = Vector(0.03,0.03)
+
+            bucketGib:GetSprite():SetFrame("rubble_alt", math.random(4))
+            bucketGib:SetColor(Color(2, 1, 1, 1, 0, 0,0,0), 5, 2, true, false)
+            bucketGib:Update()
+
+            npc:ToNPC():PlaySound(SoundEffect.SOUND_SCYTHE_BREAK, 0.5, 0, false, 0.3)
+
+
             npc.HitPoints = npc.HitPoints - amt
         end
         return false
     end
 
-end, 292)
+end, 753)
 
 
 StageAPI.AddCallback("FHAC", "POST_CUSTOM_GRID_UPDATE", 1, mod.lightpressurePlateAI, "FHACLightPressurePlate")

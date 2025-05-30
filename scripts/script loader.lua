@@ -23,6 +23,14 @@ FHAC:LoadScripts("scripts", {
 	"otherapi.proapi.proapi",
 	"deathtransform",
 })
+
+if not FHAC.hasloadedDSS then
+	FHAC:LoadScripts("scripts.deadseascrolls", {
+		"dssmain",
+	})
+	FHAC.hasloadedDSS = true
+end
+
 FHAC:LoadScripts("scripts.choom", {
     "main"
 })

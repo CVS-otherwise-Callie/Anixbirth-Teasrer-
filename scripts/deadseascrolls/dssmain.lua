@@ -79,8 +79,8 @@ end
 function MenuProvider.SaveMenusPoppedUp(var)
 	AnixbirthSaveManager.GetDeadSeaScrollsSave().MenusPoppedUp = var
 end
-local DSSInitializerFunction = include("scripts.iam.deadseascrolls.dssmenucore")
-local Lore = include("scripts.iam.deadseascrolls.da lore")
+local DSSInitializerFunction = include("scripts.deadseascrolls.dssmenucore")
+local Lore = include("scripts.deadseascrolls.da lore")
 FHAC.dssmod = DSSInitializerFunction(DSSModName, DSSCoreVersion, MenuProvider)
 
 local function genLore(tab)
@@ -275,6 +275,36 @@ FHAC.dmdirectory = {
                             AnixbirthSaveManager.GetSettingsSave().customRoomMusic = var
                         end,
                         tooltip = {strset = {'allow for', 'rooms music', 'replacements', '', 'off by', 'default'}}
+                    },
+                    {str = '', fsize=2,nosel = true},
+                    {str = '-----misc-----', fsize=2, nosel = true},
+                    {str = '', fsize=2, nosel = true},
+                    {
+                        str = 'accurate roaches',
+                        choices = {'on', 'off'},
+                        variable = "accurateRoach",
+                        setting = 1,
+                        load = function()
+                            return AnixbirthSaveManager.GetSettingsSave().accurateRoach or 2
+                        end,
+                        store = function(var)
+                            AnixbirthSaveManager.GetSettingsSave().accurateRoach = var
+                        end,
+                        tooltip = {strset = {'please dont', 'turn this on', '', 'off by', 'default', 'for a', 'good reason'}}
+                    },
+                    {str = '', fsize=2,nosel = true},
+                    {
+                        str = 'better grid sprites',
+                        choices = {'on', 'off'},
+                        variable = "newGrids",
+                        setting = 1,
+                        load = function()
+                            return AnixbirthSaveManager.GetSettingsSave().newGrids or 2
+                        end,
+                        store = function(var)
+                            AnixbirthSaveManager.GetSettingsSave().newGrids = var
+                        end,
+                        tooltip = {strset = {'resprites', 'gird objects', '', 'off by', 'default'}}
                     },
                     {str = '----------', fsize=2, nosel = true},
 

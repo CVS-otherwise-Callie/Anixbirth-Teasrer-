@@ -37244,8 +37244,11 @@
 		<spawn x="4" y="5">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="5" y="5">
+			<entity type="793" variant="950" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="7" y="5">
-			<entity type="292" variant="161" subtype="0" weight="1.0"/>
+			<entity type="793" variant="950" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="8" y="5">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -37272,7 +37275,10 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="5" y="8">
-			<entity type="292" variant="161" subtype="0" weight="1.0"/>
+			<entity type="793" variant="950" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="8">
+			<entity type="793" variant="950" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="8" y="8">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -37332,7 +37338,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="1" y="1">
-			<entity type="292" variant="161" subtype="0" weight="1.0"/>
+			<entity type="793" variant="950" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="8" y="2">
 			<entity type="161" variant="4" subtype="1" weight="1.0"/>
@@ -37408,7 +37414,7 @@
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
 		<spawn x="8" y="0">
-			<entity type="292" variant="161" subtype="0" weight="1.0"/>
+			<entity type="793" variant="950" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="8" y="1">
 			<entity type="80" variant="0" subtype="0" weight="1.0"/>
@@ -37432,7 +37438,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="8" y="6">
-			<entity type="292" variant="161" subtype="0" weight="1.0"/>
+			<entity type="793" variant="950" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
 	<room variant="0" name="CVS - fivehead room (shocker)" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-04-21T00:56+00:00">
@@ -37492,10 +37498,10 @@
 			<entity type="5" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="4" y="6">
-			<entity type="292" variant="161" subtype="0" weight="1.0"/>
+			<entity type="793" variant="950" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="8" y="6">
-			<entity type="292" variant="161" subtype="0" weight="1.0"/>
+			<entity type="793" variant="950" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="10" y="6">
 			<entity type="5" variant="0" subtype="0" weight="1.0"/>
