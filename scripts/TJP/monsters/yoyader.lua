@@ -25,6 +25,8 @@ function mod:YoyaderAI(npc, sprite, d)
 
     local speed = 3
 
+    local range = 125 * npc.Scale
+
     if not d.init then
         d.init = true
         if npc.Parent then
@@ -60,7 +62,7 @@ function mod:YoyaderAI(npc, sprite, d)
         else
             sprite:SetFrame("WalkVert", 0)
         end
-        if npc.StateFrame > 75 + d.wait and npc.Position:Distance(playerpos) < 125 then
+        if npc.StateFrame > 75 + d.wait and npc.Position:Distance(playerpos) < range then
             d.wait = math.random(25)
             if npc.Position.X < playerpos.X then
                 sprite.FlipX = true
@@ -116,42 +118,43 @@ function mod:YoyaderAI(npc, sprite, d)
     end
 
     if d.state == "spider" then
-        if not npc.Parent or npc.Parent:IsDead() then
+        npc.GridCollisionClass = 0
+
+        if not npc.Parent or npc.Parent:IsDead() or not npc.Parent.Position then
             npc:Kill()
-        end
-        mod:spritePlay(sprite, "SpinningSpider")
-        --npc.Velocity = Vector.Zero
-
-        local targetpos
-        local targetvelocity
-        if npc.Parent:GetData().state ~= "waitforreturn" then
-            targetpos = mod:GetClosestPositionInArea(npc.Parent.Position + (npc.Parent:GetData().startingvelocity):Resized(26), 125, playerpos)
-            targetvelocity = (targetpos-npc.Position):Resized(math.min(7, (npc.Position:Distance(targetpos))))
         else
-            targetpos = npc.Parent.Position + (npc.Parent:GetData().startingvelocity):Resized(26)
-            targetvelocity = (targetpos-npc.Position):Resized(math.min(7, (npc.Position:Distance(targetpos))))
-            npc.GridCollisionClass = 0
-        end
+            mod:spritePlay(sprite, "SpinningSpider")
 
-        npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 0.1)
-
-        if npc.Position:Distance(targetpos) < 3 and npc.Parent:GetData().state == "waitforreturn" then
-            npc.Parent:GetData().state = "throwend"
-            npc:Remove()
-        end
-
-        if REPENTOGON then
-            local bsprite = Sprite()
-            bsprite:Load("gfx/monsters/yoyader/yoyader.anm2", true)
-            bsprite:Play("Cord", false)
-
-            local beam = d.beam
-            if not beam then
-                d.beam = Beam(bsprite, "cord", false, false)
-                beam = d.beam
+            local targetpos
+            local targetvelocity
+            if npc.Parent and npc.Parent:GetData().state ~= "waitforreturn" then
+                targetpos = mod:GetClosestPositionInArea(npc.Parent.Position + (npc.Parent:GetData().startingvelocity):Resized(26), range, playerpos)
+                targetvelocity = (targetpos-npc.Position):Resized(math.min(7, (npc.Position:Distance(targetpos))))
+            else
+                targetpos = npc.Parent.Position + (npc.Parent:GetData().startingvelocity):Resized(26)
+                targetvelocity = (targetpos-npc.Position):Resized(math.min(7, (npc.Position:Distance(targetpos))))
             end
 
-            d.beam:GetSprite():Update()
+            npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 0.1)
+
+            if (npc.Position:Distance(targetpos) < 3 and npc.Parent:GetData().state == "waitforreturn") or npc:IsDead() then
+                npc.Parent:GetData().state = "throwend"
+                npc:Remove()
+            end
+
+            if REPENTOGON then
+                local bsprite = Sprite()
+                bsprite:Load("gfx/monsters/yoyader/yoyader.anm2", true)
+                bsprite:Play("Cord", false)
+
+                local beam = d.beam
+                if not beam then
+                    d.beam = Beam(bsprite, "cord", false, false)
+                    beam = d.beam
+                end
+
+                d.beam:GetSprite():Update()
+            end
         end
     end
 
@@ -181,8 +184,8 @@ function mod:YoyaderBeamAI(npc, sprite, d)
             off = 1
         end
 
-        local origin = Isaac.WorldToScreen(npc.Parent.Position + Vector(25 * off, -8))
-        local target = Isaac.WorldToScreen(npc.Position+Vector(0,-8))
+        local origin = Isaac.WorldToScreen(npc.Parent.Position + (Vector(25 * off, -8) * npc.Scale))
+        local target = Isaac.WorldToScreen(npc.Position+Vector(0,-8) * npc.Scale)
 
         d.beam:Add(origin,0)
         d.beam:Add(target,64)

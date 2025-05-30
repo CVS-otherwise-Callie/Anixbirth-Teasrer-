@@ -65,130 +65,134 @@ function mod:WebletAI(npc, sprite, d)
     end
 
     if d.state == "escapingappear" then
-        if npc.Parent:GetData().state == "dead" then
+        if not npc.Parent or npc.Parent:GetData().state == "dead" or not npc.Parent:Exists() then
             npc:Kill()
-        end
+        else
 
-        if npc.Parent.Variant == mod.Monsters.StumblingNest.Var and npc.Parent:IsDead() then
-            npc:Kill()
-        end
-
-        if d.spriteoffset then
-            if npc.Parent.Variant == mod.Monsters.StumblingNest.Var then
-                npc.Position = npc.Parent.Position - npc.Parent.Velocity
-                npc.SpriteOffset = d.spriteoffset
-            else
-                npc.Position = npc.Parent.Position + Vector(d.spriteoffset.X,0)
-                npc.SpriteOffset = Vector(0, d.spriteoffset.Y)
+            if npc.Parent.Variant == mod.Monsters.StumblingNest.Var and npc.Parent:IsDead() then
+                npc:Kill()
             end
-            npc.Velocity = npc.Parent.Velocity:Resized(npc.Parent.Velocity:Length()/d.test)
-        end
 
-        mod:spritePlay(sprite, "HeadAppear")
-        if sprite:IsFinished() then
-            d.state = "escapingidle"
+            if d.spriteoffset then
+                if npc.Parent.Variant == mod.Monsters.StumblingNest.Var then
+                    npc.Position = npc.Parent.Position - npc.Parent.Velocity
+                    npc.SpriteOffset = d.spriteoffset
+                else
+                    npc.Position = npc.Parent.Position + Vector(d.spriteoffset.X,0)
+                    npc.SpriteOffset = Vector(0, d.spriteoffset.Y)
+                end
+                npc.Velocity = npc.Parent.Velocity:Resized(npc.Parent.Velocity:Length()/d.test)
+            end
+
+            mod:spritePlay(sprite, "HeadAppear")
+            if sprite:IsFinished() then
+                d.state = "escapingidle"
+            end
+
         end
     end
 
     if d.state == "escapingidle" then
-        if npc.Parent:GetData().state == "dead" then
+        if not npc.Parent or npc.Parent:GetData().state == "dead" or not npc.Parent:Exists() then
             npc:Kill()
-        end
-
-        if npc.Parent.Variant == mod.Monsters.StumblingNest.Var and npc.Parent:IsDead() then
+        elseif npc.Parent.Variant == mod.Monsters.StumblingNest.Var and npc.Parent:IsDead() then
             npc:Kill()
-        end
+        else
 
-        if d.spriteoffset then
-            if npc.Parent.Variant == mod.Monsters.StumblingNest.Var then
-                npc.Position = npc.Parent.Position - npc.Parent.Velocity
-                npc.SpriteOffset = d.spriteoffset
-            else
-                npc.Position = npc.Parent.Position + Vector(d.spriteoffset.X,0)
-                npc.SpriteOffset = Vector(0, d.spriteoffset.Y)
+            if d.spriteoffset then
+                if npc.Parent.Variant == mod.Monsters.StumblingNest.Var then
+                    npc.Position = npc.Parent.Position - npc.Parent.Velocity
+                    npc.SpriteOffset = d.spriteoffset
+                else
+                    npc.Position = npc.Parent.Position + Vector(d.spriteoffset.X,0)
+                    npc.SpriteOffset = Vector(0, d.spriteoffset.Y)
+                end
+                npc.Velocity = npc.Parent.Velocity:Resized(npc.Parent.Velocity:Length()/d.test)
             end
-            npc.Velocity = npc.Parent.Velocity:Resized(npc.Parent.Velocity:Length()/d.test)
-        end
 
-        sprite:SetFrame("HeadDown"..d.emotion, d.faceframe)
-        if npc.StateFrame > d.randomtimer then
-            if npc.Parent.Variant == mod.Monsters.WebMother.Var then
-                d.state = "escape"
-            elseif npc.Parent.Variant == mod.Monsters.StumblingNest.Var then
-                d.state = "shoot"
+            sprite:SetFrame("HeadDown"..d.emotion, d.faceframe)
+            if npc.StateFrame > d.randomtimer then
+                if npc.Parent.Variant == mod.Monsters.WebMother.Var then
+                    d.state = "escape"
+                elseif npc.Parent.Variant == mod.Monsters.StumblingNest.Var then
+                    d.state = "shoot"
+                end
             end
         end
     end
 
     if d.state == "shoot" then
-        if npc.Parent:IsDead() then
+        if npc.Parent:IsDead() or not npc.Parent:Exists() then
             npc:Kill()
-        end
+        else
 
-        if d.spriteoffset then
-            if npc.Parent.Variant == mod.Monsters.StumblingNest.Var then
-                npc.Position = npc.Parent.Position - npc.Parent.Velocity
-                npc.SpriteOffset = d.spriteoffset
-            else
-                npc.Position = npc.Parent.Position + Vector(d.spriteoffset.X,0)
-                npc.SpriteOffset = Vector(0, d.spriteoffset.Y)
+            if d.spriteoffset then
+                if npc.Parent.Variant == mod.Monsters.StumblingNest.Var then
+                    npc.Position = npc.Parent.Position - npc.Parent.Velocity
+                    npc.SpriteOffset = d.spriteoffset
+                else
+                    npc.Position = npc.Parent.Position + Vector(d.spriteoffset.X,0)
+                    npc.SpriteOffset = Vector(0, d.spriteoffset.Y)
+                end
+                npc.Velocity = npc.Parent.Velocity:Resized(npc.Parent.Velocity:Length()/d.test)
             end
-            npc.Velocity = npc.Parent.Velocity:Resized(npc.Parent.Velocity:Length()/d.test)
-        end
 
-        mod:spritePlay(sprite, "Shoot")
-        if sprite:IsEventTriggered("Shoot") then
-            params.FallingSpeedModifier = 0.1
-            params.HeightModifier = 20
-            npc:FireProjectiles(npc.Position, (player.Position-npc.Position):Resized(6) + npc.Velocity*0.2, 0, params)
-        end
-        if sprite:IsFinished() then
-            d.state = "headdisappear"
+            mod:spritePlay(sprite, "Shoot")
+            if sprite:IsEventTriggered("Shoot") then
+                params.FallingSpeedModifier = 0.1
+                params.HeightModifier = 20
+                npc:FireProjectiles(npc.Position, (player.Position-npc.Position):Resized(6) + npc.Velocity*0.2, 0, params)
+            end
+            if sprite:IsFinished() then
+                d.state = "headdisappear"
+            end
         end
     end
 
     if d.state == "headdisappear" then
-        if npc.Parent:IsDead() then
+        if npc.Parent:IsDead() or not npc.Parent:Exists() then
             npc:Kill()
-        end
+        else
 
-        if d.spriteoffset then
-            if npc.Parent.Variant == mod.Monsters.StumblingNest.Var then
-                npc.Position = npc.Parent.Position - npc.Parent.Velocity
-                npc.SpriteOffset = d.spriteoffset
-            else
-                npc.Position = npc.Parent.Position + Vector(d.spriteoffset.X,0)
-                npc.SpriteOffset = Vector(0, d.spriteoffset.Y)
+            if d.spriteoffset then
+                if npc.Parent.Variant == mod.Monsters.StumblingNest.Var then
+                    npc.Position = npc.Parent.Position - npc.Parent.Velocity
+                    npc.SpriteOffset = d.spriteoffset
+                else
+                    npc.Position = npc.Parent.Position + Vector(d.spriteoffset.X,0)
+                    npc.SpriteOffset = Vector(0, d.spriteoffset.Y)
+                end
+                npc.Velocity = npc.Parent.Velocity:Resized(npc.Parent.Velocity:Length()/d.test)
             end
-            npc.Velocity = npc.Parent.Velocity:Resized(npc.Parent.Velocity:Length()/d.test)
-        end
 
-        mod:spritePlay(sprite, "HeadDisappear")
+            mod:spritePlay(sprite, "HeadDisappear")
             if sprite:IsFinished() then
                 npc:Remove()
             end
+        end
     end
 
     if d.state == "escape" then
-        if npc.Parent:GetData().state == "dead" then
+        if not npc.Parent or npc.Parent:GetData().state == "dead" or not npc.Parent:Exists() then
             npc:Kill()
-        end
+        else
 
-        if d.spriteoffset then
-            if npc.Parent.Variant == mod.Monsters.StumblingNest.Var then
-                npc.Position = npc.Parent.Position - npc.Parent.Velocity
-                npc.SpriteOffset = d.spriteoffset
-            else
-                npc.Position = npc.Parent.Position + Vector(d.spriteoffset.X,0)
-                npc.SpriteOffset = Vector(0, d.spriteoffset.Y)
+            if d.spriteoffset then
+                if npc.Parent.Variant == mod.Monsters.StumblingNest.Var then
+                    npc.Position = npc.Parent.Position - npc.Parent.Velocity
+                    npc.SpriteOffset = d.spriteoffset
+                else
+                    npc.Position = npc.Parent.Position + Vector(d.spriteoffset.X,0)
+                    npc.SpriteOffset = Vector(0, d.spriteoffset.Y)
+                end
+                npc.Velocity = npc.Parent.Velocity:Resized(npc.Parent.Velocity:Length()/d.test)
             end
-            npc.Velocity = npc.Parent.Velocity:Resized(npc.Parent.Velocity:Length()/d.test)
-        end
 
-        mod:spritePlay(sprite, "Escape")
-        if sprite:IsFinished() then
-            npc.Velocity = Vector(math.random(-5,5)/5,math.random(1,5)/5)
-            d.state = "chase"
+            mod:spritePlay(sprite, "Escape")
+            if sprite:IsFinished() then
+                npc.Velocity = Vector(math.random(-5,5)/5,math.random(1,5)/5)
+                d.state = "chase"
+            end
         end
     end
 
@@ -281,15 +285,19 @@ function mod:WebletAI(npc, sprite, d)
     end
 
     if d.state == "disappear" then
-        sprite:RemoveOverlay()
-        if npc.Position.X < npc.Parent.Position.X then
-            sprite.FlipX = true
+        if not npc.Parent or npc.Parent:GetData().state == "dead" or not npc.Parent:Exists() then
+            npc:Kill()
         else
-            sprite.FlipX = false
-        end
-        mod:spritePlay(sprite, "Disappear")
-        if sprite:IsFinished() then
-            npc:Remove()
+            sprite:RemoveOverlay()
+            if npc.Position.X < npc.Parent.Position.X then
+                sprite.FlipX = true
+            else
+                sprite.FlipX = false
+            end
+            mod:spritePlay(sprite, "Disappear")
+            if sprite:IsFinished() then
+                npc:Remove()
+            end
         end
     end
 
