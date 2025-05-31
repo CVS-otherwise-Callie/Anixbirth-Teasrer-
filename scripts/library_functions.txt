@@ -136,7 +136,7 @@ This function does not work currently.
 ---
 
 ---
-GetClosestEnt(pos, npc)
+GetClosestEnt(pos, npc, whitelistID, whitelistVAR, whitelistSUB)
 
 Gets the closest entity. If the NPC variable is in the function, makes it so the npc does not try to get itself.
 ONLY GETS ACTIVE ENTITIES!!
@@ -144,6 +144,9 @@ ONLY GETS ACTIVE ENTITIES!!
 "pos" is the position you're checking at.
 -- OPTIONAL--
 "npc" is the npc you blacklist from the check. It is set to nil if not given a value
+"whitelistID" is the required ID of the enemy. If an enemy does not have this ID, it is skipped.
+"whitelistVAR" is the required Variant of the enemy. If an enemy does not have this Variant, it is skipped.
+"whitelistID" is the required SubType of the enemy. If an enemy does not have this SubType, it is skipped.
 
 RETURN EXAMPLE:
 userdata:ssagd776gwa7

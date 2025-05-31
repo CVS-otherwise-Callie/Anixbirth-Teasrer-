@@ -125,20 +125,6 @@ local room = game:GetRoom()
         npc.StateFrame = npc.StateFrame + 1
     end
 
-    if npc.StateFrame == 1 then
-        for _, monster in ipairs(Isaac.FindInRadius(npc.Position, 30, 8)) do
-            if monster.Variant == mod.Monsters.Hangeslip.Var and monster.Type == mod.Monsters.Hangeslip.ID then
-                monster.Parent = npc
-                npc.Child = monster
-            end
-        end
-    end
-
-    if npc.Child and npc.Child:GetData().movable then
-        npc.Child.Position = npc.Position
-        npc.Child.Velocity = npc.Velocity
-    end
-
     if npc.StateFrame == 200 then
         d.state = "cutinit"
     end

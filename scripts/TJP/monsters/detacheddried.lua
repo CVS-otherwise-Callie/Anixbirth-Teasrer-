@@ -37,8 +37,11 @@ function mod:DetachedDriedAI(npc, sprite, d)
         end
     end
 
-    print(d.state)
-    print(sprite:GetFrame())
+    --print(d.state)
+    --print(sprite:GetFrame())
+    if npc.Child then
+        print("npc.Child")
+    end
 
     if d.state == "splat" then
         npc.Velocity = npc.Velocity * 0.8

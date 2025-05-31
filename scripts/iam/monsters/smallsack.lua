@@ -58,6 +58,7 @@ function mod:SmallSackAI(npc, sprite, d)
     end
 
     if sprite:IsEventTriggered("Death") then
+        npc.DepthOffset = -100
         for i = 1, d.stage do
             local ents = {
                 {EntityType.ENTITY_ATTACKFLY, 0},

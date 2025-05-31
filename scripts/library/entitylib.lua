@@ -294,5 +294,135 @@ function mod:MakeVulnerable(npc)
 	npc.GridCollisionClass = GridCollisionClass.COLLISION_SOLID
 end
 
+function mod:MakeBossDeath(npc, extragore, frame, sfx1, sfx2)
+	local sprite = npc:GetSprite()
+	local d = npc:GetData()
+	extragore = extragore or true
+	frame = frame or 4
+	sfx1 = sfx1 or SoundEffect.SOUND_MEAT_JUMPS
+	sfx2 = sfx2 or SoundEffect.SOUND_DEATH_BURST_LARGE
+
+	if not d.npcDeathAnimInit then
+		d.npcDeathlastFrame = 0
+		d.npcDeathAnimInit = true
+	end
+
+	if sprite:IsPlaying("Death") then
+        if sprite:GetFrame()%frame == 0 and npc.StateFrame ~= d.npcDeathlastFrame then
+            npc:PlaySound(sfx1, 1, 0, false, 1)
+			if extragore then
+				Isaac.Spawn(EntityType.ENTITY_EFFECT, EffectVariant.BLOOD_PARTICLE, 0, npc.Position, Vector(math.random(-10, 10), math.random(-10, 10)), npc)
+			end
+        end
+        d.npcDeathlastFrame = npc.StateFrame
+    end
+    if sprite:IsFinished("Death") then
+		if not d.hasBloodGibsExploded then
+        	npc:PlaySound(sfx2, 1, 0, false, 1)
+			if extragore then
+        		npc:BloodExplode()
+				Isaac.Spawn(EntityType.ENTITY_EFFECT, EffectVariant.LARGE_BLOOD_EXPLOSION, 0, npc.Position, Vector.Zero, npc):ToEffect()
+			else
+				npc:Kill()
+			end
+			d.hasBloodGibsExploded = true
+		end
+    end
+end
+
+function mod:GetClosestEnt(pos, npc, whitelistID, whitelistVAR, whitelistSUB)
+	-- REMINDER TO ADD A CHECK TO BLACKLISTS!!!!!!!
+	local dist = 9999999
+	local ent
+
+
+	for k, v in ipairs(Isaac.GetRoomEntities()) do
+		local valid = true
+
+		if whitelistID then
+			if whitelistID ~= v.Type then
+				valid = false
+			end
+		end
+		if whitelistVAR then
+			if whitelistVAR ~= v.Variant then
+				valid = false
+			end
+		end
+		if whitelistSUB then
+			if whitelistSUB ~= v.SubType then
+				valid = false
+			end
+		end
+
+		if v.Position:Distance(pos) < dist and v:IsActiveEnemy() and v:IsVulnerableEnemy() and not v:IsDead() and not v:HasEntityFlags(EntityFlag.FLAG_FRIENDLY) and v.Position:Distance(pos) ~= 0 then
+
+			if npc then
+				if not (v.Type == npc.Type and v.Variant == npc.Variant and v.SubType == npc.SubType) and valid then
+					ent = v
+					dist = v.Position:Distance(pos)
+				end
+			else
+				if valid then
+					ent = v
+					dist = v.Position:Distance(pos)
+				end
+			end
+		end
+	end
+	return ent
+end
+
+function mod:GetClosestPlayer(pos)
+	local dist = 9999999
+	local ent
+
+	for i= 1, game:GetNumPlayers() do
+
+		local v = Isaac.GetPlayer(i)
+
+		if v.Position:Distance(pos) < dist then
+			ent = v
+			dist = v.Position:Distance(pos)
+		end
+	end
+	return ent
+end
+
+function mod:Orbit(npc, ent, speed, orb)
+    local target = ent
+	local d = npc:GetData()
+	orb = orb or 70
+	speed = speed or 1
+
+	ent:GetData().anixbirthEntitiesOrbiting = ent:GetData().anixbirthEntitiesOrbiting or {}
+	ent:GetData().anixbirthEntitiesOrbitingNum = ent:GetData().anixbirthEntitiesOrbitingNum or 0
+
+    d.anixbirthOrbitFuncVar = d.anixbirthOrbitFuncVar or 0
+
+    if d.anixbirthOrbitFuncVar >= 360 then d.anixbirthOrbitFuncVar = 0 else d.anixbirthOrbitFuncVar = d.anixbirthOrbitFuncVar + (0.05 * speed) end
+
+    local vel = mod:GetCirc(orb, d.anixbirthOrbitFuncVar)
+
+	if not ent:GetData().anixbirthEntitiesOrbiting[tostring(npc.InitSeed)] then
+		npc:GetData().anixbirthEntitiesOrbitingNumPar = 0
+		ent:GetData().anixbirthEntitiesOrbitingNum = ent:GetData().anixbirthEntitiesOrbitingNum + 1
+		npc:GetData().anixbirthEntitiesOrbitingNumPar = ent:GetData().anixbirthEntitiesOrbitingNum
+		ent:GetData().anixbirthEntitiesOrbiting[tostring(npc.InitSeed)] = npc
+		for k, v in pairs(ent:GetData().anixbirthEntitiesOrbiting) do
+			if not v:GetData().anixbirthEntitiesOrbitingNumPar or not ent:GetData().anixbirthEntitiesOrbitingNum then
+				ent:GetData().anixbirthEntitiesOrbiting[k] = nil
+			elseif ent:GetData().anixbirthEntitiesOrbitingNum and v:GetData().anixbirthEntitiesOrbitingNumPar then
+				v:GetData().anixbirthOrbitFuncVar = ((360/(ent:GetData().anixbirthEntitiesOrbitingNum+1)) * (v:GetData().anixbirthEntitiesOrbitingNumPar))
+			end
+		end
+		npc.Position = Vector(target.Position.X - vel.X, target.Position.Y - vel.Y)
+		--npc:MultiplyFriction(0)
+	else
+		if not target:IsDead() then
+			npc.Velocity = Vector(target.Position.X - vel.X, target.Position.Y - vel.Y) - npc.Position
+    	end
+	end
+end
 
 --Burslake Bestiary's Handy Dandy Code for morphing on death
