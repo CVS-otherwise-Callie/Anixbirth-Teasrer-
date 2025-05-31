@@ -35,7 +35,7 @@ function mod:PottedFattyAI(npc, sprite, d)
         elseif room:CheckLine(npc.Position,d.newpos,0,1,false,false) then
             npc.Velocity = mod:Lerp(npc.Velocity, Vector(2*d.speedMod, 0):Rotated((d.newpos - npc.Position):GetAngleDegrees()), 1)
         else
-            path:FindGridPath(d.newpos, 0.7, 1, true)
+            path:FindGridPath(d.newpos, 0.2*d.speedMod, 1, true)
         end
     end
 

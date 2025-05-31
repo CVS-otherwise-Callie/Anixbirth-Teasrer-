@@ -414,7 +414,7 @@
         <devolve id="284.0.0" weight="1" />
     </entity>
 
-    <entity anm2path="monsters/pottedfatty/pottedfatty.anm2" reroll="true" baseHP="20" boss="0" champion="1" collisionDamage="1" collisionMass="10" collisionRadius="13" friction="1" id="161" name="Potted Fatty" numGridCollisionPoints="12" shadowSize="16" stageHP="0" variant="51" portrait="51">
+    <entity anm2path="monsters/pottedfatty/pottedfatty.anm2" reroll="true" baseHP="20" boss="0" champion="1" collisionDamage="1" collisionMass="10" collisionRadius="13" friction="1" id="161" name="Potted Fatty" numGridCollisionPoints="12" shadowSize="16" stageHP="0" variant="52" portrait="51">
 		<bestiary transform="0,0,1" anim="Stuck" />
         <gibs amount="16" blood="1" bone="1" eye="1" gut="1" large="0" />
         <preload-snd id="167" /> <!-- SOUND_ANGRY_GURGLE -->

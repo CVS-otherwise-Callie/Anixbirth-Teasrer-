@@ -36,16 +36,13 @@ function mod:SixheadtopAI(npc, sprite, d)
         end
     end
 
-    if d.ent:IsDead() or not d.ent:Exists()  or not d.isbottominroom then
-        npc:Kill()
-    end
     local params = ProjectileParams()    
     params.Scale = 1
     params.BulletFlags = params.BulletFlags | ProjectileFlags.BOOMERANG | ProjectileFlags.CURVE_LEFT
 
     if d.state == "shake" then
 
-        if (targetpos:Distance(npc.Position) < 75 or d.ent.Position:Distance(npc.Position) < 75) and game:GetRoom():CheckLine(target.Position,npc.Position,3,900,false,false) then
+        if (targetpos:Distance(npc.Position) < 150 or d.ent.Position:Distance(npc.Position) < 150) and game:GetRoom():CheckLine(target.Position,npc.Position,3,900,false,false) then
             mod:spritePlay(sprite, "AttackStart")
             d.state = "nullstate"
         else
@@ -61,7 +58,7 @@ function mod:SixheadtopAI(npc, sprite, d)
                     if npc.Position:Distance(targetpos) <= npc.Position:Distance(d.ent.Position) then
                         for i = 0, 5 do
                             d.typeofShooting = "player"
-                            local proj = Isaac.Spawn(9, 0, 0, npc.Position, Vector(3, 0):Rotated((60*i+d.rngshoot)), npc):ToProjectile()
+                            local proj = Isaac.Spawn(9, 0, 0, npc.Position, Vector(5, 0):Rotated((60*i+d.rngshoot)), npc):ToProjectile()
                             proj:AddProjectileFlags(ProjectileFlags.BOOMERANG)
                             if d.shootleft then
                                 proj:AddProjectileFlags(ProjectileFlags.CURVE_LEFT)
@@ -99,7 +96,7 @@ function mod:SixheadtopAI(npc, sprite, d)
             end
         end
 
-        if ((targetpos:Distance(npc.Position) > 100 and d.typeofShooting == "player") or (d.ent.Position:Distance(npc.Position) > 100) and d.typeofShooting == "bottom") then
+        if ((targetpos:Distance(npc.Position) > 150 and d.typeofShooting == "player") or (d.ent.Position:Distance(npc.Position) > 75) and d.typeofShooting == "bottom") then
             d.state = "shake"
             npc.StateFrame = 0
             d.wait = 1
