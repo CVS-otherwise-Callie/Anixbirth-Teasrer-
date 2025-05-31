@@ -14,7 +14,12 @@ FHAC.TJPMonsters = {
     Onedead = FHAC:ENT("Onedead")
 }
 
+FHAC.TJPEffects = {
+    BlankEffect = FHAC:ENT("Blank Effect Anixbirth") --sorry Jacket! putting this here
+}
+
 FHAC:MixTables(FHAC.Monsters, FHAC.TJPMonsters)
+FHAC:MixTables(FHAC.Effects, FHAC.TJPEffects)
 
 FHAC:LoadScripts("scripts.TJP.monsters", {
     "gobbo",

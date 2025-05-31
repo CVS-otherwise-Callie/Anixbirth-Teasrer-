@@ -329,7 +329,6 @@ mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, function(_, npc, amount, flags)
             for i = 1, math.random(3, 5) do
                 local bucketGib = Isaac.Spawn(1000, 4, 0, npc.Position, Vector(math.random(15,30)/10, 0):Rotated(i*75 + math.random(45)), nil)
                 bucketGib:GetSprite():SetFrame("rubble_alt", math.random(4))
-                bucketGib:SetColor(Color(2, 1, 1, 1, 0, 0,0,0), 5, 2, true, false)
                 bucketGib:Update()
 
                 local ef = Isaac.Spawn(EntityType.ENTITY_EFFECT, EffectVariant.DUST_CLOUD, -1, npc.Position + Vector(math.random(-25, 25), 10),Vector.Zero, npc):ToEffect()
@@ -347,9 +346,9 @@ mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, function(_, npc, amount, flags)
             local ef = Isaac.Spawn(EntityType.ENTITY_EFFECT, EffectVariant.DUST_CLOUD, -1, npc.Position + Vector(math.random(-25, 25), 10),Vector.Zero, npc):ToEffect()
             ef:SetTimeout(10)
             ef.SpriteScale = Vector(0.03,0.03)
+            ef:Update()
 
             bucketGib:GetSprite():SetFrame("rubble_alt", math.random(4))
-            bucketGib:SetColor(Color(2, 1, 1, 1, 0, 0,0,0), 5, 2, true, false)
             bucketGib:Update()
 
             npc:ToNPC():PlaySound(SoundEffect.SOUND_SCYTHE_BREAK, 0.5, 0, false, 0.3)

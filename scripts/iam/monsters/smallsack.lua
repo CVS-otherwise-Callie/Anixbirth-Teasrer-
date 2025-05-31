@@ -62,7 +62,8 @@ function mod:SmallSackAI(npc, sprite, d)
             local ents = {
                 {EntityType.ENTITY_ATTACKFLY, 0},
                 {EntityType.ENTITY_SPIDER, 0},
-                {EntityType.ENTITY_DART_FLY, 0}
+                {EntityType.ENTITY_DART_FLY, 0},
+                {mod.Monsters.Roach.ID, mod.Monsters.Roach.Var}
             }
 
             local choice = math.random(#ents)

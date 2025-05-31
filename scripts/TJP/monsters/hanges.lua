@@ -8,22 +8,53 @@ mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
     end
 end, mod.Monsters.Hangeslip.ID)
 
-function mod:HangesAI(npc, sprite, d)
-    local player = npc:GetPlayerTarget()
-    local playerpos = mod:confusePos(npc, player.Position, 5, nil, nil)
-    local path = npc.Pathfinder
-    local room = game:GetRoom()
+mod:AddCallback(ModCallbacks.MC_POST_NPC_RENDER, function(_, npc)
+    if npc.Variant == mod.Monsters.Hangeslip.Var and npc.SubType == 0 and npc:GetData().Dried then
+        mod:HangedriedRenderAI(npc, npc:GetSprite(), npc:GetData())
+    end
+end, mod.Monsters.Hangeslip.ID)
 
-    local speed = 7
-    if not d.init then
+local function FindDried(npc)
+    local ta = {}
+    local dried = Isaac.GetRoomEntities() --since dried are unlisted entities
+    for k, v in ipairs(dried) do
+        if v.Type == mod.Monsters.Dried.ID and v.Variant == mod.Monsters.Dried.Var and not (v.Parent and v.Parent.Variant == mod.Monsters.Hangeslip.Var and v.Parent ~= npc) then
+            table.insert(ta, v)
+        end
+    end
+    if #ta ==0 then
+        return nil
+    else
+        return ta[math.random(#ta)]
+    end
+end
+
+function mod:HangesAI(npc, sprite, d)
+
+    if not d.oginit then
         sprite:SetOverlayFrame("HangeHeadDown", 1)
-        d.init = true
+
+        d.Dried = FindDried(npc)
+
+        d.oginit = true
         d.state = "reveal"
     else
         npc.StateFrame = npc.StateFrame + 1
     end
 
-    if npc.StateFrame > 1 and not npc.Parent then
+    if d.Dried then
+        d.Dried.Parent = npc
+    end
+
+    
+    if d.Dried then
+        npc:ClearEntityFlags(EntityFlag.FLAG_APPEAR)
+        d.movable = true
+        npc.SpriteOffset = Vector(0,-54) + d.Dried.SpriteOffset
+        sprite:RemoveOverlay()
+        npc.Position = d.Dried.Position
+        mod:HangedriedAI(npc, npc:GetSprite(), npc:GetData())
+    elseif npc.StateFrame > 1 and not d.Dried then
         if npc.Variant == mod.Monsters.Hangeslip.Var and npc.SubType == mod.Monsters.Hangeslip.Sub then
             mod:HangeslipAI(npc, npc:GetSprite(), npc:GetData())
         elseif npc.Variant == mod.Monsters.Hangeslip.Var and npc.SubType == mod.Monsters.Hangeslip.Sub + 1 then
@@ -33,16 +64,34 @@ function mod:HangesAI(npc, sprite, d)
         elseif npc.Variant == mod.Monsters.Hangeslip.Var and npc.SubType == mod.Monsters.Hangeslip.Sub + 3 then
             mod:HangekickAI(npc, npc:GetSprite(), npc:GetData())
         end
-    elseif npc.StateFrame > 1 and npc.Parent then
-        d.movable = true
-        npc.SpriteOffset = Vector(0,-54) + npc.Parent.SpriteOffset
-        npc.DepthOffset = 5
-        sprite:RemoveOverlay()
-        mod:HangedriedAI(npc, npc:GetSprite(), npc:GetData())
     end
 end
 
 function mod:HangedriedAI(npc, sprite, d)
+
+    if not d.init then
+        d.backDriedBody = d.backDriedBody or Isaac.Spawn(EntityType.ENTITY_EFFECT, mod.Effects.BlankEffect.Var, 0, npc.Position, npc.Velocity, nil)
+        d.backDriedBody.SpriteOffset = Vector(0,-54) + d.Dried.SpriteOffset
+        d.backDriedBody.DepthOffset = -50
+
+        d.BackDriedFace = d.BackDriedFace or Isaac.Spawn(EntityType.ENTITY_EFFECT, mod.Effects.BlankEffect.Var, 0, npc.Position, npc.Velocity, nil)
+        d.BackDriedFace.SpriteOffset = Vector(0,-54) + d.Dried.SpriteOffset
+        d.BackDriedFace.DepthOffset = -50
+    end
+
+    if d.backDriedBody then
+        d.backDriedBody.Position = npc.Position
+    end
+    if d.BackDriedFace then
+        d.BackDriedFace.Position = npc.Position
+    end
+
+    mod:MakeInvulnerable(npc)
+    npc.DepthOffset = 5
+
+end
+
+function mod:HangedriedRenderAI(npc, sprite, d)
     local player = npc:GetPlayerTarget()
     local playerpos = mod:confusePos(npc, player.Position, 5, nil, nil)
     local path = npc.Pathfinder
@@ -50,14 +99,22 @@ function mod:HangedriedAI(npc, sprite, d)
 
     local screenpos = room:WorldToScreenPosition(npc.Position)
 
-    sprite:SetFrame("HangeRopeBehind", 0)
-    sprite:Render(screenpos)
 
-    sprite:SetFrame("HangeRopeFace", 0)
-    sprite:Render(screenpos)
+    if d.backDriedBody then
+        local spr = d.backDriedBody:GetSprite()
 
-    sprite:SetFrame("HangeRopeInFront", 0)
-    sprite:Render(screenpos)
+        spr:Load("gfx/monsters/hanges/hanges.anm2", true)
+        spr:SetFrame("HangeRopeBehind", 0)
+    end
+
+    if d.BackDriedFace then
+        local spr = d.BackDriedFace:GetSprite()
+
+        spr:Load("gfx/monsters/hanges/hanges.anm2", true)
+        spr:SetFrame("HangeRopeFace", 0)
+    end
+
+    sprite:Play("HangeRopeInFront")
 
 end
 
@@ -77,6 +134,7 @@ function mod:HangeslipAI(npc, sprite, d)
         npc.Velocity = npc.Velocity * 0.8
         mod:spriteOverlayPlay(sprite, "HangeslipReveal")
         if sprite:IsOverlayFinished() then
+            npc:PlaySound(SoundEffect.SOUND_MONSTER_ROAR_0, 1, 2, false, 1)
             d.state = "chase"
         end
     end
@@ -111,7 +169,6 @@ function mod:HangejumpAI(npc, sprite, d)
     end
 
     mod:spriteOverlayPlay(sprite, "HangejumpReveal")
-    print("JUUUUMP")
 end
 
 function mod:HangethrowAI(npc, sprite, d)
@@ -125,7 +182,6 @@ function mod:HangethrowAI(npc, sprite, d)
     end
 
     mod:spriteOverlayPlay(sprite, "HangethrowReveal")
-    print("THROOOOW")
 end
 
 function mod:HangekickAI(npc, sprite, d)
@@ -139,5 +195,4 @@ function mod:HangekickAI(npc, sprite, d)
     end
 
     mod:spriteOverlayPlay(sprite, "HangekickReveal")
-    print("KIIIIICK")
 end

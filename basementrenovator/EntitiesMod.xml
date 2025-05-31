@@ -108,6 +108,10 @@ Up to groups of 3.
         </spinner>
       </bitfield>
 </entity>
+<entity ID="161" Variant="50" Subtype="0" Name="Hangeslip" Image="mah boys/hangeslip.png" BaseHP="13"/>
+<entity ID="161" Variant="50" Subtype="1" Name="Hangejump" Image="mah boys/hangejump.png" BaseHP="13"/>
+<entity ID="161" Variant="50" Subtype="2" Name="Hangethrow" Image="mah boys/hangethrow.png" BaseHP="13"/>
+<entity ID="161" Variant="50" Subtype="3" Name="Hangekick" Image="mah boys/hangekick.png" BaseHP="15"/>
 <entity ID="161" Variant="51" Name="Potted Fatty" Image="mah boys/pottedfatty.png" BaseHP="20"/>
 <entity ID="161" Variant="59" Name="Webbed Carcass" Image="mah boys/webbedcarcass.png" BaseHP="10"/>
 <entity ID="161" Variant="65" Name="Suck Up" Image="mah boys/suckup.png" BaseHP="10"/>
@@ -254,6 +258,10 @@ Use 2, 4, or 6 normally.
 			<entity Name="Suck Up"/>
 			<entity Name="Yoyader"/>
 			<entity Name="Potted Fatty"/>
+			<entity Name="Hangeslip"/>
+			<entity Name="Hangejump"/>
+			<entity Name="Hangethrow"/>
+			<entity Name="Hangekick"/>
 		</group>
   	</group>
 

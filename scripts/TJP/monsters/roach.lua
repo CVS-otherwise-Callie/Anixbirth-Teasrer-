@@ -62,8 +62,37 @@ function mod:RoachAI(npc, sprite, d)
 end
 
 mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, function(_, npc, dmg, flags, source)
-    if npc.Type == 161 and npc.Variant == mod.Monsters.Roach.Var and npc.HitPoints - dmg <= 0 then
-        npc:GetData().state = "dead"
-        return false
+    if npc.Type == 161 and npc.Variant == mod.Monsters.Roach.Var then
+        if AnixbirthSaveManager.GetSettingsSave().accurateRoach then
+            if source.Entity and source.Entity.Type == 1000 and source.Entity.Variant == 29 then
+                local str = {"Fun fact:", "Roaches are", "fucking bastards"}
+                    for j = 1, 60 do
+                    mod.scheduleCallback(function()
+                        for k = 1, 3 do
+                            local pos = Game():GetRoom():WorldToScreenPosition(npc.Position) + Vector(mod.TempestFont:GetStringWidth(str[k]) * -0.5, -(npc.SpriteScale.Y * 35) - j/3 - 15)
+                            local opacity
+                            local cap = 45
+                            if j >= cap then
+                                opacity = 1 - ((j-cap)/30)
+                            else
+                                opacity = j/cap
+                            end
+                            --Isaac.RenderText(str, pos.X, pos.Y, 1, 1, 1, opacity)
+                            mod.TempestFont:DrawString(str[k], pos.X, pos.Y + (12 * k), KColor(1,1,1,opacity), 0, false)
+                        end
+                    end, j, ModCallbacks.MC_POST_RENDER)
+                end
+                return false
+            end
+            if math.random(2) == 2 then
+                npc:SetColor(Color(2,2,2,1,0,0,0),5,2,true,false)
+                npc:ToNPC():PlaySound(SoundEffect.SOUND_THUMBS_DOWN, 1, 2, false, 1)
+                return false
+            end
+        end
+        if npc.HitPoints - dmg <= 0 then
+            npc:GetData().state = "dead"
+            return false 
+        end
     end
 end, 161)
