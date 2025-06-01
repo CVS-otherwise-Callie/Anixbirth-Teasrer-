@@ -36,23 +36,15 @@ local function FindAvailableDetachedDried(npc)
 	local ent
     local pos = npc.Position
     for k, v in ipairs(dried) do
-        if v.Type == mod.Monsters.DetachedDried.ID and v.Variant == mod.Monsters.DetachedDried.Var and not v.Child then
+        if v.Type == mod.Monsters.DetachedDried.ID and v.Variant == mod.Monsters.DetachedDried.Var and not v.Child then --if its a dried without a child
             table.insert(ta, v)
         end
     end
     for k, v in ipairs(ta) do
 
-		if v.Position:Distance(pos) < dist and v:IsActiveEnemy() and v:IsVulnerableEnemy() and not v:IsDead() and not v:HasEntityFlags(EntityFlag.FLAG_FRIENDLY) and v.Position:Distance(pos) ~= 0 then
-
-			if npc then
-				if not (v.Type == npc.Type and v.Variant == npc.Variant and v.SubType == npc.SubType) then
-					ent = v
-					dist = v.Position:Distance(pos)
-				end
-			else
-				ent = v
-				dist = v.Position:Distance(pos)
-			end
+		if v.Position:Distance(pos) < dist and v:IsActiveEnemy() and not v:IsDead() and v.Position:Distance(pos) ~= 0 then
+			ent = v
+			dist = v.Position:Distance(pos)
 		end
 	end
     return ent
@@ -215,18 +207,13 @@ function mod:HangethrowAI(npc, sprite, d)
     end
 
     if d.state == "reveal" then
-        npc.Velocity = npc.Velocity * 0.8
         mod:spriteOverlayPlay(sprite, "HangethrowReveal")
         if sprite:IsOverlayFinished() then
             npc:PlaySound(SoundEffect.SOUND_MONSTER_ROAR_0, 1, 2, false, 1)
             d.state = "chase"
         end
-    end
 
-    if d.detacheddried and (d.detacheddried:IsDead() or not d.detacheddried:Exists()) then
-        npc.Parent = nil
-        d.detacheddried.Child = nil
-        d.detacheddried = nil
+        npc:MultiplyFriction(0.8)
     end
 
     if not d.detacheddried and FindAvailableDetachedDried(npc) then
@@ -236,12 +223,8 @@ function mod:HangethrowAI(npc, sprite, d)
     end
 
     if d.state == "chase" then
-        print(d.detacheddried)
-
-        --print(FindAvailableDetachedDried(npc))
 
         if npc.Parent then
-            print("ok we here")
             local childpos = npc.Parent.Position
             if room:CheckLine(npc.Position,childpos,0,1,false,false) then
                 local targetvelocity = (childpos - npc.Position):Resized(speed)
@@ -250,7 +233,6 @@ function mod:HangethrowAI(npc, sprite, d)
                 path:FindGridPath(childpos, 0.8, 1, true)
             end
         else
-            print("uhh what")
             if mod:isScare(npc) then
                 local targetvelocity = (playerpos - npc.Position):Resized(speed * -1)
                 npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 0.3)
@@ -269,13 +251,75 @@ function mod:HangethrowAI(npc, sprite, d)
             sprite:SetFrame("WalkVert", 0)
         end
 
-        if d.detacheddried then
-            print("LETS GOOOO")
-            print(d.detacheddried.Type)
-            print(d.detacheddried.Variant)
-        else
-            print("SHIIIT")
+    end
+
+    if d.state == "pickup" then
+
+        d.detacheddried.EntityCollisionClass = 0
+
+        if d.detacheddried and not (d.lerpstart or d.lerppercent) then
+            d.lerpstart = d.detacheddried.Position
+            d.lerppercent = 0
         end
+        if d.detacheddried and d.detacheddried:GetData().goalheight == -27 then
+            d.detacheddried.Position = mod:Lerp(d.lerpstart, npc.Position, d.lerppercent)
+            if d.lerppercent < 1 then
+                d.lerppercent = d.lerppercent + 0.05
+            else
+                d.lerppercent = 1
+            end
+        end
+        sprite:RemoveOverlay()
+        mod:spritePlay(sprite, "HangethrowPickup")
+
+        if sprite:IsFinished() then
+            if d.detacheddried then
+                if not d.detacheddried:GetData().airborne then
+                    d.state = "chasepickup"
+                end
+            else
+                mod:ReplaceEnemySpritesheet(npc, "gfx/monsters/hanges/hangebody", 0)
+                d.state = "chase"
+            end
+        end
+
+        npc:MultiplyFriction(0.8)
+    end
+
+    if d.state == "chasepickup" then
+        d.detacheddried.Position = npc.Position
+        d.detacheddried.Velocity = npc.Velocity
+
+        npc:MultiplyFriction(0.8)
+    end
+
+    if d.detacheddried and (d.detacheddried:IsDead() or not d.detacheddried:Exists()) then
+        npc.Parent = nil
+        d.detacheddried.Child = nil
+        d.detacheddried = nil
+    end
+
+    if npc:IsDead() or not npc:Exists() and d.detacheddried then
+        npc.Parent = nil
+        d.detacheddried.Child = nil
+        d.detacheddried:GetData().goalheight = 0
+        d.detacheddried.EntityCollisionClass = 4
+        d.detacheddried.DepthOffset = 0
+    end
+
+    if sprite:IsEventTriggered("Throwstart") then
+        mod:ReplaceEnemySpritesheet(npc, "gfx/monsters/hanges/hangebodypickup", 0)
+
+        if d.detacheddried and not npc:IsDead() then
+            d.detacheddried:GetData().goalheight = -27
+            d.detacheddried:GetData().zvel = -5
+            d.detacheddried.EntityCollisionClass = 0
+            d.detacheddried.DepthOffset = 5
+        end
+    end
+
+    if sprite:IsEventTriggered("Throwend") then
+        mod:ReplaceEnemySpritesheet(npc, "gfx/monsters/hanges/hangebody", 0)
     end
 end
 
@@ -313,12 +357,8 @@ function mod:HangekickAI(npc, sprite, d)
     end
 
     if d.state == "chase" then
-        print(d.detacheddried)
-
-        --print(FindAvailableDetachedDried(npc))
 
         if npc.Parent then
-            print("ok we here")
             local childpos = npc.Parent.Position
             if room:CheckLine(npc.Position,childpos,0,1,false,false) then
                 local targetvelocity = (childpos - npc.Position):Resized(speed)
@@ -327,7 +367,6 @@ function mod:HangekickAI(npc, sprite, d)
                 path:FindGridPath(childpos, 0.8, 1, true)
             end
         else
-            print("uhh what")
             if mod:isScare(npc) then
                 local targetvelocity = (playerpos - npc.Position):Resized(speed * -1)
                 npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 0.3)
@@ -345,13 +384,19 @@ function mod:HangekickAI(npc, sprite, d)
         else
             sprite:SetFrame("WalkVert", 0)
         end
-
-        if d.detacheddried then
-            print("LETS GOOOO")
-            print(d.detacheddried.Type)
-            print(d.detacheddried.Variant)
-        else
-            print("SHIIIT")
-        end
     end
 end
+
+mod:AddCallback(ModCallbacks.MC_PRE_NPC_COLLISION, function(_, npc, collider, low)
+    if (npc.Type == mod.Monsters.Hangeslip.ID and npc.Variant == mod.Monsters.Hangeslip.Var and npc.SubType > 0) and (collider.Type == mod.Monsters.DetachedDried.ID and collider.Variant == mod.Monsters.DetachedDried.Var) then
+        if npc.SubType == 1 then
+            print("jump")
+        end
+        if npc.SubType == 2 then
+            npc:GetData().state = "pickup"
+        end
+        if npc.SubType == 3 then
+            print("kick")
+        end
+    end
+end, 161)

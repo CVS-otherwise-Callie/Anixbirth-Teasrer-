@@ -333,8 +333,8 @@ ReplaceEnemySpritesheet(npc, filepath, layer, loadGraphics)
 Replaces a enemy spritesheet. Checks for champion,and loads graphics. Neat!
 
 "npc" is the NPC thats being manipulated.
-"filepath" is the new file you're changing the entity's spritesheet to.
-"layer" is the layer of the npc's animation that's being changed.
+"filepath" is the path to the new file you're changing the entity's spritesheet to. This includes the file itself, and starts with 'gfx'.
+"layer" is the layer of the npc's animation that's being changed. These are the layers on the 'timeline' section of the anm2, rather than the 'spritesheets' section.
 -- OPTIONAL --
 "loadGraphics" chooses whether the graphics be updated instantly or not. It is set to true if not given a value
 
