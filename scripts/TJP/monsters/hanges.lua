@@ -31,12 +31,12 @@ end
 
 local function FindAvailableDetachedDried(npc)
     local ta = {}
-    local dried = Isaac.GetRoomEntities() --since dried are unlisted entities
+    local dried = Isaac.GetRoomEntities()
     local dist = 9999999
 	local ent
     local pos = npc.Position
     for k, v in ipairs(dried) do
-        if v.Type == mod.Monsters.DetachedDried.ID and v.Variant == mod.Monsters.DetachedDried.Var and not v.Child then --if its a dried without a child
+        if v.Type == mod.Monsters.DetachedDried.ID and v.Variant == mod.Monsters.DetachedDried.Var and not v.Child and v.SpriteOffset.Y == 0 then --if its a grounded dried without a child
             table.insert(ta, v)
         end
     end
@@ -204,6 +204,8 @@ function mod:HangethrowAI(npc, sprite, d)
     if not d.init then
         d.init = true
         d.state = "reveal"
+    else
+        npc.StateFrame = npc.StateFrame + 1
     end
 
     if d.state == "reveal" then
@@ -216,7 +218,7 @@ function mod:HangethrowAI(npc, sprite, d)
         npc:MultiplyFriction(0.8)
     end
 
-    if not d.detacheddried and FindAvailableDetachedDried(npc) then
+    if not d.detacheddried and FindAvailableDetachedDried(npc) and d.state == "chase" then
         d.detacheddried = FindAvailableDetachedDried(npc)
         d.detacheddried.Child = npc
         npc.Parent = d.detacheddried
@@ -244,6 +246,7 @@ function mod:HangethrowAI(npc, sprite, d)
             end
         end
 
+        sprite:SetOverlayFrame("HangethrowReveal", 31)
 
         if npc.Velocity:Length() > 1 then
             npc:AnimWalkFrame("WalkHori","WalkVert",0)
@@ -255,13 +258,16 @@ function mod:HangethrowAI(npc, sprite, d)
 
     if d.state == "pickup" then
 
-        d.detacheddried.EntityCollisionClass = 0
-
-        if d.detacheddried and not (d.lerpstart or d.lerppercent) then
-            d.lerpstart = d.detacheddried.Position
-            d.lerppercent = 0
+        if d.detacheddried then
+            d.detacheddried.EntityCollisionClass = 0
+            print("blah")
+            if not d.lerpstart or not d.lerppercent then
+                print("whopee")
+                d.lerpstart = d.detacheddried.Position
+                d.lerppercent = 0
+            end
         end
-        if d.detacheddried and d.detacheddried:GetData().goalheight == -27 then
+        if d.detacheddried and d.detacheddried:GetData().goalheight == -20 then
             d.detacheddried.Position = mod:Lerp(d.lerpstart, npc.Position, d.lerppercent)
             if d.lerppercent < 1 then
                 d.lerppercent = d.lerppercent + 0.05
@@ -275,10 +281,15 @@ function mod:HangethrowAI(npc, sprite, d)
         if sprite:IsFinished() then
             if d.detacheddried then
                 if not d.detacheddried:GetData().airborne then
+                    npc.StateFrame = 0
+                    d.lerpstart = nil
+                    d.lerppercent = nil
                     d.state = "chasepickup"
                 end
             else
                 mod:ReplaceEnemySpritesheet(npc, "gfx/monsters/hanges/hangebody", 0)
+                d.lerpstart = nil
+                d.lerppercent = nil
                 d.state = "chase"
             end
         end
@@ -287,10 +298,48 @@ function mod:HangethrowAI(npc, sprite, d)
     end
 
     if d.state == "chasepickup" then
+
+        if mod:isScare(npc) then
+            local targetvelocity = (playerpos - npc.Position):Resized(speed * -1)
+            npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 0.3)
+        elseif room:CheckLine(npc.Position,playerpos,0,1,false,false) then
+            local targetvelocity = (playerpos - npc.Position):Resized(speed)
+            npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 0.3)
+        else
+            path:FindGridPath(playerpos, 0.8, 1, true)
+        end
+
         d.detacheddried.Position = npc.Position
         d.detacheddried.Velocity = npc.Velocity
 
+        if npc.Velocity:Length() > 1 then
+            npc:AnimWalkFrame("WalkHori","WalkVert",0)
+        else
+            sprite:SetFrame("WalkVert", 0)
+        end
+
+        sprite:SetOverlayFrame("HangethrowCarryHead", 0)
+
         npc:MultiplyFriction(0.8)
+
+        if npc.StateFrame > 50 then
+            npc.StateFrame = 0
+            d.detacheddried:GetData().goalheight = -18
+            d.state = "throw"
+        end
+    end
+
+    if d.state == "throw" then
+        npc:MultiplyFriction(0.8)
+        sprite:RemoveOverlay()
+        mod:spritePlay(sprite, "HangethrowThrow")
+        if sprite:IsFinished() then
+            d.state = "chase"
+        end
+        if d.detacheddried then
+            d.detacheddried.Position = npc.Position
+            d.detacheddried.Velocity = npc.Velocity
+        end
     end
 
     if d.detacheddried and (d.detacheddried:IsDead() or not d.detacheddried:Exists()) then
@@ -299,7 +348,7 @@ function mod:HangethrowAI(npc, sprite, d)
         d.detacheddried = nil
     end
 
-    if npc:IsDead() or not npc:Exists() and d.detacheddried then
+    if (npc:IsDead() or not npc:Exists()) and d.detacheddried then
         npc.Parent = nil
         d.detacheddried.Child = nil
         d.detacheddried:GetData().goalheight = 0
@@ -311,10 +360,22 @@ function mod:HangethrowAI(npc, sprite, d)
         mod:ReplaceEnemySpritesheet(npc, "gfx/monsters/hanges/hangebodypickup", 0)
 
         if d.detacheddried and not npc:IsDead() then
-            d.detacheddried:GetData().goalheight = -27
+            d.detacheddried:GetData().goalheight = -20
             d.detacheddried:GetData().zvel = -5
             d.detacheddried.EntityCollisionClass = 0
-            d.detacheddried.DepthOffset = 5
+            d.detacheddried.DepthOffset = 10
+        end
+    end
+
+    if sprite:IsEventTriggered("Throw") then
+        if d.detacheddried then
+            d.detacheddried.EntityCollisionClass = 0
+            d.detacheddried.Velocity = (playerpos - npc.Position) / 40
+            d.detacheddried:GetData().goalheight = 0
+            d.detacheddried:GetData().zvel = -7
+            npc.Parent = nil
+            d.detacheddried.Child = nil
+            d.detacheddried = nil
         end
     end
 
@@ -389,14 +450,21 @@ end
 
 mod:AddCallback(ModCallbacks.MC_PRE_NPC_COLLISION, function(_, npc, collider, low)
     if (npc.Type == mod.Monsters.Hangeslip.ID and npc.Variant == mod.Monsters.Hangeslip.Var and npc.SubType > 0) and (collider.Type == mod.Monsters.DetachedDried.ID and collider.Variant == mod.Monsters.DetachedDried.Var) then
-        if npc.SubType == 1 then
-            print("jump")
+        if collider.SpriteOffset.Y == 0 then
+            if npc.SubType == 1 then
+                print("jump")
+            end
+            if npc.SubType == 2 then
+                if npc:GetData().state == "chase" then
+                   npc:GetData().state = "pickup"
+                end
+            end
+            if npc.SubType == 3 then
+                print("kick")
+            end
+        else
+            return true
         end
-        if npc.SubType == 2 then
-            npc:GetData().state = "pickup"
-        end
-        if npc.SubType == 3 then
-            print("kick")
-        end
+
     end
 end, 161)

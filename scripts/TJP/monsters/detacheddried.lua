@@ -35,15 +35,24 @@ function mod:DetachedDriedAI(npc, sprite, d)
     end
 
     if d.state == "ropesplat" then
-        npc.Velocity = npc.Velocity * 0.8
         mod:spritePlay(sprite, "RopeSplatRed")
         if sprite:IsFinished() then
             d.state = "idle"
         end
     end
 
+    if d.state == "hangethrowheadsplat" then
+        if npc.SpriteOffset.Y == -20 then
+            mod:spritePlay(sprite, "LandOnHangethrowHeadRed")
+        else
+            mod:spritePlay(sprite, "HangethrowHeadSplatRed")
+        end
+        if sprite:IsFinished() then
+            d.state = "idle"
+        end
+    end
+
     if d.state == "splat" then
-        npc.Velocity = npc.Velocity * 0.8
         mod:spritePlay(sprite, "SplatRed")
         if sprite:IsFinished() then
             d.state = "idle"
@@ -51,8 +60,12 @@ function mod:DetachedDriedAI(npc, sprite, d)
     end
 
     if d.state == "idle" then
-        npc.Velocity = npc.Velocity * 0.8
-        sprite:SetFrame("RopeSplatRed", 20)
+
+        if npc.Child and npc.Child.SubType == 2 and (npc.SpriteOffset.Y == -20 and d.zvel >= 0) then
+            sprite:SetFrame("LandOnHangethrowHeadRed", 16)
+        else
+            sprite:SetFrame("RopeSplatRed", 20)
+        end
     end
 
     if npc.SpriteOffset.Y < d.goalheight or d.zvel < 0 then
@@ -60,10 +73,16 @@ function mod:DetachedDriedAI(npc, sprite, d)
         npc.SpriteOffset = npc.SpriteOffset + Vector(0,d.zvel)
         d.zvel = d.zvel + 0.4
     else
+        npc.Velocity = npc.Velocity * 0.8
+        npc.SpriteOffset.Y = d.goalheight
+        d.zvel = 0
+        npc.EntityCollisionClass = 4
         if d.airborne then
             d.airborne = false
             if d.state == "falling" then
                 d.state = "ropesplat"
+            elseif d.goalheight == -20 then
+                d.state = "hangethrowheadsplat"
             else
                 d.state = "splat"
             end
