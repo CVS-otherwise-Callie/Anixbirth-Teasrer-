@@ -102,14 +102,16 @@ function mod:SackKidAI(npc, sprite, d)
         elseif room:CheckLine(npc.Position,d.targpos,0,1,false,false) then
             npc.Velocity = mod:Lerp(npc.Velocity, d.targetvelocity, 0.6)
         else
-            path:FindGridPath(playerpos, 1.3, 1, true)
+            print("got it")
+            path:FindGridPath(d.targpos, 1.3, 1, true)
         end
     else
         if mod:isScare(npc) then
             d.targetvelocity = (d.targpos - npc.Position):Resized(-7)
-        elseif room:CheckLine(npc.Position,d.targpos,0,1,false,false) then
+        else
             d.targetvelocity = (d.targpos - npc.Position):Resized(7)
         end
+        print(d.targetvelocity)
         npc:MultiplyFriction(0.8)
     end
 

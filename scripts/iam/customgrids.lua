@@ -28,6 +28,20 @@ FHAC.AltHomeTrapDoorUnlock = StageAPI.CustomGrid("FHACAltHomeTrapDoorUnlock", {
     SpawnerEntity = {Type = FHAC.Grids.GlobalGridSpawner.ID, Variant = 2901}
 })
 
+local function FindNullPressureEnt()
+
+    local room = Game():GetRoom()
+    local roomEntities = room:GetEntities()
+
+    for i = 0, #roomEntities - 1 do
+        local entity = roomEntities:Get(i)
+        if entity.Type == mod.Monsters.LightPressurePlateEntNull.ID and entity.Variant == mod.Monsters.LightPressurePlateEntNull.Var then
+            return true
+        end
+    end
+    return false
+end
+
 function mod.lightpressurePlateAI(customGrid)
     local grid = customGrid.GridEntity
     local sprite = grid:GetSprite()
@@ -59,16 +73,16 @@ function mod.lightpressurePlateAI(customGrid)
 
     if grid.State == 1 and sprite:GetAnimation() == "On" and #Isaac.FindInRadius(grid.Position, 24, EntityPartition.PLAYER) == 0 and #Isaac.FindInRadius(grid.Position, 9, EntityPartition.ENEMY) == 0 then
         grid.State = 2
-    elseif #Isaac.FindInRadius(grid.Position, 9, EntityPartition.ENEMY) ~= 0 or #Isaac.FindInRadius(grid.Position, 24, EntityPartition.PLAYER) ~= 0 then
+    elseif #Isaac.FindInRadius(grid.Position, 9, EntityPartition.ENEMY) ~= 0 or #Isaac.FindInRadius(grid.Position, 24, EntityPartition.PLAYER) ~= 0 and grid.State ~= 1 then
         grid.State = 4
     end
 
     if grid.State == 3 then
         d.unswitchedinit = false
         mod:spritePlay(sprite, "Off")
-        if mod:CheckForEntInRoom({Type = mod.Monsters.LightPressurePlateEntNull.ID, Variant = mod.Monsters.LightPressurePlateEntNull.Var, SubType = 0}, true, true, false) == false then
-            local ent = Isaac.Spawn(mod.Monsters.LightPressurePlateEntNull.ID, mod.Monsters.LightPressurePlateEntNull.Var, 0, Vector.Zero, Vector.Zero, nil)
-            ent:GetData().wasSpawned = true
+        if not d.nullEnt or d.nullEnt:IsDead() or not d.nullEnt:Exists() then
+            d.nullEnt = Isaac.Spawn(mod.Monsters.LightPressurePlateEntNull.ID, mod.Monsters.LightPressurePlateEntNull.Var, 0, Vector.Zero, Vector.Zero, nil)
+            d.nullEnt:GetData().wasSpawned = true
         end
         d.Off = true
     elseif grid.State == 1 then
@@ -79,6 +93,13 @@ function mod.lightpressurePlateAI(customGrid)
         mod:spritePlay(sprite, "UnSwitched")
     elseif grid.State == 4 then
         mod:spritePlay(sprite, "Switched")
+
+        for k, v in ipairs(Isaac.FindByType(mod.Monsters.LightPressurePlateEntNull.ID, mod.Monsters.LightPressurePlateEntNull.Var)) do
+            if v:GetData().ent then
+                game:GetRoom():RemoveGridEntity(game:GetRoom():GetGridIndex(v:GetData().ent.Position), 0, false)
+            end
+            v:Remove()
+        end
     end
 
     if grid.State == 2 then
@@ -226,8 +247,13 @@ end
 -- Custom Pot --
 
 local customPotTab = {
-    {{PickupVariant.PICKUP_KEY, 0, 1}, {PickupVariant.PICKUP_BOMB, 0, 1}},
-    {{PickupVariant.PICKUP_BOMB, 0, 2}},
+    {{EntityType.ENTITY_PICKUP, PickupVariant.PICKUP_COIN, 0, 1}, {EntityType.ENTITY_PICKUP, PickupVariant.PICKUP_BOMB, 0, 1}},
+    {{EntityType.ENTITY_PICKUP, PickupVariant.PICKUP_BOMB, 0, 1}},
+    {{EntityType.ENTITY_PICKUP, PickupVariant.PICKUP_BOMB, 0, 2}},
+    {{EntityType.ENTITY_PICKUP, PickupVariant.PICKUP_COIN, 0, 1}},
+    {{EntityType.ENTITY_PICKUP, PickupVariant.PICKUP_COIN, 0, 2}},
+    {{EntityType.ENTITY_PICKUP, PickupVariant.PICKUP_COIN, 0, 3}},
+    {{EntityType.ENTITY_SPIDER, 0, 0, 1}, {EntityType.ENTITY_PICKUP, PickupVariant.PICKUP_COIN, 0, 1}}
 }
 
 mod:AddCallback(ModCallbacks.MC_POST_NPC_INIT, function(_, npc)
@@ -250,6 +276,8 @@ mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
         npc.GridCollisionClass = GridCollisionClass.COLLISION_NONE
         npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_NONE
         npc:AddEntityFlags(EntityFlag.FLAG_NO_PHYSICS_KNOCKBACK | EntityFlag.FLAG_NO_KNOCKBACK)
+
+        npc.DepthOffset = -10
 
         if npc.Variant == 950 then
 
@@ -301,6 +329,15 @@ mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
             mod:spritePlay(sprite, "Base")
         end
     end
+
+    mod.scheduleCallback(function()
+        for _, tear in pairs(Isaac.FindByType(9, -1, -1, false, false)) do
+            if tear.Position:Distance(npc.Position) < 20 then
+                tear:ToProjectile():Die()
+                npc:TakeDamage(1/10, DamageFlag.DAMAGE_NOKILL, EntityRef(tear.SpawnerEntity), 1)
+            end
+        end
+    end, 1, ModCallbacks.MC_POST_UPDATE)
 end, 753)
 
 mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, function(_, npc, amount, flags)
@@ -317,11 +354,11 @@ mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, function(_, npc, amount, flags)
 		local amt = math.min(math.max(math.floor(amount / 60), 1), 3)
         if npc.HitPoints - amt <= 1 or flags & (DamageFlag.DAMAGE_TNT | DamageFlag.DAMAGE_EXPLOSION) ~= 0 then
             for k, v in ipairs(customPotTab[math.random(#customPotTab)]) do
-                for i = 1, v[3] do
-                    if v[1] == 20 then
+                for i = 1, v[4] do
+                    if v[2] == 20 then
                         Isaac.Spawn(5, 20, 0, npc.Position, RandomVector()*math.random(2,5), nil)
                     else
-                        Isaac.Spawn(EntityType.ENTITY_PICKUP, v[1], v[2], npc.Position, RandomVector()*math.random(2,5), nil)
+                        Isaac.Spawn(v[1], v[2], v[3], npc.Position, RandomVector()*math.random(2,5), nil)
                     end
                 end
             end
@@ -360,6 +397,59 @@ mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, function(_, npc, amount, flags)
     end
 
 end, 753)
+
+mod:AddCallback(ModCallbacks.MC_PRE_NPC_COLLISION, function(_, npc, coll, bool)
+    if coll.Type == 2 and not npc:GetData().anixbirthDONOTDOANYTHING then
+        coll:Kill()
+    end
+end, 753)
+
+local function AnyPlateNotDone()
+
+    local room = game:GetRoom()
+
+    for i = 0, room:GetGridSize() do
+        if room:GetGridEntity(i) ~= nil and room:GetGridEntity(i):GetType() == 20 and room:GetGridEntity(i).VarData == 19 and room:GetGridEntity(i).State == 0 then
+            return true
+        end
+    end
+
+    return false
+
+end
+
+local function GrimPlateFunc(npc, activestate)
+
+    local activestate = activestate or 3
+
+    --[[if not npc:GetData().anixbrithGrimPos then npc:GetData().anixbrithGrimPos = npc.Position end
+    if AnyPlateNotDone() then
+        print(npc.State)
+        if npc.State == 16 then
+            npc:Remove()
+            local grim = Isaac.Spawn(npc.Type, npc.Variant, npc.SubType, npc.Position, Vector.Zero, npc.SpawnerEntity)
+            grim:GetData().anixbrithGrimPos = npc.Position
+            grim:ToNPC().State = activestate
+            grim:ToNPC().CanShutDoors = true
+        end
+    end
+    if npc:GetData().anixbrithGrimPos then
+        npc.Position = npc:GetData().anixbrithGrimPos
+        npc.Velocity = Vector.Zero
+    end
+
+    if npc.StateFrame > 10 then
+        npc:ToNPC().CanShutDoors = false
+    end]]
+end
+
+mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
+    GrimPlateFunc(npc)
+end, 42)
+
+mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
+    GrimPlateFunc(npc, 8)
+end, 202)
 
 
 StageAPI.AddCallback("FHAC", "POST_CUSTOM_GRID_UPDATE", 1, mod.lightpressurePlateAI, "FHACLightPressurePlate")

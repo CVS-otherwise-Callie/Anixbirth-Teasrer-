@@ -93,6 +93,8 @@ function FHAC:PostNewRoom()
     FHAC:LoadSavedRoomEnts()
     FHAC.ToBeSavedEnts = {}
 
+    FHAC.NullPressureEntExist = false
+    
     FHAC.spawnedDried = false
     FHAC:SpawnRandomDried()
     FHAC:BigBowlOfSauerkrautSpawn()

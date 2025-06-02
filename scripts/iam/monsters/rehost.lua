@@ -20,9 +20,15 @@ function mod:ReHostAI(npc, sprite, d)
 
     if not d.init then
 
-        d.state = "spawned"
+        if npc.SubType == 1 then
+            d.state = "chase"
+        else
+            d.state = "spawned"
 
-        npc.StateFrame = 30
+            if npc.SubType == 0 then
+                npc.SubType = math.random(20, 50)
+            end
+        end
 
         d.init = true
     else
@@ -34,6 +40,7 @@ function mod:ReHostAI(npc, sprite, d)
         if npc.StateFrame > npc.SubType then
             mod:spriteOverlayPlay(sprite, "HeadReComeoutSlow")
             if sprite:IsOverlayFinished() then
+                npc.StateFrame = 30
                 d.state = "chase"
             end
         else

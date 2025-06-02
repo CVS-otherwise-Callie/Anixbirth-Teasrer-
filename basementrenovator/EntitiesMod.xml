@@ -102,6 +102,7 @@ Up to groups of 3.
 <entity ID="161" Variant="48" Name="Bewebbed" Image="mah boys/bewebbed.png" BaseHP="12" PlaceVisual="WallSnap"/>
 <entity ID="161" Variant="49" Name="Rehost" Image="mah boys/rehost.png" BaseHP="12">
 <bitfield Key="Subtype">
+      <checkbox Name="Instantly Pops Out" Length="1"/>
         <spinner Length="16" ValueOffset="1" Name="Delay of Rerere Popping Out">
           <tooltip>
           </tooltip>
