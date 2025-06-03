@@ -33,7 +33,7 @@ function mod:HorfOnAStickAI(npc, sprite, d)
 
     local room = game:GetRoom()
 
-    mod:SaveEntToRoom(npc)
+    mod:SaveEntToRoom(npc, true)
 
     if not d.init then
         npc:AddEntityFlags(EntityFlag.FLAG_NO_PHYSICS_KNOCKBACK | EntityFlag.FLAG_NO_KNOCKBACK)
