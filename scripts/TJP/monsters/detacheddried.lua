@@ -29,6 +29,8 @@ function mod:DetachedDriedAI(npc, sprite, d)
         d.init = true
     end
 
+    mod:SaveEntToRoom(npc, true)
+
     if d.state == "falling" then
         npc.Velocity = Vector.Zero
         mod:spritePlay(sprite, "FallRed")
