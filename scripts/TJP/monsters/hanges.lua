@@ -276,7 +276,12 @@ function mod:HangethrowAI(npc, sprite, d)
             end
         end
         sprite:RemoveOverlay()
-        mod:spritePlay(sprite, "HangethrowPickup")
+        if d.detacheddried.Position:Distance(npc.Position) < 40 then
+            mod:spritePlay(sprite, "HangethrowPickup")
+        else
+            mod:ReplaceEnemySpritesheet(npc, "gfx/monsters/hanges/hangebody", 0)
+            d.state = "chase"
+        end
 
         if sprite:IsFinished() then
             if d.detacheddried then
@@ -357,9 +362,9 @@ function mod:HangethrowAI(npc, sprite, d)
     end
 
     if sprite:IsEventTriggered("Throwstart") then
-        mod:ReplaceEnemySpritesheet(npc, "gfx/monsters/hanges/hangebodypickup", 0)
 
-        if d.detacheddried and not npc:IsDead() then
+        if d.detacheddried and not npc:IsDead() and d.detacheddried.Position:Distance(npc.Position) < 40 then
+            mod:ReplaceEnemySpritesheet(npc, "gfx/monsters/hanges/hangebodypickup", 0)
             d.detacheddried:GetData().goalheight = -20
             d.detacheddried:GetData().zvel = -5
             d.detacheddried.EntityCollisionClass = 0
@@ -376,6 +381,9 @@ function mod:HangethrowAI(npc, sprite, d)
             npc.Parent = nil
             d.detacheddried.Child = nil
             d.detacheddried = nil
+        else
+            mod:ReplaceEnemySpritesheet(npc, "gfx/monsters/hanges/hangebody", 0)
+            d.state = "chase"
         end
     end
 

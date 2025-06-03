@@ -78,7 +78,9 @@ function mod:DetachedDriedAI(npc, sprite, d)
         npc.Velocity = npc.Velocity * 0.8
         npc.SpriteOffset.Y = d.goalheight
         d.zvel = 0
-        npc.EntityCollisionClass = 4
+        if d.goalheight == 0 then
+            npc.EntityCollisionClass = 4
+        end
         if d.airborne then
             d.airborne = false
             if d.state == "falling" then
