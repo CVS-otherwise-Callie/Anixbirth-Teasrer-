@@ -28,24 +28,13 @@ FHAC.AltHomeTrapDoorUnlock = StageAPI.CustomGrid("FHACAltHomeTrapDoorUnlock", {
     SpawnerEntity = {Type = FHAC.Grids.GlobalGridSpawner.ID, Variant = 2901}
 })
 
-local function FindNullPressureEnt()
-
-    local room = Game():GetRoom()
-    local roomEntities = room:GetEntities()
-
-    for i = 0, #roomEntities - 1 do
-        local entity = roomEntities:Get(i)
-        if entity.Type == mod.Monsters.LightPressurePlateEntNull.ID and entity.Variant == mod.Monsters.LightPressurePlateEntNull.Var then
-            return true
-        end
-    end
-    return false
-end
-
 function mod.lightpressurePlateAI(customGrid)
     local grid = customGrid.GridEntity
     local sprite = grid:GetSprite()
     local d = customGrid.PersistentData
+
+    local level = Game():GetLevel()
+    local roomDescriptor = level:GetCurrentRoomDesc()
 
     if not d.init then
         grid.State = 3
@@ -84,10 +73,15 @@ function mod.lightpressurePlateAI(customGrid)
             d.nullEnt = Isaac.Spawn(mod.Monsters.LightPressurePlateEntNull.ID, mod.Monsters.LightPressurePlateEntNull.Var, 0, Vector.Zero, Vector.Zero, nil)
             d.nullEnt:GetData().wasSpawned = true
         end
+        roomDescriptor.Flags = roomDescriptor.Flags & RoomDescriptor.FLAG_NO_REWARD & RoomDescriptor.FLAG_CLEAR
+        roomDescriptor.NoReward = true
+        roomDescriptor.Clear = true
         d.Off = true
     elseif grid.State == 1 then
         d.switchedinit = false
         mod:spritePlay(sprite, "On")
+        roomDescriptor.Flags = roomDescriptor.Flags & ~RoomDescriptor.FLAG_PRESSURE_PLATES_TRIGGERED & ~RoomDescriptor.FLAG_CLEAR & RoomDescriptor.FLAG_NO_REWARD
+        roomDescriptor.Clear = false
         d.Off = false
     elseif grid.State == 2 then
         mod:spritePlay(sprite, "UnSwitched")
@@ -420,14 +414,14 @@ end
 
 local function GrimPlateFunc(npc, activestate)
 
-    local activestate = activestate or 3
+    activestate = activestate or 3
 
-    --[[if not npc:GetData().anixbrithGrimPos then npc:GetData().anixbrithGrimPos = npc.Position end
+    if not npc:GetData().anixbrithGrimPos then npc:GetData().anixbrithGrimPos = npc.Position end
     if AnyPlateNotDone() then
-        print(npc.State)
         if npc.State == 16 then
             npc:Remove()
             local grim = Isaac.Spawn(npc.Type, npc.Variant, npc.SubType, npc.Position, Vector.Zero, npc.SpawnerEntity)
+            grim:AddEntityFlags(EntityFlag.FLAG_APPEAR)
             grim:GetData().anixbrithGrimPos = npc.Position
             grim:ToNPC().State = activestate
             grim:ToNPC().CanShutDoors = true
@@ -440,7 +434,7 @@ local function GrimPlateFunc(npc, activestate)
 
     if npc.StateFrame > 10 then
         npc:ToNPC().CanShutDoors = false
-    end]]
+    end
 end
 
 mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)

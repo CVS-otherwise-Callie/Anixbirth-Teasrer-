@@ -41,6 +41,8 @@ function mod:LightPressurePlateEntNullAI(npc, sprite, d)
         end
         d.specificgird = mod:freeGrid(npc, false, 10000, 0)
         npc.Position = d.specificgird
+
+        room:SetClear(false)
         d.init = true
     end
 
@@ -53,7 +55,7 @@ function mod:LightPressurePlateEntNullAI(npc, sprite, d)
             d.entinit = true
         end
 
-        --d.ent:GetSprite().Scale = Vector(0, 0)
+        d.ent:GetSprite().Scale = Vector(0, 0)
         d.ent.CollisionClass = GridCollisionClass.COLLISION_NONE
         d.ent.VarData = 19
     else
@@ -83,6 +85,7 @@ function mod:LightPressurePlateEntNullAI(npc, sprite, d)
         if d.ent and d.ent.VarData == 19 then
             d.ent.State = 3
             game:GetRoom():RemoveGridEntity(game:GetRoom():GetGridIndex(d.ent.Position), 0, false)
+
         end
     end
 end
