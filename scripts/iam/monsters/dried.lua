@@ -74,9 +74,8 @@ local room = game:GetRoom()
         }  
     }
 
-    mod:SaveEntToRoom(npc)
-
     if not d.init then
+        
         if d.isPrevEntCopy then
             npc:ClearEntityFlags(EntityFlag.FLAG_APPEAR)
         end
@@ -144,6 +143,9 @@ local room = game:GetRoom()
     end
 
     if d.state == "uncut" then
+
+        mod:SaveEntToRoom(npc)
+        
         npc.Position = d.spawnpos + Vector(math.sin(npc.StateFrame/d.oscillatespeed) * 2, 0)
         if not room:IsClear() then
 
@@ -163,6 +165,8 @@ local room = game:GetRoom()
             end
             --just to make sure it doesnt keep changing since it's annoying when it does
         else
+            mod:SaveEntToRoom(npc, false, true)
+            
             sprite:Stop()
         end
     end
