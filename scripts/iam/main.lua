@@ -334,7 +334,7 @@ function mod:GetClosestGridEntAlongAxisDirection(pos, axis, ignorepoop, ignoreho
 	return closestgridpoint or mod:GetClosestGridEntAlongAxis(pos, axis, ignorepoop, ignorehole, rocktab)
 end
 
-function mod:RemoveEntFromRoom(npc)
+function mod:RemoveEntFromRoomSave(npc)
 
 	AnixbirthSaveManager.GetFloorSave().anixbirthsaveData = AnixbirthSaveManager.GetFloorSave().anixbirthsaveData or {}
 	local ta = AnixbirthSaveManager.GetFloorSave().anixbirthsaveData
