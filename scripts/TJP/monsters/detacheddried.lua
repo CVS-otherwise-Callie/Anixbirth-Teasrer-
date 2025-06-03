@@ -11,7 +11,7 @@ end, mod.Monsters.DetachedDried.ID)
 function mod:DetachedDriedAI(npc, sprite, d)
 
     if not d.init then
-        npc:AddEntityFlags(EntityFlag.FLAG_NO_STATUS_EFFECTS)
+        npc:AddEntityFlags(EntityFlag.FLAG_NO_STATUS_EFFECTS | EntityFlag.FLAG_NO_TARGET)
         d.goalheight = 0
 
         if npc.Parent then
@@ -30,6 +30,10 @@ function mod:DetachedDriedAI(npc, sprite, d)
     end
 
     mod:SaveEntToRoom(npc, true)
+
+    if not npc.Child then
+        d.goalheight = 0
+    end
 
     if d.state == "falling" then
         npc.Velocity = Vector.Zero
@@ -63,7 +67,7 @@ function mod:DetachedDriedAI(npc, sprite, d)
 
     if d.state == "idle" then
 
-        if npc.Child and npc.Child.SubType == 2 and (npc.SpriteOffset.Y == -20 and d.zvel >= 0) then
+        if npc.Child and npc.Child.SubType == 2 and (npc.SpriteOffset.Y == -20 * npc.Child:GetData().Scale and d.zvel >= 0) then
             sprite:SetFrame("LandOnHangethrowHeadRed", 16)
         else
             sprite:SetFrame("RopeSplatRed", 20)
@@ -85,13 +89,17 @@ function mod:DetachedDriedAI(npc, sprite, d)
             d.airborne = false
             if d.state == "falling" then
                 d.state = "ropesplat"
-            elseif d.goalheight == -20 then
+            elseif npc.Child and d.goalheight == -20 * npc.Child:GetData().Scale then
                 d.state = "hangethrowheadsplat"
             else
                 d.state = "splat"
             end
         end
     end
+    print(d.airborne)
+    print(npc.SpriteOffset.Y)
+    print(d.goalheight)
+    print(d.zvel)
 
 
 end

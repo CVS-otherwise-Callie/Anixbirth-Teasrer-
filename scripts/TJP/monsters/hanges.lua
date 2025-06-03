@@ -201,6 +201,8 @@ function mod:HangethrowAI(npc, sprite, d)
     local room = game:GetRoom()
 
     local speed = 4
+
+    d.Scale = npc.Scale
     if not d.init then
         d.init = true
         d.state = "reveal"
@@ -267,7 +269,7 @@ function mod:HangethrowAI(npc, sprite, d)
                 d.lerppercent = 0
             end
         end
-        if d.detacheddried and d.detacheddried:GetData().goalheight == -20 then
+        if d.detacheddried and d.detacheddried:GetData().goalheight == -20 * npc.Scale then
             d.detacheddried.Position = mod:Lerp(d.lerpstart, npc.Position, d.lerppercent)
             if d.lerppercent < 1 then
                 d.lerppercent = d.lerppercent + 0.05
@@ -276,7 +278,7 @@ function mod:HangethrowAI(npc, sprite, d)
             end
         end
         sprite:RemoveOverlay()
-        if d.detacheddried.Position:Distance(npc.Position) < 40 then
+        if d.detacheddried and d.detacheddried.Position:Distance(npc.Position) < 40 then
             mod:spritePlay(sprite, "HangethrowPickup")
         else
             mod:ReplaceEnemySpritesheet(npc, "gfx/monsters/hanges/hangebody", 0)
@@ -329,7 +331,7 @@ function mod:HangethrowAI(npc, sprite, d)
 
         if npc.StateFrame > 50 then
             npc.StateFrame = 0
-            d.detacheddried:GetData().goalheight = -18
+            d.detacheddried:GetData().goalheight = -18 * npc.Scale
             d.state = "throw"
         end
     end
@@ -365,7 +367,7 @@ function mod:HangethrowAI(npc, sprite, d)
 
         if d.detacheddried and not npc:IsDead() and d.detacheddried.Position:Distance(npc.Position) < 40 then
             mod:ReplaceEnemySpritesheet(npc, "gfx/monsters/hanges/hangebodypickup", 0)
-            d.detacheddried:GetData().goalheight = -20
+            d.detacheddried:GetData().goalheight = -20 * npc.Scale
             d.detacheddried:GetData().zvel = -5
             d.detacheddried.EntityCollisionClass = 0
             d.detacheddried.DepthOffset = 10
@@ -375,7 +377,7 @@ function mod:HangethrowAI(npc, sprite, d)
     if sprite:IsEventTriggered("Throw") then
         if d.detacheddried then
             d.detacheddried.EntityCollisionClass = 0
-            d.detacheddried.Velocity = (playerpos - npc.Position) / 40
+            d.detacheddried.Velocity = ((playerpos + player.Velocity * 40) - npc.Position) / 40
             d.detacheddried:GetData().goalheight = 0
             d.detacheddried:GetData().zvel = -7
             npc.Parent = nil
