@@ -84,6 +84,7 @@ function mod:DetachedDriedAI(npc, sprite, d)
         d.zvel = 0
         if d.goalheight == 0 then
             npc.EntityCollisionClass = 4
+            npc.GridCollisionClass = 5
         end
         if d.airborne then
             d.airborne = false
@@ -96,11 +97,6 @@ function mod:DetachedDriedAI(npc, sprite, d)
             end
         end
     end
-    print(d.airborne)
-    print(npc.SpriteOffset.Y)
-    print(d.goalheight)
-    print(d.zvel)
-
 
 end
 

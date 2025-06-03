@@ -30,13 +30,14 @@ local function FindDried(npc)
 end
 
 local function FindAvailableDetachedDried(npc)
+    local path = npc.Pathfinder
     local ta = {}
     local dried = Isaac.GetRoomEntities()
     local dist = 9999999
 	local ent
     local pos = npc.Position
     for k, v in ipairs(dried) do
-        if v.Type == mod.Monsters.DetachedDried.ID and v.Variant == mod.Monsters.DetachedDried.Var and not v.Child and v.SpriteOffset.Y == 0 then --if its a grounded dried without a child
+        if v.Type == mod.Monsters.DetachedDried.ID and v.Variant == mod.Monsters.DetachedDried.Var and not v.Child and v.SpriteOffset.Y == 0 and path:HasPathToPos(v.Position, false) then --if its a grounded dried without a child and can be walked to
             table.insert(ta, v)
         end
     end
@@ -228,7 +229,7 @@ function mod:HangethrowAI(npc, sprite, d)
 
     if d.state == "chase" then
 
-        if npc.Parent then
+        if npc.Parent and path:HasPathToPos(npc.Parent.Position, false) then
             local childpos = npc.Parent.Position
             if room:CheckLine(npc.Position,childpos,0,1,false,false) then
                 local targetvelocity = (childpos - npc.Position):Resized(speed)
@@ -316,8 +317,13 @@ function mod:HangethrowAI(npc, sprite, d)
             path:FindGridPath(playerpos, 0.8, 1, true)
         end
 
-        d.detacheddried.Position = npc.Position
-        d.detacheddried.Velocity = npc.Velocity
+        if d.detacheddried then
+            d.detacheddried.Position = npc.Position
+            d.detacheddried.Velocity = npc.Velocity
+        else
+            mod:ReplaceEnemySpritesheet(npc, "gfx/monsters/hanges/hangebody", 0)
+            d.state = "chase"
+        end
 
         if npc.Velocity:Length() > 1 then
             npc:AnimWalkFrame("WalkHori","WalkVert",0)
@@ -373,10 +379,11 @@ function mod:HangethrowAI(npc, sprite, d)
             d.detacheddried.DepthOffset = 10
         end
     end
-
+    print(npc.GridCollisionClass)
     if sprite:IsEventTriggered("Throw") then
         if d.detacheddried then
             d.detacheddried.EntityCollisionClass = 0
+            d.detacheddried.GridCollisionClass = 3
             d.detacheddried.Velocity = ((playerpos + player.Velocity * 40) - npc.Position) / 40
             d.detacheddried:GetData().goalheight = 0
             d.detacheddried:GetData().zvel = -7
