@@ -334,11 +334,18 @@ function mod:GetClosestGridEntAlongAxisDirection(pos, axis, ignorepoop, ignoreho
 	return closestgridpoint or mod:GetClosestGridEntAlongAxis(pos, axis, ignorepoop, ignorehole, rocktab)
 end
 
-function mod:SaveEntToRoom(npc)
+function mod:SaveEntToRoom(npc, removeondeath)
+
+	removeondeath = removeondeath or false
 
 	AnixbirthSaveManager.GetFloorSave().anixbirthsaveData = AnixbirthSaveManager.GetFloorSave().anixbirthsaveData or {}
 	local ta = AnixbirthSaveManager.GetFloorSave().anixbirthsaveData
 	ta.PreSavedEnts = ta.PreSavedEnts or {}
+
+	if npc:IsDead() and removeondeath then
+		ta.PreSavedEnts[tostring(npc.InitSeed)] = nil
+		return
+	end
 
 	if not ta.PreSavedEnts[tostring(npc.InitSeed)] then
 		local tab = {}
