@@ -33,8 +33,6 @@ function mod:HorfOnAStickAI(npc, sprite, d)
 
     local room = game:GetRoom()
 
-    mod:SaveEntToRoom(npc, true)
-
     if not d.init then
         npc:AddEntityFlags(EntityFlag.FLAG_NO_PHYSICS_KNOCKBACK | EntityFlag.FLAG_NO_KNOCKBACK)
         npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_PLAYEROBJECTS
@@ -49,6 +47,8 @@ function mod:HorfOnAStickAI(npc, sprite, d)
 
 
     if d.state == "idle" then
+
+        mod:SaveEntToRoom(npc, true)
 
         local var = EntityType.ENTITY_FLY
         if d.isPissed then

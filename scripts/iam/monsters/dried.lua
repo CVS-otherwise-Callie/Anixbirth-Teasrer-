@@ -165,9 +165,10 @@ local room = game:GetRoom()
             end
             --just to make sure it doesnt keep changing since it's annoying when it does
         else
-            mod:RemoveEntFromRoomSave(npc)           
             sprite:Stop()
         end
+    else
+        mod:RemoveEntFromRoomSave(npc)           
     end
 end
 

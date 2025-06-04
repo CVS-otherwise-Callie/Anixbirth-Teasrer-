@@ -382,6 +382,12 @@
     </entity>
     <!--end of detached dried-->
 
+    <entity anm2path="monsters/hanger/hanger.anm2" hasFloorAlts="true" reroll="true" baseHP="10" boss="0" champion="1" collisionDamage="1" collisionMass="5" collisionRadius="13" friction="1" id="161" name="The Hanged" numGridCollisionPoints="12" shadowSize="16" stageHP="3" variant="53" bestiary="true" portrait="52">
+		<bestiary transform="0,0,1" anim="SouthWest2" />
+        <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
+        <devolve id="10.1.0" weight="1" />
+    </entity>
+
     <entity id="161" variant="42" name="Plier" reroll="true" baseHP="10" stageHP="0" boss="0" champion="1" collisionDamage="1" collisionMass="6" collisionRadius="13" friction="1" numGridCollisionPoints="8" shadowSize="14" portrait="42" anm2path="monsters/plier/plier.anm2" gridCollision="walls" tags="fly">
 		<bestiary transform="0,0,1" anim="Idle" />
         <gibs amount="0" blood="1" bone="0" eye="1" gut="0" large="0" />

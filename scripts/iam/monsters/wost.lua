@@ -36,7 +36,7 @@ function mod:WostAI(npc, sprite, d)
     local function WostNewGrid()
         for i = 1, 10000000 do
             local grid = mod:freeGrid(npc, false, 1000, 1)
-            if mod:IsTableEmpty(Isaac.FindInRadius(grid, 30, EntityPartition.ENEMY)) then
+            if #Isaac.FindInRadius(grid, 30, EntityPartition.ENEMY) == 0 then
                 return grid + Vector(math.random(-1, 1) * 10, math.random(-1, 1) * 10)
             end
         end

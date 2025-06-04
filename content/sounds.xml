@@ -21,4 +21,14 @@
         <sample weight="1" path="alttrapdoorbang8.wav"/>
         <sample weight="1" path="alttrapdoorbang9.wav"/>
     </sound>
+    <sound name="yoyaderspinsound">
+        <sample weight="1" path="spinsound1.wav"/>
+        <sample weight="1" path="spinsound2.wav"/>
+        <sample weight="1" path="spinsound3.wav"/>
+        <sample weight="1" path="spinsound4.wav"/>
+        <sample weight="1" path="spinsound5.wav"/>
+    </sound>
+    <sound name="yoyaderspinsoundend">
+        <sample weight="1" path="spinsoundend.wav"/>
+    </sound>
 </sounds>

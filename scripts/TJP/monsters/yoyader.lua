@@ -115,10 +115,14 @@ function mod:YoyaderAI(npc, sprite, d)
             npc.StateFrame = 0
             d.state = "chase"
         end
+
+        npc:PlaySound(mod.Sounds.SpinSoundEnd, 1, 2, false, 1.5)
     end
 
     if d.state == "spider" then
         npc.GridCollisionClass = 0
+
+        npc:PlaySound(mod.Sounds.SpinSound, 1, 2, false, 1)
 
         if not npc.Parent or npc.Parent:IsDead() or not npc.Parent.Position then
             npc:Kill()
@@ -159,6 +163,10 @@ function mod:YoyaderAI(npc, sprite, d)
     end
 
     if sprite:IsEventTriggered("Spider") then
+
+        npc:PlaySound(SoundEffect.SOUND_FETUS_JUMP, 1, 2, false, 1)
+        npc:PlaySound(SoundEffect.SOUND_MONSTER_GRUNT_2, 1, 5, false, 1.5)
+
         if sprite.FlipX then
             d.startingvelocity = Vector(35,1)
         else

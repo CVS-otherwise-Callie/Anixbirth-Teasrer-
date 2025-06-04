@@ -66,7 +66,8 @@ FHAC.CVSMonsters = {
 	Bewebbed = mod:ENT("Bewebbed"),
 	ReHost = mod:ENT("Rehost"),
 	Suckup = mod:ENT("Suck Up"),
-	PottedFatty = mod:ENT("Potted Fatty")
+	PottedFatty = mod:ENT("Potted Fatty"),
+	Hanger = mod:ENT("The Hanged")
 }
 
 FHAC.CVSEffects = {
@@ -139,7 +140,8 @@ FHAC:LoadScripts("scripts.iam.monsters", {
 	"bewebbed",
 	"rehost",
 	"suckup",
-	"pottedfatty"
+	"pottedfatty",
+	"hanger"
 })
 
 FHAC:LoadScripts("scripts.iam.minibosses", {
@@ -378,11 +380,14 @@ function mod:SaveEntToRoom(npc, removeondeath)
 		PositionY = npc.Position.Y,
 		VelocityX = npc.Velocity.X,
 		VelocityY = npc.Velocity.Y,
+		InitSeed = npc.InitSeed,
 		Spanwner = npc.Spawner,
 	}
 
 	if npc:GetData() then
 		tab.Data = npc:GetData()
+
+		tab.Data.FakeInitSeed = tab.Data.FakeInitSeed or npc.InitSeed
 	end
 
 	for k, v in pairs(tab) do
@@ -403,32 +408,49 @@ function mod:LoadSavedRoomEnts()
 
 	local function CheckNPCInitDat(npc)
 		for k, v in ipairs(Isaac.GetRoomEntities()) do
-			if v.Position:Distance(Vector(npc.PositionX, npc.PositionY)) == 0 and not v:GetData().isanixbirthCopy and npc.InitSeed ~= v.InitSeed then
+			if v:GetData().FakeInitSeed == npc.Data.FakeInitSeed then
 				return false
 			end
 		end
 		return true
 	end
 
+	local function KillCopies()
+		for k, v in pairs(tab.PreSavedEnts) do
+			local og = v
+			for h, i in pairs(tab.PreSavedEnts) do
+				if og.Data.FakeInitSeed == i.Data.FakeInitSeed and og.InitSeed ~= i.InitSeed then
+					tab.PreSavedEnts[h] = nil --is killing originals rn
+					return
+				end
+			end
+		end
+	end
+
 	for k, v in pairs(tab.PreSavedEnts) do
 		if v.RoomVar == game:GetLevel():GetCurrentRoomDesc().Variant and
 		v.ListIndex == game:GetLevel():GetCurrentRoomDesc().ListIndex and 
-		v.Stage == game:GetLevel():GetStage() and v.Type and v.Variant and v.Subtype and CheckNPCInitDat(v) then
-			tab.PreSavedEnts[k] = nil
-			local ent = Isaac.Spawn(v.Type, v.Variant, v.Subtype, Vector(v.PositionX, v.PositionY), Vector(v.VelocityX, v.VelocityY), nil)
-			local d = ent:GetData()
-			for h, i in pairs(v.Data) do
-				if not d[h] then
-					d[h] = i
+		v.Stage == game:GetLevel():GetStage() and v.Type and v.Variant and v.Subtype then
+			if CheckNPCInitDat(v) then
+				tab.PreSavedEnts[k] = nil
+				local ent = Isaac.Spawn(v.Type, v.Variant, v.Subtype, Vector(v.PositionX, v.PositionY), Vector(v.VelocityX, v.VelocityY), v.Spanwer)
+				local d = ent:GetData()
+				for h, i in pairs(v.Data) do
+					if not d[h] then
+						d[h] = i
+					end
 				end
+				d.isanixbirthCopy = true
+				ent:ClearEntityFlags(EntityFlag.FLAG_APPEAR)
+				d.init = false
 			end
-			d.isanixbirthCopy = true
-			ent:ClearEntityFlags(EntityFlag.FLAG_APPEAR)
-			d.init = false
-		elseif not CheckNPCInitDat(v) then
+		elseif not CheckNPCInitDat(v) and v.Data.isanixbirthCopy then
 			tab.PreSavedEnts[k] = nil
 		end
 	end
+
+	KillCopies()
+
 end
 
 

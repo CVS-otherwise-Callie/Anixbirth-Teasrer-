@@ -188,7 +188,11 @@ Use 2, 4, or 6 normally.
 <entity ID="161" Variant="564" Name="Mutilated" Image="mah boys/mutilated.png" BaseHP="30" StageHP="3" Tags="Champion"/>
 <!--162-->
 <entity ID="162" Metadata="1" Image="grids/lightpressureplate.png" Name="Light Pressure Plate" Subtype="0" Variant="2900" Group="Stage"/>
-<entity ID="753" Metadata="1" Image="grids/breakablepotbasement.png" Name="Breakable Pot" Subtype="0" Variant="950" Group="Stage"/>
+<entity ID="753" Metadata="1" Image="grids/breakablepotbasement.png" Name="Breakable Pot" Subtype="0" Variant="950" Group="Stage">
+   <bitfield Key="Subtype">
+      <checkbox Name="Gives Rewards" Length="1"/>
+   </bitfield>
+</entity>
 <!--240-->
 <entity ID="240" Variant="359" Name="Stall Creep" Image="mah boys/stall_creep.png" BaseHP="10" Tags="Champion" PlaceVisual="WallSnap"/>
 <entity ID="240" Variant="368" Name="Webbed Creep" Image="mah boys/webbed_creep.png" BaseHP="10" Tags="Champion" PlaceVisual="WallSnap"/>

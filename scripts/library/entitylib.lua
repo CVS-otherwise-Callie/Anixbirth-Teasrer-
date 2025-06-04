@@ -187,7 +187,7 @@ function mod:FindClosestNextEntitySpawn(npc, dist, random)
 	local positions = {}
 	for i = 1, 4 do
 		local pos = npc.Position + vec:Rotated((i+1)*90)
-		if (room:GetGridCollisionAtPos(pos)== 0 and mod:IsTableEmpty(Isaac.FindInRadius(pos, dist, EntityPartition.PLAYER)) and mod:IsTableEmpty(Isaac.FindInRadius(pos, dist, EntityPartition.ENEMY))) then
+		if (room:GetGridCollisionAtPos(pos)== 0 and #Isaac.FindInRadius(pos, dist, EntityPartition.PLAYER) == 0 and #Isaac.FindInRadius(pos, dist, EntityPartition.ENEMY) == 0) then
 			table.insert(positions, pos)
 		end
 	end

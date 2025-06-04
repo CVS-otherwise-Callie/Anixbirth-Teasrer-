@@ -80,6 +80,12 @@ function mod.lightpressurePlateAI(customGrid)
     elseif grid.State == 1 then
         d.switchedinit = false
         mod:spritePlay(sprite, "On")
+
+        if d.nullEnt then
+            d.nullEnt:Remove()
+            print(d.nullEnt)
+        end
+
         roomDescriptor.Flags = roomDescriptor.Flags & ~RoomDescriptor.FLAG_PRESSURE_PLATES_TRIGGERED & ~RoomDescriptor.FLAG_CLEAR & RoomDescriptor.FLAG_NO_REWARD
         roomDescriptor.Clear = false
         d.Off = false
@@ -347,12 +353,15 @@ mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, function(_, npc, amount, flags)
         
 		local amt = math.min(math.max(math.floor(amount / 60), 1), 3)
         if npc.HitPoints - amt <= 1 or flags & (DamageFlag.DAMAGE_TNT | DamageFlag.DAMAGE_EXPLOSION) ~= 0 then
-            for k, v in ipairs(customPotTab[math.random(#customPotTab)]) do
-                for i = 1, v[4] do
-                    if v[2] == 20 then
-                        Isaac.Spawn(5, 20, 0, npc.Position, RandomVector()*math.random(2,5), nil)
-                    else
-                        Isaac.Spawn(v[1], v[2], v[3], npc.Position, RandomVector()*math.random(2,5), nil)
+
+            if npc.SubType == 1 then
+                for _, v in ipairs(customPotTab[math.random(#customPotTab)]) do
+                    for i = 1, v[4] do
+                        if v[2] == 20 then
+                            Isaac.Spawn(5, 20, 0, npc.Position, RandomVector()*math.random(2,5), nil)
+                        else
+                            Isaac.Spawn(v[1], v[2], v[3], npc.Position, RandomVector()*math.random(2,5), nil)
+                        end
                     end
                 end
             end
