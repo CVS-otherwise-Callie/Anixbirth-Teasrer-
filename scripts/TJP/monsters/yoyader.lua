@@ -116,13 +116,13 @@ function mod:YoyaderAI(npc, sprite, d)
             d.state = "chase"
         end
 
-        npc:PlaySound(mod.Sounds.SpinSoundEnd, 1, 2, false, 1.5)
+        npc:PlaySound(mod.Sounds.SpinSoundEnd, 0.6, 2, false, 1.5)
     end
 
     if d.state == "spider" then
         npc.GridCollisionClass = 0
 
-        npc:PlaySound(mod.Sounds.SpinSound, 1, 2, false, 1)
+        npc:PlaySound(mod.Sounds.SpinSound, 0.6, 2, false, 1)
 
         if not npc.Parent or npc.Parent:IsDead() or not npc.Parent.Position then
             npc:Kill()

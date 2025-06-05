@@ -113,6 +113,7 @@ Up to groups of 3.
 <entity ID="161" Variant="50" Subtype="1" Name="Hangejump" Image="mah boys/hangejump.png" BaseHP="13"/>
 <entity ID="161" Variant="50" Subtype="2" Name="Hangethrow" Image="mah boys/hangethrow.png" BaseHP="13"/>
 <entity ID="161" Variant="50" Subtype="3" Name="Hangekick" Image="mah boys/hangekick.png" BaseHP="15"/>
+<entity ID="161" Variant="51" Name="Detached Dried" Image="mah boys/detatcheddried.png" BaseHP="n/a" />
 <entity ID="161" Variant="52" Name="Potted Fatty" Image="mah boys/pottedfatty.png" BaseHP="20"/>
 <entity ID="161" Variant="59" Name="Webbed Carcass" Image="mah boys/webbedcarcass.png" BaseHP="10"/>
 <entity ID="161" Variant="65" Name="Suck Up" Image="mah boys/suckup.png" BaseHP="10"/>
@@ -267,6 +268,7 @@ Use 2, 4, or 6 normally.
 			<entity Name="Hangejump"/>
 			<entity Name="Hangethrow"/>
 			<entity Name="Hangekick"/>
+			<entity Name="Detached Dried"/>
 		</group>
   	</group>
 

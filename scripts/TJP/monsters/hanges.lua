@@ -18,7 +18,7 @@ local function FindDried(npc)
     local ta = {}
     local dried = Isaac.GetRoomEntities() --since dried are unlisted entities
     for k, v in ipairs(dried) do
-        if v.Type == mod.Monsters.Dried.ID and v.Variant == mod.Monsters.Dried.Var and not (v.Parent and v.Parent.Variant == mod.Monsters.Hangeslip.Var and v.Parent ~= npc)  and npc.Position:Distance(v.Position) < 45 then
+        if v.Type == mod.Monsters.Dried.ID and v.Variant == mod.Monsters.Dried.Var and not (v.Parent and v.Parent.Variant == mod.Monsters.Hangeslip.Var and v.Parent ~= npc)  and npc.Position:Distance(v.Position) < 7045 then
             table.insert(ta, v)
         end
     end
@@ -64,29 +64,34 @@ function mod:HangesAI(npc, sprite, d)
         npc.StateFrame = npc.StateFrame + 1
     end
 
+    if d.Dried == nil and npc.StateFrame < 5 then
+        print(d.Dried)
+        d.Dried = d.Dried or FindDried(npc)
+    else
+        if d.Dried then
+            npc:ClearEntityFlags(EntityFlag.FLAG_APPEAR)
+            d.movable = true
+            npc.SpriteOffset = Vector(0,-54) + d.Dried.SpriteOffset
+            sprite:RemoveOverlay()
+            npc.Position = d.Dried.Position
+            mod:HangedriedAI(npc, npc:GetSprite(), npc:GetData())
+        elseif npc.StateFrame > 1 and not d.Dried then
+            if npc.Variant == mod.Monsters.Hangeslip.Var and npc.SubType == mod.Monsters.Hangeslip.Sub then
+                mod:HangeslipAI(npc, npc:GetSprite(), npc:GetData())
+            elseif npc.Variant == mod.Monsters.Hangeslip.Var and npc.SubType == mod.Monsters.Hangeslip.Sub + 1 then
+                mod:HangejumpAI(npc, npc:GetSprite(), npc:GetData())
+            elseif npc.Variant == mod.Monsters.Hangeslip.Var and npc.SubType == mod.Monsters.Hangeslip.Sub + 2 then
+                mod:HangethrowAI(npc, npc:GetSprite(), npc:GetData())
+            elseif npc.Variant == mod.Monsters.Hangeslip.Var and npc.SubType == mod.Monsters.Hangeslip.Sub + 3 then
+                mod:HangekickAI(npc, npc:GetSprite(), npc:GetData())
+            end
+        end
+    end
+
     if d.Dried then
         d.Dried.Parent = npc
     end
 
-
-    if d.Dried then
-        npc:ClearEntityFlags(EntityFlag.FLAG_APPEAR)
-        d.movable = true
-        npc.SpriteOffset = Vector(0,-54) + d.Dried.SpriteOffset
-        sprite:RemoveOverlay()
-        npc.Position = d.Dried.Position
-        mod:HangedriedAI(npc, npc:GetSprite(), npc:GetData())
-    elseif npc.StateFrame > 1 and not d.Dried then
-        if npc.Variant == mod.Monsters.Hangeslip.Var and npc.SubType == mod.Monsters.Hangeslip.Sub then
-            mod:HangeslipAI(npc, npc:GetSprite(), npc:GetData())
-        elseif npc.Variant == mod.Monsters.Hangeslip.Var and npc.SubType == mod.Monsters.Hangeslip.Sub + 1 then
-            mod:HangejumpAI(npc, npc:GetSprite(), npc:GetData())
-        elseif npc.Variant == mod.Monsters.Hangeslip.Var and npc.SubType == mod.Monsters.Hangeslip.Sub + 2 then
-            mod:HangethrowAI(npc, npc:GetSprite(), npc:GetData())
-        elseif npc.Variant == mod.Monsters.Hangeslip.Var and npc.SubType == mod.Monsters.Hangeslip.Sub + 3 then
-            mod:HangekickAI(npc, npc:GetSprite(), npc:GetData())
-        end
-    end
 end
 
 function mod:HangedriedAI(npc, sprite, d)
