@@ -75,7 +75,7 @@ function mod:freeGrid(npc, path, far, close, closest) -- the npc, should it be a
 	return tab[math.random(1, #tab)]
 end
 
-function mod:freeGridToPos(pos, path, far, close, closest) -- the npc, should it be able to pathfind there, max dist from gridpoint, min dist from gridpoint, should it just find the closest avaible space
+function mod:freeGridToPos(pos, path, far, close, closest) -- the position, should it be able to pathfind there, max dist from gridpoint, min dist from gridpoint, should it just find the closest avaible space
 	local room = game:GetRoom()
 	path = path or false
 	far = far or 300
