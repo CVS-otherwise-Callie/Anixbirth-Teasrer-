@@ -192,11 +192,104 @@ function mod:HangejumpAI(npc, sprite, d)
     local path = npc.Pathfinder
     local room = game:GetRoom()
 
+    local speed = 2
+
+    d.Scale = npc.Scale
     if not d.init then
         d.init = true
+        d.state = "reveal"
+    else
+        npc.StateFrame = npc.StateFrame + 1
     end
 
-    mod:spriteOverlayPlay(sprite, "HangejumpReveal")
+    if d.state == "reveal" then
+        mod:spriteOverlayPlay(sprite, "HangejumpReveal")
+        if sprite:IsOverlayFinished() then
+            npc:PlaySound(SoundEffect.SOUND_MONSTER_ROAR_0, 1, 2, false, 1)
+            d.state = "chase"
+        end
+
+        npc:MultiplyFriction(0.8)
+    end
+
+    if not d.detacheddried and FindAvailableDetachedDried(npc) and d.state == "chase" then
+        d.detacheddried = FindAvailableDetachedDried(npc)
+        d.detacheddried.Child = npc
+        npc.Parent = d.detacheddried
+    end
+
+    if d.state == "chase" then
+
+        if npc.Parent and path:HasPathToPos(npc.Parent.Position, false) then
+            local childpos = npc.Parent.Position
+            if room:CheckLine(npc.Position,childpos,0,1,false,false) then
+                local targetvelocity = (childpos - npc.Position):Resized(speed)
+                npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 0.3)
+            else
+                path:FindGridPath(childpos, 0.8, 1, true)
+            end
+        else
+            if mod:isScare(npc) then
+                local targetvelocity = (playerpos - npc.Position):Resized(speed * -1)
+                npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 0.3)
+            elseif room:CheckLine(npc.Position,playerpos,0,1,false,false) then
+                local targetvelocity = (playerpos - npc.Position):Resized(speed)
+                npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 0.3)
+            else
+                path:FindGridPath(playerpos, 0.8, 1, true)
+            end
+        end
+
+        sprite:SetOverlayFrame("HangejumpReveal", 31)
+
+        if npc.Velocity:Length() > 1 then
+            npc:AnimWalkFrame("WalkHori","WalkVert",0)
+        else
+            sprite:SetFrame("WalkVert", 0)
+        end
+
+    end
+
+    if d.state == "smash" then
+
+        if d.detacheddried and d.lerpstart then
+            npc.Position = mod:Lerp(npc.Position, d.detacheddried.Position, 0.5)
+        else
+            npc:MultiplyFriction(0.8)
+        end
+        sprite:RemoveOverlay()
+        mod:spritePlay(sprite, "HangejumpJump")
+        if sprite:IsFinished() then
+            d.lerpstart = false
+            d.state = "chase"
+        end
+    end
+
+    if sprite:IsEventTriggered("Throwstart") then
+        d.lerpstart = true
+    end
+
+    if sprite:IsEventTriggered("Throw") then
+        d.lerpstart = false
+        if d.detacheddried then
+            d.detacheddried:Remove()
+        end
+    end
+
+    if d.detacheddried and (d.detacheddried:IsDead() or not d.detacheddried:Exists()) then
+        npc.Parent = nil
+        d.detacheddried.Child = nil
+        d.detacheddried = nil
+    end
+
+    if (npc:IsDead() or not npc:Exists()) and d.detacheddried then
+        npc.Parent = nil
+        d.detacheddried.Child = nil
+        d.detacheddried:GetData().goalheight = 0
+        d.detacheddried.EntityCollisionClass = 4
+        d.detacheddried.DepthOffset = 0
+    end
+
 end
 
 function mod:HangethrowAI(npc, sprite, d)
@@ -404,7 +497,7 @@ function mod:HangethrowAI(npc, sprite, d)
 end
 
 function mod:HangekickAI(npc, sprite, d)
-     local player = npc:GetPlayerTarget()
+    local player = npc:GetPlayerTarget()
     local playerpos = mod:confusePos(npc, player.Position, 5, nil, nil)
     local path = npc.Pathfinder
     local room = game:GetRoom()
@@ -529,10 +622,13 @@ mod:AddCallback(ModCallbacks.MC_PRE_NPC_COLLISION, function(_, npc, collider, lo
     if (npc.Type == mod.Monsters.Hangeslip.ID and npc.Variant == mod.Monsters.Hangeslip.Var and npc.SubType > 0) and (collider.Type == mod.Monsters.DetachedDried.ID and collider.Variant == mod.Monsters.DetachedDried.Var) then
         if collider.SpriteOffset.Y == 0 then
             if npc.SubType == 1 then
-                print("jump")
+                if npc:GetData().detacheddried  and npc:GetData().detacheddried.InitSeed == collider.InitSeed then
+                    npc:GetData().state = "smash"
+                    return true
+                end
             end
             if npc.SubType == 2 then
-                if npc:GetData().state == "chase" and npc:GetData().detacheddried.InitSeed == collider.InitSeed then
+                if npc:GetData().state == "chase" and npc:GetData().detacheddried and npc:GetData().detacheddried.InitSeed == collider.InitSeed then
                    npc:GetData().state = "pickup"
                 end
             end
