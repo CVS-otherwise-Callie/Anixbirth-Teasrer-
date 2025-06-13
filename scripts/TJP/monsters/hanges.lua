@@ -37,7 +37,7 @@ local function FindAvailableDetachedDried(npc)
 	local ent
     local pos = npc.Position
     for k, v in ipairs(dried) do
-        if v.Type == mod.Monsters.DetachedDried.ID and v.Variant == mod.Monsters.DetachedDried.Var and not v.Child and v.SpriteOffset.Y == 0 and path:HasPathToPos(v.Position, false) then --if its a grounded dried without a child and can be walked to
+        if v.Type == mod.Monsters.DetachedDried.ID and v.Variant == mod.Monsters.DetachedDried.Var and not v.Child and v.SpriteOffset.Y == 0 and path:HasPathToPos(v.Position, false) and v:GetData().state ~= "jumpedon" then --if its a grounded, not jumped on dried without a child and can be walked to
             table.insert(ta, v)
         end
     end
@@ -251,6 +251,7 @@ function mod:HangejumpAI(npc, sprite, d)
     end
 
     if d.state == "smash" then
+        npc.DepthOffset = 10
 
         if d.detacheddried and d.lerpstart then
             npc.Position = mod:Lerp(npc.Position, d.detacheddried.Position, 0.5)
@@ -261,6 +262,7 @@ function mod:HangejumpAI(npc, sprite, d)
         mod:spritePlay(sprite, "HangejumpJump")
         if sprite:IsFinished() then
             d.lerpstart = false
+            npc.DepthOffset = 0
             d.state = "chase"
         end
     end
@@ -272,11 +274,11 @@ function mod:HangejumpAI(npc, sprite, d)
     if sprite:IsEventTriggered("Throw") then
         d.lerpstart = false
         if d.detacheddried then
-            d.detacheddried:Remove()
+            d.detacheddried:GetData().state = "jumpedon"
         end
     end
 
-    if d.detacheddried and (d.detacheddried:IsDead() or not d.detacheddried:Exists()) then
+    if d.detacheddried and ((d.detacheddried:IsDead() or not d.detacheddried:Exists()) or d.detacheddried:GetData().state == "jumpedon") then
         npc.Parent = nil
         d.detacheddried.Child = nil
         d.detacheddried = nil
@@ -450,7 +452,7 @@ function mod:HangethrowAI(npc, sprite, d)
         end
     end
 
-    if d.detacheddried and (d.detacheddried:IsDead() or not d.detacheddried:Exists()) then
+    if d.detacheddried and ((d.detacheddried:IsDead() or not d.detacheddried:Exists()) or d.detacheddried:GetData().state == "jumpedon") then
         npc.Parent = nil
         d.detacheddried.Child = nil
         d.detacheddried = nil
@@ -602,7 +604,7 @@ function mod:HangekickAI(npc, sprite, d)
         end
     end
 
-    if d.detacheddried and (d.detacheddried:IsDead() or not d.detacheddried:Exists()) then
+    if d.detacheddried and ((d.detacheddried:IsDead() or not d.detacheddried:Exists()) or d.detacheddried:GetData().state == "jumpedon") then
         npc.Parent = nil
         d.detacheddried.Child = nil
         d.detacheddried = nil

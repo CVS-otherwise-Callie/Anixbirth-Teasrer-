@@ -29,8 +29,6 @@ function mod:DetachedDriedAI(npc, sprite, d)
         d.init = true
     end
 
-    mod:SaveEntToRoom(npc, true)
-
     if not npc.Child then
         d.goalheight = 0
     end
@@ -83,7 +81,9 @@ function mod:DetachedDriedAI(npc, sprite, d)
         npc.SpriteOffset.Y = d.goalheight
         d.zvel = 0
         if d.goalheight == 0 then
-            npc.EntityCollisionClass = 4
+            if d.state ~= "jumpedon" then
+                npc.EntityCollisionClass = 4
+            end
             npc.GridCollisionClass = 5
         end
         if d.airborne then
@@ -96,6 +96,11 @@ function mod:DetachedDriedAI(npc, sprite, d)
                 d.state = "splat"
             end
         end
+    end
+
+    if d.state == "jumpedon" then
+        npc.EntityCollisionClass = 0
+        mod:spritePlay(sprite, "HangejumpExplodeRed")
     end
 
 end
