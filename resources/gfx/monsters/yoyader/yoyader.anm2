@@ -1,5 +1,5 @@
 <AnimatedActor>
-	<Info CreatedBy="TJP" CreatedOn="26/05/2025 10:56:52" Version="22" Fps="45"/>
+	<Info CreatedBy="TJP" CreatedOn="15/06/2025 10:46:12" Version="23" Fps="45"/>
 	<Content>
 		<Spritesheets>
 			<Spritesheet Path="yoyader.png" Id="0"/>
@@ -13,9 +13,7 @@
 			<Layer Name="spider" Id="2" SpritesheetId="2"/>
 			<Layer Name="cord" Id="3" SpritesheetId="3"/>
 		</Layers>
-		<Nulls>
-			<Null Name="CordPos" Id="0" ShowRect="false"/>
-		</Nulls>
+		<Nulls/>
 		<Events>
 			<Event Name="Spider" Id="0"/>
 		</Events>
@@ -33,9 +31,7 @@
 				<LayerAnimation LayerId="2" Visible="true"/>
 				<LayerAnimation LayerId="3" Visible="true"/>
 			</LayerAnimations>
-			<NullAnimations>
-				<NullAnimation NullId="0" Visible="true"/>
-			</NullAnimations>
+			<NullAnimations/>
 			<Triggers/>
 		</Animation>
 		<Animation Name="WalkVert" FrameNum="34" Loop="true">
@@ -63,9 +59,7 @@
 				<LayerAnimation LayerId="2" Visible="true"/>
 				<LayerAnimation LayerId="3" Visible="true"/>
 			</LayerAnimations>
-			<NullAnimations>
-				<NullAnimation NullId="0" Visible="true"/>
-			</NullAnimations>
+			<NullAnimations/>
 			<Triggers/>
 		</Animation>
 		<Animation Name="WalkLeft" FrameNum="34" Loop="true">
@@ -92,9 +86,7 @@
 				<LayerAnimation LayerId="2" Visible="true"/>
 				<LayerAnimation LayerId="3" Visible="true"/>
 			</LayerAnimations>
-			<NullAnimations>
-				<NullAnimation NullId="0" Visible="true"/>
-			</NullAnimations>
+			<NullAnimations/>
 			<Triggers/>
 		</Animation>
 		<Animation Name="WalkRight" FrameNum="34" Loop="true">
@@ -121,9 +113,7 @@
 				<LayerAnimation LayerId="2" Visible="true"/>
 				<LayerAnimation LayerId="3" Visible="true"/>
 			</LayerAnimations>
-			<NullAnimations>
-				<NullAnimation NullId="0" Visible="true"/>
-			</NullAnimations>
+			<NullAnimations/>
 			<Triggers/>
 		</Animation>
 		<Animation Name="Throw" FrameNum="38" Loop="false">
@@ -148,13 +138,7 @@
 				<LayerAnimation LayerId="2" Visible="true"/>
 				<LayerAnimation LayerId="3" Visible="true"/>
 			</LayerAnimations>
-			<NullAnimations>
-				<NullAnimation NullId="0" Visible="true">
-					<Frame XPosition="0" YPosition="0" XScale="100" YScale="100" Delay="30" Visible="false" RedTint="255" GreenTint="255" BlueTint="255" AlphaTint="255" RedOffset="0" GreenOffset="0" BlueOffset="0" Rotation="0" Interpolated="false"/>
-					<Frame XPosition="-15" YPosition="-5" XScale="100" YScale="100" Delay="5" Visible="true" RedTint="255" GreenTint="255" BlueTint="255" AlphaTint="255" RedOffset="0" GreenOffset="0" BlueOffset="0" Rotation="0" Interpolated="true"/>
-					<Frame XPosition="-16" YPosition="-5" XScale="100" YScale="100" Delay="1" Visible="true" RedTint="255" GreenTint="255" BlueTint="255" AlphaTint="255" RedOffset="0" GreenOffset="0" BlueOffset="0" Rotation="0" Interpolated="true"/>
-				</NullAnimation>
-			</NullAnimations>
+			<NullAnimations/>
 			<Triggers>
 				<Trigger EventId="0" AtFrame="30"/>
 			</Triggers>
@@ -173,11 +157,7 @@
 				<LayerAnimation LayerId="2" Visible="true"/>
 				<LayerAnimation LayerId="3" Visible="true"/>
 			</LayerAnimations>
-			<NullAnimations>
-				<NullAnimation NullId="0" Visible="true">
-					<Frame XPosition="-16" YPosition="-5" XScale="100" YScale="100" Delay="16" Visible="true" RedTint="255" GreenTint="255" BlueTint="255" AlphaTint="255" RedOffset="0" GreenOffset="0" BlueOffset="0" Rotation="0" Interpolated="true"/>
-				</NullAnimation>
-			</NullAnimations>
+			<NullAnimations/>
 			<Triggers/>
 		</Animation>
 		<Animation Name="ThrowEnd" FrameNum="16" Loop="false">
@@ -194,9 +174,7 @@
 				<LayerAnimation LayerId="2" Visible="true"/>
 				<LayerAnimation LayerId="3" Visible="true"/>
 			</LayerAnimations>
-			<NullAnimations>
-				<NullAnimation NullId="0" Visible="true"/>
-			</NullAnimations>
+			<NullAnimations/>
 			<Triggers/>
 		</Animation>
 		<Animation Name="SpinningSpider" FrameNum="8" Loop="true">
@@ -214,9 +192,7 @@
 				</LayerAnimation>
 				<LayerAnimation LayerId="3" Visible="true"/>
 			</LayerAnimations>
-			<NullAnimations>
-				<NullAnimation NullId="0" Visible="true"/>
-			</NullAnimations>
+			<NullAnimations/>
 			<Triggers/>
 		</Animation>
 		<Animation Name="Cord" FrameNum="1" Loop="false">
@@ -231,9 +207,7 @@
 					<Frame XPosition="0" YPosition="0" XPivot="4" YPivot="0" XCrop="4" YCrop="0" Width="8" Height="128" XScale="100" YScale="100" Delay="1" Visible="true" RedTint="255" GreenTint="255" BlueTint="255" AlphaTint="255" RedOffset="0" GreenOffset="0" BlueOffset="0" Rotation="0" Interpolated="false"/>
 				</LayerAnimation>
 			</LayerAnimations>
-			<NullAnimations>
-				<NullAnimation NullId="0" Visible="true"/>
-			</NullAnimations>
+			<NullAnimations/>
 			<Triggers/>
 		</Animation>
 	</Animations>

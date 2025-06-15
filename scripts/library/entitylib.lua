@@ -37,7 +37,7 @@ function mod:freeGrid(npc, path, far, close, closest) -- the npc, should it be a
 		for i = 0, room:GetGridSize() do
 			if room:GetGridPosition(i) ~= nil then
 			local gridpoint = room:GetGridPosition(i)
-			if gridpoint and gridpoint:Distance(npc.Position) < far and gridpoint:Distance(npc.Position) > close and room:GetGridEntity(i) == nil and 
+			if gridpoint and gridpoint:Distance(npc.Position) < far and gridpoint:Distance(npc.Position) > close and room:GetGridEntity(i) == nil and
 			room:IsPositionInRoom(gridpoint, 0) and patherReal(npc, gridpoint) then
 				if closest then
 					if gridpoint:Distance(npc.Position) < imtheclosest then
