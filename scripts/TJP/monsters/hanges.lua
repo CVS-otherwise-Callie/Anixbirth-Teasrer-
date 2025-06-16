@@ -9,7 +9,11 @@ mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
 end, mod.Monsters.Hangeslip.ID)
 
 mod:AddCallback(ModCallbacks.MC_POST_NPC_RENDER, function(_, npc)
-    if npc.Variant == mod.Monsters.Hangeslip.Var and npc.SubType == 0 and npc:GetData().Dried then
+    if npc.Variant == mod.Monsters.Hangeslip.Var and npc:GetData().Dried then
+        if not npc:GetData().hangedriedanim then
+            npc:GetData().hangedriedanim = "Idle"
+            npc:GetData().hangedriedframe = 0
+        end
         mod:HangedriedRenderAI(npc, npc:GetSprite(), npc:GetData())
     end
 end, mod.Monsters.Hangeslip.ID)
@@ -18,7 +22,7 @@ local function FindDried(npc)
     local ta = {}
     local dried = Isaac.GetRoomEntities() --since dried are unlisted entities
     for k, v in ipairs(dried) do
-        if v.Type == mod.Monsters.Dried.ID and v.Variant == mod.Monsters.Dried.Var and not (v.Parent and v.Parent.Variant == mod.Monsters.Hangeslip.Var and v.Parent ~= npc)  and npc.Position:Distance(v.Position) < 7045 then
+        if v.Type == mod.Monsters.Dried.ID and v.Variant == mod.Monsters.Dried.Var and not (v.Parent and v.Parent.Variant == mod.Monsters.Hangeslip.Var and v.Parent ~= npc)  and npc.Position:Distance(v.Position) < 45 then
             table.insert(ta, v)
         end
     end
@@ -94,32 +98,52 @@ function mod:HangesAI(npc, sprite, d)
 end
 
 function mod:HangedriedAI(npc, sprite, d)
+
     local player = npc:GetPlayerTarget()
     local playerpos = mod:confusePos(npc, player.Position, 5, nil, nil)
 
     if not d.init then
-        d.backDriedBody = d.backDriedBody or Isaac.Spawn(EntityType.ENTITY_EFFECT, mod.Effects.BlankEffect.Var, 0, npc.Position, npc.Velocity, nil)
-        d.backDriedBody.SpriteOffset = Vector(0,-54) + d.Dried.SpriteOffset
-        d.backDriedBody.DepthOffset = -50
-
-        d.BackDriedFace = d.BackDriedFace or Isaac.Spawn(EntityType.ENTITY_EFFECT, mod.Effects.BlankEffect.Var, 0, npc.Position, npc.Velocity, nil)
-        d.BackDriedFace.SpriteOffset = (Vector(0,-54) + d.Dried.SpriteOffset) + (playerpos - (npc.Position + (Vector(0,-100) + d.Dried.SpriteOffset))):Resized(1.5)
-        d.BackDriedFace.DepthOffset = -50
+        d.hangedriedanim = "Idle"
+        d.hangedriedframe = 0
+        d.init = true
     end
+
+
+    d.backDriedBody = d.backDriedBody or Isaac.Spawn(EntityType.ENTITY_EFFECT, mod.Effects.BlankEffect.Var, 0, npc.Position, npc.Velocity, nil)
+    d.backDriedBody.SpriteOffset = Vector(0,-54) + d.Dried.SpriteOffset
+    d.backDriedBody.DepthOffset = -50
+
+    d.backDriedFace = d.backDriedFace or Isaac.Spawn(EntityType.ENTITY_EFFECT, mod.Effects.BlankEffect.Var, 0, npc.Position, npc.Velocity, nil)
+    if d.hangedriedanim == "Idle" then
+        d.backDriedFace.SpriteOffset = (Vector(0,-54) + d.Dried.SpriteOffset) + (playerpos - (npc.Position + (Vector(0,-100) + d.Dried.SpriteOffset))):Resized(1.5)
+    else
+        d.backDriedFace.SpriteOffset = Vector(0,-54) + d.Dried.SpriteOffset
+    end
+    d.backDriedFace.DepthOffset = -50
+
 
     if d.backDriedBody then
         d.backDriedBody.Position = npc.Position
     end
-    if d.BackDriedFace then
-        d.BackDriedFace.Position = npc.Position
+    if d.backDriedFace then
+        d.backDriedFace.Position = npc.Position
     end
 
     mod:MakeInvulnerable(npc)
     npc.DepthOffset = 5
 
+    if npc.StateFrame > 100 and npc.Position:Distance(playerpos) < 45 then
+        d.hangedriedanim = "Chomp"
+    end
+
+    if d.hangedriedanim ~= "Idle" then
+        d.hangedriedframe = d.hangedriedframe + 1
+    end
+
 end
 
 function mod:HangedriedRenderAI(npc, sprite, d)
+
     local player = npc:GetPlayerTarget()
     local playerpos = mod:confusePos(npc, player.Position, 5, nil, nil)
     local path = npc.Pathfinder
@@ -132,17 +156,22 @@ function mod:HangedriedRenderAI(npc, sprite, d)
         local spr = d.backDriedBody:GetSprite()
 
         spr:Load("gfx/monsters/hanges/hanges.anm2", true)
-        spr:SetFrame("HangeRopeBehind", 0)
+        spr:SetFrame("Hangerope"..d.hangedriedanim.."Behind", d.hangedriedframe)
     end
 
-    if d.BackDriedFace then
-        local spr = d.BackDriedFace:GetSprite()
+    if d.backDriedFace then
+        local spr = d.backDriedFace:GetSprite()
 
         spr:Load("gfx/monsters/hanges/hanges.anm2", true)
-        spr:SetFrame("HangeRopeFace", 0)
+        spr:SetFrame("Hangerope"..d.hangedriedanim.."Face", d.hangedriedframe)
     end
 
-    sprite:Play("HangeRopeInFront")
+    if sprite:IsEventTriggered("Throw") and d.Dried:GetData().state ~= "cut" then
+        print(d.Dried:GetData().state)
+        d.Dried:GetData().state = "cutinit"
+    end
+
+    sprite:SetFrame("Hangerope"..d.hangedriedanim.."Front", d.hangedriedframe)
 
 end
 
