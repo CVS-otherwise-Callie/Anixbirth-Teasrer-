@@ -87,6 +87,9 @@ mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, function(_, npc, dmg, flags, so
             if math.random(2) == 2 then
                 npc:SetColor(Color(2,2,2,1,0,0,0),5,2,true,false)
                 npc:ToNPC():PlaySound(SoundEffect.SOUND_THUMBS_DOWN, 1, 2, false, 1)
+                for i = 1, game:GetNumPlayers() do
+                    Isaac.GetPlayer(i):AnimateSad()
+                end
                 return false
             end
         end

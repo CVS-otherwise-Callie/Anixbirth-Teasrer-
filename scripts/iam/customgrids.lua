@@ -83,7 +83,6 @@ function mod.lightpressurePlateAI(customGrid)
 
         if d.nullEnt then
             d.nullEnt:Remove()
-            print(d.nullEnt)
         end
 
         roomDescriptor.Flags = roomDescriptor.Flags & ~RoomDescriptor.FLAG_PRESSURE_PLATES_TRIGGERED & ~RoomDescriptor.FLAG_CLEAR & RoomDescriptor.FLAG_NO_REWARD
@@ -268,12 +267,11 @@ mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
     local d = npc:GetData()
     local sprite = npc:GetSprite()
     local room = game:GetRoom()
+    npc.GridCollisionClass = GridCollisionClass.COLLISION_NONE
 
     mod:SaveEntToRoom(npc)
 
     if d.anixbirthDONOTDOANYTHING then
-
-        npc.GridCollisionClass = GridCollisionClass.COLLISION_NONE
         npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_NONE
         npc:AddEntityFlags(EntityFlag.FLAG_NO_PHYSICS_KNOCKBACK | EntityFlag.FLAG_NO_KNOCKBACK)
 

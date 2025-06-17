@@ -572,7 +572,10 @@ function mod:HangekickAI(npc, sprite, d)
     end
 
     if d.state == "kick" then
-        if d.targetpos.X > d.detacheddried.Position.X then
+        if d.detacheddried == nil or sprite:IsFinished() then
+            d.state = "chase"
+        end
+        if d.detacheddried and d.targetpos.X > d.detacheddried.Position.X then
             sprite.FlipX = true
         else
             sprite.FlipX = false
@@ -580,9 +583,6 @@ function mod:HangekickAI(npc, sprite, d)
         npc:MultiplyFriction(0.8)
         sprite:RemoveOverlay()
         mod:spritePlay(sprite, "HangekickKick")
-        if sprite:IsFinished() then
-            d.state = "chase"
-        end
     end
 
     if sprite:IsEventTriggered("Throwstart") then
@@ -604,7 +604,7 @@ function mod:HangekickAI(npc, sprite, d)
         end
     end
 
-    if d.detacheddried and ((d.detacheddried:IsDead() or not d.detacheddried:Exists()) or d.detacheddried:GetData().state == "jumpedon") then
+    if d.detacheddried and ((not path:HasPathToPos(d.detacheddried.Position, false) or d.detacheddried:IsDead() or not d.detacheddried:Exists()) or d.detacheddried:GetData().state == "jumpedon") then
         npc.Parent = nil
         d.detacheddried.Child = nil
         d.detacheddried = nil

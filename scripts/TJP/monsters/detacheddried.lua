@@ -98,6 +98,12 @@ function mod:DetachedDriedAI(npc, sprite, d)
         end
     end
 
+    if d.airborne then
+        npc.GridCollisionClass = EntityGridCollisionClass.GRIDCOLL_NOPITS
+    else
+        npc.GridCollisionClass = EntityGridCollisionClass.GRIDCOLL_GROUND
+    end
+
     if d.state == "jumpedon" then
         npc.EntityCollisionClass = 0
         mod:spritePlay(sprite, "HangejumpExplodeRed")

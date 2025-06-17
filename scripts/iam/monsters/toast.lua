@@ -12,7 +12,7 @@ end, 161)
 local function GetAliveEntitiesInDist(npc, dist)
 	local tab = {}
 	for k, v in ipairs(Isaac.GetRoomEntities()) do
-		if npc.Position:Distance(v.Position) > 0 and npc.Position:Distance(v.Position) < dist and v:Exists() and not v:IsDead() and v.GridCollisionClass ~= GridCollisionClass.COLLISION_WALL then
+		if npc.Position:Distance(v.Position) > 0 and npc.Position:Distance(v.Position) < dist and v:Exists() and not v:IsDead() and v.GridCollisionClass == EntityGridCollisionClass.GRIDCOLL_GROUN then
             table.insert(tab, v)
 		end
 	end
