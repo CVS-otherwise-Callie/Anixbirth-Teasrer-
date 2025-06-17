@@ -8,6 +8,9 @@ mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
     end
 end, mod.Monsters.DetachedDried.ID)
 
+--if you're looking for dried's code its in the iam folder
+
+
 function mod:DetachedDriedAI(npc, sprite, d)
 
     if not d.init then

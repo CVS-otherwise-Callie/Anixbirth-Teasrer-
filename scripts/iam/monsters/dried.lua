@@ -8,7 +8,7 @@ mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
     end
 end, mod.Monsters.Dried.ID)
 
---if youre looking for detached dried's code its in the TJP folder
+--if you're looking for detached dried's code its in the TJP folder
 
 function mod:DriedAI(npc, sprite, d)
 local room = game:GetRoom()
@@ -75,7 +75,7 @@ local room = game:GetRoom()
     }
 
     if not d.init then
-        
+
         if d.isPrevEntCopy then
             npc:ClearEntityFlags(EntityFlag.FLAG_APPEAR)
         end
@@ -124,9 +124,6 @@ local room = game:GetRoom()
         npc.StateFrame = npc.StateFrame + 1
     end
 
-    if npc.StateFrame == 200 then
-        d.state = "cutinit"
-    end
 
     if d.state == "cutinit" then
         npc.Position = d.spawnpos + Vector(math.sin(npc.StateFrame/d.oscillatespeed) * 3, 0)
@@ -145,7 +142,7 @@ local room = game:GetRoom()
     if d.state == "uncut" then
 
         mod:SaveEntToRoom(npc)
-        
+
         npc.Position = d.spawnpos + Vector(math.sin(npc.StateFrame/d.oscillatespeed) * 2, 0)
         if not room:IsClear() then
 
