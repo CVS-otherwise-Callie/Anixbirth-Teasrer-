@@ -18,11 +18,11 @@ mod:AddCallback(ModCallbacks.MC_POST_NPC_RENDER, function(_, npc)
     end
 end, mod.Monsters.Hangeslip.ID)
 
-local function FindDried(npc)
+local function FindDried(npc, range)
     local ta = {}
     local dried = Isaac.GetRoomEntities() --since dried are unlisted entities
     for k, v in ipairs(dried) do
-        if v.Type == mod.Monsters.Dried.ID and v.Variant == mod.Monsters.Dried.Var and not (v.Parent and v.Parent.Variant == mod.Monsters.Hangeslip.Var and v.Parent ~= npc)  and npc.Position:Distance(v.Position) < 45 then
+        if v.Type == mod.Monsters.Dried.ID and v.Variant == mod.Monsters.Dried.Var and not (v.Parent and v.Parent.Variant == mod.Monsters.Hangeslip.Var and v.Parent ~= npc)  and npc.Position:Distance(v.Position) < range then
             table.insert(ta, v)
         end
     end
@@ -60,7 +60,7 @@ function mod:HangesAI(npc, sprite, d)
     if not d.oginit then
         sprite:SetOverlayFrame("HangeHeadDown", 1)
 
-        d.Dried = FindDried(npc)
+        d.Dried = FindDried(npc, 45)
 
         d.oginit = true
         d.state = "reveal"
@@ -69,7 +69,7 @@ function mod:HangesAI(npc, sprite, d)
     end
 
     if d.Dried == nil and npc.StateFrame < 5 then
-        d.Dried = d.Dried or FindDried(npc)
+        d.Dried = d.Dried or FindDried(npc, 45)
     else
         if d.Dried then
             npc:ClearEntityFlags(EntityFlag.FLAG_APPEAR)
@@ -141,7 +141,11 @@ function mod:HangedriedAI(npc, sprite, d)
     end
 
     if sprite:IsFinished("HangeropeChompFront") then
-        print("jump!!!!to another dried not hangejump")
+        if FindDried(npc, 115) then
+            print("i found a dried!!!!")
+        else
+            print("i gotta drop....")
+        end
     end
 
 end

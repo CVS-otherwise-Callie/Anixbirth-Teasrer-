@@ -108,10 +108,6 @@ function mod:DetachedDriedAI(npc, sprite, d)
     elseif (not d.airborne) and ((room:GetGridEntity(room:GetGridIndex(npc.Position)) and room:GetGridEntity(room:GetGridIndex(npc.Position)).CollisionClass == 0) or not (room:GetGridEntity(room:GetGridIndex(npc.Position)))) then
         npc.GridCollisionClass = EntityGridCollisionClass.GRIDCOLL_GROUND
     end
-    print()
-    print((not d.airborne))
-    print((room:GetGridEntity(room:GetGridIndex(npc.Position)) and room:GetGridEntity(room:GetGridIndex(npc.Position)).CollisionClass == 0))
-    print(not (room:GetGridEntity(room:GetGridIndex(npc.Position))))
 
     if d.state == "jumpedon" then
         npc.EntityCollisionClass = 0
