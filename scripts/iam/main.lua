@@ -67,7 +67,8 @@ FHAC.CVSMonsters = {
 	ReHost = mod:ENT("Rehost"),
 	Suckup = mod:ENT("Suck Up"),
 	PottedFatty = mod:ENT("Potted Fatty"),
-	Hanger = mod:ENT("The Hanged")
+	Hanger = mod:ENT("The Hanged"),
+	SamBabies = mod:ENT("Sam Bear Spawn")
 }
 
 FHAC.CVSEffects = {
@@ -85,9 +86,16 @@ FHAC.CVSNPCS = {
 	WilloWalker = mod:ENT("WilloWalker NPC")
 }
 
+FHAC.CVSMinibosses = {
+	Narcissism = mod:ENT("Narcissism"),
+    Chomb = mod:ENT("Chomb"),
+    Sam = mod:ENT("Sam Bear"),
+}
+
 mod:MixTables(FHAC.Monsters, FHAC.CVSMonsters)
 mod:MixTables(FHAC.Effects, FHAC.CVSEffects)
 mod:MixTables(FHAC.NPCS, FHAC.CVSNPCS)
+mod:MixTables(FHAC.MiniBosses, FHAC.CVSMinibosses)
 
 --iam stuff
 FHAC:LoadScripts("scripts.iam.monsters", {
@@ -152,7 +160,8 @@ FHAC:LoadScripts("scripts.iam.monsters", {
 
 FHAC:LoadScripts("scripts.iam.minibosses", {
 	"narcissism", --narc!!
-	"chomb"
+	"chomb",
+	"sam"
 })
 
 FHAC:LoadScripts("scripts.iam", {
@@ -861,6 +870,46 @@ function mod:ReplacePedestal(num, item, poof)
 	end
 end
 
+
+function mod:IsAnyPlayerPongon()
+    local var = false
+    for i = 1, game:GetNumPlayers() do
+        if Isaac.GetPlayer(i):GetPlayerType() == Isaac.GetPlayerTypeByName("Pongon") then
+            return true
+        end
+    end
+    return false
+end
+
+function mod:GetNextAttack(attacks)
+	local tab = {}
+	local strings = {}
+	local na = 0
+	for k, v in ipairs(attacks) do
+		table.insert(tab, v[2])
+		strings[v[2]] = v[1]
+	end
+	local newtab = mod:GetListInOppositeOrder(tab)
+
+	local newertab = {}
+	local newetabbutIdontknowwhatimdoing = {}
+	for k, v in ipairs(newtab) do
+		na = na + v
+		table.insert(newertab, na)
+		table.insert(newetabbutIdontknowwhatimdoing, {na, v})
+	end
+
+	local num = math.random(mod:GetLargestInATable(tab), mod:GetLargestInATable(newertab))
+
+	for k, v in ipairs(newertab) do
+		if newertab[k+1] and num >= v and num < newertab[k+1] then
+			return strings[newetabbutIdontknowwhatimdoing[k][2]]
+		elseif not newertab[k+1] then
+			return strings[mod:GetLargestInATable(tab)]
+		end
+	end
+end
+
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 local player = Isaac.GetPlayer()
@@ -1126,14 +1175,4 @@ function mod:GlobalCVSEntityStuff(npc, sprite, d)
 		end
 	end
 
-end
-
-function mod:IsAnyPlayerPongon()
-    local var = false
-    for i = 1, game:GetNumPlayers() do
-        if Isaac.GetPlayer(i):GetPlayerType() == Isaac.GetPlayerTypeByName("Pongon") then
-            return true
-        end
-    end
-    return false
 end

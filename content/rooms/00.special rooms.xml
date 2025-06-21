@@ -1380,6 +1380,15 @@
 			<entity type="5" variant="150" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
+	<room variant="45000" name="AnxiousBeast - Sam" type="3" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="0.0042069">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="7"/>
+		<door exists="True" x="13" y="3"/>
+		<spawn x="6" y="3">
+			<entity type="95" variant="2" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
 	<room variant="45000" name="Cheetus 2.0 - fuck you, no more secret room pool" type="7" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="9.999999960041972e-12">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>

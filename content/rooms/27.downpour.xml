@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <rooms>
-	<room variant="45000" name="CVS - WILLO                   WALKER" type="1" subtype="0" shape="1" width="13" height="7" difficulty="20" weight="0.000000000000000069420 ">
+	<room variant="45000" name="CVS - WILLO                   WALKER" type="1" subtype="0" shape="1" width="13" height="7" difficulty="20" weight="0.0006942">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>

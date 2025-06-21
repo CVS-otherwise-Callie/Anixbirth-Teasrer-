@@ -676,6 +676,16 @@
         <gibs amount="4" blood="1" bone="0" eye="0" gut="1" large="0" />
     </entity>
 
+    <entity anm2path="minibosses/sam/sam.anm2" id="95" variant="2" subtype="0" reroll="false" baseHP="500" boss="1" champion="0" collisionDamage="1" collisionMass="40" collisionRadius="50" friction="1" name="Sam Bear" numGridCollisionPoints="48" shadowSize="50" stageHP="13" shieldStrength="500" bestiary="true" portrait="1020" >
+        <bestiary transform="0,0,1" anim="Walk" />
+        <gibs amount="6" blood="2" bone="1" eye="1" gut="1" large="0" />
+    </entity>
+
+    <entity anm2path="minibosses/sam/smallsam.anm2" reroll="true" baseHP="15" boss="0" champion="1" collisionDamage="1" collisionMass="7" collisionRadius="13" friction="1" id="37" name="Sam Bear Spawn" numGridCollisionPoints="12" shadowSize="17" stageHP="0" variant="6" portrait="14">
+		<bestiary transform="0,-3,1" anim="Move Hori" />
+        <gibs amount="4" blood="1" bone="0" eye="0" gut="1" large="0" />
+    </entity>
+
     <!-- Bosses -->
 
     <entity id="139" variant="48"  name="Hop" anm2path="bosses\hopperbrothers\hop.anm2" hasFloorAlts="false" reroll="false" baseHP="120" boss="1" champion="0" collisionDamage="1" collisionMass="24" collisionRadius="25" collisionRadiusXMulti="1.5" friction="0" numGridCollisionPoints="12" shadowSize="45" stageHP="20" portrait="0" tags="noreroll">

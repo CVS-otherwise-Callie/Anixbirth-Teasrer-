@@ -241,3 +241,184 @@ function mod:CheckStage(stagename, backdroptypes)
         end
     end
 end
+
+function mod:GetSmallestInATable(tab)
+  
+  local resulteq = 0
+  local result = 0
+  for k, v in ipairs(tab) do
+    local num = v
+    
+    for k, v in ipairs(tab) do
+      local eq = (num - v)
+      
+      if eq > resulteq then
+        resulteq = eq
+        result = v
+      end
+    end
+  end
+  
+  return result
+  
+end
+
+function mod:GetLargestInATable(tab)
+  
+  local resulteq = 0
+  local result = mod:GetSmallestInATable(tab)
+  for k, v in ipairs(tab) do
+    local num = v
+    
+    for k, v in ipairs(tab) do
+      local eq = (num - v)
+      
+      if eq < resulteq then
+        resulteq = eq
+        result = v
+      end
+    end
+  end
+  
+   return result
+  
+end
+
+function mod:mean(tab)
+  local num = 0; 
+  for k, v in ipairs(tab) do
+    num = num + tonumber(v);
+  end
+  
+  return num/#tab;
+
+end
+
+local function bumpDownTab(tab, num)
+  for i = 1, #tab do
+    local thing = tab[i]
+    if i > 2 and i <= num then
+      tab[i-1] = thing
+    end
+  end
+end
+
+local function getTabLength(tab)
+  local na = 1
+  while tab[na] do
+    na = na + 1
+  end
+  return na - 1
+end
+
+function mod:GetAmountOfSomethingInATable(table, element)
+  local times = 0
+      local num = element
+      
+      for k, v in ipairs(table) do
+        if num == v then
+          times = times + 1
+        end
+      end
+  return times
+end
+
+function mod:gettheLowestNumber(tab, maxlow, canbemaxlow)
+  canbemaxlow = canbemaxlow or false 
+  local dumnum = 0
+  local larges = 9999999999999999999999
+  
+  for k, v in ipairs(tab) do
+    if v < larges and v > maxlow then
+      	dumnum = v
+      	larges = v
+    end
+  end
+  return dumnum
+end
+
+function mod:gettheHighestNumber(tab, maxhigh)
+  local dumnum = 0
+  local smollest = 0
+  
+  for k, v in ipairs(tab) do
+    if v > smollest and v < maxhigh then
+      	dumnum = v
+      	smollest = v
+    end
+  end
+  return dumnum
+end
+
+function mod:median(tab)
+  local smallest = mod:GetSmallestInATable(tab)
+
+  local newtab = {}
+  table.insert(newtab, smallest)
+
+  for k, v in ipairs(tab) do
+    
+    table.insert(newtab, mod:gettheLowestNumber(tab, v))
+  end
+  
+  table.remove(newtab, #newtab)
+  
+  if #newtab % 2 ~= 0 then
+    return newtab[math.ceil(#newtab/2)]
+  else
+    local lowers = newtab[(#newtab/2)]
+    local higher = newtab[1+(#newtab/2)]
+    
+    return (lowers + higher)/2
+  end
+end
+
+function mod:GetListInOrder(tab)
+  local smallest = mod:GetSmallestInATable(tab)
+
+  local newtab = {}
+  table.insert(newtab, smallest)
+
+  local newsmall = mod:gettheLowestNumber(tab, smallest)
+
+  for i = 1, #tab do
+    table.insert(newtab, newsmall)
+	newsmall = mod:gettheLowestNumber(tab, newsmall)
+  end
+
+  table.remove(newtab, #newtab)
+  return newtab
+end
+
+function mod:GetListInOppositeOrder(tab)
+  local largets = mod:GetLargestInATable(tab)
+
+  local newtab = {}
+  table.insert(newtab, largets)
+
+  local newlarge = mod:gettheHighestNumber(tab, largets)
+
+  for i = 1, #tab do
+    table.insert(newtab, newlarge)
+	  newlarge = mod:gettheHighestNumber(tab, newlarge)
+  end
+
+  table.remove(newtab, #newtab)
+
+  return newtab
+end
+
+function mod:mode(tab)
+  local uh = 1
+  local returnum = "None"
+  for k, v in ipairs(tab) do
+    local newnumber = mod:GetAmountOfSomethingInATable(tab, v)
+
+    if uh < newnumber then
+      uh = newnumber
+      returnum = v
+    end
+    
+  end
+  return returnum
+end
