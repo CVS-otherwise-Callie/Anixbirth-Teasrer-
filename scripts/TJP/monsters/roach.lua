@@ -63,7 +63,7 @@ end
 
 mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, function(_, npc, dmg, flags, source)
     if npc.Type == 161 and npc.Variant == mod.Monsters.Roach.Var then
-        if AnixbirthSaveManager.GetSettingsSave().accurateRoach then
+        if AnixbirthSaveManager.GetSettingsSave().accurateRoach == 1 then
             if source.Entity and source.Entity.Type == 1000 and source.Entity.Variant == 29 then
                 local str = {"Fun fact:", "Roaches are", "fucking bastards"}
                     for j = 1, 60 do

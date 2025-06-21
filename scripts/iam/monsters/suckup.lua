@@ -23,7 +23,7 @@ function mod:SuckupAI(npc, sprite, d)
 
         local ent = mod:GetClosestEnt(npc.Position, npc)
 
-        if ent then
+        if ent and ent.Position:Distance(npc.Position) < 100 then
             d.ENT = ent
             d.hasHadEnt = true
             d.shouldCirc = true
@@ -71,7 +71,7 @@ function mod:SuckupAI(npc, sprite, d)
     end
 
     if d.ENT and d.ENT.Type == 1 then
-        if mod:GetClosestEnt(npc.Position, npc) and not d.hasHadEnt then
+        if mod:GetClosestEnt(npc.Position, npc) and not d.hasHadEnt and mod:GetClosestEnt(npc.Position, npc).Position:Distance(npc.Position) < 100 then
             d.ENT = mod:GetClosestEnt(npc.Position, npc)
             d.shouldCirc = true
             d.isentPlayer = false

@@ -80,8 +80,14 @@ FHAC.CVSEffects = {
 	WideWeb = mod:ENT("Large Spiderweb")
 }
 
+FHAC.CVSNPCS = {
+	Skeleton = mod:ENT("Skeleton NPC"),
+	WilloWalker = mod:ENT("WilloWalker NPC")
+}
+
 mod:MixTables(FHAC.Monsters, FHAC.CVSMonsters)
 mod:MixTables(FHAC.Effects, FHAC.CVSEffects)
+mod:MixTables(FHAC.NPCS, FHAC.CVSNPCS)
 
 --iam stuff
 FHAC:LoadScripts("scripts.iam.monsters", {
@@ -206,6 +212,10 @@ FHAC:LoadScripts("scripts.iam.characters", {
 
 FHAC:LoadScripts("scripts.iam.challenges", {
 	"therealbestiary",
+})
+
+FHAC:LoadScripts("scripts.iam.npcs", {
+	"willowalker",
 })
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

@@ -13,7 +13,7 @@ function mod:NPCDeathTransform(npc)
             local t = v[2]
             local g = v[3]
             if l == npc.Type and t == npc.Variant and npc:HasMortalDamage() and math.random(1) > g then
-                mod:MorphOnDeath(npc, mod.Monsters.Log.ID, mod.Monsters.Log.Var, 0, SoundEffect.SOUND_MEAT_JUMPS, g, 2)
+                --mod:MorphOnDeath(npc, mod.Monsters.Log.ID, mod.Monsters.Log.Var, 0, SoundEffect.SOUND_MEAT_JUMPS, g, 2)
             end
         end
     end

@@ -46,7 +46,6 @@ FHAC.Effects = {
 }
 
 FHAC.NPCS = {
-    Skeleton = mod:ENT("Skeleton NPC"),
 }
 
 FHAC.Jokes = {

@@ -194,6 +194,9 @@ Use 2, 4, or 6 normally.
       <checkbox Name="Gives Rewards" Length="1"/>
    </bitfield>
 </entity>
+<!--163-->
+<entity ID="163" Variant="2" Name="WilloWalker NPC" Image="mah boys/willowalker.png" Tags="NPC"/>
+
 <!--240-->
 <entity ID="240" Variant="359" Name="Stall Creep" Image="mah boys/stall_creep.png" BaseHP="10" Tags="Champion" PlaceVisual="WallSnap"/>
 <entity ID="240" Variant="368" Name="Webbed Creep" Image="mah boys/webbed_creep.png" BaseHP="10" Tags="Champion" PlaceVisual="WallSnap"/>
@@ -373,6 +376,7 @@ Use 2, 4, or 6 normally.
 	<group Name="HOPE Joke Content" Label="Joke Content">
 		<group Name="HOPE Joke Content Enemies">
 			<entity Name="Jim"/>
+			<entity Name="WilloWalker NPC"/>
 		</group>
 	</group>
 
