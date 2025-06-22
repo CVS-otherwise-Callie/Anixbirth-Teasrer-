@@ -1,8 +1,9 @@
 <items gfxroot="gfx/items/" version="1">
-    <passive id="1" name="Stinky Mushroom" gfx="Stinky_Mushroom.png" description="It smells revolting!" quality="3" cache="damage offensive" />
-    <passive id="2" name="Big Ol' Bowl of Sauerkraut" gfx="2_bigolbowlofsauerkraut.png" description="Every day for breakfast..." quality="2" cache="offensive" />
-    <passive id="3" name="Stinky Socks" gfx="3_stinkysocks.png" description="Stinks like heaven" quality="2" cache="speed" />
-    <passive id="4" name="Moldy Bread" gfx="4_moldybread.png" description="Still edible" quality="2"/>
+    <passive id="1" name="Stinky Mushroom" gfx="001_stinkymushroom.png" description="It smells revolting!" quality="3" cache="damage offensive" />
+    <passive id="2" name="Big Ol' Bowl of Sauerkraut" gfx="002_bigolbowlofsauerkraut.png" description="Every day for breakfast..." quality="2" cache="offensive" />
+    <passive id="3" name="Stinky Socks" gfx="003_stinkysocks.png" description="Stinks like heaven" quality="2" cache="speed" />
+    <passive id="4" name="Moldy Bread" gfx="004_moldybread.png" description="Still edible" quality="2"/>
+    <passive id="5" name="Letter To Myself" gfx="005_lettertomyself.png" description="See me soon" quality="2"/>
 
     <!--Actives are 100+-->
     <active id="100" name="Joke Book" gfx="100_joke_book.png" description="Xocolate's finest" quality="1" maxcharges="2" cache="firedelay" />

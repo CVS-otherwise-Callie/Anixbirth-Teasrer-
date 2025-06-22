@@ -92,10 +92,44 @@ FHAC.CVSMinibosses = {
     Sam = mod:ENT("Sam Bear"),
 }
 
+FHAC.CVSCollectibles = {
+    Items = {
+        StinkyMushroom = Isaac.GetItemIdByName("Stinky Mushroom"),
+        BigBowlOfSauerkraut = Isaac.GetItemIdByName("Big Ol' Bowl of Sauerkraut"),
+        JokeBook = Isaac.GetItemIdByName("Joke Book"),
+        StrawDoll = Isaac.GetItemIdByName("Straw Doll"),
+        EmptyDeathCertificate = Isaac.GetItemIdByName("Empty Death Certificate"),
+        MarketablePlushie = Isaac.GetItemIdByName("Marketable Plushie"),
+        StinkySocks = Isaac.GetItemIdByName("Stinky Socks"),
+        MoldyBread = Isaac.GetItemIdByName("Moldy Bread"),
+	    CorruptedFile = Isaac.GetItemIdByName("Corrupted File"),
+	    TheBell = Isaac.GetItemIdByName("The Bell"),
+    	LilAna = Isaac.GetItemIdByName("Lil Ana"),
+		LetterToMyself = Isaac.GetItemIdByName("Letter To Myself")
+    },
+    PickupsEnt = {
+        BowlOfSauerkraut = mod:ENT("Bowl of Sauerkraut"),
+        BirthdaySlice = mod:ENT("Birthday Slice"),
+		LetterToMyself = mod:ENT("Letter To Myself")
+    },
+    Pickups = {
+        BirthdaySlice = Isaac.GetCardIdByName("Birthday Slice")
+    },
+    Trinkets = {
+        MysteryMilk = Isaac.GetTrinketIdByName("Mystery Milk"),
+	    TheLeftBall = Isaac.GetTrinketIdByName("The Left Ball")
+    }
+}
+
 mod:MixTables(FHAC.Monsters, FHAC.CVSMonsters)
 mod:MixTables(FHAC.Effects, FHAC.CVSEffects)
 mod:MixTables(FHAC.NPCS, FHAC.CVSNPCS)
 mod:MixTables(FHAC.MiniBosses, FHAC.CVSMinibosses)
+
+mod:MixTables(FHAC.Collectibles.Items, FHAC.CVSCollectibles.Items)
+mod:MixTables(FHAC.Collectibles.PickupsEnt, FHAC.CVSCollectibles.PickupsEnt)
+mod:MixTables(FHAC.Collectibles.Pickups, FHAC.CVSCollectibles.Pickups)
+mod:MixTables(FHAC.Collectibles.Trinkets, FHAC.CVSCollectibles.Trinkets)
 
 --iam stuff
 FHAC:LoadScripts("scripts.iam.monsters", {
@@ -197,11 +231,10 @@ FHAC:LoadScripts("scripts.iam.items.trinkets", {
 
 FHAC:LoadScripts("scripts.iam.items.passives", {
 	"stinky mushroom",
-	"anal fissure",
 	"big ol' bowl of sauerkraut",
-	"empty death certificate",
 	"stinky socks",
-	"moldy bread"
+	"moldy bread",
+	"letter to myself"
 })
 
 FHAC:LoadScripts("scripts.iam.items.pickups" , {

@@ -711,6 +711,10 @@
         <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
     </entity>
 
+    <entity anm2path="items/pick ups/letter_to_myself.anm2" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="12" friction="1" id="5" name="Letter To Myself" numGridCollisionPoints="24" shadowSize="17" stageHP="0" variant="722" subtype="0">
+        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
+    </entity>
+
     <!--Ace-->
     <entity anm2path="items/pick ups/aceslice.anm2" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="12" friction="1" id="5" name="Birthday Slice" numGridCollisionPoints="24" shadowSize="17" stageHP="0" variant="300" subtype="451" subtype="0">
         <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
