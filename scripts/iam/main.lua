@@ -83,7 +83,7 @@ FHAC.CVSEffects = {
 
 FHAC.CVSNPCS = {
 	Skeleton = mod:ENT("Skeleton NPC"),
-	WilloWalker = mod:ENT("WilloWalker NPC")
+	OGWilloWalker = mod:ENT("OGWilloWalker NPC")
 }
 
 FHAC.CVSMinibosses = {
@@ -257,7 +257,7 @@ FHAC:LoadScripts("scripts.iam.challenges", {
 })
 
 FHAC:LoadScripts("scripts.iam.npcs", {
-	"willowalker",
+	"ogwillowalker",
 })
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

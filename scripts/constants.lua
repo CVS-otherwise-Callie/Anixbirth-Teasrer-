@@ -41,7 +41,6 @@ FHAC.Familiars = {
 }
 
 FHAC.Effects = {
-
 }
 
 FHAC.NPCS = {
@@ -173,6 +172,9 @@ FHAC.Nonmale = {
     { ID = FHAC:SpecialEnt("PitPat"),      Affliction = "Woman" },
     { ID = FHAC:SpecialEnt("Patient"),     Affliction = "Woman" },
     { ID = FHAC:SpecialEnt("Pinprick"),    Affliction = "Dreamsexual" },
+    { ID = FHAC:SpecialEnt("Web Mother"),     Affliction = "Woman" },
+    { ID = FHAC:SpecialEnt("Weblet"),     Affliction = "Woman" },
+    { ID = FHAC:SpecialEnt("Tainted Web Mother"),     Affliction = "Woman" },
 }
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
