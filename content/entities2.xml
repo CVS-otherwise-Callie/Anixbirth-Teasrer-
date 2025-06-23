@@ -758,8 +758,8 @@
 
     <!--Joke Effects-->
 
-    <entity anm2path="npcs/originalwillowwalker/ogwillobox.anm2" name="OGWilloWalker Box" id="1000" variant="429" subtype="55" baseHP="0" stageHP="0" shieldStrength="0" boss="0" champion="0" collisionDamage="0" collisionMass="0" collisionRadius="0" friction="1" numGridCollisionPoints="0" shadowSize="0"/>
-    <entity anm2path="npcs/originalwillowwalker/ogwillofont.anm2" name="OGWilloWalker Font" id="1000" variant="430" subtype="55" baseHP="0" stageHP="0" shieldStrength="0" boss="0" champion="0" collisionDamage="0" collisionMass="0" collisionRadius="0" friction="1" numGridCollisionPoints="0" shadowSize="0"/>
+    <entity anm2path="npcs/originalwillowwalker/ogwillobox.anm2" name="OGWilloWalker Box" id="1000" variant="429" subtype="0" baseHP="0" stageHP="0" shieldStrength="0" boss="0" champion="0" collisionDamage="0" collisionMass="0" collisionRadius="0" friction="1" numGridCollisionPoints="0" shadowSize="0"/>
+    <entity anm2path="npcs/originalwillowwalker/ogwillofont.anm2" name="OGWilloWalker Font" id="1000" variant="430" subtype="0" baseHP="0" stageHP="0" shieldStrength="0" boss="0" champion="0" collisionDamage="0" collisionMass="0" collisionRadius="0" friction="1" numGridCollisionPoints="0" shadowSize="0"/>
 
     <!--NPCS-->
 

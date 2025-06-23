@@ -93,6 +93,7 @@ Up to groups of 3.
          <choice Value="3">Left</choice>
          <choice Value="4">Down</choice>
       </dropdown>
+	<checkbox Name="Moves After Shooting" Length="10"/>
    </bitfield>
 </entity>
 <entity ID="161" Variant="44" Name="Weblet" Image="mah boys/weblet.png" BaseHP="8"/>

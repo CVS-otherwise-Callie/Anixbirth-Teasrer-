@@ -10,10 +10,8 @@ mod:AddCallback(ModCallbacks.MC_POST_EFFECT_UPDATE, function(_, effect)
 end)
 
 mod:AddCallback(ModCallbacks.MC_POST_EFFECT_RENDER, function(_, effect)
-    if effect.Variant == mod.Effects.OGWilloWalkerBox.Var then
-        effect.Position = Isaac.ScreenToWorld(Vector(Isaac.GetScreenWidth(), (Isaac.GetScreenHeight()*2)-70))
-    end
-end)
+            effect.Position = Isaac.ScreenToWorld(Vector(Isaac.GetScreenWidth(), (Isaac.GetScreenHeight()*2)-70))
+end, mod.Effects.OGWilloWalkerBox.Var)
 
 function mod:OGWilloWalkerBoxAI(ef, sprite, d)
 

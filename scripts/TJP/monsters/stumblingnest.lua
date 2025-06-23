@@ -67,23 +67,43 @@ function mod:StumblingNestAI(npc, sprite, d)
 
         if d.direction == 1 or d.direction == 3 then
             if grid and grid.Position:Distance(npc.Position) < d.dist then
-                --npc:MultiplyFriction(0.8)
-                if d.direction >= 4 then
-                    d.direction = 1
+
+                if npc.SubType >= 10 then
+                    if d.direction >= 4 then
+                        d.direction = 1
+                    elseif d.direction == 3 then
+                        d.direction = d.direction - 1
+                    else
+                        d.direction = 4
+                    end
                 else
-                    d.direction = d.direction + 1
+                    if d.direction >= 4 then
+                        d.direction = 1
+                    else
+                        d.direction = d.direction + 1
+                    end
                 end
+                --npc:MultiplyFriction(0.8)
                 d.grid = StumblingNestEntAI(d.direction)
             end
         else
             if grid and grid.Position:Distance(npc.Position) < d.dist then
                 npc.StateFrame = 11
-                --npc:MultiplyFriction(0.8)
-                if d.direction >= 4 then
-                    d.direction = 1
+
+                if npc.SubType >= 10 then
+                    if d.direction >= 4 then
+                        d.direction = 1
+                    else
+                        d.direction = d.direction - 1
+                    end    
                 else
-                    d.direction = d.direction + 1
+                    if d.direction >= 4 then
+                        d.direction = 1
+                    else
+                        d.direction = d.direction + 1
+                    end
                 end
+                --npc:MultiplyFriction(0.8)
                 d.grid = StumblingNestEntAI(d.direction)
             end
         end
