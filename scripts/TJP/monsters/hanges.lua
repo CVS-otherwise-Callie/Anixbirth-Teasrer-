@@ -314,7 +314,7 @@ function mod:HangejumpAI(npc, sprite, d)
         end
     end
 
-    if d.detacheddried and ((d.detacheddried:IsDead() or not d.detacheddried:Exists()) or d.detacheddried:GetData().state == "jumpedon") then
+    if d.detacheddried and ((d.detacheddried:IsDead() or not d.detacheddried:Exists()) or d.detacheddried:GetData().state == "jumpedon" or not path:HasPathToPos(d.detacheddried.Position, false)) then
         npc.Parent = nil
         d.detacheddried.Child = nil
         d.detacheddried = nil
@@ -488,7 +488,7 @@ function mod:HangethrowAI(npc, sprite, d)
         end
     end
 
-    if d.detacheddried and ((d.detacheddried:IsDead() or not d.detacheddried:Exists()) or d.detacheddried:GetData().state == "jumpedon") then
+    if d.detacheddried and ((d.detacheddried:IsDead() or not d.detacheddried:Exists()) or d.detacheddried:GetData().state == "jumpedon" or not path:HasPathToPos(d.detacheddried.Position, false)) then
         npc.Parent = nil
         d.detacheddried.Child = nil
         d.detacheddried = nil
@@ -608,7 +608,7 @@ function mod:HangekickAI(npc, sprite, d)
     end
 
     if d.state == "kick" then
-        if d.targetpos.X > d.detacheddried.Position.X then
+        if d.detacheddried and d.targetpos.X > d.detacheddried.Position.X then
             sprite.FlipX = true
         else
             sprite.FlipX = false
@@ -640,7 +640,7 @@ function mod:HangekickAI(npc, sprite, d)
         end
     end
 
-    if d.detacheddried and ((d.detacheddried:IsDead() or not d.detacheddried:Exists()) or d.detacheddried:GetData().state == "jumpedon") then
+    if d.detacheddried and ((d.detacheddried:IsDead() or not d.detacheddried:Exists()) or d.detacheddried:GetData().state == "jumpedon" or not path:HasPathToPos(d.detacheddried.Position, false)) then
         npc.Parent = nil
         d.detacheddried.Child = nil
         d.detacheddried = nil

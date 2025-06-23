@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <rooms>
-	<room variant="45000" name="CVS -" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-17T01:38+00:00">
+	<room variant="45000" name="CVS - DMD beyond" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-17T01:38+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -45,7 +45,7 @@
 			<entity type="161" variant="50" subtype="2" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45001" name="CVS - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-17T01:38+00:00">
+	<room variant="45001" name="CVS - home invation" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-17T01:38+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -138,7 +138,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45002" name="CVS - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-17T01:38+00:00">
+	<room variant="45002" name="CVS - like father like son" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-17T01:38+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -201,7 +201,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45003" name="CVS - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-17T01:38+00:00">
+	<room variant="45003" name="CVS - they hate each other" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-17T01:38+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -294,7 +294,7 @@
 			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45004" name="CVS - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-17T01:38+00:00">
+	<room variant="45004" name="CVS - good luck dodging this one" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-17T01:38+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -372,7 +372,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45005" name="CVS - " type="1" subtype="0" shape="7" width="26" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-17T01:38+00:00">
+	<room variant="45005" name="CVS - ez room" type="1" subtype="0" shape="7" width="26" height="7" difficulty="3" weight="1.0" lastTestTime="2025-06-17T01:38+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="26" y="3"/>
 		<spawn x="0" y="2">
@@ -520,7 +520,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45006" name="CVS - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-17T01:38+00:00">
+	<room variant="45006" name="CVS - i thought this was a vanilla room" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-17T01:38+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -607,7 +607,7 @@
 			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45007" name="CVS - " type="1" subtype="0" shape="3" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-17T01:38+00:00">
+	<room variant="45007" name="CVS - runaway" type="1" subtype="0" shape="3" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-17T01:38+00:00">
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
 		<spawn x="4" y="0">
@@ -626,7 +626,7 @@
 			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45008" name="CVS - " type="1" subtype="0" shape="10" width="26" height="14" difficulty="5" weight="1.0" lastTestTime="2025-06-17T01:38+00:00">
+	<room variant="45008" name="CVS - my name is cvs and i make big stupid room blah blah" type="1" subtype="0" shape="10" width="26" height="14" difficulty="5" weight="1.0" lastTestTime="2025-06-17T01:38+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -672,10 +672,10 @@
 			<entity type="161" variant="35" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="0" y="2">
-			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="1" y="2">
-			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="2" y="2">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -690,10 +690,10 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="11" y="2">
-			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="12" y="2">
-			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="6" y="3">
 			<entity type="753" variant="950" subtype="0" weight="1.0"/>
@@ -747,7 +747,7 @@
 			<entity type="753" variant="950" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45009" name="CVS - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-17T01:38+00:00">
+	<room variant="45009" name="CVS - imagine it looking cooler when it breaks out" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-17T01:38+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -837,7 +837,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45010" name="CVS - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-17T01:38+00:00">
+	<room variant="45010" name="CVS - intercontinental missile" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-17T01:38+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -906,7 +906,7 @@
 			<entity type="249" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45011" name="CVS - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-17T01:38+00:00">
+	<room variant="45011" name="CVS - two guys just hangin out" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-17T01:38+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -987,7 +987,7 @@
 			<entity type="161" variant="50" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45012" name="CVS - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-17T01:38+00:00">
+	<room variant="45012" name="CVS - main character vibes from these two" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-17T01:38+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -1011,7 +1011,7 @@
 			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45013" name="CVS - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-17T01:38+00:00">
+	<room variant="45013" name="CVS - meet in the middle" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-17T01:38+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -1086,7 +1086,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45014" name="CVS - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-17T01:38+00:00">
+	<room variant="45014" name="CVS - what did you do to them" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-17T01:38+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -1140,7 +1140,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45015" name="CVS - " type="1" subtype="0" shape="6" width="26" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-17T01:38+00:00">
+	<room variant="45015" name="CVS - neighbourhood worm infestation" type="1" subtype="0" shape="6" width="26" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-17T01:38+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -1208,7 +1208,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="25" y="1">
-			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="7" y="2">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
@@ -1295,7 +1295,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="25" y="5">
-			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="0" y="6">
 			<entity type="5" variant="0" subtype="0" weight="1.0"/>
@@ -1322,7 +1322,7 @@
 			<entity type="5" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45016" name="CVS - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-17T01:38+00:00">
+	<room variant="45016" name="CVS - kill the bottom guy first" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-17T01:38+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -1379,7 +1379,7 @@
 			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45017" name="CVS - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-17T01:38+00:00">
+	<room variant="45017" name="CVS - never noticed how squishy the fatty is" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-17T01:38+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -1439,7 +1439,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45018" name="CVS - " type="1" subtype="0" shape="7" width="26" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-17T01:38+00:00">
+	<room variant="45018" name="CVS - draining my sack" type="1" subtype="0" shape="7" width="26" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-17T01:38+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="26" y="3"/>
 		<spawn x="6" y="2">
@@ -1464,7 +1464,7 @@
 			<entity type="161" variant="51" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45019" name="CVS - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-17T01:38+00:00">
+	<room variant="45019" name="CVS - something feels off" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-17T01:38+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -1722,7 +1722,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45020" name="CVS - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-18T02:12+00:00">
+	<room variant="45020" name="CVS - boringgg where are the 50 bosses" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-18T02:12+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -1827,7 +1827,7 @@
 			<entity type="753" variant="950" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45021" name="CVS - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-18T02:12+00:00">
+	<room variant="45021" name="CVS - wow a plier room finally" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-18T02:12+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -1878,7 +1878,7 @@
 			<entity type="753" variant="950" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45022" name="CVS - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-18T02:12+00:00">
+	<room variant="45022" name="CVS - applesauce" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-18T02:12+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -1986,10 +1986,10 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45023" name="CVS - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-18T02:12+00:00">
+	<room variant="45023" name="CVS - cvs you made a mistake with the doors youre welcome" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-18T02:12+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
-		<door exists="True" x="6" y="7"/>
+		<door exists="False" x="6" y="7"/>
 		<door exists="True" x="13" y="3"/>
 		<spawn x="6" y="0">
 			<entity type="240" variant="359" subtype="0" weight="1.0"/>
@@ -2067,7 +2067,7 @@
 			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45024" name="CVS - " type="1" subtype="0" shape="2" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-18T02:12+00:00">
+	<room variant="45024" name="CVS - fire room design" type="1" subtype="0" shape="2" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-18T02:12+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="13" y="3"/>
 		<spawn x="1" y="2">
@@ -2101,7 +2101,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="11" y="2">
-			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="1" y="3">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -2167,10 +2167,10 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="11" y="4">
-			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45025" name="CVS - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-18T02:12+00:00">
+	<room variant="45025" name="CVS - get distracted dumbass" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-18T02:12+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -2224,7 +2224,7 @@
 			<entity type="753" variant="950" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45026" name="CVS - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-18T02:12+00:00">
+	<room variant="45026" name="CVS - duck and roll pal" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-18T02:12+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -2275,7 +2275,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45027" name="CVS - " type="1" subtype="0" shape="7" width="26" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-18T02:12+00:00">
+	<room variant="45027" name="CVS - hold walk and fire" type="1" subtype="0" shape="7" width="26" height="7" difficulty="3" weight="1.0" lastTestTime="2025-06-18T02:12+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="26" y="3"/>
 		<spawn x="0" y="2">
@@ -2417,7 +2417,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45028" name="CVS - " type="1" subtype="0" shape="9" width="26" height="14" difficulty="5" weight="1.0" lastTestTime="2025-06-18T02:12+00:00">
+	<room variant="45028" name="CVS - this room feels familiar" type="1" subtype="0" shape="9" width="26" height="14" difficulty="5" weight="1.0" lastTestTime="2025-06-18T02:12+00:00">
 		<door exists="False" x="-1" y="10"/>
 		<door exists="True" x="6" y="6"/>
 		<door exists="True" x="6" y="14"/>
@@ -2649,7 +2649,7 @@
 			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="5" y="12">
-			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="19" y="12">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
@@ -2697,7 +2697,7 @@
 			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45029" name="CVS - " type="1" subtype="0" shape="9" width="26" height="14" difficulty="5" weight="1.0" lastTestTime="2025-06-18T02:12+00:00">
+	<room variant="45029" name="CVS - choo choo" type="1" subtype="0" shape="9" width="26" height="14" difficulty="5" weight="1.0" lastTestTime="2025-06-18T02:12+00:00">
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="6"/>
 		<door exists="True" x="6" y="14"/>
@@ -2845,7 +2845,7 @@
 			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45030" name="CVS - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-18T02:12+00:00">
+	<room variant="45030" name="CVS - isaac dont" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-18T02:12+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -2932,7 +2932,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45031" name="CVS - " type="1" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2025-06-18T02:12+00:00">
+	<room variant="45031" name="CVS - woah look at this room" type="1" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2025-06-18T02:12+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -2955,13 +2955,13 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="5" y="1">
-			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="6" y="1">
-			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="7" y="1">
-			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="8" y="1">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -3162,13 +3162,13 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="5" y="12">
-			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="6" y="12">
-			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="7" y="12">
-			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="8" y="12">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -3186,7 +3186,7 @@
 			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45032" name="CVS - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-18T02:12+00:00">
+	<room variant="45032" name="CVS - blah blah red blood cell white blood cell whatever man" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-18T02:12+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -3300,7 +3300,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45033" name="CVS - " type="1" subtype="0" shape="3" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-18T02:12+00:00">
+	<room variant="45033" name="CVS - small fix to this one" type="1" subtype="0" shape="3" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-18T02:12+00:00">
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
 		<spawn x="4" y="0">
@@ -3313,10 +3313,10 @@
 			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="5" y="1">
-			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="7" y="1">
-			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="5" y="2">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -3340,10 +3340,10 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="5" y="5">
-			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="7" y="5">
-			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="8" y="5">
 			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
@@ -3355,7 +3355,7 @@
 			<entity type="161" variant="49" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45034" name="CVS - " type="1" subtype="0" shape="6" width="26" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-18T02:12+00:00">
+	<room variant="45034" name="CVS - ok now you can see how squishy they are" type="1" subtype="0" shape="6" width="26" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-18T02:12+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -3420,10 +3420,10 @@
 			<entity type="753" variant="950" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="24" y="2">
-			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="1" y="3">
-			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="9" y="3">
 			<entity type="161" variant="65" subtype="0" weight="1.0"/>
@@ -3438,10 +3438,10 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="24" y="3">
-			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="1" y="4">
-			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="5" y="4">
 			<entity type="753" variant="950" subtype="0" weight="1.0"/>
@@ -3507,7 +3507,7 @@
 			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45035" name="CVS - " type="1" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2025-06-18T02:12+00:00">
+	<room variant="45035" name="CVS - annual yoyo competition" type="1" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2025-06-18T02:12+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -3746,7 +3746,7 @@
 			<entity type="753" variant="950" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45036" name="CVS - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-18T02:12+00:00">
+	<room variant="45036" name="CVS - chum bucket 2" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-18T02:12+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -3923,7 +3923,7 @@
 			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45037" name="CVS - " type="1" subtype="0" shape="10" width="26" height="14" difficulty="5" weight="1.0" lastTestTime="2025-06-18T02:12+00:00">
+	<room variant="45037" name="CVS - they used them all up like the onceler with thneeds" type="1" subtype="0" shape="10" width="26" height="14" difficulty="5" weight="1.0" lastTestTime="2025-06-18T02:12+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -3972,7 +3972,7 @@
 			<entity type="161" variant="51" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45038" name="CVS - " type="1" subtype="0" shape="5" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2025-06-18T02:12+00:00">
+	<room variant="45038" name="CVS - time wasterrr" type="1" subtype="0" shape="5" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2025-06-18T02:12+00:00">
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="14"/>
 		<spawn x="4" y="0">
@@ -4084,7 +4084,7 @@
 			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45039" name="CVS - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-18T23:40+00:00">
+	<room variant="45039" name="CVS - pretty difficult imo be careful" type="1" subtype="0" shape="1" width="13" height="7" difficulty="7" weight="1.0" lastTestTime="2025-06-18T23:40+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -4192,7 +4192,7 @@
 			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45040" name="CVS - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-18T23:40+00:00">
+	<room variant="45040" name="CVS - this is tjp naming these rooms btw just thought id say that" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-18T23:40+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -4273,7 +4273,7 @@
 			<entity type="85" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45041" name="CVS - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-18T23:40+00:00">
+	<room variant="45041" name="CVS - if youre reading this i hate you - tjp" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-18T23:40+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -4375,7 +4375,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45042" name="CVS - " type="1" subtype="0" shape="3" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-18T23:40+00:00">
+	<room variant="45042" name="CVS - time waster lmao sorry not sorry" type="1" subtype="0" shape="3" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-18T23:40+00:00">
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
 		<spawn x="4" y="0">
@@ -4472,7 +4472,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45043" name="CVS - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-18T23:40+00:00">
+	<room variant="45043" name="CVS - pyramid type room" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-18T23:40+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -4628,7 +4628,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45044" name="CVS - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-18T23:40+00:00">
+	<room variant="45044" name="CVS - fivehead spotted hooray" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-18T23:40+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -4766,7 +4766,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45045" name="CVS - " type="1" subtype="0" shape="5" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2025-06-18T23:40+00:00">
+	<room variant="45045" name="CVS - isaac getting those steps in" type="1" subtype="0" shape="5" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2025-06-18T23:40+00:00">
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="14"/>
 		<spawn x="4" y="0">
@@ -4908,7 +4908,7 @@
 			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45046" name="CVS - " type="1" subtype="0" shape="10" width="26" height="14" difficulty="5" weight="1.0" lastTestTime="2025-06-18T23:40+00:00">
+	<room variant="45046" name="CVS - very varied vroom vhere" type="1" subtype="0" shape="10" width="26" height="14" difficulty="5" weight="1.0" lastTestTime="2025-06-18T23:40+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -5119,7 +5119,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45047" name="CVS - " type="1" subtype="0" shape="5" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2025-06-18T23:40+00:00">
+	<room variant="45047" name="CVS - how did you just get hit man" type="1" subtype="0" shape="5" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2025-06-18T23:40+00:00">
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="14"/>
 		<spawn x="4" y="0">
@@ -5297,7 +5297,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45048" name="CVS - " type="1" subtype="0" shape="5" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2025-06-18T23:40+00:00">
+	<room variant="45048" name="CVS - walk of shame" type="1" subtype="0" shape="5" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2025-06-18T23:40+00:00">
 		<door exists="False" x="6" y="-1"/>
 		<door exists="True" x="6" y="14"/>
 		<spawn x="4" y="0">
@@ -5469,7 +5469,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45049" name="CVS - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-18T23:40+00:00">
+	<room variant="45049" name="CVS - very varied vroom vhere (vbut vsmaller)" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-18T23:40+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -5574,7 +5574,7 @@
 			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45050" name="CVS - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45050" name="CVS - hwoaw" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -5709,7 +5709,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45051" name="CVS - " type="1" subtype="0" shape="2" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45051" name="CVS - tightly packed" type="1" subtype="0" shape="2" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="13" y="3"/>
 		<spawn x="0" y="2">
@@ -5770,7 +5770,7 @@
 			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45052" name="CVS - " type="1" subtype="0" shape="8" width="26" height="14" difficulty="5" weight="1.0">
+	<room variant="45052" name="CVS - not tightly packed" type="1" subtype="0" shape="8" width="26" height="14" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -6098,7 +6098,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45053" name="CVS - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45053" name="CVS - a four way (ew)" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -6230,7 +6230,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45054" name="CVS - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45054" name="CVS - 2nd plier room in about 4 years" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -6365,7 +6365,7 @@
 			<entity type="161" variant="42" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45055" name="CVS - " type="1" subtype="0" shape="6" width="26" height="7" difficulty="5" weight="1.0">
+	<room variant="45055" name="CVS - fun fact roaches are" type="1" subtype="0" shape="6" width="26" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -6532,7 +6532,7 @@
 			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45056" name="CVS - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="45056" name="CVS - snoooore" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -6673,7 +6673,7 @@
 			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45057" name="CVS - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
+	<room variant="45057" name="CVS - plier room again? youre on a roll cvs" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -6763,7 +6763,7 @@
 			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45058" name="CVS - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
+	<room variant="45058" name="CVS - nvm you are NOT" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -6790,7 +6790,7 @@
 			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45059" name="CVS - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
+	<room variant="45059" name="CVS - grey areas, my favourite" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -6862,7 +6862,7 @@
 			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45060" name="CVS - " type="1" subtype="0" shape="9" width="26" height="14" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
+	<room variant="45060" name="CVS - as rick sanchez once quoted" type="1" subtype="0" shape="9" width="26" height="14" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="6"/>
 		<door exists="True" x="6" y="14"/>
@@ -7025,7 +7025,7 @@
 			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45061" name="CVS - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
+	<room variant="45061" name="CVS - perpendicular perpendicular" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -7133,7 +7133,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45062" name="CVS - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
+	<room variant="45062" name="CVS - both above AND below were rick sanchez quotes" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -7196,7 +7196,7 @@
 			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45063" name="CVS - " type="1" subtype="0" shape="5" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
+	<room variant="45063" name="CVS - lonely isnt it" type="1" subtype="0" shape="5" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="14"/>
 		<spawn x="4" y="0">
@@ -7233,7 +7233,7 @@
 			<entity type="161" variant="48" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45064" name="CVS - " type="1" subtype="0" shape="3" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
+	<room variant="45064" name="CVS - hey fatso" type="1" subtype="0" shape="3" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
 		<spawn x="4" y="0">
@@ -7252,7 +7252,7 @@
 			<entity type="753" variant="950" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45065" name="CVS - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
+	<room variant="45065" name="CVS - hey mediumso" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -7291,7 +7291,7 @@
 			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45066" name="CVS - " type="1" subtype="0" shape="3" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
+	<room variant="45066" name="CVS - good luck getting over here chump" type="1" subtype="0" shape="3" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
 		<spawn x="4" y="0">
@@ -7331,7 +7331,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45067" name="CVS - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
+	<room variant="45067" name="CVS - oooh this is cool" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -7421,7 +7421,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45068" name="CVS - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
+	<room variant="45068" name="CVS - why the jaundice" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -7502,7 +7502,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45069" name="CVS - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
+	<room variant="45069" name="CVS - this is bullying" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -7592,7 +7592,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45070" name="CVS - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
+	<room variant="45070" name="CVS - i need more tthhpathe" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -7688,7 +7688,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45071" name="CVS - " type="1" subtype="0" shape="5" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
+	<room variant="45071" name="CVS - arnold squared" type="1" subtype="0" shape="5" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="14"/>
 		<spawn x="4" y="0">
@@ -7779,7 +7779,7 @@
 			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45072" name="CVS - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
+	<room variant="45072" name="CVS - i should be working rn man" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -7875,7 +7875,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45073" name="CVS - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
+	<room variant="45073" name="CVS - but like cvs asked me to name all these rooms and" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -7968,7 +7968,7 @@
 			<entity type="161" variant="41" subtype="6" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45074" name="CVS - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
+	<room variant="45074" name="CVS - anything is better than being productive so" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -8046,7 +8046,7 @@
 			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45075" name="CVS - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
+	<room variant="45075" name="CVS - i did it anyways lmao sorry future me" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -8091,7 +8091,7 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45076" name="CVS - " type="1" subtype="0" shape="9" width="26" height="14" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
+	<room variant="45076" name="CVS - yo, yo" type="1" subtype="0" shape="9" width="26" height="14" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="6"/>
 		<door exists="True" x="6" y="14"/>
@@ -8113,7 +8113,7 @@
 			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="14" y="4">
-			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="15" y="4">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -8143,7 +8143,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="24" y="4">
-			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="25" y="4">
 			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
@@ -8251,7 +8251,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45077" name="CVS - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
+	<room variant="45077" name="CVS - i dont know why i thought this was loss" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -8347,7 +8347,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45078" name="CVS - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
+	<room variant="45078" name="CVS - ok this is getting ridiculous" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -8443,7 +8443,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45079" name="CVS - " type="1" subtype="0" shape="2" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
+	<room variant="45079" name="CVS - very very interesting" type="1" subtype="0" shape="2" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="13" y="3"/>
 		<spawn x="0" y="2">
@@ -8486,7 +8486,7 @@
 			<entity type="240" variant="359" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45080" name="CVS - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
+	<room variant="45080" name="CVS - jump him" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -8609,7 +8609,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45081" name="CVS - " type="1" subtype="0" shape="6" width="26" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
+	<room variant="45081" name="CVS - conga conga congA" type="1" subtype="0" shape="6" width="26" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -8686,7 +8686,7 @@
 			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45082" name="CVS - " type="1" subtype="0" shape="5" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
+	<room variant="45082" name="CVS - wait for it....." type="1" subtype="0" shape="5" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="14"/>
 		<spawn x="4" y="0">
@@ -8795,7 +8795,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45083" name="CVS - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
+	<room variant="45083" name="CVS - how come the lump gets its own room" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -8933,7 +8933,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45084" name="CVS - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
+	<room variant="45084" name="CVS - nohohoo thanks" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -9002,10 +9002,10 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="0" y="4">
-			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="1" y="4">
-			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="2" y="4">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -9032,7 +9032,7 @@
 			<entity type="753" variant="950" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45085" name="CVS - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
+	<room variant="45085" name="CVS - evil hangethrow be like: im just gonna leave this here thanks" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -9143,7 +9143,7 @@
 			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45086" name="CVS - " type="1" subtype="0" shape="8" width="26" height="14" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
+	<room variant="45086" name="CVS - wow this ones a biggun" type="1" subtype="0" shape="8" width="26" height="14" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -9255,7 +9255,7 @@
 			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="1" y="2">
-			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="2" y="2">
 			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
@@ -9279,115 +9279,115 @@
 			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="24" y="2">
-			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="25" y="2">
 			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
 		</spawn>
-		<spawn x="8" y="5">
+		<spawn x="8" y="4">
 			<entity type="161" variant="52" subtype="0" weight="1.0"/>
 		</spawn>
-		<spawn x="9" y="5">
+		<spawn x="9" y="4">
 			<entity type="753" variant="950" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="4">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="15" y="4">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="16" y="4">
+			<entity type="753" variant="950" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="5">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="10" y="5">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="5">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="5">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="13" y="5">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="14" y="5">
+			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="15" y="5">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="16" y="5">
-			<entity type="753" variant="950" subtype="1" weight="1.0"/>
-		</spawn>
-		<spawn x="9" y="6">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="10" y="6">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
-		<spawn x="11" y="6">
-			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
-		</spawn>
 		<spawn x="12" y="6">
-			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
-		</spawn>
-		<spawn x="13" y="6">
-			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
-		</spawn>
-		<spawn x="14" y="6">
-			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
-		</spawn>
-		<spawn x="15" y="6">
-			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
-		</spawn>
-		<spawn x="16" y="6">
-			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
-		</spawn>
-		<spawn x="10" y="7">
-			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
-		</spawn>
-		<spawn x="12" y="7">
 			<entity type="161" variant="40" subtype="3" weight="1.0"/>
 		</spawn>
-		<spawn x="15" y="7">
+		<spawn x="15" y="6">
 			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
-		<spawn x="17" y="7">
+		<spawn x="17" y="6">
 			<entity type="161" variant="52" subtype="0" weight="1.0"/>
 		</spawn>
-		<spawn x="10" y="8">
+		<spawn x="10" y="7">
 			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="15" y="7">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="8">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="8">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="8">
+			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="8">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="13" y="8">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="14" y="8">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="15" y="8">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
-		<spawn x="9" y="9">
+		<spawn x="16" y="8">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="9">
+			<entity type="753" variant="950" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="10" y="9">
-			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
-		</spawn>
-		<spawn x="11" y="9">
-			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
-		</spawn>
-		<spawn x="12" y="9">
-			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
-		</spawn>
-		<spawn x="13" y="9">
-			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
-		</spawn>
-		<spawn x="14" y="9">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="15" y="9">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="16" y="9">
-			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
-		</spawn>
-		<spawn x="1" y="10">
-			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
-		</spawn>
-		<spawn x="9" y="10">
-			<entity type="753" variant="950" subtype="1" weight="1.0"/>
-		</spawn>
-		<spawn x="10" y="10">
-			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
-		</spawn>
-		<spawn x="15" y="10">
-			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
-		</spawn>
-		<spawn x="16" y="10">
 			<entity type="753" variant="950" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="1" y="10">
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
+		</spawn>
 		<spawn x="24" y="10">
-			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="0" y="11">
 			<entity type="753" variant="950" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="1" y="11">
-			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="2" y="11">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -9402,7 +9402,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="24" y="11">
-			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="25" y="11">
 			<entity type="753" variant="950" subtype="0" weight="1.0"/>
@@ -9480,7 +9480,7 @@
 			<entity type="161" variant="49" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45087" name="CVS - " type="1" subtype="0" shape="7" width="26" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
+	<room variant="45087" name="CVS - wow this ones a longun" type="1" subtype="0" shape="7" width="26" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="26" y="3"/>
 		<spawn x="7" y="2">
@@ -9586,7 +9586,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45088" name="CVS - " type="1" subtype="0" shape="5" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
+	<room variant="45088" name="CVS - get hit lmao" type="1" subtype="0" shape="5" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="14"/>
 		<spawn x="4" y="0">
@@ -9605,7 +9605,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="5" y="1">
-			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="8" y="1">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
@@ -9725,7 +9725,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45089" name="CVS - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
+	<room variant="45089" name="CVS - woah neutral flies" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -9803,7 +9803,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45090" name="CVS - " type="1" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
+	<room variant="45090" name="CVS - nowhere is safe isaac" type="1" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -10027,13 +10027,13 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45091" name="CVS - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
+	<room variant="45091" name="CVS - all of the rocks in this room are locked btw" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
 		<door exists="True" x="13" y="3"/>
 		<spawn x="0" y="0">
-			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="1" y="0">
 			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
@@ -10042,7 +10042,7 @@
 			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="12" y="0">
-			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="0" y="1">
 			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
@@ -10138,7 +10138,7 @@
 			<entity type="240" variant="368" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45092" name="CVS - " type="1" subtype="0" shape="7" width="26" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
+	<room variant="45092" name="CVS - weird combo of enemies ive never seen" type="1" subtype="0" shape="7" width="26" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="26" y="3"/>
 		<spawn x="0" y="2">
@@ -10205,7 +10205,7 @@
 			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45093" name="CVS - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
+	<room variant="45093" name="CVS - come closer... just a biiiit closer..." type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -10301,7 +10301,7 @@
 			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45094" name="CVS - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
+	<room variant="45094" name="CVS - small headache and you two are losing your minds ughh" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -10328,13 +10328,13 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="0" y="4">
-			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="10" y="4">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="11" y="4">
-			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="12" y="4">
 			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
@@ -10376,7 +10376,7 @@
 			<entity type="161" variant="51" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45095" name="CVS - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
+	<room variant="45095" name="CVS - together we are... the hanges!!" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -10399,6 +10399,12 @@
 		<spawn x="12" y="1">
 			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="5" y="4">
+			<entity type="161" variant="50" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="4">
+			<entity type="161" variant="50" subtype="2" weight="1.0"/>
+		</spawn>
 		<spawn x="0" y="5">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
@@ -10409,22 +10415,22 @@
 			<entity type="161" variant="41" subtype="6" weight="1.0"/>
 		</spawn>
 		<spawn x="3" y="5">
-			<entity type="161" variant="50" subtype="2" weight="1.0"/>
+			<entity type="161" variant="50" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="4" y="5">
 			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
-		<spawn x="6" y="5">
+		<spawn x="5" y="5">
 			<entity type="161" variant="41" subtype="6" weight="1.0"/>
 		</spawn>
 		<spawn x="7" y="5">
-			<entity type="161" variant="50" subtype="2" weight="1.0"/>
+			<entity type="161" variant="41" subtype="6" weight="1.0"/>
 		</spawn>
 		<spawn x="8" y="5">
 			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="9" y="5">
-			<entity type="161" variant="50" subtype="0" weight="1.0"/>
+			<entity type="161" variant="50" subtype="3" weight="1.0"/>
 		</spawn>
 		<spawn x="10" y="5">
 			<entity type="161" variant="41" subtype="6" weight="1.0"/>
@@ -10475,7 +10481,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45096" name="CVS - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
+	<room variant="45096" name="CVS - jeez what a cornball amirite" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -10580,7 +10586,7 @@
 			<entity type="161" variant="50" subtype="2" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45097" name="CVS - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
+	<room variant="45097" name="CVS - or i guess more of a cottonball" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -10676,7 +10682,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45098" name="CVS - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
+	<room variant="45098" name="CVS - stringball? idrk" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -10760,7 +10766,7 @@
 			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45099" name="CVS - " type="1" subtype="0" shape="9" width="26" height="14" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
+	<room variant="45099" name="CVS - last room was slightly uneven but like in an intentional way" type="1" subtype="0" shape="9" width="26" height="14" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="6"/>
 		<door exists="True" x="6" y="14"/>
@@ -10908,7 +10914,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45100" name="CVS - " type="1" subtype="0" shape="6" width="26" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
+	<room variant="45100" name="CVS - still kind of annoying though" type="1" subtype="0" shape="6" width="26" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -10997,7 +11003,7 @@
 			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45101" name="CVS - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
+	<room variant="45101" name="CVS - actually idk if it was intentional" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -11063,7 +11069,7 @@
 			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45102" name="CVS - " type="1" subtype="0" shape="7" width="26" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
+	<room variant="45102" name="CVS - couldve been an accident but im still not fixing it" type="1" subtype="0" shape="7" width="26" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="26" y="3"/>
 		<spawn x="0" y="2">
@@ -11175,7 +11181,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45103" name="CVS - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
+	<room variant="45103" name="CVS - (gulp)" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -11187,7 +11193,7 @@
 			<entity type="753" variant="950" subtype="1" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45104" name="CVS - " type="1" subtype="0" shape="8" width="26" height="14" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
+	<room variant="45104" name="CVS - spiders den" type="1" subtype="0" shape="8" width="26" height="14" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -11614,11 +11620,11 @@
 			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45105" name="CVS - " type="1" subtype="0" shape="2" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
+	<room variant="45105" name="CVS - meat shield" type="1" subtype="0" shape="2" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="13" y="3"/>
 		<spawn x="0" y="2">
-			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="1" y="2">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
@@ -11633,7 +11639,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="12" y="2">
-			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="6" y="3">
 			<entity type="15" variant="0" subtype="0" weight="1.0"/>
@@ -11642,7 +11648,7 @@
 			<entity type="161" variant="65" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="0" y="4">
-			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="1" y="4">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
@@ -11657,10 +11663,10 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="12" y="4">
-			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45106" name="CVS - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
+	<room variant="45106" name="CVS - 4x4" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -11744,7 +11750,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45107" name="CVS - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
+	<room variant="45107" name="CVS - 3xplier wooow" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -11843,7 +11849,7 @@
 			<entity type="753" variant="950" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45108" name="CVS - " type="1" subtype="0" shape="9" width="26" height="14" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
+	<room variant="45108" name="CVS - sack stash (top secret)" type="1" subtype="0" shape="9" width="26" height="14" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
 		<door exists="False" x="-1" y="10"/>
 		<door exists="True" x="6" y="6"/>
 		<door exists="True" x="6" y="14"/>
@@ -12072,7 +12078,7 @@
 			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45109" name="CVS - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
+	<room variant="45109" name="CVS - &quot;just shoot in a line bro&quot;" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -12135,7 +12141,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45110" name="CVS - " type="1" subtype="0" shape="3" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
+	<room variant="45110" name="CVS - people who make blackpill edits are probably ugly - tjp" type="1" subtype="0" shape="3" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
 		<spawn x="4" y="0">
@@ -12172,7 +12178,7 @@
 			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45111" name="CVS - " type="1" subtype="0" shape="3" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
+	<room variant="45111" name="CVS - i will NEVER let you donate to the homeless" type="1" subtype="0" shape="3" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
 		<spawn x="5" y="0">
@@ -12203,7 +12209,7 @@
 			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45112" name="CVS - " type="1" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
+	<room variant="45112" name="CVS - awkwwaaaard" type="1" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -12310,7 +12316,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45113" name="CVS - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
+	<room variant="45113" name="CVS - i love the little pose these guys have in the basement renovator" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -12373,7 +12379,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45114" name="CVS - " type="1" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="0.1" lastTestTime="2025-06-08T18:49+00:00">
+	<room variant="45114" name="CVS - soooo close" type="1" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="0.1" lastTestTime="2025-06-08T18:49+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="False" x="6" y="-1"/>
@@ -12576,7 +12582,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45115" name="CVS - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
+	<room variant="45115" name="CVS - cmon just a bit more" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -12603,10 +12609,10 @@
 			<entity type="162" variant="2900" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="0" y="2">
-			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="1" y="2">
-			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="2" y="2">
 			<entity type="161" variant="30" subtype="0" weight="1.0"/>
@@ -12621,10 +12627,10 @@
 			<entity type="161" variant="30" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="11" y="4">
-			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="12" y="4">
-			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="10" y="5">
 			<entity type="162" variant="2900" subtype="0" weight="1.0"/>
@@ -12648,7 +12654,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45116" name="CVS - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
+	<room variant="45116" name="CVS - web mother and wall creep what do you think man" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -12717,7 +12723,7 @@
 			<entity type="161" variant="41" subtype="6" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45117" name="CVS - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
+	<room variant="45117" name="CVS - i keep spelling plier as pliear grr" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -12804,7 +12810,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45118" name="CVS - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
+	<room variant="45118" name="CVS - but like how quirky as that right guys" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -12891,7 +12897,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45119" name="CVS - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
+	<room variant="45119" name="CVS - smoking pot" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -12899,14 +12905,20 @@
 		<spawn x="1" y="3">
 			<entity type="1901" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="5" y="3">
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="6" y="3">
 			<entity type="161" variant="52" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="3">
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="11" y="3">
 			<entity type="1901" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="45120" name="CVS - " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
+	<room variant="45120" name="CVS - pottyguards" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-06-08T18:49+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
