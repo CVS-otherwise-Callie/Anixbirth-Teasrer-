@@ -64,7 +64,6 @@ function mod:StumblingNestAI(npc, sprite, d)
         --this last part
         if not mod:GetClosestGridEntToPos(npc.Position, true, true) then return end
 
-
         if d.direction == 1 or d.direction == 3 then
             if grid and grid.Position:Distance(npc.Position) < d.dist then
 
@@ -92,7 +91,7 @@ function mod:StumblingNestAI(npc, sprite, d)
 
                 if npc.SubType >= 10 then
                     if d.direction >= 4 then
-                        d.direction = 1
+                        d.direction = 3
                     else
                         d.direction = d.direction - 1
                     end    
