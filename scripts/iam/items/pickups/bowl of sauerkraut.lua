@@ -19,7 +19,7 @@ end, mod.Collectibles.PickupsEnt.BowlOfSauerkraut.Var)
 
 function mod:BowlOfSauerkrautAI(p, sprite, d)
     if not d.inut then
-        sprite:ReplaceSpritesheet(0, "gfx/items/pick ups/sauerkraut_PickupsEnt" .. math.random(2) .. ".png")
+        sprite:ReplaceSpritesheet(0, "gfx/items/pick ups/sauerkraut_pickups" .. math.random(2) .. ".png")
         sprite:LoadGraphics()
         sprite:Update()
         d.inut = true
@@ -61,8 +61,16 @@ mod:AddCallback(ModCallbacks.MC_EVALUATE_CACHE,function(_, player, flag)
 
     local dat = AnixbirthSaveManager.GetRunSave(player).anixbirthsaveData
 
-    if dat.BowlOfSauerkraut and dat.BowlOfSauerkraut > 0 and dat.BowlOfSauerkraut ~= dat.BowlOfSauerkrautOld then
-        player.Damage = player.Damage + (0.003+(0.002*dat.BowlOfSauerkraut))*dat.BowlOfSauerkraut
+    print(dat.BowlOfSauerkraut, player.Damage, math.ceil(player.Damage), (0.003+(0.002*dat.BowlOfSauerkraut))*dat.BowlOfSauerkraut, player.Damage+(0.003+(0.002*dat.BowlOfSauerkraut))*dat.BowlOfSauerkraut)
+
+    if dat.UpdateBowlOfSauerkraut or (dat.BowlOfSauerkraut and dat.BowlOfSauerkraut > 0 and dat.BowlOfSauerkraut ~= dat.BowlOfSauerkrautOld) then
+        if dat.UpdateBowlOfSauerkraut and type(dat.UpdateBowlOfSauerkraut) == "number" then
+            dat.UpdateBowlOfSauerkraut = dat.UpdateBowlOfSauerkraut + 1
+            if dat.UpdateBowlOfSauerkraut == 5 then
+                dat.UpdateBowlOfSauerkraut = nil
+            end
+        end
+        player.Damage = math.ceil(player.Damage) + (0.003+(0.002*dat.BowlOfSauerkraut))*dat.BowlOfSauerkraut
         dat.BowlOfSauerkrautOld = dat.BowlOfSauerkraut
     end
 end)

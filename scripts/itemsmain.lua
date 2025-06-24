@@ -8,10 +8,6 @@ local descs = {
 for i = 1, #descs do
 	local file = include("scripts." .. descs[i])
 	FHAC:MixTables(FHAC.ExDescs.COLLECTIBLES, file.ExDescs.COLLECTIBLES)
-
-	for k, v in ipairs(file.ExDescs.COLLECTIBLES) do
-		print(v.ID, v.EID)
-	end
 end
 
 if not EID then return end
@@ -40,7 +36,7 @@ for _, itemEntry in ipairs(FHAC.ExDescs.COLLECTIBLES) do
 			WikiDesc = Encyclopedia.EIDtoWiki(itemEntry.Wiki or __eidItemDescriptions[itemEntry.ID] or GetEidDesc(PickupVariant.PICKUP_COLLECTIBLE, itemEntry.ID) or "???"),
 			Pools = itemEntry.Encyclopedia.Pools,
 			UnlockFunc = function(self)
-				--[[if BobbyMod.IsCollectibleLocked(itemEntry.ID) then
+				--[[if mod.IsCollectibleLocked(itemEntry.ID) then
 					self.Desc = "Locked!"
 					return self
 				end]]

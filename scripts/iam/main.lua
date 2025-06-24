@@ -1236,6 +1236,16 @@ function FHAC.NewLevelStuff()
     FHAC.YouCanEndTheAltCutsceneNow = false
     FHAC.StartCutscene = false
     FHAC.RuinSecretMusicInit = false
+	for i = 1, Game():GetNumPlayers() do
+		local player = Isaac.GetPlayer(i)
+
+		if AnixbirthSaveManager.GetRunSave(player).anixbirthsaveData then
+			if AnixbirthSaveManager.GetRunSave(player).anixbirthsaveData.BowlOfSauerkraut then
+				AnixbirthSaveManager.GetRunSave(player).anixbirthsaveData.UpdateBowlOfSauerkraut = 0
+				player:EvaluateItems()
+			end
+		end
+	end
 end
 
 FHAC:AddCallback(ModCallbacks.MC_POST_NEW_LEVEL, FHAC.NewLevelStuff)
