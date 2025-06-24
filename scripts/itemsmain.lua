@@ -10,6 +10,15 @@ for i = 1, #descs do
 	FHAC:MixTables(FHAC.ExDescs.COLLECTIBLES, file.ExDescs.COLLECTIBLES)
 end
 
+local function GetEidDesc(pickupVariant, id)
+	if EID then
+		local eidDesc = EID:getDescriptionEntryEnglish("custom", "5."..pickupVariant.."."..id)
+		if eidDesc then
+			return eidDesc[3]
+		end
+	end
+end
+
 if not EID then return end
 
 if not __eidItemDescriptions then
