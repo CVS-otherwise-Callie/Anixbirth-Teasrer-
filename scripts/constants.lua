@@ -14,6 +14,10 @@ end
 FHAC.Monsters = {
 }
 
+FHAC.ExDescs = {
+    COLLECTIBLES = {}
+}
+
 FHAC.Bosses = {
     Hop = mod:ENT("Hop"),
     Skip = mod:ENT("Skip"),

@@ -8,12 +8,15 @@ mod:AddCallback(ModCallbacks.MC_POST_NEW_ROOM, function()
 	for i = 1, game:GetNumPlayers() do
 		local player = Isaac.GetPlayer(i)
 		rng:SetSeed(game:GetRoom():GetAwardSeed(), 32) --not particularly correlated but makes my job easy
-		if rng:RandomInt(15) == 15 and player:HasCollectible(mod.Collectibles.Items.GrosMichel) then
+        local chosenum = rng:RandomInt(100)
+		if chosenum <= 15 and player:HasCollectible(mod.Collectibles.Items.GrosMichel) then
             local itemcon = itemConfig:GetCollectible(mod.Collectibles.Items.GrosMichel)
 			player:RemoveCollectible(mod.Collectibles.Items.GrosMichel)
+            player:EvaluateItems()
             local num = 0
-            for j = 1, 300 do
+            for j = 1, 100 do
                 mod.scheduleCallback(function()
+
                     local sprite = Sprite()
 
                     num = num + 1
@@ -22,32 +25,26 @@ mod:AddCallback(ModCallbacks.MC_POST_NEW_ROOM, function()
                     sprite:Play(sprite:GetDefaultAnimationName(), true)
                     sprite:ReplaceSpritesheet(1, itemcon.GfxFileName)
 
-                    sprite.Color = Color(1, 1, 1, (50 - j)/50)
+                    sprite.Color = Color(1, 1, 1, (100 - j)/100)
 
                     sprite:LoadGraphics()
 
-                    sprite:Render(Isaac.WorldToScreen(player.Position + Vector(0, num*-1)))
-
-                end, j, ModCallbacks.MC_POST_RENDER)
-            end
-            for j = 1, 900 do
-                local str = "[extinct]"
-                mod.scheduleCallback(function()
-
-                    if j < 300 then return end
+                    local str = "[extinct]"
 
                     if not player then return end
 
                     local pos = Game():GetRoom():WorldToScreenPosition(player.Position) + Vector(mod.TempestFont:GetStringWidth(str) * -0.5, -(player.SpriteScale.Y * 35) - j/3 - 15)
+                    local secpos = Game():GetRoom():WorldToScreenPosition(player.Position) + Vector(0, -(player.SpriteScale.Y * 35) - j/3 + 30)
                     local opacity
-                    local cap = 300
+                    local cap = 50
                     if j >= cap then
-                        opacity = 1 - ((j-cap)/300)
+                        opacity = 1 - ((j-cap)/50)
                     else
                         opacity = j/cap
                     end
                     --Isaac.RenderText(str, pos.X, pos.Y, 1, 1, 1, opacity)
-                    mod.TempestFont:DrawString(str, pos.X, pos.Y + (12), KColor(1,1,1,opacity), 0, false)
+                    mod.TempestFont:DrawString(str, pos.X, pos.Y, KColor(1,1,1,opacity), 0, false)
+                    sprite:Render(Vector(secpos.X, secpos.Y))
                 end, j, ModCallbacks.MC_POST_RENDER, false)
             end
 		end

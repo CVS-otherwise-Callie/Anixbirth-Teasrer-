@@ -21,7 +21,8 @@ FHAC:LoadScripts("scripts", {
 	"otherapi.fiend folio.api.fortunehandling",
 	"otherapi.fiend folio.api.apioverride",
 	"otherapi.proapi.proapi",
-	"deathtransform",
+	"itemsmain",
+
 })
 
 if not FHAC.hasloadedDSS then
