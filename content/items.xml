@@ -5,6 +5,8 @@
     <passive id="4" name="Moldy Bread" gfx="004_moldybread.png" description="Still edible" quality="2"/>
     <passive id="5" name="Letter To Myself" gfx="005_lettertomyself.png" description="See me soon" quality="2"/>
 
+    <passive id="20" name="Gros Michel" gfx="020_grosmichel.png" description="JUST [extinct!] ALREADY PLEASEEEEE" quality="3"/>
+
     <!--Actives are 100+-->
     <active id="100" name="Joke Book" gfx="100_joke_book.png" description="Xocolate's finest" quality="1" maxcharges="2" cache="firedelay" />
     <active id="101" name="Corrupted File" gfx="101_corruptedfile.png" description="Don't download it" quality="2" />

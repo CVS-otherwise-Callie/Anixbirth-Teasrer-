@@ -156,4 +156,52 @@ mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, function(_, npc)
     end
 end, mod.Monsters.Stoner.ID)
 
+-- FUCKING THANK YOU KAT I LOVE YOU
+
+local function getDir(angle)
+    angle = (angle + 360) % 360
+
+    if angle >= 345 or angle < 15 then
+        return Vector(-1, 0)                -- From Right
+    elseif angle < 75 then
+        return Vector(-1, -1):Normalized()  -- From Up-Right
+    elseif angle < 105 then
+        return Vector(0, -1)                -- From Up
+    elseif angle < 165 then
+        return Vector(1, -1):Normalized()   -- From Up-Left
+    elseif angle < 195 then
+        return Vector(1, 0)                 -- From Left
+    elseif angle < 255 then
+        return Vector(1, 1):Normalized()    -- From Down-Left
+    elseif angle < 285 then
+        return Vector(0, 1)                 -- From Down
+    elseif angle < 345 then
+        return Vector(-1, 1):Normalized()   -- From Down-Right
+    end
+
+    return Vector(1, 1)
+end
+
+
+
+function mod:PushObjectFeacher(player, collider, low)
+
+    if not (collider.Type == mod.Monsters.Stoner.ID and collider.Variant == mod.Monsters.Stoner.Var) then return end
+    if not low then return end
+
+    local tnt = collider
+    local inputDir = player:GetMovementInput()
+
+    if inputDir:Length() < 0.1 then return end
+
+
+    local angle = (player.Position - tnt.Position):GetAngleDegrees()
+    angle = (angle + 360) % 360
+
+    tnt.Velocity = getDir(angle):Resized(player.Velocity:Length() * 2)
+    player.Velocity = player.Velocity/2
+
+    return true
+end
+mod:AddCallback(ModCallbacks.MC_PRE_PLAYER_COLLISION, mod.PushObjectFeacher)
 

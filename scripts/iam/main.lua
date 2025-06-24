@@ -105,7 +105,8 @@ FHAC.CVSCollectibles = {
 	    CorruptedFile = Isaac.GetItemIdByName("Corrupted File"),
 	    TheBell = Isaac.GetItemIdByName("The Bell"),
     	LilAna = Isaac.GetItemIdByName("Lil Ana"),
-		LetterToMyself = Isaac.GetItemIdByName("Letter To Myself")
+		LetterToMyself = Isaac.GetItemIdByName("Letter To Myself"),
+		GrosMichel = Isaac.GetItemIdByName("Gros Michel")
     },
     PickupsEnt = {
         BowlOfSauerkraut = mod:ENT("Bowl of Sauerkraut"),
@@ -234,7 +235,8 @@ FHAC:LoadScripts("scripts.iam.items.passives", {
 	"big ol' bowl of sauerkraut",
 	"stinky socks",
 	"moldy bread",
-	"letter to myself"
+	"letter to myself",
+	"gros michel"
 })
 
 FHAC:LoadScripts("scripts.iam.items.pickups" , {
