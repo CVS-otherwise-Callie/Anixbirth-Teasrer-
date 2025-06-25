@@ -108,10 +108,10 @@ local room = game:GetRoom()
         else
             tab = driedsubtypes[npc.SubType]
         end
-       -- print(tab)
-        --print(tab.colour)
+        -- print(tab)
+        -- print(tab.colour)
         sprite:Play("BagIdle"..tab.colour, true)
-       -- sprite:Play("BagDetachRed", true)
+        -- sprite:Play("BagDetachRed", true)
         sprite:SetFrame(35)
         for h, g in pairs(tab) do
             if not d[h] then

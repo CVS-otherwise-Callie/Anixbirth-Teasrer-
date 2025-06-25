@@ -103,22 +103,72 @@ function mod:HangedriedAI(npc, sprite, d)
     local playerpos = mod:confusePos(npc, player.Position, 5, nil, nil)
 
     if not d.init then
+        d.driedwaittime = 75
         d.hangedriedanim = "Idle"
         d.hangedriedframe = 0
         d.init = true
     end
 
 
+    mod:MakeInvulnerable(npc)
+    npc.DepthOffset = 5
+
+    if npc.StateFrame > d.driedwaittime and npc.Position:Distance(playerpos) < 45 and d.hangedriedanim == "Idle" then
+        d.hangedriedanim = "Chomp"
+    end
+
+    if d.hangedriedanim ~= "Idle" then
+        d.hangedriedframe = d.hangedriedframe + 1
+    end
+
+    if d.hangedriedanim == "Chomp" and sprite:GetFrame() == 46 then
+        d.hangedriedframe = 0
+        if FindDried(npc, 115) then
+            --print("found dried")
+            d.olddried = d.Dried
+            d.Dried = FindDried(npc, 115)
+            d.Dried.Parent = npc
+            npc.Position = d.olddried.Position
+            print("euuh?")
+            d.hangedriedanim = "Jump"
+        else
+            print("i gotta drop....")
+        end
+    end
+
+    if d.hangedriedanim == "Jump" then
+        if sprite:GetFrame() > 23 then
+            if not d.lerppercentdried then
+                d.lerppercentdried = 0
+            else
+                d.lerppercentdried = math.min((sprite:GetFrame()-23)/(39-23), 1)
+            end
+            npc.Position = mod:Lerp(d.olddried.Position, d.Dried.Position, d.lerppercentdried)
+        else
+            d.lerppercentdried = 0
+            npc.Position = d.olddried.Position
+        end
+    end
+
+    if d.hangedriedanim == "Jump" and sprite:GetFrame() == 45 then
+        print("wooooah")
+        d.hangedriedanim = "Idle"
+        npc.StateFrame = 0
+        d.driedwaittime = 25
+        d.hangedriedframe = 0
+        d.lerppercentdried = nil
+    end
+
     d.backDriedBody = d.backDriedBody or Isaac.Spawn(EntityType.ENTITY_EFFECT, mod.Effects.BlankEffect.Var, 0, npc.Position, npc.Velocity, nil)
     d.backDriedBody.SpriteOffset = Vector(0,-54) + d.Dried.SpriteOffset
     d.backDriedBody.DepthOffset = -50
 
     d.backDriedFace = d.backDriedFace or Isaac.Spawn(EntityType.ENTITY_EFFECT, mod.Effects.BlankEffect.Var, 0, npc.Position, npc.Velocity, nil)
-    if d.hangedriedanim == "Idle" then
+    --if d.hangedriedanim == "Idle" then
         d.backDriedFace.SpriteOffset = (Vector(0,-54) + d.Dried.SpriteOffset) + (playerpos - (npc.Position + (Vector(0,-100) + d.Dried.SpriteOffset))):Resized(1.5)
-    else
-        d.backDriedFace.SpriteOffset = Vector(0,-54) + d.Dried.SpriteOffset
-    end
+   -- else
+   --     d.backDriedFace.SpriteOffset = Vector(0,-54) + d.Dried.SpriteOffset
+   -- end
     d.backDriedFace.DepthOffset = -50
 
 
@@ -127,25 +177,6 @@ function mod:HangedriedAI(npc, sprite, d)
     end
     if d.backDriedFace then
         d.backDriedFace.Position = npc.Position
-    end
-
-    mod:MakeInvulnerable(npc)
-    npc.DepthOffset = 5
-
-    if npc.StateFrame > 100 and npc.Position:Distance(playerpos) < 45 then
-        d.hangedriedanim = "Chomp"
-    end
-
-    if d.hangedriedanim ~= "Idle" then
-        d.hangedriedframe = d.hangedriedframe + 1
-    end
-
-    if sprite:IsFinished("HangeropeChompFront") then
-        if FindDried(npc, 115) then
-            print("i found a dried!!!!")
-        else
-            print("i gotta drop....")
-        end
     end
 
 end

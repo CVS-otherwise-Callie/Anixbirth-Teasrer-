@@ -25,6 +25,7 @@ function mod:DetachedDriedAI(npc, sprite, d)
             if npc.Parent.Variant == mod.Monsters.Dried.Var then
                 d.zvel = 0
                 d.state = "falling"
+                npc.DepthOffset = 20
             end
         else
             d.zvel = 0
@@ -89,6 +90,7 @@ function mod:DetachedDriedAI(npc, sprite, d)
                 npc.EntityCollisionClass = 4
             end
         end
+        npc.DepthOffset = 0
         if d.airborne then
             d.airborne = false
             if d.state == "falling" then
