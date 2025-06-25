@@ -37,9 +37,6 @@ function mod:OGWilloWalkerNPC(npc, sprite, d)
     if d.box and d.boxdat.init and d.boxdat.isspeaking then
         d.boxdat.currentletter = d.boxdat.currentletter + 1
     end
- --[[    for key, value in pairs(textToAsciiNumberConverter("hii")) do
-        print(key, value)
-    end ]]
 
    -- mod:SaveEntToRoom(npc, false)
 
@@ -53,7 +50,7 @@ function mod:OGWilloWalkerNPCColl(npc, sprite, d, coll)
     end
 
     if not npc.Child then
-        d.box = Isaac.Spawn(1000, 429, 55, npc.Position, npc.Velocity, npc):ToEffect() --Isaac.ScreenToWorld(Vector(Isaac.GetScreenWidth(), (Isaac.GetScreenHeight()*2)-70))
+        d.box = Isaac.Spawn(1000, 429, 55, Isaac.ScreenToWorld(Vector(Isaac.GetScreenWidth(), (Isaac.GetScreenHeight()*2)-70)), npc.Velocity, npc):ToEffect()
         d.box.Parent = npc
         npc.Child = d.box
         d.boxdat = npc.Child:GetData()

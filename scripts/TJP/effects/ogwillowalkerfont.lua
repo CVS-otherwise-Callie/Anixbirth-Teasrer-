@@ -1,6 +1,7 @@
 local mod = FHAC
 local sfx = SFXManager()
 local game = Game()
+local room = game:GetRoom()
 
 mod:AddCallback(ModCallbacks.MC_POST_EFFECT_UPDATE, function(_, effect)
     if effect.Variant == mod.Effects.OGWilloWalkerFont.Var then
@@ -32,24 +33,32 @@ mod:AddCallback(ModCallbacks.MC_POST_RENDER, function()
                 end
             end
 
-            d.sent =  [[Hey \YCVS \Wthis \Ytext \W is a \Yplaceholder]]
+            d.sent =  [[These \Ywillos \Ware \YPissing \Wme off...]]
 
             d.loopcount = 0
-            ef.Position = Vector(100,100)
+            if ef.Parent then
+                ef.Position = room:WorldToScreenPosition(ef.Parent.Position) - Vector(230, -120)
+
+            else
+                ef.Position = Vector(100,100)
+            end
+            changeTextColour(ef, "W")
+            ef.Visible = true
             while d.loopcount < #d.sent do
                 d.loopcount = d.loopcount + 1
                 local letter = string.sub(d.sent,d.loopcount,d.loopcount)
                 local ascii = textToAsciiNumberConverter(letter)
                 if string.sub(d.sent,d.loopcount,d.loopcount) == [[\]] then
                     local colour = string.sub(d.sent,d.loopcount + 1,d.loopcount + 1)
-                    print(changeTextColour(ef, colour))
+                    changeTextColour(ef, colour)
                     d.loopcount = d.loopcount + 1
                 else
                     sprite:SetFrame(ascii)
                     ef:Render(Vector(0,0))
-                    ef.Position = ef.Position + Vector(10,0)
+                    ef.Position = ef.Position + Vector(11,0)
                 end
-            end     
+            end
+            ef.Visible = false
         end
     end
 end)
