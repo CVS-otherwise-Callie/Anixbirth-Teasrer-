@@ -13,7 +13,7 @@ mod:AddCallback(ModCallbacks.MC_PRE_NPC_COLLISION, function(_, npc, coll)
     end
 end, mod.NPCS.OGWilloWalker.ID)
 
-function mod:OGWilloWalkerNPC(npc, sprite, d)
+function mod:OGWilloWalkerNPC(npc, sprite, d) --the text box and font are in the TJP folder
     d.script = {
         {
             [[These \Ywillos \Ware \YPissing \Wme off...]]
@@ -50,7 +50,10 @@ function mod:OGWilloWalkerNPCColl(npc, sprite, d, coll)
     end
 
     if not npc.Child then
-        d.box = Isaac.Spawn(1000, 429, 55, Isaac.ScreenToWorld(Vector(Isaac.GetScreenWidth(), (Isaac.GetScreenHeight()*2)-70)), npc.Velocity, npc):ToEffect()
+        local center = StageAPI.GetScreenCenterPosition()
+	    local bottomright = StageAPI.GetScreenBottomRight()
+	    local bcenter = Vector(center.X, bottomright.Y - 300)
+        d.box = Isaac.Spawn(1000, 429, 55, Vector(bcenter.X, Isaac.GetScreenHeight() - 35), Vector.Zero, npc):ToEffect()
         d.box.Parent = npc
         npc.Child = d.box
         d.boxdat = npc.Child:GetData()
