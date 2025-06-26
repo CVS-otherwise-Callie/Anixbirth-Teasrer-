@@ -25,7 +25,7 @@ function mod:DetachedDriedAI(npc, sprite, d)
             if npc.Parent.Variant == mod.Monsters.Dried.Var then
                 d.zvel = 0
                 d.state = "falling"
-                npc.DepthOffset = 20
+                npc.DepthOffset = -20
             end
         else
             d.zvel = 0
@@ -76,7 +76,7 @@ function mod:DetachedDriedAI(npc, sprite, d)
             sprite:SetFrame("RopeSplatRed", 20)
         end
     end
-
+    print("dried", npc.DepthOffset)
     if npc.SpriteOffset.Y < d.goalheight or d.zvel < 0 then
         d.airborne = true
         npc.SpriteOffset = npc.SpriteOffset + Vector(0,d.zvel)
