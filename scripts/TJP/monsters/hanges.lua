@@ -60,7 +60,7 @@ function mod:HangesAI(npc, sprite, d)
     if not d.oginit then
         sprite:SetOverlayFrame("HangeHeadDown", 1)
 
-        d.Dried = FindDried(npc, 45)
+        d.Dried = FindDried(npc, 60)
 
         d.oginit = true
         d.state = "reveal"
@@ -69,7 +69,7 @@ function mod:HangesAI(npc, sprite, d)
     end
 
     if d.Dried == nil and npc.StateFrame < 5 then
-        d.Dried = d.Dried or FindDried(npc, 45)
+        d.Dried = d.Dried or FindDried(npc, 60)
     else
         if d.Dried then
             npc:ClearEntityFlags(EntityFlag.FLAG_APPEAR)
@@ -123,10 +123,10 @@ function mod:HangedriedAI(npc, sprite, d)
 
     if d.hangedriedanim == "Chomp" and sprite:GetFrame() == 46 then
         d.hangedriedframe = 0
-        if FindDried(npc, 115) then
+        if FindDried(npc, 150) then
             --print("found dried")
             d.olddried = d.Dried
-            d.Dried = FindDried(npc, 115)
+            d.Dried = FindDried(npc, 150)
             d.Dried.Parent = npc
             npc.Position = d.olddried.Position
             print("euuh?")
