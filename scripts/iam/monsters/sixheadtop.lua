@@ -113,7 +113,7 @@ function mod:SixheadtopAI(npc, sprite, d)
     end
 end
 
-function mod:SixheadShot(p, d)
+function mod.SixheadShot(p, d)
     if d.type == "FromBottomToPlayer" then
 
         p:GetData().offyourfuckingheadset = 70 + math.random(-10, 10)
