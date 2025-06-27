@@ -74,11 +74,18 @@ function mod:HangesAI(npc, sprite, d)
         if d.Dried then
             npc:ClearEntityFlags(EntityFlag.FLAG_APPEAR)
             d.movable = true
-            npc.SpriteOffset = Vector(0,-54) + d.Dried.SpriteOffset
+            if d.hangedriedanim ~= "Drop" then
+                npc.SpriteOffset = Vector(0,-54) + d.Dried.SpriteOffset
+                npc.Position = d.Dried.Position
+            end
             sprite:RemoveOverlay()
-            npc.Position = d.Dried.Position
             mod:HangedriedAI(npc, npc:GetSprite(), npc:GetData())
         elseif npc.StateFrame > 1 and not d.Dried then
+            if d.hasbeenhangedried then
+                sprite:SetFrame("WalkVert", 0)
+                sprite:SetOverlayFrame("HangeropeReveal", 0)
+                d.hasbeenhangedried = nil
+            end
             if npc.Variant == mod.Monsters.Hangeslip.Var and npc.SubType == mod.Monsters.Hangeslip.Sub then
                 mod:HangeslipAI(npc, npc:GetSprite(), npc:GetData())
             elseif npc.Variant == mod.Monsters.Hangeslip.Var and npc.SubType == mod.Monsters.Hangeslip.Sub + 1 then
@@ -103,7 +110,8 @@ function mod:HangedriedAI(npc, sprite, d)
     local playerpos = mod:confusePos(npc, player.Position, 5, nil, nil)
 
     if not d.init then
-        d.driedwaittime = 75
+        d.hasbeenhangedried = true
+        d.zvel = 0
         d.hangedriedanim = "Idle"
         d.hangedriedframe = 0
         d.init = true
@@ -111,28 +119,29 @@ function mod:HangedriedAI(npc, sprite, d)
 
 
     mod:MakeInvulnerable(npc)
-    npc.DepthOffset = 5
-
-    if npc.StateFrame > d.driedwaittime and npc.Position:Distance(playerpos) < 45 and d.hangedriedanim == "Idle" then
-        d.hangedriedanim = "Chomp"
+    if not d.gravity then
+        npc.DepthOffset = 5
     end
 
-    if d.hangedriedanim ~= "Idle" then
+    if (npc.StateFrame > 25 and npc.Position:Distance(playerpos) < 45 and d.hangedriedanim == "Idle") or (d.haschomped and d.hangedriedanim == "Idle") then
+        d.hangedriedanim = "Chomp"
+        d.haschomped = true
+    end
+
+    if d.hangedriedanim ~= "Idle" and not (d.hangedriedanim == "Drop" and d.hangedriedframe > 43 and d.airborne == true) then
         d.hangedriedframe = d.hangedriedframe + 1
     end
 
-    if d.hangedriedanim == "Chomp" and sprite:GetFrame() == 46 then
+    if d.hangedriedanim == "Chomp" and sprite:GetFrame() == 75 then
         d.hangedriedframe = 0
         if FindDried(npc, 150) then
-            --print("found dried")
             d.olddried = d.Dried
             d.Dried = FindDried(npc, 150)
             d.Dried.Parent = npc
             npc.Position = d.olddried.Position
-            print("euuh?")
             d.hangedriedanim = "Jump"
         else
-            print("i gotta drop....")
+            d.hangedriedanim = "Drop"
         end
     end
 
@@ -151,25 +160,43 @@ function mod:HangedriedAI(npc, sprite, d)
     end
 
     if d.hangedriedanim == "Jump" and sprite:GetFrame() == 45 then
-        print("wooooah")
         d.hangedriedanim = "Idle"
         npc.StateFrame = 0
-        d.driedwaittime = 25
         d.hangedriedframe = 0
         d.lerppercentdried = nil
     end
 
+    if (d.gravity and npc.SpriteOffset.Y < 0) or d.zvel < 0 then
+        d.airborne = true
+        npc.SpriteOffset = npc.SpriteOffset + Vector(0,d.zvel)
+        d.zvel = d.zvel + 0.4
+    end
+    if not ((d.gravity and npc.SpriteOffset.Y < 0) or d.zvel < 0) then -- this not being else is important trust me
+        d.airborne = false
+        if d.gravity then
+            mod:MakeVulnerable(npc)
+            npc.SpriteOffset = Vector.Zero
+            npc.Velocity = Vector.Zero
+        end
+        d.zvel = 0
+    end
+
+
     d.backDriedBody = d.backDriedBody or Isaac.Spawn(EntityType.ENTITY_EFFECT, mod.Effects.BlankEffect.Var, 0, npc.Position, npc.Velocity, nil)
-    d.backDriedBody.SpriteOffset = Vector(0,-54) + d.Dried.SpriteOffset
-    d.backDriedBody.DepthOffset = -50
+    d.backDriedBody.SpriteOffset = npc.SpriteOffset
+    if not d.gravity then
+        d.backDriedBody.DepthOffset = -50
+    else
+        d.backDriedBody.DepthOffset = 0
+    end
 
     d.backDriedFace = d.backDriedFace or Isaac.Spawn(EntityType.ENTITY_EFFECT, mod.Effects.BlankEffect.Var, 0, npc.Position, npc.Velocity, nil)
-    --if d.hangedriedanim == "Idle" then
-        d.backDriedFace.SpriteOffset = (Vector(0,-54) + d.Dried.SpriteOffset) + (playerpos - (npc.Position + (Vector(0,-100) + d.Dried.SpriteOffset))):Resized(1.5)
-   -- else
-   --     d.backDriedFace.SpriteOffset = Vector(0,-54) + d.Dried.SpriteOffset
-   -- end
-    d.backDriedFace.DepthOffset = -50
+    d.backDriedFace.SpriteOffset = npc.SpriteOffset + (playerpos - (npc.Position + (Vector(0,-100) + d.Dried.SpriteOffset))):Resized(1.5)
+    if not d.gravity then
+        d.backDriedFace.DepthOffset = -50
+    else
+        d.backDriedFace.DepthOffset = 0
+    end
 
 
     if d.backDriedBody then
@@ -177,6 +204,16 @@ function mod:HangedriedAI(npc, sprite, d)
     end
     if d.backDriedFace then
         d.backDriedFace.Position = npc.Position
+    end
+
+    if d.hangedriedanim == "Drop" and d.hangedriedframe > 70 then
+        d.backDriedBody:Remove()
+        d.backDriedFace:Remove()
+        sprite:SetFrame("WalkVert", 0)
+        sprite:SetOverlayFrame("HangeropeReveal", 0)
+        d.Dried = nil
+        npc.DepthOffset = 0
+        d.init = false
     end
 
 end
@@ -207,6 +244,12 @@ function mod:HangedriedRenderAI(npc, sprite, d)
 
     if sprite:IsEventTriggered("Throw") and d.Dried:GetData().state ~= "cut" then
         d.Dried:GetData().state = "cutinit"
+    end
+
+    if sprite:IsEventTriggered("Throwstart") then
+        npc.Velocity = Vector(0,1)
+        d.gravity = true
+        d.zvel = -2
     end
 
     sprite:SetFrame("Hangerope"..d.hangedriedanim.."Front", d.hangedriedframe)

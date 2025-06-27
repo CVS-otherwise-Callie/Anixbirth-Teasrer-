@@ -128,7 +128,7 @@ local room = game:GetRoom()
     if d.state == "cutinit" then
         npc.Position = d.spawnpos + Vector(math.sin(npc.StateFrame/d.oscillatespeed) * 3, 0)
         d.state = "cut"
-        local sack = Isaac.Spawn(mod.Monsters.DetachedDried.ID, mod.Monsters.DetachedDried.Var, npc.SubType, npc.Position + Vector(-16,0), Vector(0,0), npc)
+        local sack = Isaac.Spawn(mod.Monsters.DetachedDried.ID, mod.Monsters.DetachedDried.Var, npc.SubType, npc.Position + Vector(-16,-1), Vector(0,0), npc)
         sack:GetSprite().FlipX = sprite.FlipX
         sack.SpriteOffset = npc.SpriteOffset
         sack.Parent = npc
