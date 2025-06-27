@@ -437,7 +437,7 @@ function mod:PatientGetHurt(npc, damage, flag, source, countdown)
     end
 end
 
-function mod:PatientShots(v, d)
+function mod.PatientShots(v, d)
     if d.type == "ForeverHoming" then
         if not d.init then
             d.height = v.Height

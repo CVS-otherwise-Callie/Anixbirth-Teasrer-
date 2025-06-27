@@ -32,6 +32,7 @@ function mod:StallCreepAI(npc, sprite, d)
 			npc:PlaySound(SoundEffect.SOUND_BLOODSHOOT,1,2,false,math.random(9,11)/10)
             for i = 1, 3 do
                 local projectile = Isaac.Spawn(9, 0, 0, npc.Position + Vector(-50 + (25*i), 0):Rotated(npc.SpriteRotation), Vector(0,8):Rotated(npc.SpriteRotation), npc):ToProjectile();
+				projectile:GetData().anixbirthType = "stall"
 				projectile.FallingAccel = -0.01
 				projectile.FallingSpeed = -0.01
             end
@@ -40,5 +41,23 @@ function mod:StallCreepAI(npc, sprite, d)
 		end
 	end
 
+end
+
+function mod.StallCreepShots(v, d)
+
+	if d.anixbirthType ~= "stall" then return end
+		
+	--[[for _, ent in ipairs(Isaac.FindInRadius(v, 1)) do
+		
+	end]]
+
+	if game:GetRoom():GetGridEntityFromPos(v.Position) then
+		local grid = game:GetRoom():GetGridEntityFromPos(v.Position)
+		
+		if grid:GetType() == GridEntityType.GRID_TNT then
+			grid:Hurt(1)
+			v:Kill()
+		end
+	end
 end
 
