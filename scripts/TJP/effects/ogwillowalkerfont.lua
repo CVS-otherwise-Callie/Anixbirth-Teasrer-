@@ -22,12 +22,18 @@ mod:AddCallback(ModCallbacks.MC_POST_RENDER, function()
         local d = ef:GetData()
 
         if not d.init then
+            d.letterdelay = 1
+            d.timer = 0
             d.sentlen = 1
             d.init  = true
+            d.scriptnumber = 1
+        else
+            d.timer = d.timer + 1
         end
-        d.sent =  [[These \Ywillos \Ware \YPissing \Wme off... waaaaaa\Laaaaaaaaaaaaaaaaaaaah]]
 
-        d.loopcount = 0
+        if not (d.scriptnumber < 0) then
+            d.sent =  ef.Parent.Parent:GetData().script[d.scriptnumber]
+        end
         d.charY = 0
         d.charX = 0
         if not ef.Parent then
@@ -35,25 +41,22 @@ mod:AddCallback(ModCallbacks.MC_POST_RENDER, function()
         else
             ef.Position = ef.Parent.Position
         end
-        mod:textEffect(ef, "W")
-        ef.Visible = true
-        while d.loopcount < d.sentlen do
-            d.loopcount = d.loopcount + 1
-            d.charX = d.charX + 1
-            local letter = string.sub(d.sent,d.loopcount,d.loopcount)
-            local ascii = mod:textToAscii(letter)
-            if string.sub(d.sent,d.loopcount,d.loopcount) == [[\]] then
-                local colour = string.sub(d.sent,d.loopcount + 1,d.loopcount + 1)
-                mod:textEffect(ef, colour)
-                d.loopcount = d.loopcount + 1
-            else
-                sprite:SetFrame(ascii)
-                sprite:Render(Vector(bcenter.X + (d.charX* 7) - 200, (Isaac.GetScreenHeight() - 45) + (d.charY * 13)), Vector.Zero, Vector.Zero)
+
+        if d.sent then
+            if not game:IsPaused() then
+                mod:npctalk(ef, d.sent, d.sentlen, d.charX, d.charY)
+                if d.sentlen < #d.sent and d.timer > d.letterdelay then
+                    d.sentlen = d.sentlen + 1
+                    d.timer = 1
+                end
+                if mod:npctalk(ef, d.sent, d.sentlen, d.charX, d.charY) then
+                    ef.Parent.Parent:GetData().isspeaking = false
+                end
             end
+        else
+            ef.Parent:Remove()
+            ef:Remove()
+            ef.Parent.Parent:GetData().state = "follow"
         end
-        if d.sentlen < #d.sent then
-            d.sentlen = d.sentlen + 1
-        end
-        ef.Visible = false
     end
 end)

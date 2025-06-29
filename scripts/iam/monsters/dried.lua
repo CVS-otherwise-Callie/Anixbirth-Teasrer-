@@ -166,7 +166,7 @@ local room = game:GetRoom()
             sprite:Stop()
         end
     else
-        mod:RemoveEntFromRoomSave(npc)           
+        mod:RemoveEntFromRoomSave(npc)
     end
 end
 

@@ -1,5 +1,5 @@
 <AnimatedActor>
-	<Info CreatedBy="TJP" CreatedOn="22/06/2025 11:52:14" Version="15" Fps="45"/>
+	<Info CreatedBy="TJP" CreatedOn="29/06/2025 19:13:47" Version="16" Fps="45"/>
 	<Content>
 		<Spritesheets>
 			<Spritesheet Path="ogwillowalker.png" Id="0"/>
@@ -23,7 +23,7 @@
 			<NullAnimations/>
 			<Triggers/>
 		</Animation>
-		<Animation Name="FinishedBusiness" FrameNum="103" Loop="true">
+		<Animation Name="FinishedBusiness" FrameNum="103" Loop="false">
 			<RootAnimation>
 				<Frame XPosition="0" YPosition="0" XScale="100" YScale="100" Delay="1" Visible="true" RedTint="255" GreenTint="255" BlueTint="255" AlphaTint="255" RedOffset="0" GreenOffset="0" BlueOffset="0" Rotation="0" Interpolated="false"/>
 			</RootAnimation>

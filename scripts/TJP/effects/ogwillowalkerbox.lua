@@ -27,7 +27,7 @@ mod:AddCallback(ModCallbacks.MC_POST_RENDER, function()
         sprite:Render(Vector(bcenter.X, Isaac.GetScreenHeight() - 35), Vector.Zero, Vector.Zero)
 
         if not ef.Child then
-            d.font = Isaac.Spawn(1000, 430, 55, ef.Position, ef.Velocity, ef):ToEffect() --Isaac.ScreenToWorld(Vector(Isaac.GetScreenWidth(), (Isaac.GetScreenHeight()*2)-70))
+            d.font = Isaac.Spawn(1000, 430, 55, ef.Position, ef.Velocity, ef):ToEffect()
             d.font.Parent = ef
             ef.Child = d.font
             d.font = ef.Child:GetData()
