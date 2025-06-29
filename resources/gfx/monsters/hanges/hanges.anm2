@@ -1,5 +1,5 @@
 <AnimatedActor>
-	<Info CreatedBy="TJP" CreatedOn="26/06/2025 22:46:17" Version="67" Fps="45"/>
+	<Info CreatedBy="TJP" CreatedOn="28/06/2025 14:54:08" Version="69" Fps="45"/>
 	<Content>
 		<Spritesheets>
 			<Spritesheet Path="hanges.png" Id="0"/>
@@ -664,7 +664,7 @@
 			</LayerAnimations>
 			<NullAnimations/>
 			<Triggers>
-				<Trigger EventId="0" AtFrame="15"/>
+				<Trigger EventId="0" AtFrame="6"/>
 			</Triggers>
 		</Animation>
 		<Animation Name="HangeropeReveal" FrameNum="1" Loop="false">

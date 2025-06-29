@@ -22,7 +22,7 @@ local function FindDried(npc, range)
     local ta = {}
     local dried = Isaac.GetRoomEntities() --since dried are unlisted entities
     for k, v in ipairs(dried) do
-        if v.Type == mod.Monsters.Dried.ID and v.Variant == mod.Monsters.Dried.Var and not (v.Parent and v.Parent.Variant == mod.Monsters.Hangeslip.Var and v.Parent ~= npc)  and npc.Position:Distance(v.Position) < range then
+        if v.Type == mod.Monsters.Dried.ID and v.Variant == mod.Monsters.Dried.Var and not (v.Parent and v.Parent.Variant == mod.Monsters.Hangeslip.Var and v.Parent ~= npc)  and npc.Position:Distance(v.Position) < range and not v:GetData().isdetached then
             table.insert(ta, v)
         end
     end
@@ -75,7 +75,13 @@ function mod:HangesAI(npc, sprite, d)
             npc:ClearEntityFlags(EntityFlag.FLAG_APPEAR)
             d.movable = true
             if d.hangedriedanim ~= "Drop" then
-                npc.SpriteOffset = Vector(0,-54) + d.Dried.SpriteOffset
+                if d.olddried then
+                    print("old")
+                    npc.SpriteOffset = Vector(0,-54) + d.olddried.SpriteOffset
+                else
+                    print("new")
+                    npc.SpriteOffset = Vector(0,-54) + d.Dried.SpriteOffset
+                end
                 npc.Position = d.Dried.Position
             end
             sprite:RemoveOverlay()
@@ -110,6 +116,8 @@ function mod:HangedriedAI(npc, sprite, d)
     local playerpos = mod:confusePos(npc, player.Position, 5, nil, nil)
 
     if not d.init then
+        npc.EntityCollisionClass = 0
+	    npc.GridCollisionClass = 0
         d.hasbeenhangedried = true
         d.zvel = 0
         d.hangedriedanim = "Idle"
@@ -117,8 +125,6 @@ function mod:HangedriedAI(npc, sprite, d)
         d.init = true
     end
 
-
-    mod:MakeInvulnerable(npc)
     if not d.gravity then
         npc.DepthOffset = 5
     end
@@ -152,10 +158,22 @@ function mod:HangedriedAI(npc, sprite, d)
             else
                 d.lerppercentdried = math.min((sprite:GetFrame()-23)/(39-23), 1)
             end
-            npc.Position = mod:Lerp(d.olddried.Position, d.Dried.Position, d.lerppercentdried)
+            print(d.olddried)
+            print(sprite:GetFrame())
+            print(d.hangedriedframe)
+            if d.olddried and d.hangedriedframe < 38 then
+                print("keep")
+                npc.Position = mod:Lerp(d.olddried.Position, d.Dried.Position, d.lerppercentdried)
+            else
+                print("delete")
+                npc.Position = d.Dried.Position
+                d.olddried = nil
+            end
         else
             d.lerppercentdried = 0
-            npc.Position = d.olddried.Position
+            if d.olddried then
+                npc.Position = d.olddried.Position
+            end
         end
     end
 
@@ -174,7 +192,8 @@ function mod:HangedriedAI(npc, sprite, d)
     if not ((d.gravity and npc.SpriteOffset.Y < 0) or d.zvel < 0) then -- this not being else is important trust me
         d.airborne = false
         if d.gravity then
-            mod:MakeVulnerable(npc)
+            npc.EntityCollisionClass = 4
+	        npc.GridCollisionClass = 5
             npc.SpriteOffset = Vector.Zero
             npc.Velocity = Vector.Zero
         end

@@ -21,44 +21,38 @@ mod:AddCallback(ModCallbacks.MC_POST_RENDER, function()
         local sprite = ef:GetSprite()
         local d = ef:GetData()
 
-        local function textToAsciiNumberConverter(char)
-            local ascii = string.byte(char)
-
-            return ascii - 32
+        if not d.init then
+            d.sentlen = 1
+            d.init  = true
         end
-        local function changeTextColour(ef, colour)
-            if colour == "W" then
-                ef:SetColor(Color.Default, 2, 1, false, false)
-                --return "W (ts in func)"
-            end
-            if colour == "Y" then
-                ef:SetColor(Color(1,1,0,1), 2, 1, false, false)
-                --return "Y (ts in func)"
-            end
-        end
-
-        d.sent =  [[These \Ywillos \Ware \YPissing \Wme off...]]
+        d.sent =  [[These \Ywillos \Ware \YPissing \Wme off... waaaaaa\Laaaaaaaaaaaaaaaaaaaah]]
 
         d.loopcount = 0
+        d.charY = 0
+        d.charX = 0
         if not ef.Parent then
             ef:Remove()
         else
             ef.Position = ef.Parent.Position
         end
-        changeTextColour(ef, "W")
+        mod:textEffect(ef, "W")
         ef.Visible = true
-        while d.loopcount < #d.sent do
+        while d.loopcount < d.sentlen do
             d.loopcount = d.loopcount + 1
+            d.charX = d.charX + 1
             local letter = string.sub(d.sent,d.loopcount,d.loopcount)
-            local ascii = textToAsciiNumberConverter(letter)
+            local ascii = mod:textToAscii(letter)
             if string.sub(d.sent,d.loopcount,d.loopcount) == [[\]] then
                 local colour = string.sub(d.sent,d.loopcount + 1,d.loopcount + 1)
-                changeTextColour(ef, colour)
+                mod:textEffect(ef, colour)
                 d.loopcount = d.loopcount + 1
             else
                 sprite:SetFrame(ascii)
-                sprite:Render(Vector(bcenter.X + (d.loopcount * 8) - 200, Isaac.GetScreenHeight() - 35), Vector.Zero, Vector.Zero)
+                sprite:Render(Vector(bcenter.X + (d.charX* 7) - 200, (Isaac.GetScreenHeight() - 45) + (d.charY * 13)), Vector.Zero, Vector.Zero)
             end
+        end
+        if d.sentlen < #d.sent then
+            d.sentlen = d.sentlen + 1
         end
         ef.Visible = false
     end

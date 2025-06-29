@@ -10,7 +10,8 @@ mod:LoadScripts("scripts.library", {
 	"basiclib",
 	"playerlib",
 	"entitylib",
-	"familiarlib"
+	"familiarlib",
+	"npclib"
 })
 
 

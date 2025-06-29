@@ -24,6 +24,12 @@ function mod:ShoAI(npc, sprite, d)
 
     if d.state == "scared" then
 
+        if npc.Velocity.X > 0 then
+            sprite.FlipX = true
+        else
+            sprite.FlipX = false
+        end
+
         mod:spritePlay(sprite, "idle")
 
         npc.Velocity = npc.Velocity + npc.Velocity:Normalized() * 1.05
@@ -39,10 +45,10 @@ function mod:ShoAI(npc, sprite, d)
     if d.state == "angry" then
 
         if npc.Position.X < targetpos.X then
-                sprite.FlipX = true
-            else
-                sprite.FlipX = false
-            end
+            sprite.FlipX = true
+        else
+            sprite.FlipX = false
+        end
 
         mod:spritePlay(sprite, "angry")
 

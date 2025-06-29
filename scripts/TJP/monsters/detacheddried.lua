@@ -76,7 +76,7 @@ function mod:DetachedDriedAI(npc, sprite, d)
             sprite:SetFrame("RopeSplatRed", 20)
         end
     end
-    print("dried", npc.DepthOffset)
+
     if npc.SpriteOffset.Y < d.goalheight or d.zvel < 0 then
         d.airborne = true
         npc.SpriteOffset = npc.SpriteOffset + Vector(0,d.zvel)
@@ -86,11 +86,11 @@ function mod:DetachedDriedAI(npc, sprite, d)
         npc.SpriteOffset.Y = d.goalheight
         d.zvel = 0
         if d.goalheight == 0 then
+            npc.DepthOffset = 0
             if d.state ~= "jumpedon" then
                 npc.EntityCollisionClass = 4
             end
         end
-        npc.DepthOffset = 0
         if d.airborne then
             d.airborne = false
             if d.state == "falling" then
