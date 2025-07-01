@@ -19,9 +19,7 @@ FHAC.ExDescs = {
 }
 
 FHAC.Bosses = {
-    Hop = mod:ENT("Hop"),
-    Skip = mod:ENT("Skip"),
-    Jump = mod:ENT("Jump")
+
 }
 
 FHAC.MiniBosses = {
@@ -51,7 +49,7 @@ FHAC.NPCS = {
 }
 
 FHAC.Jokes = {
-    Gaperrr = mod:ENT("A gaper w/ three legs, why did we do this"),
+    Gaperrr = mod:ENT("A gaper w/ three legs, why did we do this")
 }
 
 FHAC.Savedata = {

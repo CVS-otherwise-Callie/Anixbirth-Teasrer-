@@ -21,8 +21,20 @@ FHAC.TJPEffects = {
     OGWilloWalkerFont = FHAC:ENT("OGWilloWalker Font")
 }
 
+FHAC.TJPBosses = {
+    Hop = FHAC:ENT("Hop"),
+    Skip = FHAC:ENT("Skip"),
+    Jump = FHAC:ENT("Jump")
+}
+
+FHAC.TJPJokes = {
+    Willowalker = FHAC:ENT("Willowalker")
+}
+
 FHAC:MixTables(FHAC.Monsters, FHAC.TJPMonsters)
 FHAC:MixTables(FHAC.Effects, FHAC.TJPEffects)
+FHAC:MixTables(FHAC.Bosses, FHAC.TJPBosses)
+FHAC:MixTables(FHAC.Jokes, FHAC.TJPJokes)
 
 FHAC:LoadScripts("scripts.TJP.monsters", {
     "gobbo",
@@ -53,6 +65,10 @@ FHAC:LoadScripts("scripts.TJP.effects", {
 	"clatterteller_target",
     "ogwillowalkerbox",
     "ogwillowalkerfont"
+})
+
+FHAC:LoadScripts("scripts.TJP.jokes", {
+    "willowalker"
 })
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

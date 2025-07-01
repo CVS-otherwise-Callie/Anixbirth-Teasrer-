@@ -26,7 +26,6 @@ mod:AddCallback(ModCallbacks.MC_POST_NEW_ROOM, function(_)
 end, mod.NPCS.OGWilloWalker.ID)
 
 mod:AddCallback(ModCallbacks.MC_POST_NPC_DEATH, function(_, npc)
-    print("heeey")
     if npc:IsBoss() and Game():GetRoom():GetType() == 5 then
         for _, ent in pairs(Isaac:GetRoomEntities()) do
             if ent.Variant == mod.NPCS.OGWilloWalker.Var and ent:GetData().state == "follow" then
