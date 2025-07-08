@@ -461,7 +461,7 @@ function mod:HangejumpAI(npc, sprite, d) ---------------------------------------
     if sprite:IsEventTriggered("Throwend") then
         game:ShakeScreen(10)
         for i = 1, 5, 1 do
-            local sack = Isaac.Spawn(mod.Monsters.DetachedDried.ID, mod.Monsters.DetachedDried.Var, 6, room:FindFreeTilePosition ( room:GetRandomPosition(16), 1000 ), Vector(0,0), npc) --FindFreeTilePosition ( Vector Pos, float DistanceThreshold )
+            local sack = Isaac.Spawn(mod.Monsters.DetachedDried.ID, mod.Monsters.DetachedDried.Var, 0, room:FindFreeTilePosition ( room:GetRandomPosition(16), 1000 ), Vector(0,0), npc) --FindFreeTilePosition ( Vector Pos, float DistanceThreshold )
             sack:ClearEntityFlags(EntityFlag.FLAG_APPEAR)
             sack.Parent = npc
             sack.SpriteOffset.Y = math.random(-400, -300)
@@ -677,6 +677,7 @@ function mod:HangethrowAI(npc, sprite, d) --------------------------------------
             d.detacheddried.Velocity = ((playerpos + player.Velocity * 40) - npc.Position) / 40
             d.detacheddried:GetData().goalheight = 0
             d.detacheddried:GetData().zvel = -7
+            d.detacheddried:GetData().splat = true
             npc.Parent = nil
             d.detacheddried.Child = nil
             d.detacheddried = nil
@@ -787,6 +788,7 @@ function mod:HangekickAI(npc, sprite, d) ---------------------------------------
     if sprite:IsEventTriggered("Throw") then
         if d.detacheddried and not npc:IsDead() then
             d.detacheddried.Velocity = (d.detacheddried.Position - d.targetpos):Resized(13):Rotated(math.random(-10,10)) + Vector(math.random(-3,3), math.random(-3,3))
+            d.detacheddried:GetData().hurtfly = true
             d.detacheddried:GetData().zvel = -2
         end
     end

@@ -34,7 +34,8 @@ function mod:DetachedDriedAI(npc, sprite, d)
             colour = "Brown",
             creep = 94,
             creepsec = 1,
-            splat = Color(126, 97, 9, 1)
+            splat = Color(126, 97, 9, 1),
+            creeptype = ProjectileFlags.CREEP_BROWN
         },
         {
             --green
@@ -54,7 +55,9 @@ function mod:DetachedDriedAI(npc, sprite, d)
             --red
             colour = "Red",
             creep = 22,
-            creepsec = 1
+            creepsec = 1,
+            creeptype = ProjectileFlags.RED_CREEP,
+            splat = Color.Default
         }
     }
 
@@ -144,6 +147,29 @@ function mod:DetachedDriedAI(npc, sprite, d)
         npc.EntityCollisionClass = 0
         d.zvel = d.zvel + 0.4
     else
+
+        if d.splat then
+             for i = 1, 20, 1 do
+                local rotated = math.random(-180,180)
+                local projectile = Isaac.Spawn(9, 0, 0, (npc.Position + (Vector(10,10):Rotated(rotated))), Vector(math.random(2,4),0):Rotated(rotated) , npc):ToProjectile();
+                projectile:GetData().targ = npc:GetPlayerTarget()
+                projectile.FallingAccel = 0.5
+                projectile.FallingSpeed = - (math.random() * 4)
+                projectile.Height = -5
+                projectile.Color = d.tab.splat
+             --[[    if npc.SubType == nil or npc.SubType == 0 then
+                    projectile:GetData().isDetDried = d.mynumber
+                else
+                    projectile:GetData().isDetDried = npc.SubType
+                end ]]
+            end
+            d.splat = false
+        end
+
+        if d.hurtfly then
+            d.hurtfly = false
+        end
+
         npc.Velocity = npc.Velocity * 0.8
         npc.SpriteOffset.Y = d.goalheight
         d.zvel = 0
@@ -165,6 +191,11 @@ function mod:DetachedDriedAI(npc, sprite, d)
         end
     end
 
+    local player = npc:GetPlayerTarget()
+    if d.hurtfly and npc.Position:Distance(player.Position) < 30 then
+        player:TakeDamage(1, 0, EntityRef(npc), 0)
+    end
+
     if d.airborne and d.zvel < 0 then
         npc.GridCollisionClass = 3
     elseif (not d.airborne) and ((room:GetGridEntity(room:GetGridIndex(npc.Position)) and room:GetGridEntity(room:GetGridIndex(npc.Position)).CollisionClass == 0) or not (room:GetGridEntity(room:GetGridIndex(npc.Position)))) then
@@ -172,6 +203,23 @@ function mod:DetachedDriedAI(npc, sprite, d)
     end
 
     if d.state == "jumpedon" then
+        if not d.splurted then
+            for i = 1, 20, 1 do
+                local posneg = ((i%2)*2)-1
+                local projectile = Isaac.Spawn(9, 0, 0, (npc.Position + Vector(30*posneg, math.random(-5,5))), Vector( (math.random()*8) * posneg,0):Rotated(math.random(-5,5)) , npc):ToProjectile();
+                projectile:GetData().targ = npc:GetPlayerTarget()
+                projectile.FallingAccel = 0.5
+                projectile.FallingSpeed = math.random(-7,-2)
+                projectile.Height = -5
+                projectile.Color = d.tab.splat
+             --[[    if npc.SubType == nil or npc.SubType == 0 then
+                    projectile:GetData().isDetDried = d.mynumber
+                else
+                    projectile:GetData().isDetDried = npc.SubType
+                end ]]
+            end
+            d.splurted = true
+        end
         npc.EntityCollisionClass = 0
         mod:spritePlay(sprite, "HangejumpExplode" .. d.tab.colour)
         if sprite:IsFinished() then
@@ -180,9 +228,3 @@ function mod:DetachedDriedAI(npc, sprite, d)
     end
 
 end
-
-mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, function(_, npc)
-    if npc.Type == mod.Monsters.DetachedDried.ID and npc.Variant == mod.Monsters.DetachedDried.Var then
-        return false
-    end
-end, mod.Monsters.DetachedDried.ID)
