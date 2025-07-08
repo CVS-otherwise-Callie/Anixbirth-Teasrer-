@@ -20,53 +20,41 @@ function mod:DetachedDriedAI(npc, sprite, d)
             colour = "Black",
             creep = 26,
             creepsec = 1,
-            splat = Color(0, 0, 0, 1),
-            speed = 2,
-            PlaybackSpeed = 0.5,
+            splat = Color(0, 0, 0, 1)
         },
         {
             --white
             colour = "White",
             creep = 25,
             creepsec = 1,
-            splat = Color(255, 255, 255, 1),
-            speed = 3,
-            PlaybackSpeed = 0.7,
+            splat = Color(255, 255, 255, 1)
         },
         {
             --slippery brown
             colour = "Brown",
             creep = 94,
             creepsec = 1,
-            splat = Color(126, 97, 9, 1),
-            speed = 2,
-            PlaybackSpeed = 0.9,
+            splat = Color(126, 97, 9, 1)
         },
         {
             --green
             colour = "Green",
             creep = 23,
             creepsec = 0.5,
-            splat = Color(18, 143, 31, 1),
-            speed = 4,
-            PlaybackSpeed = 0.2,
+            splat = Color(18, 143, 31, 1)
         },
         {
             --yellow
             colour = "Yellow",
             creep = 24,
             creepsec = 1,
-            splat = Color(240, 235, 0, 1),
-            speed = 6,
-            PlaybackSpeed = 1,
+            splat = Color(240, 235, 0, 1)
         },
         {
             --red
             colour = "Red",
             creep = 22,
-            creepsec = 1,
-            speed = 1,
-            PlaybackSpeed = 0.8,
+            creepsec = 1
         }
     }
 
