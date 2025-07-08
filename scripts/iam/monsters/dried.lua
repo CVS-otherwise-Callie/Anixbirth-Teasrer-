@@ -96,18 +96,17 @@ local room = game:GetRoom()
         npc.Position = npc.Position + Vector(d.offset.X, 0)
         npc.SpriteOffset = Vector(0, d.offset.Y)
 
-        local tab
         if npc.SubType == nil or npc.SubType == 0 then
-            tab= driedsubtypes[d.mynumber]
+            d.tab= driedsubtypes[d.mynumber]
         else
-            tab = driedsubtypes[npc.SubType]
+            d.tab = driedsubtypes[npc.SubType]
         end
         -- print(tab)
         -- print(tab.colour)
-        sprite:Play("BagIdle"..tab.colour, true)
+        sprite:Play("BagIdle"..d.tab.colour, true)
         -- sprite:Play("BagDetachRed", true)
         sprite:SetFrame(35)
-        for h, g in pairs(tab) do
+        for h, g in pairs(d.tab) do
             if not d[h] then
                 d[h] = g
             end
@@ -122,9 +121,15 @@ local room = game:GetRoom()
     if d.state == "cutinit" then
         npc.Position = d.spawnpos + Vector(math.sin(npc.StateFrame/d.oscillatespeed) * 3, 0)
         d.state = "cut"
-        local sack = Isaac.Spawn(mod.Monsters.DetachedDried.ID, mod.Monsters.DetachedDried.Var, npc.SubType, npc.Position + Vector(-16,-1), Vector(0,0), npc)
+        local sack
+        if npc.SubType == 0 then
+            sack = Isaac.Spawn(mod.Monsters.DetachedDried.ID, mod.Monsters.DetachedDried.Var, d.mynumber, npc.Position + Vector(-16,-1), Vector(0,0), npc)
+        else
+            sack = Isaac.Spawn(mod.Monsters.DetachedDried.ID, mod.Monsters.DetachedDried.Var, npc.SubType, npc.Position + Vector(-16,-1), Vector(0,0), npc)
+        end
         d.isdetached = true
         sack:GetSprite().FlipX = sprite.FlipX
+        mod:spritePlay(sack:GetSprite(), "Idle"..d.tab.colour)
         sack.SpriteOffset = npc.SpriteOffset
         sack.Parent = npc
     end

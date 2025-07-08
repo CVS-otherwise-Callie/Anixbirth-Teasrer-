@@ -228,3 +228,9 @@ function mod:DetachedDriedAI(npc, sprite, d)
     end
 
 end
+
+mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, function(_, npc)
+    if npc.Type == mod.Monsters.DetachedDried.ID and npc.Variant == mod.Monsters.DetachedDried.Var then
+        return false
+    end
+end, mod.Monsters.DetachedDried.ID)
