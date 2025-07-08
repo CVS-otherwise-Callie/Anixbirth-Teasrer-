@@ -14,9 +14,73 @@ end, mod.Monsters.DetachedDried.ID)
 function mod:DetachedDriedAI(npc, sprite, d)
     local room = game:GetRoom()
 
+        local driedsubtypes = {
+        {
+            --black
+            colour = "Black",
+            creep = 26,
+            creepsec = 1,
+            splat = Color(0, 0, 0, 1),
+            speed = 2,
+            PlaybackSpeed = 0.5,
+        },
+        {
+            --white
+            colour = "White",
+            creep = 25,
+            creepsec = 1,
+            splat = Color(255, 255, 255, 1),
+            speed = 3,
+            PlaybackSpeed = 0.7,
+        },
+        {
+            --slippery brown
+            colour = "Brown",
+            creep = 94,
+            creepsec = 1,
+            splat = Color(126, 97, 9, 1),
+            speed = 2,
+            PlaybackSpeed = 0.9,
+        },
+        {
+            --green
+            colour = "Green",
+            creep = 23,
+            creepsec = 0.5,
+            splat = Color(18, 143, 31, 1),
+            speed = 4,
+            PlaybackSpeed = 0.2,
+        },
+        {
+            --yellow
+            colour = "Yellow",
+            creep = 24,
+            creepsec = 1,
+            splat = Color(240, 235, 0, 1),
+            speed = 6,
+            PlaybackSpeed = 1,
+        },
+        {
+            --red
+            colour = "Red",
+            creep = 22,
+            creepsec = 1,
+            speed = 1,
+            PlaybackSpeed = 0.8,
+        }
+    }
+
     if not d.init then
         npc:AddEntityFlags(EntityFlag.FLAG_NO_STATUS_EFFECTS | EntityFlag.FLAG_NO_TARGET)
         d.goalheight = 0
+
+        d.mynumber = d.mynumber or math.random(1, #driedsubtypes)
+
+        if npc.SubType == nil or npc.SubType == 0 then
+            d.tab= driedsubtypes[d.mynumber]
+        else
+            d.tab = driedsubtypes[npc.SubType]
+        end
 
         if npc.Parent then
 
@@ -45,11 +109,11 @@ function mod:DetachedDriedAI(npc, sprite, d)
 
     if d.state == "falling" then
         npc.Velocity = Vector.Zero
-        mod:spritePlay(sprite, "FallRed")
+        mod:spritePlay(sprite, "Fall" .. d.tab.colour)
     end
 
     if d.state == "ropesplat" then
-        mod:spritePlay(sprite, "RopeSplatRed")
+        mod:spritePlay(sprite, "RopeSplat" .. d.tab.colour)
         if sprite:IsFinished() then
             d.state = "idle"
         end
@@ -57,9 +121,9 @@ function mod:DetachedDriedAI(npc, sprite, d)
 
     if d.state == "hangethrowheadsplat" then
         if npc.SpriteOffset.Y == -20 then
-            mod:spritePlay(sprite, "LandOnHangethrowHeadRed")
+            mod:spritePlay(sprite, "LandOnHangethrowHead" .. d.tab.colour)
         else
-            mod:spritePlay(sprite, "HangethrowHeadSplatRed")
+            mod:spritePlay(sprite, "HangethrowHeadSplat" .. d.tab.colour)
         end
         if sprite:IsFinished() then
             d.state = "idle"
@@ -67,7 +131,7 @@ function mod:DetachedDriedAI(npc, sprite, d)
     end
 
     if d.state == "splat" then
-        mod:spritePlay(sprite, "SplatRed")
+        mod:spritePlay(sprite, "Splat" .. d.tab.colour)
         if sprite:IsFinished() then
             d.state = "idle"
         end
@@ -76,9 +140,9 @@ function mod:DetachedDriedAI(npc, sprite, d)
     if d.state == "idle" then
 
         if npc.Child and npc.Child.SubType == 2 and (npc.SpriteOffset.Y == -20 * npc.Child:GetData().Scale and d.zvel >= 0) then
-            sprite:SetFrame("LandOnHangethrowHeadRed", 16)
+            sprite:SetFrame("LandOnHangethrowHead" .. d.tab.colour, 16)
         else
-            sprite:SetFrame("RopeSplatRed", 20)
+            sprite:SetFrame("RopeSplat" .. d.tab.colour, 20)
         end
     end
 
@@ -121,7 +185,7 @@ function mod:DetachedDriedAI(npc, sprite, d)
 
     if d.state == "jumpedon" then
         npc.EntityCollisionClass = 0
-        mod:spritePlay(sprite, "HangejumpExplodeRed")
+        mod:spritePlay(sprite, "HangejumpExplode" .. d.tab.colour)
         if sprite:IsFinished() then
             npc:Remove()
         end

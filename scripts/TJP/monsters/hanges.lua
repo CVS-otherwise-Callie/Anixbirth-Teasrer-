@@ -461,10 +461,10 @@ function mod:HangejumpAI(npc, sprite, d) ---------------------------------------
     if sprite:IsEventTriggered("Throwend") then
         game:ShakeScreen(10)
         for i = 1, 5, 1 do
-            local sack = Isaac.Spawn(mod.Monsters.DetachedDried.ID, mod.Monsters.DetachedDried.Var, 0, room:FindFreeTilePosition ( room:GetRandomPosition(16), 1000 ), Vector(0,0), npc) --FindFreeTilePosition ( Vector Pos, float DistanceThreshold )
+            local sack = Isaac.Spawn(mod.Monsters.DetachedDried.ID, mod.Monsters.DetachedDried.Var, 6, room:FindFreeTilePosition ( room:GetRandomPosition(16), 1000 ), Vector(0,0), npc) --FindFreeTilePosition ( Vector Pos, float DistanceThreshold )
             sack:ClearEntityFlags(EntityFlag.FLAG_APPEAR)
             sack.Parent = npc
-            sack.SpriteOffset.Y = math.random(-400, -300) 
+            sack.SpriteOffset.Y = math.random(-400, -300)
             if math.random(1,2) == 2 then
                 sack:GetSprite().FlipX = true
             end
