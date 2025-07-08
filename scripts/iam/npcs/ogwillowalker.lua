@@ -60,6 +60,7 @@ function mod:OGWilloWalkerNPC(npc, sprite, d)
         npc:AddEntityFlags(EntityFlag.FLAG_PERSISTENT)
         mod:RemoveEntFromRoomSave(npc)
         npc.EntityCollisionClass = 0
+        npc.GridCollisionClass = 0
 
         if not d.positions then
             d.positions = {
@@ -72,7 +73,7 @@ function mod:OGWilloWalkerNPC(npc, sprite, d)
 
         if d.oldpos and (d.oldpos.X ~= math.floor(d.player.Position.X) or d.oldpos.Y ~= math.floor(d.player.Position.Y)) then
             table.remove(d.positions, 1)
-            table.insert(d.positions, #d.positions+1, Vector(math.floor(d.player.Position.X), math.floor(d.player.Position.Y)))
+            table.insert(d.positions, #d.positions+1, Vector(d.player.Position.X, d.player.Position.Y))
         end
         d.oldpos = Vector(math.floor(d.player.Position.X), math.floor(d.player.Position.Y))
 

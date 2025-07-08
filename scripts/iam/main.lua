@@ -1274,7 +1274,7 @@ FHAC:AddCallback(ModCallbacks.MC_POST_TEAR_UPDATE, FHAC.PlayersTearsPostUpdate)
 
 function FHAC:ProjStuff(v)
 	local d = v:GetData();
-    
+
 	FHAC.SyntheticHorfShot(v, d)
     FHAC.WostShot(v, d)
     FHAC.PallunShot(v, d)
@@ -1284,6 +1284,7 @@ function FHAC:ProjStuff(v)
     FHAC.andShot(v, d)
     FHAC.WoodheadShots(v, d)
     FHAC.webbedCreepProj(v, d)
+	FHAC.WillowalkerProj(v, d)
     FHAC.BewebbedShot(v, d)
 	FHAC.StallCreepShots(v, d)
 end

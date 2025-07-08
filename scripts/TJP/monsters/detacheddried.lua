@@ -27,6 +27,11 @@ function mod:DetachedDriedAI(npc, sprite, d)
                 d.state = "falling"
                 npc.DepthOffset = -20
             end
+            if npc.Parent.Variant == mod.Monsters.Hangeslip.Var then
+                d.zvel = 0
+                d.state = "falling"
+                npc.Parent = nil
+            end
         else
             d.zvel = 0
             d.state = "idle"
@@ -79,7 +84,12 @@ function mod:DetachedDriedAI(npc, sprite, d)
 
     if npc.SpriteOffset.Y < d.goalheight or d.zvel < 0 then
         d.airborne = true
-        npc.SpriteOffset = npc.SpriteOffset + Vector(0,d.zvel)
+        if npc.SpriteOffset.Y + d.zvel < 0 then
+            npc.SpriteOffset = npc.SpriteOffset + Vector(0,d.zvel)
+        else
+            npc.SpriteOffset.Y = 0
+        end
+        npc.EntityCollisionClass = 0
         d.zvel = d.zvel + 0.4
     else
         npc.Velocity = npc.Velocity * 0.8
@@ -112,6 +122,9 @@ function mod:DetachedDriedAI(npc, sprite, d)
     if d.state == "jumpedon" then
         npc.EntityCollisionClass = 0
         mod:spritePlay(sprite, "HangejumpExplodeRed")
+        if sprite:IsFinished() then
+            npc:Remove()
+        end
     end
 
 end

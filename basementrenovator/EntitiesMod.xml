@@ -200,15 +200,20 @@ Use 2, 4, or 6 normally.
    </bitfield>
 </entity>
 <!--163-->
-<entity ID="163" Variant="2" Name="WilloWalker NPC" Image="mah boys/willowalker.png" Tags="NPC"/>
+
+<entity ID="163" Variant="2" Name="WilloWalker NPC" Image="mah boys/willowalkerog.png" Tags="NPC"/>
 
 <!--240-->
 <entity ID="240" Variant="359" Name="Stall Creep" Image="mah boys/stall_creep.png" BaseHP="10" Tags="Champion" PlaceVisual="WallSnap"/>
 <entity ID="240" Variant="368" Name="Webbed Creep" Image="mah boys/webbed_creep.png" BaseHP="10" Tags="Champion" PlaceVisual="WallSnap"/>
+
 <!--Tainted-->
 <entity ID="426" Variant="0" Name="Tainted Silly" Image="mah boys/sillytainted.png" BaseHP="70" StageHP="13" ShieldStrength="20" Tags="Champion"/>
 <entity ID="426" Variant="1" Name="Tainted String" Image="mah boys/stringtainted.png" BaseHP="70" StageHP="13" ShieldStrength="20" Tags="Champion"/>
 <entity ID="426" Variant="2" Name="&amp;" Image="mah boys/&amp;tainted.png" BaseHP="20" StageHP="20" ShieldStrength="1000" Tags="Champion"/>
+
+<!--Jokes-->
+<entity ID="137" Variant="3939" Name="WilloWalker" Image="mah boys/willowalker.png" BaseHP="n/a" />
 
 <group Name="HOPE Sin Minibosses">
 	<entity Name="Narcissism"/>
@@ -384,6 +389,7 @@ Use 2, 4, or 6 normally.
 			<entity Name="Sam Bear Spawn"/>
 			<entity Name="Jim"/>
 			<entity Name="WilloWalker NPC"/>
+			<entity Name="WilloWalker"/>
 		</group>
 	</group>
 

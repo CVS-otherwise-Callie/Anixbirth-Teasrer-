@@ -33,6 +33,36 @@ local function FindDried(npc, range)
     end
 end
 
+local function FindDetachedDried()
+    local ta = {}
+    local dried = Isaac.GetRoomEntities() --since dried are unlisted entities
+    for k, v in ipairs(dried) do
+        if v.Type == mod.Monsters.DetachedDried.ID and v.Variant == mod.Monsters.DetachedDried.Var and v:GetData().state ~= "jumpedon"then
+            table.insert(ta, v)
+        end
+    end
+    if #ta ==0 then
+        return false
+    else
+        return true
+    end
+end
+
+local function HangejumpCheck() -- if anyone else is summoning dried
+    local ta = {}
+    local hanges = Isaac.GetRoomEntities() --since dried are unlisted entities
+    for k, v in ipairs(hanges) do
+        if v.Type == mod.Monsters.Hangeslip.ID and v.Variant == mod.Monsters.Hangeslip.Var and v:GetData().state == "summon" then
+            table.insert(ta, v)
+        end
+    end
+    if #ta == 0 and not FindDetachedDried() then
+        return false
+    else
+        return true
+    end
+end
+
 local function FindAvailableDetachedDried(npc)
     local path = npc.Pathfinder
     local ta = {}
@@ -55,7 +85,7 @@ local function FindAvailableDetachedDried(npc)
     return ent
 end
 
-function mod:HangesAI(npc, sprite, d)
+function mod:HangesAI(npc, sprite, d) ------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     if not d.oginit then
         sprite:SetOverlayFrame("HangeHeadDown", 1)
@@ -110,7 +140,7 @@ function mod:HangesAI(npc, sprite, d)
 
 end
 
-function mod:HangedriedAI(npc, sprite, d)
+function mod:HangedriedAI(npc, sprite, d) ------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     local player = npc:GetPlayerTarget()
     local playerpos = mod:confusePos(npc, player.Position, 5, nil, nil)
@@ -237,7 +267,7 @@ function mod:HangedriedAI(npc, sprite, d)
 
 end
 
-function mod:HangedriedRenderAI(npc, sprite, d)
+function mod:HangedriedRenderAI(npc, sprite, d) ------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     local player = npc:GetPlayerTarget()
     local playerpos = mod:confusePos(npc, player.Position, 5, nil, nil)
@@ -275,7 +305,7 @@ function mod:HangedriedRenderAI(npc, sprite, d)
 
 end
 
-function mod:HangeslipAI(npc, sprite, d)
+function mod:HangeslipAI(npc, sprite, d) ------------------------------------------------------------------------------------------------------------------------------------------------------------
     local player = npc:GetPlayerTarget()
     local playerpos = mod:confusePos(npc, player.Position, 5, nil, nil)
     local path = npc.Pathfinder
@@ -315,7 +345,7 @@ function mod:HangeslipAI(npc, sprite, d)
     end
 end
 
-function mod:HangejumpAI(npc, sprite, d)
+function mod:HangejumpAI(npc, sprite, d) ------------------------------------------------------------------------------------------------------------------------------------------------------------
     local player = npc:GetPlayerTarget()
     local playerpos = mod:confusePos(npc, player.Position, 5, nil, nil)
     local path = npc.Pathfinder
@@ -325,6 +355,7 @@ function mod:HangejumpAI(npc, sprite, d)
 
     d.Scale = npc.Scale
     if not d.init then
+        d.jumpcooldown = 0
         d.init = true
         d.state = "reveal"
     else
@@ -355,7 +386,7 @@ function mod:HangejumpAI(npc, sprite, d)
                 local targetvelocity = (childpos - npc.Position):Resized(speed)
                 npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 0.3)
             else
-                path:FindGridPath(childpos, 0.8, 1, true)
+                path:FindGridPath(childpos, 0.4, 1, true)
             end
         else
             if mod:isScare(npc) then
@@ -365,8 +396,19 @@ function mod:HangejumpAI(npc, sprite, d)
                 local targetvelocity = (playerpos - npc.Position):Resized(speed)
                 npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 0.3)
             else
-                path:FindGridPath(playerpos, 0.8, 1, true)
+                path:FindGridPath(playerpos, 0.4, 1, true)
             end
+        end
+
+        if not HangejumpCheck() then
+            d.jumpcooldown = d.jumpcooldown + 1
+        else
+            d.jumpcooldown = 0
+        end
+
+        if d.jumpcooldown > 50 then
+            d.state = "summon"
+            d.jumpcooldown = 0
         end
 
         sprite:SetOverlayFrame("HangejumpReveal", 31)
@@ -377,6 +419,15 @@ function mod:HangejumpAI(npc, sprite, d)
             sprite:SetFrame("WalkVert", 0)
         end
 
+    end
+
+    if d.state == "summon" then
+        npc:MultiplyFriction(0.8)
+        sprite:RemoveOverlay()
+        mod:spritePlay(sprite, "HangejumpSummon")
+        if sprite:IsFinished() then
+            d.state = "chase"
+        end
     end
 
     if d.state == "smash" then
@@ -407,6 +458,19 @@ function mod:HangejumpAI(npc, sprite, d)
         end
     end
 
+    if sprite:IsEventTriggered("Throwend") then
+        game:ShakeScreen(10)
+        for i = 1, 5, 1 do
+            local sack = Isaac.Spawn(mod.Monsters.DetachedDried.ID, mod.Monsters.DetachedDried.Var, 0, room:FindFreeTilePosition ( room:GetRandomPosition(16), 1000 ), Vector(0,0), npc) --FindFreeTilePosition ( Vector Pos, float DistanceThreshold )
+            sack:ClearEntityFlags(EntityFlag.FLAG_APPEAR)
+            sack.Parent = npc
+            sack.SpriteOffset.Y = math.random(-400, -300) 
+            if math.random(1,2) == 2 then
+                sack:GetSprite().FlipX = true
+            end
+        end
+    end
+
     if d.detacheddried and ((d.detacheddried:IsDead() or not d.detacheddried:Exists()) or d.detacheddried:GetData().state == "jumpedon" or not path:HasPathToPos(d.detacheddried.Position, false)) then
         npc.Parent = nil
         d.detacheddried.Child = nil
@@ -423,7 +487,7 @@ function mod:HangejumpAI(npc, sprite, d)
 
 end
 
-function mod:HangethrowAI(npc, sprite, d)
+function mod:HangethrowAI(npc, sprite, d) ------------------------------------------------------------------------------------------------------------------------------------------------------------
     local player = npc:GetPlayerTarget()
     local playerpos = mod:confusePos(npc, player.Position, 5, nil, nil)
     local path = npc.Pathfinder
@@ -627,7 +691,7 @@ function mod:HangethrowAI(npc, sprite, d)
     end
 end
 
-function mod:HangekickAI(npc, sprite, d)
+function mod:HangekickAI(npc, sprite, d) ------------------------------------------------------------------------------------------------------------------------------------------------------------
     local player = npc:GetPlayerTarget()
     local playerpos = mod:confusePos(npc, player.Position, 5, nil, nil)
     local path = npc.Pathfinder

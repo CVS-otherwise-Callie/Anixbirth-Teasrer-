@@ -351,31 +351,31 @@
         <gibs amount="6" blood="2" bone="1" eye="1" gut="1" large="0" />
         <devolve id="161.0.0" weight="1" />
     </entity>
-    <entity anm2path="monsters/dried/detacheddried.anm2" id="161" variant="51" subtype="1" reroll="false" baseHP="20" boss="0" champion="0" collisionDamage="1" collisionMass="40" collisionRadius="10" collisionRadiusXMulti="2" friction="1" name="Detached Dried (Black)" shutdoors="false" numGridCollisionPoints="12" shadowSize="20" stageHP="0" portrait="51">
+    <entity anm2path="monsters/dried/detacheddried.anm2" id="161" variant="51" subtype="1" reroll="false" baseHP="20" boss="0" champion="0" collisionDamage="0" collisionMass="40" collisionRadius="10" collisionRadiusXMulti="2" friction="1" name="Detached Dried (Black)" shutdoors="false" numGridCollisionPoints="12" shadowSize="20" stageHP="0" portrait="51">
         <gibs amount="6" blood="2" bone="1" eye="1" gut="1" large="0" />
         <devolve id="161.0.0" weight="1" />
     </entity>
-    <entity anm2path="monsters/dried/detacheddried.anm2" id="161" variant="51" subtype="2" reroll="false" baseHP="20" boss="0" champion="0" collisionDamage="1" collisionMass="40" collisionRadius="10" collisionRadiusXMulti="2" friction="1" name="Detached Dried (White)" shutdoors="false" numGridCollisionPoints="12" shadowSize="20" stageHP="0">
+    <entity anm2path="monsters/dried/detacheddried.anm2" id="161" variant="51" subtype="2" reroll="false" baseHP="20" boss="0" champion="0" collisionDamage="0" collisionMass="40" collisionRadius="10" collisionRadiusXMulti="2" friction="1" name="Detached Dried (White)" shutdoors="false" numGridCollisionPoints="12" shadowSize="20" stageHP="0">
         <bestiary transform="0,0,1" anim="bag1" />
         <gibs amount="6" blood="2" bone="1" eye="1" gut="1" large="0" />
         <devolve id="161.0.0" weight="1" />
     </entity>
-    <entity anm2path="monsters/dried/detacheddried.anm2" id="161" variant="51" subtype="3" reroll="false" baseHP="20" boss="0" champion="0" collisionDamage="1" collisionMass="40" collisionRadius="10" collisionRadiusXMulti="2" friction="1" name="Detached Dried (Brown)" shutdoors="false" numGridCollisionPoints="12" shadowSize="20" stageHP="0">
+    <entity anm2path="monsters/dried/detacheddried.anm2" id="161" variant="51" subtype="3" reroll="false" baseHP="20" boss="0" champion="0" collisionDamage="0" collisionMass="40" collisionRadius="10" collisionRadiusXMulti="2" friction="1" name="Detached Dried (Brown)" shutdoors="false" numGridCollisionPoints="12" shadowSize="20" stageHP="0">
         <bestiary transform="0,0,1" anim="bag3" />
         <gibs amount="6" blood="2" bone="1" eye="1" gut="1" large="0" />
         <devolve id="161.0.0" weight="1" />
     </entity>
-    <entity anm2path="monsters/dried/detacheddried.anm2" id="161" variant="51" subtype="4" reroll="false" baseHP="20" boss="0" champion="0" collisionDamage="1" collisionMass="40" collisionRadius="10" collisionRadiusXMulti="2" friction="1" name="Detached Dried (Green)" shutdoors="false" numGridCollisionPoints="12" shadowSize="20" stageHP="0">
+    <entity anm2path="monsters/dried/detacheddried.anm2" id="161" variant="51" subtype="4" reroll="false" baseHP="20" boss="0" champion="0" collisionDamage="0" collisionMass="40" collisionRadius="10" collisionRadiusXMulti="2" friction="1" name="Detached Dried (Green)" shutdoors="false" numGridCollisionPoints="12" shadowSize="20" stageHP="0">
         <bestiary transform="0,0,1" anim="bag4" />
         <gibs amount="6" blood="2" bone="1" eye="1" gut="1" large="0" />
         <devolve id="161.0.0" weight="1" />
     </entity>
-    <entity anm2path="monsters/dried/detacheddried.anm2" id="161" variant="51" subtype="5" reroll="false" baseHP="20" boss="0" champion="0" collisionDamage="1" collisionMass="40" collisionRadius="10" collisionRadiusXMulti="2" friction="1" name="Detached Dried (Yellow)" shutdoors="false" numGridCollisionPoints="12" shadowSize="20" stageHP="0">
+    <entity anm2path="monsters/dried/detacheddried.anm2" id="161" variant="51" subtype="5" reroll="false" baseHP="20" boss="0" champion="0" collisionDamage="0" collisionMass="40" collisionRadius="10" collisionRadiusXMulti="2" friction="1" name="Detached Dried (Yellow)" shutdoors="false" numGridCollisionPoints="12" shadowSize="20" stageHP="0">
         <bestiary transform="0,0,1" anim="bag3" />
         <gibs amount="6" blood="2" bone="1" eye="1" gut="1" large="0" />
         <devolve id="161.0.0" weight="1" />
     </entity>
-    <entity anm2path="monsters/dried/detacheddried.anm2" id="161" variant="51" subtype="6" reroll="false" baseHP="20" boss="0" champion="0" collisionDamage="1" collisionMass="40" collisionRadius="10" collisionRadiusXMulti="2" friction="1" name="Detached Dried (Red)" shutdoors="false" numGridCollisionPoints="12" shadowSize="20" stageHP="0">
+    <entity anm2path="monsters/dried/detacheddried.anm2" id="161" variant="51" subtype="6" reroll="false" baseHP="20" boss="0" champion="0" collisionDamage="0" collisionMass="40" collisionRadius="10" collisionRadiusXMulti="2" friction="1" name="Detached Dried (Red)" shutdoors="false" numGridCollisionPoints="12" shadowSize="20" stageHP="0">
         <bestiary transform="0,0,1" anim="bag1" />
         <gibs amount="6" blood="2" bone="1" eye="1" gut="1" large="0" />
         <devolve id="161.0.0" weight="1" />
@@ -688,15 +688,15 @@
 
     <!-- Bosses -->
 
-    <entity id="139" variant="48"  name="Hop" anm2path="bosses\hopperbrothers\hop.anm2" hasFloorAlts="false" reroll="false" baseHP="120" boss="1" champion="0" collisionDamage="1" collisionMass="24" collisionRadius="25" collisionRadiusXMulti="1.5" friction="0" numGridCollisionPoints="12" shadowSize="45" stageHP="20" portrait="0" tags="noreroll">
+    <entity id="136" variant="48"  name="Hop" anm2path="bosses\hopperbrothers\hop.anm2" hasFloorAlts="false" reroll="false" baseHP="120" boss="1" champion="0" collisionDamage="1" collisionMass="24" collisionRadius="25" collisionRadiusXMulti="1.5" friction="0" numGridCollisionPoints="12" shadowSize="45" stageHP="20" portrait="0" tags="noreroll">
         <gibs amount="20" blood="1" bone="1" eye="1" gut="1" large="1" />
     </enitity>
 
-    <entity id="139" variant="49"  name="Skip" anm2path="bosses\hopperbrothers\skip.anm2" hasFloorAlts="false" reroll="false" baseHP="90" boss="1" champion="0" collisionDamage="1" collisionMass="16" collisionRadius="20" collisionRadiusXMulti="2.5" friction="0" numGridCollisionPoints="12" shadowSize="60" stageHP="20" portrait="0" tags="noreroll">
+    <entity id="136" variant="49"  name="Skip" anm2path="bosses\hopperbrothers\skip.anm2" hasFloorAlts="false" reroll="false" baseHP="90" boss="1" champion="0" collisionDamage="1" collisionMass="16" collisionRadius="20" collisionRadiusXMulti="2.5" friction="0" numGridCollisionPoints="12" shadowSize="60" stageHP="20" portrait="0" tags="noreroll">
         <gibs amount="20" blood="1" bone="1" eye="1" gut="1" large="1" />
     </enitity>
 
-    <entity id="139" variant="50"  name="Jump" anm2path="bosses\hopperbrothers\jump.anm2" hasFloorAlts="false" reroll="false" baseHP="90" boss="1" champion="0" collisionDamage="1" collisionMass="8" collisionRadius="20" collisionRadiusXMulti="1.5" friction="0" numGridCollisionPoints="12" shadowSize="32" stageHP="20" portrait="0" tags="noreroll">
+    <entity id="136" variant="50"  name="Jump" anm2path="bosses\hopperbrothers\jump.anm2" hasFloorAlts="false" reroll="false" baseHP="90" boss="1" champion="0" collisionDamage="1" collisionMass="8" collisionRadius="20" collisionRadiusXMulti="1.5" friction="0" numGridCollisionPoints="12" shadowSize="32" stageHP="20" portrait="0" tags="noreroll">
         <gibs amount="20" blood="1" bone="1" eye="1" gut="1" large="1" />
     </enitity>
 
@@ -706,7 +706,7 @@
         <devolve id="10.1.0" weight="1" />
     </entity>
 
-    <entity anm2path="jokes/enemies/willowalker/willowalker.anm2" id="139" variant="5939" reroll="false" baseHP="1" boss="0" champion="0" collisionDamage="0" collisionMass="0" collisionRadius="13" friction="1" name="Willowalker" numGridCollisionPoints="12" shadowSize="12" stageHP="0">
+    <entity anm2path="jokes/enemies/willowalker/willowalker.anm2" id="137" variant="3939" reroll="false" baseHP="1" boss="0" champion="0" collisionDamage="0" collisionMass="0" collisionRadius="13" friction="1" name="Willowalker" numGridCollisionPoints="12" shadowSize="12" stageHP="0">
         <gibs amount="0"/>
     </entity>
 
