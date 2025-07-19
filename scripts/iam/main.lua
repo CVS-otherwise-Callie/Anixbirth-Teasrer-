@@ -68,7 +68,8 @@ FHAC.CVSMonsters = {
 	Suckup = mod:ENT("Suck Up"),
 	PottedFatty = mod:ENT("Potted Fatty"),
 	Hanger = mod:ENT("The Hanged"),
-	SamBabies = mod:ENT("Sam Bear Spawn")
+	SamBabies = mod:ENT("Sam Bear Spawn"),
+	ScorchedPeat = mod:ENT("Scorched Peat")
 }
 
 FHAC.CVSEffects = {
@@ -189,7 +190,8 @@ FHAC:LoadScripts("scripts.iam.monsters", {
 	"rehost",
 	"suckup",
 	"pottedfatty",
-	"hanger"
+	"hanger",
+	"scorchedpeat"
 })
 
 FHAC:LoadScripts("scripts.iam.minibosses", {
@@ -1209,6 +1211,30 @@ function mod:GlobalCVSEntityStuff(npc, sprite, d)
 		end
 	end
 
+end
+
+function FHAC:GetTrueAngle(angle)
+
+	local num = angle
+	if angle > 360 then
+		while angle > 360 do
+			angle = angle - 360
+		end
+		return angle
+	end
+
+	if angle < 0 then
+		while angle < 0 do
+			angle = 360 + angle
+		end
+		return angle
+	end
+
+	if math.abs(angle) ~= angle then
+		return 180 + math.abs(angle)
+	else
+		return angle
+	end
 end
 
 -- CALLBACKS --

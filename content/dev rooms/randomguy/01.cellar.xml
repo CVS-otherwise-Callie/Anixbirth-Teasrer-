@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <rooms>
-	<room variant="0" name="random - no way back" type="1" subtype="0" shape="3" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-07-05T05:00+00:00">
+	<room variant="0" name="random - no way back" type="1" subtype="0" shape="3" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
 		<spawn x="4" y="0">
@@ -31,7 +31,7 @@
 			<entity type="242" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="random - hasppy face" type="1" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="0.3" lastTestTime="2025-07-05T05:20+00:00">
+	<room variant="0" name="random - hasppy face" type="1" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="0.30000001192092896">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -148,7 +148,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="random - :)" type="1" subtype="0" shape="3" width="13" height="7" difficulty="1" weight="1.0" lastTestTime="2025-07-05T05:00+00:00">
+	<room variant="0" name="random - :)" type="1" subtype="0" shape="3" width="13" height="7" difficulty="1" weight="1.0">
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
 		<spawn x="4" y="0">
@@ -209,7 +209,7 @@
 			<entity type="161" variant="7" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="random - im soooo good at wave rooms right guys" type="1" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="1.0" lastTestTime="2025-07-05T05:00+00:00">
+	<room variant="0" name="random - im soooo good at wave rooms right guys" type="1" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -320,7 +320,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="random - I LOVE WAVE ROOMS" type="1" subtype="0" shape="8" width="26" height="14" difficulty="1" weight="1.0" lastTestTime="2025-07-05T05:00+00:00">
+	<room variant="0" name="random - I LOVE WAVE ROOMS" type="1" subtype="0" shape="8" width="26" height="14" difficulty="1" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -714,7 +714,7 @@
 			<entity type="256" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="random - explosions for breakfast" type="1" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="1.0" lastTestTime="2025-07-05T05:00+00:00">
+	<room variant="0" name="random - explosions for breakfast" type="1" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -819,7 +819,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="random - cvs is this a pvz reference" type="1" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="1.0" lastTestTime="2025-07-05T05:00+00:00">
+	<room variant="0" name="random - cvs is this a pvz reference" type="1" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -897,7 +897,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="random - i think i spelt referemce wrong" type="1" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="1.0" lastTestTime="2025-07-05T05:00+00:00">
+	<room variant="0" name="random - i think i spelt referemce wrong" type="1" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -924,7 +924,7 @@
 			<entity type="6" variant="4" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="random - my cool room (2015) [HD]" type="1" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="1.0" lastTestTime="2025-07-05T05:00+00:00">
+	<room variant="0" name="random - my cool room (2015) [HD]" type="1" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -1104,7 +1104,7 @@
 			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="random - who's up sillying it rn" type="1" subtype="0" shape="4" width="13" height="14" difficulty="1" weight="1.0" lastTestTime="2025-07-05T05:00+00:00">
+	<room variant="0" name="random - who's up sillying it rn" type="1" subtype="0" shape="4" width="13" height="14" difficulty="1" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -1248,7 +1248,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="random - goo goo gaga" type="1" subtype="0" shape="2" width="13" height="7" difficulty="1" weight="1.0" lastTestTime="2025-07-05T05:00+00:00">
+	<room variant="0" name="random - goo goo gaga" type="1" subtype="0" shape="2" width="13" height="7" difficulty="1" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="13" y="3"/>
 		<spawn x="5" y="3">
@@ -1261,7 +1261,7 @@
 			<entity type="161" variant="38" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="random - coughing babies vs hydrogen Roundy" type="1" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="1.0" lastTestTime="2025-07-05T05:00+00:00">
+	<room variant="0" name="random - coughing babies vs hydrogen Roundy" type="1" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -1342,7 +1342,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="random - do it" type="1" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="1.0" lastTestTime="2025-07-05T05:00+00:00">
+	<room variant="0" name="random - do it" type="1" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -1395,7 +1395,7 @@
 			<entity type="161" variant="44" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="random - you vs the guys she told you not to worry about" type="1" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="1.0" lastTestTime="2025-07-05T05:00+00:00">
+	<room variant="0" name="random - you vs the guys she told you not to worry about" type="1" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -1476,7 +1476,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="random - honey, i shrunk the kids!" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-07-05T05:00+00:00">
+	<room variant="0" name="random - honey, i shrunk the kids!" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -1521,7 +1521,7 @@
 			<entity type="161" variant="35" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="random - tear buffet" type="1" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="1.0" lastTestTime="2025-07-05T05:00+00:00">
+	<room variant="0" name="random - tear buffet" type="1" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -1557,7 +1557,7 @@
 			<entity type="161" variant="65" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="random - tear MUKBANG" type="1" subtype="0" shape="9" width="26" height="14" difficulty="1" weight="1.0" lastTestTime="2025-07-05T05:00+00:00">
+	<room variant="0" name="random - tear MUKBANG" type="1" subtype="0" shape="9" width="26" height="14" difficulty="1" weight="1.0">
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="6"/>
 		<door exists="True" x="6" y="14"/>
@@ -1738,7 +1738,7 @@
 			<entity type="5" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="random - TELEPORTING FLIES" type="1" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="1.0" lastTestTime="2025-07-05T05:00+00:00">
+	<room variant="0" name="random - TELEPORTING FLIES" type="1" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -1819,7 +1819,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="random - im so sad" type="1" subtype="0" shape="3" width="13" height="7" difficulty="1" weight="0.25" lastTestTime="2025-07-05T05:00+00:00">
+	<room variant="0" name="random - im so sad" type="1" subtype="0" shape="3" width="13" height="7" difficulty="1" weight="0.25">
 		<door exists="False" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
 		<spawn x="4" y="0">
@@ -1856,7 +1856,7 @@
 			<entity type="1011" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="random - close quarters" type="1" subtype="0" shape="2" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-05-14T22:59+00:00">
+	<room variant="0" name="random - close quarters" type="1" subtype="0" shape="2" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="13" y="3"/>
 		<spawn x="0" y="2">
@@ -1887,7 +1887,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="random - sticky feet" type="1" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="1.0" lastTestTime="2025-05-14T22:59+00:00">
+	<room variant="0" name="random - sticky feet" type="1" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -1971,7 +1971,7 @@
 			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="random - potluck" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-07-05T05:07+00:00">
+	<room variant="0" name="random - potluck" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -2016,7 +2016,7 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="random - what do i even name this" type="1" subtype="0" shape="4" width="13" height="14" difficulty="1" weight="1.0" lastTestTime="2025-07-05T05:07+00:00">
+	<room variant="0" name="random - what do i even name this" type="1" subtype="0" shape="4" width="13" height="14" difficulty="1" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -2309,7 +2309,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="random - sad stoner" type="1" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="1.0" lastTestTime="2025-07-05T05:07+00:00">
+	<room variant="0" name="random - sad stoner" type="1" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -2366,7 +2366,7 @@
 			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="random - cobblestone wall" type="1" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="1.0" lastTestTime="2025-07-05T05:07+00:00">
+	<room variant="0" name="random - cobblestone wall" type="1" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -2405,7 +2405,7 @@
 			<entity type="161" variant="30" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="random - broken water on broken bridges (sorry)" type="1" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="1.0" lastTestTime="2025-07-05T05:07+00:00">
+	<room variant="0" name="random - broken water on broken bridges (sorry)" type="1" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -2603,7 +2603,7 @@
 			<entity type="199" variant="21" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="random - took me an hour to learn waves bruh" type="1" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="1.0" lastTestTime="2025-07-05T05:07+00:00">
+	<room variant="0" name="random - took me an hour to learn waves bruh" type="1" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -2765,7 +2765,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="random - birth fortress" type="1" subtype="0" shape="6" width="26" height="7" difficulty="1" weight="1.0" lastTestTime="2025-07-05T05:07+00:00">
+	<room variant="0" name="random - birth fortress" type="1" subtype="0" shape="6" width="26" height="7" difficulty="1" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -2929,7 +2929,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="random - forgotten closet" type="1" subtype="0" shape="3" width="13" height="7" difficulty="1" weight="0.25" lastTestTime="2025-07-05T05:07+00:00">
+	<room variant="0" name="random - forgotten closet" type="1" subtype="0" shape="3" width="13" height="7" difficulty="1" weight="0.25">
 		<door exists="False" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
 		<spawn x="6" y="0">
@@ -2960,7 +2960,7 @@
 			<entity type="13" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="random - $80 for physical???" type="1" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="1.0" lastTestTime="2025-07-05T05:07+00:00">
+	<room variant="0" name="random - $80 for physical???" type="1" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -3080,7 +3080,7 @@
 			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="random - OH GOD GET IT OFF ME" type="1" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="1.0" lastTestTime="2025-07-05T05:07+00:00">
+	<room variant="0" name="random - OH GOD GET IT OFF ME" type="1" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -3152,7 +3152,7 @@
 			<entity type="161" variant="43" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="random - therhntrh" type="1" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="1.0" lastTestTime="2025-07-05T05:07+00:00">
+	<room variant="0" name="random - therhntrh" type="1" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -3208,7 +3208,7 @@
 			<entity type="205" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="random - push da stony" type="1" subtype="0" shape="3" width="13" height="7" difficulty="1" weight="1.0" lastTestTime="2025-07-05T05:07+00:00">
+	<room variant="0" name="random - push da stony" type="1" subtype="0" shape="3" width="13" height="7" difficulty="1" weight="1.0">
 		<door exists="True" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
 		<spawn x="4" y="0">
@@ -3258,7 +3258,7 @@
 			<entity type="199" variant="29" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="random - roach jumpscare" type="1" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="1.0" lastTestTime="2025-07-05T05:07+00:00">
+	<room variant="0" name="random - roach jumpscare" type="1" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -3355,7 +3355,7 @@
 			<entity type="161" variant="38" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="random - what could be behind that pillar?" type="4" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="1.0" lastTestTime="2025-07-05T05:15+00:00">
+	<room variant="0" name="random - what could be behind that pillar?" type="4" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -3424,7 +3424,7 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="random - wrath with a spice of STONER!" type="6" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="1.0" lastTestTime="2025-05-14T22:59+00:00">
+	<room variant="0" name="random - wrath with a spice of STONER!" type="6" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -3602,7 +3602,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="random - stay in the cobwebs for a prize" type="6" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="1.0" lastTestTime="2025-05-14T22:59+00:00">
+	<room variant="0" name="random - stay in the cobwebs for a prize" type="6" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -3648,7 +3648,7 @@
 		</spawn>
 		<spawn x="3" y="2">
 			<entity type="161" variant="41" subtype="6" weight="1.0"/>
-			<entity type="0" variant="10" subtype="0" weight="0.8"/>
+			<entity type="0" variant="10" subtype="0" weight="0.800000011920929"/>
 		</spawn>
 		<spawn x="4" y="2">
 			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
@@ -3667,7 +3667,7 @@
 		</spawn>
 		<spawn x="9" y="2">
 			<entity type="161" variant="41" subtype="6" weight="1.0"/>
-			<entity type="0" variant="10" subtype="0" weight="0.8"/>
+			<entity type="0" variant="10" subtype="0" weight="0.800000011920929"/>
 		</spawn>
 		<spawn x="3" y="3">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
@@ -3686,7 +3686,7 @@
 		</spawn>
 		<spawn x="3" y="4">
 			<entity type="161" variant="41" subtype="6" weight="1.0"/>
-			<entity type="0" variant="10" subtype="0" weight="0.8"/>
+			<entity type="0" variant="10" subtype="0" weight="0.800000011920929"/>
 		</spawn>
 		<spawn x="4" y="4">
 			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
@@ -3705,7 +3705,7 @@
 		</spawn>
 		<spawn x="9" y="4">
 			<entity type="161" variant="41" subtype="6" weight="1.0"/>
-			<entity type="0" variant="10" subtype="0" weight="0.8"/>
+			<entity type="0" variant="10" subtype="0" weight="0.800000011920929"/>
 		</spawn>
 		<spawn x="0" y="5">
 			<entity type="1940" variant="0" subtype="0" weight="1.0"/>
@@ -3747,7 +3747,7 @@
 			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="random - &quot;they won't find us here!&quot;" type="4" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="1.0" lastTestTime="2025-05-14T22:59+00:00">
+	<room variant="0" name="random - &quot;they won't find us here!&quot;" type="4" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
