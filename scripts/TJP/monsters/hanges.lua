@@ -106,10 +106,10 @@ function mod:HangesAI(npc, sprite, d) ------------------------------------------
             d.movable = true
             if d.hangedriedanim ~= "Drop" then
                 if d.olddried then
-                    print("old")
+                    --print("old")
                     npc.SpriteOffset = Vector(0,-54) + d.olddried.SpriteOffset
                 else
-                    print("new")
+                    --print("new")
                     npc.SpriteOffset = Vector(0,-54) + d.Dried.SpriteOffset
                 end
                 npc.Position = d.Dried.Position

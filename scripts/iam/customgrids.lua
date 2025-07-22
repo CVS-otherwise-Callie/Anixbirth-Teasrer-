@@ -269,6 +269,8 @@ mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
     local room = game:GetRoom()
     npc.GridCollisionClass = GridCollisionClass.COLLISION_NONE
 
+    npc:ClearEntityFlags(EntityFlag.FLAG_APPEAR)
+
     mod:SaveEntToRoom(npc)
 
     if d.anixbirthDONOTDOANYTHING then

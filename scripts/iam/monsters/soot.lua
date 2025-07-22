@@ -41,14 +41,16 @@ function mod:SootAI(npc, sprite, d)
         end
     end
 
+    npc:MultiplyFriction(0.9)
+
     if d.state == "move" then
         --sprite.Rotation = d.rot
         if mod:isScare(npc) then
             local targetvelocity = (targetpos - npc.Position):Resized(-7)
-            npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 0.6)
+            npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 0.9)
         elseif room:CheckLine(npc.Position,targetpos,0,1,false,false) then
             local targetvelocity = (targetpos - npc.Position):Resized(7)
-            npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 0.6)
+            npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 0.9)
         else
             path:FindGridPath(targetpos, 1.3, 1, true)
         end

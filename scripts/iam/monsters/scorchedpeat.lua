@@ -53,10 +53,28 @@ function mod:ScorchedPeatAI(npc, sprite, d)
     end
 
     if not d.init then
-        d.state = "attack"
+        d.state = "idle"
+        npc.StateFrame = 70
         d.init = true
     else
         npc.StateFrame = npc.StateFrame + 1
+    end
+
+
+    if d.state == "idle" then
+        
+        if npc.StateFrame > 60 then
+            local targetvelocity = ((mod:freeGrid(npc, false, 300, 200) or mod:freeHole(npc, false, 300, 0)) - npc.Position):Resized(7)
+            npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 0.6)
+            npc.StateFrame = 0
+        end
+
+        npc:MultiplyFriction(0.95)
+
+        if npc.Position:Distance(playerpos) < 200 then
+            d.state = "attack"
+        end
+
     end
 
 
@@ -64,11 +82,22 @@ function mod:ScorchedPeatAI(npc, sprite, d)
 
         local percent = math.abs(math.ceil(300 - npc.Position:Distance(playerpos))/1000)
 
-        local targpos = Vector((target.Position.X - npc.Position.X) * percent, (target.Position.Y - npc.Position.Y) * percent)
+        local targpos
 
-        npc.Velocity = mod:Lerp(npc.Velocity, targpos, 0.06)
+        if not d.missTarg then
+            targpos = Vector((target.Position.X - npc.Position.X) * percent, (target.Position.Y - npc.Position.Y) * percent)
+        else
+            targpos = Vector((d.missTarg.X - npc.Position.X) * percent, (d.missTarg.Y - npc.Position.Y) * percent)
+        end
 
-        if npc.Position:Distance(playerpos) < 80 or npc.StateFrame > 70 then
+        npc.Velocity = mod:Lerp(npc.Velocity, targpos, 0.04)
+
+        if npc.Position:Distance(playerpos) < 80 then
+            d.missTarg = playerpos
+        end
+
+        if (d.missTarg and npc.Position:Distance(d.missTarg) < 30) or npc.StateFrame > 70 then
+            d.missTarg = nil
             npc.StateFrame = 0
             d.state = "escape"
             d.NewPos = GetScaredPosition()
@@ -86,7 +115,11 @@ function mod:ScorchedPeatAI(npc, sprite, d)
 
         if npc.StateFrame > 50 or npc.Position:Distance(d.NewPos) < 20 then
             npc.StateFrame = 0
-            d.state = "attack"
+            if math.random(2) == 1 then
+                d.state = "attack"
+            else
+                d.state = "idle"
+            end
         end 
     end
 

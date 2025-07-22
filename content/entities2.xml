@@ -447,6 +447,11 @@
     </entity>
 
     <!--Burning Basement-->
+    <entity anm2path="monsters/fivehead/fivehead.anm2" id="161" variant="75" reroll="true" baseHP="15" boss="0" champion="1" collisionDamage="1" collisionMass="40" collisionRadius="13" friction="0.1" name="Facebalm" numGridCollisionPoints="12" shadowSize="14" stageHP="0" hasFloorAlts="true" bestiary="true" portrait="75">
+        <bestiary transform="0,0,1" anim="Shake" />
+        <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
+        <devolve id="161.13.0" weight="1" />
+    </entity>
     <entity id="161" variant="80" name="Scorched Peat" anm2path="monsters/soot/soot.anm2" reroll="true" baseHP="10" boss="0" champion="1" collisionDamage="1" collisionMass="3" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="13" stageHP="0" portrait="80" gridCollision="walls">
 		<bestiary transform="0,0,1" anim="Idle" />
         <gibs amount="6" blood="1" bone="1" eye="0" gut="1" large="0" />
@@ -755,15 +760,17 @@
     <!--Effects-->
 
     <!--THERES NOOOO WAY THIS BREAKS FIEND FOLIO RIGHT GUYS?????-->
-    <entity anm2path="effects/nothing.anm2" name="Blank Effect Anixbirth" id="1000" variant="419" subtype="55" baseHP="0" stageHP="0" shieldStrength="0" boss="0" champion="0" collisionDamage="0" collisionMass="0" collisionRadius="0" friction="1" numGridCollisionPoints="0" shadowSize="0"/>
-    <entity anm2path="effects/lightning/zapperteller/effect_zappertellerlightning.anm2" name="Zapper Teller Lightning" id="1000" variant="420" subtype="55" baseHP="0" stageHP="0" shieldStrength="0" boss="0" champion="0" collisionDamage="0" collisionMass="0" collisionRadius="0" friction="1" numGridCollisionPoints="0" shadowSize="0"/>
-    <entity anm2path="effects/blackscreen.anm2" name="BlackOverlayBox" id="1000" variant="421" subtype="55" baseHP="0" stageHP="0" shieldStrength="0" boss="0" champion="0" collisionDamage="0" collisionMass="0" collisionRadius="0" friction="1" numGridCollisionPoints="0" shadowSize="0"/>
-    <entity anm2path="effects/ruin/normaltextbox.anm2" name="Text Box" id="1000" variant="424" subtype="55" baseHP="0" stageHP="0" shieldStrength="0" boss="0" champion="0" collisionDamage="0" collisionMass="0" collisionRadius="0" friction="1" numGridCollisionPoints="0" shadowSize="0"/>
-    <entity anm2path="effects/target/clatterteller/effect_clatterteller_target.anm2" name="Clatter Teller Target" id="1000" variant="425" subtype="55" baseHP="0" stageHP="0" shieldStrength="0" boss="0" champion="0" collisionDamage="0" collisionMass="0" collisionRadius="0" friction="1" numGridCollisionPoints="0" shadowSize="0"/>
-    <entity anm2path="effects/fear effect/fear flower/effect_fearflowerfear.anm2" name="Fear Flower Fear Effect" id="1000" variant="426" subtype="55" baseHP="0" stageHP="0" shieldStrength="0" boss="0" champion="0" collisionDamage="0" collisionMass="0" collisionRadius="0" friction="1" numGridCollisionPoints="0" shadowSize="0"/>
-    <entity anm2path="effects/nothing.anm2" name="Dekatessera Effect" id="1000" variant="427" subtype="55" baseHP="0" stageHP="0" shieldStrength="0" boss="0" champion="0" collisionDamage="0" collisionMass="0" collisionRadius="0" friction="1" numGridCollisionPoints="0" shadowSize="0"/>
-    <entity anm2path="effects/effect_wideweb.anm2" name="Large Spiderweb" id="1000" variant="428" subtype="55" baseHP="0" stageHP="0" shieldStrength="0" boss="0" champion="0" collisionDamage="0" collisionMass="0" collisionRadius="0" friction="1" numGridCollisionPoints="0" shadowSize="0"/>
-
+    <entity anm2path="effects/nothing.anm2" name="Blank Effect Anixbirth" id="1000" variant="419" subtype="0" baseHP="0" stageHP="0" shieldStrength="0" boss="0" champion="0" collisionDamage="0" collisionMass="0" collisionRadius="0" friction="1" numGridCollisionPoints="0" shadowSize="0"/>
+    <entity anm2path="effects/lightning/zapperteller/effect_zappertellerlightning.anm2" name="Zapper Teller Lightning" id="1000" variant="420" subtype="0" baseHP="0" stageHP="0" shieldStrength="0" boss="0" champion="0" collisionDamage="0" collisionMass="0" collisionRadius="0" friction="1" numGridCollisionPoints="0" shadowSize="0"/>
+    <entity anm2path="effects/blackscreen.anm2" name="BlackOverlayBox" id="1000" variant="421" subtype="0" baseHP="0" stageHP="0" shieldStrength="0" boss="0" champion="0" collisionDamage="0" collisionMass="0" collisionRadius="0" friction="1" numGridCollisionPoints="0" shadowSize="0"/>
+    <entity anm2path="effects/ruin/normaltextbox.anm2" name="Text Box" id="1000" variant="424" subtype="0" baseHP="0" stageHP="0" shieldStrength="0" boss="0" champion="0" collisionDamage="0" collisionMass="0" collisionRadius="0" friction="1" numGridCollisionPoints="0" shadowSize="0"/>
+    <entity anm2path="effects/target/clatterteller/effect_clatterteller_target.anm2" name="Clatter Teller Target" id="1000" variant="425" subtype="0" baseHP="0" stageHP="0" shieldStrength="0" boss="0" champion="0" collisionDamage="0" collisionMass="0" collisionRadius="0" friction="1" numGridCollisionPoints="0" shadowSize="0"/>
+    <entity anm2path="effects/fear effect/fear flower/effect_fearflowerfear.anm2" name="Fear Flower Fear Effect" id="1000" variant="426" subtype="0" baseHP="0" stageHP="0" shieldStrength="0" boss="0" champion="0" collisionDamage="0" collisionMass="0" collisionRadius="0" friction="1" numGridCollisionPoints="0" shadowSize="0"/>
+    <entity anm2path="effects/nothing.anm2" name="Dekatessera Effect" id="1000" variant="427" subtype="0" baseHP="0" stageHP="0" shieldStrength="0" boss="0" champion="0" collisionDamage="0" collisionMass="0" collisionRadius="0" friction="1" numGridCollisionPoints="0" shadowSize="0"/>
+    <!--uhhhhmmmmm awkward forget that exists-->
+    <entity anm2path="effects/effect_wideweb.anm2" name="Large Spiderweb" id="1000" variant="428" subtype="0" baseHP="0" stageHP="0" shieldStrength="0" boss="0" champion="0" collisionDamage="0" collisionMass="0" collisionRadius="0" friction="1" numGridCollisionPoints="0" shadowSize="0"/>
+    <!--fire-->
+	<entity anm2path="grid/effect_005_fire.anm2" baseHP="0" boss="0" champion="0" collisionDamage="1" collisionMass="0" collisionRadius="4" friction="1" id="1000" name="Fire Projectile (ANIXBIRTH)" numGridCollisionPoints="1" shadowSize="0" stageHP="0" variant="431"/>
     <!--Joke Effects-->
 
     <entity anm2path="npcs/originalwillowwalker/ogwillobox.anm2" name="OGWilloWalker Box" id="1000" variant="429" subtype="0" baseHP="0" stageHP="0" shieldStrength="0" boss="0" champion="0" collisionDamage="0" collisionMass="0" collisionRadius="0" friction="1" numGridCollisionPoints="0" shadowSize="0"/>
@@ -783,5 +790,9 @@
     <entity id="161" variant="4089" name="Light Pressure Plate Null Entity" reroll="true" baseHP="10" stageHP="0" boss="0" champion="1" collisionDamage="0" collisionMass="0" collisionRadius="0" friction="1" numGridCollisionPoints="0" shadowSize="0" anm2path="blank.anm2">
         <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
     </entity>
+
+    <!--pray no one else uses this-->
+    <entity anm2path="effects/nothing.anm2" name="Quiz Question Placement" id="982" variant="419" subtype="0" baseHP="0" stageHP="0" shieldStrength="0" boss="0" champion="0" collisionDamage="0" collisionMass="0" shutdoors="false" collisionRadius="0" friction="1" numGridCollisionPoints="0" shadowSize="0"/>
+    <entity anm2path="effects/nothing.anm2" name="IsMoQu Custom Grid Spawn" id="634" variant="0" subtype="0" baseHP="0" stageHP="0" shieldStrength="0" boss="0" champion="0" collisionDamage="0" collisionMass="0" shutdoors="false" collisionRadius="0" friction="1" numGridCollisionPoints="0" shadowSize="0"/>
 
 </entities>

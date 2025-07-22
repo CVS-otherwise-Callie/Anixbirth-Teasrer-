@@ -69,7 +69,8 @@ FHAC.CVSMonsters = {
 	PottedFatty = mod:ENT("Potted Fatty"),
 	Hanger = mod:ENT("The Hanged"),
 	SamBabies = mod:ENT("Sam Bear Spawn"),
-	ScorchedPeat = mod:ENT("Scorched Peat")
+	ScorchedPeat = mod:ENT("Scorched Peat"),
+	Facebalm = mod:ENT("Facebalm"),
 }
 
 FHAC.CVSEffects = {
@@ -79,7 +80,8 @@ FHAC.CVSEffects = {
     BlackOverlayBox = mod:ENT("BlackOverlayBox"),
     NormalTextBox = mod:ENT("Text Box"),
     DekatesseraEffect = mod:ENT("Dekatessera Effect"),
-	WideWeb = mod:ENT("Large Spiderweb")
+	WideWeb = mod:ENT("Large Spiderweb"),
+	CVSFire = mod:ENT("Fire Projectile (ANIXBIRTH)")
 }
 
 FHAC.CVSNPCS = {
@@ -191,7 +193,8 @@ FHAC:LoadScripts("scripts.iam.monsters", {
 	"suckup",
 	"pottedfatty",
 	"hanger",
-	"scorchedpeat"
+	"scorchedpeat",
+	"facebalm"
 })
 
 FHAC:LoadScripts("scripts.iam.minibosses", {
@@ -211,7 +214,8 @@ FHAC:LoadScripts("scripts.iam.effects", {
 	"blackboxoverlay",
 	"fear_flower_fear_effect",
 	"dekatessera effect",
-	"wideweb"
+	"wideweb",
+	"cvsfire"
 })
 
 FHAC:LoadScripts("scripts.iam.familiars", {
@@ -1237,6 +1241,30 @@ function FHAC:GetTrueAngle(angle)
 	end
 end
 
+function FHAC:GetCVSFireCollisions()
+
+	if not mod.CVSFires or #mod.CVSFires == 0 then return end 
+
+	for _, fire in ipairs(mod.CVSFires) do
+		local d = fire:GetData()
+
+		if d.damage == 0 then return end
+
+		--thanks ff i didnt realize it needs post render 
+
+		local radius = fire:GetData().radius or 20
+		local colEnts = Isaac.FindInRadius(fire.Position, radius, EntityPartition.ENEMY | EntityPartition.PLAYER)
+		for i = 1, #colEnts do
+			local entity = colEnts[i]
+			if entity.Type == 1 or (entity.EntityCollisionClass > 2 and entity:IsActiveEnemy()) then
+				entity:TakeDamage(1, DamageFlag.DAMAGE_FIRE, EntityRef(fire), 0)
+			end
+		end	
+		
+	end
+
+end
+
 -- CALLBACKS --
 
 local game = Game()
@@ -1339,6 +1367,8 @@ function FHAC:RenderedStuff()
     end
     FHAC.JohannesPostRender()
     FHAC.MusicCheckCallback()
+	FHAC:GetCVSFireCollisions()
+	FHAC.CVSFires = {}
 end
 FHAC:AddCallback(ModCallbacks.MC_POST_RENDER, FHAC.RenderedStuff)
 

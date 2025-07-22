@@ -264,8 +264,7 @@ function mod:LarryKingJrAI(npc, sprite, d)
                 d.state = npc.Parent:GetData().state
             end
         else
-            print(d.extraNum, d.SegNumber, d.buttsanimoffset, (d.extraNum+1), (d.SegNumber*(6-d.buttsanimoffset)))
-            if d.extraNum and d.SegNumber and d.buttsanimoffset and (d.extraNum+1)%(d.SegNumber*(6-d.buttsanimoffset)) == 0 then
+            if d.extraNum and d.SegNumber and d.buttsanimoffset and (6-d.buttsanimoffset) ~= 0 and (d.extraNum+1)%(d.SegNumber*(6-d.buttsanimoffset)) == 0 then
                 if d.elname ~= d.name then d.elname = d.name end
                 if d.animExtraName ~= npc.Parent:GetData().animExtraName then d.animExtraName = npc.Parent:GetData().animExtraName end
                 if d.animExtraName2 ~= npc.Parent:GetData().animExtraName2 then d.animExtraName2 = npc.Parent:GetData().animExtraName2 end

@@ -22,7 +22,7 @@ FHAC:LoadScripts("scripts", {
 	"otherapi.fiend folio.api.apioverride",
 	"otherapi.proapi.proapi",
 	"itemsmain",
-
+	"commands"
 })
 
 if not FHAC.hasloadedDSS then
