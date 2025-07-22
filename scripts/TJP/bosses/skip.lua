@@ -9,14 +9,32 @@ mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
 end, mod.Bosses.Skip.ID)
 
 function mod:SkipAI(npc, sprite, d)
+    mod:ReplaceEnemySpritesheet(npc, "gfx/bosses/hopperbrothers/skip", 1)
 
     if not d.init then
-        d.state = "Idle"
+
+        d.init = true
+        d.attacktimer = 67
+        d.state = "idle"
     else
         npc.StateFrame = npc.StateFrame + 1
+        d.attacktimer = d.attacktimer + 1
     end
 
-    if d.state == "Idle" then
+    if d.attacktimer == 201 then
+        d.attacktimer = 0
+        d.attack = true
+    else
+        d.attack = false
+    end
+
+    if d.state == "idle" then
+        print("skip")
         mod:spritePlay(sprite, "Idle")
+        if d.attack then
+            npc.Velocity = Vector(10, 10):Rotated(math.random(0,360))
+        else
+            npc:MultiplyFriction(0.8)
+        end
     end
 end

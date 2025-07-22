@@ -50,7 +50,7 @@ function mod:FivedeadAI(npc, sprite, d)
             if d.wait == 1 then
             for i = 0, 4 do
                 Isaac.Spawn(853, 0, 0, npc.Position, Vector(10,15), npc)
-                --npc:FireProjectiles(npc.Position, Vector(2.7,5):Rotated((75*i+d.rngshoot)), 0, params)
+                --npc:FireProjectiles(npc.Position, Vector(2.7,5):Rotated((72*i+d.rngshoot)), 0, params)
             end
             d.rngshoot = d.rngshoot + 30
             d.wait = d.wait + 1

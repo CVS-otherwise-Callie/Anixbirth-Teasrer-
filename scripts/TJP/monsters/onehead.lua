@@ -13,7 +13,7 @@ function mod:OneheadAI(npc, sprite, d)
     local distance = target.Position:Distance(npc.Position)
 
     if not d.init then
-        d.rngshoot = Vector(100, 100):GetAngleDegrees() 
+        d.shoottimer = math.random(0,4)
         --d.sprite = 1    never again
         d.state = "shake"
         d.wait = 1
@@ -54,15 +54,10 @@ function mod:OneheadAI(npc, sprite, d)
 
     if d.state == "attack" then
         if sprite:IsEventTriggered("Shoot") then
-            if d.wait == 1 then
 
-                npc:FireProjectiles(npc.Position, Vector(1.5,3):Rotated(math.random(1, 360)), 0, params)
+                npc:FireProjectiles(npc.Position, Vector(1.5,3):Rotated(d.shoottimer*75), 0, params)
 
-                d.rngshoot = d.rngshoot + 1
-                d.wait = d.wait + 1
-            else
-                d.wait = 1
-            end
+                d.shoottimer = d.shoottimer + 1
         end
         if sprite:IsFinished("Attack") then
             if (target.Position - npc.Position):Length() > 50 then

@@ -63,7 +63,7 @@ function mod:FacebalmAI(npc, sprite, d)
         if sprite:IsEventTriggered("Shoot") then
             if d.wait == 1 then
             for i = 0, 4 do
-                FHAC:ShootFire(npc.Position, Vector(2.7,10):Rotated((75*i+d.rngshoot)))
+                FHAC:ShootFire(npc.Position, Vector(2.7,10):Rotated((72*i+d.rngshoot)))
             end
             d.rngshoot = d.rngshoot + 30
             d.wait = d.wait + 1

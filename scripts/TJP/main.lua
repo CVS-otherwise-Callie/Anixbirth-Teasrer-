@@ -11,6 +11,7 @@ FHAC.TJPMonsters = {
     TaintedYoyader = FHAC:ENT("Tainted Yoyader"),
     Hangeslip = FHAC:ENT("Hangeslip"),
     DetachedDried = FHAC:ENT("Detached Dried"),
+    Firehead = FHAC:ENT("Firehead"),
     Fivedead = FHAC:ENT("Fivedead"),
     Onedead = FHAC:ENT("Onedead")
 }
@@ -51,6 +52,7 @@ FHAC:LoadScripts("scripts.TJP.monsters", {
     "taintedyoyader",
     "hanges",
     "detacheddried",
+    "firehead",
     "fivedead",
     "onedead"
 })
