@@ -49,27 +49,20 @@ function mod:FireheadAI(npc, sprite, d)
         sprite:Play("Attack", true)
         d.state = "attack"
     end
-
+    print(d.state)
     if d.state == "attack" then
+        mod:spritePlay(sprite, "Attack")
         if sprite:IsEventTriggered("Shoot") then
-            if d.wait == 1 then
             for i = 0, 4 do
                 FHAC:ShootFire(npc.Position, Vector(2.7,10):Rotated((72*i+d.rngshoot)))
             end
             d.rngshoot = d.rngshoot + 30
-            d.wait = d.wait + 1
-            else
-             d.wait = 1
-          end
         end
-        if sprite:GetFrame() == 10 then
-            if (target.Position - npc.Position):Length() > 100 then
-                d.state = "shake"
-                npc.StateFrame = 0
-                d.wait = 0
-            else
-                sprite:Play("Attack", true)
-            end
+        if (target.Position - npc.Position):Length() > 100 then
+            d.state = "shake"
+            npc.StateFrame = 0
+            d.wait = 0
         end
-end
+
+    end
 end
