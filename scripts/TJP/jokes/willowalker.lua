@@ -102,7 +102,6 @@ function mod:WillowalkerAI(npc, sprite, d)
             local closeplayer = game:GetNearestPlayer(npc.Position)
             closeplayer:AddCoins(40)
             closeplayer:AnimateHappy()
-            print("HEY GIVE THAT BACK")
             d.stolen = true
         end
         npc.StateFrame = npc.StateFrame + 1

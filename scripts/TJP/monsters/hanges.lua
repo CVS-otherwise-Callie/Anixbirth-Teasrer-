@@ -146,6 +146,7 @@ function mod:HangedriedAI(npc, sprite, d) --------------------------------------
     local playerpos = mod:confusePos(npc, player.Position, 5, nil, nil)
 
     if not d.init then
+        npc.CanShutDoors = false
         npc.EntityCollisionClass = 0
 	    npc.GridCollisionClass = 0
         d.hasbeenhangedried = true
@@ -159,7 +160,7 @@ function mod:HangedriedAI(npc, sprite, d) --------------------------------------
         npc.DepthOffset = 5
     end
 
-    if (npc.StateFrame > 25 and npc.Position:Distance(playerpos) < 45 and d.hangedriedanim == "Idle") or (d.haschomped and d.hangedriedanim == "Idle") then
+    if (npc.StateFrame > 25 and npc.Position:Distance(playerpos) < 65 and d.hangedriedanim == "Idle") or (d.haschomped and d.hangedriedanim == "Idle") then
         d.hangedriedanim = "Chomp"
         d.haschomped = true
     end
@@ -313,6 +314,7 @@ function mod:HangeslipAI(npc, sprite, d) ---------------------------------------
 
     local speed = 7
     if not d.init then
+        npc.CanShutDoors = true
         d.init = true
         d.state = "reveal"
     end
@@ -355,6 +357,7 @@ function mod:HangejumpAI(npc, sprite, d) ---------------------------------------
 
     d.Scale = npc.Scale
     if not d.init then
+        npc.CanShutDoors = true
         d.jumpcooldown = 0
         d.init = true
         d.state = "reveal"
@@ -497,6 +500,7 @@ function mod:HangethrowAI(npc, sprite, d) --------------------------------------
 
     d.Scale = npc.Scale
     if not d.init then
+        npc.CanShutDoors = true
         d.init = true
         d.state = "reveal"
     else
@@ -702,6 +706,7 @@ function mod:HangekickAI(npc, sprite, d) ---------------------------------------
 
     d.Scale = npc.Scale
     if not d.init then
+        npc.CanShutDoors = true
         d.init = true
         d.state = "reveal"
     else
