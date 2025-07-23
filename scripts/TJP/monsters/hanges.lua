@@ -90,7 +90,7 @@ function mod:HangesAI(npc, sprite, d) ------------------------------------------
     if not d.oginit then
         sprite:SetOverlayFrame("HangeHeadDown", 1)
 
-        d.Dried = FindDried(npc, 60)
+        d.Dried = FindDried(npc, 50)
 
         d.oginit = true
         d.state = "reveal"
@@ -99,7 +99,7 @@ function mod:HangesAI(npc, sprite, d) ------------------------------------------
     end
 
     if d.Dried == nil and npc.StateFrame < 5 then
-        d.Dried = d.Dried or FindDried(npc, 60)
+        d.Dried = d.Dried or FindDried(npc, 50)
     else
         if d.Dried then
             npc:ClearEntityFlags(EntityFlag.FLAG_APPEAR)
@@ -146,7 +146,6 @@ function mod:HangedriedAI(npc, sprite, d) --------------------------------------
     local playerpos = mod:confusePos(npc, player.Position, 5, nil, nil)
 
     if not d.init then
-        npc.CanShutDoors = false
         npc.EntityCollisionClass = 0
 	    npc.GridCollisionClass = 0
         d.hasbeenhangedried = true
@@ -154,13 +153,14 @@ function mod:HangedriedAI(npc, sprite, d) --------------------------------------
         d.hangedriedanim = "Idle"
         d.hangedriedframe = 0
         d.init = true
+        d.waitlimit = math.random(200,250)
     end
 
     if not d.gravity then
         npc.DepthOffset = 5
     end
 
-    if (npc.StateFrame > 25 and npc.Position:Distance(playerpos) < 65 and d.hangedriedanim == "Idle") or (d.haschomped and d.hangedriedanim == "Idle") then
+    if (npc.StateFrame > 25 and npc.Position:Distance(playerpos) < 75 and d.hangedriedanim == "Idle") or ((d.haschomped or (npc.StateFrame > d.waitlimit)) and d.hangedriedanim == "Idle") then
         d.hangedriedanim = "Chomp"
         d.haschomped = true
     end
@@ -189,14 +189,9 @@ function mod:HangedriedAI(npc, sprite, d) --------------------------------------
             else
                 d.lerppercentdried = math.min((sprite:GetFrame()-23)/(39-23), 1)
             end
-            print(d.olddried)
-            print(sprite:GetFrame())
-            print(d.hangedriedframe)
             if d.olddried and d.hangedriedframe < 38 then
-                print("keep")
                 npc.Position = mod:Lerp(d.olddried.Position, d.Dried.Position, d.lerppercentdried)
             else
-                print("delete")
                 npc.Position = d.Dried.Position
                 d.olddried = nil
             end
@@ -297,6 +292,7 @@ function mod:HangedriedRenderAI(npc, sprite, d) --------------------------------
     end
 
     if sprite:IsEventTriggered("Throwstart") then
+        npc.GridCollisionClass = 5
         npc.Velocity = Vector(0,1)
         d.gravity = true
         d.zvel = -2
@@ -314,7 +310,6 @@ function mod:HangeslipAI(npc, sprite, d) ---------------------------------------
 
     local speed = 7
     if not d.init then
-        npc.CanShutDoors = true
         d.init = true
         d.state = "reveal"
     end
@@ -357,7 +352,6 @@ function mod:HangejumpAI(npc, sprite, d) ---------------------------------------
 
     d.Scale = npc.Scale
     if not d.init then
-        npc.CanShutDoors = true
         d.jumpcooldown = 0
         d.init = true
         d.state = "reveal"
@@ -500,7 +494,6 @@ function mod:HangethrowAI(npc, sprite, d) --------------------------------------
 
     d.Scale = npc.Scale
     if not d.init then
-        npc.CanShutDoors = true
         d.init = true
         d.state = "reveal"
     else
@@ -706,7 +699,6 @@ function mod:HangekickAI(npc, sprite, d) ---------------------------------------
 
     d.Scale = npc.Scale
     if not d.init then
-        npc.CanShutDoors = true
         d.init = true
         d.state = "reveal"
     else
