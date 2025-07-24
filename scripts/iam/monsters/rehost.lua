@@ -109,9 +109,8 @@ function mod:ReHostAI(npc, sprite, d)
         npc.StateFrame = 0
     end
 
-    if sprite:IsEventTriggered("Blood") then
-        --game:SpawnParticles ( npc.Position, 7, 3, 4, Color.Default, 10, 0 )
-       -- game:SpawnParticles ( npc.Position, 77, 1, 0, Color.Default, 10, 0 )
+    if sprite:IsOverlayPlaying ("HeadReComeoutSlow") and sprite:GetOverlayFrame() == 39 then
+        game:SpawnParticles ( npc.Position, 7, 3, 4, Color.Default, 10, 0 )
         game:SpawnParticles ( npc.Position, 5, 5, 5, Color.Default, 10, 0 )
         npc:PlaySound(SoundEffect.SOUND_DEATH_BURST_LARGE, 1, 2, false, 1.5)
     end

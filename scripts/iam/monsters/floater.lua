@@ -85,58 +85,16 @@ function mod:FloaterSpriteAI(npc, sprite, d)
 
     local target = npc:GetPlayerTarget()
 
-    local enemydir = (d.targetpos - npc.Position):GetAngleDegrees()
+    local enemydir = (target.Position - npc.Position):Rotated(90 + 11.25):GetAngleDegrees()
 
-    d.oldanim = d.diranim
+    local spritenumber = (math.floor((enemydir)/22.5))+9
 
-    if enemydir > -90 and enemydir < -67.5 then
-        d.diranim = "North"
-    elseif enemydir > -67.5 and enemydir < -45 then
-        d.diranim = "NorthWest"
-    elseif enemydir > -45 and enemydir < -22.5 then
-        d.diranim = "NorthWest2"
-    elseif enemydir > -22.5 and enemydir < 22.5 then
-        d.diranim = "West"
-    elseif enemydir > 22.5 and enemydir < 45 then
-        d.diranim = "SouthWest2"
-    elseif enemydir > 45 and enemydir < 67.5 then
-        d.diranim = "SouthWest"
-    elseif enemydir > 67.5 and enemydir < 112.5 then
-        d.diranim = "South"
-    elseif enemydir > 112.5 and enemydir < 135 then
-        d.diranim = "SouthWest"
-    elseif enemydir > 135 and enemydir < 157.5 then
-        d.diranim = "SouthWest2"
-    elseif enemydir > 157.5 and enemydir < 181 then
-        d.diranim = "West"
-    elseif enemydir > -180 and enemydir < -157.7 then
-        d.diranim = "West"
-    elseif enemydir > -157.5 and enemydir < -135 then
-        d.diranim = "NorthWest2"
-    elseif enemydir > -135 and enemydir < -90 then
-        d.diranim = "NorthWest"
-    else
-        d.diranim = "North"
+    if sprite:GetFrame() == 16 then
+        sprite:SetFrame(0)
     end
 
-    if d.animinit == false or d.diranim ~= d.oldanim then
-        d.animinit = true
-        sprite:Play(d.diranim, true)
-    end
-
-    if mod:isScare(npc) then
-        if target.Position.X < npc.Position.X then
-            sprite.FlipX = true
-            else
-            sprite.FlipX = false
-        end
-    else
-        if target.Position.X < npc.Position.X then
-            sprite.FlipX = false
-            else
-            sprite.FlipX = true
-        end
-    end
+    sprite:SetAnimation("Angle"..spritenumber, false)
+    sprite:SetFrame(sprite:GetFrame()+1)
 
             --Other bullshit
     if sprite:IsFinished() then
@@ -146,7 +104,6 @@ function mod:FloaterSpriteAI(npc, sprite, d)
 end
 
 function mod:FloaterAI(npc, sprite, d, r)
-        
     if not d.init then
         d.realboost = math.random(5, 15)/10
         d.floateroffset = math.random(-5, 10)
@@ -154,7 +111,6 @@ function mod:FloaterAI(npc, sprite, d, r)
         npc.GridCollisionClass = EntityGridCollisionClass.GRIDCOLL_NONE
         d.dashper = 120 -- change this to however bad you want it to be! I like the 100 range, personally.
         d.state = "chase"
-        npc.SpriteOffset = Vector(0,-10 - d.realboost)
         d.accelerateaway = 0
         d.boost = math.random(5, 10)/10
         d.init = true

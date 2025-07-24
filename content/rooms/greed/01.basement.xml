@@ -1673,7 +1673,7 @@
 		<spawn x="10" y="2">
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
-		<spawn x="6" y="3">
+		<spawn x="7" y="3">
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="4" y="4">
@@ -1800,16 +1800,16 @@
 		<door exists="True" x="13" y="3"/>
 		<door exists="True" x="13" y="10"/>
 		<spawn x="3" y="5">
-			<entity type="161" variant="4" subtype="0" weight="1.0"/>
+			<entity type="161" variant="4" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="10" y="5">
-			<entity type="161" variant="4" subtype="0" weight="1.0"/>
+			<entity type="161" variant="4" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="3" y="9">
-			<entity type="161" variant="4" subtype="0" weight="1.0"/>
+			<entity type="161" variant="4" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="10" y="9">
-			<entity type="161" variant="4" subtype="0" weight="1.0"/>
+			<entity type="161" variant="4" subtype="1" weight="1.0"/>
 		</spawn>
 	</room>
 	<room variant="45001" name="CVS - Basement - " type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
@@ -1869,7 +1869,7 @@
 		<door exists="True" x="13" y="3"/>
 		<door exists="True" x="13" y="10"/>
 		<spawn x="2" y="4">
-			<entity type="161" variant="4" subtype="0" weight="1.0"/>
+			<entity type="161" variant="4" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="6" y="5">
 			<entity type="161" variant="12" subtype="0" weight="1.0"/>
@@ -1884,7 +1884,7 @@
 			<entity type="161" variant="12" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="10" y="10">
-			<entity type="161" variant="4" subtype="0" weight="1.0"/>
+			<entity type="161" variant="4" subtype="1" weight="1.0"/>
 		</spawn>
 	</room>
 	<room variant="45004" name="CVS - Basement - " type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
@@ -1973,16 +1973,16 @@
 		<door exists="True" x="13" y="3"/>
 		<door exists="True" x="13" y="10"/>
 		<spawn x="3" y="2">
-			<entity type="161" variant="4" subtype="0" weight="1.0"/>
+			<entity type="161" variant="4" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="9" y="2">
-			<entity type="161" variant="4" subtype="0" weight="1.0"/>
+			<entity type="161" variant="4" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="3" y="12">
-			<entity type="161" variant="4" subtype="0" weight="1.0"/>
+			<entity type="161" variant="4" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="10" y="12">
-			<entity type="161" variant="4" subtype="0" weight="1.0"/>
+			<entity type="161" variant="4" subtype="1" weight="1.0"/>
 		</spawn>
 	</room>
 	<room variant="45008" name="CVS - Basement - " type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
@@ -1999,7 +1999,7 @@
 			<entity type="161" variant="11" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="6" y="4">
-			<entity type="161" variant="4" subtype="0" weight="1.0"/>
+			<entity type="161" variant="4" subtype="1" weight="1.0"/>
 		</spawn>
 	</room>
 	<room variant="45009" name="CVS - Basement - " type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
@@ -2102,13 +2102,13 @@
 		<door exists="True" x="13" y="3"/>
 		<door exists="True" x="13" y="10"/>
 		<spawn x="7" y="4">
-			<entity type="161" variant="4" subtype="0" weight="1.0"/>
+			<entity type="161" variant="4" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="5" y="6">
-			<entity type="161" variant="4" subtype="0" weight="1.0"/>
+			<entity type="161" variant="4" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="7" y="7">
-			<entity type="161" variant="4" subtype="0" weight="1.0"/>
+			<entity type="161" variant="4" subtype="1" weight="1.0"/>
 		</spawn>
 	</room>
 	<room variant="45014" name="CVS - Basement - " type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
@@ -2122,16 +2122,16 @@
 			<entity type="161" variant="12" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="1" y="4">
-			<entity type="161" variant="4" subtype="0" weight="1.0"/>
+			<entity type="161" variant="4" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="11" y="4">
-			<entity type="161" variant="4" subtype="0" weight="1.0"/>
+			<entity type="161" variant="4" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="1" y="9">
-			<entity type="161" variant="4" subtype="0" weight="1.0"/>
+			<entity type="161" variant="4" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="11" y="9">
-			<entity type="161" variant="4" subtype="0" weight="1.0"/>
+			<entity type="161" variant="4" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="6" y="10">
 			<entity type="161" variant="12" subtype="0" weight="1.0"/>
@@ -2179,7 +2179,7 @@
 		<door exists="True" x="13" y="3"/>
 		<door exists="True" x="13" y="10"/>
 		<spawn x="3" y="3">
-			<entity type="161" variant="4" subtype="0" weight="1.0"/>
+			<entity type="161" variant="4" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="1" y="6">
 			<entity type="161" variant="11" subtype="0" weight="1.0"/>
@@ -2188,7 +2188,7 @@
 			<entity type="161" variant="11" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="10" y="11">
-			<entity type="161" variant="4" subtype="0" weight="1.0"/>
+			<entity type="161" variant="4" subtype="1" weight="1.0"/>
 		</spawn>
 	</room>
 	<room variant="45018" name="CVS - Basement - " type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
@@ -2199,13 +2199,13 @@
 		<door exists="True" x="13" y="3"/>
 		<door exists="True" x="13" y="10"/>
 		<spawn x="4" y="4">
-			<entity type="161" variant="4" subtype="0" weight="1.0"/>
+			<entity type="161" variant="4" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="6" y="4">
-			<entity type="161" variant="4" subtype="0" weight="1.0"/>
+			<entity type="161" variant="4" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="8" y="4">
-			<entity type="161" variant="4" subtype="0" weight="1.0"/>
+			<entity type="161" variant="4" subtype="1" weight="1.0"/>
 		</spawn>
 	</room>
 	<room variant="45019" name="CVS - Basement - " type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
@@ -2216,13 +2216,13 @@
 		<door exists="True" x="13" y="3"/>
 		<door exists="True" x="13" y="10"/>
 		<spawn x="4" y="9">
-			<entity type="161" variant="4" subtype="0" weight="1.0"/>
+			<entity type="161" variant="4" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="6" y="9">
-			<entity type="161" variant="4" subtype="0" weight="1.0"/>
+			<entity type="161" variant="4" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="8" y="9">
-			<entity type="161" variant="4" subtype="0" weight="1.0"/>
+			<entity type="161" variant="4" subtype="1" weight="1.0"/>
 		</spawn>
 	</room>
 	<room variant="45020" name="CVS - Basement - " type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
@@ -2233,16 +2233,16 @@
 		<door exists="True" x="13" y="3"/>
 		<door exists="True" x="13" y="10"/>
 		<spawn x="6" y="5">
-			<entity type="161" variant="4" subtype="0" weight="1.0"/>
+			<entity type="161" variant="4" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="4" y="6">
-			<entity type="161" variant="4" subtype="0" weight="1.0"/>
+			<entity type="161" variant="4" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="9" y="7">
-			<entity type="161" variant="4" subtype="0" weight="1.0"/>
+			<entity type="161" variant="4" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="7" y="9">
-			<entity type="161" variant="4" subtype="0" weight="1.0"/>
+			<entity type="161" variant="4" subtype="1" weight="1.0"/>
 		</spawn>
 	</room>
 	<room variant="45021" name="CVS - Basement - " type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
@@ -2273,13 +2273,13 @@
 		<door exists="True" x="13" y="3"/>
 		<door exists="True" x="13" y="10"/>
 		<spawn x="4" y="5">
-			<entity type="161" variant="4" subtype="0" weight="1.0"/>
+			<entity type="161" variant="4" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="8" y="5">
-			<entity type="161" variant="4" subtype="0" weight="1.0"/>
+			<entity type="161" variant="4" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="6" y="8">
-			<entity type="161" variant="4" subtype="0" weight="1.0"/>
+			<entity type="161" variant="4" subtype="1" weight="1.0"/>
 		</spawn>
 	</room>
 	<room variant="45023" name="CVS - Basement - " type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
@@ -2316,10 +2316,10 @@
 			<entity type="161" variant="21" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="2" y="7">
-			<entity type="161" variant="4" subtype="0" weight="1.0"/>
+			<entity type="161" variant="4" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="10" y="7">
-			<entity type="161" variant="4" subtype="0" weight="1.0"/>
+			<entity type="161" variant="4" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="4" y="11">
 			<entity type="161" variant="21" subtype="0" weight="1.0"/>
@@ -2336,16 +2336,16 @@
 		<door exists="True" x="13" y="3"/>
 		<door exists="True" x="13" y="10"/>
 		<spawn x="6" y="3">
-			<entity type="161" variant="4" subtype="0" weight="1.0"/>
+			<entity type="161" variant="4" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="4" y="6">
-			<entity type="161" variant="4" subtype="0" weight="1.0"/>
+			<entity type="161" variant="4" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="8" y="6">
 			<entity type="161" variant="11" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="6" y="10">
-			<entity type="161" variant="4" subtype="0" weight="1.0"/>
+			<entity type="161" variant="4" subtype="1" weight="1.0"/>
 		</spawn>
 	</room>
 	<room variant="45026" name="CVS - Basement - " type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
@@ -2425,16 +2425,16 @@
 		<door exists="True" x="13" y="3"/>
 		<door exists="True" x="13" y="10"/>
 		<spawn x="4" y="6">
-			<entity type="161" variant="4" subtype="0" weight="1.0"/>
+			<entity type="161" variant="4" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="8" y="6">
-			<entity type="161" variant="4" subtype="0" weight="1.0"/>
+			<entity type="161" variant="4" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="4" y="7">
-			<entity type="161" variant="4" subtype="0" weight="1.0"/>
+			<entity type="161" variant="4" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="8" y="7">
-			<entity type="161" variant="4" subtype="0" weight="1.0"/>
+			<entity type="161" variant="4" subtype="1" weight="1.0"/>
 		</spawn>
 	</room>
 	<room variant="45030" name="CVS - Basement - " type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
@@ -2448,10 +2448,10 @@
 			<entity type="161" variant="21" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="9" y="4">
-			<entity type="161" variant="4" subtype="0" weight="1.0"/>
+			<entity type="161" variant="4" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="3" y="8">
-			<entity type="161" variant="4" subtype="0" weight="1.0"/>
+			<entity type="161" variant="4" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="8" y="10">
 			<entity type="161" variant="21" subtype="0" weight="1.0"/>
@@ -2465,10 +2465,10 @@
 		<door exists="True" x="13" y="3"/>
 		<door exists="True" x="13" y="10"/>
 		<spawn x="1" y="6">
-			<entity type="161" variant="4" subtype="0" weight="1.0"/>
+			<entity type="161" variant="4" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="11" y="6">
-			<entity type="161" variant="4" subtype="0" weight="1.0"/>
+			<entity type="161" variant="4" subtype="1" weight="1.0"/>
 		</spawn>
 	</room>
 	<room variant="45032" name="CVS - Basement - " type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
@@ -2479,16 +2479,16 @@
 		<door exists="True" x="13" y="3"/>
 		<door exists="True" x="13" y="10"/>
 		<spawn x="2" y="3">
-			<entity type="161" variant="4" subtype="0" weight="1.0"/>
+			<entity type="161" variant="4" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="10" y="3">
-			<entity type="161" variant="4" subtype="0" weight="1.0"/>
+			<entity type="161" variant="4" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="3" y="10">
-			<entity type="161" variant="4" subtype="0" weight="1.0"/>
+			<entity type="161" variant="4" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="9" y="10">
-			<entity type="161" variant="4" subtype="0" weight="1.0"/>
+			<entity type="161" variant="4" subtype="1" weight="1.0"/>
 		</spawn>
 	</room>
 	<room variant="45033" name="CVS - Basement - " type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
@@ -2499,22 +2499,22 @@
 		<door exists="True" x="13" y="3"/>
 		<door exists="True" x="13" y="10"/>
 		<spawn x="5" y="3">
-			<entity type="161" variant="4" subtype="0" weight="1.0"/>
+			<entity type="161" variant="4" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="7" y="3">
-			<entity type="161" variant="4" subtype="0" weight="1.0"/>
+			<entity type="161" variant="4" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="6" y="4">
-			<entity type="161" variant="4" subtype="0" weight="1.0"/>
+			<entity type="161" variant="4" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="6" y="9">
-			<entity type="161" variant="4" subtype="0" weight="1.0"/>
+			<entity type="161" variant="4" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="5" y="10">
-			<entity type="161" variant="4" subtype="0" weight="1.0"/>
+			<entity type="161" variant="4" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="7" y="10">
-			<entity type="161" variant="4" subtype="0" weight="1.0"/>
+			<entity type="161" variant="4" subtype="1" weight="1.0"/>
 		</spawn>
 	</room>
 	<room variant="45034" name="CVS - Basement - " type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
@@ -2525,16 +2525,16 @@
 		<door exists="True" x="13" y="3"/>
 		<door exists="True" x="13" y="10"/>
 		<spawn x="2" y="3">
-			<entity type="161" variant="4" subtype="0" weight="1.0"/>
+			<entity type="161" variant="4" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="11" y="5">
-			<entity type="161" variant="4" subtype="0" weight="1.0"/>
+			<entity type="161" variant="4" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="2" y="6">
-			<entity type="161" variant="4" subtype="0" weight="1.0"/>
+			<entity type="161" variant="4" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="11" y="8">
-			<entity type="161" variant="4" subtype="0" weight="1.0"/>
+			<entity type="161" variant="4" subtype="1" weight="1.0"/>
 		</spawn>
 	</room>
 	<room variant="45035" name="CVS - Basement - " type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
@@ -2545,19 +2545,19 @@
 		<door exists="True" x="13" y="3"/>
 		<door exists="True" x="13" y="10"/>
 		<spawn x="10" y="1">
-			<entity type="161" variant="4" subtype="0" weight="1.0"/>
+			<entity type="161" variant="4" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="11" y="1">
-			<entity type="161" variant="4" subtype="0" weight="1.0"/>
+			<entity type="161" variant="4" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="10" y="2">
-			<entity type="161" variant="4" subtype="0" weight="1.0"/>
+			<entity type="161" variant="4" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="11" y="2">
-			<entity type="161" variant="4" subtype="0" weight="1.0"/>
+			<entity type="161" variant="4" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="5" y="6">
-			<entity type="161" variant="4" subtype="0" weight="1.0"/>
+			<entity type="161" variant="4" subtype="1" weight="1.0"/>
 		</spawn>
 	</room>
 	<room variant="45036" name="CVS - Basement - " type="11" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
@@ -2703,19 +2703,19 @@
 		<door exists="True" x="13" y="3"/>
 		<door exists="True" x="13" y="10"/>
 		<spawn x="3" y="5">
-			<entity type="161" variant="4" subtype="0" weight="1.0"/>
+			<entity type="161" variant="4" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="9" y="5">
-			<entity type="161" variant="4" subtype="0" weight="1.0"/>
+			<entity type="161" variant="4" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="6" y="7">
 			<entity type="20" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="3" y="9">
-			<entity type="161" variant="4" subtype="0" weight="1.0"/>
+			<entity type="161" variant="4" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="8" y="9">
-			<entity type="161" variant="4" subtype="0" weight="1.0"/>
+			<entity type="161" variant="4" subtype="1" weight="1.0"/>
 		</spawn>
 	</room>
 	<room variant="45001" name="Community - Basement - " type="5" subtype="1" shape="4" width="13" height="14" difficulty="5" weight="1.0">
@@ -2770,7 +2770,7 @@
 			<entity type="19" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="1" y="12">
-			<entity type="161" variant="4" subtype="0" weight="1.0"/>
+			<entity type="161" variant="4" subtype="1" weight="1.0"/>
 		</spawn>
 	</room>
 	<room variant="45003" name="Community - Basement - " type="5" subtype="1" shape="4" width="13" height="14" difficulty="5" weight="1.0">

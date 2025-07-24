@@ -147,53 +147,68 @@ function mod:DetachedDriedAI(npc, sprite, d)
         npc.EntityCollisionClass = 0
         d.zvel = d.zvel + 0.4
     else
+        if room:GetGridEntity(room:GetGridIndex(npc.Position)) and room:GetGridEntity(room:GetGridIndex(npc.Position)):GetType() then
+            d.state = "hole"
+        else
 
-        if d.splat then
-             for i = 1, 20, 1 do
-                local rotated = math.random(-180,180)
-                local projectile = Isaac.Spawn(9, 0, 0, (npc.Position + (Vector(10,10):Rotated(rotated))), Vector(math.random(2,4),0):Rotated(rotated) , npc):ToProjectile();
-                projectile:GetData().targ = npc:GetPlayerTarget()
-                projectile.FallingAccel = 0.5
-                projectile.FallingSpeed = - (math.random() * 4)
-                projectile.Height = -5
-                projectile.Color = d.tab.splat
-             --[[    if npc.SubType == nil or npc.SubType == 0 then
-                    projectile:GetData().isDetDried = d.mynumber
+            if d.splat then
+                for i = 1, 20, 1 do
+                    local rotated = math.random(-180,180)
+                    local projectile = Isaac.Spawn(9, 0, 0, (npc.Position + (Vector(10,10):Rotated(rotated))), Vector(math.random(2,4),0):Rotated(rotated) , npc):ToProjectile();
+                    projectile:GetData().targ = npc:GetPlayerTarget()
+                    projectile.FallingAccel = 0.5
+                    projectile.FallingSpeed = - (math.random() * 4)
+                    projectile.Height = -5
+                    projectile.Color = d.tab.splat
+                --[[    if npc.SubType == nil or npc.SubType == 0 then
+                        projectile:GetData().isDetDried = d.mynumber
+                    else
+                        projectile:GetData().isDetDried = npc.SubType
+                    end ]]
+                end
+                d.splat = false
+            end
+
+            if d.hurtfly then
+                d.hurtfly = false
+            end
+
+            npc.Velocity = npc.Velocity * 0.8
+            npc.SpriteOffset.Y = d.goalheight
+            d.zvel = 0
+            if d.goalheight == 0 then
+                npc.DepthOffset = 0
+                if d.state ~= "jumpedon" then
+                    npc.EntityCollisionClass = 4
+                end
+            end
+            if d.airborne then
+                d.airborne = false
+                if d.state == "falling" then
+                    d.state = "ropesplat"
+                elseif npc.Child and d.goalheight == -20 * npc.Child:GetData().Scale then
+                    d.state = "hangethrowheadsplat"
                 else
-                    projectile:GetData().isDetDried = npc.SubType
-                end ]]
+                    d.state = "splat"
+                end
             end
-            d.splat = false
         end
+    end
 
-        if d.hurtfly then
-            d.hurtfly = false
-        end
-
-        npc.Velocity = npc.Velocity * 0.8
-        npc.SpriteOffset.Y = d.goalheight
-        d.zvel = 0
-        if d.goalheight == 0 then
-            npc.DepthOffset = 0
-            if d.state ~= "jumpedon" then
-                npc.EntityCollisionClass = 4
-            end
-        end
-        if d.airborne then
-            d.airborne = false
-            if d.state == "falling" then
-                d.state = "ropesplat"
-            elseif npc.Child and d.goalheight == -20 * npc.Child:GetData().Scale then
-                d.state = "hangethrowheadsplat"
-            else
-                d.state = "splat"
-            end
+    if d.state == "hole" then
+        mod:spritePlay(sprite, "Hole" .. d.tab.colour)
+        if sprite:IsFinished() then
+            npc:Remove()
         end
     end
 
     local player = npc:GetPlayerTarget()
     if d.hurtfly and npc.Position:Distance(player.Position) < 30 then
         player:TakeDamage(1, 0, EntityRef(npc), 0)
+    end
+
+    if room:GetGridEntity(room:GetGridIndex(npc.Position)) then
+        print(room:GetGridEntity(room:GetGridIndex(npc.Position)):GetType())
     end
 
     if d.airborne and d.zvel < 0 then
