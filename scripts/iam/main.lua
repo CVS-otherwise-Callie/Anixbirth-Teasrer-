@@ -71,6 +71,9 @@ FHAC.CVSMonsters = {
 	SamBabies = mod:ENT("Sam Bear Spawn"),
 	ScorchedPeat = mod:ENT("Scorched Peat"),
 	Facebalm = mod:ENT("Facebalm"),
+	Spaarker = mod:ENT("Spaarker"),
+	Embolzon = mod:ENT("Embolzon"),
+	CracklingHost = mod:ENT("Crackling Host")
 }
 
 FHAC.CVSEffects = {
@@ -101,14 +104,14 @@ FHAC.CVSCollectibles = {
         BigBowlOfSauerkraut = Isaac.GetItemIdByName("Big Ol' Bowl of Sauerkraut"),
         JokeBook = Isaac.GetItemIdByName("Joke Book"),
         StrawDoll = Isaac.GetItemIdByName("Straw Doll"),
-        EmptyDeathCertificate = Isaac.GetItemIdByName("Empty Death Certificate"),
         MarketablePlushie = Isaac.GetItemIdByName("Marketable Plushie"),
         StinkySocks = Isaac.GetItemIdByName("Stinky Socks"),
         MoldyBread = Isaac.GetItemIdByName("Moldy Bread"),
 	    CorruptedFile = Isaac.GetItemIdByName("Corrupted File"),
     	LilAna = Isaac.GetItemIdByName("Lil Ana"),
 		LetterToMyself = Isaac.GetItemIdByName("Letter To Myself"),
-		GrosMichel = Isaac.GetItemIdByName("Gros Michel")
+		GrosMichel = Isaac.GetItemIdByName("Gros Michel"),
+		Tums = Isaac.GetItemIdByName("Tums")
     },
     PickupsEnt = {
         BowlOfSauerkraut = mod:ENT("Bowl of Sauerkraut"),
@@ -124,10 +127,15 @@ FHAC.CVSCollectibles = {
     }
 }
 
+FHAC.CVSProjectiles = {
+	EmberProjectile = mod:ENT("Ember Projectile")
+}
+
 mod:MixTables(FHAC.Monsters, FHAC.CVSMonsters)
 mod:MixTables(FHAC.Effects, FHAC.CVSEffects)
 mod:MixTables(FHAC.NPCS, FHAC.CVSNPCS)
 mod:MixTables(FHAC.MiniBosses, FHAC.CVSMinibosses)
+mod:MixTables(FHAC.Projectiles, FHAC.CVSProjectiles)
 
 mod:MixTables(FHAC.Collectibles.Items, FHAC.CVSCollectibles.Items)
 mod:MixTables(FHAC.Collectibles.PickupsEnt, FHAC.CVSCollectibles.PickupsEnt)
@@ -194,7 +202,10 @@ FHAC:LoadScripts("scripts.iam.monsters", {
 	"pottedfatty",
 	"hanger",
 	"scorchedpeat",
-	"facebalm"
+	"facebalm",
+	"spaarker",
+	"embolzon",
+	"cracklinghost"
 })
 
 FHAC:LoadScripts("scripts.iam.minibosses", {
@@ -241,7 +252,8 @@ FHAC:LoadScripts("scripts.iam.items.passives", {
 	"stinky socks",
 	"moldy bread",
 	"letter to myself",
-	"gros michel"
+	"gros michel",
+	"tums"
 })
 
 FHAC:LoadScripts("scripts.iam.items.pickups" , {
@@ -251,6 +263,10 @@ FHAC:LoadScripts("scripts.iam.items.pickups" , {
 
 FHAC:LoadScripts("scripts.iam.jokes", {
 	"gaprrr",
+})
+
+FHAC:LoadScripts("scripts.iam.projectiles", {
+	"ember_proj",
 })
 
 FHAC:LoadScripts("scripts.iam.characters", {
@@ -268,9 +284,9 @@ FHAC:LoadScripts("scripts.iam.npcs", {
 })
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-local mod = FHAC
 local rng = RNG()
 local game = Game()
+local sfx = SFXManager()
 
 -- functions first
 
@@ -1241,6 +1257,23 @@ function FHAC:GetTrueAngle(angle)
 	end
 end
 
+local noFireDamage = {
+	"Spaarker",
+	"Trilo",
+	"Firehead",
+	"Embolzon",
+	"CracklingHost",
+}
+
+local function CheckEntityInNoFireList(npc)
+	for _, ent in ipairs(noFireDamage) do
+		if npc.Type == mod.Monsters[ent].ID and npc.Variant == mod.Monsters[ent].Var then
+			return true
+		end
+	end
+	return false
+end
+
 function FHAC:GetCVSFireCollisions()
 
 	if not mod.CVSFires or #mod.CVSFires == 0 then return end 
@@ -1253,16 +1286,37 @@ function FHAC:GetCVSFireCollisions()
 		--thanks ff i didnt realize it needs post render 
 
 		local radius = fire:GetData().radius or 20
-		local colEnts = Isaac.FindInRadius(fire.Position, radius, EntityPartition.ENEMY | EntityPartition.PLAYER)
+		local colEnts = Isaac.FindInRadius(fire.Position, radius, EntityPartition.ENEMY | EntityPartition.PLAYER | EntityPartition.TEAR)
 		for i = 1, #colEnts do
 			local entity = colEnts[i]
-			if entity.Type == 1 or (entity.EntityCollisionClass > 2 and entity:IsActiveEnemy()) then
+			if entity.Type == 1 or (entity.EntityCollisionClass > 2 and entity:IsActiveEnemy()) and not CheckEntityInNoFireList(entity) then
 				entity:TakeDamage(1, DamageFlag.DAMAGE_FIRE, EntityRef(fire), 0)
+			end
+			if d.hp > 0 then
+				if entity.Type == 2 then
+					d.hp = d.hp - 1 --no i actually dont care how powerful u are
+				end
+				if d.hp == 0 then
+					fire.CollisionDamage = 0
+					mod:spritePlay(fire:GetSprite(), "Disappear")
+					sfx:Play(SoundEffect.SOUND_FIREDEATH_HISS, 2, 1, false, 1)
+				end
 			end
 		end	
 		
 	end
 
+end
+
+local function EntsNeverTakeFireDamage(npc, damage, flag, source)
+	if flag ~= flag | DamageFlag.DAMAGE_FIRE then return end
+	for _, ent in ipairs(noFireDamage) do
+		if npc.Type == mod.Monsters[ent].ID and npc.Variant == mod.Monsters[ent].Var then
+        	npc:SetColor(Color(2,2,2,1,0,0,0),5,2,true,false)
+			npc:ToNPC():PlaySound(SoundEffect.SOUND_SCYTHE_BREAK, 1, 0, false, 0.3)
+			return false
+		end
+	end
 end
 
 -- CALLBACKS --
@@ -1455,6 +1509,8 @@ function FHAC:NPCGetHurtStuff(npc, damage, flag, source, countdown)
     FHAC:PallunLeaveWhenHit(npc)
     FHAC:StrawDollActiveEffect(npc, damage, flag, countdown)
     FHAC:LarryGetHurt(npc, damage, flag, source)
+	mod:embolzonTakeDamage(npc, damage, flag, source)
+	EntsNeverTakeFireDamage(npc, damage, flag, source)
 
     if npc.Type == 1 then
         local d = npc:GetData()

@@ -4,6 +4,7 @@
     <passive id="3" name="Stinky Socks" gfx="003_stinkysocks.png" description="Stinks like heaven" quality="2" cache="speed" />
     <passive id="4" name="Moldy Bread" gfx="004_moldybread.png" description="Still edible" quality="2"/>
     <passive id="5" name="Letter To Myself" gfx="005_lettertomyself.png" description="See me soon" quality="2"/>
+    <passive id="6" name="Tums" gfx="006_tums.png" description="No more heartburn!" quality="2"/>
 
     <passive id="20" name="Gros Michel" gfx="020_grosmichel.png" description="JUST [extinct!] ALREADY PLEASEEEEE" quality="3" cache="damage"/>
 

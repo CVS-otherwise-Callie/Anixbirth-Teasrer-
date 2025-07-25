@@ -56,7 +56,7 @@ function mod:SchmootAI(npc, sprite, d)
 
     if (npc.HitPoints) > (npc.MaxHitPoints/2) and d.state == "idle" then
         if (target.Position - npc.Position):Length() < 150 and game:GetRoom():CheckLine(target.Position,npc.Position,3,900,false,false) then
-            if not d.shootinit then
+            if not d.shootinit and not mod:isScaredOrConfuse(npc) then
                 d.state = "BeginShoot"
                 mod:spritePlay(sprite, "BeginShoot")
                 d.shootinit = true
@@ -89,17 +89,13 @@ function mod:SchmootAI(npc, sprite, d)
                 local fire
                 if (target.Position - npc.Position):Length() > 100 then
                     local targetvelocity = (targetpos - npc.Position)
-                    fire = Isaac.Spawn(33, 10, 0, npc.Position, Vector(5, 0):Rotated(enemydir), npc)
+                    FHAC:ShootFire(npc.Position, Vector(5, 0):Rotated(enemydir), {scale = 1.1, timer = 150, hp = 2, radius = 19})
                     npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, -0.08)
                 else
                     local targetvelocity = (targetpos - npc.Position)
-                    fire = Isaac.Spawn(33, 10, 0, npc.Position, Vector(3, 0):Rotated(enemydir), npc)
+                    FHAC:ShootFire(npc.Position, Vector(3, 0):Rotated(enemydir), {scale = 1.1, timer = 150, hp = 2, radius = 19})
                     npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, -0.04)
                 end
-                fire.Size = fire.Size / 5
-                mod:ReplaceEnemySpritesheet(fire, "gfx/effects/rebirth/effect_005_fire", 0)
-                fire:GetSprite().Scale = fire:GetSprite().Scale / 100
-                fire:Update()
                 d.hasmovedaway = true
             end
         end

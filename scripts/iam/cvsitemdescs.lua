@@ -41,9 +41,9 @@ CVS.ExDescs = {
 			},
 		},
 		{
-			ID = FHAC.Collectibles.Items.CorruptedFile,
+			ID = FHAC.Collectibles.Items.Tums,
 			EID = {
-				Desc = ""
+				Desc = "Whenever Isaac eats a pill, heals 1 red heart. #Whenever Isaac takes a red heart from off the ground, 25% chance to spawn a random pill."
 			},
 			Encyclopedia = Encyclopedia and {
 				Pools = {

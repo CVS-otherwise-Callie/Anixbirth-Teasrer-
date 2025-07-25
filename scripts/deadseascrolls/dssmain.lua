@@ -379,10 +379,6 @@ FHAC.dmdirectory = {
     other =  {
         title = 'miscallaneous',
         buttons = {
-            {str = 'makefile', func = function()
-                mod.OverlayMusic = true
-            end
-            },
             {str = '----------', fsize=2, nosel = true},
             {str = 'characters', nosel = true},
             {str = '----------', fsize=2, nosel = true},

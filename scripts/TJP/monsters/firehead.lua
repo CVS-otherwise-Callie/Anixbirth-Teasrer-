@@ -49,7 +49,6 @@ function mod:FireheadAI(npc, sprite, d)
         sprite:Play("Attack", true)
         d.state = "attack"
     end
-    print(d.state)
     if d.state == "attack" then
         mod:spritePlay(sprite, "Attack")
         if sprite:IsEventTriggered("Shoot") then

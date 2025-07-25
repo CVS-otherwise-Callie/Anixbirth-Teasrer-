@@ -26,6 +26,10 @@ FHAC.MiniBosses = {
 
 }
 
+FHAC.Projectiles = {
+    
+}
+
 FHAC.Players = {
     Johannes = Isaac.GetPlayerTypeByName("Johannes"),
     Bohannes = Isaac.GetPlayerTypeByName("Johannes", true),

@@ -11,9 +11,10 @@ local stats = {
     radius = 20,
     friction = 0.9, --eh
     rebirthdeath = false,
-    griddeath = false,
+    griddeath = true,
     deathtime = 10,
-    damage = 1
+    damage = 1,
+    hp = 0
 }
 
 mod.CVSFires = {}
@@ -26,11 +27,15 @@ end)
 
 function mod:CVSFireAI(ef, sprite, d)
 
+    ef:ClearEntityFlags(EntityFlag.FLAG_APPEAR)
+
     if not d.init then
 
         for name, stat in pairs(stats) do
             d[name] = d[name] or stat
         end
+
+		d.SpriteScale = ef.SpriteScale * d.scale
 
         if d.form == 1 then -- normal fire
             sprite:ReplaceSpritesheet(0, "gfx/effects/effect_005_fire.png")
@@ -39,8 +44,6 @@ function mod:CVSFireAI(ef, sprite, d)
         elseif d.form == 3 then
             sprite:ReplaceSpritesheet(0, "gfx/effects/effect_005_fire_blue.png")
         end
-
-		d.SpriteScale = ef.SpriteScale * d.scale
 
         ef.CollisionDamage = 1
 
@@ -55,7 +58,7 @@ function mod:CVSFireAI(ef, sprite, d)
 	end
 
     if frameC < 5 then
-        ef.SpriteScale = d.SpriteScale * frameC / 5
+        ef.SpriteScale = d.SpriteScale * (frameC / 5)
     elseif frameC > d.timer then
 
         if d.rebirthdeath then
@@ -70,11 +73,19 @@ function mod:CVSFireAI(ef, sprite, d)
 		end
     else
         if d.griddeath then
-            
+            local grid = game:GetRoom():GetGridEntityFromPos(ef.Position)
+            if grid and grid.CollisionClass ~= GridCollisionClass.COLLISION_NONE then
+                ef:MultiplyFriction(0)
+                d.timer = frameC
+            end
         end
     end
 
     ef:MultiplyFriction(d.friction)
+
+    if sprite:IsFinished("Disappear") then
+        ef:Remove()
+    end
 
 end
 
@@ -84,7 +95,10 @@ function FHAC:ShootFire(position, velocity, stat)
 
     local fire = Isaac.Spawn(1000, mod.Effects.CVSFire.Var, 0, position, velocity, nil)
 
+    fire.SpriteScale = fire.SpriteScale * (stat.scale or 1)
+
     for name, states in pairs(stat) do
         fire:GetData()[name] = fire:GetData()[name] or states
     end
+    fire:Update()
 end
