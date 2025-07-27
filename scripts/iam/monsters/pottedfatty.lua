@@ -2,12 +2,6 @@ local mod = FHAC
 local game = Game()
 local rng = RNG()
 
-mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
-    if npc.Variant == mod.Monsters.PottedFatty.Var then
-        mod:PottedFattyAI(npc, npc:GetSprite(), npc:GetData())
-    end
-end, mod.Monsters.PottedFatty.ID)
-
 function mod:PottedFattyAI(npc, sprite, d)
 
     local targ = npc:GetPlayerTarget()

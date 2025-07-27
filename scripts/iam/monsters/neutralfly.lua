@@ -2,12 +2,6 @@ local mod = FHAC
 local game = Game()
 local rng = RNG()
 
-mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
-    if npc.Variant == mod.Monsters.Neutralfly.Var then
-        mod:NeutralflyAI(npc, npc:GetSprite(), npc:GetData())
-    end
-end, mod.Monsters.Neutralfly.ID)
-
 function mod:NeutralflyAI(npc, sprite, d)
     local room = game:GetRoom()
     local possibleinits = {}

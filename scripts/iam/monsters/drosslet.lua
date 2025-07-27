@@ -16,12 +16,6 @@ mod.MoveDirs = {
     Vector(2.5,2.5),
 }
 
-mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
-    if npc.Variant == mod.Monsters.Drosslet.Var then
-        mod:DrossletAI(npc, npc:GetSprite(), npc:GetData())
-    end
-end, mod.Monsters.Drosslet.ID)
-
 function mod:DrossletAI(npc, sprite, d)
     
     local room = game:GetRoom()

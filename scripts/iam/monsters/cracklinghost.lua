@@ -8,12 +8,6 @@ local cracklingHostStats = {
     fireHp = 20
 }
 
-mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
-    if npc.Variant == mod.Monsters.CracklingHost.Var then
-        mod:CracklingHostAI(npc, npc:GetSprite(), npc:GetData())
-    end
-end, mod.Monsters.CracklingHost.ID)
-
 function mod:CracklingHostAI(npc, sprite, d)
 
     local target = npc:GetPlayerTarget()
@@ -30,7 +24,7 @@ function mod:CracklingHostAI(npc, sprite, d)
     end
 
     if d.fireHp > 0 then
-        if npc.StateFrame > d.wait and not mod:isScaredOrConfuse(npc)  then
+        if npc.StateFrame > d.wait and not mod:isScareOrConfuse(npc)  then
             d.wait = math.random(20, 30)
             mod:spritePlay(sprite, "ShootFire")
         else
@@ -41,7 +35,7 @@ function mod:CracklingHostAI(npc, sprite, d)
             mod:spritePlay(sprite, "Ignite")
             d.fireHp = 20
         else
-            if npc.StateFrame > d.wait and not mod:isScaredOrConfuse(npc) then
+            if npc.StateFrame > d.wait and not mod:isScareOrConfuse(npc) then
                 d.wait = npc.StateFrame + math.random(15, 25)
                 mod:spritePlay(sprite, "ShootBare")
             else

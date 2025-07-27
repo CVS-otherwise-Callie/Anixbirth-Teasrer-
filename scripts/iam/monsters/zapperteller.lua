@@ -2,12 +2,6 @@ local mod = FHAC
 local game = Game()
 local rng = RNG()
 
-mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
-    if npc.Variant == mod.Monsters.ZapperTeller.Var then
-        mod:ZapperTellerAI(npc, npc:GetSprite(), npc:GetData())
-    end
-end, mod.Monsters.ZapperTeller.ID)
-
 function mod:ZapperTellerAI(npc, sprite, d)
 
     local target = npc:GetPlayerTarget()

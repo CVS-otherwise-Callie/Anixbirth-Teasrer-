@@ -4,18 +4,6 @@ local rng = RNG()
 local pitpatinbetweentime = 20
 local pitpatspawnertime = 0
 
-mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
-    if npc.Variant == mod.Monsters.PitPatSpawner.Var and npc.SubType >= 1 then
-        mod:PitPatSpawnerAI(npc, npc:GetSprite(), npc:GetData())
-    end
-end, mod.Monsters.PitPatSpawner.ID)
-
-mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
-    if npc.Variant == mod.Monsters.PitPat.Var and npc.SubType == mod.Monsters.PitPat.Sub then
-        mod:PitPatAI(npc, npc:GetSprite(), npc:GetData())
-    end
-end, mod.Monsters.PitPat.ID)
-
 function mod:PitPatSpawnerAI(npc, sprite, d)
 
     if not d.init then

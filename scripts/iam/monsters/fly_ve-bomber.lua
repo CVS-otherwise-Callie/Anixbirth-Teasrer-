@@ -2,12 +2,6 @@ local mod = FHAC
 local game = Game()
 local rng = RNG()
 
-mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
-    if npc.Variant == mod.Monsters.FlyveBomber.Var then
-        mod:FlyveBomberAI(npc, npc:GetSprite(), npc:GetData())
-    end
-end, mod.Monsters.FlyveBomber.ID)
-
 function mod:FlyveBomberAI(npc, sprite, d) --thanks euan lmaooooooooooo
 
     if not d.init then

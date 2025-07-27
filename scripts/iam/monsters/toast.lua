@@ -3,12 +3,6 @@ local game = Game()
 local rng = RNG()
 local sfx = SFXManager()
 
-mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
-    if npc.Variant == 1 then
-        mod:ToastAI(npc, npc:GetSprite(), npc:GetData())
-    end
-end, 161)
-
 local function GetAliveEntitiesInDist(npc, dist)
 	local tab = {}
 	for k, v in ipairs(Isaac.GetRoomEntities()) do

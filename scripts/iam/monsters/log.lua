@@ -2,12 +2,6 @@ local mod = FHAC
 local game = Game()
 local rng = RNG()
 
-mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
-    if npc.Variant == mod.Monsters.Log.Var then
-        mod:LogAI(npc, npc:GetSprite(), npc:GetData())
-    end
-end, mod.Monsters.Log.ID)
-
 function mod:LogAI(npc, sprite, d)
 
     if npc.SubType >= 0 then

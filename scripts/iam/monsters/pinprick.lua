@@ -2,18 +2,6 @@ local mod = FHAC
 local game = Game()
 local rng = RNG()
 
-mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
-    if npc.Variant == mod.Monsters.Pinprick.Var and npc.SubType >= 1 then
-        mod:PinprickSpawnerAI(npc, npc:GetSprite(), npc:GetData())
-    end
-end, mod.Monsters.Pinprick.ID)
-
-mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
-    if npc.Variant == mod.Monsters.Pinprick.Var and npc.SubType == 0 then
-        mod:PinprickAI(npc, npc:GetSprite(), npc:GetData())
-    end
-end, mod.Monsters.Pinprick.ID)
-
 function mod:PinprickSpawnerAI(npc, sprite, d)
     if not d.spawnerinit then
         npc.Visible = true

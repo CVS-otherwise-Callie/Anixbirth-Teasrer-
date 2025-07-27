@@ -2,12 +2,6 @@ local mod = FHAC
 local game = Game()
 local rng = RNG()
 
-mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
-    if npc.Variant == mod.Monsters.Soot.Var then
-        mod:SootAI(npc, npc:GetSprite(), npc:GetData())
-    end
-end, mod.Monsters.Soot.ID)
-
 function mod:SootAI(npc, sprite, d)
 
     local target = npc:GetPlayerTarget()

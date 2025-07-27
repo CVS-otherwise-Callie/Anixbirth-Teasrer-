@@ -2,12 +2,6 @@ local mod = FHAC
 local game = Game()
 local rng = RNG()
 
-mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
-    if npc.Variant == mod.Monsters.AngeryMan.Var then
-        mod:AngerymanAI(npc, npc:GetSprite(), npc:GetData())
-    end
-end, mod.Monsters.AngeryMan.ID)
-
 function mod:AngerymanAI(npc, sprite, d)
 
     local webHP = 20 + (10*(game:GetLevel():GetAbsoluteStage()-1))

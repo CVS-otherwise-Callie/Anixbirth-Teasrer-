@@ -2,12 +2,6 @@ local mod = FHAC
 local game = Game()
 local rng = RNG()
 
-mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
-    if npc.Variant == mod.Monsters.Bewebbed.Var then
-        mod:BewebbedAI(npc, npc:GetSprite(), npc:GetData())
-    end
-end, mod.Monsters.Bewebbed.ID)
-
 function mod:BewebbedAI(npc, sprite, d)
 
     local player = npc:GetPlayerTarget()

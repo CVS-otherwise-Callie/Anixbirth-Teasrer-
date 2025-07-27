@@ -2,12 +2,6 @@ local mod = FHAC
 local game = Game()
 local rng = RNG()
 
-mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
-    if npc.Variant == mod.Monsters.Stuckpoot.Var then
-        mod:StuckpootAI(npc, npc:GetSprite(), npc:GetData())
-    end
-end, mod.Monsters.Stuckpoot.ID)
-
 function mod:StuckpootAI(npc, sprite, d)
 
     local room = game:GetRoom()

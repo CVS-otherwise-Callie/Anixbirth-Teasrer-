@@ -2,12 +2,6 @@ local mod = FHAC
 local game = Game()
 local rng = RNG()
 
-mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
-    if npc.Variant == mod.Monsters.Trilo.Var then
-        mod:TriloAI(npc, npc:GetSprite(), npc:GetData())
-    end
-end, mod.Monsters.Trilo.ID)
-
 function FindAllTrilo()
     local tab = {}
     for k, v in ipairs(Isaac.GetRoomEntities()) do

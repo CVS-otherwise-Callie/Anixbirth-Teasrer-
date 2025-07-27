@@ -3,12 +3,6 @@ local game = Game()
 local rng = RNG()
 
 mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
-    if npc.Variant == mod.Monsters.Cowpat.Var then
-        mod:CowpatAI(npc, npc:GetSprite(), npc:GetData())
-    end
-end, mod.Monsters.Cowpat.ID)
-
-mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
     if npc:GetData().type == "cowpat" then
         mod:CowpatFlyAI(npc, npc:GetSprite(), npc:GetData())
     end

@@ -285,7 +285,7 @@ Ask CVS for more questions.
 ---
 
 ---
-isScaredOrConfuse(npc)
+isScareOrConfuse(npc)
 
 Checks if a entity is scared or confused.
 

@@ -2,12 +2,6 @@ local mod = FHAC
 local game = Game()
 local rng = RNG()
 
-mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
-    if npc.Variant == mod.Monsters.Spaarker.Var then
-        mod:SpaarkerAI(npc, npc:GetSprite(), npc:GetData())
-    end
-end, mod.Monsters.Spaarker.ID)
-
 function mod:SpaarkerAI(npc, sprite, d)
 
     local target = npc:GetPlayerTarget()
@@ -25,7 +19,7 @@ function mod:SpaarkerAI(npc, sprite, d)
     npc:MultiplyFriction(0.65+(0.016))
     npc.Velocity = mod:Lerp(npc.Velocity, (targetpos - npc.Position):Resized(1), 0.1)
 
-    if npc.StateFrame > 10 + d.shootoffset and not mod:isScaredOrConfuse(npc) then
+    if npc.StateFrame > 10 + d.shootoffset and not mod:isScareOrConfuse(npc) then
         mod:spritePlay(sprite, "Shoot")
     else
         mod:spritePlay(sprite, "Idle")

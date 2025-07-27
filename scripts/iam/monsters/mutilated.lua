@@ -2,12 +2,6 @@ local mod = FHAC
 local game = Game()
 local rng = RNG()
 
-mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
-    if npc.Variant == mod.Monsters.Mutilated.Var then
-        mod:MutilatedAI(npc, npc:GetSprite(), npc:GetData())
-    end
-end, mod.Monsters.Mutilated.ID)
-
 function mod:MutilatedAI(npc, sprite, d)
 
     local target = npc:GetPlayerTarget()

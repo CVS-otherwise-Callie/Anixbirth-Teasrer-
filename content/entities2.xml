@@ -447,6 +447,10 @@
     </entity>
 
     <!--Burning Basement-->
+    <entity id="161" variant="73" name="Scorched Sooter" anm2path="monsters/scorchedsooter/scorchedsooter.anm2" reroll="true" baseHP="18" boss="0" champion="1" collisionDamage="1" collisionMass="3" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="13" stageHP="0" portrait="73" gridCollision="walls">
+		<bestiary transform="0,0,1" anim="Idle2" />
+        <gibs amount="6" blood="1" bone="1" eye="0" gut="1" large="0" />
+    </entity>
     <entity anm2path="monsters/fivehead/fivehead.anm2" id="161" variant="75" reroll="true" baseHP="15" boss="0" champion="1" collisionDamage="1" collisionMass="40" collisionRadius="13" friction="0.1" name="Facebalm" numGridCollisionPoints="12" shadowSize="14" stageHP="0" hasFloorAlts="true" bestiary="true" portrait="75">
         <bestiary transform="0,0,1" anim="Shake" />
         <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />

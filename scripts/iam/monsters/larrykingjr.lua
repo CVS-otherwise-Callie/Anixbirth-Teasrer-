@@ -1,12 +1,6 @@
 local mod = FHAC
 local game = Game()
 
-mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
-    if npc.Variant == mod.Monsters.LarryKingJr.Var then
-        mod:LarryKingJrAI(npc, npc:GetSprite(), npc:GetData())
-    end
-end, mod.Monsters.LarryKingJr.ID)
-
 mod:AddCallback(ModCallbacks.MC_POST_NPC_RENDER, function(_, npc, offset)
     if npc.Variant == mod.Monsters.LarryKingJr.Var then
         mod:LarryKingJrRenderAI(npc, npc:GetSprite(), npc:GetData())

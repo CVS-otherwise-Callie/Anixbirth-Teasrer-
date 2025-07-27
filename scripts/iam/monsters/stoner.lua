@@ -21,13 +21,6 @@ mod.StonerDirs = { --this shit is FUCKED!
     {90, 45, 135},
 }
 
-
-mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
-    if npc.Variant == mod.Monsters.Stoner.Var then
-        mod:StonerAI(npc, npc:GetSprite(), npc:GetData())
-    end
-end, mod.Monsters.Stoner.ID)
-
 function mod:StonerAI(npc, sprite, d)
 
     local room = game:GetRoom()

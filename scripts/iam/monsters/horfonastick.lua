@@ -3,12 +3,6 @@ local game = Game()
 local rng = RNG()
 
 mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
-    if npc.Variant == mod.Monsters.HorfOnAStick.Var then
-        mod:HorfOnAStickAI(npc, npc:GetSprite(), npc:GetData())
-    end
-end, mod.Monsters.HorfOnAStick.ID)
-
-mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
     if npc:GetData().type == "horfonastick" and (npc.Parent and npc:Exists() and not npc.Parent:IsDead()) then
         mod:HorfOnAStickFlyAI(npc, npc:GetSprite(), npc:GetData())
     end

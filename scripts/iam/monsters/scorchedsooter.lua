@@ -1,7 +1,16 @@
 local mod = FHAC
 local game = Game()
 local rng = RNG()
-local nilvector = Vector.Zero
+
+local scorsooStats = {
+    randomIdle = math.random(1, 5),
+    realboost = math.random(5, 15)/10,
+    floateroffset = math.random(-5, 10),
+    dashper = 120, -- change this to however bad you want it to be! I like the 100 range, personally.
+    state = "chase",
+    accelerateaway = 0,
+    boost = math.random(5, 10)/10
+}
 
 local function FindClosestTear(npc)
     local dist = 999999999
@@ -17,7 +26,11 @@ local function FindClosestTear(npc)
     return tr
 end
 
-function mod:FloaterMovementAI(npc, sprite, d)
+function mod:ScorchedSooterAI(npc, sprite, d)
+
+    local target = npc:GetPlayerTarget()
+    local targetpos = target.Position
+    local room = game:GetRoom()
 
     if FindClosestTear(npc) ~= nil then
         d.tearTarg = FindClosestTear(npc)
@@ -27,18 +40,46 @@ function mod:FloaterMovementAI(npc, sprite, d)
         d.accelerateaway = 0   
     end
 
-    local target = npc:GetPlayerTarget()
+    if not d.init then
+        for name, stat in pairs(scorsooStats) do
+            d[name] = d[name] or stat
+        end
+        npc.StateFrame = 50
+        npc:AddEntityFlags(EntityFlag.FLAG_NO_KNOCKBACK)
+        d.init = true
+    else
+
+        npc.StateFrame = npc.StateFrame + 1
+    end
+
+    if target.Position.X < npc.Position.X then --future me pls don't fuck this up
+        sprite.FlipX = false
+    else
+        sprite.FlipX = true
+    end
+
+    if sprite:IsFinished("Idle") or sprite:IsFinished("Idle2") then
+        if d.randomIdle == 1 then
+            mod:spritePlay(sprite, "Idle2")
+            d.randomIdle = 2
+        else
+            mod:spritePlay(sprite, "Idle")
+            d.randomIdle = math.random(1, 5)
+        end
+    end
+
     if npc.StateFrame > 5 + d.floateroffset then --this adds a scent of organicness lmao
         d.targetpos = mod:confusePos(npc, target.Position, 5, nil, nil)
         d.floateroffset = math.random(-5, 10)
         npc.StateFrame = 0
     end
-     d.targetpos = mod:confusePos(npc, target.Position, 5, nil, nil)
+
+    d.targetpos = mod:confusePos(npc, target.Position, 5, nil, nil)
     local enemydir = (d.targetpos - npc.Position):GetAngleDegrees()
     local targetvelocity = Vector.Zero
     local othertargetvelocity = Vector.Zero
 
-        if d.tearTarg or mod:isScare(npc) then
+    if d.tearTarg or mod:isScare(npc) then
         d.moveval = Vector.Zero
 
         local v = d.tearTarg.Velocity:GetAngleDegrees()
@@ -93,61 +134,3 @@ function mod:FloaterMovementAI(npc, sprite, d)
     })
 end
 
-function mod:FloaterSpriteAI(npc, sprite, d)
-
-    local target = npc:GetPlayerTarget()
-
-    local enemydir = (target.Position - npc.Position):Rotated(90 + 11.25):GetAngleDegrees()
-
-    local spritenumber = (math.floor((enemydir)/22.5))+9
-
-    if sprite:GetFrame() == 16 then
-        sprite:SetFrame(0)
-    end
-
-    sprite:SetAnimation("Angle"..spritenumber, false) --thanks jacket
-    sprite:SetFrame(sprite:GetFrame()+1)
-
-            --Other bullshit
-    if sprite:IsFinished() then
-        d.boost = d.realboost
-        d.animinit = false
-    end
-end
-
-function mod:FloaterAI(npc, sprite, d, r)
-    if not d.init then
-        d.realboost = math.random(5, 15)/10
-        d.floateroffset = math.random(-5, 10)
-        npc.StateFrame = 50
-        npc.GridCollisionClass = EntityGridCollisionClass.GRIDCOLL_NONE
-        d.dashper = 120 -- change this to however bad you want it to be! I like the 100 range, personally.
-        d.state = "chase"
-        d.accelerateaway = 0
-        d.boost = math.random(5, 10)/10
-        d.init = true
-    else
-        d.boost = math.random(8, 13)/8
-        d.oldanim = d.diranim
-        npc.StateFrame = npc.StateFrame + 1
-    end
-
-    mod:FloaterMovementAI(npc, sprite, d)
-
-    mod:FloaterSpriteAI(npc, sprite, d)
-
-    if sprite:GetFrame() == 1 then
-        local creep
-        if game:GetLevel():GetCurrentRoomDesc().Data.StageID == 27 then
-            creep = Isaac.Spawn(1000, 22,  0, npc.Position, Vector(0, 0), npc):ToEffect()
-            creep:GetSprite():ReplaceSpritesheet(0, "gfx/effects/effect_waterpool.png") --hehe thanks ff
-        elseif game:GetLevel():GetCurrentRoomDesc().Data.StageID == 28 then
-            creep = Isaac.Spawn(1000, 56,  0, npc.Position, Vector(0, 0), npc):ToEffect()
-        else
-            creep = Isaac.Spawn(1000, 22,  0, npc.Position, Vector(0, 0), npc):ToEffect()
-        end
-        creep.Scale = creep.Scale * 0.7
-        creep:SetTimeout(creep.Timeout - 70)
-        creep:Update()
-    end
-end

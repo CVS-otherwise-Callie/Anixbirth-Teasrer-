@@ -225,7 +225,7 @@ end
 function mod:isScare(npc)
 	return npc:HasEntityFlags(EntityFlag.FLAG_FEAR | EntityFlag.FLAG_SHRINK)
 end
-function mod:isScaredOrConfuse(npc)
+function mod:isScareOrConfuse(npc)
 	return npc:HasEntityFlags(EntityFlag.FLAG_CONFUSION | EntityFlag.FLAG_FEAR | EntityFlag.FLAG_SHRINK)
 end
 function mod:isBaited(npc)

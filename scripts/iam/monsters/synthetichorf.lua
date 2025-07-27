@@ -2,12 +2,6 @@ local mod = FHAC
 local game = Game()
 local rng = RNG()
 
-mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
-    if npc.Variant == mod.Monsters.SyntheticHorf.Var then
-        mod:SyntheticHorfAI(npc, npc:GetSprite(), npc:GetData())
-    end
-end, mod.Monsters.SyntheticHorf.ID)
-
 function mod:SyntheticHorfAI(npc, sprite, d)
 
     local function SyntheticHorfShot()

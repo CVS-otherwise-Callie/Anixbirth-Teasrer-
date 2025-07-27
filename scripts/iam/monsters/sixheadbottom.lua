@@ -2,12 +2,6 @@ local mod = FHAC
 local game = Game()
 local rng = RNG()
 
-mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
-    if npc.Variant == mod.Monsters.Sixheadbottom.Var then
-        mod:SixheadbottomAI(npc, npc:GetSprite(), npc:GetData())
-    end
-end, mod.Monsters.Sixheadbottom.ID)
-
 function mod:SixheadbottomAI(npc, sprite, d)
 
     local rng = npc:GetDropRNG()

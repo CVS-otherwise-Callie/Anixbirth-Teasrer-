@@ -8,6 +8,16 @@ local cmds = {
             end
         end,
         Desc = "Actually kills everything"
+    },
+    spriteDebug = {
+        Func = function(params)
+            if not FHAC.spriteDebugOn then
+                FHAC.spriteDebugOn = true
+            else
+                FHAC.spriteDebugOn = false
+            end
+        end,
+        Desc = "Shows enemy animations, frames, etc"
     }
 }
 
@@ -34,6 +44,40 @@ FHAC:AddCallback(ModCallbacks.MC_EXECUTE_CMD, function(_, cmd, params)
 
     if commandData then
         return commandData.Func(params)
+    end
+end)
+
+FHAC:AddCallback(ModCallbacks.MC_POST_NPC_RENDER, function(_, npc)
+    if not FHAC.spriteDebugOn then return end
+
+    local sprite = npc:GetSprite()
+
+    local strs = {}
+
+    if sprite:GetOverlayFrame() ~= -1 then
+        strs = {
+            "Animation: " .. tostring(npc:GetSprite():GetAnimation()) .. "Overlay Animation: " .. tostring(sprite:GetOverlayAnimation()),
+            "Default Animation: " .. tostring(sprite:GetDefaultAnimation()),
+            "Filename: " .. tostring(sprite:GetFilename()),
+            "Frame: " .. tostring(sprite:GetFrame()) ..         "Overlay Frame: " .. tostring(sprite:GetOverlayFrame()),
+            "Layer Count: " .. tostring(sprite:GetLayerCount()),
+            "Playback Speed: " .. sprite.PlaybackSpeed
+        }
+    else
+        strs = {
+            "Animation: " .. tostring(npc:GetSprite():GetAnimation()),
+            "Default Animation: " .. tostring(sprite:GetDefaultAnimation()),
+            "Filename: " .. tostring(sprite:GetFilename()),
+            "Frame: " .. tostring(sprite:GetFrame()),
+            "Layer Count: " .. tostring(sprite:GetLayerCount()),
+            "Playback Speed: " .. sprite.PlaybackSpeed
+        }
+    end
+
+    for i = 1, #strs do
+        local str = strs[i]
+        local pos = Game():GetRoom():WorldToScreenPosition(npc.Position) + Vector(FHAC.TempestFont:GetStringWidth(str) * -0.5, (npc.SpriteScale.Y * (i*9)))
+        FHAC.TempestFont:DrawString(str, pos.X, pos.Y, KColor(1,1,1,1), 0, false)
     end
 end)
 

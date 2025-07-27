@@ -2,12 +2,6 @@ local mod = FHAC
 local game = Game()
 local rng = RNG()
 
-mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
-    if npc.Variant == mod.Monsters.Ulig.Var then
-        mod:UligAI(npc, npc:GetSprite(), npc:GetData())
-    end
-end, mod.Monsters.Ulig.ID)
-
 local function GetFliesWithSameDataUlig(npc)
     local tab = {}
     for k, fly in ipairs(Isaac.FindByType(EntityType.ENTITY_DART_FLY)) do

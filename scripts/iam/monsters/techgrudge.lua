@@ -2,12 +2,6 @@ local mod = FHAC
 local game = Game()
 local rng = RNG()
 
-mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
-    if npc.Variant == mod.Monsters.TechGrudge.Var then
-        mod:TechGrudgeAI(npc, npc:GetSprite(), npc:GetData())
-    end
-end, mod.Monsters.TechGrudge.ID)
-
 if REPENTOGON then
 mod:AddCallback(ModCallbacks.MC_PRE_NPC_RENDER, function(_, npc)
     if npc.Variant == mod.Monsters.TechGrudge.Var then

@@ -2,12 +2,6 @@ local mod = FHAC
 local game = Game()
 local rng = RNG()
 
-mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
-    if npc.Variant == mod.Monsters.Babble.Var then
-        mod:BabbleAI(npc, npc:GetSprite(), npc:GetData())
-    end
-end, mod.Monsters.Babble.ID)
-
 function mod:BabbleAI(npc, sprite, d)
 
     local path = npc.Pathfinder

@@ -10,12 +10,6 @@ local embolzonStats = {
     landtarget = Vector.Zero
 }
 
-mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
-    if npc.Variant == mod.Monsters.Embolzon.Var then
-        mod:EmbolzonAI(npc, npc:GetSprite(), npc:GetData())
-    end
-end, mod.Monsters.Embolzon.ID)
-
 function mod:EmbolzonAI(npc, sprite, d)
 
     local target = npc:GetPlayerTarget()
@@ -77,7 +71,7 @@ function mod:EmbolzonAI(npc, sprite, d)
             path:FindGridPath(targetpos, 0.7, 900, true)
         end
 
-        if npc.StateFrame > d.wait and not mod:isScaredOrConfuse(npc) then
+        if npc.StateFrame > d.wait and not mod:isScareOrConfuse(npc) then
             d.state = "jump"
         end
 

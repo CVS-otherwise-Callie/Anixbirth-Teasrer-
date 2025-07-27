@@ -2,11 +2,6 @@ local mod = FHAC
 local game = Game()
 local rng = RNG()
 
-mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
-    if npc.Variant == mod.Monsters.Snidge.Var then
-        mod:SnidgeAI(npc, npc:GetSprite(), npc:GetData())
-    end
-end, mod.Monsters.Snidge.ID)
 --funny fly
 function mod:SnidgeAI(npc, sprite, d)
     local target = npc:GetPlayerTarget()

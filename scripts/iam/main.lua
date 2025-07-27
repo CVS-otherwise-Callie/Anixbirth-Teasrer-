@@ -73,7 +73,8 @@ FHAC.CVSMonsters = {
 	Facebalm = mod:ENT("Facebalm"),
 	Spaarker = mod:ENT("Spaarker"),
 	Embolzon = mod:ENT("Embolzon"),
-	CracklingHost = mod:ENT("Crackling Host")
+	CracklingHost = mod:ENT("Crackling Host"),
+	ScorchedSooter = mod:ENT("Scorched Sooter")
 }
 
 FHAC.CVSEffects = {
@@ -205,7 +206,8 @@ FHAC:LoadScripts("scripts.iam.monsters", {
 	"facebalm",
 	"spaarker",
 	"embolzon",
-	"cracklinghost"
+	"cracklinghost",
+	"scorchedsooter"
 })
 
 FHAC:LoadScripts("scripts.iam.minibosses", {
@@ -282,6 +284,123 @@ FHAC:LoadScripts("scripts.iam.challenges", {
 FHAC:LoadScripts("scripts.iam.npcs", {
 	"ogwillowalker",
 })
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+function mod:CVS161AI(npc)
+	local var = npc.Variant
+	
+	if var == mod.Monsters.Toast.Var then
+		mod:ToastAI(npc, npc:GetSprite(), npc:GetData())
+	elseif var == mod.Monsters.LarryKingJr.Var then
+		mod:LarryKingJrAI(npc, npc:GetSprite(), npc:GetData())
+	elseif var == mod.Monsters.Patient.Var then
+		mod:PatientAI(npc, npc:GetSprite(), npc:GetData())
+	elseif var == mod.Monsters.Snidge.Var then
+		mod:SnidgeAI(npc, npc:GetSprite(), npc:GetData())
+	elseif var == mod.Monsters.Cowpat.Var then
+		mod:CowpatAI(npc, npc:GetSprite(), npc:GetData())
+	elseif var == mod.Monsters.HorfOnAStick.Var then
+		mod:HorfOnAStickAI(npc, npc:GetSprite(), npc:GetData())
+	elseif var == mod.Monsters.Dunglivery.Var then
+		mod:DungliveryAI(npc, npc:GetSprite(), npc:GetData())
+	elseif var == mod.Monsters.Floater.Var then
+		mod:FloaterAI(npc, npc:GetSprite(), npc:GetData(), npc:GetDropRNG())
+	elseif var == mod.Monsters.Fivehead.Var and npc.SubType == 0 then
+		mod:FiveheadAI(npc, npc:GetSprite(), npc:GetData())
+	elseif var == mod.Monsters.Log.Var then
+		mod:LogAI(npc, npc:GetSprite(), npc:GetData())
+	elseif var == mod.Monsters.Neutralfly.Var then
+		mod:NeutralflyAI(npc, npc:GetSprite(), npc:GetData())
+	elseif var == mod.Monsters.Stoner.Var then
+		mod:StonerAI(npc, npc:GetSprite(), npc:GetData())
+	elseif var == mod.Monsters.SackKid.Var then
+		mod:SackKidAI(npc, npc:GetSprite(), npc:GetData())
+	elseif var == mod.Monsters.Silly.Var or var == mod.Monsters.String.Var then
+		mod:SillyStringAI(npc, npc:GetSprite(), npc:GetData())
+	elseif var == mod.Monsters.Dried.Var then
+		mod:DriedAI(npc, npc:GetSprite(), npc:GetData())
+	elseif var == mod.Monsters.Hanger.Var then
+		mod:HangerAI(npc, npc:GetSprite(), npc:GetData(), npc:GetDropRNG())
+	elseif var == mod.Monsters.FlyveBomber.Var then
+		mod:FlyveBomberAI(npc, npc:GetSprite(), npc:GetData())
+	elseif var == mod.Monsters.SmallSack.Var then
+        mod:SmallSackAI(npc, npc:GetSprite(), npc:GetData())
+	elseif var == mod.Monsters.AngeryMan.Var then
+		mod:AngerymanAI(npc, npc:GetSprite(), npc:GetData())
+	elseif var == mod.Monsters.Bewebbed.Var then
+        mod:BewebbedAI(npc, npc:GetSprite(), npc:GetData())
+	elseif var == mod.Monsters.ReHost.Var then
+		mod:ReHostAI(npc, npc:GetSprite(), npc:GetData())
+	elseif var == mod.Monsters.PottedFatty.Var then
+        mod:PottedFattyAI(npc, npc:GetSprite(), npc:GetData())
+	elseif var == mod.Monsters.Suckup.Var then
+        mod:SuckupAI(npc, npc:GetSprite(), npc:GetData())
+	elseif var == mod.Monsters.ScorchedSooter.Var then
+        mod:ScorchedSooterAI(npc, npc:GetSprite(), npc:GetData())
+	elseif var == mod.Monsters.CracklingHost.Var then
+        mod:CracklingHostAI(npc, npc:GetSprite(), npc:GetData())
+	elseif var == mod.Monsters.ScorchedPeat.Var then
+        mod:ScorchedPeatAI(npc, npc:GetSprite(), npc:GetData())
+	elseif var == mod.Monsters.Trilo.Var then
+        mod:TriloAI(npc, npc:GetSprite(), npc:GetData())
+	elseif var == mod.Monsters.Schmoot.Var then
+        mod:SchmootAI(npc, npc:GetSprite(), npc:GetData())
+	elseif var == mod.Monsters.Soot.Var then
+        mod:SootAI(npc, npc:GetSprite(), npc:GetData())
+	elseif var == mod.Monsters.Embolzon.Var then
+        mod:EmbolzonAI(npc, npc:GetSprite(), npc:GetData())
+	elseif var == mod.Monsters.Spaarker.Var then
+        mod:SpaarkerAI(npc, npc:GetSprite(), npc:GetData())
+	elseif var == mod.Monsters.SyntheticHorf.Var then
+        mod:SyntheticHorfAI(npc, npc:GetSprite(), npc:GetData())
+	elseif var == mod.Monsters.Pallun.Var then
+        mod:PallunAI(npc, npc:GetSprite(), npc:GetData())
+	elseif var == mod.Monsters.Ulig.Var then
+        mod:UligAI(npc, npc:GetSprite(), npc:GetData())
+	elseif var == mod.Monsters.Sixheadtop.Var then
+        mod:SixheadtopAI(npc, npc:GetSprite(), npc:GetData())
+	elseif var == mod.Monsters.Sixheadbottom.Var then
+        mod:SixheadbottomAI(npc, npc:GetSprite(), npc:GetData())
+	elseif var == mod.Monsters.MushLoom.Var then
+        mod:MushLoomAI(npc, npc:GetSprite(), npc:GetData())
+	elseif npc.Variant == mod.Monsters.PitPatSpawner.Var and npc.SubType >= 1 then
+        mod:PitPatSpawnerAI(npc, npc:GetSprite(), npc:GetData())
+	elseif npc.Variant == mod.Monsters.PitPat.Var and npc.SubType == mod.Monsters.PitPat.Sub then
+        mod:PitPatAI(npc, npc:GetSprite(), npc:GetData())
+	elseif npc.Variant == mod.Monsters.Babble.Var then
+        mod:BabbleAI(npc, npc:GetSprite(), npc:GetData())
+	elseif npc.Variant == mod.Monsters.Erythorcyte.Var and npc.SubType == 0 then
+        mod:ErythorcyteAI(npc, npc:GetSprite(), npc:GetData())
+	elseif npc.Variant == mod.Monsters.Erythorcytebaby.Var and npc.SubType == 1 then
+        mod:ErythorcytebabyAI(npc, npc:GetSprite(), npc:GetData())
+	elseif npc.Variant == mod.Monsters.Wost.Var then
+        mod:WostAI(npc, npc:GetSprite(), npc:GetData())
+	elseif npc.Variant == mod.Monsters.RainMonger.Var then
+        mod:RainMongerAI(npc, npc:GetSprite(), npc:GetData())
+	elseif npc.Variant == mod.Monsters.ZapperTeller.Var then
+        mod:ZapperTellerAI(npc, npc:GetSprite(), npc:GetData())
+	elseif npc.Variant == mod.Monsters.Pinprick.Var and npc.SubType >= 1 then
+        mod:PinprickSpawnerAI(npc, npc:GetSprite(), npc:GetData())
+	elseif npc.Variant == mod.Monsters.Pinprick.Var and npc.SubType == 0 then
+        mod:PinprickAI(npc, npc:GetSprite(), npc:GetData())
+	elseif npc.Variant == mod.Monsters.Drosslet.Var then
+        mod:DrossletAI(npc, npc:GetSprite(), npc:GetData())
+	elseif npc.Variant == mod.Monsters.GassedFly.Var then
+        mod:GassedFlyAI(npc, npc:GetSprite(), npc:GetData())
+	elseif npc.Variant == mod.Monsters.Stuckpoot.Var then
+        --mod:StuckpootAI(npc, npc:GetSprite(), npc:GetData())
+	elseif npc.Variant == mod.Monsters.TechGrudge.Var then
+        mod:TechGrudgeAI(npc, npc:GetSprite(), npc:GetData())
+	elseif npc.Variant == mod.Monsters.FearFlower.Var then
+        mod:FearFlowerAI(npc, npc:GetSprite(), npc:GetData())
+	elseif npc.Variant == mod.Monsters.Mutilated.Var then
+        mod:MutilatedAI(npc, npc:GetSprite(), npc:GetData())
+	end
+end
+
+mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, mod.CVS161AI, 161)
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 local rng = RNG()
@@ -1374,11 +1493,6 @@ function FHAC.PostUpdateStuff()
     --FHAC.ToBeSavedEnts = AnixbirthSaveManager.GetRunSave().ToBeSavedEnts
 end
 FHAC:AddCallback(ModCallbacks.MC_POST_UPDATE, FHAC.PostUpdateStuff)
-
-function FHAC.PlayersTearsPostUpdate(_, t)
-    FHAC.FloaterTearUpdate(t)
-end
-FHAC:AddCallback(ModCallbacks.MC_POST_TEAR_UPDATE, FHAC.PlayersTearsPostUpdate)
 
 function FHAC:ProjStuff(v)
 	local d = v:GetData();

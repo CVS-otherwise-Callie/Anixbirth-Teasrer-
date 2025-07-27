@@ -2,12 +2,6 @@ local mod = FHAC
 local game = Game()
 local rng = RNG()
 
-mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
-    if npc.Variant == mod.Monsters.Facebalm.Var and npc.SubType == 0 then
-        mod:FacebalmAI(npc, npc:GetSprite(), npc:GetData())
-	end
-end, mod.Monsters.Facebalm.ID)
-
 function mod:FacebalmAI(npc, sprite, d)
 
 	local target = npc:GetPlayerTarget()

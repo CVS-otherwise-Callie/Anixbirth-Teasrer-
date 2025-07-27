@@ -2,12 +2,6 @@ local mod = FHAC
 local game = Game()
 local rng = RNG()
 
-mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
-    if npc.Variant == mod.Monsters.Schmoot.Var then
-        mod:SchmootAI(npc, npc:GetSprite(), npc:GetData())
-    end
-end, mod.Monsters.Schmoot.ID)
-
 function mod:SchmootAI(npc, sprite, d)
     local target = npc:GetPlayerTarget()
     local targetpos = mod:confusePos(npc, target.Position, 5, nil, nil)
@@ -56,7 +50,7 @@ function mod:SchmootAI(npc, sprite, d)
 
     if (npc.HitPoints) > (npc.MaxHitPoints/2) and d.state == "idle" then
         if (target.Position - npc.Position):Length() < 150 and game:GetRoom():CheckLine(target.Position,npc.Position,3,900,false,false) then
-            if not d.shootinit and not mod:isScaredOrConfuse(npc) then
+            if not d.shootinit and not mod:isScareOrConfuse(npc) then
                 d.state = "BeginShoot"
                 mod:spritePlay(sprite, "BeginShoot")
                 d.shootinit = true

@@ -2,12 +2,6 @@ local mod = FHAC
 local game = Game()
 local rng = RNG()
 
-mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
-    if npc.Variant == mod.Monsters.ScorchedPeat.Var then
-        mod:ScorchedPeatAI(npc, npc:GetSprite(), npc:GetData())
-    end
-end, mod.Monsters.ScorchedPeat.ID)
-
 function mod:ScorchedPeatAI(npc, sprite, d)
 
     local target = npc:GetPlayerTarget()

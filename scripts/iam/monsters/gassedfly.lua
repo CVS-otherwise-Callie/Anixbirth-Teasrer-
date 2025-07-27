@@ -2,12 +2,6 @@ local mod = FHAC
 local game = Game()
 local rng = RNG()
 
-mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
-    if npc.Variant == mod.Monsters.GassedFly.Var then
-        mod:GassedFlyAI(npc, npc:GetSprite(), npc:GetData())
-    end
-end, mod.Monsters.GassedFly.ID)
-
 function mod:GassedFlyAI(npc, sprite, d)
 
     local target = npc:GetPlayerTarget()
