@@ -25,7 +25,7 @@ function mod:StuckpootAI(npc, sprite, d)
     end
 
 
-  
+
 end
 
 function mod:StuckpootShartProjectile(p, d)
@@ -34,7 +34,7 @@ function mod:StuckpootShartProjectile(p, d)
         local room = game:GetRoom()
         local ffcoolcolor = Color(1,1,1,1,0,0,0)
         ffcoolcolor:SetColorize(1.3, 1.8, 0.5, 1)
-        
+
         local projectile = Isaac.Spawn(9, 0, 0, npc.Position, Vector(10, 0):Rotated((room:GetCenterPos() - npc.Position):GetAngleDegrees()), npc):ToProjectile()
         projectile.FallingSpeed = -10
         projectile.Color = ffcoolcolor
