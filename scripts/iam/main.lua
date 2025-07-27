@@ -1382,6 +1382,7 @@ local noFireDamage = {
 	"Firehead",
 	"Embolzon",
 	"CracklingHost",
+	"ScorchedSooter"
 }
 
 local function CheckEntityInNoFireList(npc)

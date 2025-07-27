@@ -80,6 +80,7 @@ function mod:TriloAI(npc, sprite, d)
     end
 
     if sprite:IsOverlayPlaying("HeadTransition4") and sprite:GetOverlayFrame() == 17 then
+        npc.SplatColor = FHAC.Color.Charred
         Isaac.Explode(npc.Position, npc, 40)
         npc:Kill()
     elseif sprite:GetOverlayFrame() == 17 and string.find(sprite:GetOverlayAnimation(), "HeadTransition") then
@@ -115,6 +116,12 @@ end)
 mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, function (_, npc, amount, damageFlags, source)
     if npc.Type == 161 and npc.Variant == mod.Monsters.Trilo.Var and (npc:GetData().isBlowingUp or string.find(npc:GetSprite():GetOverlayAnimation(), "HeadTransition")) and not mod:HasDamageFlag(DamageFlag.DAMAGE_CLONES, damageFlags) then
         npc:TakeDamage(amount*0.1, damageFlags | DamageFlag.DAMAGE_CLONES, source, 0)
+        return false
+    end
+end)
+
+mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, function(_, npc, damage, flags, guy)
+    if npc.Type == 161 and npc.Variant == mod.Monsters.Trilo.Var and flags == flags | DamageFlag.DAMAGE_FIRE then
         return false
     end
 end)

@@ -36,3 +36,8 @@ function mod:SpaarkerAI(npc, sprite, d)
 
 end
 
+mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, function(_, npc, damage, flags, guy)
+    if npc.Type == 161 and npc.Variant == mod.Monsters.Spaarker.Var and flags == flags | DamageFlag.DAMAGE_FIRE then
+        return false
+    end
+end)

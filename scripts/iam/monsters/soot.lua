@@ -9,6 +9,8 @@ function mod:SootAI(npc, sprite, d)
     local path = npc.Pathfinder
     local room = game:GetRoom()
 
+    npc.SplatColor = FHAC.Color.Charred
+
     if not d.init then
         sprite:PlayOverlay("Eyes")
         d.state = "idle"

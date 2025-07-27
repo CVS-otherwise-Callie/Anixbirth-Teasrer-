@@ -28,6 +28,8 @@ end
 
 function mod:ScorchedSooterAI(npc, sprite, d)
 
+    npc.SplatColor = FHAC.Color.Charred
+
     local target = npc:GetPlayerTarget()
     local targetpos = target.Position
     local room = game:GetRoom()
@@ -37,7 +39,6 @@ function mod:ScorchedSooterAI(npc, sprite, d)
         d.accelerateaway = 300
     else
         d.tearTarg = nil
-        d.accelerateaway = 0   
     end
 
     if not d.init then
@@ -134,3 +135,8 @@ function mod:ScorchedSooterAI(npc, sprite, d)
     })
 end
 
+mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, function(_, npc, damage, flags, guy)
+    if npc.Type == 161 and npc.Variant == mod.Monsters.ScorchedSooter.Var and flags == flags | DamageFlag.DAMAGE_FIRE then
+        return false
+    end
+end)

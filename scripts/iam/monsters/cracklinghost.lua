@@ -62,6 +62,10 @@ mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, function(_, npc, damage, flag, 
     if npc.Variant == mod.Monsters.CracklingHost.Var then
         local d = npc:GetData()
 
+        if flag == flag | DamageFlag.DAMAGE_FIRE then
+            return false
+        end
+
         if d.fireHp > 0 then
             d.fireHp = d.fireHp - damage
             sfx:Play(SoundEffect.SOUND_FIREDEATH_HISS, 2, 1, false, 1)

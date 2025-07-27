@@ -151,5 +151,8 @@ function mod:embolzonTakeDamage(npc, damage, flag, source)
         npc:TakeDamage(d.blockDMGEmbolzon * damage, flag | DamageFlag.DAMAGE_CLONES, source, 0)
         return false
     end
+    if npc.Type == mod.Monsters.Embolzon.ID and npc.Variant == mod.Monsters.Embolzon.Var and flag == flag | DamageFlag.DAMAGE_FIRE then
+        return false
+    end
 end
 
