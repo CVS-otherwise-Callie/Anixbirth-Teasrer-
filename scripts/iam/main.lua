@@ -74,7 +74,8 @@ FHAC.CVSMonsters = {
 	Spaarker = mod:ENT("Spaarker"),
 	Embolzon = mod:ENT("Embolzon"),
 	CracklingHost = mod:ENT("Crackling Host"),
-	ScorchedSooter = mod:ENT("Scorched Sooter")
+	ScorchedSooter = mod:ENT("Scorched Sooter"),
+	LilFlash = mod:ENT("Lil' Flash")
 }
 
 FHAC.CVSEffects = {
@@ -207,7 +208,8 @@ FHAC:LoadScripts("scripts.iam.monsters", {
 	"spaarker",
 	"embolzon",
 	"cracklinghost",
-	"scorchedsooter"
+	"scorchedsooter",
+	"lilflash"
 })
 
 FHAC:LoadScripts("scripts.iam.minibosses", {
@@ -397,6 +399,8 @@ function mod:CVS161AI(npc)
         mod:FearFlowerAI(npc, npc:GetSprite(), npc:GetData())
 	elseif npc.Variant == mod.Monsters.Mutilated.Var then
         mod:MutilatedAI(npc, npc:GetSprite(), npc:GetData())
+	elseif npc.Variant == mod.Monsters.LilFlash.Var then
+        mod:LilFlashAI(npc, npc:GetSprite(), npc:GetData())
 	end
 end
 
@@ -1382,7 +1386,8 @@ local noFireDamage = {
 	"Firehead",
 	"Embolzon",
 	"CracklingHost",
-	"ScorchedSooter"
+	"ScorchedSooter",
+	"LilFlash"
 }
 
 local function CheckEntityInNoFireList(npc)

@@ -57,7 +57,7 @@ function mod:FireheadAI(npc, sprite, d)
             end
             d.rngshoot = d.rngshoot + 30
         end
-        if (target.Position - npc.Position):Length() > 100 then
+        if (target.Position - npc.Position):Length() > 130 then
             d.state = "shake"
             npc.StateFrame = 0
             d.wait = 0

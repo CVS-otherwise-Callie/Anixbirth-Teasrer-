@@ -50,6 +50,8 @@ end)
 FHAC:AddCallback(ModCallbacks.MC_POST_NPC_RENDER, function(_, npc)
     if not FHAC.spriteDebugOn then return end
 
+    if npc.Type == 33 then return end
+
     local sprite = npc:GetSprite()
 
     local strs = {}
