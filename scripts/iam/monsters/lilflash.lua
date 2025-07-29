@@ -34,9 +34,18 @@ end
 local function CheckFireBoundaries(fire)
     local room = game:GetRoom()
     for i = 1, 4 do
-        local grid = room:GetGridEntityFromPos((fire.Position + Vector(10, 0):Rotated((i-1)*90)))
-        if grid or not grid then
+        local grid = room:GetGridEntityFromPos((fire.Position + Vector(30, 0):Rotated((i-1)*90)))
+        if grid and grid.CollisionClass < 2 then
             return true
+        elseif not grid then
+            local ent = Isaac.Spawn(161, 4500, 0, (fire.Position + Vector(30, 0):Rotated((i-1)*90)), Vector.Zero, nil)
+            ent:ClearEntityFlags(EntityFlag.FLAG_APPEAR)
+            if ent:ToNPC().Pathfinder:HasPathToPos(fire:ToNPC():GetPlayerTarget().Position, true) then
+                ent:Remove()
+                return true
+            else
+                ent:Remove()
+            end
         end
     end
     return false
@@ -47,9 +56,13 @@ local function getLocalFire(lilflash)
 
         -- -to check if the fire is freaking out- im going to fix this AFTER animating
 
-        if npc.Type == 33 then
+        if npc:GetData().isInhabitedByLilFlash and (npc:GetData().isInhabitedByLilFlash:IsDead() or not npc:GetData().isInhabitedByLilFlash:Exists()) then
+            npc:GetData().isInhabitedByLilFlash = nil
+        end
 
-            if not CheckForExtraLilFlash(npc) and npc:ToNPC().State == 8 and CheckFireBoundaries(npc) then
+        if npc.Type == 33 and npc.Variant < 2 then
+
+            if not npc:GetData().isInhabitedByLilFlash and not CheckForExtraLilFlash(npc) and npc:ToNPC().State == 8 and CheckFireBoundaries(npc) then
                 npc:GetData().isInhabitedByLilFlash = lilflash
                 return npc
             end
@@ -80,6 +93,12 @@ function mod:LilFlashAI(npc, sprite, d)
 
     if d.state == "hide" then
 
+        if target.Position.X < npc.Position.X then
+            sprite.FlipX = false
+        else
+            sprite.FlipX = true
+        end
+
         d.fire = d.fire or getLocalFire(npc)
 
         d.transferInit = false
@@ -108,7 +127,7 @@ function mod:LilFlashAI(npc, sprite, d)
             else
                 if not d.hasAppearFire and (sprite:IsFinished("FireBodyDisappear") or sprite:IsFinished("TransferDisappear")) then
                     mod:spritePlay(sprite, "FireAppear")
-                else
+                elseif d.hasAppearFire then
                     if npc.StateFrame > 20 then
                         mod:spritePlay(sprite, "NoBodyShoot")
                     else
@@ -116,10 +135,26 @@ function mod:LilFlashAI(npc, sprite, d)
                     end
                 end
 
+                npc.GridCollisionClass = 0
+                npc.EntityCollisionClass = 0
+
+                npc.Velocity = Vector.Zero
+
                 npc.Position = d.fire.Position
             end
         end
+
+        if d.Trail then
+            d.Trail:Kill()
+            d.Trail = nil
+        end
     elseif d.state == "scared" then
+
+        if target.Position.X < npc.Position.X then
+            sprite.FlipX = true
+        else
+            sprite.FlipX = false
+        end
 
         mod:MakeVulnerable(npc)
 
@@ -157,9 +192,13 @@ function mod:LilFlashAI(npc, sprite, d)
             
             mod:spritePlay(sprite, "FireBodyDisappear")
         end
+
+        if d.Trail then
+            d.Trail:Kill()
+            d.Trail = nil
+        end
     else
 
-        mod:MakeVulnerable(npc)
         npc.GridCollisionClass = 5
 
         d.hasAppearFire = false
@@ -170,24 +209,34 @@ function mod:LilFlashAI(npc, sprite, d)
 
         if d.pastFirstPos then
             local targ = d.fire
-            local targetvelocity = (targ.Position - npc.Position):Resized(7)
-            npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 0.7)
+            local targetvelocity = (targ.Position - npc.Position)
+            npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 0.02)
         else
             local targ = (targetpos + Vector(50, 0):Rotated((npc.Position - d.fire.Position):GetAngleDegrees() + 90))
             local targetvelocity = (targ - npc.Position):Resized(7)
-            npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 0.7)
+            npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 0.02)
 
-            if npc.Position:Distance(targ) < 20 then
+            if npc.Position:Distance(targ) < 30 then
                 d.pastFirstPos = true
             end
         end
 
+        npc.EntityCollisionClass = 5
+        npc.GridCollisionClass = 0
+
         if not d.transferInit then
             mod:spritePlay(sprite, "TransfeAppear")
-        elseif npc.Position:Distance(d.fire.Position) < 10 then
+        elseif npc.Position:Distance(d.fire.Position) < 5 + (npc.Velocity:Length()*2) then
+            npc.Velocity = npc.Velocity * 0.4
+            mod:MakeInvulnerable(npc)
             mod:spritePlay(sprite, "TransferDisappear")
-            print("cool")
         else
+            d.Trail = Isaac.Spawn(1000,166,0,npc.Position,Vector.Zero,npc):ToEffect()
+            d.Trail:FollowParent(npc)
+            d.Trail.ParentOffset = Vector(0,-12)
+            local color = Color(1,1,1,1,0.6,0.5,0.05)
+            color:SetColorize(1, 0.8, 0.1, 3)
+            d.Trail.Color = color
             mod:spritePlay(sprite, "Transfer")
         end
     end
