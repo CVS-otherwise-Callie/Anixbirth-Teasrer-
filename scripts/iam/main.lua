@@ -1564,10 +1564,14 @@ end
 FHAC:AddCallback(ModCallbacks.MC_POST_RENDER, FHAC.RenderedStuff)
 
 function FHAC:PostNewRoom()
+
+    AnixbirthSaveManager.GetRoomSave().anixbirthsaveData = AnixbirthSaveManager.GetRoomSave().anixbirthsaveData or {}
+
     FHAC:LoadSavedRoomEnts()
     FHAC.ToBeSavedEnts = {}
 
     FHAC.NullPressureEntExist = false
+	FHAC.ErrorRoomSubtype = nil
     
     FHAC.spawnedDried = false
     FHAC:SpawnRandomDried()

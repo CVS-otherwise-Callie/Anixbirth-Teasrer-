@@ -26,4 +26,5 @@
         <track name="petermation" path="petermation.ogg" loop="true"/>
         <!--https://www.youtube.com/watch?v=4vsxeHb0fao - bop bro good job -->
         <track name="chairsong" path="chairsong.ogg" loop="true"/>
+        <track name="creatuveexercise" path="creatuveexercise.ogg" loop="true"/>
 </music>

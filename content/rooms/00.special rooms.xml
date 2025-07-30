@@ -1431,6 +1431,15 @@
 			<entity type="161" variant="4095" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
+	<room variant="45002" name="puer pario PAAAINNNTTT" type="3" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="1.0" lastTestTime="2025-07-30T21:59+00:00">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="7"/>
+		<door exists="True" x="13" y="3"/>
+		<spawn x="0" y="0">
+			<entity type="998" variant="418" subtype="1" weight="1.0"/>
+		</spawn>
+	</room>
 	<room variant="45000" name="Cheetus 2.0 - fuck you, no more secret room pool" type="7" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="9.999999960041972e-12">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>

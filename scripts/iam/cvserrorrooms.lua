@@ -11,6 +11,10 @@ mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
     end
 end)
 
+mod:AddCallback(ModCallbacks.MC_POST_RENDER, function()
+    mod:CVSErrorRoomEditorRender()
+end)
+
 local function FindClosestTear(npc)
     local dist = 999999999
     local tr
@@ -26,16 +30,18 @@ local function FindClosestTear(npc)
 end
 
 function mod:CVSErrorRoomEditor(ef, sprite, d)
+
+    ef.CanShutDoors = false
+
     mod.ErrorRoomSubtype = ef.SubType+1
 
-    local room = Game:GetRoom()
     local player = Isaac.GetPlayer()
 
     local num = 0
 
-    if mod.ErrorRoomSubtype == 1 then
+    ef:ClearEntityFlags(EntityFlag.FLAG_APPEAR)
 
-        ms:Play(Isaac.GetMusicIdByName("chairsong"), 1)
+    if mod.ErrorRoomSubtype == 1 then
 
         if not d.init then
             for j = 1, 100 do
@@ -44,11 +50,11 @@ function mod:CVSErrorRoomEditor(ef, sprite, d)
                     num = num + 1
 
 
-                    local str = "[extinct]"
+                    local str = "THE WORLD REVOLVING but it's just the mcdonalds beeping sound"
 
                     if not player then return end
 
-                    local pos = Game():GetRoom():WorldToScreenPosition(player.Position) + Vector(mod.TempestFont:GetStringWidth(str) * -0.5, -(player.SpriteScale.Y * 35) - j/3 - 15)
+                    local pos = Game():GetRoom():WorldToScreenPosition(game:GetRoom():GetCenterPos()) + Vector(mod.TempestFont:GetStringWidth(str) * -0.5, -(player.SpriteScale.Y * 35) - j/3 - 15)
                     local opacity
                     local cap = 50
                     if j >= cap then
@@ -62,20 +68,146 @@ function mod:CVSErrorRoomEditor(ef, sprite, d)
             end
             d.init = true
         else
-            game:GetRoom():SetBackdropType(Isaac.GetBackdropIdByName("Error Room Chair"), 1)
-            for i = 1, game:GetNumPlayers() do
-                local player = Isaac.GetPlayer(i)
-
-                player.GridCollisionClass = 0
-                player.EntityCollisionClass = EntityCollisionClass.ENTCOLL_PLAYERONLY
+            if ms:GetCurrentMusicID() ~= Isaac.GetMusicIdByName("chairsong") then
+                ms:Play(Isaac.GetMusicIdByName("chairsong"), 1)
             end
-            AnixbirthSaveManager.GetRunSave().anixbirthsaveData.ReturnPlayersToColl5 = true
+        end
+
+    elseif mod.ErrorRoomSubtype == 2 then
+
+        local roomDat = AnixbirthSaveManager.GetRoomSave().anixbirthsaveData
+
+        for i = 1, game:GetNumPlayers() do
+            local player = Isaac.GetPlayer(i)
+
+            player.GridCollisionClass = 0
+            player.EntityCollisionClass = EntityCollisionClass.ENTCOLL_ALL
+        end
+        AnixbirthSaveManager.GetRunSave().anixbirthsaveData.ReturnPlayersToColl5 = true
+
+        game:GetRoom():SetBackdropType(Isaac.GetBackdropIdByName("Error Room Mario Paint"), 1) 
+
+        roomDat.MarioPaintPoses = roomDat.MarioPaintPoses or {}
+
+        roomDat.MarioPaintColor = roomDat.MarioPaintColor or 1
+
+        local listofColors = {
+            Color(1, 1, 0, 1),
+            Color(0, 1, 1, 1),
+            Color(1, 0, 1, 1)
+        }
+
+        for i = 1, game:GetNumPlayers() do
+            local player = Isaac.GetPlayer(i)
+
+            local color = listofColors[roomDat.MarioPaintColor]
+
+            if Input.IsButtonPressed(Keyboard.KEY_ENTER, player.ControllerIndex) then 
+                roomDat.MarioPaintPoses[tostring(player.Position)] = {player.Position, player, color, #roomDat.MarioPaintPoses+1}
+            elseif Input.IsButtonPressed(Keyboard.KEY_RIGHT_SHIFT, player.ControllerIndex) or Input.IsButtonPressed(Keyboard.KEY_LEFT_SHIFT, player.ControllerIndex) then 
+
+                for name, pos in pairs(roomDat.MarioPaintPoses) do
+                    if (player.Position + Vector(0, -10)):Distance(pos[1]) < 10 then
+                        roomDat.MarioPaintPoses[name] = nil
+                    end
+                end
+
+            elseif Input.IsButtonPressed(Keyboard.KEY_DELETE, player.ControllerIndex) or Input.IsButtonPressed(Keyboard.KEY_BACKSPACE, player.ControllerIndex) then 
+                roomDat.MarioPaintPoses = {}
+                roomDat.MarioErasePoses = {}
+            elseif Input.IsButtonTriggered(Keyboard.KEY_T, player.ControllerIndex) then
+                Isaac.GridSpawn(GridEntityType.GRID_TRAPDOOR, 0, player.Position + Vector(50, 0), true)
+            elseif Input.IsButtonPressed(Keyboard.KEY_H, player.ControllerIndex) then
+                if mod.HasPressedHMarioPaint == true then return end
+                mod.HasPressedHMarioPaint = true
+                if not roomDat.HideMarioPaintHints then
+                    roomDat.HideMarioPaintHints = true
+                else
+                    roomDat.HideMarioPaintHints = false
+                end
+            end
+            if not Input.IsButtonPressed(Keyboard.KEY_H, player.ControllerIndex) then
+                mod.HasPressedHMarioPaint = false
+            end
+            if Input.IsButtonPressed(Keyboard.KEY_PERIOD, player.ControllerIndex) then 
+                if roomDat.HasPressedPeriodMarioPaint == true then return end
+                roomDat.MarioPaintColor = roomDat.MarioPaintColor + 1
+                roomDat.HasPressedPeriodMarioPaint = true
+            elseif not Input.IsButtonTriggered(Keyboard.KEY_PERIOD, player.ControllerIndex) then 
+                roomDat.HasPressedPeriodMarioPaint = false
+            end
+            if Input.IsButtonPressed(Keyboard.KEY_COMMA, player.ControllerIndex) then
+                if roomDat.HasPressedCommaMarioPaint == true then return end
+                roomDat.MarioPaintColor = roomDat.MarioPaintColor - 1
+                roomDat.HasPressedCommaMarioPaint = true
+            elseif not Input.IsButtonTriggered(Keyboard.KEY_COMMA, player.ControllerIndex) then
+                roomDat.HasPressedCommaMarioPaint = false
+            end
+
+            if roomDat.MarioPaintColor == 0 then
+                roomDat.MarioPaintColor = #listofColors
+            elseif roomDat.MarioPaintColor > #listofColors then
+                roomDat.MarioPaintColor = 1
+            end
+        end
+
+        if ms:GetCurrentMusicID() ~= Isaac.GetMusicIdByName("creatuveexercise") then
+            ms:Play(Isaac.GetMusicIdByName("creatuveexercise"), 1)
         end
 
     end
 end
 
+function mod:CVSErrorRoomEditorRender()
+
+    local roomDat = AnixbirthSaveManager.GetRoomSave().anixbirthsaveData
+
+    if roomDat and roomDat.MarioPaintPoses then
+
+        for name, pos in pairs(roomDat.MarioPaintPoses) do
+
+            if not pos[3] then return end
+
+            local sprite = Sprite()
+
+            sprite:Load("gfx/jokes/shhhh go away/dot.anm2", true)
+            sprite:Play(sprite:GetDefaultAnimation())
+            sprite.Color = pos[3]
+            sprite:Render(Isaac.WorldToScreen(pos[1]), Vector.Zero, Vector.Zero)
+        end
+    end
+
+    local opacity = 1
+
+    if roomDat and roomDat.HideMarioPaintHints == true then
+        opacity = 0
+    end
+
+
+    if mod.ErrorRoomSubtype == 2 then
+        local str = "Keys:"
+        local str2 = "Hold ENTER to DRAW"
+        local str5 = "Hold SHIFT to ERASE"
+        local str3 = "Press < or > to CHANGE COLOR"
+        local str4 = "Press DELETE or BACKSPACE to CLEAR SELECTION"
+        local str6 = "Press T to SPAWN TRAPDOOR"
+        local str7 = "Press H to HIDE and SHOW these rules"
+
+        local pos = Game():GetRoom():WorldToScreenPosition(Vector(100, 130) + Vector(mod.TempestFont:GetStringWidth(str) * -0.5, -35))
+        --Isaac.RenderText(str, pos.X, pos.Y, 1, 1, 1, opacity)
+        mod.TempestFont:DrawString(str, pos.X, pos.Y, KColor(1,1,1,opacity), 0, false)
+        mod.TempestFont:DrawString(str2, pos.X, pos.Y + 10, KColor(1,1,1,opacity), 0, false)
+        mod.TempestFont:DrawString(str5, pos.X, pos.Y + 20, KColor(1,1,1,opacity), 0, false)
+        mod.TempestFont:DrawString(str3, pos.X, pos.Y + 30, KColor(1,1,1,opacity), 0, false)
+        mod.TempestFont:DrawString(str4, pos.X, pos.Y + 40, KColor(1,1,1,opacity), 0, false)
+        mod.TempestFont:DrawString(str6, pos.X, pos.Y + 50, KColor(1,1,1,opacity), 0, false)
+        mod.TempestFont:DrawString(str7, pos.X, pos.Y + 60, KColor(1,1,1,opacity), 0, false)
+    end
+end
+
 function mod:CVSnilNPC(npc, sprite, d)
+
+    npc:ClearEntityFlags(EntityFlag.FLAG_APPEAR)
 
     local roomEr = mod.ErrorRoomSubtype
     
@@ -97,6 +229,15 @@ function mod:CVSnilNPC(npc, sprite, d)
             else
                 npc.StateFrame = npc.StateFrame + 1
             end
+
+            game:GetRoom():SetBackdropType(Isaac.GetBackdropIdByName("Error Room Chair"), 1)
+            for i = 1, game:GetNumPlayers() do
+                local player = Isaac.GetPlayer(i)
+
+                player.GridCollisionClass = 0
+                player.EntityCollisionClass = EntityCollisionClass.ENTCOLL_PLAYERONLY
+            end
+            AnixbirthSaveManager.GetRunSave().anixbirthsaveData.ReturnPlayersToColl5 = true
 
             --code--
 
@@ -150,6 +291,9 @@ function mod:CVSnilNPC(npc, sprite, d)
         end
     end
     
+end
+
+function mod:CVSnilNPCRender(npc, sprite, d)
 end
 
 mod:AddCallback(ModCallbacks.MC_POST_PICKUP_UPDATE, function(_, pickup)
