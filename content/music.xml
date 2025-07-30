@@ -24,4 +24,6 @@
         <track name="albuquerque" path="albuquerque.ogg" loop="false"/>
         <!--https://www.youtube.com/watch?v=2UB92f82eWk - THANK YOU CONNORPOOP this is a MASTERPIECE-->
         <track name="petermation" path="petermation.ogg" loop="true"/>
+        <!--https://www.youtube.com/watch?v=4vsxeHb0fao - bop bro good job -->
+        <track name="chairsong" path="chairsong.ogg" loop="true"/>
 </music>

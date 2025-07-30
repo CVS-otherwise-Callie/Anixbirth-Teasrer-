@@ -1,6 +1,7 @@
 local game = Game()
 local sfx = SFXManager()
 local mod = FHAC
+local ms = MusicManager()
 
 mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
     if npc.Type == mod.NPCS.BlankNPC.ID and npc.Variant == mod.NPCS.BlankNPC.Var then
@@ -26,6 +27,52 @@ end
 
 function mod:CVSErrorRoomEditor(ef, sprite, d)
     mod.ErrorRoomSubtype = ef.SubType+1
+
+    local room = Game:GetRoom()
+    local player = Isaac.GetPlayer()
+
+    local num = 0
+
+    if mod.ErrorRoomSubtype == 1 then
+
+        ms:Play(Isaac.GetMusicIdByName("chairsong"), 1)
+
+        if not d.init then
+            for j = 1, 100 do
+                mod.scheduleCallback(function()
+
+                    num = num + 1
+
+
+                    local str = "[extinct]"
+
+                    if not player then return end
+
+                    local pos = Game():GetRoom():WorldToScreenPosition(player.Position) + Vector(mod.TempestFont:GetStringWidth(str) * -0.5, -(player.SpriteScale.Y * 35) - j/3 - 15)
+                    local opacity
+                    local cap = 50
+                    if j >= cap then
+                        opacity = 1 - ((j-cap)/50)
+                    else
+                        opacity = j/cap
+                    end
+                    --Isaac.RenderText(str, pos.X, pos.Y, 1, 1, 1, opacity)
+                    mod.TempestFont:DrawString(str, pos.X, pos.Y, KColor(1,1,1,opacity), 0, false)
+                end, j, ModCallbacks.MC_POST_RENDER, false)
+            end
+            d.init = true
+        else
+            game:GetRoom():SetBackdropType(Isaac.GetBackdropIdByName("Error Room Chair"), 1)
+            for i = 1, game:GetNumPlayers() do
+                local player = Isaac.GetPlayer(i)
+
+                player.GridCollisionClass = 0
+                player.EntityCollisionClass = EntityCollisionClass.ENTCOLL_PLAYERONLY
+            end
+            AnixbirthSaveManager.GetRunSave().anixbirthsaveData.ReturnPlayersToColl5 = true
+        end
+
+    end
 end
 
 function mod:CVSnilNPC(npc, sprite, d)
@@ -36,20 +83,10 @@ function mod:CVSnilNPC(npc, sprite, d)
     
     if roomEr == 1 then
 
-        if mod.ajsbsakjb == nil then
-            game:GetRoom():SetBackdropType(Isaac.GetBackdropIdByName("Error Room Chair"), 1)
-
-            AnixbirthSaveManager.GetRunSave().anixbirthsaveData.ReturnPlayersToColl5 = true
+        if npc.SubType == 0 then
 
             --sprites--
             if not d.init then
-
-                for i = 1, game:GetNumPlayers() do
-                    local player = Isaac.GetPlayer(i)
-
-                    player.GridCollisionClass = 0
-                    player.EntityCollisionClass = EntityCollisionClass.ENTCOLL_PLAYERONLY
-                end
 
                 sprite:Load("gfx/jokes/shhhh go away/secretchair.anm2", true)
                 sprite:LoadGraphics()
@@ -82,14 +119,18 @@ function mod:CVSnilNPC(npc, sprite, d)
             if tear and math.abs(mod:GetTrueAngle((tear.Position - tear.SpawnerEntity.Position):GetAngleDegrees()) - mod:GetTrueAngle((npc.Position - tear.SpawnerEntity.Position):GetAngleDegrees())) < 50 then
                 d.shotAt = true
             end
-        elseif npc.Subtype == 2 then
+        elseif npc.SubType == 1 then
             if not d.init then
 
                 npc.EntityCollisionClass = 0
+                npc.GridCollisionClass = 0
                 sprite:Load("gfx/jokes/shhhh go away/secretchair.anm2", true)
                 sprite:LoadGraphics()
 
                 mod:spritePlay(sprite, "ILikeChairs")
+                npc.SortingLayer = SortingLayer.SORTING_BACKGROUND
+                d.tilt = -2
+                d.init = true
             else
                 local targvel = mod:diagonalMove(npc, 8, 1)
                 local tiltCalc = Vector(targvel.X, 0):Resized(-1) * d.tilt
@@ -102,6 +143,9 @@ function mod:CVSnilNPC(npc, sprite, d)
                 if npc.StateFrame % 2 == 0 then
                     npc.Velocity = mod:Lerp(npc.Velocity, targvel, 0.5)
                 end
+
+                local var = (math.ceil(npc.Velocity:Length()-3))
+                if var <= 0 then var = (var*-1)+1 end
             end
         end
     end

@@ -1397,6 +1397,9 @@
 		<spawn x="0" y="0">
 			<entity type="998" variant="418" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="1" y="0">
+			<entity type="161" variant="4095" subtype="1" weight="1.0"/>
+		</spawn>
 		<spawn x="3" y="0">
 			<entity type="161" variant="4095" subtype="0" weight="1.0"/>
 		</spawn>

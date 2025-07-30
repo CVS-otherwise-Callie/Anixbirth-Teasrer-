@@ -32,7 +32,7 @@ function mod:BowlOfSauerkrautAI(p, sprite, d)
         p.EntityCollisionClass = EntityCollisionClass.ENTCOLL_NONE
         p:Remove()
         if math.random(100000) == 1 then --alllllbuqurue
-            ms:Play(Isaac.GetMusicIdByName("albuquerque"), 0.1)
+            ms:Play(Isaac.GetMusicIdByName("albuquerque"), 1)
         end
     end
     if sprite:IsEventTriggered("DropSound") then
