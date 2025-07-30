@@ -1,0 +1,12 @@
+<backdrops gfxroot="gfx/backdrop/" gridgfxroot="gfx/grid/" effectsgfxroot="gfx/effects/">
+    <backdrop name="Error Room Chair" reftype="1" gfx="nothing.png" walls="1" wallvariants="3" floors="1" floorvariants="6"
+        lfloorgfx   = "nothing.png"
+        nfloorgfx   = "nothing.png"
+        props       = "blank.anm2"
+        rocks       = "rocks_basement.png"
+        pit         = "grid_pit.png"
+        bridge      = "grid_bridge.png"
+        door        = "door_01_normaldoor.png"
+        holeinwall  = "door_08_holeinwall.png"
+    />
+</backdrops>

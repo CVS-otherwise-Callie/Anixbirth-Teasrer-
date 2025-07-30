@@ -145,8 +145,7 @@ function mod:LilFlashAI(npc, sprite, d)
         end
 
         if d.Trail then
-            d.Trail:Kill()
-            d.Trail = nil
+            d.Trail:Remove()
         end
     elseif d.state == "scared" then
 
@@ -194,12 +193,9 @@ function mod:LilFlashAI(npc, sprite, d)
         end
 
         if d.Trail then
-            d.Trail:Kill()
-            d.Trail = nil
+            d.Trail:Remove()
         end
     else
-
-        npc.GridCollisionClass = 5
 
         d.hasAppearFire = false
 
@@ -208,13 +204,18 @@ function mod:LilFlashAI(npc, sprite, d)
         end
 
         if d.pastFirstPos then
+            local num = 2
+            if d.hasHadToMove then
+                num = 4
+            end
             local targ = d.fire
             local targetvelocity = (targ.Position - npc.Position)
-            npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 0.02)
+            npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, num*0.01)
         else
+            d.hasHadToMove = true
             local targ = (targetpos + Vector(50, 0):Rotated((npc.Position - d.fire.Position):GetAngleDegrees() + 90))
             local targetvelocity = (targ - npc.Position):Resized(7)
-            npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 0.02)
+            npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 0.07)
 
             if npc.Position:Distance(targ) < 30 then
                 d.pastFirstPos = true
@@ -231,12 +232,6 @@ function mod:LilFlashAI(npc, sprite, d)
             mod:MakeInvulnerable(npc)
             mod:spritePlay(sprite, "TransferDisappear")
         else
-            d.Trail = Isaac.Spawn(1000,166,0,npc.Position,Vector.Zero,npc):ToEffect()
-            d.Trail:FollowParent(npc)
-            d.Trail.ParentOffset = Vector(0,-12)
-            local color = Color(1,1,1,1,0.6,0.5,0.05)
-            color:SetColorize(1, 0.8, 0.1, 3)
-            d.Trail.Color = color
             mod:spritePlay(sprite, "Transfer")
         end
     end
@@ -252,7 +247,14 @@ function mod:LilFlashAI(npc, sprite, d)
         d.hasAppearFire = true
     elseif sprite:IsFinished("TransfeAppear") then
         d.transferInit = true
+        d.Trail = Isaac.Spawn(1000,166,0,npc.Position,Vector.Zero,npc):ToEffect()
+        d.Trail:FollowParent(npc)
+        d.Trail.ParentOffset = Vector(0,-20)
+        local color = Color(1,1,1,1,0.6,0.5,0.05)
+        color:SetColorize(1, 0.8, 0.1, 3)
+        d.Trail.Color = color
     elseif sprite:IsFinished("TransferDisappear") then
+        d.hasHadToMove = false
         d.state = "hide"
     end
 

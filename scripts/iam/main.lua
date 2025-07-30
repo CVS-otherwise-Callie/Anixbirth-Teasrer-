@@ -75,7 +75,7 @@ FHAC.CVSMonsters = {
 	Embolzon = mod:ENT("Embolzon"),
 	CracklingHost = mod:ENT("Crackling Host"),
 	ScorchedSooter = mod:ENT("Scorched Sooter"),
-	LilFlash = mod:ENT("Lil' Flash")
+	LilFlash = mod:ENT("Lil' Flash"),
 }
 
 FHAC.CVSEffects = {
@@ -86,12 +86,14 @@ FHAC.CVSEffects = {
     NormalTextBox = mod:ENT("Text Box"),
     DekatesseraEffect = mod:ENT("Dekatessera Effect"),
 	WideWeb = mod:ENT("Large Spiderweb"),
-	CVSFire = mod:ENT("Fire Projectile (ANIXBIRTH)")
+	CVSFire = mod:ENT("Fire Projectile (ANIXBIRTH)"),
 }
 
 FHAC.CVSNPCS = {
 	Skeleton = mod:ENT("Skeleton NPC"),
-	OGWilloWalker = mod:ENT("OGWilloWalker NPC")
+	OGWilloWalker = mod:ENT("OGWilloWalker NPC"),
+	BlankNPC = mod:ENT("Blank NPC Anixbirth"),
+	ErrorRoomEditor = mod:ENT("Error Room Editor")
 }
 
 FHAC.CVSMinibosses = {
@@ -221,7 +223,8 @@ FHAC:LoadScripts("scripts.iam.minibosses", {
 FHAC:LoadScripts("scripts.iam", {
 	"cvsunlocks",
 	"levelreplaceshit",
-	"customgrids"
+	"customgrids",
+	"cvserrorrooms"
 })
 
 FHAC:LoadScripts("scripts.iam.effects", {
@@ -1312,6 +1315,20 @@ function mod:CVSNewRoom()
 			sprite:LoadGraphics()
         end
     end
+
+	local rundat = AnixbirthSaveManager.GetRunSave().anixbirthsaveData
+
+	if not rundat then return end
+
+	if rundat.ReturnPlayersToColl5 then
+		rundat.ReturnPlayersToColl5 = nil
+		for i = 1, game:GetNumPlayers() do
+			local player = Isaac.GetPlayer(i)
+
+			player.GridCollisionClass = 5
+			player.EntityCollisionClass = 5
+		end
+	end
 end
 
 --thx ff
@@ -1559,6 +1576,8 @@ function FHAC:PostNewRoom()
     FHAC:SongChangesToIngameOST()
 
     FHAC:CVSNewRoom()
+
+
 end
 FHAC:AddCallback(ModCallbacks.MC_POST_NEW_ROOM, FHAC.PostNewRoom)
 

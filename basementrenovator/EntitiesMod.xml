@@ -126,6 +126,7 @@ Up to groups of 3.
 <entity ID="161" Variant="81" Name="Firehead" Image="mah boys/firehead.png" BaseHP="13"/>
 <entity ID="161" Variant="84" Name="Trilo" Image="mah boys/trilo.png" BaseHP="10"/>
 <entity ID="161" Variant="91" Name="Schmoot" Image="mah boys/schmoot.png" BaseHP="16" Tags="Champion"/>
+<entity ID="161" Variant="97" Name="Lil' Flash" Image="mah boys/lilflash.png" BaseHP="7" Tags="Champion"/>
 <entity ID="161" Variant="101" Name="Soot" Image="mah boys/soot.png" BaseHP="3"/>
 <entity ID="161" Variant="119" Name="Wost" Image="mah boys/wost.png" BaseHP="8" Tags="Champion"/>
 <entity ID="161" Variant="133" Name="Zapper Teller" Image="mah boys/zapperteller.png" BaseHP="13" Tags="Champion">
@@ -215,7 +216,19 @@ Use 2, 4, or 6 normally.
 <entity ID="426" Variant="2" Name="&amp;" Image="mah boys/&amp;tainted.png" BaseHP="20" StageHP="20" ShieldStrength="1000" Tags="Champion"/>
 
 <!--Jokes-->
-<entity ID="137" Variant="3939" Name="WilloWalker" Image="mah boys/willowalker.png" BaseHP="n/a" />
+<entity ID="161" Variant="3939" Name="WilloWalker" Image="mah boys/willowalker.png" BaseHP="n/a" />
+<entity ID="161" Variant="4095" Name="Blank NPC Anixbirth" Image="mah boys/blanknpc.png" BaseHP="n/a">
+<bitfield Key="Subtype">
+        <spinner Length="16" ValueOffset="1" Name="Variant">
+        </spinner>
+      </bitfield>
+</entity>
+<entity ID="998" Variant="418" Name="Error Room Editor" Image="mah boys/errorroomeditor.png" BaseHP="n/a">
+<bitfield Key="Subtype">
+        <spinner Length="16" ValueOffset="1" Name="Variant">
+        </spinner>
+      </bitfield>
+</entity>
 
 <group Name="HOPE Sin Minibosses">
 	<entity Name="Narcissism"/>
@@ -293,6 +306,7 @@ Use 2, 4, or 6 normally.
 			<entity Name="Firehead"/>
 			<entity Name="Trilo"/>
 			<entity Name="Schmoot"/>
+			<entity Name="Lil' Flash"/>
 			<entity Name="Soot"/>
 		</group>
 	</group>
