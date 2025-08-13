@@ -147,7 +147,7 @@ function mod:DetachedDriedAI(npc, sprite, d)
         npc.EntityCollisionClass = 0
         d.zvel = d.zvel + 0.4
     else
-        if room:GetGridEntity(room:GetGridIndex(npc.Position)) and room:GetGridEntity(room:GetGridIndex(npc.Position)):GetType() then
+        if room:GetGridEntity(room:GetGridIndex(npc.Position)) and room:GetGridEntity(room:GetGridIndex(npc.Position)):GetType() == 7 then
             d.state = "hole"
         else
 

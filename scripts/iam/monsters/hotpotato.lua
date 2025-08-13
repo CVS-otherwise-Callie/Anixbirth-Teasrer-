@@ -50,7 +50,7 @@ function mod:HotPotatoAI(npc, sprite, d)
             local targetvelocity = (targetpos - npc.Position):Resized(4)
             npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 0.6)
         else
-            path:FindGridPath(targetpos, 1.3, 1, true)
+            path:FindGridPath(targetpos, 0.75, 1, true)
         end
 
         mod:spritePlay(sprite, "Run" .. mod:GetMoveString(npc.Velocity, false, false) .. math.ceil(npc.StateFrame / 10))

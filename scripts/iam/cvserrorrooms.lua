@@ -210,9 +210,9 @@ function mod:CVSnilNPC(npc, sprite, d)
     npc:ClearEntityFlags(EntityFlag.FLAG_APPEAR)
 
     local roomEr = mod.ErrorRoomSubtype
-    
+
     if not roomEr then return end
-    
+
     if roomEr == 1 then
 
         if npc.SubType == 0 then
@@ -280,7 +280,7 @@ function mod:CVSnilNPC(npc, sprite, d)
                 if npc:CollidesWithGrid() then
                     d.tilt = d.tilt * -1
                 end
-                
+
                 if npc.StateFrame % 2 == 0 then
                     npc.Velocity = mod:Lerp(npc.Velocity, targvel, 0.5)
                 end
@@ -303,6 +303,7 @@ function mod:CVSnilNPC(npc, sprite, d)
             sixheadBottom.CanShutDoors = false
             sixheadBottom.EntityCollisionClass = EntityCollisionClass.ENTCOLL_NONE
             sixheadBottom:Update()
+            sixheadBottom.DepthOffset = -500
 
             d.hasSpawnedBottom = true
         else

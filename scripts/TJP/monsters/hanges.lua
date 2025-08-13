@@ -262,7 +262,6 @@ function mod:HangedriedAI(npc, sprite, d) --------------------------------------
 end
 
 function mod:HangedriedRenderAI(npc, sprite, d) ------------------------------------------------------------------------------------------------------------------------------------------------------------
-
     local player = npc:GetPlayerTarget()
     local playerpos = mod:confusePos(npc, player.Position, 5, nil, nil)
     local path = npc.Pathfinder
@@ -270,15 +269,23 @@ function mod:HangedriedRenderAI(npc, sprite, d) --------------------------------
 
     local screenpos = room:WorldToScreenPosition(npc.Position)
 
-
-    if d.backDriedBody then
+    if npc:IsDead() then
+        if d.backDriedBody then
+            d.backDriedBody:Remove()
+        end
+        if d.backDriedFace then
+            d.backDriedFace:Remove()
+        end
+    end
+    if d.backDriedBody and npc:IsDead() == false then
         local spr = d.backDriedBody:GetSprite()
 
         spr:Load("gfx/monsters/hanges/hanges.anm2", true)
         spr:SetFrame("Hangerope"..d.hangedriedanim.."Behind", d.hangedriedframe)
     end
 
-    if d.backDriedFace then
+    if d.backDriedFace and npc:IsDead() == false then
+        print("faaace")
         local spr = d.backDriedFace:GetSprite()
 
         spr:Load("gfx/monsters/hanges/hanges.anm2", true)
