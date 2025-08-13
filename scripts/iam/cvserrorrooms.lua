@@ -40,6 +40,7 @@ function mod:CVSErrorRoomEditor(ef, sprite, d)
     local num = 0
 
     ef:ClearEntityFlags(EntityFlag.FLAG_APPEAR)
+    ef:AddEntityFlags(EntityFlag.FLAG_NO_QUERY)
 
     if mod.ErrorRoomSubtype == 1 then
 
@@ -153,8 +154,7 @@ function mod:CVSErrorRoomEditor(ef, sprite, d)
 
         if ms:GetCurrentMusicID() ~= Isaac.GetMusicIdByName("creatuveexercise") then
             ms:Play(Isaac.GetMusicIdByName("creatuveexercise"), 1)
-        end
-
+        end        
     end
 end
 
@@ -289,6 +289,34 @@ function mod:CVSnilNPC(npc, sprite, d)
                 if var <= 0 then var = (var*-1)+1 end
             end
         end
+    elseif roomEr == 3 then
+
+        if not d.hasSpawnedBottom then
+            local sixheadBottom = Isaac.Spawn(mod.Monsters.Sixheadbottom.ID, mod.Monsters.Sixheadbottom.Var, 0, npc.Position, npc.Velocity, nil):ToNPC()
+            local spr = sixheadBottom:GetSprite()
+
+            spr:Load("gfx/jokes/shhhh go away/disk.anm2", true)
+            spr:LoadGraphics()
+
+            spr:Play("Idle")
+
+            sixheadBottom.CanShutDoors = false
+            sixheadBottom.EntityCollisionClass = EntityCollisionClass.ENTCOLL_NONE
+            sixheadBottom:Update()
+
+            d.hasSpawnedBottom = true
+        else
+            npc:Remove()
+        end
+
+        game:GetRoom():SetBackdropType(Isaac.GetBackdropIdByName("Error Room Chair"), 1)
+        for i = 1, game:GetNumPlayers() do
+            local player = Isaac.GetPlayer(i)
+
+            player.GridCollisionClass = 0
+            player.EntityCollisionClass = EntityCollisionClass.ENTCOLL_PLAYERONLY
+        end
+        AnixbirthSaveManager.GetRunSave().anixbirthsaveData.ReturnPlayersToColl5 = true
     end
     
 end
@@ -302,5 +330,13 @@ mod:AddCallback(ModCallbacks.MC_POST_PICKUP_UPDATE, function(_, pickup)
         pickup.GridCollisionClass = 0
 
         pickup.Velocity = Vector(1, 0)
+    end
+end)
+
+mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, function(_, npc, amount, flags, damage)
+    if npc.Type == mod.NPCS.ErrorRoomEditor.ID and npc.Variant == mod.NPCS.ErrorRoomEditor.Var then
+        if damage then
+            return false
+        end
     end
 end)

@@ -447,6 +447,14 @@
     </entity>
 
     <!--Burning Basement-->
+    <entity anm2path="monsters/hotpotato/hotpotato.anm2" hasFloorAlts="false" reroll="true" baseHP="10" boss="0" champion="1" collisionDamage="1" collisionMass="5" collisionRadius="13" friction="1" id="161" name="Hot Potato" numGridCollisionPoints="12" shadowSize="14" stageHP="0" variant="72" portrait="1">
+		<bestiary transform="0,0,1" anim="WalkVert1" />
+        <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
+    </entity>
+    <entity anm2path="monsters/furnace/furnace.anm2" hasFloorAlts="false" reroll="true" baseHP="12" boss="0" champion="1" collisionDamage="1" collisionMass="5" collisionRadius="13" friction="1" id="161" name="Furnace (MONSTER)" numGridCollisionPoints="12" shadowSize="14" stageHP="0" variant="73" portrait="1">
+		<bestiary transform="0,0,1" anim="WalkVert1" />
+        <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
+    </entity>
     <entity id="161" variant="73" name="Scorched Sooter" anm2path="monsters/scorchedsooter/scorchedsooter.anm2" reroll="true" baseHP="18" boss="0" champion="1" collisionDamage="1" collisionMass="3" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="13" stageHP="0" portrait="73" gridCollision="walls">
 		<bestiary transform="0,0,1" anim="Idle2" />
         <gibs amount="6" blood="1" bone="1" eye="0" gut="1" large="0" />
@@ -482,6 +490,10 @@
     <entity id="161" variant="97" name="Lil' Flash" anm2path="monsters/lilflash/lilflash.anm2" reroll="true" baseHP="7" boss="0" champion="false" collisionDamage="1" collisionMass="3" collisionRadius="17" friction="1" numGridCollisionPoints="4" shadowSize="11" stageHP="0" gridCollision="walls" tags="fly" portrait="97">
 		<bestiary transform="0,0,1" anim="Idle" overlay="Eyes"/>
         <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
+    </entity>
+    <entity anm2path="monsters/sulferer/sulferer.anm2" hasFloorAlts="false" reroll="true" baseHP="10" boss="0" champion="1" collisionDamage="1" collisionMass="5" collisionRadius="13" friction="1" id="161" name="Sulferer" numGridCollisionPoints="12" shadowSize="14" stageHP="0" variant="100" portrait="1">
+		<bestiary transform="0,0,1" anim="WalkVert1" />
+        <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
     </entity>
     <entity id="161" variant="101" name="Soot" anm2path="monsters/soot/soot.anm2" reroll="true" baseHP="5" boss="0" champion="false" collisionDamage="1" collisionMass="3" collisionRadius="17" friction="1" numGridCollisionPoints="4" shadowSize="11" stageHP="0" gridCollision="walls" tags="fly" portrait="101">
 		<bestiary transform="0,0,1" anim="Idle" overlay="Eyes"/>

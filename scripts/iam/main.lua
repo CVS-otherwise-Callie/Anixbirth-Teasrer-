@@ -76,6 +76,9 @@ FHAC.CVSMonsters = {
 	CracklingHost = mod:ENT("Crackling Host"),
 	ScorchedSooter = mod:ENT("Scorched Sooter"),
 	LilFlash = mod:ENT("Lil' Flash"),
+	Sulferer = mod:ENT("Sulferer"),
+	Furnace = mod:ENT("Furnace (MONSTER)"),
+	HotPotato = mod:ENT("Hot Potato")
 }
 
 FHAC.CVSEffects = {
@@ -132,7 +135,7 @@ FHAC.CVSCollectibles = {
 }
 
 FHAC.CVSProjectiles = {
-	EmberProjectile = mod:ENT("Ember Projectile")
+	EmberProjectile = mod:ENT("Ember Projectile").Var
 }
 
 mod:MixTables(FHAC.Monsters, FHAC.CVSMonsters)
@@ -211,7 +214,10 @@ FHAC:LoadScripts("scripts.iam.monsters", {
 	"embolzon",
 	"cracklinghost",
 	"scorchedsooter",
-	"lilflash"
+	"lilflash",
+	"sulferer",
+	"furnace",
+	"hotpotato"
 })
 
 FHAC:LoadScripts("scripts.iam.minibosses", {
@@ -295,8 +301,10 @@ FHAC:LoadScripts("scripts.iam.npcs", {
 
 function mod:CVS161AI(npc)
 	local var = npc.Variant
-	
-	if var == mod.Monsters.Toast.Var then
+
+	if npc.Variant == mod.Monsters.Furnace.Var then
+        mod:FurnaceAI(npc, npc:GetSprite(), npc:GetData())
+	elseif var == mod.Monsters.Toast.Var then
 		mod:ToastAI(npc, npc:GetSprite(), npc:GetData())
 	elseif var == mod.Monsters.LarryKingJr.Var then
 		mod:LarryKingJrAI(npc, npc:GetSprite(), npc:GetData())
@@ -404,6 +412,10 @@ function mod:CVS161AI(npc)
         mod:MutilatedAI(npc, npc:GetSprite(), npc:GetData())
 	elseif npc.Variant == mod.Monsters.LilFlash.Var then
         mod:LilFlashAI(npc, npc:GetSprite(), npc:GetData())
+	elseif npc.Variant == mod.Monsters.Sulferer.Var then
+        mod:SulfererAI(npc, npc:GetSprite(), npc:GetData())
+	elseif npc.Variant == mod.Monsters.HotPotato.Var then
+        mod:HotPotatoAI(npc, npc:GetSprite(), npc:GetData())
 	end
 end
 
@@ -1232,7 +1244,7 @@ end
 
 function mod:curRoomModGFX()
 
-	local level = game:GetLevel()
+	--[[local level = game:GetLevel()
 	local room = game:GetRoom()
 	if level:GetStage() == LevelStage.STAGE7 then
 		rng:SetSeed(room:GetDecorationSeed(), 0)
@@ -1258,7 +1270,7 @@ function mod:curRoomModGFX()
 		elseif backdropType == 5 then
 			return mod.CatacombsBackdrop
 		end
-	end
+	end]]
 end
 
 function mod:RemoveAllSpecificItemEffects(player)
@@ -1652,7 +1664,8 @@ function FHAC:NPCGetHurtStuff(npc, damage, flag, source, countdown)
     FHAC:PallunLeaveWhenHit(npc)
     FHAC:StrawDollActiveEffect(npc, damage, flag, countdown)
     FHAC:LarryGetHurt(npc, damage, flag, source)
-	mod:embolzonTakeDamage(npc, damage, flag, source)
+	FHAC:SulfererTakeDamage(npc, damage, flag, source)
+	FHAC:embolzonTakeDamage(npc, damage, flag, source)
 	EntsNeverTakeFireDamage(npc, damage, flag, source)
 
     if npc.Type == 1 then

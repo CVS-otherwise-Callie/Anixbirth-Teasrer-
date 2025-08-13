@@ -24,7 +24,7 @@ local cmds = {
 
 for command, funcs in pairs(cmds) do
 
-    local autocompleteType = AutocompleteType.NONE --stageapi if you snooze you lose
+    local autocompleteType = AutocompleteType.NONE --stageapi if you snooze you lose (i choose to lose)
     if type(funcs.Autocomplete) == "function" then
         autocompleteType = AutocompleteType.CUSTOM
     elseif funcs.Autocomplete then

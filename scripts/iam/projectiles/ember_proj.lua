@@ -3,7 +3,7 @@ local game = Game()
 local sfx = SFXManager()
 
 mod:AddCallback(ModCallbacks.MC_POST_PROJECTILE_UPDATE, function(_, proj)
-    if proj.Variant == mod.Projectiles.EmberProjectile.Var then
+    if proj.Variant == mod.Projectiles.EmberProjectile then
         mod:EmberProjectileAI(proj, proj:GetSprite(), proj:GetData())
     end
 end)

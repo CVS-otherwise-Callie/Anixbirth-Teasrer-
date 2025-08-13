@@ -63,7 +63,7 @@ function mod:SixheadbottomAI(npc, sprite, d)
     local var = (math.ceil(npc.Velocity:Length()-3))
     if var <= 0 then var = (var*-1)+1 end
 
-    if npc.StateFrame%var > 0 then
+    if npc.StateFrame%var > 0 and sprite:GetFilename() ~= "gfx/jokes/shhhh go away/disk.anm2" then
         d.num = d.num + 1*d.secondnum
         local creep = Isaac.Spawn(1000, 22,  0, npc.Position, Vector(0, 0), npc):ToEffect()
         creep.Scale = 0.6
@@ -74,6 +74,24 @@ function mod:SixheadbottomAI(npc, sprite, d)
         elseif d.num < 0 then
             d.num = 12
         end
+    end
+
+    local roomBounds = {
+        Vector(70, 150),
+        Vector(570, 150),
+        Vector(570, 410),
+        Vector(70, 410)
+    }
+
+    if sprite:GetFilename() == "gfx/jokes/shhhh go away/disk.anm2" then
+        for i = 1, #roomBounds do
+            if npc.Position:Distance(roomBounds[i]) < 3 then
+                local grid = Isaac.GridSpawn(GridEntityType.GRID_TRAPDOOR, 1, Game():GetRoom():GetCenterPos(), true)
+                grid.VarData = 1
+                local spr = grid:GetSprite()
+                spr:Load("gfx/grid/voidtrapdoor.anm2", true)
+            end
+        end        
     end
 end
 

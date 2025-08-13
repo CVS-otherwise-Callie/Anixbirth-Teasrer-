@@ -3,7 +3,7 @@ local game = Game()
 local rng = RNG()
 
 local attacks = {
-    {"brimstone", 15},
+    {"brimstone", 25},
     {"summon", 30},
     {"chase", 35},
 }

@@ -13,6 +13,8 @@ function mod:BlankAI(npc, sprite, d)
             d[name] = d[name] or stat
         end
         d.init = true
+    else
+        npc.StateFrame = npc.StateFrame + 1
     end
 
 end
