@@ -78,7 +78,8 @@ FHAC.CVSMonsters = {
 	LilFlash = mod:ENT("Lil' Flash"),
 	Sulferer = mod:ENT("Sulferer"),
 	Furnace = mod:ENT("Furnace (MONSTER)"),
-	HotPotato = mod:ENT("Hot Potato")
+	HotPotato = mod:ENT("Hot Potato"),
+	StoneJohnny = mod:ENT("Stone Johnny")
 }
 
 FHAC.CVSEffects = {
@@ -90,6 +91,7 @@ FHAC.CVSEffects = {
     DekatesseraEffect = mod:ENT("Dekatessera Effect"),
 	WideWeb = mod:ENT("Large Spiderweb"),
 	CVSFire = mod:ENT("Fire Projectile (ANIXBIRTH)"),
+	RainGrid = mod:ENT("Rain Grid Effect")
 }
 
 FHAC.CVSNPCS = {
@@ -217,7 +219,8 @@ FHAC:LoadScripts("scripts.iam.monsters", {
 	"lilflash",
 	"sulferer",
 	"furnace",
-	"hotpotato"
+	"hotpotato",
+	"stonejohnny"
 })
 
 FHAC:LoadScripts("scripts.iam.minibosses", {
@@ -239,7 +242,8 @@ FHAC:LoadScripts("scripts.iam.effects", {
 	"fear_flower_fear_effect",
 	"dekatessera effect",
 	"wideweb",
-	"cvsfire"
+	"cvsfire",
+	"raingrideffect"
 })
 
 FHAC:LoadScripts("scripts.iam.familiars", {
@@ -416,6 +420,8 @@ function mod:CVS161AI(npc)
         mod:SulfererAI(npc, npc:GetSprite(), npc:GetData())
 	elseif npc.Variant == mod.Monsters.HotPotato.Var then
         mod:HotPotatoAI(npc, npc:GetSprite(), npc:GetData())
+	elseif npc.Variant == mod.Monsters.StoneJohnny.Var then
+		mod:StoneJohnnyAI(npc, npc:GetSprite(), npc:GetData())
 	end
 end
 
@@ -1708,5 +1714,9 @@ if REPENTOGON then
 
 
 --FHAC:AddCallback(ModCallbacks.MC_PRE_MUSIC_PLAY, FHAC.SongChangesToIngameOST)
-
+	FHAC:AddCallback(ModCallbacks.MC_PRE_MUSIC_PLAY, function(_, id) 
+		if id == 63 and GODMODE then
+			return Isaac.GetMusicIdByName("godmodeTitle")
+		end
+	end)
 end

@@ -22,14 +22,16 @@ function mod:RainMongerAI(npc, sprite, d)
         d.headInit = true
     end
 
-    for i = 1, 3 do
-        if math.random(1, i*3) == i then
-            local drip = Isaac.Spawn(1000, EffectVariant.RAIN_DROP, 0, room:GetClampedPosition(npc.Position + Vector(math.random(-100, 100), math.random(-100, 100)), 15)+ (Vector(10, 0)):Rotated((target.Position - npc.Position):GetAngleDegrees() + 180 + math.random(-20, 20)), Vector.Zero, npc)
-            local proj = Isaac.Spawn(9, 4, 0, drip.Position , Vector.Zero, npc):ToProjectile()
-            proj.Height = -200
-            proj.FallingAccel = 5
-            proj.FallingSpeed = 10
-        end
+    d.rngshoot = math.random(100)
+    for i = 0, 3 do
+        d.typeofShooting = "player"
+        local drip = Isaac.Spawn(1000, EffectVariant.RAIN_DROP, 0, room:GetClampedPosition(npc.Position + Vector(math.random(-100, 100), math.random(-100, 100)), 15)+ (Vector(10, 0)):Rotated((target.Position - npc.Position):GetAngleDegrees() + 180 + math.random(-20, 20)), Vector.Zero, npc)
+        local proj = Isaac.Spawn(9, ProjectileVariant.PROJECTILE_TEAR, 0, npc.Position + Vector(math.random(30, 120), 0):Rotated((60*i+d.rngshoot)), Vector(1, 0):Rotated((60*i+d.rngshoot)), npc):ToProjectile()
+        proj.Height = -5
+        proj.FallingSpeed = -20
+        proj.FallingAccel = 1
+        proj:Update()
+        d.rngshoot = d.rngshoot + 30
     end
 
     if d.newpos.X < npc.Position.X then
