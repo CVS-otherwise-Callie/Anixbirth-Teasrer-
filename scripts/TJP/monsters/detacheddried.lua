@@ -95,6 +95,7 @@ function mod:DetachedDriedAI(npc, sprite, d)
     end
 
     if not npc.Child then
+        mod:SaveEntToRoom(npc, true)
         d.goalheight = 0
     end
 
@@ -208,7 +209,7 @@ function mod:DetachedDriedAI(npc, sprite, d)
     end
 
     if room:GetGridEntity(room:GetGridIndex(npc.Position)) then
-        print(room:GetGridEntity(room:GetGridIndex(npc.Position)):GetType())
+        --print(room:GetGridEntity(room:GetGridIndex(npc.Position)):GetType())
     end
 
     if d.airborne and d.zvel < 0 then
@@ -238,6 +239,7 @@ function mod:DetachedDriedAI(npc, sprite, d)
         npc.EntityCollisionClass = 0
         mod:spritePlay(sprite, "HangejumpExplode" .. d.tab.colour)
         if sprite:IsFinished() then
+            mod:RemoveEntFromRoomSave(npc)
             npc:Remove()
         end
     end

@@ -12,6 +12,9 @@
         <!--Floor Music-->
         <track name="AnixbirthBasement" path="shhh piano builds go away/AnixbirthBuild3.ogg" loop="true"/>
 
+        <!-- Other mod Music -->
+        <track name="godmodeTitle" path="mus_godmode_title.ogg" loop="true"/>
+
         <!-- We are so getting copyrighted for this -->
         <track name="PongonLevel" path="pongonlevel.ogg" loop="true"/>
         <track name="PongonBoss" path="pongonboss.ogg" loop="true"/>
