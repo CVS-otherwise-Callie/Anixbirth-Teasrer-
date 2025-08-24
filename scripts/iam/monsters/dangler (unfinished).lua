@@ -21,7 +21,6 @@ function mod:DanglerAI(npc, sprite, d)
         npc.CanShutDoors = false
         npc.CollisionDamage = 0
     else
-        --thanks erfly...
         local targetpos = mod:confusePos(npc, target.Position, 5, nil)
         if mod:isScare(npc) then
             local targetvelocity = (targetpos - npc.Position):Resized(-5)

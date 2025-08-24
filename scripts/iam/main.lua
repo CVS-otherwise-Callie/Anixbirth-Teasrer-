@@ -79,7 +79,8 @@ FHAC.CVSMonsters = {
 	Sulferer = mod:ENT("Sulferer"),
 	Furnace = mod:ENT("Furnace (MONSTER)"),
 	HotPotato = mod:ENT("Hot Potato"),
-	StoneJohnny = mod:ENT("Stone Johnny")
+	StoneJohnny = mod:ENT("Stone Johnny"),
+	Souwa = mod:ENT("Souwa")
 }
 
 FHAC.CVSEffects = {
@@ -140,11 +141,16 @@ FHAC.CVSProjectiles = {
 	EmberProjectile = mod:ENT("Ember Projectile").Var
 }
 
+FHAC.CVSBosses = {
+	Chris = mod:ENT("Chris")
+}
+
 mod:MixTables(FHAC.Monsters, FHAC.CVSMonsters)
 mod:MixTables(FHAC.Effects, FHAC.CVSEffects)
 mod:MixTables(FHAC.NPCS, FHAC.CVSNPCS)
 mod:MixTables(FHAC.MiniBosses, FHAC.CVSMinibosses)
 mod:MixTables(FHAC.Projectiles, FHAC.CVSProjectiles)
+mod:MixTables(FHAC.Bosses, FHAC.CVSBosses)
 
 mod:MixTables(FHAC.Collectibles.Items, FHAC.CVSCollectibles.Items)
 mod:MixTables(FHAC.Collectibles.PickupsEnt, FHAC.CVSCollectibles.PickupsEnt)
@@ -220,7 +226,8 @@ FHAC:LoadScripts("scripts.iam.monsters", {
 	"sulferer",
 	"furnace",
 	"hotpotato",
-	"stonejohnny"
+	"stonejohnny",
+	"souwa"
 })
 
 FHAC:LoadScripts("scripts.iam.minibosses", {
@@ -422,6 +429,8 @@ function mod:CVS161AI(npc)
         mod:HotPotatoAI(npc, npc:GetSprite(), npc:GetData())
 	elseif npc.Variant == mod.Monsters.StoneJohnny.Var then
 		mod:StoneJohnnyAI(npc, npc:GetSprite(), npc:GetData())
+	elseif npc.Variant == mod.Monsters.Souwa.Var then
+		mod:SouwaAI(npc, npc:GetSprite(), npc:GetData())
 	end
 end
 

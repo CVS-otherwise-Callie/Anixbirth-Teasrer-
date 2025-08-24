@@ -584,6 +584,11 @@
         <devolve id="1000.159.0" weight="1" />
     </entity>
 
+    <entity id="161" variant="121" name="Souwa" anm2path="monsters/souwa/souwa.anm2" reroll="true" baseHP="13" boss="0" champion="1" collisionDamage="1" collisionMass="3" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="13" stageHP="0" portrait="121">
+		<bestiary transform="0,0,1" anim="Idle" />
+        <gibs amount="6" blood="1" bone="1" eye="0" gut="1" large="0" />
+    </entity>
+
     <entity id="161" variant="124" name="Rain Monger" anm2path="monsters/rainmonger/rainmonger.anm2" hasFloorAlts="true" reroll="true" baseHP="13" boss="0" champion="1" collisionDamage="1" collisionMass="5" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="14" stageHP="0" portrait="124">
 		<bestiary transform="0,0,1" anim="WalkHori" overlay="Head" />
         <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
@@ -741,14 +746,22 @@
     <!-- Bosses -->
 
     <entity id="136" variant="0" name="Hop" anm2path="bosses\hopperbrothers\hop.anm2" hasFloorAlts="false" reroll="false" baseHP="120" boss="1" champion="0" collisionDamage="1" collisionMass="24" collisionRadius="15" collisionRadiusXMulti="1.75" friction="1" numGridCollisionPoints="12" shadowSize="45" stageHP="20" portrait="0" tags="noreroll">
+        <bestiary transform="0,0,1" anim="Idle" />
         <gibs amount="20" blood="1" bone="1" eye="1" gut="1" large="1" />
     </enitity>
 
     <entity id="136" variant="1" name="Skip" anm2path="bosses\hopperbrothers\skip.anm2" hasFloorAlts="false" reroll="false" baseHP="90" boss="1" champion="0" collisionDamage="1" collisionMass="16" collisionRadius="15" collisionRadiusXMulti="2.5" friction="1" numGridCollisionPoints="12" shadowSize="50" stageHP="20" portrait="0" tags="noreroll">
+        <bestiary transform="0,0,1" anim="Idle" />
         <gibs amount="20" blood="1" bone="1" eye="1" gut="1" large="1" />
     </enitity>
 
     <entity id="136" variant="2" name="Jump" anm2path="bosses\hopperbrothers\jump.anm2" hasFloorAlts="false" reroll="false" baseHP="90" boss="1" champion="0" collisionDamage="1" collisionMass="8" collisionRadius="15" collisionRadiusXMulti="1.5" friction="1" numGridCollisionPoints="12" shadowSize="32" stageHP="20" portrait="0" tags="noreroll">
+        <bestiary transform="0,0,1" anim="Idle" />
+        <gibs amount="20" blood="1" bone="1" eye="1" gut="1" large="1" />
+    </enitity>
+
+    <entity id="136" variant="3" name="Chris" anm2path="bosses\chris\chris.anm2" hasFloorAlts="false" reroll="false" baseHP="90" boss="1" champion="0" collisionDamage="1" collisionMass="8" collisionRadius="15" collisionRadiusXMulti="1.5" friction="1" numGridCollisionPoints="12" shadowSize="32" stageHP="20" portrait="0" tags="noreroll">
+        <!--bestiary transform="0,0,1" anim="IdleAngry" /-->
         <gibs amount="20" blood="1" bone="1" eye="1" gut="1" large="1" />
     </enitity>
 
