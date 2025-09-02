@@ -3,16 +3,16 @@ local sfx = SFXManager()
 local game = Game()
 
 mod:AddCallback(ModCallbacks.MC_POST_EFFECT_UPDATE, function(_, effect)
-    if effect.Variant == mod.Effects.WideWeb.Var then
-        mod:WideWebAI(effect, effect:GetSprite(), effect:GetData())
+    if effect.Variant == mod.Effects.LargeSpiderweb.Var then
+        mod:LargeSpiderwebAI(effect, effect:GetSprite(), effect:GetData())
     end
 end)
 
-function mod:WideWebAI(ef, sprite, d)
+function mod:LargeSpiderwebAI(ef, sprite, d)
 
     mod:SaveEntToRoom(ef)
 
-    sprite:ReplaceSpritesheet(0 , "gfx/effects/effect_wideweb_placeholder (PLEASE DELETE LATER).png")
+    sprite:ReplaceSpritesheet(0 , "gfx/effects/effect_LargeSpiderweb_placeholder (PLEASE DELETE LATER).png")
 
     if not d.init then
         ef.DepthOffset = -1000

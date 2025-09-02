@@ -3,7 +3,7 @@ local sfx = SFXManager()
 local game = Game()
 
 mod:AddCallback(ModCallbacks.MC_POST_EFFECT_UPDATE, function(_, effect)
-    if effect.Variant == mod.Effects.NormalTextBox.Var and effect.SubType == 55 then
+    if effect.Variant == mod.Effects.TextBox.Var and effect.SubType == 55 then
         mod:BlankEffectAI(effect, effect:GetSprite(), effect:GetData())
     end
 end)

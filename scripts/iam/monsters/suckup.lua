@@ -2,7 +2,7 @@ local mod = FHAC
 local game = Game()
 local rng = RNG()
 
-function mod:SuckupAI(npc, sprite, d)
+function mod:SuckUpAI(npc, sprite, d)
 
     local target = npc:GetPlayerTarget()
     local targetpos = mod:confusePos(npc, target.Position, 5, nil, nil)
@@ -122,7 +122,7 @@ function mod:SuckupAI(npc, sprite, d)
 end
 
 mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, function(_, npc, amt , flag, source)
-    if npc.Type == mod.Monsters.Suckup.ID and npc.Variant == mod.Monsters.Suckup.Var then
+    if npc.Type == mod.Monsters.SuckUp.ID and npc.Variant == mod.Monsters.SuckUp.Var then
         if (npc:GetData().state == "waiting" or npc:GetData().state == "idle") then
             npc:GetData().state = "recieve"
             return false
@@ -134,7 +134,7 @@ mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, function(_, npc, amt , flag, so
 end)
 
 mod:AddCallback(ModCallbacks.MC_PRE_NPC_COLLISION, function(_, npc, coll, bool)
-    if npc.Type == mod.Monsters.Suckup.ID and npc.Variant == mod.Monsters.Suckup.Var and coll.Type == 2 and npc:GetData().state == "recieve" then
+    if npc.Type == mod.Monsters.SuckUp.ID and npc.Variant == mod.Monsters.SuckUp.Var and coll.Type == 2 and npc:GetData().state == "recieve" then
         coll:GetSprite():ReplaceSpritesheet(0, "gfx/nothing.png")
         coll:Remove()
     end

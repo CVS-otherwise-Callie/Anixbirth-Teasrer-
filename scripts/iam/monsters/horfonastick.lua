@@ -27,6 +27,8 @@ function mod:HorfOnAStickAI(npc, sprite, d)
 
     local room = game:GetRoom()
 
+    d.DSSMenuSafe = true
+
     if not d.init then
         npc:AddEntityFlags(EntityFlag.FLAG_NO_PHYSICS_KNOCKBACK | EntityFlag.FLAG_NO_KNOCKBACK)
         npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_PLAYEROBJECTS

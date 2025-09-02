@@ -1,128 +1,12 @@
 --chore: merge this by throwing it back into the constants file at the end
 local mod = FHAC
-FHAC.CVSMonsters = {
-	Fivehead = mod:ENT("Fivehead"),
-    Sixheadtop= mod:ENT("Sixhead Top"),
-    Sixheadbottom = mod:ENT("Sixhead Bottom"),
-    Onehead = mod:ENT("Onehead"),
-    Floater = mod:ENT("Floater"),
-    Dried = mod:ENT("Dried"),
-	Mutilated = FHAC:ENT("Mutilated"),
-    Neutralfly = mod:ENT("Neutral Fly"),
-    Patient = mod:ENT("Patient"),
-    Erythorcyte = mod:ENT("Erythorcyte"),
-    Erythorcytebaby = mod:ENT("Erythorcytebaby"),
-    Wost = mod:ENT("Wost"),
-    Schmoot = mod:ENT("Schmoot"),
-    Snidge = mod:ENT("Snidge"),
-    --Dangler = mod:ENT("Dangler"),
-    Drosslet = mod:ENT("Drosslet"),
-    PitPatSpawner = mod:ENT("Pit Pat Spawner"),
-    PitPat = mod:ENT("Pit Pat"),
-    MushLoom = mod:ENT("Mush Loom"),
-    Pinprick = mod:ENT("Pinprick"),
-    SyntheticHorf = mod:ENT("Synthetic Horf"),
-    GassedFly = mod:ENT("Gassed Fly"),
-    FlyveBomber = mod:ENT("Plier"),
-    Pallun = mod:ENT("Pallun"),
-    Silly = mod:ENT("Silly"),
-    String = mod:ENT("String"),
-    StickyFly = mod:ENT("Sticky Fly"),
-    WispWosp = mod:ENT("Wisp Wosp"),
-    Stuckpoot = mod:ENT("Stuckpoot"),
-    RainMonger = mod:ENT("Rain Monger"),
-    TechGrudge = mod:ENT("Tech Grudge"),
-    ZapperTeller = mod:ENT("Zapper Teller"),
-    Log = mod:ENT("Log"),
-    Stoner = mod:ENT("Stoner"),
-    LightPressurePlateEntNull = mod:ENT("Light Pressure Plate Null Entity"),
-    LarryKingJr = mod:ENT("Larry King Jr."),
-    Babble = mod:ENT("Babble"),
-    Toast = mod:ENT("Toast"),
-    TaintedSilly = mod:ENT("Tainted Silly"),
-    TaintedString = mod:ENT("Tainted String"),
-    andEntity = mod:ENT("&"),
-    Dunglivery = mod:ENT("Dunglivery"),
-    Harmoor = mod:ENT("Harmoor"),
-    Cowpat = mod:ENT("Cowpat"),
-    Ulig = mod:ENT("Ulig"),
-    HorfOnAStick = mod:ENT("Horf On A Stick"),
-    Gobbo = mod:ENT("Gobbo"),
-    Sho = mod:ENT("Sho"),
-    Soot = mod:ENT("Soot"),
-    Jim = mod:ENT("Jim"),
-    NarcissismMirror = mod:ENT("Narcissism Mirror"),
-    Woodhead = mod:ENT("Woodhead"),
-    NarcissismReflections = mod:ENT("Narcissism Reflections"),
-    Chomblet = mod:ENT("Chomblet"),
-    Trilo = mod:ENT("Trilo"),
-	SmallSack = mod:ENT("Small Nest"),
-	SackKid = mod:ENT("Sack Kid"),
-	FearFlower = mod:ENT("Fear Flower"),
-    StallCreep = mod:ENT("Stall Creep"),
-    WebbedCreep = mod:ENT("Webbed Creep"),
-	AngeryMan = mod:ENT("Angery Man"),
-	WebbedCarcass = mod:ENT("Webbed Carcass"),
-	Bewebbed = mod:ENT("Bewebbed"),
-	ReHost = mod:ENT("Rehost"),
-	Suckup = mod:ENT("Suck Up"),
-	PottedFatty = mod:ENT("Potted Fatty"),
-	Hanger = mod:ENT("The Hanged"),
-	SamBabies = mod:ENT("Sam Bear Spawn"),
-	ScorchedPeat = mod:ENT("Scorched Peat"),
-	Facebalm = mod:ENT("Facebalm"),
-	Spaarker = mod:ENT("Spaarker"),
-	Embolzon = mod:ENT("Embolzon"),
-	CracklingHost = mod:ENT("Crackling Host"),
-	ScorchedSooter = mod:ENT("Scorched Sooter"),
-	LilFlash = mod:ENT("Lil' Flash"),
-	Sulferer = mod:ENT("Sulferer"),
-	Furnace = mod:ENT("Furnace (MONSTER)"),
-	HotPotato = mod:ENT("Hot Potato"),
-	StoneJohnny = mod:ENT("Stone Johnny"),
-	Souwa = mod:ENT("Souwa")
-}
-
-FHAC.CVSEffects = {
-	ZapperTellerLightning = mod:ENT("Zapper Teller Lightning"),
-    ClatterTellerTarget = mod:ENT("Clatter Teller Target"),
-    FearFlowerFear = mod:ENT("Fear Flower Fear Effect"),
-    BlackOverlayBox = mod:ENT("BlackOverlayBox"),
-    NormalTextBox = mod:ENT("Text Box"),
-    DekatesseraEffect = mod:ENT("Dekatessera Effect"),
-	WideWeb = mod:ENT("Large Spiderweb"),
-	CVSFire = mod:ENT("Fire Projectile (ANIXBIRTH)"),
-	RainGrid = mod:ENT("Rain Grid Effect")
-}
-
-FHAC.CVSNPCS = {
-	Skeleton = mod:ENT("Skeleton NPC"),
-	OGWilloWalker = mod:ENT("OGWilloWalker NPC"),
-	BlankNPC = mod:ENT("Blank NPC Anixbirth"),
-	ErrorRoomEditor = mod:ENT("Error Room Editor")
-}
-
-FHAC.CVSMinibosses = {
-	Narcissism = mod:ENT("Narcissism"),
-    Chomb = mod:ENT("Chomb"),
-    Sam = mod:ENT("Sam Bear"),
-}
+FHAC.CVSMonsters = {}
+FHAC.CVSEffects = {}
+FHAC.CVSNPCS = {}
+FHAC.CVSMinibosses = {}
 
 FHAC.CVSCollectibles = {
-    Items = {
-        StinkyMushroom = Isaac.GetItemIdByName("Stinky Mushroom"),
-        BigBowlOfSauerkraut = Isaac.GetItemIdByName("Big Ol' Bowl of Sauerkraut"),
-        JokeBook = Isaac.GetItemIdByName("Joke Book"),
-        StrawDoll = Isaac.GetItemIdByName("Straw Doll"),
-        MarketablePlushie = Isaac.GetItemIdByName("Marketable Plushie"),
-        StinkySocks = Isaac.GetItemIdByName("Stinky Socks"),
-        MoldyBread = Isaac.GetItemIdByName("Moldy Bread"),
-	    CorruptedFile = Isaac.GetItemIdByName("Corrupted File"),
-    	LilAna = Isaac.GetItemIdByName("Lil Ana"),
-		LetterToMyself = Isaac.GetItemIdByName("Letter To Myself"),
-		GrosMichel = Isaac.GetItemIdByName("Gros Michel"),
-		Tums = Isaac.GetItemIdByName("Tums")
-    },
+    Items = {},
     PickupsEnt = {
         BowlOfSauerkraut = mod:ENT("Bowl of Sauerkraut"),
         BirthdaySlice = mod:ENT("Birthday Slice"),
@@ -137,13 +21,57 @@ FHAC.CVSCollectibles = {
     }
 }
 
-FHAC.CVSProjectiles = {
-	EmberProjectile = mod:ENT("Ember Projectile").Var
-}
+FHAC.CVSProjectiles = {}
+FHAC.CVSBosses = {}
 
-FHAC.CVSBosses = {
-	Chris = mod:ENT("Chris")
-}
+local function CheckForTag(entry, tag)
+	return mod:CheckTableContents(EntityConfig.GetEntity(tonumber(entry.type), tonumber(entry.variant), tonumber(entry.subtype)):GetCustomTags(), tostring(tag))
+end
+
+for i = 1, XMLData.GetNumEntries(XMLNode.ENTITY) do
+    local entry = XMLData.GetEntryByOrder(XMLNode.ENTITY, i)
+    if entry.sourceid == "3167715373" then --anixbirth specific
+		local name = entry.name
+		local stats = {ID = tonumber(entry.type), Var = tonumber(entry.variant), Sub = tonumber(entry.subtype)}
+		for _ = 1, #entry.name do
+			name = mod:removeSubstring(tostring(name), " ")
+		end
+
+		--special cases
+		if name == "&" then
+			name = "andEntity"
+		elseif name == "Plier" then
+			name = "FlyveBomber"
+		end
+
+		if CheckForTag(entry, "npc") then
+			FHAC.CVSNPCS[tostring(name)] = stats
+		elseif tonumber(entry.type) == 1000 then
+			FHAC.CVSEffects[tostring(name)] = stats
+		elseif CheckForTag(entry, "miniboss") then
+			FHAC.CVSMinibosses[tostring(name)] = stats
+		elseif tonumber(entry.boss) == 1 then
+			FHAC.CVSBosses[tostring(name)] = stats
+		elseif tonumber(entry.id) == 9 then
+			FHAC.CVSProjectiles[tostring(name)] = tonumber(entry.variant)
+		else
+        	FHAC.CVSMonsters[tostring(name)] = stats
+		end
+    end
+end
+
+for i = 1, XMLData.GetNumEntries(XMLNode.ITEM) do
+    local entry = XMLData.GetEntryByOrder(XMLNode.ITEM, i)
+    if entry.sourceid == "3167715373" then --anixbirth specific
+		local name = entry.name
+		for _ = 1, #entry.name do
+			name = mod:removeSubstring(tostring(name), " ")
+			name = mod:removeSubstring(tostring(name), "'")
+		end
+		print(name, entry.id)
+		FHAC.CVSCollectibles.Items[tostring(name)] = entry.id
+	end
+end
 
 mod:MixTables(FHAC.Monsters, FHAC.CVSMonsters)
 mod:MixTables(FHAC.Effects, FHAC.CVSEffects)
@@ -277,7 +205,8 @@ FHAC:LoadScripts("scripts.iam.items.passives", {
 	"moldy bread",
 	"letter to myself",
 	"gros michel",
-	"tums"
+	"tums",
+	"traveler's bag"
 })
 
 FHAC:LoadScripts("scripts.iam.items.pickups" , {
@@ -313,6 +242,8 @@ FHAC:LoadScripts("scripts.iam.npcs", {
 function mod:CVS161AI(npc)
 	local var = npc.Variant
 
+			print(mod.Monsters.Patient.Var == var, mod.Monsters.Patient.Var , var)
+
 	if npc.Variant == mod.Monsters.Furnace.Var then
         mod:FurnaceAI(npc, npc:GetSprite(), npc:GetData())
 	elseif var == mod.Monsters.Toast.Var then
@@ -335,8 +266,8 @@ function mod:CVS161AI(npc)
 		mod:FiveheadAI(npc, npc:GetSprite(), npc:GetData())
 	elseif var == mod.Monsters.Log.Var then
 		mod:LogAI(npc, npc:GetSprite(), npc:GetData())
-	elseif var == mod.Monsters.Neutralfly.Var then
-		mod:NeutralflyAI(npc, npc:GetSprite(), npc:GetData())
+	elseif var == mod.Monsters.NeutralFly.Var then
+		mod:NeutralFlyAI(npc, npc:GetSprite(), npc:GetData())
 	elseif var == mod.Monsters.Stoner.Var then
 		mod:StonerAI(npc, npc:GetSprite(), npc:GetData())
 	elseif var == mod.Monsters.SackKid.Var then
@@ -345,22 +276,23 @@ function mod:CVS161AI(npc)
 		mod:SillyStringAI(npc, npc:GetSprite(), npc:GetData())
 	elseif var == mod.Monsters.Dried.Var then
 		mod:DriedAI(npc, npc:GetSprite(), npc:GetData())
-	elseif var == mod.Monsters.Hanger.Var then
-		mod:HangerAI(npc, npc:GetSprite(), npc:GetData(), npc:GetDropRNG())
+	elseif var == mod.Monsters.TheHanged.Var then
+		mod:TheHangedAI(npc, npc:GetSprite(), npc:GetData(), npc:GetDropRNG())
 	elseif var == mod.Monsters.FlyveBomber.Var then
+		print("its time")
 		mod:FlyveBomberAI(npc, npc:GetSprite(), npc:GetData())
-	elseif var == mod.Monsters.SmallSack.Var then
-        mod:SmallSackAI(npc, npc:GetSprite(), npc:GetData())
+	elseif var == mod.Monsters.SmallNest.Var then
+        mod:SmallNestAI(npc, npc:GetSprite(), npc:GetData())
 	elseif var == mod.Monsters.AngeryMan.Var then
 		mod:AngerymanAI(npc, npc:GetSprite(), npc:GetData())
 	elseif var == mod.Monsters.Bewebbed.Var then
         mod:BewebbedAI(npc, npc:GetSprite(), npc:GetData())
-	elseif var == mod.Monsters.ReHost.Var then
-		mod:ReHostAI(npc, npc:GetSprite(), npc:GetData())
+	elseif var == mod.Monsters.Rehost.Var then
+		mod:RehostAI(npc, npc:GetSprite(), npc:GetData())
 	elseif var == mod.Monsters.PottedFatty.Var then
         mod:PottedFattyAI(npc, npc:GetSprite(), npc:GetData())
-	elseif var == mod.Monsters.Suckup.Var then
-        mod:SuckupAI(npc, npc:GetSprite(), npc:GetData())
+	elseif var == mod.Monsters.SuckUp.Var then
+        mod:SuckUpAI(npc, npc:GetSprite(), npc:GetData())
 	elseif var == mod.Monsters.ScorchedSooter.Var then
         mod:ScorchedSooterAI(npc, npc:GetSprite(), npc:GetData())
 	elseif var == mod.Monsters.CracklingHost.Var then
@@ -383,10 +315,10 @@ function mod:CVS161AI(npc)
         mod:PallunAI(npc, npc:GetSprite(), npc:GetData())
 	elseif var == mod.Monsters.Ulig.Var then
         mod:UligAI(npc, npc:GetSprite(), npc:GetData())
-	elseif var == mod.Monsters.Sixheadtop.Var then
-        mod:SixheadtopAI(npc, npc:GetSprite(), npc:GetData())
-	elseif var == mod.Monsters.Sixheadbottom.Var then
-        mod:SixheadbottomAI(npc, npc:GetSprite(), npc:GetData())
+	elseif var == mod.Monsters.SixheadTop.Var then
+        mod:SixheadTopAI(npc, npc:GetSprite(), npc:GetData())
+	elseif var == mod.Monsters.SixheadBottom.Var then
+        mod:SixheadBottomAI(npc, npc:GetSprite(), npc:GetData())
 	elseif var == mod.Monsters.MushLoom.Var then
         mod:MushLoomAI(npc, npc:GetSprite(), npc:GetData())
 	elseif npc.Variant == mod.Monsters.PitPatSpawner.Var and npc.SubType >= 1 then
@@ -419,8 +351,8 @@ function mod:CVS161AI(npc)
         mod:TechGrudgeAI(npc, npc:GetSprite(), npc:GetData())
 	elseif npc.Variant == mod.Monsters.FearFlower.Var then
         mod:FearFlowerAI(npc, npc:GetSprite(), npc:GetData())
-	elseif npc.Variant == mod.Monsters.Mutilated.Var then
-        mod:MutilatedAI(npc, npc:GetSprite(), npc:GetData())
+	--elseif npc.Variant == mod.Monsters.Mutilated.Var then
+       --mod:MutilatedAI(npc, npc:GetSprite(), npc:GetData())
 	elseif npc.Variant == mod.Monsters.LilFlash.Var then
         mod:LilFlashAI(npc, npc:GetSprite(), npc:GetData())
 	elseif npc.Variant == mod.Monsters.Sulferer.Var then
@@ -798,7 +730,7 @@ function mod:GetRoomNameByType(type)
 end
 
 
-function mod:CheckForEntInRoom(npc, id, var, sub)
+function mod:CheckForEntInRoom(npc, id, var, sub) -- this can get NON QUERY entities!
 	local room = game:GetRoom()
 	local npcsepcifics = {}
 	local npcsepcificsvar = {}
@@ -956,8 +888,8 @@ function mod:AltLockedClosetCutscene()
 		game:GetPlayer(i):UpdateCanShoot()
 	end
 
-	if mod:CheckForEntInRoom({Type = mod.Monsters.LightPressurePlateEntNull.ID, Variant = mod.Monsters.LightPressurePlateEntNull.Var, SubType = 0}, true, true, false) == false then
-		local ent = Isaac.Spawn(mod.Monsters.LightPressurePlateEntNull.ID, mod.Monsters.LightPressurePlateEntNull.Var, 0, Vector.Zero, Vector.Zero, nil)
+	if mod:CheckForEntInRoom({Type = mod.Monsters.LightPressurePlateNullEntity.ID, Variant = mod.Monsters.LightPressurePlateNullEntity.Var, SubType = 0}, true, true, false) == false then
+		local ent = Isaac.Spawn(mod.Monsters.LightPressurePlateNullEntity.ID, mod.Monsters.LightPressurePlateNullEntity.Var, 0, Vector.Zero, Vector.Zero, nil)
 		ent:GetData().wasSpawned = true
 	end
 
@@ -1443,11 +1375,11 @@ local function CheckEntityInNoFireList(npc)
 	return false
 end
 
-function FHAC:GetCVSFireCollisions()
+function FHAC:GetFireProjectileCollisions()
 
-	if not mod.CVSFires or #mod.CVSFires == 0 then return end 
+	if not mod.FireProjectiles or #mod.FireProjectiles == 0 then return end 
 
-	for _, fire in ipairs(mod.CVSFires) do
+	for _, fire in ipairs(mod.FireProjectiles) do
 		local d = fire:GetData()
 
 		if d.damage == 0 then return end
@@ -1585,8 +1517,8 @@ function FHAC:RenderedStuff()
     end
     FHAC.JohannesPostRender()
     FHAC.MusicCheckCallback()
-	FHAC:GetCVSFireCollisions()
-	FHAC.CVSFires = {}
+	FHAC:GetFireProjectileCollisions()
+	FHAC.FireProjectiles = {}
 end
 FHAC:AddCallback(ModCallbacks.MC_POST_RENDER, FHAC.RenderedStuff)
 
@@ -1602,7 +1534,7 @@ function FHAC:PostNewRoom()
     
     FHAC.spawnedDried = false
     FHAC:SpawnRandomDried()
-    FHAC:BigBowlOfSauerkrautSpawn()
+    FHAC:BigOlBowlOfSauerkrautSpawn()
     FHAC:RemoveAllSpecificItemEffects(Isaac.GetPlayer())
     FHAC:SongChangesToIngameOST()
 

@@ -70,7 +70,7 @@ function mod.lightpressurePlateAI(customGrid)
         d.unswitchedinit = false
         mod:spritePlay(sprite, "Off")
         if not d.nullEnt or d.nullEnt:IsDead() or not d.nullEnt:Exists() then
-            d.nullEnt = Isaac.Spawn(mod.Monsters.LightPressurePlateEntNull.ID, mod.Monsters.LightPressurePlateEntNull.Var, 0, Vector.Zero, Vector.Zero, nil)
+            d.nullEnt = Isaac.Spawn(mod.Monsters.LightPressurePlateNullEntity.ID, mod.Monsters.LightPressurePlateNullEntity.Var, 0, Vector.Zero, Vector.Zero, nil)
             d.nullEnt:GetData().wasSpawned = true
         end
         roomDescriptor.Flags = roomDescriptor.Flags & RoomDescriptor.FLAG_NO_REWARD & RoomDescriptor.FLAG_CLEAR
@@ -93,7 +93,7 @@ function mod.lightpressurePlateAI(customGrid)
     elseif grid.State == 4 then
         mod:spritePlay(sprite, "Switched")
 
-        for k, v in ipairs(Isaac.FindByType(mod.Monsters.LightPressurePlateEntNull.ID, mod.Monsters.LightPressurePlateEntNull.Var)) do
+        for k, v in ipairs(Isaac.FindByType(mod.Monsters.LightPressurePlateNullEntity.ID, mod.Monsters.LightPressurePlateNullEntity.Var)) do
             if v:GetData().ent then
                 game:GetRoom():RemoveGridEntity(game:GetRoom():GetGridIndex(v:GetData().ent.Position), 0, false)
             end
@@ -170,7 +170,7 @@ function mod.AltHomeTrapDoorUnlock(customGrid)
         207,
     }
 
-    if game:GetLevel():GecustomPotTabsoluteStage() == LevelStage.STAGE8 and useVar == 6 and mod.ImInAClosetPleaseHelp then
+    if game:GetLevel():GetAbsoluteStage() == LevelStage.STAGE8 and useVar == 6 and mod.ImInAClosetPleaseHelp then
             if d.StateFrame == bangcustomPotTabs[d.Num] then
                 Knock()
                 d.Num = d.Num + 1

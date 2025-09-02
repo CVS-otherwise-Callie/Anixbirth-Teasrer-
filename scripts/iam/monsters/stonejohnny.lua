@@ -48,7 +48,7 @@ function mod:StoneJohnnyAI(npc, sprite, d)
         end
 
         if #Isaac.FindByType(1000, EffectVariant.RAIN_DROP) == 0 then
-            Isaac.Spawn(1000, mod.Effects.RainGrid.Var, 0, room:GetClampedPosition(npc.Position + Vector(math.random(-100, 100), math.random(-100, 100)), 15)+ (Vector(10, 0)):Rotated((target.Position - npc.Position):GetAngleDegrees() + 180 + math.random(-20, 20)), Vector.Zero, npc)
+            Isaac.Spawn(1000, mod.Effects.RainGridEffect.Var, 0, room:GetClampedPosition(npc.Position + Vector(math.random(-100, 100), math.random(-100, 100)), 15)+ (Vector(10, 0)):Rotated((target.Position - npc.Position):GetAngleDegrees() + 180 + math.random(-20, 20)), Vector.Zero, npc)
         end
 
         d.init = true

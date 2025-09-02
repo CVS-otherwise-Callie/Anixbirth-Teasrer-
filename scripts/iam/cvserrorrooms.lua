@@ -292,18 +292,18 @@ function mod:CVSnilNPC(npc, sprite, d)
     elseif roomEr == 3 then
 
         if not d.hasSpawnedBottom then
-            local sixheadBottom = Isaac.Spawn(mod.Monsters.Sixheadbottom.ID, mod.Monsters.Sixheadbottom.Var, 0, npc.Position, npc.Velocity, nil):ToNPC()
-            local spr = sixheadBottom:GetSprite()
+            local SixheadBottom = Isaac.Spawn(mod.Monsters.SixheadBottom.ID, mod.Monsters.SixheadBottom.Var, 0, npc.Position, npc.Velocity, nil):ToNPC()
+            local spr = SixheadBottom:GetSprite()
 
             spr:Load("gfx/jokes/shhhh go away/disk.anm2", true)
             spr:LoadGraphics()
 
             spr:Play("Idle")
 
-            sixheadBottom.CanShutDoors = false
-            sixheadBottom.EntityCollisionClass = EntityCollisionClass.ENTCOLL_NONE
-            sixheadBottom:Update()
-            sixheadBottom.DepthOffset = -500
+            SixheadBottom.CanShutDoors = false
+            SixheadBottom.EntityCollisionClass = EntityCollisionClass.ENTCOLL_NONE
+            SixheadBottom:Update()
+            SixheadBottom.DepthOffset = -500
 
             d.hasSpawnedBottom = true
         else

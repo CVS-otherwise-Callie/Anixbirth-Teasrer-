@@ -17,15 +17,15 @@ local stats = {
     hp = 0
 }
 
-mod.CVSFires = {}
+mod.FireProjectiles = {}
 
 mod:AddCallback(ModCallbacks.MC_POST_EFFECT_UPDATE, function(_, effect)
-    if effect.Variant == mod.Effects.CVSFire.Var then
-        mod:CVSFireAI(effect, effect:GetSprite(), effect:GetData())
+    if effect.Variant == mod.Effects.FireProjectile.Var then
+        mod:FireProjectileAI(effect, effect:GetSprite(), effect:GetData())
     end
 end)
 
-function mod:CVSFireAI(ef, sprite, d)
+function mod:FireProjectileAI(ef, sprite, d)
 
     ef:ClearEntityFlags(EntityFlag.FLAG_APPEAR)
 
@@ -54,7 +54,7 @@ function mod:CVSFireAI(ef, sprite, d)
     local frameC = ef.FrameCount
 
 	if frameC > 3 and frameC < (d.timer + 5) and (ef.InitSeed + frameC) % 3 == 0 then --oh god i thought i didnt need this thank you so much ff :sob:
-		table.insert(mod.CVSFires, ef)
+		table.insert(mod.FireProjectiles, ef)
 	end
 
     if frameC < 5 then
@@ -93,7 +93,7 @@ function FHAC:ShootFire(position, velocity, stat)
 
     stat = stat or {}
 
-    local fire = Isaac.Spawn(1000, mod.Effects.CVSFire.Var, 0, position, velocity, nil)
+    local fire = Isaac.Spawn(1000, mod.Effects.FireProjectile.Var, 0, position, velocity, nil)
 
     fire.SpriteScale = fire.SpriteScale * (stat.scale or 1)
 

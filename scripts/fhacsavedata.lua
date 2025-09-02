@@ -1,5 +1,5 @@
 
-AnixbirthSaveManager  = include("scripts.save_manager")
+AnixbirthSaveManager  = include("scripts.fhacsave_manager")
 
 AnixbirthSaveManager.Utility.AddDefaultRunData(AnixbirthSaveManager.DefaultSaveKeys.PLAYER, {anixbirthsaveData = {}})
 AnixbirthSaveManager.Utility.AddDefaultFloorData(AnixbirthSaveManager.DefaultSaveKeys.PLAYER, {anixbirthsaveData = {}})
@@ -21,5 +21,18 @@ AnixbirthSaveManager.AddCallback(AnixbirthSaveManager.Utility.CustomCallback.POS
         FHAC.DSSavedata.pallunShot = FHAC.DSSavedata.pallunShot or 1
         FHAC.DSSavedata.randomDried = FHAC.DSSavedata.randomDried or 1
 
-        local player = Isaac.GetPlayer()
+end)
+
+AnixbirthAchievementSystem = include("scripts.achievements")
+
+
+        FHAC:LoadScripts("scripts.deadseascrolls", {
+            "dssmain",
+            "dss_credits"
+        })
+
+FHAC:AddCallback(ModCallbacks.MC_POST_GAME_STARTED, function()
+    if FHAC.HasLoadedDSS and not AnixbirthSaveManager.GetPersistentSave().shownUnlocksChoicePopup then
+	    DeadSeaScrollsMenu.QueueMenuOpen("Anixbirth", "unlockspopup", 1, true)
+    end
 end)

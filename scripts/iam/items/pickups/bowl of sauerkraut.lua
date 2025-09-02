@@ -63,8 +63,6 @@ mod:AddCallback(ModCallbacks.MC_EVALUATE_CACHE,function(_, player, flag)
 
     if dat.UpdateBowlOfSauerkraut or (dat.BowlOfSauerkraut and dat.BowlOfSauerkraut > 0 and dat.BowlOfSauerkraut ~= dat.BowlOfSauerkrautOld) then
 
-        print(type(player.Damage), dat.BowlOfSauerkraut, player.Damage, math.ceil(player.Damage*1000)/1000, (0.003+(0.002*dat.BowlOfSauerkraut))*dat.BowlOfSauerkraut, player.Damage+(0.003+(0.002*dat.BowlOfSauerkraut))*dat.BowlOfSauerkraut)
-
         if dat.UpdateBowlOfSauerkraut and type(dat.UpdateBowlOfSauerkraut) == "number" then
             dat.UpdateBowlOfSauerkraut = dat.UpdateBowlOfSauerkraut + 1
             if dat.UpdateBowlOfSauerkraut == 5 then

@@ -2,7 +2,7 @@ local mod = FHAC
 local game = Game()
 local rng = RNG()
 
-function mod:NeutralflyAI(npc, sprite, d)
+function mod:NeutralFlyAI(npc, sprite, d)
     local room = game:GetRoom()
     local possibleinits = {}
 

@@ -16,13 +16,13 @@ mod.AddItemCallback(function(p, added)
 	for i = 1, math.random(2) do
 		Isaac.Spawn(mod.Collectibles.PickupsEnt.BowlOfSauerkraut.ID, mod.Collectibles.PickupsEnt.BowlOfSauerkraut.Var, 0, Game():GetRoom():FindFreePickupSpawnPosition(player.Position, 5, true, false), Vector.Zero, player)
 	end
-end, nil, mod.Collectibles.Items.BigBowlOfSauerkraut)
+end, nil, mod.Collectibles.Items.BigOlBowlofSauerkraut)
 
-function mod:BigBowlOfSauerkrautSpawn()
+function mod:BigOlBowlOfSauerkrautSpawn()
 	for i = 1, game:GetNumPlayers() do
 		local player = Isaac.GetPlayer(i)
-		if not player:HasCollectible(mod.Collectibles.Items.BigBowlOfSauerkraut) or game:GetRoom():IsClear() then return end
-		for j = 1, math.random(2*player:GetCollectibleNum(mod.Collectibles.Items.BigBowlOfSauerkraut, false, false)) do
+		if not player:HasCollectible(mod.Collectibles.Items.BigOlBowlofSauerkraut) or game:GetRoom():IsClear() then return end
+		for j = 1, math.random(2*player:GetCollectibleNum(mod.Collectibles.Items.BigOlBowlofSauerkraut, false, false)) do
 			Isaac.Spawn(mod.Collectibles.PickupsEnt.BowlOfSauerkraut.ID, mod.Collectibles.PickupsEnt.BowlOfSauerkraut.Var, 0, Game():GetRoom():FindFreePickupSpawnPosition(mod:freeGrid(player, true, 200, 100), 5, true, false), Vector.Zero, player)
 		end
 	end

@@ -2,7 +2,7 @@ local mod = FHAC
 local game = Game()
 local rng = RNG()
 
-function mod:SixheadbottomAI(npc, sprite, d)
+function mod:SixheadBottomAI(npc, sprite, d)
 
     local rng = npc:GetDropRNG()
     local target = npc:GetPlayerTarget()

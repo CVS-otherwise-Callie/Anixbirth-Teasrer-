@@ -242,25 +242,45 @@ function mod:CheckStage(stagename, backdroptypes)
     end
 end
 
-function mod:GetSmallestInATable(tab)
-  
-  local resulteq = 0
-  local result = 0
-  for k, v in ipairs(tab) do
-    local num = v
-    
-    for k, v in ipairs(tab) do
-      local eq = (num - v)
-      
-      if eq > resulteq then
-        resulteq = eq
-        result = v
-      end
-    end
-  end
-  
-  return result
-  
+function mod:NestVariable(tab, variable, ... )
+	if not tab or type(tab) ~= "table" then
+		error("Did not give Table!")
+	end
+
+	local keys = { ... }
+
+
+	for i, key in ipairs(keys) do
+
+		key = tostring(key)
+
+		if i < #keys+1 and (type(tab) == "table") then
+			if not tab[key] or (tab and type(tab[key]) ~= "table") then
+				tab[key] = i < #keys and {} or variable
+			else
+				tab[key] = i < #keys and tab[key] or variable
+			end
+
+			tab = tab[key]
+		end
+
+	end	--return tab
+end
+
+function mod:GetNestedVariable(tab, ... )
+	if not tab or type(tab) ~= "table" then
+		error("Did not give Table!")
+	end
+
+	local keys = { ... }
+
+	for i = 1, #keys do
+		if not tab[tostring(keys[i])] then
+			return false
+		end
+		tab = tab[tostring(keys[i])]
+	end
+	return tab
 end
 
 function mod:GetLargestInATable(tab)
@@ -284,6 +304,100 @@ function mod:GetLargestInATable(tab)
   
 end
 
+function mod:GetSmallestInATable(tab)
+  
+  local resulteq = 0
+  local result = 0
+  for k, v in ipairs(tab) do
+    local num = v
+    
+    for k, v in ipairs(tab) do
+      local eq = (num - v)
+      
+      if eq > resulteq then
+        resulteq = eq
+        result = v
+      end
+    end
+  end
+  
+  return result
+  
+end
+
+function mod:gettheLowestNumber(tab, maxlow, canbemaxlow, returnNuminTab)
+  canbemaxlow = canbemaxlow or false 
+  local dumnum = 0
+  local larges = 9999999999999999999999
+  local placeInTab = 0
+  
+  for k, v in ipairs(tab) do
+    if v < larges and v >= maxlow then
+      	dumnum = v
+      	larges = v
+		if returnNuminTab then
+			placeInTab = k
+		end
+    end
+  end
+  if placeInTab then
+	  return dumnum, placeInTab
+  end
+  return dumnum
+end
+
+function mod:gettheHighestNumber(tab, maxhigh)
+  local dumnum = 0
+  local smollest = 0
+  
+  for k, v in ipairs(tab) do
+    if v > smollest and v <= maxhigh then
+      	dumnum = v
+      	smollest = v
+    end
+  end
+  return dumnum
+end
+
+function mod:GetListInOrder(tab)
+  local smallest = mod:GetSmallestInATable(tab)
+
+  local newtab = {}
+  table.insert(newtab, smallest)
+
+  local newsmall, place = mod:gettheLowestNumber(tab, smallest, false, true)
+
+  for i = 1, #tab do
+    table.insert(newtab, newsmall)
+	table.remove(tab, place)
+	newsmall, place = mod:gettheLowestNumber(tab, newsmall, false, true)
+  end
+
+  table.remove(newtab, #newtab)
+  return newtab
+end
+
+function mod:GetListInOppositeOrder(tab)
+  tab = mod:GetListInOrder(tab)
+
+  local largets = mod:GetLargestInATable(tab)
+
+  local newtab = {}
+  table.insert(newtab, largets)
+
+  local newlarge = mod:gettheHighestNumber(tab, largets)
+
+  for i = 1, #tab do
+    table.insert(newtab, newlarge)
+	table.remove(tab, #tab)
+	newlarge = mod:gettheHighestNumber(tab, newlarge)
+  end
+
+  table.remove(newtab, #newtab)
+
+  return newtab
+end
+
 function mod:mean(tab)
   local num = 0; 
   for k, v in ipairs(tab) do
@@ -292,23 +406,6 @@ function mod:mean(tab)
   
   return num/#tab;
 
-end
-
-local function bumpDownTab(tab, num)
-  for i = 1, #tab do
-    local thing = tab[i]
-    if i > 2 and i <= num then
-      tab[i-1] = thing
-    end
-  end
-end
-
-local function getTabLength(tab)
-  local na = 1
-  while tab[na] do
-    na = na + 1
-  end
-  return na - 1
 end
 
 function mod:GetAmountOfSomethingInATable(table, element)
@@ -323,32 +420,6 @@ function mod:GetAmountOfSomethingInATable(table, element)
   return times
 end
 
-function mod:gettheLowestNumber(tab, maxlow, canbemaxlow)
-  canbemaxlow = canbemaxlow or false 
-  local dumnum = 0
-  local larges = 9999999999999999999999
-  
-  for k, v in ipairs(tab) do
-    if v < larges and v > maxlow then
-      	dumnum = v
-      	larges = v
-    end
-  end
-  return dumnum
-end
-
-function mod:gettheHighestNumber(tab, maxhigh)
-  local dumnum = 0
-  local smollest = 0
-  
-  for k, v in ipairs(tab) do
-    if v > smollest and v < maxhigh then
-      	dumnum = v
-      	smollest = v
-    end
-  end
-  return dumnum
-end
 
 function mod:median(tab)
   local smallest = mod:GetSmallestInATable(tab)
@@ -371,41 +442,6 @@ function mod:median(tab)
     
     return (lowers + higher)/2
   end
-end
-
-function mod:GetListInOrder(tab)
-  local smallest = mod:GetSmallestInATable(tab)
-
-  local newtab = {}
-  table.insert(newtab, smallest)
-
-  local newsmall = mod:gettheLowestNumber(tab, smallest)
-
-  for i = 1, #tab do
-    table.insert(newtab, newsmall)
-	newsmall = mod:gettheLowestNumber(tab, newsmall)
-  end
-
-  table.remove(newtab, #newtab)
-  return newtab
-end
-
-function mod:GetListInOppositeOrder(tab)
-  local largets = mod:GetLargestInATable(tab)
-
-  local newtab = {}
-  table.insert(newtab, largets)
-
-  local newlarge = mod:gettheHighestNumber(tab, largets)
-
-  for i = 1, #tab do
-    table.insert(newtab, newlarge)
-	  newlarge = mod:gettheHighestNumber(tab, newlarge)
-  end
-
-  table.remove(newtab, #newtab)
-
-  return newtab
 end
 
 function mod:mode(tab)

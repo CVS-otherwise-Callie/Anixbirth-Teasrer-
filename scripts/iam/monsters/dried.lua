@@ -12,6 +12,9 @@ end, mod.Monsters.Dried.ID)
 
 function mod:DriedAI(npc, sprite, d)
 local room = game:GetRoom()
+
+    d.DSSMenuSafe = true
+
     if d.flip == 1 then
         d.flip = true
     else

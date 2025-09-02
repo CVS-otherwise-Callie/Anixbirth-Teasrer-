@@ -8,7 +8,7 @@ end
 if StageAPI and StageAPI.Loaded then
 StageAPI.UnregisterCallbacks("FHAC")
 FHAC:LoadScripts("scripts", {
-	"savedata",
+	"fhacsavedata",
 	"otherapi.fiend folio.api.fiendfolioapi",
 	"library",
 	"constants",
@@ -25,12 +25,6 @@ FHAC:LoadScripts("scripts", {
 	"commands"
 })
 
-if not FHAC.hasloadedDSS then
-	FHAC:LoadScripts("scripts.deadseascrolls", {
-		"dssmain",
-	})
-	FHAC.hasloadedDSS = true
-end
 
 FHAC:LoadScripts("scripts.choom", {
     "main"

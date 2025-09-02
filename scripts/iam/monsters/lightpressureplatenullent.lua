@@ -3,8 +3,8 @@ local game = Game()
 local rng = RNG()
 
 mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
-    if npc.Type == mod.Monsters.LightPressurePlateEntNull.ID and npc.Variant == mod.Monsters.LightPressurePlateEntNull.Var then
-        mod:LightPressurePlateEntNullAI(npc, npc:GetSprite(), npc:GetData())
+    if npc.Type == mod.Monsters.LightPressurePlateNullEntity.ID and npc.Variant == mod.Monsters.LightPressurePlateNullEntity.Var then
+        mod:LightPressurePlateNullEntityAI(npc, npc:GetSprite(), npc:GetData())
     end
 end)
 
@@ -21,7 +21,7 @@ local function FidnPlate(d)
     return pick
 end
 
-function mod:LightPressurePlateEntNullAI(npc, sprite, d)
+function mod:LightPressurePlateNullEntityAI(npc, sprite, d)
 
     local room = game:GetRoom()
 

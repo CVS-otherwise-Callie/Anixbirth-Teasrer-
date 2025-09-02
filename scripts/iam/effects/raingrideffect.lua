@@ -3,7 +3,7 @@ local sfx = SFXManager()
 local game = Game()
 
 mod:AddCallback(ModCallbacks.MC_POST_EFFECT_UPDATE, function(_, effect)
-    if effect.Variant == mod.Effects.RainGrid.Var then
+    if effect.Variant == mod.Effects.RainGridEffect.Var then
         mod:RainGridEffect(effect, effect:GetSprite(), effect:GetData())
     end
 end)

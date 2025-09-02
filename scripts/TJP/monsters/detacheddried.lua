@@ -14,6 +14,8 @@ end, mod.Monsters.DetachedDried.ID)
 function mod:DetachedDriedAI(npc, sprite, d)
     local room = game:GetRoom()
 
+    d.DSSMenuSafe = true
+
         local driedsubtypes = {
         {
             --black

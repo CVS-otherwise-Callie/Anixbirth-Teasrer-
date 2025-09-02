@@ -71,7 +71,7 @@ function mod.webbedCreepProj(v, d)
         mod:spritePlay(sprite, sprite:GetDefaultAnimation())
 
         if v.Height > -2 then
-            local nutsack = Isaac.Spawn(mod.Monsters.SmallSack.ID, mod.Monsters.SmallSack.Var, 1, v.Position, v.Velocity, v)
+            local nutsack = Isaac.Spawn(mod.Monsters.SmallNest.ID, mod.Monsters.SmallNest.Var, 1, v.Position, v.Velocity, v)
             nutsack:ClearEntityFlags(EntityFlag.FLAG_APPEAR)
             nutsack:GetData().state = "appear"
             v:Remove()

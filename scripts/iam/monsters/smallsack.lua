@@ -3,12 +3,12 @@ local game = Game()
 local rng = RNG()
 
 mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
-    if npc.Variant == mod.Monsters.SmallSack.Var then
-        mod:SmallSackAI(npc, npc:GetSprite(), npc:GetData())
+    if npc.Variant == mod.Monsters.SmallNest.Var then
+        mod:SmallNestAI(npc, npc:GetSprite(), npc:GetData())
     end
-end, mod.Monsters.SmallSack.ID)
+end, mod.Monsters.SmallNest.ID)
 
-function mod:SmallSackAI(npc, sprite, d)
+function mod:SmallNestAI(npc, sprite, d)
 
     if not d.init then
         if not d.state == "appear" then
@@ -83,7 +83,7 @@ function mod:SmallSackAI(npc, sprite, d)
 end
 
 mod:AddCallback(ModCallbacks.MC_PRE_NPC_COLLISION, function(_, npc, coll)
-    if npc.Type == mod.Monsters.SmallSack.ID and npc.Variant == mod.Monsters.SmallSack.Var then
+    if npc.Type == mod.Monsters.SmallNest.ID and npc.Variant == mod.Monsters.SmallNest.Var then
         if coll.Type == 1 then
             return false
         end

@@ -2,7 +2,7 @@ local mod = FHAC
 local game = Game()
 local rng = RNG()
 
-function mod:SixheadtopAI(npc, sprite, d)
+function mod:SixheadTopAI(npc, sprite, d)
 
     local target = npc:GetPlayerTarget()
     local targetpos = mod:confusePos(npc, target.Position, 5, nil, nil)
@@ -19,13 +19,13 @@ function mod:SixheadtopAI(npc, sprite, d)
 
 
     if not d.ent or d.ent.Position:Distance(npc.Position) < 75 then
-        d.ent = mod:GetSpecificEntInRoom({ID = mod.Monsters.Sixheadbottom.ID, Var = mod.Monsters.Sixheadbottom.Var}, npc, 75)
+        d.ent = mod:GetSpecificEntInRoom({ID = mod.Monsters.SixheadBottom.ID, Var = mod.Monsters.SixheadBottom.Var}, npc, 75)
     end
 
     d.isbottominroom = false
     for _, v in ipairs(Isaac.GetRoomEntities()) do
 
-        if v.Type == mod.Monsters.Sixheadbottom.ID and v.Variant == mod.Monsters.Sixheadbottom.Var then
+        if v.Type == mod.Monsters.SixheadBottom.ID and v.Variant == mod.Monsters.SixheadBottom.Var then
             d.isbottominroom = true
         end
     end

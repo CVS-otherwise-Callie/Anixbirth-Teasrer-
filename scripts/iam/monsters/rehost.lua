@@ -2,7 +2,7 @@ local mod = FHAC
 local game = Game()
 local rng = RNG()
 
-function mod:ReHostAI(npc, sprite, d)
+function mod:RehostAI(npc, sprite, d)
 
     local target = npc:GetPlayerTarget()
     local targetpos = mod:confusePos(npc, target.Position, 5, nil, nil)
@@ -112,7 +112,7 @@ function mod:ReHostAI(npc, sprite, d)
 end
 
 mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, function(_, npc, amt , flag, source)
-    if npc.Type == mod.Monsters.ReHost.ID and npc.Variant == mod.Monsters.ReHost.Var then
+    if npc.Type == mod.Monsters.Rehost.ID and npc.Variant == mod.Monsters.Rehost.Var then
         if not mod:HasDamageFlag(DamageFlag.DAMAGE_CLONES, flag) and npc:GetData().state == "spawned" then
             npc:TakeDamage(amt*0.4 , flag | DamageFlag.DAMAGE_CLONES, source, 0)
             return false

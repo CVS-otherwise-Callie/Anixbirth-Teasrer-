@@ -3,13 +3,8 @@ local game = Game()
 local rng = RNG()
 local nilvector = Vector.Zero
 
-mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
-    if npc.Variant == mod.Monsters.Hanger.Var then
-        mod:HangerAI(npc, npc:GetSprite(), npc:GetData(), npc:GetDropRNG())
-    end
-end, mod.Monsters.Hanger.ID)
         --thx fiend folio
-function mod:HangerAI(npc, sprite, d, r)
+function mod:TheHangedAI(npc, sprite, d, r)
 
     local params = ProjectileParams()
     local target = npc:GetPlayerTarget()

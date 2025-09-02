@@ -146,7 +146,7 @@ function mod:SamMinibossAI(npc, sprite, d)
         mod:spritePlay(sprite, "IdleBounce")
         if sprite:IsFinished("IdleBounce") then
             for i = 1, 3 do
-                Isaac.Spawn(mod.Monsters.SamBabies.ID, mod.Monsters.SamBabies.Var, 0, npc.Position, Vector.Zero, npc)
+                Isaac.Spawn(mod.Monsters.SamBearSpawn.ID, mod.Monsters.SamBearSpawn.Var, 0, npc.Position, Vector.Zero, npc)
             end
             d.state = "idle"
             d.waitTime = math.random(20, 40)
@@ -157,12 +157,12 @@ function mod:SamMinibossAI(npc, sprite, d)
 end
 
 mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
-    if npc.Variant == mod.Monsters.SamBabies.Var then
-        mod:SamBabiesAI(npc, npc:GetSprite(), npc:GetData())
+    if npc.Variant == mod.Monsters.SamBearSpawn.Var then
+        mod:SamBearSpawnAI(npc, npc:GetSprite(), npc:GetData())
     end
-end, mod.Monsters.SamBabies.ID)
+end, mod.Monsters.SamBearSpawn.ID)
 
-function mod:SamBabiesAI(npc, sprite, d)
+function mod:SamBearSpawnAI(npc, sprite, d)
 
     local target = npc:GetPlayerTarget()
     local targetpos = mod:confusePos(npc, target.Position, 5, nil, nil)
@@ -191,11 +191,11 @@ function mod:SamBabiesAI(npc, sprite, d)
 end
 
 mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, function(_, npc, damage, flag, source)
-    if npc.Type == mod.Monsters.SamBabies.ID and npc.Variant == mod.Monsters.SamBabies.Var and npc.HitPoints - damage <= 0 then
+    if npc.Type == mod.Monsters.SamBearSpawn.ID and npc.Variant == mod.Monsters.SamBearSpawn.Var and npc.HitPoints - damage <= 0 then
         npc:GetData().isDying = true
         return false
-    elseif not npc:GetData().isDying and damage >= 3.5 and npc.Type == mod.Monsters.SamBabies.ID and npc.Variant == mod.Monsters.SamBabies.Var and flag ~= flag | DamageFlag.DAMAGE_CLONES then
+    elseif not npc:GetData().isDying and damage >= 3.5 and npc.Type == mod.Monsters.SamBearSpawn.ID and npc.Variant == mod.Monsters.SamBearSpawn.Var and flag ~= flag | DamageFlag.DAMAGE_CLONES then
         npc:TakeDamage(3.5, flag | DamageFlag.DAMAGE_CLONES, source, 0)
         return false
     end
-end, mod.Monsters.SamBabies.ID)
+end, mod.Monsters.SamBearSpawn.ID)

@@ -69,7 +69,7 @@
         <gibs amount="6" blood="1" bone="1" eye="0" gut="0" large="0" worm="1" />
         <preload-snd id="166" />
     </entity>
-    <entity id="161" variant="2" name="Larry King Jr." anm2path="monsters/larrykingjr/larrykingjr.anm2" baseHP="13" boss="0" champion="0" collisionDamage="1" collisionMass="37" collisionRadius="15" friction="1" numGridCollisionPoints="8" shadowSize="15" stageHP="0" portrait="2" gridCollision="walls">
+    <entity id="161" variant="2" name="Larry King Jr" anm2path="monsters/larrykingjr/larrykingjr.anm2" baseHP="13" boss="0" champion="0" collisionDamage="1" collisionMass="37" collisionRadius="15" friction="1" numGridCollisionPoints="8" shadowSize="15" stageHP="0" portrait="2" gridCollision="walls">
 		<bestiary transform="0,0,1" anim="WalkHeadHori" />
         <gibs amount="8" blood="1" bone="1" eye="0" gut="1" large="0" />
         <preload-snd id="115" />
@@ -451,7 +451,7 @@
 		<bestiary transform="0,0,1" anim="WalkVert1" />
         <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
     </entity>
-    <entity anm2path="monsters/furnace/furnace.anm2" hasFloorAlts="false" reroll="true" baseHP="12" boss="0" champion="1" collisionDamage="1" collisionMass="5" collisionRadius="13" friction="1" id="161" name="Furnace (MONSTER)" numGridCollisionPoints="12" shadowSize="14" stageHP="0" variant="72" portrait="1">
+    <entity anm2path="monsters/furnace/furnace.anm2" hasFloorAlts="false" reroll="true" baseHP="12" boss="0" champion="1" collisionDamage="1" collisionMass="5" collisionRadius="13" friction="1" id="161" name="Furnace" numGridCollisionPoints="12" shadowSize="14" stageHP="0" variant="72" portrait="1">
 		<bestiary transform="0,0,1" anim="WalkVert1" />
         <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
     </entity>
@@ -487,7 +487,7 @@
         <gibs amount="6" blood="1" bone="1" eye="0" gut="1" large="0" />
         <preload-snd id="146" />
     </entity>
-    <entity id="161" variant="97" name="Lil' Flash" anm2path="monsters/lilflash/lilflash.anm2" reroll="true" baseHP="7" boss="0" champion="false" collisionDamage="1" collisionMass="3" collisionRadius="17" friction="1" numGridCollisionPoints="4" shadowSize="11" stageHP="0" gridCollision="walls" tags="fly" portrait="97">
+    <entity id="161" variant="97" name="Lil Flash" anm2path="monsters/lilflash/lilflash.anm2" reroll="true" baseHP="7" boss="0" champion="false" collisionDamage="1" collisionMass="3" collisionRadius="17" friction="1" numGridCollisionPoints="4" shadowSize="11" stageHP="0" gridCollision="walls" tags="fly" portrait="97">
 		<bestiary transform="0,0,1" anim="Idle" overlay="Eyes"/>
         <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
     </entity>
@@ -658,7 +658,7 @@
 
     <!-- Alt - Gehenna-->
 
-    <entity id="161" variant="564" name="Mutilated" anm2path="monsters/mutilated/mutilated.anm2" hasFloorAlts="false" reroll="true" baseHP="30" boss="0" champion="1" collisionDamage="1" collisionMass="5" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="14" stageHP="0" portrait="564">
+    <!--entity id="161" variant="564" name="Mutilated" anm2path="monsters/mutilated/mutilated.anm2" hasFloorAlts="false" reroll="true" baseHP="30" boss="0" champion="1" collisionDamage="1" collisionMass="5" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="14" stageHP="0" portrait="564">
 		<bestiary transform="0,0,1" anim="WalkVert" overlay="Head" />
         <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
     </entity-->
@@ -710,12 +710,12 @@
     </entity>
     <!-- Minibosses -->
 
-    <entity anm2path="minibosses/narcissism/narcissism.anm2" id="95" variant="0" subtype="0" reroll="false" baseHP="130" boss="1" champion="0" collisionDamage="1" collisionMass="40" collisionRadius="10" friction="1" name="Narcissism" numGridCollisionPoints="12" shadowSize="15" stageHP="13" shieldStrength="10" bestiary="true" portrait="1020" >
+    <entity anm2path="minibosses/narcissism/narcissism.anm2" id="95" variant="0" subtype="0" reroll="false" baseHP="130" boss="1" champion="0" collisionDamage="1" collisionMass="40" collisionRadius="10" friction="1" name="Narcissism" numGridCollisionPoints="12" shadowSize="15" stageHP="13" shieldStrength="10" bestiary="true" portrait="1020" customtags="miniboss" >
         <bestiary transform="0,0,1" anim="WalkVert" />
         <gibs amount="6" blood="2" bone="1" eye="1" gut="1" large="0" />
     </entity>
 
-    <entity anm2path="minibosses/chomb/monster_chomb.anm2" id="95" variant="1" subtype="0" reroll="false" baseHP="250" boss="1" champion="0" collisionDamage="1" collisionMass="40" collisionRadius="10" friction="1" name="Chomb" numGridCollisionPoints="12" shadowSize="15" stageHP="5" shieldStrength="10" bestiary="true" portrait="1021" >
+    <entity anm2path="minibosses/chomb/monster_chomb.anm2" id="95" variant="1" subtype="0" reroll="false" baseHP="250" boss="1" champion="0" collisionDamage="1" collisionMass="40" collisionRadius="10" friction="1" name="Chomb" numGridCollisionPoints="12" shadowSize="15" stageHP="5" shieldStrength="10" bestiary="true" portrait="1021" customtags="miniboss" >
         <bestiary transform="0,0,1" anim="WalkVert" />
         <gibs amount="6" blood="2" bone="1" eye="1" gut="1" large="0" />
     </entity>
@@ -733,7 +733,7 @@
         <gibs amount="4" blood="1" bone="0" eye="0" gut="1" large="0" />
     </entity>
 
-    <entity anm2path="minibosses/sam/sam.anm2" id="95" variant="2" subtype="0" reroll="false" baseHP="500" boss="1" champion="0" collisionDamage="1" collisionMass="40" collisionRadius="50" friction="1" name="Sam Bear" numGridCollisionPoints="48" shadowSize="50" stageHP="13" shieldStrength="500" bestiary="true" portrait="1020" >
+    <entity anm2path="minibosses/sam/sam.anm2" id="95" variant="2" subtype="0" reroll="false" baseHP="500" boss="1" champion="0" collisionDamage="1" collisionMass="40" collisionRadius="50" friction="1" name="Sam" numGridCollisionPoints="48" shadowSize="50" stageHP="13" shieldStrength="500" bestiary="true" portrait="1020" customtags="miniboss">
         <bestiary transform="0,0,1" anim="Walk" />
         <gibs amount="6" blood="2" bone="1" eye="1" gut="1" large="0" />
     </entity>
@@ -813,8 +813,8 @@
         <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" worm="0" />
     </entity>
 
-    <entity anm2path="effects/nothing.anm2" name="Blank NPC Anixbirth" id="161" variant="4095" subtype="0" baseHP="0" stageHP="0" shieldStrength="0" boss="0" champion="0" collisionDamage="0" collisionMass="0" collisionRadius="0" friction="1" numGridCollisionPoints="0" shadowSize="0"/>
-    <entity anm2path="effects/nothing.anm2" name="Error Room Editor" id="998" variant="418" subtype="0" baseHP="0" stageHP="0" shieldStrength="0" boss="0" champion="0" collisionDamage="0" collisionMass="0" collisionRadius="0" friction="1" numGridCollisionPoints="0" shadowSize="0"/>
+    <entity anm2path="effects/nothing.anm2" name="Blank NPC" id="161" variant="4095" subtype="0" baseHP="0" stageHP="0" shieldStrength="0" boss="0" champion="0" collisionDamage="0" collisionMass="0" collisionRadius="0" friction="1" numGridCollisionPoints="0" shadowSize="0" customtags="npc"/>
+    <entity anm2path="effects/nothing.anm2" name="Error Room Editor" id="998" variant="418" subtype="0" baseHP="0" stageHP="0" shieldStrength="0" boss="0" champion="0" collisionDamage="0" collisionMass="0" collisionRadius="0" friction="1" numGridCollisionPoints="0" shadowSize="0" customtags="npc"/>
 
     <!--Effects-->
 
@@ -824,13 +824,13 @@
     <entity anm2path="effects/blackscreen.anm2" name="BlackOverlayBox" id="1000" variant="421" subtype="0" baseHP="0" stageHP="0" shieldStrength="0" boss="0" champion="0" collisionDamage="0" collisionMass="0" collisionRadius="0" friction="1" numGridCollisionPoints="0" shadowSize="0"/>
     <entity anm2path="effects/ruin/normaltextbox.anm2" name="Text Box" id="1000" variant="424" subtype="0" baseHP="0" stageHP="0" shieldStrength="0" boss="0" champion="0" collisionDamage="0" collisionMass="0" collisionRadius="0" friction="1" numGridCollisionPoints="0" shadowSize="0"/>
     <entity anm2path="effects/target/clatterteller/effect_clatterteller_target.anm2" name="Clatter Teller Target" id="1000" variant="425" subtype="0" baseHP="0" stageHP="0" shieldStrength="0" boss="0" champion="0" collisionDamage="0" collisionMass="0" collisionRadius="0" friction="1" numGridCollisionPoints="0" shadowSize="0"/>
-    <entity anm2path="effects/fear effect/fear flower/effect_fearflowerfear.anm2" name="Fear Flower Fear Effect" id="1000" variant="426" subtype="0" baseHP="0" stageHP="0" shieldStrength="0" boss="0" champion="0" collisionDamage="0" collisionMass="0" collisionRadius="0" friction="1" numGridCollisionPoints="0" shadowSize="0"/>
+    <entity anm2path="effects/fear effect/fear flower/effect_fearflowerfear.anm2" name="Fear Flower Fear" id="1000" variant="426" subtype="0" baseHP="0" stageHP="0" shieldStrength="0" boss="0" champion="0" collisionDamage="0" collisionMass="0" collisionRadius="0" friction="1" numGridCollisionPoints="0" shadowSize="0"/>
     <entity anm2path="effects/nothing.anm2" name="Dekatessera Effect" id="1000" variant="427" subtype="0" baseHP="0" stageHP="0" shieldStrength="0" boss="0" champion="0" collisionDamage="0" collisionMass="0" collisionRadius="0" friction="1" numGridCollisionPoints="0" shadowSize="0"/>
 	<entity anm2path="grid/nothing.anm2" baseHP="0" boss="0" champion="0" collisionDamage="1" collisionMass="0" collisionRadius="4" friction="1" id="1000" name="Rain Grid Effect" numGridCollisionPoints="1" shadowSize="0" stageHP="0" variant="432"/>
     <!--uhhhhmmmmm awkward forget this exists-->
     <entity anm2path="effects/effect_wideweb.anm2" name="Large Spiderweb" id="1000" variant="428" subtype="0" baseHP="0" stageHP="0" shieldStrength="0" boss="0" champion="0" collisionDamage="0" collisionMass="0" collisionRadius="0" friction="1" numGridCollisionPoints="0" shadowSize="0"/>
     <!--fire-->
-	<entity anm2path="grid/effect_005_fire.anm2" baseHP="0" boss="0" champion="0" collisionDamage="1" collisionMass="0" collisionRadius="4" friction="1" id="1000" name="Fire Projectile (ANIXBIRTH)" numGridCollisionPoints="1" shadowSize="0" stageHP="0" variant="431"/>
+	<entity anm2path="grid/effect_005_fire.anm2" baseHP="0" boss="0" champion="0" collisionDamage="1" collisionMass="0" collisionRadius="4" friction="1" id="1000" name="Fire Projectile" numGridCollisionPoints="1" shadowSize="0" stageHP="0" variant="431"/>
     <!--Joke Effects-->
 
     <entity anm2path="npcs/originalwillowwalker/ogwillobox.anm2" name="OGWilloWalker Box" id="1000" variant="429" subtype="0" baseHP="0" stageHP="0" shieldStrength="0" boss="0" champion="0" collisionDamage="0" collisionMass="0" collisionRadius="0" friction="1" numGridCollisionPoints="0" shadowSize="0"/>
@@ -838,8 +838,8 @@
 
     <!--NPCS-->
 
-    <entity anm2path="npcs/ruin/skeletons/skeleton1.anm2" name="Skeleton NPC" id="163" variant="0" subtype="0" hasFloorAlts="false" reroll="false" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="8" collisionRadius="13" friction="0" numGridCollisionPoints="12" shadowSize="18" stageHP="0" />
-    <entity anm2path="npcs/originalwillowwalker/ogwillowalker.anm2" name="OGWilloWalker NPC" id="163" variant="2" subtype="0" hasFloorAlts="false" reroll="false" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="8" collisionRadius="16" collisionRadiusXMulti="1.75" friction="0" numGridCollisionPoints="12" shadowSize="32" stageHP="0" shutdoors="false" />
+    <entity anm2path="npcs/ruin/skeletons/skeleton1.anm2" name="Skeleton NPC" id="163" variant="0" subtype="0" hasFloorAlts="false" reroll="false" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="8" collisionRadius="13" friction="0" numGridCollisionPoints="12" shadowSize="18" stageHP="0" customtags="npc"/>
+    <entity anm2path="npcs/originalwillowwalker/ogwillowalker.anm2" name="OGWilloWalker" id="163" variant="2" subtype="0" hasFloorAlts="false" reroll="false" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="8" collisionRadius="16" collisionRadiusXMulti="1.75" friction="0" numGridCollisionPoints="12" shadowSize="32" stageHP="0" shutdoors="false" customtags="npc"/>
 
     <!--Projectiles-->
     <entity id="9" name="Ember Projectile" baseHP="10" stageHP="0" boss="0" champion="0" collisionDamage="1" collisionMass="8" collisionRadius="5" friction="1" numGridCollisionPoints="8" shadowSize="10" portrait="545" anm2path="projectiles/projectile_ember.anm2">
