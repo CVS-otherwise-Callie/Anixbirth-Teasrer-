@@ -14,8 +14,8 @@ function mod:GobboAI(npc, sprite, d)
     local targetpos = mod:confusePos(npc, target.Position, 5, nil, nil)
     local path = npc.Pathfinder
     local room = game:GetRoom()
-    print(npc.EntityCollisionClass)
-    print(npc.GridCollisionClass)
+    --print(npc.EntityCollisionClass)
+    --print(npc.GridCollisionClass)
     if not d.init then
         d.state = "chase"
 

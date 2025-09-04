@@ -285,7 +285,7 @@ function mod:HangedriedRenderAI(npc, sprite, d) --------------------------------
     end
 
     if d.backDriedFace and npc:IsDead() == false then
-        print("faaace")
+        --print("faaace")
         local spr = d.backDriedFace:GetSprite()
 
         spr:Load("gfx/monsters/hanges/hanges.anm2", true)

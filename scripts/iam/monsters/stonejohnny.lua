@@ -84,7 +84,7 @@ function mod:StoneJohnnyAI(npc, sprite, d)
     elseif d.state == "atRain" then
 
         if not CheckRainNearby(npc.Position, 100) then
-            print(CheckRainNearby(npc.Position, 100))
+            --print(CheckRainNearby(npc.Position, 100))
             d.state = "findrain"
         end
 

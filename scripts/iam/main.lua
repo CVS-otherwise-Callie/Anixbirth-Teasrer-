@@ -68,7 +68,6 @@ for i = 1, XMLData.GetNumEntries(XMLNode.ITEM) do
 			name = mod:removeSubstring(tostring(name), " ")
 			name = mod:removeSubstring(tostring(name), "'")
 		end
-		print(name, entry.id)
 		FHAC.CVSCollectibles.Items[tostring(name)] = entry.id
 	end
 end
@@ -242,8 +241,6 @@ FHAC:LoadScripts("scripts.iam.npcs", {
 function mod:CVS161AI(npc)
 	local var = npc.Variant
 
-			print(mod.Monsters.Patient.Var == var, mod.Monsters.Patient.Var , var)
-
 	if npc.Variant == mod.Monsters.Furnace.Var then
         mod:FurnaceAI(npc, npc:GetSprite(), npc:GetData())
 	elseif var == mod.Monsters.Toast.Var then
@@ -279,7 +276,6 @@ function mod:CVS161AI(npc)
 	elseif var == mod.Monsters.TheHanged.Var then
 		mod:TheHangedAI(npc, npc:GetSprite(), npc:GetData(), npc:GetDropRNG())
 	elseif var == mod.Monsters.FlyveBomber.Var then
-		print("its time")
 		mod:FlyveBomberAI(npc, npc:GetSprite(), npc:GetData())
 	elseif var == mod.Monsters.SmallNest.Var then
         mod:SmallNestAI(npc, npc:GetSprite(), npc:GetData())
@@ -1544,7 +1540,7 @@ function FHAC:PostNewRoom()
 end
 FHAC:AddCallback(ModCallbacks.MC_POST_NEW_ROOM, FHAC.PostNewRoom)
 
-FHAC:AddCallback(ModCallbacks.MC_POST_PICKUP_INIT, function(_, pickup)
+FHAC:AddCallback(ModCallbacks.MC_POST_PICKUP_UPDATE, function(_, pickup)
     FHAC:ReplaceItemTheLeftBall(pickup)
 end)
 
