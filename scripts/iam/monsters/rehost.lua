@@ -12,7 +12,13 @@ function mod:RehostAI(npc, sprite, d)
 
     local speed = 0
 
+
     if not d.init then
+
+    --[[     if npc:IsChampion() then
+            print("HAHAHAHAHA")
+            mod:ReplaceEnemySpritesheet(npc, "gfx/monsters/rehost/rehost_body_champion", 1)
+        end ]]
 
         if npc.SubType == 1 then
             d.state = "chase"
