@@ -458,3 +458,32 @@ function mod:mode(tab)
   end
   return returnum
 end
+
+function FHAC:PrintAllOfTable(table, filter)
+
+	if not table then
+		return print("NONE")
+	end
+
+    for k, v in pairs(table) do
+
+      if k == filter or v == filter then
+        print(k, v)
+        return
+      end
+
+		if type(k) == nil and type(v) == nil then
+			print("NONE 2")
+		elseif type(k) == "table" then
+            FHAC:PrintAllOfTable(k, filter)
+        elseif type(v) == "table" then
+            FHAC:PrintAllOfTable(v, filter)
+		elseif k ~= nil and type(v) ~= "function" then
+			if not filter or (filter and (string.find(tostring(k) , filter) or string.find(tostring(v) , filter))) then
+				print(k, v, table)
+			end
+		else
+			print(type(k), type(v), k, v)
+        end
+    end
+end

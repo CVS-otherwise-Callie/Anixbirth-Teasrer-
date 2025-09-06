@@ -17,7 +17,7 @@ FHAC.TJPMonsters = {
 }
 
 FHAC.TJPEffects = {
-    BlankEffect = FHAC:ENT("Blank Effect Anixbirth"), --sorry Jacket! putting this here --uhhh ok sure
+    BlankEffect = FHAC:ENT("Blank Effect"), --sorry Jacket! putting this here --uhhh ok sure
     OGWilloWalkerBox = FHAC:ENT("OGWilloWalker Box"),
     OGWilloWalkerFont = FHAC:ENT("OGWilloWalker Font")
 }

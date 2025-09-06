@@ -17,6 +17,8 @@ end, mod.Monsters.TaintedYoyader.ID)
 end
 
 function mod:TaintedYoyaderAI(npc, sprite, d)
+    
+    print(d.state)
 
     local player = npc:GetPlayerTarget()
     local playerpos = mod:confusePos(npc, player.Position, 5, nil, nil)

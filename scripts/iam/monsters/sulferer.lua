@@ -81,12 +81,14 @@ function mod:SulfererAI(npc, sprite, d)
 end
 
 function mod:SulfererTakeDamage(npc, damage, flag, source)
-    if npc:GetSprite():IsPlaying("Burn") then
-        return false
-    elseif (npc.HitPoints - damage <= 0) and not npc:GetData().isBurned then
-        npc:GetData().state = nil
-        mod:spritePlay(npc:GetSprite(), "Burn")
-        return false
+    if npc.Type == mod.Monsters.Sulferer.ID and npc.Variant == mod.Monsters.Sulferer.Var then
+        if npc:GetSprite():IsPlaying("Burn") then
+            return false
+        elseif (npc.HitPoints - damage <= 0) and not npc:GetData().isBurned then
+            npc:GetData().state = nil
+            mod:spritePlay(npc:GetSprite(), "Burn")
+            return false
+        end
     end
 end
 
