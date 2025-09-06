@@ -12,7 +12,7 @@ local lkjStats = {
     SegmentNumber = 1,
     state = "Moving",
     segUpdateNum = 0,
-    specialAnim = ""
+    specialAnim = "",
 }
 
 local function GetLowestSeg(segments)
@@ -121,7 +121,6 @@ function mod:LarryKingJrAI(npc, sprite, d)
         -- HEAD CHECK --
         if not d.Head or not d.Head:Exists() or d.Head:IsDead() then
             if d.SegNumber == GetLowestSeg(d.Parent_butts) and not d.Parent_butts[d.SegNumber-1] then
-                Isaac.DebugString("got it")
                 d.isSeg = false
                 for name, stat in pairs(d) do
                     if string.find(name, "Parent") then
@@ -164,7 +163,7 @@ function mod:LarryKingJrAI(npc, sprite, d)
             d.SegNumber = d.SegNumber - 1
         end
 
-        if not (npc.StateFrame < d.SegNumber*2 and npc.Position:Distance(d.initPos) == 0) and not (d.isButt and d.state ~= "Moving") then
+        if not (npc.StateFrame < d.SegNumber*2 and npc.Position:Distance(d.initPos) == 0) then
             d.state = pd.state
         end
 
@@ -202,7 +201,7 @@ function mod:LarryKingJrAI(npc, sprite, d)
                 d.state = pd.state
             end
         else
-            if d.Parent_segUpdateNum and d.SegNumber and pd.buttsanimoffset and (6-pd.buttsanimoffset) ~= 0 and (d.Parent_segUpdateNum+1)%(d.SegNumber*(6-pd.buttsanimoffset)) == 0 and not (d.isButt and d.state ~= "Moving") then
+            if d.Parent_segUpdateNum and d.SegNumber and pd.buttsanimoffset and (6-pd.buttsanimoffset) ~= 0 and (d.Parent_segUpdateNum+1)%(d.SegNumber*(6-pd.buttsanimoffset)) == 0 then
 
                 if d.specialAnim ~= pd.specialAnim then d.specialAnim = pd.specialAnim end
 
@@ -211,13 +210,6 @@ function mod:LarryKingJrAI(npc, sprite, d)
                 d.state = pd.state
             end
         end
-
-        local spAnim = d.specialAnim
-
-        if d.isButt then
-            spAnim = spAnim:gsub('Idle', '')
-        end
-        mod:spritePlay(sprite, segAnimName .. spAnim ..mod:GetMoveString(npc.Velocity, true))
 
         if d.isButt and sprite:IsEventTriggered("Poop") then --and #GetDipsWithSameDataLarry(npc) <= 3 then
             local vec = (Vector(3, 0)):Rotated((d.Head.Position - npc.Position):GetAngleDegrees() + 180 + math.random(-20, 20))
@@ -243,18 +235,22 @@ function mod:LarryKingJrAI(npc, sprite, d)
 
         if d.isButt and sprite:IsFinished(segAnimName .. "Strain" ..mod:GetMoveString(npc.Velocity, true)) then
 
-            d.state = "Pop"
-            d.specialAnim = "Pop"
-            mod:spritePlay(sprite, segAnimName .. "Pop" .. mod:GetMoveString(npc.Velocity, true))
-            d.Head:GetData().extraNum = 0
-
-        elseif d.isButt and sprite:IsFinished(segAnimName .. "Pop" ..  mod:GetMoveString(npc.Velocity, true)) and d.Head:GetData().state ~= "Pop" then
-
             d.Head:ToNPC().StateFrame = 1
             d.Head:GetData().state = "Pop"
             d.Head:GetData().extraNum = 0
 
         end
+
+        if d.isButt and d.state == "Pop" then
+            d.specialAnim = "Pop"
+        end
+
+        local spAnim = d.specialAnim
+
+        if d.isButt then
+            spAnim = spAnim:gsub('Idle', '')
+        end
+        mod:spritePlay(sprite, segAnimName .. spAnim ..mod:GetMoveString(npc.Velocity, true))
 
     else
 
@@ -282,6 +278,7 @@ function mod:LarryKingJrAI(npc, sprite, d)
         -- MOVEMENT --
 
         if d.state == "Moving" then
+            d.specialAnim = ""
             d.newpos = d.newpos or mod:GetNewPosAligned(npc.Position, false)
 
             if (npc.Position:Distance(d.newpos) < 10 or npc.Velocity:Length() == 0) or (mod:isScareOrConfuse(npc) and npc.StateFrame % 10 == 0)then
@@ -315,6 +312,7 @@ function mod:LarryKingJrAI(npc, sprite, d)
         if sprite:IsFinished() and string.find(sprite:GetAnimation(), "Pop") then
             d.state = "Moving"
             npc.StateFrame = 0
+            d.newpos = d.newpos or mod:GetNewPosAligned(npc.Position, false)
         end
 
         -- ANIMATIONS --
