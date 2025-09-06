@@ -258,7 +258,7 @@ function mod.UpdateSillyStringProj(proj, coll, d)
     end
 end
 
-mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, function(_, npc, damage, flag, source)
+--[[ mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, function(_, npc, damage, flag, source)
     if npc.Type == 161 and (npc.Variant == mod.Monsters.Silly.Var or npc.Variant == mod.Monsters.String.Var) and not npc:GetData().targisPlayer then
         if source.Type == 2 and mod:CheckForOnlyEntInRoom({
             mod:ENT("Silly"),
@@ -269,7 +269,7 @@ mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, function(_, npc, damage, flag, 
         end
     end
 end)
-
+ ]] --cvs this is making me (as the kids might say) 'lose my shit' im removing NOW!!!!!!
 function mod.SillyShot(p, d)
     if d.type == "SillyString" then
         if not d.shotinit then

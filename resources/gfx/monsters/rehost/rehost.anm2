@@ -1,9 +1,9 @@
 <AnimatedActor>
-	<Info CreatedBy="Iam/TJP" CreatedOn="5/24/2025 12:33:22 PM" Version="150" Fps="45"/>
+	<Info CreatedBy="Iam/TJP" CreatedOn="06/09/2025 23:14:51" Version="151" Fps="45"/>
 	<Content>
 		<Spritesheets>
 			<Spritesheet Path="rehost.png" Id="0"/>
-			<Spritesheet Path="..\rebirth\monster_000_bodies01.png" Id="1"/>
+			<Spritesheet Path="rehost_body.png" Id="1"/>
 			<Spritesheet Path="rererehost.png" Id="2"/>
 		</Spritesheets>
 		<Layers>
