@@ -1,26 +1,5 @@
 --chore: merge this by throwing it back into the constants file at the end
-FHAC.TJPMonsters = {
-    ClatterTeller = FHAC:ENT("Clatter Teller"),
-    Dekatessera = FHAC:ENT("Dekatessera"),
-    Roach = FHAC:ENT("Roach"),
-    Weblet = FHAC:ENT("Weblet"),
-    WebMother = FHAC:ENT("Web Mother"),
-    StumblingNest = FHAC:ENT("Stumbling Nest"),
-    TaintedWebMother = FHAC:ENT("Tainted Web Mother"),
-    Yoyader = FHAC:ENT("Yoyader"),
-    TaintedYoyader = FHAC:ENT("Tainted Yoyader"),
-    Hangeslip = FHAC:ENT("Hangeslip"),
-    DetachedDried = FHAC:ENT("Detached Dried"),
-    Firehead = FHAC:ENT("Firehead"),
-    Fivedead = FHAC:ENT("Fivedead"),
-    Onedead = FHAC:ENT("Onedead")
-}
 
-FHAC.TJPEffects = {
-    BlankEffect = FHAC:ENT("Blank Effect"), --sorry Jacket! putting this here --uhhh ok sure
-    OGWilloWalkerBox = FHAC:ENT("OGWilloWalker Box"),
-    OGWilloWalkerFont = FHAC:ENT("OGWilloWalker Font")
-}
 
 FHAC.TJPBosses = {
     Hop = FHAC:ENT("Hop"),
@@ -82,4 +61,10 @@ local game = Game()
 
 function mod:GetClosestPositionInArea(areacentrepos, arealimit, pos)
     return areacentrepos+(pos-areacentrepos):Resized(math.min(areacentrepos:Distance(pos), arealimit))--outdid myself with this one
+end
+
+function FHAC:TJPProjStuff(v)
+	local d = v:GetData();
+
+	FHAC.WillowalkerProj(v, d)
 end

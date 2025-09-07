@@ -34,6 +34,10 @@ FHAC:LoadScripts("scripts.TJP", {
     "main"
 })
 
+--[[ FHAC:LoadScripts("scripts", {
+    "callbacks"
+}) ]]
+
 else
 	include("scripts.iam.misc.warning")
 end
