@@ -68,7 +68,7 @@ for i = 1, XMLData.GetNumEntries(XMLNode.ITEM) do
 			name = mod:removeSubstring(tostring(name), " ")
 			name = mod:removeSubstring(tostring(name), "'")
 		end
-		FHAC.CVSCollectibles.Items[tostring(name)] = entry.id
+		FHAC.CVSCollectibles.Items[tostring(name)] = tonumber(entry.id)
 	end
 end
 

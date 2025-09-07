@@ -1,5 +1,4 @@
 local CVS = {}
-
 --[[
 -- Specific strings that will be replaced with something else. This is used to convert Shortcuts into internal markup.
 EID.TextReplacementPairs = {
