@@ -1,21 +1,3 @@
---chore: merge this by throwing it back into the constants file at the end
-
-
-FHAC.TJPBosses = {
-    Hop = FHAC:ENT("Hop"),
-    Skip = FHAC:ENT("Skip"),
-    Jump = FHAC:ENT("Jump")
-}
-
-FHAC.TJPJokes = {
-    Willowalker = FHAC:ENT("Willowalker")
-}
-
-FHAC:MixTables(FHAC.Monsters, FHAC.TJPMonsters)
-FHAC:MixTables(FHAC.Effects, FHAC.TJPEffects)
-FHAC:MixTables(FHAC.Bosses, FHAC.TJPBosses)
-FHAC:MixTables(FHAC.Jokes, FHAC.TJPJokes)
-
 FHAC:LoadScripts("scripts.TJP.monsters", {
     "gobbo",
     "sho",

@@ -176,7 +176,7 @@ end)
 
 local function EntsNeverTakeFireDamage(npc, damage, flag, source)
 	if flag ~= flag | DamageFlag.DAMAGE_FIRE then return end
-	for _, ent in ipairs(noFireDamage) do
+	for _, ent in ipairs(FHAC.noFireDamage) do
 		if npc.Type == mod.Monsters[ent].ID and npc.Variant == mod.Monsters[ent].Var then
         	npc:SetColor(Color(2,2,2,1,0,0,0),5,2,true,false)
 			npc:ToNPC():PlaySound(SoundEffect.SOUND_SCYTHE_BREAK, 1, 0, false, 0.3)
