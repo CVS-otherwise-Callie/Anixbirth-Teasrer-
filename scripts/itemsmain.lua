@@ -31,7 +31,6 @@ for _, itemEntry in ipairs(FHAC.ExDescs.COLLECTIBLES) do
 	local id = itemEntry.ID
 	if itemEntry.EID then
 		local desc = itemEntry.EID.Desc
-		print(id)
 		__eidItemDescriptions[id] = desc
 		if itemEntry.EID.Transformations then
 			__eidItemTransformations[id] = itemEntry.EID.Transformations

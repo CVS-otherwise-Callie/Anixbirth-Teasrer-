@@ -13,6 +13,8 @@ local lkjStats = {
     state = "Moving",
     segUpdateNum = 0,
     specialAnim = "",
+    lastFrameCount = 0,
+    lateFrameCount = 0
 }
 
 local function GetLowestSeg(segments)
@@ -52,19 +54,13 @@ local function GetDipsWithSameDataLarry(npc)
     return tab
 end
 
-mod:AddCallback(ModCallbacks.MC_POST_NPC_RENDER, function(_, npc, offset)
-    if npc.Variant == mod.Monsters.LarryKingJr.Var then
-        --mod:LarryKingJrRenderAI(npc, npc:GetSprite(), npc:GetData())
-    end
-end, mod.Monsters.LarryKingJr.ID)
-
 function mod:LarryKingJrAI(npc, sprite, d)
-    local rng = npc:GetDropRNG()
+
+    for name, stat in pairs(lkjStats) do
+        d[name] = d[name] or stat
+    end
 
     if not d.init then
-        for name, stat in pairs(lkjStats) do
-            d[name] = d[name] or stat
-        end
 
         npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_PLAYEROBJECTS
 
@@ -93,6 +89,8 @@ function mod:LarryKingJrAI(npc, sprite, d)
                 end
 
                 sd.Head = npc
+                sd.InitHead = npc.InitSeed
+                d.InitHead = npc.InitSeed
 
                 sd.initPos = seg.Position
 
@@ -127,12 +125,14 @@ function mod:LarryKingJrAI(npc, sprite, d)
                         d[name:gsub("Parent_", '')] = stat
                     end
                     for k, butt in ipairs(d.butts) do
-                        butt:GetData().Head = npc
+                        if butt:GetData().InitHead == d.InitHead and (butt:GetData().isButt or butt:GetData().isSeg) then
+                            butt:GetData().Head = npc
+                        end
                     end
                 end
             end
+            return
         end
-
 
         if d.isSeg then
             segAnimName = "Body"
@@ -143,6 +143,12 @@ function mod:LarryKingJrAI(npc, sprite, d)
         local p = d.Head
         local pd = p:GetData()
 
+        if d.InitHead ~= pd.InitHead then
+            d.Head = nil
+            print("grrrrrrrrrrrrrrr")
+            return
+        end
+
         if GetHighestSeg(pd.butts) == GetLowestSeg(pd.butts) and d.Head and npc:HasMortalDamage() then
             d.Head:Kill()
         end
@@ -150,6 +156,9 @@ function mod:LarryKingJrAI(npc, sprite, d)
         if d.SegNumber == GetHighestSeg(pd.butts) then
             d.isSeg = false
             d.isButt = true
+        else
+            d.isSeg = true
+            d.isButt = false          
         end
 
         for name, stat in pairs(pd) do
@@ -157,7 +166,6 @@ function mod:LarryKingJrAI(npc, sprite, d)
         end
 
         local elBut = d.Parent_butts[d.SegNumber-1]
-
 
         if not elBut and d.SegNumber > 1 then
             d.SegNumber = d.SegNumber - 1
@@ -171,28 +179,32 @@ function mod:LarryKingJrAI(npc, sprite, d)
 
         d.MoveDelay = (d.SegNumber) * 5
 
+        local lastSegC = npc.FrameCount - d.MoveDelay + 2 - d.Parent_lateFrameCount
+
         if d.state == "Moving" then
-            if d.Parent_MovementLog[npc.FrameCount - d.MoveDelay + 2 - d.MovingOffset] == nil then
+            if d.Parent_MovementLog[lastSegC] == nil then
                 npc.Position = d.Parent_MovementLog[#d.Parent_MovementLog]
             else
-                local targpos = d.Parent_MovementLog[npc.FrameCount - d.MoveDelay + 2 - d.MovingOffset]
+                local targpos = d.Parent_MovementLog[lastSegC]
                 if targpos then
                     npc.Velocity = targpos - npc.Position
                 end
             end
-            d.lastFrameCount = npc.FrameCount - d.MoveDelay + 2 - d.MovingOffset
+            d.lastFrameCount = lastSegC
         else
 
-            npc.Position = d.Parent_MovementLog[d.lastFrameCount]
-
+            npc.Position = d.Parent_MovementLog[d.lastFrameCount+1]
             npc:MultiplyFriction(0.01)
 
         end
 
         -- ANIMATIONS --
 
+        --print(math.ceil((d.Parent_segUpdateNum+1)) , tonumber(d.SegNumber)*5 , (d.isButt and d.specialAnim~="Pop" and not d.hasPopped))
+
         if d.state == "Moving" then
-            if (d.Parent_segUpdateNum+1)%d.SegNumber == 0 then
+            d.hasPopped = false
+            if math.ceil((d.Parent_segUpdateNum+1)) == tonumber(d.SegNumber)*5 then
 
                 if d.specialAnim ~= pd.specialAnim then d.specialAnim = pd.specialAnim end
 
@@ -201,7 +213,7 @@ function mod:LarryKingJrAI(npc, sprite, d)
                 d.state = pd.state
             end
         else
-            if d.Parent_segUpdateNum and d.SegNumber and pd.buttsanimoffset and (6-pd.buttsanimoffset) ~= 0 and (d.Parent_segUpdateNum+1)%(d.SegNumber*(6-pd.buttsanimoffset)) == 0 then
+            if math.ceil((d.Parent_segUpdateNum+1)) == tonumber(d.SegNumber)*5 and (not d.isButt or (d.isButt and d.specialAnim~="Pop" and not d.hasPopped)) then
 
                 if d.specialAnim ~= pd.specialAnim then d.specialAnim = pd.specialAnim end
 
@@ -226,18 +238,23 @@ function mod:LarryKingJrAI(npc, sprite, d)
             npc:PlaySound(SoundEffect.SOUND_TEARIMPACTS, 1, 0, false, 1)
             npc:PlaySound(SoundEffect.SOUND_PLOP, 1, 0, false, 1)
 
-            for k, v in ipairs(d.butts) do
+            d.Head:ToNPC().StateFrame = 1
+            d.Head:GetData().state = "Pop"
+
+            d.Head:GetData().extraNum = 0
+
+            for k, v in ipairs(d.Parent_butts) do
                 local dat = v:GetData()
                 dat.state = "Pop"
                 dat.specialAnim = "Pop"
             end
+            d.hasPopped = true
         end
 
         if d.isButt and sprite:IsFinished(segAnimName .. "Strain" ..mod:GetMoveString(npc.Velocity, true)) then
 
-            d.Head:ToNPC().StateFrame = 1
-            d.Head:GetData().state = "Pop"
-            d.Head:GetData().extraNum = 0
+            d.state = "Pop"
+            d.specialAnim = "Pop"
 
         end
 
@@ -269,9 +286,12 @@ function mod:LarryKingJrAI(npc, sprite, d)
 
         for k, v in ipairs(d.butts) do
             local buttD = v:GetData()
-            buttD.SegNumber = k
-            if not v or v:IsDead() or not v:Exists() or not (buttD.isSeg or buttD.isButt) then
-                table.remove(d.butts, k)
+            if buttD.InitHead == d.InitHead then
+                buttD.SegNumber = k
+                buttD.Head = npc
+                if not v or v:IsDead() or not v:Exists() or not (buttD.isSeg or buttD.isButt) or buttD.InitHead ~= d.InitHead then
+                    table.remove(d.butts, k)
+                end            
             end
         end
 
@@ -300,12 +320,18 @@ function mod:LarryKingJrAI(npc, sprite, d)
         elseif d.state == "BunchedUp" then
 
             npc:MultiplyFriction(0.1)
-            d.specialAnim = "Strain"
+            if d.specialAnim ~= "Strain" then
+                d.specialAnim = "Strain"
+                d.segUpdateNum = 1
+            end
 
         elseif d.state == "Pop" then
 
             npc:MultiplyFriction(0.1)
-            d.specialAnim = "Pop"
+            if d.specialAnim ~= "Pop" then
+                d.specialAnim = "Pop"
+                d.segUpdateNum = 1
+            end
 
         end
 
@@ -327,25 +353,30 @@ function mod:LarryKingJrAI(npc, sprite, d)
         if d.buttsanimoffset < 1 then d.buttsanimoffset = 0 end
 
         d.segUpdateNum = d.segUpdateNum + 1
+
         if d.state == "Moving" then
-            if d.segUpdateNum > #d.butts then
+            if d.segUpdateNum > (#d.butts)*5 then
                 d.segUpdateNum = 1
             end
         else
-            if d.segUpdateNum > #d.butts*7-d.buttsanimoffset then
+            if d.segUpdateNum > (#d.butts)*5 then
                 d.segUpdateNum = 1
             end
         end
 
         if d.state == "Moving" then
-            d.MovementLog[npc.FrameCount] = npc.Position
+            d.lastFrameCount = npc.FrameCount
+            d.MovementLog[npc.FrameCount - d.lateFrameCount] = npc.Position
+            d.checkLast = d.lateFrameCount
+        else
+            d.lateFrameCount = npc.FrameCount - d.lastFrameCount + d.checkLast
         end
 
         -- STATES --
 
         if #GetDipsWithSameDataLarry(npc) <= 2 then
 
-            if npc.StateFrame > (100) and d.state == "Moving" then
+            if npc.StateFrame > (100) and d.state == "Moving" and (d.butts[#d.butts].FrameCount - d.butts[#d.butts]:GetData().MoveDelay) > 10*#d.butts then
                 d.state = "BunchedUp"
                 d.extraNum = 0
             end
