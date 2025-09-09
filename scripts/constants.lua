@@ -53,7 +53,8 @@ FHAC.NPCS = {
 }
 
 FHAC.Jokes = {
-    Gaperrr = mod:ENT("A gaper w/ three legs, why did we do this")
+    Gaperrr = mod:ENT("A gaper w/ three legs, why did we do this"),
+    Willowalker = FHAC:ENT("Willowalker")
 }
 
 FHAC.Savedata = {
@@ -72,13 +73,18 @@ mod.Sounds = {
 }
 
 FHAC.Collectibles = {
-    Items = {
-    },
+    Items = {},
     PickupsEnt = {
+        BowlOfSauerkraut = mod:ENT("Bowl of Sauerkraut"),
+        BirthdaySlice = mod:ENT("Birthday Slice"),
+		LetterToMyself = mod:ENT("Letter To Myself")
     },
     Pickups = {
+        BirthdaySlice = Isaac.GetCardIdByName("Birthday Slice")
     },
     Trinkets = {
+        MysteryMilk = Isaac.GetTrinketIdByName("Mystery Milk"),
+	    TheLeftBall = Isaac.GetTrinketIdByName("The Left Ball")
     }
 }
 
@@ -89,6 +95,57 @@ FHAC.Grids = {
     },
     GlobalGridSpawner = mod:ENT("HOPE Grid Spawner")
 }
+
+-----------------------------------------------------------------------------------------------------------------------
+
+local function CheckForTag(entry, tag)
+	return mod:CheckTableContents(EntityConfig.GetEntity(tonumber(entry.type), tonumber(entry.variant), tonumber(entry.subtype)):GetCustomTags(), tostring(tag))
+end
+
+for i = 1, XMLData.GetNumEntries(XMLNode.ENTITY) do
+    local entry = XMLData.GetEntryByOrder(XMLNode.ENTITY, i)
+    if entry.sourceid == "3167715373" then --anixbirth specific
+		local name = entry.name
+		local stats = {ID = tonumber(entry.type), Var = tonumber(entry.variant), Sub = tonumber(entry.subtype)}
+		for _ = 1, #entry.name do
+			name = mod:removeSubstring(tostring(name), " ")
+		end
+
+		--special cases
+		if name == "&" then
+			name = "andEntity"
+		elseif name == "Plier" then
+			name = "FlyveBomber"
+		end
+
+		if CheckForTag(entry, "npc") then
+			FHAC.NPCS[tostring(name)] = stats
+		elseif tonumber(entry.type) == 1000 then
+			FHAC.Effects[tostring(name)] = stats
+		elseif CheckForTag(entry, "miniboss") then
+			FHAC.MiniBosses[tostring(name)] = stats
+		elseif tonumber(entry.boss) == 1 then
+			FHAC.Bosses[tostring(name)] = stats
+		elseif tonumber(entry.id) == 9 then
+			FHAC.Projectiles[tostring(name)] = tonumber(entry.variant)
+		else
+        	FHAC.Monsters[tostring(name)] = stats
+		end
+    end
+end
+
+for i = 1, XMLData.GetNumEntries(XMLNode.ITEM) do
+    local entry = XMLData.GetEntryByOrder(XMLNode.ITEM, i)
+    if entry.sourceid == "3167715373" then --anixbirth specific
+		local name = entry.name
+		for _ = 1, #entry.name do
+			name = mod:removeSubstring(tostring(name), " ")
+			name = mod:removeSubstring(tostring(name), "'")
+		end
+		FHAC.Collectibles.Items[tostring(name)] = tonumber(entry.id)
+	end
+end
+-----------------------------------------------------------------------------------------------------------------------
 
 mod.FloorGrids = {
     mod.BasementGrid
@@ -121,6 +178,15 @@ mod.ClatterTellerWhitelist = { --pretty much just the skullitsit whitelist LMAO
     {161, 91, -1, true, true},
 }
 
+FHAC.noFireDamage = {
+	"Spaarker",
+	"Trilo",
+	"Firehead",
+	"Embolzon",
+	"CracklingHost",
+	"ScorchedSooter",
+	"LilFlash"
+}
 
 FHAC.DirectionToVector = {
     [Direction.DOWN]  = Vector(0, 1),

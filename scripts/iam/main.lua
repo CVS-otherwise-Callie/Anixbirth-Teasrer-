@@ -1,88 +1,4 @@
---chore: merge this by throwing it back into the constants file at the end
 local mod = FHAC
-FHAC.CVSMonsters = {}
-FHAC.CVSEffects = {}
-FHAC.CVSNPCS = {}
-FHAC.CVSMinibosses = {}
-
-FHAC.CVSCollectibles = {
-    Items = {},
-    PickupsEnt = {
-        BowlOfSauerkraut = mod:ENT("Bowl of Sauerkraut"),
-        BirthdaySlice = mod:ENT("Birthday Slice"),
-		LetterToMyself = mod:ENT("Letter To Myself")
-    },
-    Pickups = {
-        BirthdaySlice = Isaac.GetCardIdByName("Birthday Slice")
-    },
-    Trinkets = {
-        MysteryMilk = Isaac.GetTrinketIdByName("Mystery Milk"),
-	    TheLeftBall = Isaac.GetTrinketIdByName("The Left Ball")
-    }
-}
-
-FHAC.CVSProjectiles = {}
-FHAC.CVSBosses = {}
-
-local function CheckForTag(entry, tag)
-	return mod:CheckTableContents(EntityConfig.GetEntity(tonumber(entry.type), tonumber(entry.variant), tonumber(entry.subtype)):GetCustomTags(), tostring(tag))
-end
-
-for i = 1, XMLData.GetNumEntries(XMLNode.ENTITY) do
-    local entry = XMLData.GetEntryByOrder(XMLNode.ENTITY, i)
-    if entry.sourceid == "3167715373" then --anixbirth specific
-		local name = entry.name
-		local stats = {ID = tonumber(entry.type), Var = tonumber(entry.variant), Sub = tonumber(entry.subtype)}
-		for _ = 1, #entry.name do
-			name = mod:removeSubstring(tostring(name), " ")
-		end
-
-		--special cases
-		if name == "&" then
-			name = "andEntity"
-		elseif name == "Plier" then
-			name = "FlyveBomber"
-		end
-
-		if CheckForTag(entry, "npc") then
-			FHAC.CVSNPCS[tostring(name)] = stats
-		elseif tonumber(entry.type) == 1000 then
-			FHAC.CVSEffects[tostring(name)] = stats
-		elseif CheckForTag(entry, "miniboss") then
-			FHAC.CVSMinibosses[tostring(name)] = stats
-		elseif tonumber(entry.boss) == 1 then
-			FHAC.CVSBosses[tostring(name)] = stats
-		elseif tonumber(entry.id) == 9 then
-			FHAC.CVSProjectiles[tostring(name)] = tonumber(entry.variant)
-		else
-        	FHAC.CVSMonsters[tostring(name)] = stats
-		end
-    end
-end
-
-for i = 1, XMLData.GetNumEntries(XMLNode.ITEM) do
-    local entry = XMLData.GetEntryByOrder(XMLNode.ITEM, i)
-    if entry.sourceid == "3167715373" then --anixbirth specific
-		local name = entry.name
-		for _ = 1, #entry.name do
-			name = mod:removeSubstring(tostring(name), " ")
-			name = mod:removeSubstring(tostring(name), "'")
-		end
-		FHAC.CVSCollectibles.Items[tostring(name)] = tonumber(entry.id)
-	end
-end
-
-mod:MixTables(FHAC.Monsters, FHAC.CVSMonsters)
-mod:MixTables(FHAC.Effects, FHAC.CVSEffects)
-mod:MixTables(FHAC.NPCS, FHAC.CVSNPCS)
-mod:MixTables(FHAC.MiniBosses, FHAC.CVSMinibosses)
-mod:MixTables(FHAC.Projectiles, FHAC.CVSProjectiles)
-mod:MixTables(FHAC.Bosses, FHAC.CVSBosses)
-
-mod:MixTables(FHAC.Collectibles.Items, FHAC.CVSCollectibles.Items)
-mod:MixTables(FHAC.Collectibles.PickupsEnt, FHAC.CVSCollectibles.PickupsEnt)
-mod:MixTables(FHAC.Collectibles.Pickups, FHAC.CVSCollectibles.Pickups)
-mod:MixTables(FHAC.Collectibles.Trinkets, FHAC.CVSCollectibles.Trinkets)
 
 --iam stuff
 FHAC:LoadScripts("scripts.iam.monsters", {
@@ -1352,18 +1268,8 @@ function FHAC:GetTrueAngle(angle)
 	end
 end
 
-local noFireDamage = {
-	"Spaarker",
-	"Trilo",
-	"Firehead",
-	"Embolzon",
-	"CracklingHost",
-	"ScorchedSooter",
-	"LilFlash"
-}
-
 local function CheckEntityInNoFireList(npc)
-	for _, ent in ipairs(noFireDamage) do
+	for _, ent in ipairs(FHAC.noFireDamage) do
 		if npc.Type == mod.Monsters[ent].ID and npc.Variant == mod.Monsters[ent].Var then
 			return true
 		end
