@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <rooms>
-	<room variant="0" name="Vulper - GUYS IM MAKING ROOMS and this one is good" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.1" lastTestTime="2025-08-24T22:13+00:00">
+	<room variant="0" name="Vulper - GUYS IM MAKING ROOMS and this one is good" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.1" lastTestTime="2025-09-10T19:13+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -97,10 +97,10 @@
 			<entity type="161" variant="5" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="Vulper - this is gonna be the worst room i make good job finding it" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="0.05" lastTestTime="2025-08-24T22:13+00:00">
+	<room variant="0" name="Vulper - this is gonna be the worst room i make good job finding it" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="0.05" lastTestTime="2025-09-10T19:20+00:00">
 		<door exists="True" x="-1" y="3"/>
-		<door exists="True" x="6" y="-1"/>
-		<door exists="True" x="6" y="7"/>
+		<door exists="False" x="6" y="-1"/>
+		<door exists="False" x="6" y="7"/>
 		<door exists="True" x="13" y="3"/>
 		<spawn x="0" y="0">
 			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
@@ -118,7 +118,13 @@
 			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="5" y="0">
-			<entity type="0" variant="10" subtype="0" weight="1.0"/>
+			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="0">
+			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="0">
+			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="8" y="0">
 			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
@@ -159,6 +165,8 @@
 		<spawn x="6" y="2">
 			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
 			<entity type="161" variant="5" subtype="0" weight="4.0"/>
+			<entity type="18" variant="0" subtype="0" weight="1.0"/>
+			<entity type="18" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="7" y="2">
 			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
@@ -178,6 +186,8 @@
 		<spawn x="5" y="3">
 			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
 			<entity type="161" variant="5" subtype="0" weight="4.0"/>
+			<entity type="18" variant="0" subtype="0" weight="1.0"/>
+			<entity type="18" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="6" y="3">
 			<entity type="9100" variant="0" subtype="0" weight="1.0"/>
@@ -185,6 +195,8 @@
 		<spawn x="7" y="3">
 			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
 			<entity type="161" variant="5" subtype="0" weight="4.0"/>
+			<entity type="18" variant="0" subtype="0" weight="1.0"/>
+			<entity type="18" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="8" y="3">
 			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
@@ -198,6 +210,8 @@
 		<spawn x="6" y="4">
 			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
 			<entity type="161" variant="5" subtype="0" weight="4.0"/>
+			<entity type="18" variant="0" subtype="0" weight="1.0"/>
+			<entity type="18" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="7" y="4">
 			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
@@ -235,6 +249,15 @@
 		<spawn x="4" y="6">
 			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="5" y="6">
+			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="6">
+			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="6">
+			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="8" y="6">
 			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
@@ -251,7 +274,7 @@
 			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="Vulper - CVS Pharmacy, you little Shitter." type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-08-24T22:13+00:00">
+	<room variant="0" name="Vulper - CVS Pharmacy, you little Shitter." type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-09-10T19:20+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -259,6 +282,10 @@
 		<spawn x="0" y="0">
 			<entity type="161" variant="5" subtype="0" weight="1.0"/>
 			<entity type="13" variant="0" subtype="0" weight="1.0"/>
+			<entity type="13" variant="0" subtype="0" weight="1.0"/>
+			<entity type="18" variant="0" subtype="0" weight="1.0"/>
+			<entity type="18" variant="0" subtype="0" weight="1.0"/>
+			<entity type="18" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="1" y="0">
 			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
@@ -269,6 +296,10 @@
 		<spawn x="12" y="0">
 			<entity type="161" variant="5" subtype="0" weight="1.0"/>
 			<entity type="13" variant="0" subtype="0" weight="1.0"/>
+			<entity type="13" variant="0" subtype="0" weight="1.0"/>
+			<entity type="18" variant="0" subtype="0" weight="1.0"/>
+			<entity type="18" variant="0" subtype="0" weight="1.0"/>
+			<entity type="18" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="0" y="1">
 			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
@@ -310,6 +341,10 @@
 		<spawn x="0" y="6">
 			<entity type="161" variant="5" subtype="0" weight="1.0"/>
 			<entity type="13" variant="0" subtype="0" weight="1.0"/>
+			<entity type="13" variant="0" subtype="0" weight="1.0"/>
+			<entity type="18" variant="0" subtype="0" weight="1.0"/>
+			<entity type="18" variant="0" subtype="0" weight="1.0"/>
+			<entity type="18" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="1" y="6">
 			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
@@ -320,9 +355,13 @@
 		<spawn x="12" y="6">
 			<entity type="161" variant="5" subtype="0" weight="1.0"/>
 			<entity type="13" variant="0" subtype="0" weight="1.0"/>
+			<entity type="13" variant="0" subtype="0" weight="1.0"/>
+			<entity type="18" variant="0" subtype="0" weight="1.0"/>
+			<entity type="18" variant="0" subtype="0" weight="1.0"/>
+			<entity type="18" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="Vulper - Whatever, go my runners." type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="0.9" lastTestTime="2025-08-24T22:13+00:00">
+	<room variant="0" name="Vulper - Whatever, go my runners." type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="0.9" lastTestTime="2025-09-10T19:13+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -382,7 +421,7 @@
 			<entity type="11" variant="1" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="Vulper - wait.. this is meant to be Basement?" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-08-24T22:13+00:00">
+	<room variant="0" name="Vulper - wait.. this is meant to be Basement?" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-09-10T19:13+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -390,6 +429,7 @@
 		<spawn x="0" y="0">
 			<entity type="161" variant="35" subtype="0" weight="5.0"/>
 			<entity type="85" variant="0" subtype="0" weight="1.0"/>
+			<entity type="13" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="3" y="0">
 			<entity type="0" variant="10" subtype="0" weight="1.0"/>
@@ -406,6 +446,7 @@
 		<spawn x="12" y="0">
 			<entity type="161" variant="35" subtype="0" weight="5.0"/>
 			<entity type="85" variant="0" subtype="0" weight="1.0"/>
+			<entity type="13" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="1" y="1">
 			<entity type="0" variant="10" subtype="0" weight="1.0"/>
@@ -488,6 +529,7 @@
 		<spawn x="0" y="6">
 			<entity type="161" variant="35" subtype="0" weight="5.0"/>
 			<entity type="85" variant="0" subtype="0" weight="1.0"/>
+			<entity type="13" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="4" y="6">
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
@@ -501,9 +543,10 @@
 		<spawn x="12" y="6">
 			<entity type="161" variant="35" subtype="0" weight="5.0"/>
 			<entity type="85" variant="0" subtype="0" weight="1.0"/>
+			<entity type="13" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="Vulper - *Fly the Kills you*" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-08-24T22:13+00:00">
+	<room variant="0" name="Vulper - *Fly the Kills you*" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-09-10T19:13+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -542,7 +585,7 @@
 			<entity type="0" variant="10" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="Vulper - oh my god guys boomy boy" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-08-24T22:13+00:00">
+	<room variant="0" name="Vulper - oh my god guys boomy boy" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-09-10T19:13+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -584,7 +627,7 @@
 			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="Vulper - This room, this one right here? burning." type="1" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="0.9" lastTestTime="2025-08-24T22:13+00:00">
+	<room variant="0" name="Vulper - This room, this one right here? burning." type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="0.9" lastTestTime="2025-09-10T19:13+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -824,7 +867,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="Vulper - i want to fly" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-08-24T22:13+00:00">
+	<room variant="0" name="Vulper - i want to fly" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-09-10T19:13+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -854,7 +897,7 @@
 			<entity type="80" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="Vulper - That's gore... gore of my comfort enemy.." type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-08-24T22:13+00:00">
+	<room variant="0" name="Vulper - That's gore... gore of my comfort enemy.." type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-09-10T19:13+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -893,7 +936,7 @@
 			<entity type="161" variant="7" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="Random - i LIED!!! i, vulper, made this room &gt;:)" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="0.5" lastTestTime="2025-08-24T22:13+00:00">
+	<room variant="0" name="Random - i LIED!!! i, vulper, made this room &gt;:)" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="0.5" lastTestTime="2025-09-10T19:13+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -959,13 +1002,13 @@
 			<entity type="161" variant="7" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="3" y="3">
-			<entity type="1930" variant="0" subtype="0" weight="1.0"/>
+			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="6" y="3">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="9" y="3">
-			<entity type="1930" variant="0" subtype="0" weight="1.0"/>
+			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="1" y="4">
 			<entity type="0" variant="20" subtype="0" weight="1.0"/>
@@ -1013,7 +1056,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="Vulper - HELP ME IM TRAPPED H- wait i can just go past it" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-08-24T22:13+00:00">
+	<room variant="0" name="Vulper - HELP ME IM TRAPPED H- wait i can just go past it" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-09-10T19:13+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -1109,7 +1152,7 @@
 			<entity type="0" variant="20" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="Vulper - It's dangerous to go alone, here, take this!" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-08-24T22:13+00:00">
+	<room variant="0" name="Vulper - It's dangerous to go alone, here, take this!" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-09-10T19:13+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -1199,7 +1242,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="Vulper - baby's first big room" type="1" subtype="0" shape="8" width="26" height="14" difficulty="5" weight="1.0" lastTestTime="2025-08-24T22:13+00:00">
+	<room variant="0" name="Vulper - baby's first big room" type="1" subtype="0" shape="8" width="26" height="14" difficulty="5" weight="1.0" lastTestTime="2025-09-10T19:13+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -1419,24 +1462,30 @@
 			<entity type="1930" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="Vulper - Pooty Shooty!" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-08-24T22:13+00:00">
+	<room variant="0" name="Vulper - Pooty Shooty!" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-09-10T19:13+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
 		<door exists="True" x="13" y="3"/>
-		<spawn x="0" y="0">
+		<spawn x="5" y="0">
 			<entity type="161" variant="30" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="6" y="0">
-			<entity type="14" variant="1" subtype="0" weight="1.0"/>
+			<entity type="161" variant="30" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="0">
+			<entity type="161" variant="30" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="9" y="0">
 			<entity type="0" variant="10" subtype="0" weight="1.0"/>
 		</spawn>
-		<spawn x="12" y="0">
-			<entity type="161" variant="30" subtype="0" weight="1.0"/>
-		</spawn>
 		<spawn x="3" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="1">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="9" y="1">
@@ -1445,23 +1494,11 @@
 		<spawn x="2" y="2">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
-		<spawn x="3" y="2">
-			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
-		</spawn>
-		<spawn x="4" y="2">
-			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
-		</spawn>
 		<spawn x="5" y="2">
 			<entity type="4500" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="7" y="2">
 			<entity type="4500" variant="0" subtype="0" weight="1.0"/>
-		</spawn>
-		<spawn x="8" y="2">
-			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
-		</spawn>
-		<spawn x="9" y="2">
-			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="10" y="2">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -1475,23 +1512,11 @@
 		<spawn x="2" y="4">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
-		<spawn x="3" y="4">
-			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
-		</spawn>
-		<spawn x="4" y="4">
-			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
-		</spawn>
 		<spawn x="5" y="4">
 			<entity type="4500" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="7" y="4">
 			<entity type="4500" variant="0" subtype="0" weight="1.0"/>
-		</spawn>
-		<spawn x="8" y="4">
-			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
-		</spawn>
-		<spawn x="9" y="4">
-			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="10" y="4">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
@@ -1499,23 +1524,23 @@
 		<spawn x="3" y="5">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="4" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="9" y="5">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
-		<spawn x="0" y="6">
-			<entity type="161" variant="30" subtype="0" weight="1.0"/>
-		</spawn>
-		<spawn x="12" y="6">
-			<entity type="161" variant="30" subtype="0" weight="1.0"/>
-		</spawn>
 	</room>
-	<room variant="0" name="Vulper - is it toasty in here or is it just me..." type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-08-24T22:13+00:00">
+	<room variant="0" name="Vulper - is it toasty in here or is it just me..." type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-09-10T19:20+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
 		<door exists="True" x="13" y="3"/>
 		<spawn x="0" y="0">
-			<entity type="161" variant="16" subtype="0" weight="1.4"/>
+			<entity type="161" variant="16" subtype="0" weight="4.4"/>
 			<entity type="10" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="4" y="0">
@@ -1525,7 +1550,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="12" y="0">
-			<entity type="161" variant="16" subtype="0" weight="1.4"/>
+			<entity type="161" variant="16" subtype="0" weight="4.4"/>
 			<entity type="10" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="0" y="1">
@@ -1533,6 +1558,9 @@
 		</spawn>
 		<spawn x="1" y="1">
 			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="3" y="1">
 			<entity type="0" variant="10" subtype="0" weight="1.0"/>
@@ -1543,26 +1571,17 @@
 		<spawn x="8" y="1">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="10" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="11" y="1">
 			<entity type="33" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="12" y="1">
 			<entity type="33" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
-		<spawn x="2" y="2">
-			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
-		</spawn>
-		<spawn x="10" y="2">
-			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
-		</spawn>
 		<spawn x="8" y="3">
 			<entity type="0" variant="10" subtype="0" weight="1.0"/>
-		</spawn>
-		<spawn x="2" y="4">
-			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
-		</spawn>
-		<spawn x="10" y="4">
-			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="0" y="5">
 			<entity type="33" variant="0" subtype="0" weight="1.0"/>
@@ -1570,10 +1589,16 @@
 		<spawn x="1" y="5">
 			<entity type="33" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="2" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="4" y="5">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="8" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="5">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="11" y="5">
@@ -1583,7 +1608,7 @@
 			<entity type="33" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="0" y="6">
-			<entity type="161" variant="16" subtype="0" weight="0.6"/>
+			<entity type="161" variant="16" subtype="0" weight="4.6"/>
 			<entity type="10" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="4" y="6">
@@ -1593,11 +1618,11 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="12" y="6">
-			<entity type="161" variant="16" subtype="0" weight="0.6"/>
+			<entity type="161" variant="16" subtype="0" weight="4.6"/>
 			<entity type="10" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="Vulper - Dude, why are you bouncing" type="1" subtype="0" shape="2" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-08-24T22:13+00:00">
+	<room variant="0" name="Vulper - Dude, why are you headless" type="1" subtype="0" shape="2" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-09-10T19:39+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="13" y="3"/>
 		<spawn x="0" y="2">
@@ -1646,7 +1671,7 @@
 			<entity type="0" variant="10" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="6" y="3">
-			<entity type="77" variant="0" subtype="0" weight="1.0"/>
+			<entity type="11" variant="1" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="8" y="3">
 			<entity type="1930" variant="0" subtype="0" weight="1.0"/>
@@ -1661,7 +1686,7 @@
 			<entity type="13" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="Vulper - sisyphus" type="1" subtype="0" shape="2" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-08-24T22:13+00:00">
+	<room variant="0" name="Vulper - sisyphus" type="1" subtype="0" shape="2" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-09-10T19:39+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="13" y="3"/>
 		<spawn x="3" y="2">
@@ -1716,7 +1741,7 @@
 			<entity type="13" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="Vulper - I'll take your finest ambience with a side of FLIES!!!" type="1" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2025-08-24T22:13+00:00">
+	<room variant="0" name="Vulper - I'll take your finest ambience with a side of FLIES!!!" type="1" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2025-09-10T19:39+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -1781,7 +1806,7 @@
 			<entity type="161" variant="7" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="Vulper - &quot;bzz bzz&quot; the room probably" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-08-24T22:13+00:00">
+	<room variant="0" name="Vulper - &quot;bzz bzz&quot; the room probably" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-09-10T19:39+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -1832,7 +1857,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="Vulper - Four Fore- I MEAN FIVEHEADS" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-08-24T22:13+00:00">
+	<room variant="0" name="Vulper - Four Fore- I MEAN FIVEHEADS" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-09-10T19:39+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -1883,7 +1908,7 @@
 			<entity type="161" variant="12" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="Vulper - Floaty flight enemies" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-08-24T22:13+00:00">
+	<room variant="0" name="Vulper - Floaty flight enemies" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-09-10T19:39+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -1916,7 +1941,7 @@
 			<entity type="18" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="Vulper - Stand ready for my Cowpat, worm." type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-08-24T22:13+00:00">
+	<room variant="0" name="Vulper - Stand ready for my Cowpat, worm." type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-09-10T19:39+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -1994,7 +2019,7 @@
 			<entity type="244" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="Vulper - larry junior if they were an enemy and not a boss:" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-08-24T22:13+00:00">
+	<room variant="0" name="Vulper - larry junior if they were an enemy and not a boss:" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-09-10T19:39+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -2097,7 +2122,7 @@
 			<entity type="220" variant="0" subtype="0" weight="0.5"/>
 		</spawn>
 	</room>
-	<room variant="0" name="Vulper - cvs told me to make calmer rooms so.." type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-08-24T22:13+00:00">
+	<room variant="0" name="Vulper - cvs told me to make calmer rooms so.." type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-09-10T19:39+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -2196,7 +2221,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="Vulper - Awesome stoneys" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-08-24T22:13+00:00">
+	<room variant="0" name="Vulper - Awesome stoneys" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-09-10T19:39+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -2328,7 +2353,7 @@
 			<entity type="161" variant="30" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="Vulper - fly and dip more like sky and sip" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-08-24T22:13+00:00">
+	<room variant="0" name="Vulper - fly and dip more like sky and sip" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-09-10T19:39+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -2355,7 +2380,7 @@
 			<entity type="217" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="Vulper - I wish I could climb this wall..." type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-08-24T22:13+00:00">
+	<room variant="0" name="Vulper - I wish I could climb this wall..." type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-09-10T19:39+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -2403,7 +2428,7 @@
 			<entity type="11" variant="1" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="Vulper - Take flight, my bugs!... and.. embryo.." type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-08-24T22:13+00:00">
+	<room variant="0" name="Vulper - Take flight, my bugs!... and.. embryo.." type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-09-10T19:39+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -2484,7 +2509,7 @@
 			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="Vulper - Fivehe- wait a gap- WHAT IS GOING ON ANYMORE!!!" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-08-24T22:13+00:00">
+	<room variant="0" name="Vulper - Fivehe- wait a gap- WHAT IS GOING ON ANYMORE!!!" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-09-10T19:39+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -2558,7 +2583,7 @@
 			<entity type="161" variant="11" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="Vulper - i need someone else to play test all of this" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-08-24T22:13+00:00">
+	<room variant="0" name="Vulper - i need someone else to play test all of this" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-09-10T19:39+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -2608,17 +2633,35 @@
 		<spawn x="1" y="1">
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="2" y="1">
+			<entity type="0" variant="10" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="4" y="1">
 			<entity type="13" variant="0" subtype="0" weight="1.0"/>
 			<entity type="18" variant="0" subtype="0" weight="1.0"/>
 			<entity type="13" variant="0" subtype="0" weight="1.0"/>
+			<entity type="13" variant="0" subtype="0" weight="1.0"/>
+			<entity type="13" variant="0" subtype="0" weight="1.0"/>
+			<entity type="13" variant="0" subtype="0" weight="1.0"/>
+			<entity type="13" variant="0" subtype="0" weight="1.0"/>
+			<entity type="13" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="6" y="1">
 			<entity type="18" variant="0" subtype="0" weight="1.0"/>
+			<entity type="13" variant="0" subtype="0" weight="1.0"/>
+			<entity type="13" variant="0" subtype="0" weight="1.0"/>
+			<entity type="13" variant="0" subtype="0" weight="1.0"/>
+			<entity type="13" variant="0" subtype="0" weight="1.0"/>
+			<entity type="13" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="8" y="1">
 			<entity type="13" variant="0" subtype="0" weight="1.0"/>
 			<entity type="18" variant="0" subtype="0" weight="1.0"/>
+			<entity type="13" variant="0" subtype="0" weight="1.0"/>
+			<entity type="13" variant="0" subtype="0" weight="1.0"/>
+			<entity type="13" variant="0" subtype="0" weight="1.0"/>
+			<entity type="13" variant="0" subtype="0" weight="1.0"/>
+			<entity type="13" variant="0" subtype="0" weight="1.0"/>
 			<entity type="13" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="11" y="1">
@@ -2630,11 +2673,11 @@
 		<spawn x="2" y="2">
 			<entity type="13" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
-		<spawn x="3" y="2">
-			<entity type="0" variant="10" subtype="0" weight="1.0"/>
-		</spawn>
 		<spawn x="10" y="2">
 			<entity type="13" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="3">
+			<entity type="0" variant="10" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="9" y="3">
 			<entity type="0" variant="10" subtype="0" weight="1.0"/>
@@ -2642,10 +2685,7 @@
 		<spawn x="2" y="4">
 			<entity type="13" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
-		<spawn x="5" y="4">
-			<entity type="0" variant="10" subtype="0" weight="1.0"/>
-		</spawn>
-		<spawn x="8" y="4">
+		<spawn x="9" y="4">
 			<entity type="0" variant="10" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="10" y="4">
@@ -2661,13 +2701,28 @@
 			<entity type="13" variant="0" subtype="0" weight="1.0"/>
 			<entity type="18" variant="0" subtype="0" weight="1.0"/>
 			<entity type="13" variant="0" subtype="0" weight="1.0"/>
+			<entity type="13" variant="0" subtype="0" weight="1.0"/>
+			<entity type="13" variant="0" subtype="0" weight="1.0"/>
+			<entity type="13" variant="0" subtype="0" weight="1.0"/>
+			<entity type="13" variant="0" subtype="0" weight="1.0"/>
+			<entity type="13" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="6" y="5">
 			<entity type="18" variant="0" subtype="0" weight="1.0"/>
+			<entity type="13" variant="0" subtype="0" weight="1.0"/>
+			<entity type="13" variant="0" subtype="0" weight="1.0"/>
+			<entity type="13" variant="0" subtype="0" weight="1.0"/>
+			<entity type="13" variant="0" subtype="0" weight="1.0"/>
+			<entity type="13" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="8" y="5">
 			<entity type="13" variant="0" subtype="0" weight="1.0"/>
 			<entity type="18" variant="0" subtype="0" weight="1.0"/>
+			<entity type="13" variant="0" subtype="0" weight="1.0"/>
+			<entity type="13" variant="0" subtype="0" weight="1.0"/>
+			<entity type="13" variant="0" subtype="0" weight="1.0"/>
+			<entity type="13" variant="0" subtype="0" weight="1.0"/>
+			<entity type="13" variant="0" subtype="0" weight="1.0"/>
 			<entity type="13" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="11" y="5">
@@ -2716,7 +2771,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="Vulper - Okay, i am bored and you get a free room!!" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="0.7" lastTestTime="2025-08-24T22:13+00:00">
+	<room variant="0" name="Vulper - Okay, i am bored and you get a free room!!" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="0.7" lastTestTime="2025-09-10T19:39+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -2794,7 +2849,7 @@
 			<entity type="0" variant="10" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="Vulper - guys please tell cvs he's such a good modder he deserves to hear it" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.1" lastTestTime="2025-08-24T22:13+00:00">
+	<room variant="0" name="Vulper - guys please tell cvs he's such a good modder he deserves to hear it" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.1" lastTestTime="2025-09-10T19:39+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -2836,7 +2891,7 @@
 			<entity type="161" variant="7" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="Vulper - I'M FIRE JASO- *ahem* SLASHER!!!!" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-08-24T22:13+00:00">
+	<room variant="0" name="Vulper - I'M FIRE JASO- *ahem* SLASHER!!!!" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-09-10T19:39+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -2917,7 +2972,7 @@
 			<entity type="33" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="Vulper - the grass is greener on the other side.." type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="0.8" lastTestTime="2025-08-24T22:13+00:00">
+	<room variant="0" name="Vulper - the grass is greener on the other side.." type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="0.8" lastTestTime="2025-09-10T19:39+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -3196,7 +3251,7 @@
 			<entity type="0" variant="10" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="Vulper - this place is UGLY " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-08-24T22:13+00:00">
+	<room variant="0" name="Vulper - this place is UGLY " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-09-10T19:39+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -3265,7 +3320,7 @@
 			<entity type="33" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="Vulper - this is gonna be my last room for tonight probably" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-08-24T22:13+00:00">
+	<room variant="0" name="Vulper - this is gonna be my last room for tonight probably" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-09-10T19:39+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -3334,7 +3389,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="Vulper - Bugs to squish." type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-08-24T22:13+00:00">
+	<room variant="0" name="Vulper - Bugs to squish." type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-09-10T19:39+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -3395,7 +3450,7 @@
 			<entity type="13" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="Vulper - dude why is everything FLYI-" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-08-24T22:13+00:00">
+	<room variant="0" name="Vulper - dude why is everything FLYI-" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-09-10T19:39+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -3469,7 +3524,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="Vulper - im gonna take from cvs and use the same enemies" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-08-24T22:13+00:00">
+	<room variant="0" name="Vulper - im gonna take from cvs and use the same enemies" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-09-10T19:39+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -3559,7 +3614,7 @@
 			<entity type="16" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="Vulper - The Mulligan." type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-08-24T22:13+00:00">
+	<room variant="0" name="Vulper - The Mulligan." type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-09-10T19:39+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -3580,7 +3635,7 @@
 			<entity type="161" variant="30" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="Vulper - Anixbirth\enemies is an invalid file path" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-08-24T22:13+00:00">
+	<room variant="0" name="Vulper - Anixbirth\enemies is an invalid file path" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-09-10T19:39+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -3634,7 +3689,7 @@
 			<entity type="13" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="Vulper - No anixbirth? :(" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-08-24T22:13+00:00">
+	<room variant="0" name="Vulper - No anixbirth? :(" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-09-10T19:39+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -3655,7 +3710,7 @@
 			<entity type="18" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="Vulper - if you're seeing this room, something seriously major didn't go wrong! get pranked" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="0.4" lastTestTime="2025-08-24T22:13+00:00">
+	<room variant="0" name="Vulper - if you're seeing this room, something seriously major didn't go wrong! get pranked" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="0.4" lastTestTime="2025-09-10T19:39+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -3748,7 +3803,7 @@
 			<entity type="4500" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="Vulper - Five. Hundred. Black flies." type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-08-24T22:13+00:00">
+	<room variant="0" name="Vulper - Five. Hundred. Black flies." type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-09-10T19:39+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -3775,7 +3830,7 @@
 			<entity type="161" variant="7" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="Vulper - braaaaaagh" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-08-24T22:13+00:00">
+	<room variant="0" name="Vulper - braaaaaagh" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-09-10T19:39+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -3796,7 +3851,7 @@
 			<entity type="161" variant="12" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="Vulper - can you handle a boss? no? how about the enemy equivalent" type="1" subtype="0" shape="1" width="13" height="7" difficulty="7" weight="1.0" lastTestTime="2025-08-24T22:13+00:00">
+	<room variant="0" name="Vulper - can you handle a boss? no? how about the enemy equivalent" type="1" subtype="0" shape="1" width="13" height="7" difficulty="7" weight="1.0" lastTestTime="2025-09-10T19:39+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -3850,7 +3905,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="Vulper - LARRY KING JR!!!!!" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-08-24T22:13+00:00">
+	<room variant="0" name="Vulper - LARRY KING JR!!!!!" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-09-10T19:39+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -3907,7 +3962,7 @@
 			<entity type="13" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="Vulper - LARRY!!!" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-08-24T22:13+00:00">
+	<room variant="0" name="Vulper - LARRY!!!" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-09-10T19:39+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -3955,7 +4010,7 @@
 			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="Vulper - WATCH ME FLY, [MAMA]!!!!" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-08-24T22:13+00:00">
+	<room variant="0" name="Vulper - WATCH ME FLY, [MAMA]!!!!" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-09-10T19:39+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -4004,7 +4059,7 @@
 			<entity type="18" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="Vulper - Basement 1" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-08-24T22:13+00:00">
+	<room variant="0" name="Vulper - Basement 1" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-09-10T19:39+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -4073,7 +4128,7 @@
 			<entity type="18" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="Vulper - shooty boys" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-08-24T22:13+00:00">
+	<room variant="0" name="Vulper - shooty boys" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-09-10T19:39+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -4142,7 +4197,7 @@
 			<entity type="14" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="Vulper - larry" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-08-24T22:13+00:00">
+	<room variant="0" name="Vulper - larry" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-09-10T19:39+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -4199,7 +4254,7 @@
 			<entity type="13" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="Vulper - we're approaching the climax of this floor folks!" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-08-24T22:13+00:00">
+	<room variant="0" name="Vulper - we're approaching the climax of this floor folks!" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-09-10T19:39+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -4262,7 +4317,7 @@
 			<entity type="161" variant="12" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="Vulper - how do difficulties work" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-08-24T22:13+00:00">
+	<room variant="0" name="Vulper - how do difficulties work" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-09-10T19:39+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -4376,7 +4431,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="Vulper - When the light is running low" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-08-24T22:13+00:00">
+	<room variant="0" name="Vulper - When the light is running low" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-09-10T19:39+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -4434,7 +4489,7 @@
 			<entity type="18" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="Vulper - and the shadows start to grow" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-08-24T22:13+00:00">
+	<room variant="0" name="Vulper - and the shadows start to grow" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-09-10T19:39+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -4492,7 +4547,7 @@
 			<entity type="18" variant="0" subtype="0" weight="2.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="Vulper - and the places that you know" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-08-24T22:13+00:00">
+	<room variant="0" name="Vulper - and the places that you know" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-09-10T19:39+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -4525,7 +4580,7 @@
 			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="Vulper - seem like faaaannttaassyyy" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-08-24T22:13+00:00">
+	<room variant="0" name="Vulper - seem like faaaannttaassyyy" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-09-10T19:39+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -4618,7 +4673,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="Vulper - there's a light inside your soul" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-08-24T22:13+00:00">
+	<room variant="0" name="Vulper - there's a light inside your soul" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-09-10T19:39+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -4663,7 +4718,7 @@
 			<entity type="161" variant="7" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="Vulper - that's still shining in the cold" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-08-24T22:13+00:00">
+	<room variant="0" name="Vulper - that's still shining in the cold" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-09-10T19:39+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -4684,7 +4739,7 @@
 			<entity type="161" variant="7" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="Vulper - with the truth.." type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-08-24T22:13+00:00">
+	<room variant="0" name="Vulper - with the truth.." type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-09-10T19:39+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -4756,7 +4811,7 @@
 			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="Vulper - the promise in our.. heeeaaaaaaarrts.." type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-08-24T22:13+00:00">
+	<room variant="0" name="Vulper - the promise in our.. heeeaaaaaaarrts.." type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-09-10T19:39+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -4868,7 +4923,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="Vulper - don't forget!" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-08-24T22:13+00:00">
+	<room variant="0" name="Vulper - don't forget!" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-09-10T19:39+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -5039,7 +5094,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="Vulper - I'm with you in the daaaaaaaaaaarrrrkkkk..." type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-08-24T22:13+00:00">
+	<room variant="0" name="Vulper - I'm with you in the daaaaaaaaaaarrrrkkkk..." type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-09-10T19:39+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -5093,7 +5148,7 @@
 			<entity type="161" variant="5" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="Vulper - Room not found." type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="0.01" lastTestTime="2025-08-24T22:13+00:00">
+	<room variant="0" name="Vulper - Room not found." type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="0.01" lastTestTime="2025-09-10T19:39+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -5306,7 +5361,7 @@
 			<entity type="1930" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="Vulper - These enemies are dead, they just don't know it yet." type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-08-24T22:13+00:00">
+	<room variant="0" name="Vulper - These enemies are dead, they just don't know it yet." type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-09-10T19:39+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -5384,7 +5439,7 @@
 			<entity type="161" variant="5" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="Vulper - Senor shitsalot" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-08-24T22:13+00:00">
+	<room variant="0" name="Vulper - Senor shitsalot" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-09-10T19:39+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -5429,7 +5484,7 @@
 			<entity type="161" variant="5" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="Vulper - you know what's funnier than 68 rooms made for basement...?" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="0.69" lastTestTime="2025-08-24T22:13+00:00">
+	<room variant="0" name="Vulper - you know what's funnier than 68 rooms made for basement...?" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="0.69" lastTestTime="2025-09-10T19:39+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -5495,7 +5550,7 @@
 			<entity type="161" variant="30" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="Vulper - an intro to &quot;Toast&quot;'s" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-08-24T22:13+00:00">
+	<room variant="0" name="Vulper - an intro to &quot;Toast&quot;'s" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-09-10T19:39+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -5516,7 +5571,7 @@
 			<entity type="161" variant="1" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="Vulper - push the button." type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-08-24T22:13+00:00">
+	<room variant="0" name="Vulper - push the button." type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-09-10T19:39+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -5537,7 +5592,7 @@
 			<entity type="18" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="Vulper - AND EVERYBODY WAS MAKING ME FEEL LIKE I WAS Losing My Mind!" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-08-24T22:13+00:00">
+	<room variant="0" name="Vulper - AND EVERYBODY WAS MAKING ME FEEL LIKE I WAS Losing My Mind!" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-09-10T19:39+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -5563,7 +5618,7 @@
 			<entity type="161" variant="1" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="Vulper - toast and syringes" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-08-24T22:13+00:00">
+	<room variant="0" name="Vulper - toast and protein" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-09-10T19:39+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -5572,16 +5627,16 @@
 			<entity type="161" variant="1" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="12" y="0">
-			<entity type="161" variant="4" subtype="1" weight="1.0"/>
+			<entity type="18" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="0" y="6">
-			<entity type="161" variant="4" subtype="1" weight="1.0"/>
+			<entity type="18" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="12" y="6">
 			<entity type="161" variant="1" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="Vulper - What the Shits??" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-08-24T22:13+00:00">
+	<room variant="0" name="Vulper - What the Shits??" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-09-10T19:39+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -5669,7 +5724,7 @@
 			<entity type="220" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="Vulper - It's Just a Burning Memory.." type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-08-24T22:13+00:00">
+	<room variant="0" name="Vulper - It's Just a Burning Memory.." type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-09-10T19:39+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -5792,7 +5847,7 @@
 			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="Vulper - Oh, look! A button! the area over there must hold the reward!" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-08-24T22:13+00:00">
+	<room variant="0" name="Vulper - Oh, look! A button! the area over there must hold the reward!" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-09-10T19:39+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -5876,7 +5931,7 @@
 			<entity type="161" variant="1" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="Vulper - can you tell i like dips and stuff?" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-08-24T22:13+00:00">
+	<room variant="0" name="Vulper - can you tell i like dips and stuff?" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-09-10T19:39+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -5884,16 +5939,24 @@
 		<spawn x="0" y="0">
 			<entity type="220" variant="0" subtype="0" weight="1.0"/>
 			<entity type="161" variant="5" subtype="0" weight="1.0"/>
+			<entity type="217" variant="0" subtype="0" weight="1.0"/>
+			<entity type="217" variant="0" subtype="0" weight="1.0"/>
+			<entity type="217" variant="0" subtype="0" weight="1.0"/>
+			<entity type="217" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
-		<spawn x="4" y="0">
+		<spawn x="3" y="0">
 			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
-		<spawn x="8" y="0">
+		<spawn x="9" y="0">
 			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="12" y="0">
 			<entity type="220" variant="0" subtype="0" weight="1.0"/>
 			<entity type="161" variant="5" subtype="0" weight="1.0"/>
+			<entity type="217" variant="0" subtype="0" weight="1.0"/>
+			<entity type="217" variant="0" subtype="0" weight="1.0"/>
+			<entity type="217" variant="0" subtype="0" weight="1.0"/>
+			<entity type="217" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="0" y="1">
 			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
@@ -5910,19 +5973,27 @@
 		<spawn x="0" y="6">
 			<entity type="220" variant="0" subtype="0" weight="1.0"/>
 			<entity type="161" variant="5" subtype="0" weight="1.0"/>
+			<entity type="217" variant="0" subtype="0" weight="1.0"/>
+			<entity type="217" variant="0" subtype="0" weight="1.0"/>
+			<entity type="217" variant="0" subtype="0" weight="1.0"/>
+			<entity type="217" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
-		<spawn x="4" y="6">
+		<spawn x="3" y="6">
 			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
-		<spawn x="8" y="6">
+		<spawn x="9" y="6">
 			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="12" y="6">
 			<entity type="220" variant="0" subtype="0" weight="1.0"/>
 			<entity type="161" variant="5" subtype="0" weight="1.0"/>
+			<entity type="217" variant="0" subtype="0" weight="1.0"/>
+			<entity type="217" variant="0" subtype="0" weight="1.0"/>
+			<entity type="217" variant="0" subtype="0" weight="1.0"/>
+			<entity type="217" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="Vulper - atmosphere and enemy" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-08-24T22:13+00:00">
+	<room variant="0" name="Vulper - atmosphere and enemy" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-09-10T19:39+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -5979,7 +6050,7 @@
 			<entity type="161" variant="7" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="Vulper - fly my pretties!" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-08-24T22:13+00:00">
+	<room variant="0" name="Vulper - fly my pretties!" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-09-10T19:39+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -6037,7 +6108,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="0" name="Vulper - wow, 3 types of flies here?" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-08-24T22:13+00:00">
+	<room variant="0" name="Vulper - wow, 3 types of flies here?" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-09-10T19:39+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -6205,6 +6276,721 @@
 		</spawn>
 		<spawn x="12" y="6">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="0" name="Vulper - 20 head" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-09-10T19:39+00:00">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="7"/>
+		<door exists="True" x="13" y="3"/>
+		<spawn x="0" y="0">
+			<entity type="161" variant="12" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="0">
+			<entity type="161" variant="12" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="3">
+			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="6">
+			<entity type="161" variant="12" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="6">
+			<entity type="161" variant="12" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="0" name="Vulper - i'd like a &quot;get back to making rooms&quot; with a side of &quot;cvs wants me to&quot;" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-09-10T20:10+00:00">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="7"/>
+		<door exists="True" x="13" y="3"/>
+		<spawn x="0" y="0">
+			<entity type="13" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="0">
+			<entity type="13" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="1">
+			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="1">
+			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="1">
+			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="1">
+			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="3">
+			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="3">
+			<entity type="161" variant="2" subtype="1" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="3">
+			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="5">
+			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="5">
+			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="5">
+			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="5">
+			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="6">
+			<entity type="13" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="6">
+			<entity type="13" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="0" name="Vulper - i think 90 rooms would be good" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-09-10T20:10+00:00">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="7"/>
+		<door exists="True" x="13" y="3"/>
+		<spawn x="0" y="0">
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="0">
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="0">
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="0">
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="0">
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="0">
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="0">
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="0">
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="1">
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="1">
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="1">
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="1">
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="5">
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="5">
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="5">
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="5">
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="6">
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="6">
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="6">
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="6">
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="6">
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="6">
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="6">
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="6">
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="0" name="Vulper - filler" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-09-10T20:10+00:00">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="7"/>
+		<door exists="True" x="13" y="3"/>
+		<spawn x="4" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="0">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="1">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="2">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="3">
+			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="4">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="3" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="9" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="5">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="5">
+			<entity type="0" variant="10" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="5">
+			<entity type="0" variant="10" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="6">
+			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="6">
+			<entity type="0" variant="10" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="6">
+			<entity type="0" variant="10" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="6">
+			<entity type="0" variant="10" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="0" name="Vulper - hey apple! what? *screams of the damned*" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-09-10T20:10+00:00">
+		<door exists="False" x="-1" y="3"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="7"/>
+		<door exists="False" x="13" y="3"/>
+		<spawn x="0" y="0">
+			<entity type="4500" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="0">
+			<entity type="33" variant="1" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="0">
+			<entity type="33" variant="1" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="1">
+			<entity type="33" variant="1" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="1">
+			<entity type="33" variant="1" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="2">
+			<entity type="33" variant="1" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="2">
+			<entity type="33" variant="1" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="2">
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="1" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="2">
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="1" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="3">
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="3">
+			<entity type="33" variant="1" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="3">
+			<entity type="33" variant="1" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="3">
+			<entity type="33" variant="1" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="3">
+			<entity type="33" variant="1" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="3">
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="4">
+			<entity type="33" variant="1" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="4">
+			<entity type="33" variant="1" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="4">
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="1" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="4">
+			<entity type="33" variant="1" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="5">
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="1" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="5">
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="1" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="6">
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="1" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="6">
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="1" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+			<entity type="33" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="6">
+			<entity type="4500" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="0" name="Vulper - what if vulper had whatsapp :joy: :joy:" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-09-10T20:10+00:00">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="False" x="6" y="-1"/>
+		<door exists="False" x="6" y="7"/>
+		<door exists="True" x="13" y="3"/>
+		<spawn x="6" y="0">
+			<entity type="1930" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="1">
+			<entity type="1930" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="1">
+			<entity type="1930" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="3">
+			<entity type="161" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="5">
+			<entity type="1930" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="5">
+			<entity type="1930" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="6">
+			<entity type="1930" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="0" name="Vulper - VIOLENCE!!!" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-09-10T20:10+00:00">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="7"/>
+		<door exists="True" x="13" y="3"/>
+		<spawn x="0" y="0">
+			<entity type="256" variant="0" subtype="0" weight="1.0"/>
+			<entity type="161" variant="12" subtype="0" weight="1.0"/>
+			<entity type="289" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="0">
+			<entity type="256" variant="0" subtype="0" weight="1.0"/>
+			<entity type="289" variant="0" subtype="0" weight="1.0"/>
+			<entity type="161" variant="12" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="5">
+			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="5">
+			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="6">
+			<entity type="161" variant="7" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="6">
+			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="6">
+			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="6">
+			<entity type="161" variant="7" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="0" name="Vulper - in cellar im gonna use lyrics to songs for room names" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-09-10T20:10+00:00">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="7"/>
+		<door exists="True" x="13" y="3"/>
+		<spawn x="0" y="0">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="0">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="0">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="0">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="1">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="1">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="1">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="4" y="3">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="3">
+			<entity type="11" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="8" y="3">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="5">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="5">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="5">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="6">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="6">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="6">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="6">
+			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="0" name="Vulper - my computer mouse is cool" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-09-10T20:10+00:00">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="7"/>
+		<door exists="True" x="13" y="3"/>
+		<spawn x="0" y="0">
+			<entity type="161" variant="5" subtype="0" weight="1.0"/>
+			<entity type="220" variant="0" subtype="0" weight="1.0"/>
+			<entity type="220" variant="0" subtype="0" weight="1.0"/>
+			<entity type="217" variant="0" subtype="0" weight="1.0"/>
+			<entity type="217" variant="0" subtype="0" weight="1.0"/>
+			<entity type="217" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="0">
+			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="0">
+			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="0">
+			<entity type="161" variant="5" subtype="0" weight="1.0"/>
+			<entity type="220" variant="0" subtype="0" weight="1.0"/>
+			<entity type="220" variant="0" subtype="0" weight="1.0"/>
+			<entity type="217" variant="0" subtype="0" weight="1.0"/>
+			<entity type="217" variant="0" subtype="0" weight="1.0"/>
+			<entity type="217" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="1">
+			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="1">
+			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="2">
+			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="2">
+			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="2">
+			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="2">
+			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="2">
+			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="2">
+			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="3">
+			<entity type="217" variant="0" subtype="0" weight="1.0"/>
+			<entity type="13" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="10" y="4">
+			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="11" y="4">
+			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="4">
+			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="5">
+			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="1" y="5">
+			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="2" y="5">
+			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="5">
+			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="5">
+			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="6">
+			<entity type="161" variant="5" subtype="0" weight="1.0"/>
+			<entity type="220" variant="0" subtype="0" weight="1.0"/>
+			<entity type="220" variant="0" subtype="0" weight="1.0"/>
+			<entity type="217" variant="0" subtype="0" weight="1.0"/>
+			<entity type="217" variant="0" subtype="0" weight="1.0"/>
+			<entity type="217" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="5" y="6">
+			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="7" y="6">
+			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="6">
+			<entity type="161" variant="5" subtype="0" weight="1.0"/>
+			<entity type="220" variant="0" subtype="0" weight="1.0"/>
+			<entity type="220" variant="0" subtype="0" weight="1.0"/>
+			<entity type="217" variant="0" subtype="0" weight="1.0"/>
+			<entity type="217" variant="0" subtype="0" weight="1.0"/>
+			<entity type="217" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+	</room>
+	<room variant="0" name="Vulper - last basement room from me! if you're reading this, hi!" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="0.95" lastTestTime="2025-09-10T20:10+00:00">
+		<door exists="True" x="-1" y="3"/>
+		<door exists="True" x="6" y="-1"/>
+		<door exists="True" x="6" y="7"/>
+		<door exists="True" x="13" y="3"/>
+		<spawn x="0" y="0">
+			<entity type="18" variant="0" subtype="0" weight="1.0"/>
+			<entity type="13" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="0">
+			<entity type="18" variant="0" subtype="0" weight="1.0"/>
+			<entity type="13" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="6" y="3">
+			<entity type="161" variant="12" subtype="0" weight="1.0"/>
+			<entity type="161" variant="1" subtype="0" weight="1.0"/>
+			<entity type="161" variant="1" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="0" y="6">
+			<entity type="18" variant="0" subtype="0" weight="1.0"/>
+			<entity type="13" variant="0" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="12" y="6">
+			<entity type="18" variant="0" subtype="0" weight="1.0"/>
+			<entity type="13" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
 </rooms>
