@@ -54,7 +54,7 @@ function mod:TriloAI(npc, sprite, d)
         else
             path:FindGridPath(targetpos, (0.5+(d.heatLevel/3))*0.7, 900, true)
         end
-        
+
     elseif d.state == "Blowup" then
         npc:MultiplyFriction(0.9)
         sprite:PlayOverlay("HeadTransition".. (d.heatLevel-1))
@@ -79,11 +79,16 @@ function mod:TriloAI(npc, sprite, d)
         sprite:SetFrame("WalkHori"  .. d.bodyHeat, 0)
     end
 
-    if sprite:IsOverlayPlaying("HeadTransition4") and sprite:GetOverlayFrame() == 17 then
+    if sprite:IsOverlayPlaying("HeadTransition4") then
+        npc:MultiplyFriction(0.8)
+    end
+
+    if sprite:IsOverlayPlaying("HeadTransition4") and sprite:GetOverlayFrame() == 33 then
         npc.SplatColor = FHAC.Color.Charred
         Isaac.Explode(npc.Position, npc, 40)
         npc:Kill()
-    elseif sprite:GetOverlayFrame() == 17 and string.find(sprite:GetOverlayAnimation(), "HeadTransition") then
+    elseif sprite:GetOverlayFrame() == 17 and string.find(sprite:GetOverlayAnimation(), "HeadTransition") and not (sprite:IsOverlayPlaying("HeadTransition4"))then
+        mod:ShootFire(npc.Position, Vector(math.random()*5,0):Rotated(math.random(0,360)), {scale = 1, timer = 60, hp = 1, radius = 20})
         npc:PlaySound(SoundEffect.SOUND_MONSTER_GRUNT_1, 1, 0, false, 1.5)
         d.bodyHeat = d.bodyHeat + 1
     end
