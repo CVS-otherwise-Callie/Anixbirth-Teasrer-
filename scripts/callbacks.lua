@@ -108,6 +108,11 @@ function FHAC:PostNewRoom()
 
     FHAC:CVSNewRoom()
 
+    if AnixbirthSaveManager.GetRunSave().anixbirthsaveData.diaLouges then
+        for name, tab in pairs(AnixbirthSaveManager.GetRunSave().anixbirthsaveData.diaLouges) do
+            tab.cancel = true
+        end
+    end
 
 end
 FHAC:AddCallback(ModCallbacks.MC_POST_NEW_ROOM, FHAC.PostNewRoom)

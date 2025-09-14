@@ -93,7 +93,8 @@ FHAC:LoadScripts("scripts.iam.effects", {
 	"dekatessera effect",
 	"wideweb",
 	"cvsfire",
-	"raingrideffect"
+	"raingrideffect",
+	"textbox"
 })
 
 FHAC:LoadScripts("scripts.iam.familiars", {
