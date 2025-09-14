@@ -13,28 +13,24 @@ function mod:PottedFattyAI(npc, sprite, d)
         d.newPer = 3
         d.crackedPer = 0
         d.speedMod = 0.5
-        d.newpos = mod:freeGrid(npc, true, 400, 0)
         d.init = true
+        d.direction = (targ.Position-npc.Position):Resized(2):Rotated(math.random(-60,60))
     else
         npc.StateFrame = npc.StateFrame + 1
     end
 
-    if npc.Position:Distance(d.newpos) < 20 then
-        d.wait = 0
-        d.newpos = mod:freeGrid(npc, true, 400, 0)
-        npc.StateFrame = 0
+    if math.random(1,20) == 1 then
+        d.direction = (targ.Position-npc.Position):Resized(2):Rotated(math.random(-60,60))
+    end
+
+    if mod:isScare(npc) then
+        npc.Velocity = mod:Lerp(npc.Velocity, -d.direction, 0.1)
     else
-        if mod:isScare(npc) then
-            npc.Velocity = mod:Lerp(npc.Velocity, Vector(-2*d.speedMod, 0):Rotated((d.newpos - npc.Position):GetAngleDegrees()), 1)
-        elseif room:CheckLine(npc.Position,d.newpos,0,1,false,false) then
-            npc.Velocity = mod:Lerp(npc.Velocity, Vector(2*d.speedMod, 0):Rotated((d.newpos - npc.Position):GetAngleDegrees()), 1)
-        else
-            path:FindGridPath(d.newpos, 0.2*d.speedMod, 1, true)
-        end
+        npc.Velocity = mod:Lerp(npc.Velocity, d.direction, 0.1)
     end
 
     if npc.Velocity:Length() > 0.3 then
-        npc:AnimWalkFrame("WalkHori","WalkVert",0.)
+        npc:AnimWalkFrame("WalkHori","WalkVert",0)
     else
         sprite:SetFrame("WalkHori", 0)
     end
@@ -61,6 +57,11 @@ function mod:PottedFattyAI(npc, sprite, d)
             bucketGib:Update()
         end
         npc:ToNPC():PlaySound(SoundEffect.SOUND_POT_BREAK, 1, 0, false, 1)
+        if math.random() < 0.0967 then -- SIX SEVVVEEEEEN BAHAHAHAHAHAHHA (this isnt funny (as in its funny how not funny it is))
+            for i = 1, math.random(2) do
+                EntityNPC.ThrowSpider(npc.Position, npc, Vector(npc.Position.X+math.random(-100,100), npc.Position.Y+math.random(-100,100)), false, 4)
+            end
+        end
 
         npc:Remove()
         local ent = Isaac.Spawn(EntityType.ENTITY_FATTY, 0, 0, npc.Position, npc.Velocity, npc)
