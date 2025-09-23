@@ -208,7 +208,7 @@ function mod:DrawDialougeTalk(text, position, stats) -- time in seconds, rate in
 	local runDat = AnixbirthSaveManager.GetRunSave().anixbirthsaveData
 
 	local rate = stats.rate or 5
-	local senCap = stats.senCap or 20
+	local senCap = stats.senCap or 17
 	local parCap = stats.parCap or 3
 	local scale = stats.scale or 1
 	local font = stats.font or mod.TempestFont

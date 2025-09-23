@@ -11,34 +11,19 @@ end)
 function mod:TextBoxNPCAI(ef, sprite, d)
 
     if not d.init then
-        d.state = "prompt"
+        d.state = d.state or "prompt"
         d.anchor = d.anchor or 1
         d.init = true
     end
 
-    d.text = 
+    d.text = d.text or 
     [===============[
-    oh hey there
-    fellow ascender
+this is some
+random text
+for idiots
 
-    you probably
-    feel it too
-
-    the rapture is coming!
-    the rapture is coming!
-
-    i get to
-    see the light!
-
-    the secret is
-    finally being
-    carried out!
-
-    the secret of-
-    wait a sec
-
-    you're not a
-    ascender
+two paragrpahs
+are cool
     ]===============]
 
     sprite.Scale = Vector(0.5, 0.5)
@@ -65,22 +50,29 @@ function mod:TextBoxNPCAI(ef, sprite, d)
         d.state = "prompt"
     end
 
+    if sprite:IsEventTriggered("removequick") then
+        if d.removeonDeath then
+            ef:Remove()
+        end
+    end
+
 
     if d.state == "idletalking" then
         if d.text then
 
             local xAnch = 50
 
-            if d.anchor == 2 then
-                xAnch = -20
+            if d.stats.anchor and d.stats.anchor == 2 then
+                xAnch = -15
             end
 
             if not d.textBox then
-                d.textBox = mod:DrawDialougeTalk(d.text, Isaac.WorldToScreen(ef.Position - Vector(xAnch, 90)), {rate = 3, senCap = 15, anchor = d.anchor})
+                d.textBox = mod:DrawDialougeTalk(d.text, Isaac.WorldToScreen(ef.Position - Vector(xAnch, 90)), d.stats or {rate = 3, senCap = 15, anchor = d.anchor})
             end
 
             if d.textBox.isFinished then
                 d.textBox = nil
+
                 d.state = "closing"
             end
 
@@ -98,3 +90,13 @@ mod.onEffectTouch(mod.Effects.TextBox, function(player, npc)
         sd.state = "opening"
     end
 end)
+
+function mod:NPCDialouge(text, position, stats, npc)
+    position = position or Game():GetRoom():GetCenterPos()
+    npc = npc or nil
+    local textbox = Isaac.Spawn(mod.Effects.TextBox.ID, mod.Effects.TextBox.Var, 0, position, Vector.Zero, npc)
+    textbox:GetData().text = text
+    textbox:GetData().stats = stats or {}
+    textbox:GetData().removeonDeath = true
+    textbox:GetData().state = "opening"
+end

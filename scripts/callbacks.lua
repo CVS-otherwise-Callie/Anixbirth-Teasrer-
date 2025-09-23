@@ -108,7 +108,8 @@ function FHAC:PostNewRoom()
 
     FHAC:CVSNewRoom()
 
-    if AnixbirthSaveManager.GetRunSave().anixbirthsaveData.diaLouges then
+    AnixbirthSaveManager.GetRunSave().anixbirthsaveData = AnixbirthSaveManager.GetRunSave().anixbirthsaveData or {}
+    if AnixbirthSaveManager.IsLoaded() and AnixbirthSaveManager.GetRunSave() and AnixbirthSaveManager.GetRunSave().anixbirthsaveData.diaLouges then
         for name, tab in pairs(AnixbirthSaveManager.GetRunSave().anixbirthsaveData.diaLouges) do
             tab.cancel = true
         end

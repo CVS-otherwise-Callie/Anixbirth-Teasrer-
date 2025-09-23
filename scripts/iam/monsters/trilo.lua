@@ -126,15 +126,7 @@ mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, function (_, npc, amount, damag
 end)
 
 mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, function(_, npc, damage, flags, guy)
-    if npc.Type == 161 and npc.Variant == mod.Monsters.Trilo.Var and flags == flags | DamageFlag.DAMAGE_FIRE then
+    if npc.Type == 161 and npc.Variant == mod.Monsters.Trilo.Var and (flags == flags | DamageFlag.DAMAGE_FIRE or flags == flags | DamageFlag.DAMAGE_EXPLOSION) then
         return false
     end
 end)
-
--- i LOVE his animations
--- i always wanted to be a animator
--- so a ton of rspect
--- yeah but no drawing pen so uh :pensive: what did u think i wrote? ok then
--- hmmmm
--- i mean i should fix the numebr systme cus clearly it's kinda weird
--- no not even that this one internally

@@ -185,7 +185,7 @@ FHAC.noFireDamage = {
 	"Embolzon",
 	"CracklingHost",
 	"ScorchedSooter",
-	"LilFlash"
+	"LilFlash",
 }
 
 FHAC.DirectionToVector = {

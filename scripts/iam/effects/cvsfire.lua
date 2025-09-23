@@ -37,6 +37,8 @@ function mod:FireProjectileAI(ef, sprite, d)
 
 		d.SpriteScale = ef.SpriteScale * d.scale
 
+        d.MaxHitPoints = d.hp
+
         if d.form == 1 then -- normal fire
             sprite:ReplaceSpritesheet(0, "gfx/effects/effect_005_fire.png")
         elseif d.form == 2 then
