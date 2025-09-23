@@ -1,6 +1,6 @@
 <items gfxroot="gfx/items/" version="1">
     <passive id="1" name="Stinky Mushroom" gfx="001_stinkymushroom.png" description="It smells revolting!" quality="3" cache="damage offensive" />
-    <passive id="2" name="Big Ol' Bowl of Sauerkraut" gfx="002_bigolbowlofsauerkraut.png" description="Every day for breakfast..." quality="2" cache="offensive" />
+    <passive id="2" name="Big Ol' Bowl of Sauerkraut" gfx="002_bigolBowlofSauerkraut.png" description="Every day for breakfast..." quality="2" cache="offensive" />
     <passive id="3" name="Stinky Socks" gfx="003_stinkysocks.png" description="Stinks like heaven" quality="2" cache="speed" />
     <passive id="4" name="Moldy Bread" gfx="004_moldybread.png" description="Still edible" quality="2"/>
     <passive id="5" name="Letter To Myself" gfx="005_lettertomyself.png" description="See me soon" quality="2"/>
@@ -11,12 +11,13 @@
 
     <!--Actives are 100+-->
     <active id="100" name="Joke Book" gfx="100_joke_book.png" description="Xocolate's finest" quality="1" maxcharges="2" cache="firedelay" />
-    <active id="101" name="Corrupted File" gfx="101_corruptedfile.png" description="Don't download it" quality="2" />
+    <active id="101" name="Corrupted File" gfx="101_corruptedfile.png" description="Don't download it" quality="2" maxcharges="0" />
     <active id="102" name="Straw Doll" gfx="102_voodoo_doll.png" description="Give them your suffering" quality="3" maxcharges="4" cache="damage nogreed offensive"/>
 
     <!--Trinkets-->
     <trinket name="Mystery Milk" description="From a trash farm near you" gfx="1_mystery_milk.png" />
     <trinket name="The Left Ball" description="My ball is left" gfx="2_the_left_ball.png" />
+    <trinket name="Happy Heart Toy" description="We LOVE you!!" gfx="3_happy_heart_toy.png" />
 
     <!--Familairsare 200-->
     <familiar id="200" name="Marketable Plushie" description="This looks familiar" gfx="200_marketableplushie.png" quality="3" tags="summonable offensive" />

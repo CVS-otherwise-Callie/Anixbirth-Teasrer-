@@ -74,18 +74,9 @@ mod.Sounds = {
 
 FHAC.Collectibles = {
     Items = {},
-    PickupsEnt = {
-        BowlOfSauerkraut = mod:ENT("Bowl of Sauerkraut"),
-        BirthdaySlice = mod:ENT("Birthday Slice"),
-		LetterToMyself = mod:ENT("Letter To Myself")
-    },
-    Pickups = {
-        BirthdaySlice = Isaac.GetCardIdByName("Birthday Slice")
-    },
-    Trinkets = {
-        MysteryMilk = Isaac.GetTrinketIdByName("Mystery Milk"),
-	    TheLeftBall = Isaac.GetTrinketIdByName("The Left Ball")
-    }
+    PickupsEnt = {},
+    Pickups = {},
+    Trinkets = {}
 }
 
 FHAC.Grids = {
@@ -120,6 +111,8 @@ for i = 1, XMLData.GetNumEntries(XMLNode.ENTITY) do
 
 		if CheckForTag(entry, "npc") then
 			FHAC.NPCS[tostring(name)] = stats
+        elseif tonumber(entry.type) == 5 then
+            FHAC.Collectibles.PickupsEnt[tostring(name)] = stats
 		elseif tonumber(entry.type) == 1000 then
 			FHAC.Effects[tostring(name)] = stats
 		elseif CheckForTag(entry, "miniboss") then
@@ -142,7 +135,35 @@ for i = 1, XMLData.GetNumEntries(XMLNode.ITEM) do
 			name = mod:removeSubstring(tostring(name), " ")
 			name = mod:removeSubstring(tostring(name), "'")
 		end
-		FHAC.Collectibles.Items[tostring(name)] = tonumber(entry.id)
+        if entry.type == "passive" or entry.type == "active" then
+            FHAC.Collectibles.Items[tostring(name)] = tonumber(entry.id)
+        elseif entry.type == "familiar" then
+            FHAC.Collectibles.Items[tostring(name)] = tonumber(entry.id)
+        end
+	end
+end
+
+for i = 1, XMLData.GetNumEntries(XMLNode.TRINKET) do
+    local entry = XMLData.GetEntryByOrder(XMLNode.TRINKET, i)
+    if entry.sourceid == "3167715373" then --anixbirth specific
+		local name = entry.name
+		for _ = 1, #entry.name do
+			name = mod:removeSubstring(tostring(name), " ")
+			name = mod:removeSubstring(tostring(name), "'")
+		end
+        FHAC.Collectibles.Trinkets[tostring(name)] = tonumber(entry.id)
+	end
+end
+
+for i = 1, XMLData.GetNumEntries(XMLNode.CARD) do
+    local entry = XMLData.GetEntryByOrder(XMLNode.CARD, i)
+    if entry.sourceid == "3167715373" then --anixbirth specific
+		local name = entry.name
+		for _ = 1, #entry.name do
+			name = mod:removeSubstring(tostring(name), " ")
+			name = mod:removeSubstring(tostring(name), "'")
+		end
+        FHAC.Collectibles.Pickups[tostring(name)] = tonumber(entry.id)
 	end
 end
 -----------------------------------------------------------------------------------------------------------------------

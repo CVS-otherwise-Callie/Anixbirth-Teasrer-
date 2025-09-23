@@ -111,7 +111,8 @@ FHAC:LoadScripts("scripts.iam.items.actives", {
 
 FHAC:LoadScripts("scripts.iam.items.trinkets", {
 	"mystery milk",
-	"the left ball"
+	"the left ball",
+	"happy heart toy"
 })
 
 FHAC:LoadScripts("scripts.iam.items.passives", {
@@ -127,7 +128,7 @@ FHAC:LoadScripts("scripts.iam.items.passives", {
 
 FHAC:LoadScripts("scripts.iam.items.pickups" , {
 	"bowl of sauerkraut",
-	"birthday slice"
+	"birthday slice",
 })
 
 FHAC:LoadScripts("scripts.iam.jokes", {
