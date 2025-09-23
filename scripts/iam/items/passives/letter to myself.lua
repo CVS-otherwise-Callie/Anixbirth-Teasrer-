@@ -5,7 +5,11 @@ local letterToMyselfRewards = {
     {{5, 20, 0, 2}, {5, 40, 0, 1}},
     {{5, 20, 2, 2}, {5, 30, 1, 1}},
     {{5, 10, 8, 3}, {5, 300, 0, 1}},
-    {{5, 300, 0, 2}, {5, 10, 3, 1}, {5, 20, 0, 2}, {5, 30, 1, 1}}
+    {{5, 300, 0, 2}, {5, 10, 3, 1}, {5, 20, 0, 2}, {5, 30, 1, 1}},
+    {{5, 69, 0, 1}, {5, 300, 0, 1}, {3, FamiliarVariant.BLUE_FLY, 0, 3}},
+    {{5, 300, math.random(56, 77), 3}, {5, 10, 3, 2}, {3, FamiliarVariant.BLUE_SPIDER, 0, 3}, {5, 69, 2, 1}},
+    {{5, 10, 3, 4}, {3, FamiliarVariant.BLUE_FLY, 0, 10}},
+    {{3, FamiliarVariant.BLUE_FLY, 0, 20}},
 }
 
 mod:AddCallback(ModCallbacks.MC_POST_NEW_LEVEL, function()
