@@ -70,7 +70,8 @@ FHAC:LoadScripts("scripts.iam.monsters", {
 	"furnace",
 	"hotpotato",
 	"stonejohnny",
-	"souwa"
+	"souwa",
+	"stoneangelstatue"
 })
 
 FHAC:LoadScripts("scripts.iam.minibosses", {
@@ -277,6 +278,8 @@ function mod:CVS161AI(npc)
 		mod:StoneJohnnyAI(npc, npc:GetSprite(), npc:GetData())
 	elseif npc.Variant == mod.Monsters.Souwa.Var then
 		mod:SouwaAI(npc, npc:GetSprite(), npc:GetData())
+	elseif npc.Variant == mod.Monsters.StoneAngelStatue.Var then
+		mod:StoneAngelStatueAI(npc, npc:GetSprite(), npc:GetData())
 	end
 end
 

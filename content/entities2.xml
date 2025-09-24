@@ -572,6 +572,13 @@
         <gibs amount="6" blood="5" bone="0" eye="1" gut="0" large="0" />
     </entity>
 
+    <!-- Cathedral -->
+    <entity anm2path="monsters/stoneangelstatue/stoneangelstatue.anm2" id="161" variant="700" reroll="false" baseHP="0" boss="0" champion="1" collisionDamage="0" collisionMass="40" collisionRadius="13" friction="1" name="Stone Angel Statue" numGridCollisionPoints="12" shadowSize="14">
+        <bestiary transform="0,0,1" anim="Idle" />
+        <gibs amount="6" blood="5" bone="0" eye="1" gut="0" large="0" />
+        <devolve id="161.4.11" weight="1" />
+    </entity>
+
     <!--Alt - Downpour-->
     <entity anm2path="monsters/stonejohhny/stonejohhny.anm2" hasFloorAlts="false" reroll="true" baseHP="14" boss="0" champion="1" collisionDamage="1" collisionMass="5" collisionRadius="13" friction="1" id="161" name="Stone Johnny" numGridCollisionPoints="12" shadowSize="14" stageHP="0" variant="109" portrait="1">
 		<bestiary transform="0,0,1" anim="WalkVert" />
