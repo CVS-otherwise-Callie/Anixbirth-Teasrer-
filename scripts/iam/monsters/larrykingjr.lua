@@ -1,22 +1,6 @@
 local mod = FHAC
 local game = Game()
 
-local lkjStats = {
-    butts = {},
-    buttsToSpawn = 2,
-    isSeg = false,
-    isButt = false,
-    MoveDelay = 0,
-    MovingOffset = 0,
-    MovementLog = {},
-    SegmentNumber = 1,
-    state = "Moving",
-    segUpdateNum = 0,
-    specialAnim = "",
-    lastFrameCount = 0,
-    lateFrameCount = 0
-}
-
 local function GetLowestSeg(segments)
     local hi = 999999999999
     if not segments or #segments == 0 then return end
@@ -56,13 +40,24 @@ end
 
 function mod:LarryKingJrAI(npc, sprite, d)
 
-    for name, stat in pairs(lkjStats) do
-        d[name] = d[name] or stat
-    end
-
     if not d.init then
 
         npc.EntityCollisionClass = EntityCollisionClass.ENTCOLL_PLAYEROBJECTS
+
+
+        d.butts = d.butts or {}
+        d.buttsToSpawn = d.buttsToSpawn or 2
+        d.isSeg = d.isSeg or false
+        d.isButt = d.isButt or false
+        d.MoveDelay = d.MoveDelay or 0
+        d.MovingOffset = d.MovingOffset or 0
+        d.MovementLog = d.MovementLog or {}
+        d.SegmentNumber = d.SegmentNumber or 1
+        d.state = d.state or "Moving"
+        d.segUpdateNum = d.segUpdateNum or 0
+        d.specialAnim = d.specialAnim or ""
+        d.lastFrameCount = d.lastFrameCount or 0
+        d.lateFrameCount = d.lateFrameCount or 0
 
         -- SPAWNING BUTTS --
 
