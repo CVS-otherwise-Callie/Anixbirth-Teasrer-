@@ -26,8 +26,8 @@ function FHAC.NewLevelStuff()
 		local player = Isaac.GetPlayer(i)
 
 		if AnixbirthSaveManager.GetRunSave(player).anixbirthsaveData then
-			if AnixbirthSaveManager.GetRunSave(player).anixbirthsaveData.BowlOfSauerkraut then
-				AnixbirthSaveManager.GetRunSave(player).anixbirthsaveData.UpdateBowlOfSauerkraut = 0
+			if type(AnixbirthSaveManager.GetRunSave(player).anixbirthsaveData.BowlofSauerkraut) == "number" then
+				AnixbirthSaveManager.GetRunSave(player).anixbirthsaveData.BowlofSauerkraut = 0
 				player:EvaluateItems()
 			end
 		end
@@ -108,12 +108,26 @@ function FHAC:PostNewRoom()
 
     FHAC:CVSNewRoom()
 
+    AnixbirthSaveManager.GetRunSave().anixbirthsaveData = AnixbirthSaveManager.GetRunSave().anixbirthsaveData or {}
+    if AnixbirthSaveManager.IsLoaded() and AnixbirthSaveManager.GetRunSave() and AnixbirthSaveManager.GetRunSave().anixbirthsaveData.diaLouges then
+        for name, tab in pairs(AnixbirthSaveManager.GetRunSave().anixbirthsaveData.diaLouges) do
+            tab.cancel = true
+        end
+    end
+
+    for i = 1, game:GetNumPlayers() do
+        if AnixbirthSaveManager.GetRunSave(Isaac.GetPlayer(i)).jokeBookUpNum and AnixbirthSaveManager.GetRunSave(Isaac.GetPlayer(i)).jokeBookUpNum > 0 then
+            AnixbirthSaveManager.GetRunSave(Isaac.GetPlayer(i)).jokeBookUpNum = 0
+            Isaac.GetPlayer(i):EvaluateItems()
+        end
+    end
 
 end
 FHAC:AddCallback(ModCallbacks.MC_POST_NEW_ROOM, FHAC.PostNewRoom)
 
 FHAC:AddCallback(ModCallbacks.MC_POST_PICKUP_UPDATE, function(_, pickup)
     FHAC:ReplaceItemTheLeftBall(pickup)
+    FHAC:ReplaceHeartHeartToy(pickup)
 end)
 
 function FHAC:PostPlayerUpdate(player)

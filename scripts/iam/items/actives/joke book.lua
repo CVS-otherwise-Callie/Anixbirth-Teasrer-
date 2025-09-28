@@ -13,14 +13,25 @@ function mod:JokeBook(item, _, player)
             v:AddFear(EntityRef(player), 150)
         end
     end
+    
+    for i = 1, Game():GetNumPlayers() do
+
+        AnixbirthSaveManager.GetRunSave(Isaac.GetPlayer(i)).jokeBookUpNum =
+        0.15*(1+player:GetEffects():GetCollectibleEffectNum(mod.Collectibles.Items.JokeBook))*#mod:GetRoomEntsActive(false)
+
+        player:EvaluateItems()
+    end
+
     return {ShowAnim = true}
 end
 
 function mod:JokeBookStats(player)
     local d = player:GetData()
+
+
     if player:HasCollectible(mod.Collectibles.Items.JokeBook) then
         player.MaxFireDelay = mod:tearsUp(player.MaxFireDelay, 
-        0.5*(1+player:GetEffects():GetCollectibleEffectNum(mod.Collectibles.Items.JokeBook)))
+        AnixbirthSaveManager.GetRunSave(player).jokeBookUpNum)
     end
 end
 

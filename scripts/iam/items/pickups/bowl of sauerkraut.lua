@@ -5,7 +5,7 @@ local ms = MusicManager()
 
 mod:AddCallback(ModCallbacks.MC_POST_PICKUP_UPDATE, function(_, pickup)
     mod:BowlOfSauerkrautAI(pickup, pickup:GetSprite(), pickup:GetData())
-end, mod.Collectibles.PickupsEnt.BowlOfSauerkraut.Var)
+end, mod.Collectibles.PickupsEnt.BowlofSauerkraut.Var)
 
 mod:AddCallback(ModCallbacks.MC_PRE_PICKUP_COLLISION, function(_, pickup, collider)
     if collider.Type == 1 and collider.Variant == 0 then
@@ -15,7 +15,7 @@ mod:AddCallback(ModCallbacks.MC_PRE_PICKUP_COLLISION, function(_, pickup, collid
     else
         return true
     end
-end, mod.Collectibles.PickupsEnt.BowlOfSauerkraut.Var)
+end, mod.Collectibles.PickupsEnt.BowlofSauerkraut.Var)
 
 function mod:BowlOfSauerkrautAI(p, sprite, d)
     if not d.inut then
@@ -49,8 +49,7 @@ function mod.CollectBowlOfSauerkraut(player, pickup)
 
 
         local dat = AnixbirthSaveManager.GetRunSave(player).anixbirthsaveData
-        dat.BowlOfSauerkraut = dat.BowlOfSauerkraut or 1
-        dat.BowlOfSauerkraut = dat.BowlOfSauerkraut + 1
+        dat.BowlofSauerkraut = dat.BowlofSauerkraut + 1
 
         player:AddCacheFlags(CacheFlag.CACHE_DAMAGE)
         player:EvaluateItems()
@@ -61,15 +60,7 @@ mod:AddCallback(ModCallbacks.MC_EVALUATE_CACHE,function(_, player, flag)
 
     local dat = AnixbirthSaveManager.GetRunSave(player).anixbirthsaveData
 
-    if dat.UpdateBowlOfSauerkraut or (dat.BowlOfSauerkraut and dat.BowlOfSauerkraut > 0 and dat.BowlOfSauerkraut ~= dat.BowlOfSauerkrautOld) then
+    dat.BowlofSauerkraut = dat.BowlofSauerkraut or 0
 
-        if dat.UpdateBowlOfSauerkraut and type(dat.UpdateBowlOfSauerkraut) == "number" then
-            dat.UpdateBowlOfSauerkraut = dat.UpdateBowlOfSauerkraut + 1
-            if dat.UpdateBowlOfSauerkraut == 5 then
-                dat.UpdateBowlOfSauerkraut = nil
-            end
-        end
-        player.Damage = math.ceil(player.Damage*1000)/1000 + (0.003+(0.002*dat.BowlOfSauerkraut))*dat.BowlOfSauerkraut
-        dat.BowlOfSauerkrautOld = dat.BowlOfSauerkraut
-    end
+    player.Damage = math.ceil(player.Damage*1000)/1000 + (0.003+(0.002*dat.BowlofSauerkraut))*dat.BowlofSauerkraut
 end)
