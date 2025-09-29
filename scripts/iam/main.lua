@@ -71,7 +71,8 @@ FHAC:LoadScripts("scripts.iam.monsters", {
 	"hotpotato",
 	"stonejohnny",
 	"souwa",
-	"stoneangelstatue"
+	"stoneangelstatue",
+	"musicbox"
 })
 
 FHAC:LoadScripts("scripts.iam.minibosses", {
@@ -124,7 +125,8 @@ FHAC:LoadScripts("scripts.iam.items.passives", {
 	"letter to myself",
 	"gros michel",
 	"tums",
-	"traveler's bag"
+	"traveler's bag",
+	"unwound cassete"
 })
 
 FHAC:LoadScripts("scripts.iam.items.pickups" , {
@@ -281,6 +283,8 @@ function mod:CVS161AI(npc)
 		mod:SouwaAI(npc, npc:GetSprite(), npc:GetData())
 	elseif npc.Variant == mod.Monsters.StoneAngelStatue.Var then
 		mod:StoneAngelStatueAI(npc, npc:GetSprite(), npc:GetData())
+	elseif npc.Variant == mod.Monsters.MusicBox.Var then
+		mod:MusicBoxAI(npc, npc:GetSprite(), npc:GetData())
 	end
 end
 
@@ -1247,6 +1251,8 @@ function mod:GlobalCVSEntityStuff(npc, sprite, d)
 			sprite:LoadGraphics()
 		end
 	end
+
+	FHAC:SaveCassetteInfoNPC(npc)
 
 end
 

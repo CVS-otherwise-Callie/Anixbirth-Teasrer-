@@ -90,6 +90,33 @@ function FHAC:RenderedStuff()
 end
 FHAC:AddCallback(ModCallbacks.MC_POST_RENDER, FHAC.RenderedStuff)
 
+mod:AddCallback(ModCallbacks.MC_POST_FIRE_TEAR, function(_, tear, _, ignorePlayerEffects, isLudo) -- Regular tears
+	local player = nil
+	if not tear.SpawnerEntity then
+		return
+	elseif tear.SpawnerEntity:ToPlayer() then
+		player = tear.SpawnerEntity:ToPlayer()
+	elseif tear.SpawnerEntity:ToFamiliar() and tear.SpawnerEntity:ToFamiliar().Player then
+		local familiar = tear.SpawnerEntity:ToFamiliar()
+
+		if familiar.Variant == FamiliarVariant.INCUBUS or
+		   familiar.Variant == FamiliarVariant.SPRINKLER or
+		   familiar.Variant == FamiliarVariant.TWISTED_BABY or
+		   familiar.Variant == FamiliarVariant.BLOOD_BABY or
+		   familiar.Variant == FamiliarVariant.UMBILICAL_BABY or
+		   familiar.Variant == FamiliarVariant.CAINS_OTHER_EYE
+		then
+			player = familiar.Player
+		else
+			return
+		end
+	else
+		return
+	end
+
+    FHAC:UnwoundCasseteShot(tear, player, isLudo)
+end)
+
 function FHAC:PostNewRoom()
 
     AnixbirthSaveManager.GetRoomSave().anixbirthsaveData = AnixbirthSaveManager.GetRoomSave().anixbirthsaveData or {}
@@ -207,6 +234,7 @@ function FHAC:NPCGetHurtStuff(npc, damage, flag, source, countdown)
 	FHAC:SulfererTakeDamage(npc, damage, flag, source)
 	FHAC:embolzonTakeDamage(npc, damage, flag, source)
 	EntsNeverTakeFireDamage(npc, damage, flag, source)
+    FHAC:SetCassetteDamage(npc, damage, flag, source) 
 
     if npc.Type == 1 then
         local d = npc:GetData()

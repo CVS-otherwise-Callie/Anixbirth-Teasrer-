@@ -69,7 +69,8 @@ mod.Sounds = {
     TombstoneMove = Isaac.GetSoundIdByName("tombstone_move"),
     AltTrapdoorBang = Isaac.GetSoundIdByName("alt_trapdoor_bang"),
     SpinSound = Isaac.GetSoundIdByName("yoyaderspinsound"),
-    SpinSoundEnd = Isaac.GetSoundIdByName("yoyaderspinsoundend")
+    SpinSoundEnd = Isaac.GetSoundIdByName("yoyaderspinsoundend"),
+    MusicBoxOpen = Isaac.GetSoundIdByName("musicboxopen")
 }
 
 FHAC.Collectibles = {

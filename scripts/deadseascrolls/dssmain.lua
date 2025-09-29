@@ -320,22 +320,6 @@ FHAC.dmdirectory = {
                         tooltip = {strset = {'whats the %', 'a fortune', 'shows on', 'a enemys', 'death?','', 'out of 10'}}
                     },
                     {str = '', fsize=2,nosel = true},
-                    {str = '-----music-----', fsize=2, nosel = true},
-                    {str = '', fsize=2, nosel = true},
-                    {
-                        str = 'room music',
-                        choices = {'on', 'off'},
-                        variable = "customRoomMusic",
-                        setting = 1,
-                        load = function()
-                            return AnixbirthSaveManager.GetSettingsSave().customRoomMusic or 2
-                        end,
-                        store = function(var)
-                            AnixbirthSaveManager.GetSettingsSave().customRoomMusic = var
-                        end,
-                        tooltip = {strset = {'allow for', 'rooms music', 'replacements', '', 'off by', 'default'}}
-                    },
-                    {str = '', fsize=2,nosel = true},
                     {str = '-----misc-----', fsize=2, nosel = true},
                     {str = '', fsize=2, nosel = true},
                     {

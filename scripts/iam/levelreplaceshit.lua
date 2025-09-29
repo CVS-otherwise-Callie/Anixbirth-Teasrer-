@@ -5,7 +5,7 @@ local ms = MusicManager()
 function mod:MusicCheckCallback()
     local rDD = game:GetLevel():GetCurrentRoomDesc().Data
     local customMusicID
-    if mod.DSSavedata and mod.DSSavedata.customRoomMusic == 1 then
+    if mod.DSSavedata and mod.DSSavedata.customRoomMusic == 5 then
 
     
 

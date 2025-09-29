@@ -43,6 +43,7 @@ function mod:OGWilloWalkerNPC(npc, sprite, d)
             [[I'm the original        \YWillowalker]]
     }
     npc.CanShutDoors = false
+    d.DSSMenuSafe = true
 
     if not d.init then
         mod:SaveEntToRoom(npc, false)

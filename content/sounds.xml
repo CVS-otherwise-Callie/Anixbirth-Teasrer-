@@ -31,4 +31,7 @@
     <sound name="yoyaderspinsoundend">
         <sample weight="1" path="spinsoundend.wav"/>
     </sound>
+    <sound name="musicboxopen">
+        <sample weight="1" path="musicboxopen.wav"/>
+    </sound>
 </sounds>

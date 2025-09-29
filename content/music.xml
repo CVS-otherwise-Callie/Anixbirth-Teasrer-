@@ -9,8 +9,17 @@
         <track name="AnixbirthForsaken" path="shhh piano builds go away/This Mindless Atrocity.ogg" loop="true"/>
         <track name="AnixbirthShame" path="shhh piano builds go away/Shame.ogg" loop="true"/>
 
-        <!--Floor Music-->
-        <track name="AnixbirthBasement" path="shhh piano builds go away/AnixbirthBuild3.ogg" loop="true"/>
+        <track name="MusicBox1" path="musicbox/musicbox1.ogg" loop="false"/>
+        <track name="MusicBox2" path="musicbox/musicbox2.ogg" loop="false"/>
+        <track name="MusicBox3" path="musicbox/musicbox3.ogg" loop="false"/>
+        <track name="MusicBox4" path="musicbox/musicbox4.ogg" loop="false"/>
+        <track name="MusicBox5" path="musicbox/musicbox5.ogg" loop="false"/>
+        <track name="MusicBox6" path="musicbox/musicbox6.ogg" loop="false"/>
+        <track name="MusicBox7" path="musicbox/musicbox7.ogg" loop="false"/>
+        <track name="MusicBox8" path="musicbox/musicbox8.ogg" loop="false"/>
+        <track name="MusicBox9" path="musicbox/musicbox9.ogg" loop="false"/>
+        <track name="MusicBox10" path="musicbox/musicbox10.ogg" loop="false"/>
+        <track name="MusicBox11" path="musicbox/musicbox11.ogg" loop="false"/>
 
         <!-- Other mod Music -->
         <track name="godmodeTitle" path="mus_godmode_title.ogg" loop="true"/>

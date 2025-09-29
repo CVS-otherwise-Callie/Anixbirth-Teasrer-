@@ -8,6 +8,25 @@ mod:AddCallback(ModCallbacks.MC_POST_EFFECT_UPDATE, function(_, effect)
     end
 end)
 
+local function split(pString, pPattern) --thanks ff
+    local Table = {}  -- NOTE: use {n = 0} in Lua-5.0
+    local fpat = "(.-)" .. pPattern
+    local last_end = 1
+    local s, e, cap = pString:find(fpat, 1)
+    while s do
+       if s ~= 1 or cap ~= "" then
+      table.insert(Table,cap)
+       end
+       last_end = e+1
+       s, e, cap = pString:find(fpat, last_end)
+    end
+    if last_end <= #pString then
+       cap = pString:sub(last_end)
+       table.insert(Table, cap)
+    end
+    return Table
+end
+
 function mod:TextBoxNPCAI(ef, sprite, d)
 
     if not d.init then
@@ -56,6 +75,8 @@ are cool
         end
     end
 
+    d.parNum = d.parNum or 1
+
 
     if d.state == "idletalking" then
         if d.text then
@@ -67,12 +88,14 @@ are cool
             end
 
             if not d.textBox then
-                d.textBox = mod:DrawDialougeTalk(d.text, Isaac.WorldToScreen(ef.Position - Vector(xAnch, 90)), d.stats or {rate = 3, senCap = 15, anchor = d.anchor})
+                d.textBox = mod:DrawDialougeTalk(mod:GetStringPars(d.text, 3)[d.parNum], Isaac.WorldToScreen(ef.Position - Vector(xAnch, 90)), d.stats or {rate = 3, senCap = 15, anchor = d.anchor})
             end
 
             if d.textBox.isFinished then
                 d.textBox = nil
-
+                if d.parNum < #mod:GetStringPars(d.text, 3) then
+                    d.parNum = d.parNum + 1
+                end
                 d.state = "closing"
             end
 
@@ -99,4 +122,6 @@ function mod:NPCDialouge(text, position, stats, npc)
     textbox:GetData().stats = stats or {}
     textbox:GetData().removeonDeath = true
     textbox:GetData().state = "opening"
+
+    return textbox
 end

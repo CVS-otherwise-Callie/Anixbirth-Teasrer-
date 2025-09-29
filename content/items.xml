@@ -6,6 +6,7 @@
     <passive id="5" name="Letter To Myself" gfx="005_lettertomyself.png" description="See me soon" quality="2"/>
     <passive id="6" name="Tums" gfx="006_tums.png" description="No more heartburn!" quality="2"/>
     <passive id="7" name="Traveler's Bag" gfx="007_travalersbag.png" description="Lots of space..." quality="4"/>
+    <passive id="8" name="Unwound Cassete" gfx="008_unwoundcassete.png" description="Darn it…" quality="2"/>
 
     <passive id="20" name="Gros Michel" gfx="020_grosmichel.png" description="JUST [extinct!] ALREADY PLEASEEEEE" quality="3" cache="damage"/>
 

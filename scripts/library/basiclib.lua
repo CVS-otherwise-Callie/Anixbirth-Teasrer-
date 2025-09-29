@@ -23,6 +23,15 @@ function mod:MixTables(input, table)
     end
 end
 
+function mod:IsTableEmpty(tab)
+	for k, v in ipairs(tab) do
+		if v then
+			return false
+		end
+	end
+	return true
+end
+
 function mod:spritePlay(sprite, anim)
 	if not sprite:IsPlaying(anim) then
 		sprite:Play(anim)

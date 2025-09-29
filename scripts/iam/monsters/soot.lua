@@ -9,11 +9,14 @@ function mod:SootAI(npc, sprite, d)
     local path = npc.Pathfinder
     local room = game:GetRoom()
 
-    npc.SplatColor = FHAC.Color.Charred
+    npc.SplatColor = mod.Color.Charred
 
     if not d.init then
-        sprite:PlayOverlay("Eyes")
         d.state = "idle"
+        d.number = math.random(1, 6)
+        d.trueRotation = Vector(math.random(-1, 1), math.random(-1, 1))
+        d.falseRotation = math.random(0, 360)
+        d.shouldFlipAnyway = math.random(1, 2)
         d.init = true
     else
         npc.StateFrame = npc.StateFrame + 1
@@ -24,7 +27,7 @@ function mod:SootAI(npc, sprite, d)
         path:MoveRandomly(false)
         npc:MultiplyFriction(0.65+(0.016))
 
-        mod:spritePlay(sprite, "Idle")
+        mod:spritePlay(sprite, "Idle" .. tostring(d.number))
         if npc.StateFrame > math.random(15, 20) then
             if math.random(0, 2) > 1 then
                 d.newpos = targetpos
@@ -32,7 +35,7 @@ function mod:SootAI(npc, sprite, d)
                 d.newpos = mod:freeGrid(npc, false, 300, 200) or mod:freeHole(npc, false, 300, 0)
             end
             d.rot = (targetpos - npc.Position):GetAngleDegrees()
-            mod:spritePlay(sprite, "Move")
+            mod:spritePlay(sprite, "Move" .. tostring(d.number))
             d.state = nil
         end
     end
@@ -53,14 +56,45 @@ function mod:SootAI(npc, sprite, d)
         d.state = nil
     end
 
+    if d.shouldFlipAnyway == 1 then
+        sprite.FlipX = true
+    else
+        sprite.FlipX = false
+    end
+
+    sprite.Scale = sprite.Scale * d.trueRotation
+    --sprite.Rotation = d.falseRotation
+
     if sprite:IsEventTriggered("Move") then
         d.state = "move"
     end
 
-    if sprite:IsFinished("Move") then
+    if sprite:IsFinished("Move" .. tostring(d.number)) then
         d.state = "idle"
         npc.StateFrame = 0
     end
 
 end
 
+mod:AddCallback(ModCallbacks.MC_POST_NPC_RENDER, function(_, npc)
+
+    if npc.Type == mod.Monsters.Soot.ID and npc.Variant == mod.Monsters.Soot.Var then
+        
+        local d = npc:GetData()
+
+        d.eyesVec = d.eyesVec or Vector(math.random(-1, 1), math.random(-1, 1))
+        d.eyessprite = d.eyessprite or math.random(0, 1)
+
+        local s = Sprite()
+
+        s:Load("gfx/monsters/soot/soot.anm2", true)
+        s:Play("Eyes", true)
+        s:SetFrame(d.eyessprite)
+
+        s:Render(Isaac.WorldToScreen(npc.Position))
+
+        s.Scale = s.Scale * d.eyesVec
+
+    end
+
+end)

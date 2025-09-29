@@ -24,6 +24,8 @@
 -- font (font) Changes the dialogue font.
 
 --- NPC Constants that you can use in your function:
+-- Current Dialouge Table (data.curDia)
+-- Current Sub Table (data.subTable)
 -- Current Paragraph (data.curPar)
 -- Current Sentance (data.curSen)
 -- isTalking (boolean)
@@ -41,30 +43,30 @@ local dialogue = {
         animation = "gfx/npcs/ruin/skeletons/skeletons.anm2",
         initAnim = "Hiding",
         Dia1 = {
-            {
-                [========[
-                Hi guys
-                Im cool
-                ]========]
-            },
-            {
-                [========[
-                In this
-                one case
-                i am going
-                to go off
-                and say a ton
-                hehe
-                ]========]
-            },
+        
+            [========[
+            Hi guys
+            Im cool
+            ]========]
+        ,
+        
+            [========[
+            In this
+            one case
+            i am going
+            to go off
+            and say a ton
+            hehe
+            ]========]
+        ,
         },
         Dia2 = {
-            {  
-                [========[
-                Wow a
-                Second thing
-                ]========]
-            }
+             
+            [========[
+            Wow a
+            Second thing
+            ]========]
+        
         },
         func = function(npc)
             local player = npc:GetPlayerTarget()

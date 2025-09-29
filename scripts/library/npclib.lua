@@ -71,9 +71,8 @@ end
 
 function mod.onNPCTouch(entity, fn)
 	mod:AddCallback(ModCallbacks.MC_POST_PEFFECT_UPDATE, function(_, p)
-		for _, ent in ipairs(mod.NPCS) do
-			if ent.ID == entity.Type and entity.Variant == ent.Var then
-				for _, i in  ipairs(Isaac.FindByType(ent.ID, entity.Variant)) do
+			if mod.NPCS[entity] then
+				for _, i in  ipairs(Isaac.FindByType(mod.NPCS[entity].ID, mod.NPCS[entity].Var)) do
 					if i:GetData().sizeMulti then
 						if (math.abs(i.Position.X-p.Position.X) ^ 2 <= (i.Size*i.SizeMulti.X + p.Size) ^ 2) and (math.abs(i.Position.Y-p.Position.Y) ^ 2 <= (i.Size*i.SizeMulti.Y + p.Size) ^ 2) then
 							fn(p, i)
@@ -85,7 +84,6 @@ function mod.onNPCTouch(entity, fn)
 					end
 				end	
 			end
-		end
 	end)
 end
 
@@ -195,10 +193,34 @@ function mod:GetTextBoxTables(str, sentanceCap, paragrpahCap)
 		curParagraph = {}
 	end
 
-	table.insert(curParagraph, senTab)
-	table.insert(parTab, curParagraph)
+	if not (#curParagraph == 0) then
+		table.insert(curParagraph, senTab)
+		table.insert(parTab, curParagraph)
+	end
 
 	return parTab
+end
+
+function mod:GetStringPars(str, sentanceCap) 
+
+	local elTab = split(str, "\n")
+	local parsTab = {}
+	local curSen = ""
+
+	for rep = 1, #elTab do
+		curSen = curSen .. "\n" .. elTab[rep]
+		if rep%sentanceCap == 0 then
+			table.insert(parsTab, curSen)
+			curSen = ""
+		end
+	end
+
+	if #elTab%sentanceCap ~= 0 then
+		table.insert(parsTab, curSen)
+	end
+
+	return parsTab
+
 end
 
 function mod:DrawDialougeTalk(text, position, stats) -- time in seconds, rate in milliseconds
