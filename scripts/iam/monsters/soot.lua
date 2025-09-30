@@ -9,7 +9,7 @@ function mod:SootAI(npc, sprite, d)
     local path = npc.Pathfinder
     local room = game:GetRoom()
 
-    npc.SplatColor = mod.Color.Charred
+    npc.SplatColor = mod.Color.Invisible
 
     if not d.init then
         d.state = "idle"
@@ -72,6 +72,15 @@ function mod:SootAI(npc, sprite, d)
     if sprite:IsFinished("Move" .. tostring(d.number)) then
         d.state = "idle"
         npc.StateFrame = 0
+    end
+
+    if npc:IsDead() then
+        local ef = Isaac.Spawn(EntityType.ENTITY_EFFECT, EffectVariant.DUST_CLOUD, -1, npc.Position + Vector(0, -10),Vector.Zero, nil):ToEffect()
+        ef:SetTimeout(10)
+        ef.SpriteScale = Vector(0.07,0.07)
+        ef:Update()
+        ef.Color = Color(0.1, 0.1, 0.1, 1)
+        ef:ClearEntityFlags(EntityFlag.FLAG_APPEAR)
     end
 
 end

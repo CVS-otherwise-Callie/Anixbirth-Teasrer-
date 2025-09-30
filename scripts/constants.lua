@@ -85,7 +85,8 @@ FHAC.Grids = {
         Basement = "gfx/grid/pit_basement.png",
         Catacombs = "gfx/grid/pit_catacombs.png"
     },
-    GlobalGridSpawner = mod:ENT("HOPE Grid Spawner")
+    GlobalGridSpawner = mod:ENT("HOPE Grid Spawner"),
+    GlobalPoopSpawner = mod:ENT("HOPE Poop Spawner")
 }
 
 -----------------------------------------------------------------------------------------------------------------------
