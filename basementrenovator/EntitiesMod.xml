@@ -254,7 +254,6 @@ Use 2, 4, or 6 normally.
 	</group>
 
 	<group Name="HOPE Grid Objects Poop">
-		<entity Name="Soot Pile" />
 	</group>
 
 	<group Name="HOPE Chapter 1 Enemies" Label="Chapter 1 Shared">
