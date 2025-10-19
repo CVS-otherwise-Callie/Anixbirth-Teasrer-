@@ -74,13 +74,13 @@ local function AngelStatueAngel(npc, sprite, d)
 end
 
 mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
-    if npc.Type == 271 or npc.Type == 272 and npc:GetData().isAngelStatue then
+    if npc.Type == 271 or npc.Type == 272 and npc:GetData().isAngelStatue == true then
         AngelStatueAngel(npc, npc:GetSprite(), npc:GetData()) 
     end
 end)
 
 mod:AddCallback(ModCallbacks.MC_PRE_NPC_COLLISION, function(_, npc, coll, bool)
-    if npc.Type == 271 or npc.Type == 272 and npc:GetData().isAngelStatue then
+    if npc.Type == 271 or npc.Type == 272 and npc:GetData().isAngelStatue == true then
         return true
     end 
 end)
