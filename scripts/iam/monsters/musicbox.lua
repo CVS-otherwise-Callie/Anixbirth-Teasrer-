@@ -10,18 +10,20 @@ local times = {
     [4] = 10,
     [5] = 17,
     [6] = 15, 
-    [7] = 14, 
-    [8] = 14,
+    [7] = 17, 
+    [8] = 15,
     [9] = 15,
     [10] = 31,
     [11] = 8
 }
 
 local enemyStats = {
-    state = "play"
+    state = "idle"
 }
 
 function mod:MusicBoxAI(npc, sprite, d)
+
+    npc:MultiplyFriction(0.1)
 
     if not d.init then
         for name, stat in pairs(enemyStats) do
@@ -34,18 +36,17 @@ function mod:MusicBoxAI(npc, sprite, d)
 
     mod.MusicBoxOldSoundOp = mod.MusicBoxOldSoundOp or Options.MusicVolume
 
-    Options.MusicVolume = 1.0
-
     AnixbirthSaveManager.GetPersistentSave().anixbirthMusicBoxProgression = AnixbirthSaveManager.GetPersistentSave().anixbirthMusicBoxProgression or 1
 
     local s = AnixbirthSaveManager.GetPersistentSave().anixbirthMusicBoxProgression
 
-    if s >= 11 then
+    if s >= 11 and not d.init then
         npc:ClearEntityFlags(EntityFlag.FLAG_APPEAR)
         npc:Remove()
-        Isaac.DebugString("hihihihihihi")
         return
     end
+
+    d.init = true
 
     if d.state == "play" then
 
@@ -58,13 +59,12 @@ function mod:MusicBoxAI(npc, sprite, d)
             if not sprite:IsPlaying("Play") then
                 AnixbirthSaveManager.GetPersistentSave().anixbirthMusicBoxProgression = AnixbirthSaveManager.GetPersistentSave().anixbirthMusicBoxProgression + 1
                 mod:spritePlay(sprite, "Play")
-                ms:Play(Isaac.GetMusicIdByName("MusicBox" .. tostring(tonumber(s)+1)), 0)
+                ms:Crossfade(Isaac.GetMusicIdByName("MusicBox" .. tostring(tonumber(s)+1)), 0.08)
             end
 
             if s > 1 and (game.TimeCounter - d.timer) > (times[s]*30) then
             	Isaac.Explode(npc.Position, npc, 10)
                 npc:Remove()
-                Options.MusicVolume = mod.MusicBoxOldSoundOp
             end
         end
     end
@@ -75,11 +75,10 @@ function mod:MusicBoxAI(npc, sprite, d)
 
 end
 
-function mod.MusicBoxAICOllect(player, pickup)
-    local sprite = pickup:GetSprite()
-    if sprite:WasEventTriggered("DropSound") or sprite:IsPlaying("Idle") then
-        pickup.Touched = true
-        pickup:GetData().state = "play"
-    end
-end
-
+mod:AddCallback(ModCallbacks.MC_POST_PEFFECT_UPDATE, function(_, p)
+    for _, i in ipairs(Isaac.FindByType(mod.Monsters.MusicBox.ID,mod.Monsters.MusicBox.Var)) do
+        if i.Position:DistanceSquared(p.Position) <= (i.Size + p.Size) ^ 2 then
+            i:GetData().state = "play"
+        end
+    end	
+end)
