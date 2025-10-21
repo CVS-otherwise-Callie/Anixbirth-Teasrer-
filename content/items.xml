@@ -9,6 +9,7 @@
     <passive id="8" name="Unwound Cassete" gfx="008_unwoundcassete.png" description="Darn it…" quality="2"/>
 
     <passive id="20" name="Gros Michel" gfx="020_grosmichel.png" description="JUST [extinct!] ALREADY PLEASEEEEE" quality="3" cache="damage"/>
+    <passive id="99" name="Money = Please-let-me-into-epiphany" gfx="099_moneyequalsletmeintoepiphany.png" description="Sorry for the wait..." quality="0" cache="damage" />
 
     <!--Actives are 100+-->
     <active id="100" name="Joke Book" gfx="100_joke_book.png" description="Xocolate's finest" quality="1" maxcharges="2" cache="firedelay" />
