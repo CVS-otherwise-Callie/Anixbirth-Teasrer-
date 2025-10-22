@@ -134,9 +134,8 @@ for i = 1, XMLData.GetNumEntries(XMLNode.ITEM) do
     if entry.sourceid == "3167715373" then --anixbirth specific
 		local name = entry.name
 		for _ = 1, #entry.name do
-			name = mod:gsubMany(name, " ", "'", "")
+			name = mod:gsubMany(name, " ", "'", "-", "=")
 		end
-        print(name)
         if entry.type == "passive" or entry.type == "active" then
             FHAC.Collectibles.Items[tostring(name)] = tonumber(entry.id)
         elseif entry.type == "familiar" then
