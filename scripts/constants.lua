@@ -136,7 +136,10 @@ for i = 1, XMLData.GetNumEntries(XMLNode.ITEM) do
 		for _ = 1, #entry.name do
 			name = mod:removeSubstring(tostring(name), " ")
 			name = mod:removeSubstring(tostring(name), "'")
+            name = name:gsub('-', '')
+            name = name:gsub('=', '')
 		end
+        print(name)
         if entry.type == "passive" or entry.type == "active" then
             FHAC.Collectibles.Items[tostring(name)] = tonumber(entry.id)
         elseif entry.type == "familiar" then

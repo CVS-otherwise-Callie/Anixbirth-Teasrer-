@@ -156,6 +156,19 @@ function mod:removeSubstring(str, substr)
     return str
 end
 
+function mod:gsubMany(string, ...)
+
+  local words = {...}
+
+  for i = 1, #words do
+    if type(words[i]) == "string" then
+      string = string:gsub(words[i], '')
+    end
+  end
+
+  return string 
+end
+
 -- i had no idea how to set up a registered callback to be set up later unitl fiend folio, thank yall ^-^
 
 mod.funcs = {}

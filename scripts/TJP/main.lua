@@ -24,6 +24,10 @@ FHAC:LoadScripts("scripts.TJP.bosses", {
     "jump"
 })
 
+FHAC:LoadScripts("scripts.TJP.items.passives", {
+    "moneyequalsletmeintoepiphany",
+})
+
 FHAC:LoadScripts("scripts.TJP.effects", {
 	"clatterteller_target",
     "ogwillowalkerbox",
