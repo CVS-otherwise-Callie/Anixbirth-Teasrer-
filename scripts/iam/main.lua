@@ -126,7 +126,8 @@ FHAC:LoadScripts("scripts.iam.items.passives", {
 	"gros michel",
 	"tums",
 	"traveler's bag",
-	"unwound cassete"
+	"unwound cassete",
+	"bawled reef"
 })
 
 FHAC:LoadScripts("scripts.iam.items.pickups" , {
@@ -140,6 +141,10 @@ FHAC:LoadScripts("scripts.iam.jokes", {
 
 FHAC:LoadScripts("scripts.iam.projectiles", {
 	"ember_proj",
+})
+
+FHAC:LoadScripts("scripts.iam.tears", {
+	"coralshard",
 })
 
 FHAC:LoadScripts("scripts.iam.characters", {
@@ -289,6 +294,20 @@ function mod:CVS161AI(npc)
 end
 
 mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, mod.CVS161AI, 161)
+
+function mod:CVSTearAI(tear)
+
+	local sprite = tear:GetSprite()
+	local d = tear:GetData()
+
+	local var = tear.Variant
+
+	if var == mod.Tears.CoralShardTear.Var then
+		FHAC:CoralTearRenderAI(tear, sprite, d)
+	end
+end
+
+mod:AddCallback(ModCallbacks.MC_POST_TEAR_RENDER, mod.CVSTearAI)
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 local rng = RNG()

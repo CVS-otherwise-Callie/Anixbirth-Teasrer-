@@ -129,7 +129,7 @@ function mod:StoneJohnnyAI(npc, sprite, d)
             path:FindGridPath(targetpos, 0.6, 1, true)
         end
 
-        if d.fullness < 30 then
+        if d.fullness < 30 and d.waitOffset > -50 then
             d.state = "findrain"
         end
     else
@@ -145,6 +145,7 @@ function mod:StoneJohnnyAI(npc, sprite, d)
     if sprite:IsOverlayFinished() and string.find(sprite:GetOverlayAnimation(), "UnderRainFillUpTransition") then
         d.finishedTransition = true
     elseif sprite:IsOverlayFinished() and string.find(sprite:GetOverlayAnimation(), "UnderRainFillDownTransition") then
+        d.waitOffset = math.max(d.waitOffset - 10, -70)
         d.state = "chase"
     end
 
@@ -169,18 +170,25 @@ mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, function(_, npc, damage, flag, 
         local target = npc:ToNPC():GetPlayerTarget()
         local targetpos = mod:confusePos(npc, target.Position, 5, nil, nil)
 
+        if (npc:GetData().fullness - damage) < 0 then
+            npc:Kill()
+        end
+
         local amt = damage
         if damage > amt then
             amt = 10
         end
         for i = 1, math.random(math.ceil(amt)) do
             npc:GetData().fullness = npc:GetData().fullness - 2
-            local realshot = Isaac.Spawn(9, ProjectileVariant.PROJECTILE_TEAR, 0, npc.Position, Vector(8, 0):Rotated((targetpos - npc.Position):GetAngleDegrees() + math.random(1, 5)*(i-0.7)*10), npc):ToProjectile()
-            realshot.FallingAccel = 0.3
-            realshot.Height = -30
+            local realshot = Isaac.Spawn(9, ProjectileVariant.PROJECTILE_TEAR, 0, npc.Position, Vector(5, 0):Rotated((targetpos - npc.Position):GetAngleDegrees() + math.random(1, 5)*(i-0.7)*10), npc):ToProjectile()
+            realshot.Height = -5
+            realshot.FallingSpeed = -20
+            realshot.FallingAccel = 1
+            realshot:Update()
+            realshot.Scale = math.random(30, 70)/100
             realshot:AddProjectileFlags(ProjectileFlags.BOUNCE_FLOOR)
         end
-        return false    
+        return false 
     end
 end, mod.Monsters.StoneJohnny.ID )
 

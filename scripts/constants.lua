@@ -52,6 +52,9 @@ FHAC.Effects = {
 FHAC.NPCS = {
 }
 
+FHAC.Tears = {
+}
+
 FHAC.Jokes = {
     Gaperrr = mod:ENT("A gaper w/ three legs, why did we do this"),
     Willowalker = FHAC:ENT("Willowalker")
@@ -77,7 +80,8 @@ FHAC.Collectibles = {
     Items = {},
     PickupsEnt = {},
     Pickups = {},
-    Trinkets = {}
+    Trinkets = {},
+    Null = {}
 }
 
 FHAC.Grids = {
@@ -113,6 +117,8 @@ for i = 1, XMLData.GetNumEntries(XMLNode.ENTITY) do
 
 		if CheckForTag(entry, "npc") then
 			FHAC.NPCS[tostring(name)] = stats
+        elseif tonumber(entry.type) == 2 then
+            FHAC.Tears[tostring(name)] = stats
         elseif tonumber(entry.type) == 5 then
             FHAC.Collectibles.PickupsEnt[tostring(name)] = stats
 		elseif tonumber(entry.type) == 1000 then
@@ -140,7 +146,21 @@ for i = 1, XMLData.GetNumEntries(XMLNode.ITEM) do
             FHAC.Collectibles.Items[tostring(name)] = tonumber(entry.id)
         elseif entry.type == "familiar" then
             FHAC.Collectibles.Items[tostring(name)] = tonumber(entry.id)
+        elseif entry.type == "null" then
+            FHAC.Collectibles.Null[tostring(name)] = tonumber(entry.id)
         end
+	end
+end
+
+for i = 1, XMLData.GetNumEntries(XMLNode.NULLITEM) do
+    local entry = XMLData.GetEntryByOrder(XMLNode.NULLITEM, i)
+    if entry.sourceid == "3167715373" then --anixbirth specific
+		local name = entry.name
+		for _ = 1, #entry.name do
+			name = mod:gsubMany(name, " ", "'", "-", "=")
+		end
+        print(name, entry.id)
+        FHAC.Collectibles.Null[tostring(name)] = tonumber(entry.id)
 	end
 end
 

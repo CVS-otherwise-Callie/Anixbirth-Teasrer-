@@ -371,7 +371,10 @@ function mod:LarryKingJrAI(npc, sprite, d)
 
         if #GetDipsWithSameDataLarry(npc) <= 2 then
 
-            if npc.StateFrame > (100) and d.state == "Moving" and (d.butts[#d.butts].FrameCount - d.butts[#d.butts]:GetData().MoveDelay) > 10*#d.butts then
+            if npc.StateFrame > (100) and d.state == "Moving" and
+            (d.butts[#d.butts].FrameCount - 
+            d.butts[#d.butts]:GetData().MoveDelay) > 
+            10*#d.butts then
                 d.state = "BunchedUp"
                 d.extraNum = 0
             end

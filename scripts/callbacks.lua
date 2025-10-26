@@ -161,6 +161,7 @@ function FHAC:PostPlayerUpdate(player)
     FHAC:PostUpdateRemoveTempItems(player)
     FHAC:MysteryMilkRoomInit(player)
     FHAC:StinkySocksPoisonCloud(player)
+    FHAC:BawledReefPlayerAI(player)
 end
 FHAC:AddCallback(ModCallbacks.MC_POST_PLAYER_UPDATE, FHAC.PostPlayerUpdate)
 
@@ -239,6 +240,7 @@ function FHAC:NPCGetHurtStuff(npc, damage, flag, source, countdown)
         local d = npc:GetData()
 
         d.ColorectalCancerCreepInit = false
+        FHAC:PlayerCoralCheck(npc)
         FHAC:StrawDollPassive(npc)
     end
 

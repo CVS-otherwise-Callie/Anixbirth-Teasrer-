@@ -198,7 +198,7 @@ Use 2, 4, or 6 normally.
 <entity ID="161" Variant="535" Name="Clatter Teller" Image="mah boys/clatter teller.png" BaseHP="40" StageHP="3"/>
 <entity ID="161" Variant="537" Name="Dekatessera" Image="mah boys/dekatessera.png" BaseHP="24" StageHP="3" Tags="Champion"/>
 <entity ID="161" Variant="564" Name="Mutilated" Image="mah boys/mutilated.png" BaseHP="30" StageHP="3" Tags="Champion"/>
-<!--162-->
+<!--135-->
 <entity ID="135" Metadata="1" Image="grids/lightpressureplate.png" Name="Light Pressure Plate" Subtype="0" Variant="2900" Group="Stage"/>
 <entity ID="134" Metadata="1" Image="grids/sootpile.png" Name="Soot Pile" Subtype="0" Variant="2900" Group="Stage"/>
 <entity ID="753" Metadata="1" Image="grids/breakablepotbasement.png" Name="Breakable Pot" Subtype="0" Variant="950" Group="Stage">

@@ -2576,10 +2576,10 @@
 			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
 		</spawn>
 		<spawn x="4" y="3">
-			<entity type="162" variant="2900" subtype="0" weight="1.0"/>
+			<entity type="135" variant="2900" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="8" y="3">
-			<entity type="162" variant="2900" subtype="0" weight="1.0"/>
+			<entity type="135" variant="2900" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="4" y="4">
 			<entity type="1901" variant="0" subtype="0" weight="1.0"/>
