@@ -235,7 +235,6 @@ function FHAC:NPCGetHurtStuff(npc, damage, flag, source, countdown)
 	FHAC:embolzonTakeDamage(npc, damage, flag, source)
 	EntsNeverTakeFireDamage(npc, damage, flag, source)
     FHAC:SetCassetteDamage(npc, damage, flag, source) 
-
     if npc.Type == 1 then
         local d = npc:GetData()
 

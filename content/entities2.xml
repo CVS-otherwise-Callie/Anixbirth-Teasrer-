@@ -588,7 +588,7 @@
     </entity>
 
     <!--Alt - Downpour-->
-    <entity anm2path="monsters/stonejohhny/stonejohhny.anm2" hasFloorAlts="false" reroll="true" baseHP="14" boss="0" champion="1" collisionDamage="1" collisionMass="5" collisionRadius="13" friction="1" id="161" name="Stone Johnny" numGridCollisionPoints="12" shadowSize="14" stageHP="0" variant="109" portrait="1">
+    <entity anm2path="monsters/stonejohnny/stonejohnny.anm2" hasFloorAlts="false" reroll="true" baseHP="14" boss="0" champion="1" collisionDamage="1" collisionMass="5" collisionRadius="13" friction="1" id="161" name="Stone Johnny" numGridCollisionPoints="12" shadowSize="14" stageHP="0" variant="109" portrait="1">
 		<bestiary transform="0,0,1" anim="WalkVert" />
         <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
     </entity>
