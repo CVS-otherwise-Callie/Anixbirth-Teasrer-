@@ -303,11 +303,11 @@ function mod:CVSTearAI(tear)
 	local var = tear.Variant
 
 	if var == mod.Tears.CoralShardTear.Var then
-		FHAC:CoralTearRenderAI(tear, sprite, d)
+		FHAC:CoralTearAI(tear, sprite, d)
 	end
 end
 
-mod:AddCallback(ModCallbacks.MC_POST_TEAR_RENDER, mod.CVSTearAI)
+mod:AddCallback(ModCallbacks.MC_POST_TEAR_UPDATE, mod.CVSTearAI)
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 local rng = RNG()
