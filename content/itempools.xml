@@ -1,9 +1,9 @@
 <ItemPools>
 <!--keep this in mind: The amount on how often an item will be in the itempool is determined with the following equation: math.ceil( ( Weight - RemoveOn ) / DecreaseBy )-->
 	<Pool Name="treasure">
-		<Item Name="Joke Book" Weight="2" DecreaseBy="1" RemoveOn="0.1"/>
-		<Item Name="Stinky Mushroom" Weight="3" DecreaseBy="1" RemoveOn="0.1"/>
-		<Item Name="Marketable Plushie" Weight="2" DecreaseBy="1" RemoveOn="0.1"/>
+		<Item Name="Joke Book" Weight="1" DecreaseBy="1" RemoveOn="0.1"/>
+		<Item Name="Stinky Mushroom" Weight="1" DecreaseBy="1" RemoveOn="0.1"/>
+		<Item Name="Marketable Plushie" Weight="1" DecreaseBy="1" RemoveOn="0.1"/>
 		<Item Name="The Bell" Weight="0.1" DecreaseBy="1" RemoveOn="0.1"/>
 		<Item Name="Lil Ana" Weight="1" DecreaseBy="1" RemoveOn="0.1"/>
 	</Pool>

@@ -14,7 +14,7 @@ mod.AddItemCallback(function(p, added)
 	player:AddHearts(2)
 	ms:Play(Isaac.GetMusicIdByName("albuquerque"), 1)
 	for i = 1, math.random(2) do
-		Isaac.Spawn(mod.Collectibles.PickupsEnt.BowlOfSauerkraut.ID, mod.Collectibles.PickupsEnt.BowlOfSauerkraut.Var, 0, Game():GetRoom():FindFreePickupSpawnPosition(player.Position, 5, true, false), Vector.Zero, player)
+		Isaac.Spawn(mod.Collectibles.PickupsEnt.BowlofSauerkraut.ID, mod.Collectibles.PickupsEnt.BowlofSauerkraut.Var, 0, Game():GetRoom():FindFreePickupSpawnPosition(player.Position, 5, true, false), Vector.Zero, player)
 	end
 end, nil, mod.Collectibles.Items.BigOlBowlofSauerkraut)
 
@@ -23,7 +23,7 @@ function mod:BigOlBowlOfSauerkrautSpawn()
 		local player = Isaac.GetPlayer(i)
 		if not player:HasCollectible(mod.Collectibles.Items.BigOlBowlofSauerkraut) or game:GetRoom():IsClear() then return end
 		for j = 1, math.random(2*player:GetCollectibleNum(mod.Collectibles.Items.BigOlBowlofSauerkraut, false, false)) do
-			Isaac.Spawn(mod.Collectibles.PickupsEnt.BowlOfSauerkraut.ID, mod.Collectibles.PickupsEnt.BowlOfSauerkraut.Var, 0, Game():GetRoom():FindFreePickupSpawnPosition(mod:freeGrid(player, true, 200, 100), 5, true, false), Vector.Zero, player)
+			Isaac.Spawn(mod.Collectibles.PickupsEnt.BowlofSauerkraut.ID, mod.Collectibles.PickupsEnt.BowlofSauerkraut.Var, 0, Game():GetRoom():FindFreePickupSpawnPosition(mod:freeGrid(player, true, 200, 100), 5, true, false), Vector.Zero, player)
 		end
 	end
 end

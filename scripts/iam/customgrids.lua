@@ -28,6 +28,17 @@ FHAC.AltHomeTrapDoorUnlock = StageAPI.CustomGrid("FHACAltHomeTrapDoorUnlock", {
     SpawnerEntity = {Type = FHAC.Grids.GlobalGridSpawner.ID, Variant = 2901}
 })
 
+FHAC.SootPoop = StageAPI.CustomGrid("FHACSootPoop", {
+    BaseType = GridEntityType.GRID_POOP,
+    Anm2 = "gfx/grid/sootnest/sootnest.anm2",
+    Animation = "State1",
+    OverrideGridSpawns = true,
+    RemoveOnAnm2Change = true,
+    PoopExplosionColor = mod.Color.Invisible,
+    PoopGibSheet = "gfx/grid/sootnest/grid_sootnest_gibs.png",
+    SpawnerEntity = {Type = FHAC.Grids.GlobalPoopSpawner.ID, Variant = 2900}
+})
+
 function mod.lightpressurePlateAI(customGrid)
     local grid = customGrid.GridEntity
     local sprite = grid:GetSprite()
@@ -200,6 +211,54 @@ function mod.lightpressurePlateAIPost(customGrid)
         end
     end
 
+end
+
+function mod.SootPoopAI(customGrid)
+
+    local grid = customGrid.GridEntity
+
+    local sprite = grid:GetSprite()
+
+    local d = customGrid.PersistentData
+
+    if grid.State > 750 then
+        sprite:SetFrame("Still4", 4)
+    elseif grid.State > 500 then
+        mod:spritePlay(sprite, "State3")
+    elseif grid.State >= 250 then
+        mod:spritePlay(sprite, "State2")
+    else
+        sprite:SetFrame("Still1", 4)
+    end
+
+    d.st = d.st or grid.State
+
+    if grid.State ~= d.st then
+        d.st = grid.State
+        for i = 1, math.random(3, 5) do
+            local ef = Isaac.Spawn(EntityType.ENTITY_EFFECT, EffectVariant.DUST_CLOUD, -1, customGrid.Position + Vector(math.random(-25, 25), 10),Vector.Zero, nil):ToEffect()
+            ef:SetTimeout(50)
+            ef.SpriteScale = Vector(0.05,0.05)
+            ef:Update()
+            ef.Color = Color(0.1, 0.1, 0.1, 0.4)
+        end
+        Isaac.Spawn(mod.Monsters.Soot.ID, mod.Monsters.Soot.Var, 0, customGrid.Position, Vector(2, 0):Rotated(math.random(1, 360)), nil)
+    end
+
+end
+
+function mod.SootGridKill(customGrid)
+    local pos = customGrid.Position
+    local rng = customGrid.RNG
+    local rollchances = 6
+    local spawns = rng:RandomInt(rollchances)
+
+    if spawns == 6 then
+    elseif spawns > 2 then
+        for i = 1, math.random(1, 3) do
+            Isaac.Spawn(mod.Monsters.Soot.ID, mod.Monsters.Soot.Var, 0, pos, Vector(2, 0):Rotated(math.random(1, 360)), nil)
+        end
+    end
 end
 
 -- allows stoners to activate StageAPI pressure plates --
@@ -459,3 +518,5 @@ StageAPI.AddCallback("FHAC", "POST_CUSTOM_GRID_UPDATE", 1, mod.lightpressurePlat
 StageAPI.AddCallback("FHAC", "POST_CUSTOM_GRID_UPDATE", 1, mod.AltHomeTrapDoorUnlock, "FHACAltHomeTrapDoorUnlock")
 StageAPI.AddCallback("FHAC", "POST_SPAWN_CUSTOM_GRID", 1, mod.lightpressurePlateAIPost, "FHACLightPressurePlate")
 --StageAPI.AddCallback("FHAC", "POST_SPAWN_CUSTOM_GRID", 1, mod.AltHomeTrapDoorUnlockPost, "FHACAltHomeTrapDoorUnlock")
+StageAPI.AddCallback("FHAC", "POST_CUSTOM_GRID_UPDATE", 1, mod.SootPoopAI, "FHACSootPoop")
+StageAPI.AddCallback("FHAC", "POST_CUSTOM_GRID_DESTROY", 1, mod.SootGridKill, "FHACSootPoop")

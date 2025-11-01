@@ -130,6 +130,7 @@ Up to groups of 3.
 <entity ID="161" Variant="91" Name="Schmoot" Image="mah boys/schmoot.png" BaseHP="16" Tags="Champion"/>
 <entity ID="161" Variant="97" Name="Lil' Flash" Image="mah boys/lilflash.png" BaseHP="7" Tags="Champion"/>
 <entity ID="161" Variant="101" Name="Soot" Image="mah boys/soot.png" BaseHP="3"/>
+<entity ID="161" Variant="108" Name="Spaarker" Image="mah boys/spaarker.png" BaseHP="10" StageHP="4"  Tags="Champion"/>
 <entity ID="161" Variant="119" Name="Wost" Image="mah boys/wost.png" BaseHP="8" Tags="Champion"/>
 <entity ID="161" Variant="133" Name="Zapper Teller" Image="mah boys/zapperteller.png" BaseHP="13" Tags="Champion">
 <bitfield Key="Subtype">
@@ -197,8 +198,9 @@ Use 2, 4, or 6 normally.
 <entity ID="161" Variant="535" Name="Clatter Teller" Image="mah boys/clatter teller.png" BaseHP="40" StageHP="3"/>
 <entity ID="161" Variant="537" Name="Dekatessera" Image="mah boys/dekatessera.png" BaseHP="24" StageHP="3" Tags="Champion"/>
 <entity ID="161" Variant="564" Name="Mutilated" Image="mah boys/mutilated.png" BaseHP="30" StageHP="3" Tags="Champion"/>
-<!--162-->
-<entity ID="162" Metadata="1" Image="grids/lightpressureplate.png" Name="Light Pressure Plate" Subtype="0" Variant="2900" Group="Stage"/>
+<!--135-->
+<entity ID="135" Metadata="1" Image="grids/lightpressureplate.png" Name="Light Pressure Plate" Subtype="0" Variant="2900" Group="Stage"/>
+<entity ID="134" Metadata="1" Image="grids/sootpile.png" Name="Soot Pile" Subtype="0" Variant="2900" Group="Stage"/>
 <entity ID="753" Metadata="1" Image="grids/breakablepotbasement.png" Name="Breakable Pot" Subtype="0" Variant="950" Group="Stage">
    <bitfield Key="Subtype">
       <checkbox Name="Gives Rewards" Length="1"/>
@@ -249,6 +251,9 @@ Use 2, 4, or 6 normally.
 
 	<group Name="HOPE Grid Objects Alt">
 		<entity Name="Breakable Pot" />
+	</group>
+
+	<group Name="HOPE Grid Objects Poop">
 	</group>
 
 	<group Name="HOPE Chapter 1 Enemies" Label="Chapter 1 Shared">
@@ -312,6 +317,7 @@ Use 2, 4, or 6 normally.
 			<entity Name="Schmoot"/>
 			<entity Name="Lil' Flash"/>
 			<entity Name="Soot"/>
+			<entity Name="Spaarker"/>
 		</group>
 	</group>
    
@@ -420,6 +426,10 @@ Use 2, 4, or 6 normally.
 	</group>
 
 </tab>
+
+<group Name="Poops">
+	<group Name="HOPE Grid Objects Poop"/>
+</group>
 
 <group Name="Jokes">
 	<group Name="HOPE Joke Content"/>

@@ -182,7 +182,7 @@ function FHACAchievements.UnlockToEntityKill(npc)
 	local save = AnixbirthSaveManager.GetPersistentSave()
 
 	for i = 1, game:GetNumPlayers() do
-		local player = Isaac.GetPlayer()
+		local player = Isaac.GetPlayer(i)
 		local correctedName = string.lower(tostring(player:GetName()))
 		local highNum = string.upper(string.sub(correctedName,1,1))
 		correctedName = highNum  .. string.sub(correctedName, 2, string.len(correctedName)) --fixing

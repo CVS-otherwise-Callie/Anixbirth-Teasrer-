@@ -56,13 +56,31 @@ function mod:StoneJohnnyAI(npc, sprite, d)
         npc.StateFrame = npc.StateFrame + 1
     end
 
+    -- fullness --
+
+    d.fullness = math.min(d.fullness, 100)
+    local animFullness = "Full" .. tostring(math.ceil(d.fullness/20))
+    local direc = mod:GetMoveString(npc.Velocity, false, false)
+
+    if direc == "Up" then
+        animFullness = ""
+    end
+
+    if d.state ~= "atRain" then
+        mod:spriteOverlayPlay(sprite, "Head" .. direc .. animFullness)
+    end
+
+
     if d.state == "findrain" then
         if not d.rainSource or (not d.rainSource:Exists() or d.rainSource:IsDead()) then
             d.rainSource = FindRainGridSource(npc)
         end
 
+        d.finishedTransition = false
+
         if not d.rainSource then
             d.state = nil
+            return
         end
 
         if mod:isScare(npc) then
@@ -75,7 +93,7 @@ function mod:StoneJohnnyAI(npc, sprite, d)
             local targetvelocity = (d.rainSource.Position - npc.Position):Resized(4)
             npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 0.6)
         else
-            path:FindGridPath(d.rainSource.Position, 1.3, 1, true)
+            path:FindGridPath(d.rainSource.Position, 0.6, 1, true)
         end
     
         if npc.Position:Distance(d.rainSource.Position) < 15 then
@@ -83,19 +101,22 @@ function mod:StoneJohnnyAI(npc, sprite, d)
         end
     elseif d.state == "atRain" then
 
-        if not CheckRainNearby(npc.Position, 100) then
-            --print(CheckRainNearby(npc.Position, 100))
-            d.state = "findrain"
-        end
-
-        if d.fullness > 70 + d.waitOffset then
-            d.state = "chase"
-        end
-
         npc:MultiplyFriction(0.5)
 
-        mod:spritePlay(sprite, "UnderRain")
-        d.fullness = d.fullness + math.random(1, 2)/2
+        if not d.finishedTransition then
+            mod:spriteOverlayPlay(sprite, "UnderRainFillUpTransition" .. tostring(math.ceil(d.fullness/20)))
+        else
+            if not CheckRainNearby(npc.Position, 100) then
+                d.state = "findrain"
+            end
+
+            if d.fullness > 70 + d.waitOffset then
+                mod:spriteOverlayPlay(sprite, "UnderRainFillDownTransition" .. tostring(math.ceil(d.fullness/20)))
+            else
+                mod:spriteOverlayPlay(sprite, "UnderRainFillUp" .. tostring(math.ceil(d.fullness/20)))
+                d.fullness = d.fullness + math.random(1, 2)/2
+            end
+        end
     elseif d.state == "chase" then
 
         if mod:isScare(npc) then
@@ -105,10 +126,10 @@ function mod:StoneJohnnyAI(npc, sprite, d)
             local targetvelocity = (targetpos - npc.Position):Resized(4)
             npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 0.6)
         else
-            path:FindGridPath(targetpos, 1.3, 1, true)
+            path:FindGridPath(targetpos, 0.6, 1, true)
         end
 
-        if d.fullness < 30 then
+        if d.fullness < 30 and d.waitOffset > -50 then
             d.state = "findrain"
         end
     else
@@ -121,30 +142,53 @@ function mod:StoneJohnnyAI(npc, sprite, d)
         end
     end
 
-    if not sprite:IsPlaying("UnderRain") and d.state == "atRain" then
-        if npc.Velocity:Length() > 0.3 then
-            npc:AnimWalkFrame("WalkHori","WalkVert",0)
+    if sprite:IsOverlayFinished() and string.find(sprite:GetOverlayAnimation(), "UnderRainFillUpTransition") then
+        d.finishedTransition = true
+    elseif sprite:IsOverlayFinished() and string.find(sprite:GetOverlayAnimation(), "UnderRainFillDownTransition") then
+        d.waitOffset = math.max(d.waitOffset - 10, -70)
+        d.state = "chase"
+    end
+
+    if npc.Velocity:Length() > 0.1 then
+        if math.abs(npc.Velocity.X) < math.abs(npc.Velocity.Y) then
+            mod:spritePlay(sprite, "WalkVert")
         else
-            sprite:SetFrame("WalkHori", 0)
+            if npc.Velocity.X > 0 then
+                mod:spritePlay(sprite, "WalkRight")
+            else
+                mod:spritePlay(sprite, "WalkLeft")
+            end
         end
+    else
+        sprite:SetFrame("WalkVert", 0)
     end
 
 end
 
-function mod:StoneJohnnyGetHurt(npc, damage, flag, source)
+mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, function(_, npc, damage, flag, source)
+    if npc.Variant == mod.Monsters.StoneJohnny.Var then
+        local target = npc:ToNPC():GetPlayerTarget()
+        local targetpos = mod:confusePos(npc, target.Position, 5, nil, nil)
 
-    local target = npc:ToNPC():GetPlayerTarget()
-    local targetpos = mod:confusePos(npc, target.Position, 5, nil, nil)
+        if (npc:GetData().fullness - damage) < 0 then
+            npc:Kill()
+        end
 
-    local amt = damage
-    if damage > amt then
-        amt = 10
+        local amt = damage
+        if damage > amt then
+            amt = 10
+        end
+        for i = 1, math.random(math.ceil(amt)) do
+            npc:GetData().fullness = npc:GetData().fullness - 2
+            local realshot = Isaac.Spawn(9, ProjectileVariant.PROJECTILE_TEAR, 0, npc.Position, Vector(5, 0):Rotated((targetpos - npc.Position):GetAngleDegrees() + math.random(1, 5)*(i-0.7)*10), npc):ToProjectile()
+            realshot.Height = -5
+            realshot.FallingSpeed = -20
+            realshot.FallingAccel = 1
+            realshot:Update()
+            realshot.Scale = math.random(30, 70)/100
+            realshot:AddProjectileFlags(ProjectileFlags.BOUNCE_FLOOR)
+        end
+        return false 
     end
-    for i = 1, math.random(amt) do
-        local realshot = Isaac.Spawn(9, 1, 0, npc.Position, Vector(8, 0):Rotated((targetpos - npc.Position):GetAngleDegrees() + math.random(1, 5)*(i-0.7)*10), npc):ToProjectile()
-        realshot.FallingAccel = 0.01
-        realshot.FallingSpeed = 0.1
-        realshot:AddProjectileFlags(ProjectileFlags.BOUNCE_FLOOR)
-    end
-end
+end, mod.Monsters.StoneJohnny.ID )
 

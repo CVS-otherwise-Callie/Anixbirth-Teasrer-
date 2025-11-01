@@ -44,12 +44,12 @@ mod:AddCallback(ModCallbacks.MC_POST_RENDER, function()
 
         if d.sent then
             if not game:IsPaused() then
-                mod:npctalk(ef, d.sent, d.sentlen, d.charX, d.charY)
+                mod:npcTalkWilloWalker(ef, d.sent, d.sentlen, d.charX, d.charY)
                 if d.sentlen < #d.sent and d.timer > d.letterdelay then
                     d.sentlen = d.sentlen + 1
                     d.timer = 1
                 end
-                if mod:npctalk(ef, d.sent, d.sentlen, d.charX, d.charY) then
+                if mod:npcTalkWilloWalker(ef, d.sent, d.sentlen, d.charX, d.charY) then
                     ef.Parent.Parent:GetData().isspeaking = false
                 end
             end

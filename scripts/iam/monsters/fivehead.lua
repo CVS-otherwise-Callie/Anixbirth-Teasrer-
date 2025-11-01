@@ -39,7 +39,7 @@ function mod:FiveheadAI(npc, sprite, d)
             sprite:Play("Shake")
             end
         end
-        if target.Position.X < npc.Position.X then --future me pls don't fuck this up
+        if target.Position.X < npc.Position.X then
             sprite.FlipX = true
         else
             sprite.FlipX = false

@@ -26,8 +26,8 @@ function FHAC.NewLevelStuff()
 		local player = Isaac.GetPlayer(i)
 
 		if AnixbirthSaveManager.GetRunSave(player).anixbirthsaveData then
-			if AnixbirthSaveManager.GetRunSave(player).anixbirthsaveData.BowlOfSauerkraut then
-				AnixbirthSaveManager.GetRunSave(player).anixbirthsaveData.UpdateBowlOfSauerkraut = 0
+			if type(AnixbirthSaveManager.GetRunSave(player).anixbirthsaveData.BowlofSauerkraut) == "number" then
+				AnixbirthSaveManager.GetRunSave(player).anixbirthsaveData.BowlofSauerkraut = 0
 				player:EvaluateItems()
 			end
 		end
@@ -90,6 +90,33 @@ function FHAC:RenderedStuff()
 end
 FHAC:AddCallback(ModCallbacks.MC_POST_RENDER, FHAC.RenderedStuff)
 
+mod:AddCallback(ModCallbacks.MC_POST_FIRE_TEAR, function(_, tear, _, ignorePlayerEffects, isLudo) -- Regular tears
+	local player = nil
+	if not tear.SpawnerEntity then
+		return
+	elseif tear.SpawnerEntity:ToPlayer() then
+		player = tear.SpawnerEntity:ToPlayer()
+	elseif tear.SpawnerEntity:ToFamiliar() and tear.SpawnerEntity:ToFamiliar().Player then
+		local familiar = tear.SpawnerEntity:ToFamiliar()
+
+		if familiar.Variant == FamiliarVariant.INCUBUS or
+		   familiar.Variant == FamiliarVariant.SPRINKLER or
+		   familiar.Variant == FamiliarVariant.TWISTED_BABY or
+		   familiar.Variant == FamiliarVariant.BLOOD_BABY or
+		   familiar.Variant == FamiliarVariant.UMBILICAL_BABY or
+		   familiar.Variant == FamiliarVariant.CAINS_OTHER_EYE
+		then
+			player = familiar.Player
+		else
+			return
+		end
+	else
+		return
+	end
+
+    FHAC:UnwoundCasseteShot(tear, player, isLudo)
+end)
+
 function FHAC:PostNewRoom()
 
     AnixbirthSaveManager.GetRoomSave().anixbirthsaveData = AnixbirthSaveManager.GetRoomSave().anixbirthsaveData or {}
@@ -108,18 +135,33 @@ function FHAC:PostNewRoom()
 
     FHAC:CVSNewRoom()
 
+    AnixbirthSaveManager.GetRunSave().anixbirthsaveData = AnixbirthSaveManager.GetRunSave().anixbirthsaveData or {}
+    if AnixbirthSaveManager.IsLoaded() and AnixbirthSaveManager.GetRunSave() and AnixbirthSaveManager.GetRunSave().anixbirthsaveData.diaLouges then
+        for name, tab in pairs(AnixbirthSaveManager.GetRunSave().anixbirthsaveData.diaLouges) do
+            tab.cancel = true
+        end
+    end
+
+    for i = 1, game:GetNumPlayers() do
+        if AnixbirthSaveManager.GetRunSave(Isaac.GetPlayer(i)).jokeBookUpNum and AnixbirthSaveManager.GetRunSave(Isaac.GetPlayer(i)).jokeBookUpNum > 0 then
+            AnixbirthSaveManager.GetRunSave(Isaac.GetPlayer(i)).jokeBookUpNum = 0
+            Isaac.GetPlayer(i):EvaluateItems()
+        end
+    end
 
 end
 FHAC:AddCallback(ModCallbacks.MC_POST_NEW_ROOM, FHAC.PostNewRoom)
 
 FHAC:AddCallback(ModCallbacks.MC_POST_PICKUP_UPDATE, function(_, pickup)
     FHAC:ReplaceItemTheLeftBall(pickup)
+    FHAC:ReplaceHeartHeartToy(pickup)
 end)
 
 function FHAC:PostPlayerUpdate(player)
     FHAC:PostUpdateRemoveTempItems(player)
     FHAC:MysteryMilkRoomInit(player)
     FHAC:StinkySocksPoisonCloud(player)
+    FHAC:BawledReefPlayerAI(player)
 end
 FHAC:AddCallback(ModCallbacks.MC_POST_PLAYER_UPDATE, FHAC.PostPlayerUpdate)
 
@@ -193,11 +235,12 @@ function FHAC:NPCGetHurtStuff(npc, damage, flag, source, countdown)
 	FHAC:SulfererTakeDamage(npc, damage, flag, source)
 	FHAC:embolzonTakeDamage(npc, damage, flag, source)
 	EntsNeverTakeFireDamage(npc, damage, flag, source)
-
+    FHAC:SetCassetteDamage(npc, damage, flag, source) 
     if npc.Type == 1 then
         local d = npc:GetData()
 
         d.ColorectalCancerCreepInit = false
+        FHAC:PlayerCoralCheck(npc)
         FHAC:StrawDollPassive(npc)
     end
 

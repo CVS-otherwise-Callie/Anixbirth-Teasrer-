@@ -15442,7 +15442,7 @@
 			<entity type="161" variant="30" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="6" y="3">
-			<entity type="162" variant="2900" subtype="0" weight="1.0"/>
+			<entity type="135" variant="2900" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="12" y="3">
 			<entity type="161" variant="84" subtype="0" weight="1.0"/>

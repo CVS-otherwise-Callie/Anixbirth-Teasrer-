@@ -70,7 +70,9 @@ FHAC:LoadScripts("scripts.iam.monsters", {
 	"furnace",
 	"hotpotato",
 	"stonejohnny",
-	"souwa"
+	"souwa",
+	"stoneangelstatue",
+	"musicbox"
 })
 
 FHAC:LoadScripts("scripts.iam.minibosses", {
@@ -93,7 +95,8 @@ FHAC:LoadScripts("scripts.iam.effects", {
 	"dekatessera effect",
 	"wideweb",
 	"cvsfire",
-	"raingrideffect"
+	"raingrideffect",
+	"textbox"
 })
 
 FHAC:LoadScripts("scripts.iam.familiars", {
@@ -110,7 +113,8 @@ FHAC:LoadScripts("scripts.iam.items.actives", {
 
 FHAC:LoadScripts("scripts.iam.items.trinkets", {
 	"mystery milk",
-	"the left ball"
+	"the left ball",
+	"happy heart toy"
 })
 
 FHAC:LoadScripts("scripts.iam.items.passives", {
@@ -121,12 +125,14 @@ FHAC:LoadScripts("scripts.iam.items.passives", {
 	"letter to myself",
 	"gros michel",
 	"tums",
-	"traveler's bag"
+	"traveler's bag",
+	"unwound cassete",
+	"bawled reef"
 })
 
 FHAC:LoadScripts("scripts.iam.items.pickups" , {
 	"bowl of sauerkraut",
-	"birthday slice"
+	"birthday slice",
 })
 
 FHAC:LoadScripts("scripts.iam.jokes", {
@@ -135,6 +141,10 @@ FHAC:LoadScripts("scripts.iam.jokes", {
 
 FHAC:LoadScripts("scripts.iam.projectiles", {
 	"ember_proj",
+})
+
+FHAC:LoadScripts("scripts.iam.tears", {
+	"coralshard",
 })
 
 FHAC:LoadScripts("scripts.iam.characters", {
@@ -149,6 +159,7 @@ FHAC:LoadScripts("scripts.iam.challenges", {
 
 FHAC:LoadScripts("scripts.iam.npcs", {
 	"ogwillowalker",
+	"ruinNPC"
 })
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -275,10 +286,28 @@ function mod:CVS161AI(npc)
 		mod:StoneJohnnyAI(npc, npc:GetSprite(), npc:GetData())
 	elseif npc.Variant == mod.Monsters.Souwa.Var then
 		mod:SouwaAI(npc, npc:GetSprite(), npc:GetData())
+	elseif npc.Variant == mod.Monsters.StoneAngelStatue.Var then
+		mod:StoneAngelStatueAI(npc, npc:GetSprite(), npc:GetData())
+	elseif npc.Variant == mod.Monsters.MusicBox.Var then
+		mod:MusicBoxAI(npc, npc:GetSprite(), npc:GetData())
 	end
 end
 
 mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, mod.CVS161AI, 161)
+
+function mod:CVSTearAI(tear)
+
+	local sprite = tear:GetSprite()
+	local d = tear:GetData()
+
+	local var = tear.Variant
+
+	if var == mod.Tears.CoralShardTear.Var then
+		FHAC:CoralTearAI(tear, sprite, d)
+	end
+end
+
+mod:AddCallback(ModCallbacks.MC_POST_TEAR_UPDATE, mod.CVSTearAI)
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 local rng = RNG()
@@ -1242,6 +1271,8 @@ function mod:GlobalCVSEntityStuff(npc, sprite, d)
 		end
 	end
 
+	FHAC:SaveCassetteInfoNPC(npc)
+
 end
 
 function FHAC:GetTrueAngle(angle)
@@ -1290,20 +1321,34 @@ function FHAC:GetFireProjectileCollisions()
 
 		local radius = fire:GetData().radius or 20
 		local colEnts = Isaac.FindInRadius(fire.Position, radius, EntityPartition.ENEMY | EntityPartition.PLAYER | EntityPartition.TEAR)
+
+
+		if #Isaac.FindInRadius(fire.Position, radius, EntityPartition.TEAR) == 0 then
+			d.isCollidingWithProj = false
+		else
+			for i = 1, #Isaac.FindInRadius(fire.Position, radius, EntityPartition.TEAR) do
+				local entity = Isaac.FindInRadius(fire.Position, radius, EntityPartition.TEAR)[i]
+
+				if d.hp > 0 and not d.isCollidingWithProj then
+					entity:Kill()
+					d.isCollidingWithProj = true
+					if entity.Type == 2 then
+						d.hp = d.hp - 1 --no i actually dont care how powerful u are
+						fire.SpriteScale = fire.SpriteScale * (d.hp/d.MaxHitPoints)
+					end
+					if d.hp == 0 then
+						fire.CollisionDamage = 0
+						mod:spritePlay(fire:GetSprite(), "Disappear")
+						sfx:Play(SoundEffect.SOUND_FIREDEATH_HISS, 2, 1, false, 1)
+					end
+				end
+			end
+		end
+
 		for i = 1, #colEnts do
 			local entity = colEnts[i]
 			if entity.Type == 1 or (entity.EntityCollisionClass > 2 and entity:IsActiveEnemy()) and not CheckEntityInNoFireList(entity) then
 				entity:TakeDamage(1, DamageFlag.DAMAGE_FIRE, EntityRef(fire), 0)
-			end
-			if d.hp > 0 then
-				if entity.Type == 2 then
-					d.hp = d.hp - 1 --no i actually dont care how powerful u are
-				end
-				if d.hp == 0 then
-					fire.CollisionDamage = 0
-					mod:spritePlay(fire:GetSprite(), "Disappear")
-					sfx:Play(SoundEffect.SOUND_FIREDEATH_HISS, 2, 1, false, 1)
-				end
 			end
 		end
 	end

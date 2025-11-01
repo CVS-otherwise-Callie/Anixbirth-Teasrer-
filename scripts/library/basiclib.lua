@@ -23,6 +23,15 @@ function mod:MixTables(input, table)
     end
 end
 
+function mod:IsTableEmpty(tab)
+	for k, v in ipairs(tab) do
+		if v then
+			return false
+		end
+	end
+	return true
+end
+
 function mod:spritePlay(sprite, anim)
 	if not sprite:IsPlaying(anim) then
 		sprite:Play(anim)
@@ -145,6 +154,19 @@ function mod:removeSubstring(str, substr)
         return prefix .. suffix
     end
     return str
+end
+
+function mod:gsubMany(string, ...)
+
+  local words = {...}
+
+  for i = 1, #words do
+    if type(words[i]) == "string" then
+      string = string:gsub(words[i], '')
+    end
+  end
+
+  return string 
 end
 
 -- i had no idea how to set up a registered callback to be set up later unitl fiend folio, thank yall ^-^

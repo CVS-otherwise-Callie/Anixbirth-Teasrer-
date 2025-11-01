@@ -425,4 +425,16 @@ function mod:Orbit(npc, ent, speed, orb)
 	end
 end
 
+function mod:GetRoomEntsActive(shouldCountSpawned)
+	local ents = {}
+	for _, ent in ipairs(Isaac.GetRoomEntities()) do
+		if ent:IsActiveEnemy() then
+			if not shouldCountSpawned or (shouldCountSpawned and not ent.SpawnerEntity) then
+			table.insert(ents, ent)
+			end
+		end
+	end
+	return ents
+end
+
 --Burslake Bestiary's Handy Dandy Code for morphing on death

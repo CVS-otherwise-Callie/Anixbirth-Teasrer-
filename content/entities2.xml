@@ -57,6 +57,47 @@
         <preload-snd id="185"/>
     </entity-->
 
+    <!--Tears-->
+
+    <entity anm2path="tears/coralshards.anm2" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="8" collisionRadius="7" friction="1" id="2" name="Coral Shard Tear" numGridCollisionPoints="8" shadowSize="8" stageHP="0" variant="480">
+        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
+    </entity>
+
+    <!--Familiars-->
+
+    <entity anm2path="familiar/snark/snark.anm2" baseHP="0" boss="0" champion="0" collisionDamage="3" collisionMass="3" collisionRadius="13" friction="1" id="3" name="Snark (Half Life)" numGridCollisionPoints="12" shadowSize="12" stageHP="0" variant="4502" tags="cansacrifice">
+        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
+    </entity>
+    <entity anm2path="familiar/marketableplushie/ml_marketableplushie.anm2" baseHP="0" boss="0" champion="0" collisionDamage="3" collisionMass="3" collisionRadius="13" friction="1" id="3" name="Marketable Plushie Familiar" numGridCollisionPoints="12" shadowSize="12" stageHP="0" variant="4503" tags="cansacrifice">
+        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
+    </entity>
+    <entity id="3" variant="4504" name="Lil' Ana" anm2path="familiar/lilana/lilana.anm2" hasFloorAlts="false" champion="1" collisionDamage="1" collisionMass="5" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="14" stageHP="0" tags="cansacrifice">
+		<bestiary transform="0,0,1" anim="WalkVert" overlay="Head" />
+    </entity>
+
+    <!--Pickups-->
+    <entity anm2path="items/pick ups/sauerkraut_pickups.anm2" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="12" friction="1" id="5" name="Bowl of Sauerkraut" numGridCollisionPoints="24" shadowSize="17" stageHP="0" variant="721" subtype="0">
+        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
+    </entity>
+    <entity anm2path="items/pick ups/letter_to_myself.anm2" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="12" friction="1" id="5" name="Letter To Myself" numGridCollisionPoints="24" shadowSize="17" stageHP="0" variant="722" subtype="0">
+        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
+    </entity>
+    <entity anm2path="items/pick ups/tinymusicbox.anm2" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="12" friction="1" id="161" name="Music Box" numGridCollisionPoints="24" shadowSize="17" stageHP="0" variant="3145" subtype="0">
+        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
+    </entity>
+
+    <entity anm2path="items/pick ups/aceslice.anm2" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="12" friction="1" id="5" name="Birthday Slice" numGridCollisionPoints="24" shadowSize="17" stageHP="0" variant="300" subtype="451">
+        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
+    </entity>
+    <entity anm2path="items/pick ups/julioslice.anm2" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="12" friction="1" id="5" name="Birthday Slice" numGridCollisionPoints="24" shadowSize="17" stageHP="0" variant="300" subtype="452">
+        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
+    </entity>
+
+    <!--Projectiles-->
+    <entity id="9" name="Ember Projectile" baseHP="10" stageHP="0" boss="0" champion="0" collisionDamage="1" collisionMass="8" collisionRadius="5" friction="1" numGridCollisionPoints="8" shadowSize="10" portrait="545" anm2path="projectiles/projectile_ember.anm2">
+		<gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
+	</entity>
+
     <!--Basement-->
 
 
@@ -495,7 +536,11 @@
 		<bestiary transform="0,0,1" anim="WalkVert1" />
         <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
     </entity>
-    <entity id="161" variant="101" name="Soot" anm2path="monsters/soot/soot.anm2" reroll="true" baseHP="5" boss="0" champion="false" collisionDamage="1" collisionMass="3" collisionRadius="17" friction="1" numGridCollisionPoints="4" shadowSize="11" stageHP="0" gridCollision="walls" tags="fly" portrait="101">
+    <entity id="161" variant="101" name="Soot" anm2path="monsters/soot/soot.anm2" reroll="true" baseHP="5" boss="0" champion="false" collisionDamage="1" collisionMass="2" collisionRadius="5" friction="1" numGridCollisionPoints="4" shadowSize="11" stageHP="0" gridCollision="walls" tags="fly" portrait="101">
+		<bestiary transform="0,0,1" anim="Idle" overlay="Eyes"/>
+        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
+    </entity>
+    <entity id="161" variant="104" name="Smoker" anm2path="monsters/smoker/smoker.anm2" reroll="true" baseHP="7" boss="0" champion="false" collisionDamage="1" collisionMass="3" collisionRadius="17" friction="1" numGridCollisionPoints="4" shadowSize="11" stageHP="0" gridCollision="walls" tags="fly" portrait="104">
 		<bestiary transform="0,0,1" anim="Idle" overlay="Eyes"/>
         <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
     </entity>
@@ -506,6 +551,10 @@
     <entity anm2path="monsters/spaarker/spaarker.anm2" reroll="true" baseHP="8" boss="0" champion="1" collisionDamage="0" collisionMass="4" collisionRadius="17" friction="1" id="161" name="Spaarker" numGridCollisionPoints="4" shadowSize="11" stageHP="0" variant="108" portrait="6" gridCollision="walls" tags="fly">
 		<bestiary transform="0,0,1" anim="Fly" />
         <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
+    </entity>
+    <entity id="37" variant="7" name="Sotty" anm2path="monsters/sotty/sotty.anm2" hasFloorAlts="" reroll="true" baseHP="10" boss="0" champion="1" collisionDamage="1" collisionMass="5" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="14" stageHP="0" portrait="">
+		<bestiary transform="0,0,1" anim="WalkVert" overlay="Head" />
+        <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
     </entity>
     
     <!--Caves-->
@@ -572,8 +621,15 @@
         <gibs amount="6" blood="5" bone="0" eye="1" gut="0" large="0" />
     </entity>
 
+    <!-- Cathedral -->
+    <entity anm2path="monsters/stoneangelstatue/stoneangelstatue.anm2" id="161" variant="700" reroll="false" baseHP="0" boss="0" champion="1" collisionDamage="0" collisionMass="40" collisionRadius="13" friction="1" name="Stone Angel Statue" numGridCollisionPoints="12" shadowSize="14">
+        <bestiary transform="0,0,1" anim="Idle" />
+        <gibs amount="6" blood="5" bone="0" eye="1" gut="0" large="0" />
+        <devolve id="161.4.11" weight="1" />
+    </entity>
+
     <!--Alt - Downpour-->
-    <entity anm2path="monsters/stonejohhny/stonejohhny.anm2" hasFloorAlts="false" reroll="true" baseHP="14" boss="0" champion="1" collisionDamage="1" collisionMass="5" collisionRadius="13" friction="1" id="161" name="Stone Johnny" numGridCollisionPoints="12" shadowSize="14" stageHP="0" variant="109" portrait="1">
+    <entity anm2path="monsters/stonejohnny/stonejohnny.anm2" hasFloorAlts="false" reroll="true" baseHP="14" boss="0" champion="1" collisionDamage="1" collisionMass="5" collisionRadius="13" friction="1" id="161" name="Stone Johnny" numGridCollisionPoints="12" shadowSize="14" stageHP="0" variant="109" portrait="1">
 		<bestiary transform="0,0,1" anim="WalkVert" />
         <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
     </entity>
@@ -748,64 +804,26 @@
     <entity id="136" variant="0" name="Hop" anm2path="bosses\hopperbrothers\hop.anm2" hasFloorAlts="false" reroll="false" baseHP="120" boss="1" champion="0" collisionDamage="1" collisionMass="24" collisionRadius="15" collisionRadiusXMulti="1.75" friction="1" numGridCollisionPoints="12" shadowSize="45" stageHP="20" portrait="0" tags="noreroll">
         <bestiary transform="0,0,1" anim="Idle" />
         <gibs amount="20" blood="1" bone="1" eye="1" gut="1" large="1" />
-    </enitity>
+    </entity>
 
     <entity id="136" variant="1" name="Skip" anm2path="bosses\hopperbrothers\skip.anm2" hasFloorAlts="false" reroll="false" baseHP="90" boss="1" champion="0" collisionDamage="1" collisionMass="16" collisionRadius="15" collisionRadiusXMulti="2.5" friction="1" numGridCollisionPoints="12" shadowSize="50" stageHP="20" portrait="0" tags="noreroll">
         <bestiary transform="0,0,1" anim="Idle" />
         <gibs amount="20" blood="1" bone="1" eye="1" gut="1" large="1" />
-    </enitity>
+    </entity>
 
     <entity id="136" variant="2" name="Jump" anm2path="bosses\hopperbrothers\jump.anm2" hasFloorAlts="false" reroll="false" baseHP="90" boss="1" champion="0" collisionDamage="1" collisionMass="8" collisionRadius="15" collisionRadiusXMulti="1.5" friction="1" numGridCollisionPoints="12" shadowSize="32" stageHP="20" portrait="0" tags="noreroll">
         <bestiary transform="0,0,1" anim="Idle" />
         <gibs amount="20" blood="1" bone="1" eye="1" gut="1" large="1" />
-    </enitity>
+    </entity>
 
     <entity id="136" variant="3" name="Chris" anm2path="bosses\chris\chris.anm2" hasFloorAlts="false" reroll="false" baseHP="90" boss="1" champion="0" collisionDamage="1" collisionMass="8" collisionRadius="15" collisionRadiusXMulti="1.5" friction="1" numGridCollisionPoints="12" shadowSize="32" stageHP="20" portrait="0" tags="noreroll">
         <!--bestiary transform="0,0,1" anim="IdleAngry" /-->
         <gibs amount="20" blood="1" bone="1" eye="1" gut="1" large="1" />
-    </enitity>
+    </entity>
 
     <!--Jokes-->
-    <entity anm2path="jokes/enemies/gaperrr/gaperrr.anm2" id="10" variant="5938" reroll="false" baseHP="13" boss="0" champion="1" collisionDamage="1" collisionMass="40" collisionRadius="13" friction="1" name="A gaper w/ three legs, why did we do this" numGridCollisionPoints="12" shadowSize="12" stageHP="3">
-        <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
-        <devolve id="10.1.0" weight="1" />
-    </entity>
-
     <entity anm2path="jokes/enemies/willowalker/willowalker.anm2" id="137" variant="3939" reroll="false" baseHP="1" boss="0" champion="0" collisionDamage="0" collisionMass="0" collisionRadius="13" friction="1" name="Willowalker" numGridCollisionPoints="12" shadowSize="12" stageHP="0">
         <gibs amount="0"/>
-    </entity>
-
-    <!--Pickups-->
-    <entity anm2path="items/pick ups/sauerkraut_pickups.anm2" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="12" friction="1" id="5" name="Bowl of Sauerkraut" numGridCollisionPoints="24" shadowSize="17" stageHP="0" variant="721" subtype="0">
-        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
-    </entity>
-
-    <entity anm2path="items/pick ups/letter_to_myself.anm2" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="12" friction="1" id="5" name="Letter To Myself" numGridCollisionPoints="24" shadowSize="17" stageHP="0" variant="722" subtype="0">
-        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
-    </entity>
-
-    <!--Ace-->
-    <entity anm2path="items/pick ups/aceslice.anm2" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="12" friction="1" id="5" name="Birthday Slice" numGridCollisionPoints="24" shadowSize="17" stageHP="0" variant="300" subtype="451" subtype="0">
-        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
-    </entity>
-    <!--JuliO-->
-    <entity anm2path="items/pick ups/julioslice.anm2" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="12" friction="1" id="5" name="Birthday Slice" numGridCollisionPoints="24" shadowSize="17" stageHP="0" variant="300" subtype="452" subtype="0">
-        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
-    </entity>
-
-    <!--Familiars-->
-
-    <entity anm2path="familiar/snark/snark.anm2" baseHP="0" boss="0" champion="0" collisionDamage="3" collisionMass="3" collisionRadius="13" friction="1" id="3" name="Snark (Half Life)" numGridCollisionPoints="12" shadowSize="12" stageHP="0" variant="4502" tags="cansacrifice">
-        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
-    </entity>
-
-    <entity anm2path="familiar/marketableplushie/ml_marketableplushie.anm2" baseHP="0" boss="0" champion="0" collisionDamage="3" collisionMass="3" collisionRadius="13" friction="1" id="3" name="Marketable Plushie Familiar" numGridCollisionPoints="12" shadowSize="12" stageHP="0" variant="4503" tags="cansacrifice">
-        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
-    </entity>
-
-    <entity id="3" variant="4504" name="Lil' Ana" anm2path="familiar/lilana/lilana.anm2" hasFloorAlts="false" champion="1" collisionDamage="1" collisionMass="5" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="14" stageHP="0" tags="cansacrifice">
-		<bestiary transform="0,0,1" anim="WalkVert" overlay="Head" />
-        <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
     </entity>
 
     <!--Grids-->
@@ -827,6 +845,7 @@
     <entity anm2path="effects/fear effect/fear flower/effect_fearflowerfear.anm2" name="Fear Flower Fear" id="1000" variant="426" subtype="0" baseHP="0" stageHP="0" shieldStrength="0" boss="0" champion="0" collisionDamage="0" collisionMass="0" collisionRadius="0" friction="1" numGridCollisionPoints="0" shadowSize="0"/>
     <entity anm2path="effects/nothing.anm2" name="Dekatessera Effect" id="1000" variant="427" subtype="0" baseHP="0" stageHP="0" shieldStrength="0" boss="0" champion="0" collisionDamage="0" collisionMass="0" collisionRadius="0" friction="1" numGridCollisionPoints="0" shadowSize="0"/>
 	<entity anm2path="grid/nothing.anm2" baseHP="0" boss="0" champion="0" collisionDamage="1" collisionMass="0" collisionRadius="4" friction="1" id="1000" name="Rain Grid Effect" numGridCollisionPoints="1" shadowSize="0" stageHP="0" variant="432"/>
+    <entity anm2path="effects/nothing.anm2" name="Smokescreen Effect" id="1000" variant="433" subtype="0" baseHP="0" stageHP="0" shieldStrength="0" boss="0" champion="0" collisionDamage="0" collisionMass="0" collisionRadius="0" friction="1" numGridCollisionPoints="0" shadowSize="0"/>
     <!--uhhhhmmmmm awkward forget this exists-->
     <entity anm2path="effects/effect_wideweb.anm2" name="Large Spiderweb" id="1000" variant="428" subtype="0" baseHP="0" stageHP="0" shieldStrength="0" boss="0" champion="0" collisionDamage="0" collisionMass="0" collisionRadius="0" friction="1" numGridCollisionPoints="0" shadowSize="0"/>
     <!--fire-->
@@ -838,17 +857,16 @@
 
     <!--NPCS-->
 
-    <entity anm2path="npcs/ruin/skeletons/skeleton1.anm2" name="Skeleton NPC" id="163" variant="0" subtype="0" hasFloorAlts="false" reroll="false" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="8" collisionRadius="13" friction="0" numGridCollisionPoints="12" shadowSize="18" stageHP="0" customtags="npc"/>
+    <entity anm2path="npcs/ruin/skeletons/skeleton1.anm2" name="Ruin NPC" id="163" variant="0" subtype="0" hasFloorAlts="false" reroll="false" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="8" collisionRadius="13" friction="0" numGridCollisionPoints="12" shadowSize="18" stageHP="0" customtags="npc"/>
     <entity anm2path="npcs/originalwillowwalker/ogwillowalker.anm2" name="OGWilloWalker" id="163" variant="2" subtype="0" hasFloorAlts="false" reroll="false" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="8" collisionRadius="16" collisionRadiusXMulti="1.75" friction="0" numGridCollisionPoints="12" shadowSize="32" stageHP="0" shutdoors="false" customtags="npc"/>
-
-    <!--Projectiles-->
-    <entity id="9" name="Ember Projectile" baseHP="10" stageHP="0" boss="0" champion="0" collisionDamage="1" collisionMass="8" collisionRadius="5" friction="1" numGridCollisionPoints="8" shadowSize="10" portrait="545" anm2path="projectiles/projectile_ember.anm2">
-		<gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
-	</entity>
 
     <!--Other-->
 
-    <entity anm2path="effects/ROBLOXIANERROR.anm2" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="12" friction="1" id="162" name="HOPE Grid Spawner" numGridCollisionPoints="24" shadowSize="17" stageHP="0" shutdoors="false">
+    <entity anm2path="effects/ROBLOXIANERROR.anm2" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="12" friction="1" id="135" name="HOPE Grid Spawner" numGridCollisionPoints="24" shadowSize="17" stageHP="0" shutdoors="false">
+        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
+    </entity>
+
+    <entity anm2path="effects/ROBLOXIANERROR.anm2" baseHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="3" collisionRadius="12" friction="1" id="134" name="HOPE Poop Spawner" numGridCollisionPoints="24" shadowSize="17" stageHP="0" shutdoors="false">
         <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
     </entity>
 
