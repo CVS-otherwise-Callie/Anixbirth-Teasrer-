@@ -488,6 +488,11 @@
     </entity>
 
     <!--Burning Basement-->
+    <entity anm2path="monsters/hotato/hotato.anm2" reroll="true" baseHP="25" boss="0" champion="1" collisionDamage="1" collisionMass="10" collisionRadius="13" friction="1" id="161" name="Hotato" numGridCollisionPoints="12" shadowSize="16" stageHP="0" variant="70" portrait="76">
+		<bestiary transform="0,0,1" anim="WalkVert1" />
+        <gibs amount="16" blood="1" bone="1" eye="1" gut="1" large="0" />
+        <preload-snd id="167" /> <!-- SOUND_ANGRY_GURGLE -->
+    </entity>
     <entity anm2path="monsters/hotpotato/hotpotato.anm2" hasFloorAlts="false" reroll="true" baseHP="10" boss="0" champion="1" collisionDamage="1" collisionMass="5" collisionRadius="13" friction="1" id="161" name="Hot Potato" numGridCollisionPoints="12" shadowSize="14" stageHP="0" variant="71" portrait="1">
 		<bestiary transform="0,0,1" anim="WalkVert1" />
         <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />

@@ -148,7 +148,7 @@ return function(mode)
 {Name="Ruin NPC",Anm2="npcs/ruin/skeletons/skeleton1.anm2",CollisionMass=8,CollisionRadius=13,Friction=0,ShadowSize=18,NumGridCollisionPoints=12,Type=163,HasFloorAlts="false",}, 
 {Name="OGWilloWalker",Anm2="npcs/originalwillowwalker/ogwillowalker.anm2",CollisionMass=8,CollisionRadius=16,Friction=0,ShadowSize=32,NumGridCollisionPoints=12,Type=163,Variant=2,HasFloorAlts="false",CollisionRadiusXMulti="1.75",ShutDoors="false",}, 
 {Name="Ember Projectile",Anm2="projectiles/projectile_ember.anm2",HP=10,CollisionDamage=1,CollisionMass=8,CollisionRadius=5,ShadowSize=10,NumGridCollisionPoints=8,Type=9,Portrait=545,}, 
-{Name="HOPE Grid Spawner",Anm2="effects/ROBLOXIANERROR.anm2",CollisionMass=3,CollisionRadius=12,ShadowSize=17,NumGridCollisionPoints=24,Type=162,ShutDoors="false",}, 
+{Name="HOPE Grid Spawner",Anm2="effects/ROBLOXIANERROR.anm2",CollisionMass=3,CollisionRadius=12,ShadowSize=17,NumGridCollisionPoints=24,Type=135,ShutDoors="false",}, 
 {Name="Light Pressure Plate Null Entity",Anm2="blank.anm2",HP=10,Champion=true,NumGridCollisionPoints=0,Type=161,Variant=4089,}, 
 {Name="Quiz Question Placement",Anm2="effects/nothing.anm2",NumGridCollisionPoints=0,Type=982,Variant=419,ShutDoors="false",ShieldStrength=0,}, 
 {Name="IsMoQu Custom Grid Spawn",Anm2="effects/nothing.anm2",NumGridCollisionPoints=0,Type=634,ShutDoors="false",ShieldStrength=0,},}

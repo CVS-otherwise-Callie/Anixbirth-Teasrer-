@@ -411,7 +411,6 @@ FHAC.dmdirectory = {
         }
     },]]
 
-
     achievements = {
         format = {
             Panels = {
@@ -442,7 +441,7 @@ FHAC.dmdirectory = {
                                 return true
                             end
                         end,
-                        RenderBack = function(panel, panelPos, tbl) --bobby specific
+                        RenderBack = function(panel, panelPos, tbl)
 
                             if not panel.PanInit then --coding like a enemy for some unholy reason
                                 panel.Filter = nil
@@ -460,9 +459,17 @@ FHAC.dmdirectory = {
                             end
 
                             if panel.MoveDown then
-                                if panel.OuterOffset+9 < #achList then
+                                if panel.OuterOffset+3 < #achList then
                                     panel.OuterOffset = panel.OuterOffset + 3
                                 end
+                                panel.MoveDown = false
+                            end
+
+                            if panel.MoveUp then
+                                if panel.OuterOffset-3 >= 0 then
+                                    panel.OuterOffset = panel.OuterOffset - 3
+                                end
+                                panel.MoveUp = false
                             end
 
                             local mousePlacement
@@ -481,20 +488,36 @@ FHAC.dmdirectory = {
                                 end
                             end
 
+                            local NEWxPosPan = 0
                             local mouseIconT = {}
                             panel.xPosPan = 0
                             for i = 1, 9 do -- i split these becauuuuseeee (uh) i hate myself probably
-                                if (panel.OuterOffset + (i-1)) < #achList and panel.SmallPanelFrame ~= 40 then
+                            
+                                NEWxPosPan = NEWxPosPan + 1
+                                if (i-1)%3 == 0 then
+                                    NEWxPosPan = 0                                        
+                                end
+                            
+                                local realNum = i + panel.OuterOffset
+
+                                local placement = Vector(NEWxPosPan, (math.floor((i-1)/3)))
+
+                                if panel.MouseIconPos and not achList[realNum] then
+                                    print(placement, panel.MouseIconPos, #achList, realNum, achList[realNum])
+                                    table.insert(bannedPositions, placement)
+                                end
+                            
+                                if achList[realNum] and (realNum-1) < 9 + panel.OuterOffset and panel.SmallPanelFrame ~= 40 then
 
                                     local butt = {}
 
                                     SmallPanelFrame = panel.SmallPanelFrame
 
                                     panel.xPosPan = panel.xPosPan + 1
-                                    if not AnixbirthAchievementSystem:IsUnlocked(achList[i].extraSpriteID) then 
+                                    if not AnixbirthAchievementSystem:IsUnlocked(achList[realNum].extraSpriteID) then 
                                         achList[i].Sprite:ReplaceSpritesheet(2, "gfx/ui/achievement/achievement_locked.png")
                                     else
-                                        achList[i].Sprite:ReplaceSpritesheet(2, "gfx/ui/achievement/achievement_" .. string.lower(achList[i].ID) ..".png")
+                                        achList[i].Sprite:ReplaceSpritesheet(2, "gfx/ui/achievement/achievement_" .. string.lower(achList[realNum].ID) ..".png")
                                     end
                                     achList[i].Sprite:LoadGraphics()
                                     achList[i].Sprite:Play("Idle")
@@ -502,7 +525,7 @@ FHAC.dmdirectory = {
                                     achList[i].Sprite.Scale = Vector(0.35, 0.35)
                                     if i == mousePlacement then
                                         achList[i].Sprite.Color = DeadSeaScrollsMenu.GetPalette()[1]
-                                        selectedAch = achList[i]
+                                        selectedAch = achList[realNum]
                                         if REPENTOGON then
                                             achList[i].Sprite.Color:SetOffset(0.1, 0.1, 0.1, 1)  
                                         else
@@ -521,9 +544,9 @@ FHAC.dmdirectory = {
                                         panel.xPosPan = 0                                        
                                     end
 
-                                    butt.tooltip = achList[i].Tooltip
+                                    butt.tooltip = achList[realNum].Tooltip
                                     butt.Position = panelPos + Vector((panel.xPosPan-1)*100, (math.floor((i-1)/3) * 80)) - Vector(190, 70)
-                                    table.insert(mouseIconT, achList[i].Sprite)
+                                    table.insert(mouseIconT, achList[realNum].Sprite)
                                     table.insert(buttonAchievements, butt)
                                 end
                             end
@@ -535,7 +558,7 @@ FHAC.dmdirectory = {
                             sidePaper.Color = DeadSeaScrollsMenu.GetPalette()[1]
 
                         end,
-                        HandleInputs = function(panel, input, item, itemswitched, tbl) -- bobby specific
+                        HandleInputs = function(panel, input, item, itemswitched, tbl)
                             if not itemswitched then
                                 local menuinput = input.menu
                                 local rawinput = input.raw --left, right, up, down
@@ -545,7 +568,7 @@ FHAC.dmdirectory = {
                                 panel.InputtedInput = panel.InputtedInput or nil
 
                                 if rawinput.right > 0 and panel.InputtedInput~="right" then --im sure theres a better way to dthis i js cant come up with oneeeee
-                                    if panel.MouseIconPos.X < 2 then
+                                    if panel.MouseIconPos.X < 2 and not CheckVectors(bannedPositions, Vector(panel.MouseIconPos.X+1,panel.MouseIconPos.Y )) then
                                         panel.MouseIconPos.X = panel.MouseIconPos.X + 1
                                     end
                                     panel.InputtedInput = "right"
@@ -553,7 +576,7 @@ FHAC.dmdirectory = {
                                     panel.InputtedInput = nil
                                 end
                                 if rawinput.left > 0 and panel.InputtedInput~="left" then
-                                    if panel.MouseIconPos.X > 0 then
+                                    if panel.MouseIconPos.X > 0  and not CheckVectors(bannedPositions, Vector(panel.MouseIconPos.X-1,panel.MouseIconPos.Y )) then
                                         panel.MouseIconPos.X = panel.MouseIconPos.X - 1
                                     end
                                     panel.InputtedInput = "left"
@@ -563,7 +586,9 @@ FHAC.dmdirectory = {
                                 if rawinput.up > 0 and panel.InputtedInput~="up" then
                                     if panel.MouseIconPos.Y < 1 then
                                         panel.MoveUp = true
-                                    else
+                                        bannedPositions = {}
+                                        panel.MouseIconPos.Y = panel.MouseIconPos.Y + 1
+                                    elseif not CheckVectors(bannedPositions, Vector(panel.MouseIconPos.X,panel.MouseIconPos.Y-1)) then
                                         panel.MouseIconPos.Y = panel.MouseIconPos.Y - 1
                                     end
                                     panel.InputtedInput = "up"
@@ -573,7 +598,9 @@ FHAC.dmdirectory = {
                                 if rawinput.down > 0 and panel.InputtedInput~="down" then
                                     if panel.MouseIconPos.Y > 1 then
                                         panel.MoveDown = true
-                                    else
+                                        bannedPositions = {}
+                                        panel.MouseIconPos.Y = panel.MouseIconPos.Y - 1
+                                    elseif not CheckVectors(bannedPositions, Vector(panel.MouseIconPos.X,panel.MouseIconPos.Y+1)) then
                                         panel.MouseIconPos.Y = panel.MouseIconPos.Y + 1
                                     end
                                     panel.InputtedInput = "down"
@@ -614,7 +641,7 @@ FHAC.dmdirectory = {
                                 end
 
                                 if not AnixbirthAchievementSystem:IsUnlocked(selectedAch.ID) then
-                                    if not AnixbirthSaveManager.GetSettingsSave().lockAchTooltip or AnixbirthSaveManager.GetSettingsSave().lockAchTooltip == 2 then
+                                    if not mod.SaveManager.GetSettingsSave().lockAchTooltip or mod.SaveManager.GetSettingsSave().lockAchTooltip == 2 then
                                         buttons = {}
                                     end
                                     buttons[#buttons + 1] = {str = "", fsize = 2}
@@ -629,7 +656,7 @@ FHAC.dmdirectory = {
 
                                 drawings = dssmod.generateMenuDraw(drawItem, drawItem.buttons, panelPos, panel.Panel)
 
-                                if selectedAch.Tags and (AnixbirthSaveManager.GetSettingsSave().lockAchTooltip == 1 or AnixbirthAchievementSystem:IsUnlocked(selectedAch.ID)) then
+                                if selectedAch.Tags and (mod.SaveManager.GetSettingsSave().lockAchTooltip == 1 or AnixbirthAchievementSystem:IsUnlocked(selectedAch.ID)) then
                                     local actNum = {}
                                     for i = 1, #selectedAch.Tags do
                                         if coOpBossList[selectedAch.Tags[i]] or mod:CheckTableContents(coOpSpriteList, selectedAch.Tags[i]) then
@@ -659,10 +686,10 @@ FHAC.dmdirectory = {
                 }
             }
         },
-    buttons = {buttonAchievements},
-    generate = function(item, tbl) -- bobby specific
-    
-    end,
+        buttons = {buttonAchievements},
+        generate = function(item, tbl)
+        
+        end,
     },
 
     achievementsoptions = {

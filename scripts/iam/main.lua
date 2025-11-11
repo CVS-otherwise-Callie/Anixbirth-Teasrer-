@@ -72,7 +72,8 @@ FHAC:LoadScripts("scripts.iam.monsters", {
 	"stonejohnny",
 	"souwa",
 	"stoneangelstatue",
-	"musicbox"
+	"musicbox",
+	"hotato"
 })
 
 FHAC:LoadScripts("scripts.iam.minibosses", {
@@ -290,6 +291,8 @@ function mod:CVS161AI(npc)
 		mod:StoneAngelStatueAI(npc, npc:GetSprite(), npc:GetData())
 	elseif npc.Variant == mod.Monsters.MusicBox.Var then
 		mod:MusicBoxAI(npc, npc:GetSprite(), npc:GetData())
+	elseif npc.Variant == mod.Monsters.Hotato.Var then
+		mod:HotatoAI(npc, npc:GetSprite(), npc:GetData())
 	end
 end
 
@@ -785,7 +788,7 @@ function mod:setUpCutscene(stage, room, noisaac, pos, music)
 			for i = 1, game:GetNumPlayers() do
 				game:GetPlayer(i).Position = game:GetRoom():GetCenterPos()
 				mod.ImInAClosetPleaseHelp = true
-				Isaac.Spawn(162, 2901, -1, game:GetRoom():GetCenterPos(), Vector.Zero, nil)
+				Isaac.Spawn(135, 2901, -1, game:GetRoom():GetCenterPos(), Vector.Zero, nil)
 			end
 		end
 	else
@@ -850,7 +853,7 @@ function mod:AltLockedClosetCutscene()
 			for i = 1, game:GetNumPlayers() do
 				game:GetPlayer(i).Position = game:GetRoom():GetCenterPos()
 				mod.ImInAClosetPleaseHelp = true
-				Isaac.Spawn(162, 2901, -1, game:GetRoom():GetCenterPos(), Vector.Zero, nil)
+				Isaac.Spawn(135, 2901, -1, game:GetRoom():GetCenterPos(), Vector.Zero, nil)
 			end
 		end
 	else
