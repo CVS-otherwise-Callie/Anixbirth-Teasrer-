@@ -241,7 +241,10 @@
 		"WispSubType",
 		"XMLData",
 		"XMLNode",
-		"REPENTOGON"
+		"REPENTOGON",
+		"FiendFolio",
+		"FHAC",
+		"StageAPI"
 	],
     "diagnostics.disable": [
         "need-check-nil"

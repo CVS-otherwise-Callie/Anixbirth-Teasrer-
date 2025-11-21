@@ -19,4 +19,14 @@
         door        = "door_01_normaldoor.png"
         holeinwall  = "door_08_holeinwall.png"
     />
+    <backdrop name="Lonely Door" reftype="1" gfx="lonelydoor1.png" walls="1" wallvariants="1" floors="1" floorvariants="0"
+        lfloorgfx   = "bigwhite.png"
+        nfloorgfx   = "bigwhite.png"
+        props       = "blank.anm2"
+        rocks       = "rocks_basement.png"
+        pit         = "grid_pit.png"
+        bridge      = "grid_bridge.png"
+        door        = "door_01_normaldoor.png"
+        holeinwall  = "door_08_holeinwall.png"
+    />
 </backdrops>

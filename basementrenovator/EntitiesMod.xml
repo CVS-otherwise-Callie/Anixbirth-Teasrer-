@@ -122,6 +122,7 @@ Up to groups of 3.
 <entity ID="161" Variant="52" Name="Potted Fatty" Image="mah boys/pottedfatty.png" BaseHP="20"/>
 <entity ID="161" Variant="59" Name="Webbed Carcass" Image="mah boys/webbedcarcass.png" BaseHP="10"/>
 <entity ID="161" Variant="65" Name="Suck Up" Image="mah boys/suckup.png" BaseHP="10"/>
+<entity ID="161" Variant="70" Name="Hotato" Image="mah boys/hotato.png" BaseHP="20"/>
 <entity ID="161" Variant="71" Name="Hot Potato" Image="mah boys/hot potato.png" BaseHP="10"/>
 <entity ID="161" Variant="72" Name="Furnace" Image="mah boys/furnace.png" BaseHP="12"/>
 <entity ID="161" Variant="73" Name="Scorched Sooter" Image="mah boys/scorchedsooter.png" BaseHP="18"/>
@@ -309,6 +310,7 @@ Use 2, 4, or 6 normally.
 
 	<group Name="HOPE Burning Basement" Label="Burning Basement">
 		<group Name="HOPE Burning Basement Enemies">
+			<entity Name="Hotato"/>
 			<entity Name="Furnace"/>
 			<entity Name="Hot Potato"/>
 			<entity Name="Scorched Sooter"/>

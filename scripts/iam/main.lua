@@ -73,7 +73,8 @@ FHAC:LoadScripts("scripts.iam.monsters", {
 	"souwa",
 	"stoneangelstatue",
 	"musicbox",
-	"hotato"
+	"hotato",
+	"enflamedcrazyspider"
 })
 
 FHAC:LoadScripts("scripts.iam.minibosses", {
@@ -293,6 +294,8 @@ function mod:CVS161AI(npc)
 		mod:MusicBoxAI(npc, npc:GetSprite(), npc:GetData())
 	elseif npc.Variant == mod.Monsters.Hotato.Var then
 		mod:HotatoAI(npc, npc:GetSprite(), npc:GetData())
+	elseif npc.Variant == mod.Monsters.EnflamedCrazySpider.Var then
+		mod:EnflamedCrazySpider(npc, npc:GetSprite(), npc:GetData())
 	end
 end
 
@@ -861,33 +864,6 @@ function mod:AltLockedClosetCutscene()
 	end
 end
 
-function mod:PostDeathSegments(npc, segments, ishead)
-	local d = npc:GetData()
-	if not ishead and not d.FinishedEverything then
-		if not segments or #segments == 0 then return end
-		table.remove(segments, 1)
-		local ent = segments[1]
-		local dat = ent:GetData()
-		for k, butt in ipairs(Isaac.FindByType(mod.Monsters.LarryKingJr.ID, mod.Monsters.LarryKingJr.Var)) do
-			if HasPossibleParentSegs(butt, d) then
-				npc.Parent = segments[1]
-				butt:GetData().SegNumber = butt:GetData().SegNumber - 1
-			end
-		end
-		local buttdat = segments[#segments]:GetData()
-		buttdat.IsButt = true
-		buttdat.name = "Butt"
-		DoDataThing(d, dat)
-	elseif d.IsSegment then
-		for k, butt in ipairs(Isaac.FindByType(mod.Monsters.LarryKingJr.ID, mod.Monsters.LarryKingJr.Var)) do
-			if HasPossibleParentSegs(butt, d) and butt:GetData().SegNumber > d.SegNumber then
-				butt:GetData().SegNumber = butt:GetData().SegNumber - 1
-			end
-		end
-	end
-	d.FinishedEverything = true
-end
-
 function mod:GetAliveEntitiesInDist(npc, dist) --check if jacket made this
 	local tab = {}
 	for k, v in ipairs(Isaac.GetRoomEntities()) do
@@ -1002,6 +978,8 @@ local player = Isaac.GetPlayer()
 mod.LuaFont = Font()
 mod.LuaFont:Load("font/luaminioutlined.fnt") --:Load("mods/Anixbirth-Teasrer-/resources/font/TheFuture.fnt") --
 
+local glitchedtext = nil
+local glitchedvar = nil
 
 local rng = RNG()
 function mod:ShowRoomText()
@@ -1232,6 +1210,10 @@ function mod:CVSNewRoom()
 			player.EntityCollisionClass = 5
 		end
 	end
+end
+
+function mod:ChangeToDoorwayRoomType()
+
 end
 
 --thx ff

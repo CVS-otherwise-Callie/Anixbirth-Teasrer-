@@ -93,6 +93,29 @@ FHAC.Grids = {
     GlobalPoopSpawner = mod:ENT("HOPE Poop Spawner")
 }
 
+FHAC.Floors = {
+    Denial = {}
+}
+
+local depressionStr = "resources.anixbirthluarooms.depression"
+
+FHAC.CustomRooms = {
+    Denial = {
+        Normal = {
+            include(depressionStr .. "denial.denial_cvs"),
+        },
+        Challenge = {
+            include(depressionStr .. "denial.denial_cvs"),
+        },
+        ChallengeBoss = {
+            include(depressionStr .. "denial.denial_cvs"),
+        },
+        Sins = {
+            include(depressionStr .. "denial.denial_cvs"),
+        },
+    }
+}
+
 -----------------------------------------------------------------------------------------------------------------------
 
 local function CheckForTag(entry, tag)

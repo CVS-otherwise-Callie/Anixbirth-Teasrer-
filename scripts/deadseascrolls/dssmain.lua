@@ -104,6 +104,15 @@ local function SureFunc(str, var, outcome, tooltip)
     dest = 'yesNo', tooltip = {strset = tooltip}}
 end
 
+local function CheckVectors(table, element)
+    for k, v in ipairs(table) do
+        if v:Distance(element) == 0 then
+            return true
+        end
+    end
+    return false
+end
+
 local buttonAchievements = {}
 local panelFilterOptions = {
     nil,

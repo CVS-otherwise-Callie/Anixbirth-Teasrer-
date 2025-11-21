@@ -46,6 +46,7 @@ function mod:HotatoAI(npc, sprite, d)
     end
 
     if d.oldHP ~= d.hpState then
+
         local creep = Isaac.Spawn(1000, EffectVariant.CREEP_BLACK, 0, npc.Position, Vector.Zero, npc)
         creep:GetSprite().Color:SetTint(0.5, 0.5, 0.5, 0.8)
         creep:ToEffect().Timeout = 10000000
