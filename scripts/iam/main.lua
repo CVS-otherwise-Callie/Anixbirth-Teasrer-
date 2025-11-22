@@ -74,7 +74,8 @@ FHAC:LoadScripts("scripts.iam.monsters", {
 	"stoneangelstatue",
 	"musicbox",
 	"hotato",
-	"enflamedcrazyspider"
+	"enflamedcrazyspider",
+	"amekazte"
 })
 
 FHAC:LoadScripts("scripts.iam.minibosses", {
@@ -296,6 +297,8 @@ function mod:CVS161AI(npc)
 		mod:HotatoAI(npc, npc:GetSprite(), npc:GetData())
 	elseif npc.Variant == mod.Monsters.EnflamedCrazySpider.Var then
 		mod:EnflamedCrazySpider(npc, npc:GetSprite(), npc:GetData())
+	elseif npc.Variant == mod.Monsters.Amekatze.Var then
+		mod:AmekatzeAI(npc, npc:GetSprite(), npc:GetData())
 	end
 end
 
@@ -1042,16 +1045,14 @@ function mod:ShowRoomText()
 				end
 				text = text..letter
 			end
-			local pastext = vartext
+			pastext = vartext
 			vartext = ""
 			for i = 0, tonumber(string.len(pastext)) do
-				if i ~= "-" or i ~= "" then
-				local letter = string.sub(pastext, i, i)
-				if math.random(1, 5) == 1 then
-					letter = math.random(1, 9)
-				end
-				vartext = vartext..tostring(letter)
-				end
+					local letter = string.sub(pastext, i, i)
+					if math.random(1, 5) == 1 then
+						letter = tostring(math.random(1, 9))
+					end
+					vartext = vartext..tostring(letter)
 			end
 			if math.random(3) == 3 then
 				glitchedtext = text
@@ -1336,6 +1337,32 @@ function FHAC:GetFireProjectileCollisions()
 				entity:TakeDamage(1, DamageFlag.DAMAGE_FIRE, EntityRef(fire), 0)
 			end
 		end
+	end
+end
+
+function mod:findHideablePlace(npc, d, target)
+	local closestgridpoint
+	local room = Game:GetRoom()
+
+	local imtheclosest = 0 --just a absurdly big number
+	local tab = {}
+	for i = 0, room:GetGridSize() do
+		if room:GetGridPosition(i) ~= nil then
+			local gridpoint = room:GetGridPosition(i)
+			if (room:GetGridEntity(i) == nil or room:GetGridEntity(i) == true) and room and room:IsPositionInRoom(gridpoint, 0) and not game:GetRoom():CheckLine(target.Position,gridpoint,0,900,false,false) then
+				if gridpoint:Distance(target.Position) > imtheclosest then
+					imtheclosest = gridpoint:Distance(target.Position)
+					closestgridpoint = gridpoint
+				end
+				table.insert(tab, gridpoint)
+			end
+		end
+	end
+	if mod:IsTableEmpty(tab) then
+		d.state = "wander"
+		return npc.Position
+	else
+		return closestgridpoint
 	end
 end
 

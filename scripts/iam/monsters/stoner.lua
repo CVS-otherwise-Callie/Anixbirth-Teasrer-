@@ -59,7 +59,6 @@ function mod:StonerAI(npc, sprite, d)
         d.movementinit= false
     end
 
-    ---@param plate GridEntity
     local function ActivePressurePlate(plate) --thanks kerkel!!!!
         if plate.State ~= 0 then return end
         sfx:Play(469, 1, 0, false, 1, 0)

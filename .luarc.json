@@ -242,9 +242,16 @@
 		"XMLData",
 		"XMLNode",
 		"REPENTOGON",
-		"FiendFolio",
+		"FiendFolio", //everything from below this point are defined globals from other mods that i dont want to make look off and like a problem
 		"FHAC",
-		"StageAPI"
+		"StageAPI",
+		"Beam",
+		"Capsule",
+		"include",
+		"GODMODE",
+		"__eidItemDescriptions",
+		"__eidItemTransformations",
+		"STARTING_ROOM"
 	],
     "diagnostics.disable": [
         "need-check-nil"

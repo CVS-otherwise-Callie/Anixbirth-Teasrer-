@@ -192,9 +192,6 @@ function mod.scheduleCallback(foo, delay, callback, noCancelOnNewRoom)
 end
 
 ---thanks to mr. catwizard on this!!
----@param point Vector
----@param lineStart Vector
----@param lineEnd Vector
 function mod:getDistanceToLineSegment(point, lineStart, lineEnd)
     local diff = lineEnd - lineStart
     local len_sq = diff:LengthSquared()
@@ -222,8 +219,6 @@ end
 
 local DISTANCE_THRESHOLD = 20
 
----@param lineStart Vector
----@param lineEnd Vector
 function mod:FindEntitiesInLine(lineStart, lineEnd, ent)
     local result = {}
     --for _, ent in ipairs(entities) do
@@ -235,8 +230,6 @@ function mod:FindEntitiesInLine(lineStart, lineEnd, ent)
     return result
 end
 
----@param lineStart Vector
----@param lineEnd Vector
 function mod:AreEntitiesInLine(lineStart, lineEnd, ent)
     local result = {}
     --for _, ent in ipairs(entities) do
