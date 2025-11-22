@@ -10,7 +10,7 @@ function mod:EnflamedCrazySpider(npc, sprite, d)
     local room = game:GetRoom()
 
     if not d.init then
-        d.slamCooldown = 80
+        d.slamCooldown = 80 + math.random(-10, 10)
         d.state = "wanderFast"
         d.wanderCooldown = 5
         d.chaseOff = 0
@@ -36,7 +36,7 @@ function mod:EnflamedCrazySpider(npc, sprite, d)
             path:FindGridPath(targetpos, 0.7, 1, true)
         end
 
-        if npc.StateFrame > 80 then
+        if npc.StateFrame > d.slamCooldown then
             d.state = "slammingTime"
         end
     elseif d.state == "slammingTime" then
@@ -46,7 +46,7 @@ function mod:EnflamedCrazySpider(npc, sprite, d)
 
         mod:spritePlay(sprite, "SlamQuick" .. d.animName)
 
-        if d.animName == "" and npc.StateFrame > 20 then
+        if d.animName == "" and npc.StateFrame > (d.slamCooldown/5) then
             d.animName = "End"
         end
     end

@@ -129,6 +129,7 @@ Up to groups of 3.
 <entity ID="161" Variant="81" Name="Firehead" Image="mah boys/firehead.png" BaseHP="13"/>
 <entity ID="161" Variant="84" Name="Trilo" Image="mah boys/trilo.png" BaseHP="10"/>
 <entity ID="161" Variant="91" Name="Schmoot" Image="mah boys/schmoot.png" BaseHP="16" Tags="Champion"/>
+<entity ID="161" Variant="94" Name="Enflamed Crazy Spider" Image="mah boys/enflamedcrazyspider.png" BaseHP="16" Tags="Champion"/>
 <entity ID="161" Variant="97" Name="Lil' Flash" Image="mah boys/lilflash.png" BaseHP="7" Tags="Champion"/>
 <entity ID="161" Variant="101" Name="Soot" Image="mah boys/soot.png" BaseHP="3"/>
 <entity ID="161" Variant="108" Name="Spaarker" Image="mah boys/spaarker.png" BaseHP="10" StageHP="4"  Tags="Champion"/>
@@ -320,6 +321,7 @@ Use 2, 4, or 6 normally.
 			<entity Name="Lil' Flash"/>
 			<entity Name="Soot"/>
 			<entity Name="Spaarker"/>
+			<entity Name="Enflamed Crazy Spider"/>
 		</group>
 	</group>
    
