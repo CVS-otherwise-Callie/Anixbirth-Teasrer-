@@ -4,10 +4,10 @@ local rng = RNG()
 local sfx = SFXManager()
 
 mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
-    if npc.Variant == mod.CVSMonsters.Gunslinger.Var and npc.SubType == 0 then
+    if npc.Variant == mod.Monsters.Gunslinger.Var and npc.SubType == 0 then
         mod:GunslingerAI(npc, npc:GetSprite(), npc:GetData())
     end
-end, mod.CVSMonsters.Gunslinger.ID)
+end, mod.Monsters.Gunslinger.ID)
 
 function mod:GunslingerAI(npc, sprite, d)
 
@@ -83,7 +83,7 @@ function mod:GunslingerAI(npc, sprite, d)
     end
 
     if sprite:IsEventTriggered("gun") then
-        local gun = Isaac.Spawn(EntityType.ENTITY_EFFECT, 2556, 0, npc.Position, Vector(10, 0):Rotated((targetpos - npc.Position):GetAngleDegrees()+ math.random(-50, 50)), npc)
+        local gun = Isaac.Spawn(EntityType.ENTITY_EFFECT, mod.Effects.GunslingerGun.Var, 0, npc.Position, Vector(10, 0):Rotated((targetpos - npc.Position):GetAngleDegrees()+ math.random(-50, 50)), npc)
         gun:GetData().target = target
         gun.Parent = npc
     elseif sprite:IsEventTriggered("Hold") then

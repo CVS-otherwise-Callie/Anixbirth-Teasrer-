@@ -74,6 +74,7 @@ function FHAC:ProjCollStuff(v,c)
     local d = v:GetData();
 
     FHAC.RemoveWostProj(v, c, d)
+    FHAC.SherrifShotsCollisionPlayer(v, c)
     FHAC.UpdateSillyStringProj(v, c, d)
 end
 
@@ -281,5 +282,8 @@ if REPENTOGON then
 		if id == 63 and GODMODE then
 			return Isaac.GetMusicIdByName("godmodeTitle")
 		end
+        if id == 63 --and math.random(1, 1000000) == 1000000 then
+            return Isaac.GetMusicIdByName("annexTitle")
+        end
 	end)
 end

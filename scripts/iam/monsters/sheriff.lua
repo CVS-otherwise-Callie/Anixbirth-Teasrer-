@@ -4,10 +4,10 @@ local rng = RNG()
 local sfx = SFXManager()
 
 mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, function(_, npc)
-    if npc.Variant == mod.CVSMonsters.Sheriff.Var then
+    if npc.Variant == mod.Monsters.Sheriff.Var then
         mod:SheriffAI(npc, npc:GetSprite(), npc:GetData())
     end
-end, mod.CVSMonsters.Sheriff.ID)
+end, mod.Monsters.Sheriff.ID)
 
 function mod:SheriffAI(npc, sprite, d)
 

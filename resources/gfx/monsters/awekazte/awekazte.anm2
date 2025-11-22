@@ -6,7 +6,6 @@
             <Spritesheet Path="awekazte.png" Id="1"/>
         </Spritesheets>
         <Layers>
-            <Layer Name="New Layer" Id="-1" SpritesheetId="-1"/>
             <Layer Name="body" Id="0" SpritesheetId="0"/>
             <Layer Name="head" Id="1" SpritesheetId="1"/>
         </Layers>

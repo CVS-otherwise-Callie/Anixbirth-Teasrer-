@@ -75,6 +75,39 @@ function mod:freeGrid(npc, path, far, close, closest) -- the npc, should it be a
 	return tab[math.random(1, #tab)]
 end
 
+function mod:GetNewPosAlignedXAxis(pos,ignorerocks)
+	local room = game:GetRoom()
+	local vec = Vector(0, 40)
+	local positions = {}
+	for i = 1, 4 do
+		local gridvalid = true
+		local dist = 1
+		while gridvalid == true do
+			local newpos = pos + (vec:Rotated(i*90) * dist)
+				local gridColl = room:GetGridCollisionAtPos(newpos)
+				if (gridColl ~= GridCollisionClass.COLLISION_NONE or dist > 25) and not ignorerocks then
+					gridvalid = false
+				elseif ignorerocks and gridColl == GridCollisionClass.COLLISION_WALL or dist > 25 then
+					gridvalid = false
+				else
+					if math.abs(newpos.Y - pos.Y) == 0 then
+						table.insert(positions, newpos)
+					end
+					dist = dist + 1
+				end
+		end
+	end
+	--[[for i = 1, #positions do
+		Isaac.Spawn(5, 40, 0, positions[i], nilvector, npc):ToEffect()
+	end]]
+	if #positions > 0 then
+		return positions[math.random(#positions)]
+	else
+		return pos
+	end
+end
+
+
 function mod:freeGridToPos(pos, path, far, close, closest) -- the position, should it be able to pathfind there, max dist from gridpoint, min dist from gridpoint, should it just find the closest avaible space
 	local room = game:GetRoom()
 	path = path or false

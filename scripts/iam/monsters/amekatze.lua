@@ -13,9 +13,46 @@ function mod:AmekatzeAI(npc, sprite, d)
     d.typename = d.typename or "HasBeenPlanted"
 
     if npc.SubType == 1 then
-        mod:spritePlay("Bomb" .. d.typename)
+        mod:spritePlay(sprite, "Bomb" .. d.typename)
+        npc:MultiplyFriction(0.1)
     else
-        d.hidingplace = mod:findHideablePlace(npc, d, target)
+
+        if mod:isScare(npc) then
+            if target.Position.X > npc.Position.X then
+                sprite.FlipX = true
+                else
+                sprite.FlipX = false
+            end
+        else
+            if target.Position.X > npc.Position.X then
+                sprite.FlipX = false
+                else
+                sprite.FlipX = true
+            end
+        end
+
+        local teartab = {}
+
+        for k, v in ipairs(Isaac.GetRoomEntities()) do
+            if v.Type == 2 then
+                table.insert(teartab, v)
+            end
+        end
+
+        local closesttear
+        local initdis = 10^10
+        for k, v in ipairs(teartab) do
+            local dis = npc.Position:Distance(v.Position)
+            if dis < initdis then
+                closesttear = v
+            end
+        end
+
+        if closesttear then
+            path:EvadeTarget(closesttear.Position)
+        end
+
+        d.hidingplace = mod:findHideablePlace(target)
 
         if mod:isCharm(npc) then
             npc.Velocity = npc.Velocity + npc.Velocity:Normalized() * 1.05
@@ -37,14 +74,14 @@ function mod:AmekatzeAI(npc, sprite, d)
             local bomb = Isaac.Spawn(mod.Monsters.Amekatze.ID, mod.Monsters.Amekatze.Var, 1, npc.Position, Vector.Zero, npc)
             bomb:ClearEntityFlags(EntityFlag.FLAG_APPEAR)
         end
+
+        npc:AnimWalkFrame("WalkHori","WalkVert",0)
+        mod:spriteOverlayPlay(sprite, "Walk")
     end
 
-    npc:AnimWalkFrame("WalkHori","WalkVert",0)
-    mod:spriteOverlayPlay(sprite, "Walk")
-
     if sprite:IsFinished("BombHasBeenPlanted") then
-        d.typename = "ReadyToExplode"
-    elseif sprite:IsFinished("ReadyToExplode") then
+        d.typename = "ReadytoExplode"
+    elseif sprite:IsFinished("BombReadytoExplode") then
         Isaac.Explode(npc.Position, npc, 80)
         npc:Kill()
     end

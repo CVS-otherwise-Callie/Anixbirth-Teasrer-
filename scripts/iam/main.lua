@@ -75,7 +75,9 @@ FHAC:LoadScripts("scripts.iam.monsters", {
 	"musicbox",
 	"hotato",
 	"enflamedcrazyspider",
-	"amekazte"
+	"amekatze",
+	"sheriff",
+	"gunslinger"
 })
 
 FHAC:LoadScripts("scripts.iam.minibosses", {
@@ -99,7 +101,8 @@ FHAC:LoadScripts("scripts.iam.effects", {
 	"wideweb",
 	"cvsfire",
 	"raingrideffect",
-	"textbox"
+	"textbox",
+	"gunslinger gun"
 })
 
 FHAC:LoadScripts("scripts.iam.familiars", {
@@ -1340,9 +1343,31 @@ function FHAC:GetFireProjectileCollisions()
 	end
 end
 
-function mod:findHideablePlace(npc, d, target)
+function mod:GetFarthestPosition(pos1)
 	local closestgridpoint
-	local room = Game:GetRoom()
+	local room = Game():GetRoom()
+
+	local imthefarthest = 0
+	local tab = {}
+	for i = 0, room:GetGridSize() do
+		if room:GetGridPosition(i) ~= nil then
+			local gridpoint = room:GetGridPosition(i)
+			if (room:GetGridEntity(i) == nil or room:GetGridEntity(i) == true) and room and room:IsPositionInRoom(gridpoint, 0) then
+				if gridpoint:Distance(pos1) > imthefarthest then
+					imthefarthest = gridpoint:Distance(pos1)
+					closestgridpoint = gridpoint
+				end
+				table.insert(tab, gridpoint)
+			end
+		end
+	end
+
+	return closestgridpoint
+end
+
+function mod:findHideablePlace(target)
+	local closestgridpoint
+	local room = Game():GetRoom()
 
 	local imtheclosest = 0 --just a absurdly big number
 	local tab = {}
@@ -1359,8 +1384,7 @@ function mod:findHideablePlace(npc, d, target)
 		end
 	end
 	if mod:IsTableEmpty(tab) then
-		d.state = "wander"
-		return npc.Position
+		return mod:GetFarthestPosition(target.Position)
 	else
 		return closestgridpoint
 	end
@@ -1380,4 +1404,5 @@ function FHAC:CVSProjStuff(v)
     FHAC.webbedCreepProj(v, d)
     FHAC.BewebbedShot(v, d)
 	FHAC.StallCreepShots(v, d)
+    FHAC.SheriffShots(v, d)
 end

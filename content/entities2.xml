@@ -488,7 +488,7 @@
     </entity>
 
     <!--Burning Basement-->
-    <entity anm2path="monsters/awekazte/awekatze.anm2" reroll="true" baseHP="13" boss="0" champion="1" collisionDamage="0" collisionMass="6" collisionRadius="13" friction="1" id="16" name="Amekazte" numGridCollisionPoints="12" shadowSize="13" stageHP="0" variant="68" portrait="12">
+    <entity anm2path="monsters/awekazte/awekazte.anm2" reroll="true" baseHP="13" boss="0" champion="1" collisionDamage="0" collisionMass="6" collisionRadius="13" friction="1" id="161" name="Amekatze" numGridCollisionPoints="12" shadowSize="13" stageHP="0" variant="68" portrait="12">
 		<bestiary transform="0,0,1" anim="WalkVert" overlay="Walk" />
         <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
         <preload-snd id="143" /> <!-- SOUND_SCARED_WHIMPER -->
@@ -878,6 +878,7 @@
     <entity anm2path="effects/nothing.anm2" name="Dekatessera Effect" id="1000" variant="427" subtype="0" baseHP="0" stageHP="0" shieldStrength="0" boss="0" champion="0" collisionDamage="0" collisionMass="0" collisionRadius="0" friction="1" numGridCollisionPoints="0" shadowSize="0"/>
 	<entity anm2path="grid/nothing.anm2" baseHP="0" boss="0" champion="0" collisionDamage="1" collisionMass="0" collisionRadius="4" friction="1" id="1000" name="Rain Grid Effect" numGridCollisionPoints="1" shadowSize="0" stageHP="0" variant="432"/>
     <entity anm2path="effects/nothing.anm2" name="Smokescreen Effect" id="1000" variant="433" subtype="0" baseHP="0" stageHP="0" shieldStrength="0" boss="0" champion="0" collisionDamage="0" collisionMass="0" collisionRadius="0" friction="1" numGridCollisionPoints="0" shadowSize="0"/>
+    <entity anm2path="effects/gunslinger gun.anm2" name="Gunslinger Gun" id="1000" variant="2556" subtype="0" baseHP="0" stageHP="0" shieldStrength="0" boss="0" champion="0" collisionDamage="1" collisionMass="5" collisionRadius="10" friction="1" numGridCollisionPoints="10" shadowSize="0"/>
     <!--uhhhhmmmmm awkward forget this exists-->
     <entity anm2path="effects/effect_wideweb.anm2" name="Large Spiderweb" id="1000" variant="428" subtype="0" baseHP="0" stageHP="0" shieldStrength="0" boss="0" champion="0" collisionDamage="0" collisionMass="0" collisionRadius="0" friction="1" numGridCollisionPoints="0" shadowSize="0"/>
     <!--fire-->

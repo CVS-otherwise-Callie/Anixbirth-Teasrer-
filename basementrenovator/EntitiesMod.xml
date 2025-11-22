@@ -8,6 +8,9 @@
 <entity ID="95" Variant="1" Name="Chomb" Image="mah boys/chomb.png" BaseHP="40" ShieldStrength="15" StageHP="10"/>
 <entity ID="95" Variant="2" Name="Sam Bear" Image="mah boys/samboss.png" BaseHP="500" ShieldStrength="500"/>
 
+<entity ID="139" Variant="1002" Name="Sheriff" Image="enemies/sheriff.png" BaseHP="24"/>
+<entity ID="139" Variant="1003" Name="Gunslinger" Image="enemies/gunslinger.png" BaseHP="20" StageHP="5"/>
+
 <entity ID="161" Variant="1" Name="Toast" Image="mah boys/toast.png" BaseHP="14"/>
 <entity ID="161" Variant="2" Name="Larry King Jr." Image="mah boys/larrykingjr.png" BaseHP="10">
 <bitfield Key="Subtype">
@@ -382,6 +385,13 @@ Use 2, 4, or 6 normally.
 		</group>
 	</group>
 
+	<group Name="HOPE Ashpit" Label="Ashpit">
+		<group Name="HOPE Ashpit Enemies">
+		   <entity Name="Sheriff"/>
+		   <entity Name="Gunslinger"/>
+		</group>
+	</group>
+
 	<group Name="HOPE Depths" Label="Depths">
 		<group Name="HOPE Depths Enemies">
 			<entity Name="Babble"/>
@@ -501,6 +511,10 @@ Use 2, 4, or 6 normally.
 
 <group Name="Mines Enemies">
 	<group Name="HOPE Mines Enemies"/>
+</group>
+
+<group Name="Ashpit Enemies">
+	<group Name="HOPE Ashpit Enemies"/>
 </group>
 
 <group Name="Depths Enemies">

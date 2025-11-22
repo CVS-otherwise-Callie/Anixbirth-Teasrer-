@@ -23,6 +23,7 @@
 
         <!-- Other mod Music -->
         <track name="godmodeTitle" path="mus_godmode_title.ogg" loop="true"/>
+        <track name="annexTitle" path="mus_annex_title.ogg" loop="true"/>
 
         <!-- We are so getting copyrighted for this -->
         <track name="PongonLevel" path="pongonlevel.ogg" loop="true"/>

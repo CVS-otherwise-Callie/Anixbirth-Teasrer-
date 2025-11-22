@@ -182,7 +182,6 @@ for i = 1, XMLData.GetNumEntries(XMLNode.NULLITEM) do
 		for _ = 1, #entry.name do
 			name = mod:gsubMany(name, " ", "'", "-", "=")
 		end
-        print(name, entry.id)
         FHAC.Collectibles.Null[tostring(name)] = tonumber(entry.id)
 	end
 end
