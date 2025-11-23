@@ -1,5 +1,5 @@
 <AnimatedActor>
-    <Info CreatedBy="robot" CreatedOn="20.11.2025 16:52:10" Version="115" Fps="30"/>
+    <Info CreatedBy="CVS and TJP and Dymoz all together as a team" CreatedOn="20.11.2025 16:52:10" Version="116" Fps="30"/>
     <Content>
         <Spritesheets>
             <Spritesheet Path="awekazte body.png" Id="0"/>
