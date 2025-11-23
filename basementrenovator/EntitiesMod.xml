@@ -8,8 +8,7 @@
 <entity ID="95" Variant="1" Name="Chomb" Image="mah boys/chomb.png" BaseHP="40" ShieldStrength="15" StageHP="10"/>
 <entity ID="95" Variant="2" Name="Sam Bear" Image="mah boys/samboss.png" BaseHP="500" ShieldStrength="500"/>
 
-<entity ID="139" Variant="1002" Name="Sheriff" Image="enemies/sheriff.png" BaseHP="24"/>
-<entity ID="139" Variant="1003" Name="Gunslinger" Image="enemies/gunslinger.png" BaseHP="20" StageHP="5"/>
+
 
 <entity ID="161" Variant="1" Name="Toast" Image="mah boys/toast.png" BaseHP="14"/>
 <entity ID="161" Variant="2" Name="Larry King Jr." Image="mah boys/larrykingjr.png" BaseHP="10">

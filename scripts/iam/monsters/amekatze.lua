@@ -16,7 +16,7 @@ function mod:AmekatzeAI(npc, sprite, d)
         mod:spritePlay(sprite, "Bomb" .. d.typename)
 
         if sprite:IsPlaying("BombHasBeenPlanted") then
-            npc.Velocity = mod:Lerp(npc.Velocity, (target.Position - npc.Position):Resized(7), 0.6)
+            npc.Velocity = mod:Lerp(npc.Velocity, (target.Position - npc.Position):Resized(12), 0.6)
         end
 
         npc:MultiplyFriction(0.85)
@@ -88,6 +88,15 @@ function mod:AmekatzeAI(npc, sprite, d)
         d.typename = "ReadytoExplode"
     elseif sprite:IsFinished("BombReadytoExplode") then
         Isaac.Explode(npc.Position, npc, 80)
+
+        Isaac.Spawn(EntityType.ENTITY_EFFECT, 1, -1, npc.Position, Vector.Zero, npc):ToEffect()
+    
+        for i = 1, 10 do
+            local ef = Isaac.Spawn(EntityType.ENTITY_EFFECT, EffectVariant.DUST_CLOUD, -1, npc.Position + Vector(0, 15):Rotated(36*i),Vector(0, 4):Rotated(36*i), npc):ToEffect()
+            ef:SetTimeout(10)
+            ef.SpriteScale = Vector(0.03,0.03)
+        end
+
         npc:Kill()
     end
 
