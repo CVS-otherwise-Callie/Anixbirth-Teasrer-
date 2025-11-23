@@ -14,7 +14,12 @@ function mod:AmekatzeAI(npc, sprite, d)
 
     if npc.SubType == 1 then
         mod:spritePlay(sprite, "Bomb" .. d.typename)
-        npc:MultiplyFriction(0.1)
+
+        if sprite:IsPlaying("BombHasBeenPlanted") then
+            npc.Velocity = mod:Lerp(npc.Velocity, (target.Position - npc.Position):Resized(7), 0.6)
+        end
+
+        npc:MultiplyFriction(0.85)
     else
 
         if mod:isScare(npc) then
