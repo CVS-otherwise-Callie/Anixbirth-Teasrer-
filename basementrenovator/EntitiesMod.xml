@@ -8,7 +8,8 @@
 <entity ID="95" Variant="1" Name="Chomb" Image="mah boys/chomb.png" BaseHP="40" ShieldStrength="15" StageHP="10"/>
 <entity ID="95" Variant="2" Name="Sam Bear" Image="mah boys/samboss.png" BaseHP="500" ShieldStrength="500"/>
 
-
+<entity ID="139" Variant="1002" Name="Sheriff" Image="mah boys/sheriff.png" BaseHP="24"/>
+<entity ID="139" Variant="1003" Name="Gunslinger" Image="mah boys/gunslinger.png" BaseHP="20" StageHP="5"/>
 
 <entity ID="161" Variant="1" Name="Toast" Image="mah boys/toast.png" BaseHP="14"/>
 <entity ID="161" Variant="2" Name="Larry King Jr." Image="mah boys/larrykingjr.png" BaseHP="10">
@@ -128,6 +129,7 @@ Up to groups of 3.
 <entity ID="161" Variant="71" Name="Hot Potato" Image="mah boys/hot potato.png" BaseHP="10"/>
 <entity ID="161" Variant="72" Name="Furnace" Image="mah boys/furnace.png" BaseHP="12"/>
 <entity ID="161" Variant="73" Name="Scorched Sooter" Image="mah boys/scorchedsooter.png" BaseHP="18"/>
+<entity ID="161" Variant="80" Name="Scorched Peat" Image="mah boys/scorched peat.png" BaseHP="10"/>
 <entity ID="161" Variant="81" Name="Firehead" Image="mah boys/firehead.png" BaseHP="13"/>
 <entity ID="161" Variant="84" Name="Trilo" Image="mah boys/trilo.png" BaseHP="10"/>
 <entity ID="161" Variant="91" Name="Schmoot" Image="mah boys/schmoot.png" BaseHP="16" Tags="Champion"/>
@@ -313,6 +315,7 @@ Use 2, 4, or 6 normally.
 
 	<group Name="HOPE Burning Basement" Label="Burning Basement">
 		<group Name="HOPE Burning Basement Enemies">
+			<entity Name="Scorched Peat"/>
 			<entity Name="Hotato"/>
 			<entity Name="Furnace"/>
 			<entity Name="Hot Potato"/>

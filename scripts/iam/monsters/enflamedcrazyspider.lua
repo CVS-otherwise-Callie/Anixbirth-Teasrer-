@@ -22,15 +22,16 @@ function mod:EnflamedCrazySpider(npc, sprite, d)
     if d.state == "wanderFast" then
         if npc.StateFrame > d.wanderCooldown then
             d.wanderCooldown = d.wanderCooldown + 5
+            d.chaseOff = math.random(-5, 5)
         end
 
         mod:spritePlay(sprite, "Walk")
 
         if mod:isScare(npc) then
-            local targetvelocity = (targetpos - npc.Position):Resized(-10)
+            local targetvelocity = (targetpos - npc.Position):Rotated(d.chaseOff):Resized(-10)
             npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 0.1)
         elseif game:GetRoom():CheckLine(npc.Position,targetpos,0,1,false,false) then
-            local targetvelocity = (targetpos - npc.Position):Resized(10)
+            local targetvelocity = (targetpos - npc.Position):Rotated(d.chaseOff):Resized(10)
             npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 0.1)
         else
             path:FindGridPath(targetpos, 0.7, 1, true)

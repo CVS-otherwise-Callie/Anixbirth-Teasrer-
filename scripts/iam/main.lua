@@ -77,7 +77,8 @@ FHAC:LoadScripts("scripts.iam.monsters", {
 	"enflamedcrazyspider",
 	"amekatze",
 	"sheriff",
-	"gunslinger"
+	"gunslinger",
+	"huo"
 })
 
 FHAC:LoadScripts("scripts.iam.minibosses", {
@@ -302,6 +303,8 @@ function mod:CVS161AI(npc)
 		mod:EnflamedCrazySpider(npc, npc:GetSprite(), npc:GetData())
 	elseif npc.Variant == mod.Monsters.Amekatze.Var then
 		mod:AmekatzeAI(npc, npc:GetSprite(), npc:GetData())
+	elseif npc.Variant == mod.Monsters.Huo.Var then
+		mod:HuoAI(npc, npc:GetSprite(), npc:GetData())
 	end
 end
 

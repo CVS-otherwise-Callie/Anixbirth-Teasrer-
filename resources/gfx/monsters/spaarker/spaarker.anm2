@@ -5,7 +5,6 @@
             <Spritesheet Path="spaarker.png" Id="0"/>
         </Spritesheets>
         <Layers>
-            <Layer Name="New Layer" Id="-1" SpritesheetId="-1"/>
             <Layer Name="body" Id="0" SpritesheetId="0"/>
             <Layer Name="wings" Id="1" SpritesheetId="0"/>
         </Layers>

@@ -69,6 +69,12 @@ function mod:ScorchedPeatAI(npc, sprite, d)
             d.state = "attack"
         end
 
+        if npc.Velocity.X < 0 then
+            sprite.FlipX = true
+        else
+            sprite.FlipX = false
+        end
+
     end
 
 
@@ -96,6 +102,12 @@ function mod:ScorchedPeatAI(npc, sprite, d)
             d.state = "escape"
             d.NewPos = GetScaredPosition()
         end
+
+        if target.Position.X < npc.Position.X then
+            sprite.FlipX = true
+        else
+            sprite.FlipX = false
+        end
     end
 
     if d.state == "escape" then
@@ -115,7 +127,15 @@ function mod:ScorchedPeatAI(npc, sprite, d)
                 d.state = "idle"
             end
         end 
+
+        if npc.Velocity.X < 0 then
+            sprite.FlipX = true
+        else
+            sprite.FlipX = false
+        end
     end
+
+    mod:spritePlay(sprite, "Idle")
 
 end
 

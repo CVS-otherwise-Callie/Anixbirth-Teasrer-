@@ -525,8 +525,12 @@
         <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
         <devolve id="161.12.0" weight="1" />
     </entity>
-    <entity id="161" variant="80" name="Scorched Peat" anm2path="monsters/soot/soot.anm2" reroll="true" baseHP="10" boss="0" champion="1" collisionDamage="1" collisionMass="3" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="13" stageHP="0" portrait="80" gridCollision="walls">
+    <entity id="161" variant="80" name="Scorched Peat" anm2path="monsters/scorched peat/scorched peat.anm2" reroll="true" baseHP="10" boss="0" champion="1" collisionDamage="1" collisionMass="3" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="13" stageHP="0" portrait="80" gridCollision="walls">
 		<bestiary transform="0,0,1" anim="Idle" />
+        <gibs amount="6" blood="1" bone="1" eye="0" gut="1" large="0" />
+    </entity>
+    <entity id="161" variant="82" name="Huo" anm2path="monsters/huo/huo.anm2" reroll="true" baseHP="" boss="0" champion="1" collisionDamage="1" collisionMass="3" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="13" stageHP="0" portrait="">
+		<bestiary transform="0,0,1" anim="Shoot" />
         <gibs amount="6" blood="1" bone="1" eye="0" gut="1" large="0" />
     </entity>
     <entity anm2path="monsters/trilo/trilo.anm2" hasFloorAlts="false" reroll="true" baseHP="10" boss="0" champion="1" collisionDamage="1" collisionMass="5" collisionRadius="13" friction="1" id="161" name="Trilo" numGridCollisionPoints="12" shadowSize="14" stageHP="0" variant="84" portrait="1">
