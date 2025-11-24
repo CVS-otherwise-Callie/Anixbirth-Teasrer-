@@ -1,23 +1,25 @@
 <AnimatedActor>
-    <Info CreatedBy="Unknown" CreatedOn="23.11.2025 13:58:56" Version="10" Fps="30"/>
+    <Info CreatedBy="Dymoz" CreatedOn="23.11.2025 13:58:56" Fps="30" Version="10"/>
     <Content>
         <Spritesheets>
-            <Spritesheet Path="huo.png" Id="0"/>
-            <Spritesheet Path="huo faces.png" Id="1"/>
+            <Spritesheet Id="0" Path="huo.png"/>
+            <Spritesheet Id="1" Path="huo faces.png"/>
         </Spritesheets>
         <Layers>
-            <Layer Name="flame" Id="0" SpritesheetId="0"/>
-            <Layer Name="face" Id="1" SpritesheetId="1"/>
+            <Layer Id="0" Name="flame" SpritesheetId="0"/>
+            <Layer Id="1" Name="face" SpritesheetId="1"/>
         </Layers>
         <Nulls>
-            <Null Name="overlay effect" Id="0"/>
+            <Null Id="0" Name="overlay effect"/>
         </Nulls>
-        <Events/>
+        <Events>
+            <Event Id="0" Name="Shoot"/>
+        </Events>
     </Content>
     <Animations DefaultAnimation="Out">
         <Animation Name="Out" FrameNum="8" Loop="false">
             <RootAnimation>
-                <Frame XPosition="0" YPosition="0" XScale="100" YScale="100" Delay="1" Visible="true" RedTint="255" GreenTint="255" BlueTint="255" AlphaTint="255" RedOffset="0" GreenOffset="0" BlueOffset="0" Rotation="0" Interpolated="false"/>
+                <Frame XPosition="0" YPosition="0" Delay="1" Visible="true" XScale="100" YScale="100" RedTint="255" GreenTint="255" BlueTint="255" AlphaTint="255" RedOffset="0" GreenOffset="0" BlueOffset="0" Rotation="0" Interpolated="false"/>
             </RootAnimation>
             <LayerAnimations>
                 <LayerAnimation LayerId="0" Visible="true">
@@ -40,7 +42,7 @@
         </Animation>
         <Animation Name="Idle" FrameNum="8" Loop="true">
             <RootAnimation>
-                <Frame XPosition="0" YPosition="0" XScale="100" YScale="100" Delay="1" Visible="true" RedTint="255" GreenTint="255" BlueTint="255" AlphaTint="255" RedOffset="0" GreenOffset="0" BlueOffset="0" Rotation="0" Interpolated="false"/>
+                <Frame XPosition="0" YPosition="0" Delay="1" Visible="true" XScale="100" YScale="100" RedTint="255" GreenTint="255" BlueTint="255" AlphaTint="255" RedOffset="0" GreenOffset="0" BlueOffset="0" Rotation="0" Interpolated="false"/>
             </RootAnimation>
             <LayerAnimations>
                 <LayerAnimation LayerId="0" Visible="true">
@@ -60,7 +62,7 @@
         </Animation>
         <Animation Name="ReadyShoot" FrameNum="15" Loop="false">
             <RootAnimation>
-                <Frame XPosition="0" YPosition="0" XScale="100" YScale="100" Delay="1" Visible="true" RedTint="255" GreenTint="255" BlueTint="255" AlphaTint="255" RedOffset="0" GreenOffset="0" BlueOffset="0" Rotation="0" Interpolated="false"/>
+                <Frame XPosition="0" YPosition="0" Delay="1" Visible="true" XScale="100" YScale="100" RedTint="255" GreenTint="255" BlueTint="255" AlphaTint="255" RedOffset="0" GreenOffset="0" BlueOffset="0" Rotation="0" Interpolated="false"/>
             </RootAnimation>
             <LayerAnimations>
                 <LayerAnimation LayerId="0" Visible="true">
@@ -95,7 +97,7 @@
         </Animation>
         <Animation Name="Shoot" FrameNum="8" Loop="false">
             <RootAnimation>
-                <Frame XPosition="0" YPosition="0" XScale="100" YScale="100" Delay="1" Visible="true" RedTint="255" GreenTint="255" BlueTint="255" AlphaTint="255" RedOffset="0" GreenOffset="0" BlueOffset="0" Rotation="0" Interpolated="false"/>
+                <Frame XPosition="0" YPosition="0" Delay="1" Visible="true" XScale="100" YScale="100" RedTint="255" GreenTint="255" BlueTint="255" AlphaTint="255" RedOffset="0" GreenOffset="0" BlueOffset="0" Rotation="0" Interpolated="false"/>
             </RootAnimation>
             <LayerAnimations>
                 <LayerAnimation LayerId="0" Visible="true">
@@ -114,11 +116,13 @@
             <NullAnimations>
                 <NullAnimation NullId="0" Visible="true"/>
             </NullAnimations>
-            <Triggers/>
+            <Triggers>
+                <Trigger EventId="0" SoundId="-1" AtFrame="3"/>
+            </Triggers>
         </Animation>
         <Animation Name="In" FrameNum="8" Loop="false">
             <RootAnimation>
-                <Frame XPosition="0" YPosition="0" XScale="100" YScale="100" Delay="1" Visible="true" RedTint="255" GreenTint="255" BlueTint="255" AlphaTint="255" RedOffset="0" GreenOffset="0" BlueOffset="0" Rotation="0" Interpolated="false"/>
+                <Frame XPosition="0" YPosition="0" Delay="1" Visible="true" XScale="100" YScale="100" RedTint="255" GreenTint="255" BlueTint="255" AlphaTint="255" RedOffset="0" GreenOffset="0" BlueOffset="0" Rotation="0" Interpolated="false"/>
             </RootAnimation>
             <LayerAnimations>
                 <LayerAnimation LayerId="0" Visible="true">
@@ -141,7 +145,7 @@
         </Animation>
         <Animation Name="BigOut" FrameNum="8" Loop="false">
             <RootAnimation>
-                <Frame XPosition="0" YPosition="0" XScale="100" YScale="100" Delay="1" Visible="true" RedTint="255" GreenTint="255" BlueTint="255" AlphaTint="255" RedOffset="0" GreenOffset="0" BlueOffset="0" Rotation="0" Interpolated="false"/>
+                <Frame XPosition="0" YPosition="0" Delay="1" Visible="true" XScale="100" YScale="100" RedTint="255" GreenTint="255" BlueTint="255" AlphaTint="255" RedOffset="0" GreenOffset="0" BlueOffset="0" Rotation="0" Interpolated="false"/>
             </RootAnimation>
             <LayerAnimations>
                 <LayerAnimation LayerId="0" Visible="true">
@@ -164,7 +168,7 @@
         </Animation>
         <Animation Name="BigIdle" FrameNum="8" Loop="true">
             <RootAnimation>
-                <Frame XPosition="0" YPosition="0" XScale="100" YScale="100" Delay="1" Visible="true" RedTint="255" GreenTint="255" BlueTint="255" AlphaTint="255" RedOffset="0" GreenOffset="0" BlueOffset="0" Rotation="0" Interpolated="false"/>
+                <Frame XPosition="0" YPosition="0" Delay="1" Visible="true" XScale="100" YScale="100" RedTint="255" GreenTint="255" BlueTint="255" AlphaTint="255" RedOffset="0" GreenOffset="0" BlueOffset="0" Rotation="0" Interpolated="false"/>
             </RootAnimation>
             <LayerAnimations>
                 <LayerAnimation LayerId="0" Visible="true">
@@ -184,7 +188,7 @@
         </Animation>
         <Animation Name="BigReadyShoot" FrameNum="15" Loop="false">
             <RootAnimation>
-                <Frame XPosition="0" YPosition="0" XScale="100" YScale="100" Delay="1" Visible="true" RedTint="255" GreenTint="255" BlueTint="255" AlphaTint="255" RedOffset="0" GreenOffset="0" BlueOffset="0" Rotation="0" Interpolated="false"/>
+                <Frame XPosition="0" YPosition="0" Delay="1" Visible="true" XScale="100" YScale="100" RedTint="255" GreenTint="255" BlueTint="255" AlphaTint="255" RedOffset="0" GreenOffset="0" BlueOffset="0" Rotation="0" Interpolated="false"/>
             </RootAnimation>
             <LayerAnimations>
                 <LayerAnimation LayerId="0" Visible="true">
@@ -219,7 +223,7 @@
         </Animation>
         <Animation Name="BigShoot" FrameNum="8" Loop="false">
             <RootAnimation>
-                <Frame XPosition="0" YPosition="0" XScale="100" YScale="100" Delay="1" Visible="true" RedTint="255" GreenTint="255" BlueTint="255" AlphaTint="255" RedOffset="0" GreenOffset="0" BlueOffset="0" Rotation="0" Interpolated="false"/>
+                <Frame XPosition="0" YPosition="0" Delay="1" Visible="true" XScale="100" YScale="100" RedTint="255" GreenTint="255" BlueTint="255" AlphaTint="255" RedOffset="0" GreenOffset="0" BlueOffset="0" Rotation="0" Interpolated="false"/>
             </RootAnimation>
             <LayerAnimations>
                 <LayerAnimation LayerId="0" Visible="true">
@@ -238,11 +242,13 @@
             <NullAnimations>
                 <NullAnimation NullId="0" Visible="true"/>
             </NullAnimations>
-            <Triggers/>
+            <Triggers>
+                <Trigger EventId="-1" SoundId="-1" AtFrame="3"/>
+            </Triggers>
         </Animation>
         <Animation Name="BigIn" FrameNum="8" Loop="false">
             <RootAnimation>
-                <Frame XPosition="0" YPosition="0" XScale="100" YScale="100" Delay="1" Visible="true" RedTint="255" GreenTint="255" BlueTint="255" AlphaTint="255" RedOffset="0" GreenOffset="0" BlueOffset="0" Rotation="0" Interpolated="false"/>
+                <Frame XPosition="0" YPosition="0" Delay="1" Visible="true" XScale="100" YScale="100" RedTint="255" GreenTint="255" BlueTint="255" AlphaTint="255" RedOffset="0" GreenOffset="0" BlueOffset="0" Rotation="0" Interpolated="false"/>
             </RootAnimation>
             <LayerAnimations>
                 <LayerAnimation LayerId="0" Visible="true">

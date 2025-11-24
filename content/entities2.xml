@@ -1,4 +1,4 @@
-<entities anm2root="gfx/" deathanm2="gfx/death monsters.anm2" version="5">
+<entities anm2root="gfx/" deathanm2="gfx/death enemies.anm2" version="5">
 <!--monsters-->
 
     <!--Some bases to use-->
@@ -529,7 +529,7 @@
 		<bestiary transform="0,0,1" anim="Idle" />
         <gibs amount="6" blood="1" bone="1" eye="0" gut="1" large="0" />
     </entity>
-    <entity id="161" variant="82" name="Huo" anm2path="monsters/huo/huo.anm2" reroll="true" baseHP="" boss="0" champion="1" collisionDamage="1" collisionMass="3" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="13" stageHP="0" portrait="">
+    <entity id="161" variant="82" name="Huo" anm2path="monsters/huo/huo.anm2" reroll="true" baseHP="15" boss="0" champion="0" collisionDamage="1" collisionMass="3" collisionRadius="13" friction="0" numGridCollisionPoints="12" shadowSize="13" stageHP="0" portrait="">
 		<bestiary transform="0,0,1" anim="Shoot" />
         <gibs amount="6" blood="1" bone="1" eye="0" gut="1" large="0" />
     </entity>

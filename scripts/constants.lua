@@ -113,6 +113,20 @@ FHAC.CustomRooms = {
         Sins = {
             include(depressionStr .. "denial.denial_cvs"),
         },
+    },
+    Anger = {
+        Normal = {
+            include(depressionStr .. "anger.anger_cvs"),
+        },
+        Challenge = {
+            include(depressionStr .. "anger.anger_cvs"),
+        },
+        ChallengeBoss = {
+            include(depressionStr .. "anger.anger_cvs"),
+        },
+        Sins = {
+            include(depressionStr .. "anger.anger_cvs"),
+        },
     }
 }
 
@@ -250,6 +264,9 @@ FHAC.noFireDamage = {
 	"CracklingHost",
 	"ScorchedSooter",
 	"LilFlash",
+    "Huo",
+    "EnflamedCrazySpider",
+    "ScorchedPeat"
 }
 
 FHAC.DirectionToVector = {

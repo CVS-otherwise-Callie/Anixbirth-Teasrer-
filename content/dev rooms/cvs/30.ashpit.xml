@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <rooms>
-	<room variant="65000" name="CVS - Sheriff - Lookin at the new sheriff in town" type="1" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="1.0" lastTestTime="2025-03-30T01:00+00:00">
+	<room variant="45000" name="CVS - Sheriff - Lookin at the new sheriff in town" type="1" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="1.0" lastTestTime="2025-11-24T01:16+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -30,7 +30,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="65001" name="CVS - Sheriff - Flaming hot cheetos be like" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-03-30T01:00+00:00">
+	<room variant="45001" name="CVS - Sheriff - Flaming hot cheetos be like" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-11-24T01:16+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -108,7 +108,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="65002" name="CVS - Sheriff - I keep shooting but they keep coming back!" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-03-30T01:00+00:00">
+	<room variant="45002" name="CVS - Sheriff - I keep shooting but they keep coming back!" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-11-24T01:16+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -168,7 +168,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="65003" name="CVS - Sheriff - Dude jerry stop playing with those bones" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-03-30T01:00+00:00">
+	<room variant="45003" name="CVS - Sheriff - Dude jerry stop playing with those bones" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-11-24T01:16+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -261,7 +261,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="65004" name="CVS - Sheriff - GRRRRRRR (i hate you floating heads)" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-03-30T01:00+00:00">
+	<room variant="45004" name="CVS - Sheriff - GRRRRRRR (i hate you floating heads)" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-11-24T01:16+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -342,7 +342,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="65005" name="CVS - Sheriff - why you little devil, you ghost, you, you dust" type="1" subtype="0" shape="9" width="26" height="14" difficulty="5" weight="1.0" lastTestTime="2025-03-30T01:00+00:00">
+	<room variant="45005" name="CVS - Sheriff - why you little devil, you ghost, you, you dust" type="1" subtype="0" shape="9" width="26" height="14" difficulty="5" weight="1.0" lastTestTime="2025-11-24T01:16+00:00">
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="6"/>
 		<door exists="True" x="6" y="14"/>
@@ -502,7 +502,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="65006" name="CVS - Sheriff - General Naseua" type="1" subtype="0" shape="7" width="26" height="7" difficulty="5" weight="1.0" lastTestTime="2025-03-30T01:00+00:00">
+	<room variant="45006" name="CVS - Sheriff - General Naseua" type="1" subtype="0" shape="7" width="26" height="7" difficulty="5" weight="1.0" lastTestTime="2025-11-24T01:16+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="26" y="3"/>
 		<spawn x="14" y="2">
@@ -530,7 +530,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="65007" name="CVS - Sheriff - Bro took a lil RIDE" type="1" subtype="0" shape="2" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-03-30T01:00+00:00">
+	<room variant="45007" name="CVS - Sheriff - Bro took a lil RIDE" type="1" subtype="0" shape="2" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-11-24T01:16+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="13" y="3"/>
 		<spawn x="1" y="2">
@@ -615,7 +615,7 @@
 			<entity type="139" variant="1002" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="65008" name="CVS - Sheriff - And now, you two ugly people with the same gender" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-03-30T01:00+00:00">
+	<room variant="45008" name="CVS - Sheriff - And now, you two ugly people with the same gender" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-11-24T01:16+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -690,7 +690,7 @@
 			<entity type="139" variant="1002" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="65009" name="CVS - Sheriff - Gotta hide from Clover! er, Isaac" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-03-30T01:00+00:00">
+	<room variant="45009" name="CVS - Sheriff - Gotta hide from Clover! er, Isaac" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-11-24T01:16+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -744,7 +744,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="65010" name="CVS - Sheriff - Play the flute harder lah" type="1" subtype="0" shape="9" width="26" height="14" difficulty="5" weight="1.0" lastTestTime="2025-03-30T01:00+00:00">
+	<room variant="45010" name="CVS - Sheriff - Play the flute harder lah" type="1" subtype="0" shape="9" width="26" height="14" difficulty="5" weight="1.0" lastTestTime="2025-11-24T01:16+00:00">
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="6"/>
 		<door exists="True" x="6" y="14"/>
@@ -886,7 +886,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="65011" name="CVS - Sheriff - Vera shut up about how your ear is horrible I'm DODGING" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-03-30T01:00+00:00">
+	<room variant="45011" name="CVS - Sheriff - Vera shut up about how your ear is horrible I'm DODGING" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-11-24T01:16+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -973,7 +973,7 @@
 			<entity type="880" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="65012" name="CVS - Sheriff - This is like that annoying rat in my kitchen wall" type="1" subtype="0" shape="2" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-03-30T01:00+00:00">
+	<room variant="45012" name="CVS - Sheriff - This is like that annoying rat in my kitchen wall" type="1" subtype="0" shape="2" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-11-24T01:16+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="13" y="3"/>
 		<spawn x="9" y="2">
@@ -1001,7 +1001,7 @@
 			<entity type="23" variant="3" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="65013" name="CVS - Sheriff - The sheriff secretly taking bribes" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-03-30T01:00+00:00">
+	<room variant="45013" name="CVS - Sheriff - The sheriff secretly taking bribes" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-11-24T01:16+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -1058,7 +1058,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="65014" name="CVS - Sheriff - This is what being sniped in TF2 feels like" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-03-30T01:00+00:00">
+	<room variant="45014" name="CVS - Sheriff - This is what being sniped in TF2 feels like" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-11-24T01:16+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -1127,7 +1127,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="65015" name="CVS - Sheriff - Me. You. Lego room." type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-03-30T01:00+00:00">
+	<room variant="45015" name="CVS - Sheriff - Me. You. Lego room." type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-11-24T01:16+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -1193,7 +1193,7 @@
 			<entity type="87" variant="1" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="65016" name="CVS - Sheriff - Guess which one is legal and which stash is not" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-03-30T01:00+00:00">
+	<room variant="45016" name="CVS - Sheriff - Guess which one is legal and which stash is not" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-11-24T01:16+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -1262,7 +1262,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="65017" name="CVS - Sheriff - Can you please please PLEASE go back to jail " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-03-30T01:00+00:00">
+	<room variant="45017" name="CVS - Sheriff - Can you please please PLEASE go back to jail " type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-11-24T01:16+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -1361,7 +1361,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="65018" name="CVS - Sheriff - We're cool we're cool but we kicked outta sunday school (for floating)" type="1" subtype="0" shape="10" width="26" height="14" difficulty="5" weight="1.0" lastTestTime="2025-03-30T01:00+00:00">
+	<room variant="45018" name="CVS - Sheriff - We're cool we're cool but we kicked outta sunday school (for floating)" type="1" subtype="0" shape="10" width="26" height="14" difficulty="5" weight="1.0" lastTestTime="2025-11-24T01:16+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="False" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -1611,7 +1611,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="65019" name="CVS - Sheriff - Shooting GALL-ery (the gall!)" type="1" subtype="0" shape="9" width="26" height="14" difficulty="5" weight="1.0" lastTestTime="2025-03-30T01:00+00:00">
+	<room variant="45019" name="CVS - Sheriff - Shooting GALL-ery (the gall!)" type="1" subtype="0" shape="9" width="26" height="14" difficulty="5" weight="1.0" lastTestTime="2025-11-24T01:16+00:00">
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="6"/>
 		<door exists="True" x="6" y="14"/>
@@ -2086,7 +2086,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="65020" name="CVS - Sheriff - I need to stop making dust rooms cus ik people will yell at me" type="1" subtype="0" shape="9" width="26" height="14" difficulty="5" weight="1.0" lastTestTime="2025-03-30T01:00+00:00">
+	<room variant="45020" name="CVS - Sheriff - I need to stop making dust rooms cus ik people will yell at me" type="1" subtype="0" shape="9" width="26" height="14" difficulty="5" weight="1.0" lastTestTime="2025-11-24T01:16+00:00">
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="6"/>
 		<door exists="True" x="6" y="14"/>
@@ -2216,7 +2216,7 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="65021" name="CVS - Sheriff - Ew sheriffs in spike rooms? Pablooey" type="1" subtype="0" shape="5" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2025-03-30T01:00+00:00">
+	<room variant="45021" name="CVS - Sheriff - Ew sheriffs in spike rooms? Pablooey" type="1" subtype="0" shape="5" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2025-11-24T01:16+00:00">
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="14"/>
 		<spawn x="4" y="2">
@@ -2307,7 +2307,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="65022" name="CVS - Sheriff - Cursty rusty nails on the floor at the pit" type="1" subtype="0" shape="3" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-03-30T01:00+00:00">
+	<room variant="45022" name="CVS - Sheriff - Cursty rusty nails on the floor at the pit" type="1" subtype="0" shape="3" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-11-24T01:16+00:00">
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
 		<spawn x="5" y="2">
@@ -2329,7 +2329,7 @@
 			<entity type="1931" variant="3" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="65023" name="CVS - Sheriff - WEEEEELLLCOME to the pit of ASS" type="1" subtype="0" shape="7" width="26" height="7" difficulty="5" weight="1.0" lastTestTime="2025-03-30T01:00+00:00">
+	<room variant="45023" name="CVS - Sheriff - WEEEEELLLCOME to the pit of ASS" type="1" subtype="0" shape="7" width="26" height="7" difficulty="5" weight="1.0" lastTestTime="2025-11-24T01:16+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="26" y="3"/>
 		<spawn x="0" y="2">
@@ -2354,7 +2354,7 @@
 			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="65024" name="CVS - Sheriff - Playing ping pong wiht a gun" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-03-30T01:00+00:00">
+	<room variant="45024" name="CVS - Sheriff - Playing ping pong wiht a gun" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-11-24T01:16+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -2429,7 +2429,7 @@
 			<entity type="212" variant="4" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="65025" name="CVS - Sheriff - SHOOT-ing gallery (shoot this im out)" type="1" subtype="0" shape="5" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2025-03-30T01:00+00:00">
+	<room variant="45025" name="CVS - Sheriff - SHOOT-ing gallery (shoot this im out)" type="1" subtype="0" shape="5" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2025-11-24T01:16+00:00">
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="14"/>
 		<spawn x="5" y="0">
@@ -2511,7 +2511,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="65026" name="CVS - Sheriff - I need to hide rn cus i stole too much" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-03-30T01:00+00:00">
+	<room variant="45026" name="CVS - Sheriff - I need to hide rn cus i stole too much" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-11-24T01:16+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -2595,7 +2595,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="65027" name="CVS - Sheriff - Have fun dodging THIS, you varmint!" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-03-30T01:00+00:00">
+	<room variant="45027" name="CVS - Sheriff - Have fun dodging THIS, you varmint!" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-11-24T01:16+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -2625,7 +2625,7 @@
 			<entity type="887" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="65028" name="CVS - Sheriff - Grrr i hate rocks or something idk" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-03-30T01:00+00:00">
+	<room variant="45028" name="CVS - Sheriff - Grrr i hate rocks or something idk" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-11-24T01:16+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -2676,7 +2676,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="65029" name="CVS - Sheriff - ShooTING gallery (made by ting ting she's so nice)" type="1" subtype="0" shape="9" width="26" height="14" difficulty="5" weight="1.0" lastTestTime="2025-03-30T01:00+00:00">
+	<room variant="45029" name="CVS - Sheriff - ShooTING gallery (made by ting ting she's so nice)" type="1" subtype="0" shape="9" width="26" height="14" difficulty="5" weight="1.0" lastTestTime="2025-11-24T01:16+00:00">
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="6"/>
 		<door exists="True" x="6" y="14"/>
@@ -2857,7 +2857,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="65030" name="CVS - Sheriff - This one is dedicated to the two boom flies that killed me last run" type="1" subtype="0" shape="8" width="26" height="14" difficulty="5" weight="1.0" lastTestTime="2025-03-30T01:00+00:00">
+	<room variant="45030" name="CVS - Sheriff - This one is dedicated to the two boom flies that killed me last run" type="1" subtype="0" shape="8" width="26" height="14" difficulty="5" weight="1.0" lastTestTime="2025-11-24T01:16+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -3071,7 +3071,7 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="65031" name="CVS - Sheriff - You will NEVER guess why this guy is locked up" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-03-30T01:00+00:00">
+	<room variant="45031" name="CVS - Sheriff - You will NEVER guess why this guy is locked up" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-11-24T01:16+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -3131,7 +3131,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="65032" name="CVS - Sheriff - Why are they grey what happened to them????" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-03-30T01:00+00:00">
+	<room variant="45032" name="CVS - Sheriff - Why are they grey what happened to them????" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-11-24T01:16+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -3170,7 +3170,7 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="65033" name="CVS - Sheriff - Dedicated to uh uhm i hate minecarts in minecraft!" type="1" subtype="0" shape="10" width="26" height="14" difficulty="5" weight="1.0" lastTestTime="2025-03-30T01:00+00:00">
+	<room variant="45033" name="CVS - Sheriff - Dedicated to uh uhm i hate minecarts in minecraft!" type="1" subtype="0" shape="10" width="26" height="14" difficulty="5" weight="1.0" lastTestTime="2025-11-24T01:16+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -3438,7 +3438,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="65034" name="CVS - Sheriff - Have you seen the new minecraft movie (ew)" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-03-30T01:00+00:00">
+	<room variant="45034" name="CVS - Sheriff - Have you seen the new minecraft movie (ew)" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-11-24T01:16+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -3501,7 +3501,7 @@
 			<entity type="1930" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="65035" name="CVS - Sheriff - Imagine being locked up ALL BY YOURSELF hahahahahaha" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-03-30T01:00+00:00">
+	<room variant="45035" name="CVS - Sheriff - Imagine being locked up ALL BY YOURSELF hahahahahaha" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-11-24T01:16+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -3579,7 +3579,7 @@
 			<entity type="5" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="65036" name="CVS - Sheriff - bro wth stop hiding and get your ass back here!!" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-03-30T01:00+00:00">
+	<room variant="45036" name="CVS - Sheriff - bro wth stop hiding and get your ass back here!!" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-11-24T01:16+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -3723,7 +3723,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="65037" name="CVS - Sheriff - Natalia says if i add a dave reference i get cookies" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-03-30T01:00+00:00">
+	<room variant="45037" name="CVS - Sheriff - Natalia says if i add a dave reference i get cookies" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-11-24T01:16+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -3810,7 +3810,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="65038" name="CVS - Sheriff - Up and down this merry go round" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-03-30T01:00+00:00">
+	<room variant="45038" name="CVS - Sheriff - Up and down this merry go round" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-11-24T01:16+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -3867,7 +3867,7 @@
 			<entity type="139" variant="1002" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="65039" name="CVS - Sheriff - Bro we was in the middle of a meetin'!" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-03-30T01:00+00:00">
+	<room variant="45039" name="CVS - Sheriff - Bro we was in the middle of a meetin'!" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-11-24T01:16+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -3951,7 +3951,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="65040" name="CVS - Gunslinger - Spooky scary skeletons" type="1" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2025-03-30T01:00+00:00">
+	<room variant="45040" name="CVS - Gunslinger - Spooky scary skeletons" type="1" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2025-11-24T01:16+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -4082,7 +4082,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="65041" name="CVS - Gunslinger - With shivers down your spine" type="1" subtype="0" shape="5" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2025-03-30T01:00+00:00">
+	<room variant="45041" name="CVS - Gunslinger - With shivers down your spine" type="1" subtype="0" shape="5" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2025-11-24T01:16+00:00">
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="14"/>
 		<spawn x="4" y="0">
@@ -4131,7 +4131,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="65042" name="CVS - Gunslinger - I am going to pluck your soul" type="1" subtype="0" shape="7" width="26" height="7" difficulty="5" weight="1.0" lastTestTime="2025-03-30T01:00+00:00">
+	<room variant="45042" name="CVS - Gunslinger - I am going to pluck your soul" type="1" subtype="0" shape="7" width="26" height="7" difficulty="5" weight="1.0" lastTestTime="2025-11-24T01:16+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="26" y="3"/>
 		<spawn x="3" y="2">
@@ -4156,7 +4156,7 @@
 			<entity type="1931" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="65043" name="CVS - Gunslinger - And scare your dirty mind" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-03-30T01:00+00:00">
+	<room variant="45043" name="CVS - Gunslinger - And scare your dirty mind" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-11-24T01:16+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -4261,7 +4261,7 @@
 			<entity type="1009" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="65044" name="CVS - Gunslinger - How to castle on your phone" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-03-30T01:00+00:00">
+	<room variant="45044" name="CVS - Gunslinger - How to castle on your phone" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-11-24T01:16+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -4282,7 +4282,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="65045" name="CVS - Gunslinger - Little plum baby all by herself" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-03-30T01:00+00:00">
+	<room variant="45045" name="CVS - Gunslinger - Little plum baby all by herself" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-11-24T01:16+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -4333,7 +4333,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="65046" name="CVS - Gunslinger - Im going to vomit all over your guns then you'll be happy won't you" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-03-30T01:00+00:00">
+	<room variant="45046" name="CVS - Gunslinger - Im going to vomit all over your guns then you'll be happy won't you" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-11-24T01:16+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -4384,7 +4384,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="65047" name="CVS - Gunslinger - A mutation in one entity led to these two different enemies" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-03-30T01:00+00:00">
+	<room variant="45047" name="CVS - Gunslinger - A mutation in one entity led to these two different enemies" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-11-24T01:16+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -4432,7 +4432,7 @@
 			<entity type="139" variant="1003" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="65048" name="CVS - Gunslinger - My grand plan, using my brunt and your gun" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-03-30T01:00+00:00">
+	<room variant="45048" name="CVS - Gunslinger - My grand plan, using my brunt and your gun" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-11-24T01:16+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -4528,7 +4528,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="65049" name="CVS - Gunslinger - My golden wings and natural charisma" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-03-30T01:00+00:00">
+	<room variant="45049" name="CVS - Gunslinger - My golden wings and natural charisma" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-11-24T01:16+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -4600,7 +4600,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="65050" name="CVS - Gunslinger - I am the imperial! i am also the boss!" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-03-30T01:00+00:00">
+	<room variant="45050" name="CVS - Gunslinger - I am the imperial! i am also the boss!" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-11-24T01:16+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -4705,7 +4705,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="65051" name="CVS - Gunslinger - Haha fun thing i have fun stuff you want it?" type="1" subtype="0" shape="5" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2025-03-30T01:00+00:00">
+	<room variant="45051" name="CVS - Gunslinger - Haha fun thing i have fun stuff you want it?" type="1" subtype="0" shape="5" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2025-11-24T01:16+00:00">
 		<door exists="True" x="6" y="-1"/>
 		<door exists="False" x="6" y="14"/>
 		<spawn x="6" y="7">
@@ -4766,7 +4766,7 @@
 			<entity type="5" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="65052" name="CVS - Gunslinger - Dust room ahh" type="1" subtype="0" shape="9" width="26" height="14" difficulty="5" weight="1.0" lastTestTime="2025-03-30T01:00+00:00">
+	<room variant="45052" name="CVS - Gunslinger - Dust room ahh" type="1" subtype="0" shape="9" width="26" height="14" difficulty="5" weight="1.0" lastTestTime="2025-11-24T01:16+00:00">
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="6"/>
 		<door exists="True" x="6" y="14"/>
@@ -4956,7 +4956,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="65053" name="CVS - Gunslinger - Bringing guns to the spring fling" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-03-30T01:00+00:00">
+	<room variant="45053" name="CVS - Gunslinger - Bringing guns to the spring fling" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-11-24T01:16+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -5025,7 +5025,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="65054" name="CVS - Gunslinger - No way (AAAHHH)" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-03-30T01:00+00:00">
+	<room variant="45054" name="CVS - Gunslinger - No way (AAAHHH)" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-11-24T01:16+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -5070,7 +5070,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="65055" name="CVS - Gunslinger - Round and round, i'd be vomiting if i was dizzy too" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-03-30T01:00+00:00">
+	<room variant="45055" name="CVS - Gunslinger - Round and round, i'd be vomiting if i was dizzy too" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-11-24T01:16+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -5154,7 +5154,7 @@
 			<entity type="6000" variant="5" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="65056" name="CVS - Gunslinger - Little gun girls and boys" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-03-30T01:00+00:00">
+	<room variant="45056" name="CVS - Gunslinger - Little gun girls and boys" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-11-24T01:16+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -5250,7 +5250,7 @@
 			<entity type="6000" variant="5" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="65057" name="CVS - Gunslinger - It's time to use the ultimate toys" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-03-30T01:00+00:00">
+	<room variant="45057" name="CVS - Gunslinger - It's time to use the ultimate toys" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-11-24T01:16+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -5304,7 +5304,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="65058" name="CVS - Gunslinger - We'll knead him up like pizza doys" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-03-30T01:00+00:00">
+	<room variant="45058" name="CVS - Gunslinger - We'll knead him up like pizza doys" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-11-24T01:16+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -5361,7 +5361,7 @@
 			<entity type="887" variant="0" subtype="1" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="65059" name="CVS - Gunslinger - OH MY GOD STOP DODGING" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-03-30T01:00+00:00">
+	<room variant="45059" name="CVS - Gunslinger - OH MY GOD STOP DODGING" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2025-11-24T01:16+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
