@@ -1,4 +1,4 @@
-// hi fiend folio
+"_comment": "hi fiend folio"
 {	"runtime.version": "Lua 5.3",	"workspace.library": [
 		"c:\\Users\\jl992\\.vscode\\extensions\\filloax.isaac-lua-api-vscode-1.12.0\\out\\emmylua\\repentogon"
 	],	"diagnostics.globals": [
@@ -242,7 +242,7 @@
 		"XMLData",
 		"XMLNode",
 		"REPENTOGON",
-		"FiendFolio", //everything from below this point are defined globals from other mods that i dont want to make look off and like a problem
+		"FiendFolio",
 		"FHAC",
 		"StageAPI",
 		"Beam",
