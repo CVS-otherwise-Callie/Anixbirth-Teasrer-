@@ -81,6 +81,10 @@ FHAC:LoadScripts("scripts.iam.monsters", {
 	"huo"
 })
 
+FHAC:LoadScripts("scripts.iam.bosses", {
+    "megaper"
+})
+
 FHAC:LoadScripts("scripts.iam.minibosses", {
 	"narcissism", --narc!!
 	"chomb",
@@ -328,6 +332,7 @@ mod:AddCallback(ModCallbacks.MC_POST_TEAR_UPDATE, mod.CVSTearAI)
 local rng = RNG()
 local game = Game()
 local sfx = SFXManager()
+local itemConfig = Isaac.GetItemConfig()
 
 -- functions first
 
@@ -384,7 +389,7 @@ function mod:GetClosestGridEntAlongAxis(pos, axis, ignorepoop, ignorehole, rockt
 			if axis == "X" then 
 				if math.abs(gridpoint.Y - pos.Y) < 20 then
 					if mod:CheckTableContents(rocktab, grid:GetType()) then
-						if gridpoint:Distance(pos) < imtheclosest  and grid.CollisionClass ~= 0 then
+						if gridpoint:Distance(pos) < imtheclosest  and (grid.CollisionClass ~= 0 or grid:GetType() == 16) then
 							imtheclosest = gridpoint:Distance(pos)
 							closestgridpoint = grid
 						end
@@ -394,7 +399,7 @@ function mod:GetClosestGridEntAlongAxis(pos, axis, ignorepoop, ignorehole, rockt
 			if axis == "Y" then 
 				if math.abs(gridpoint.X - pos.X) < 20 then
 					if mod:CheckTableContents(rocktab, grid:GetType()) then
-						if gridpoint:Distance(pos) < imtheclosest and grid.CollisionClass ~= 0 then
+						if gridpoint:Distance(pos) < imtheclosest and (grid.CollisionClass ~= 0 or grid:GetType() == 16) then
 							imtheclosest = gridpoint:Distance(pos)
 							closestgridpoint = grid
 						end
@@ -1217,6 +1222,8 @@ function mod:CVSNewRoom()
 			player.EntityCollisionClass = 5
 		end
 	end
+
+    FHAC:SetupMegaperWallEndsForCircling()
 end
 
 function mod:ChangeToDoorwayRoomType()
@@ -1390,6 +1397,118 @@ function mod:findHideablePlace(target)
 		return mod:GetFarthestPosition(target.Position)
 	else
 		return closestgridpoint
+	end
+end
+
+function mod:CheckLastPlayerDamageIsSpikesAtHalfHeart(ent, source)
+
+	local room = game:GetRoom()
+	local rDD = game:GetLevel():GetCurrentRoomDesc().Data
+
+	if rDD.Type == 13 and ent.Position:Distance(room:GetCenterPos()) < 20 and source.Type == 0 and ent.Type == 1 then
+		AnixbirthSaveManager.GetRunSave(ent).lastDamageWasSpikes = true
+	end
+end
+
+function mod:SetupMegaperItem()
+	for i = 1, game:GetNumPlayers() do
+		local ent = Isaac.GetPlayer(i)
+
+		if ent:ToPlayer():GetHearts() == 1 and AnixbirthSaveManager.GetRunSave(ent).lastDamageWasSpikes == true then
+			AnixbirthSaveManager.GetRunSave(ent).lastDamageWasSpikesAndNowWeAreAtHalfAHeart = true
+		end
+
+		if AnixbirthSaveManager.GetRunSave(ent).lastDamageWasSpikesAndNowWeAreAtHalfAHeart == true and not AnixbirthSaveManager.GetRunSave(ent).checkMegDamFirst then
+			AnixbirthSaveManager.GetRunSave(ent).checkMegDamFirst = true
+			AnixbirthSaveManager.GetRunSave(ent).checkMegDamRot = 0
+		end
+
+		print(AnixbirthSaveManager.GetRunSave(ent).checkMegDamRot)
+		if AnixbirthSaveManager.GetRunSave(ent).checkMegDamFirst and game:GetLevel():GetCurrentRoomDesc().Data.Variant == 2 then
+			if AnixbirthSaveManager.GetRunSave(ent).goobPositions and AnixbirthSaveManager.GetRunSave(ent).goobPositions[1] then
+				AnixbirthSaveManager.GetRunSave(ent).localGoobPosition = AnixbirthSaveManager.GetRunSave(ent).localGoobPosition or 1
+				DebugRenderer.Get():Circle(AnixbirthSaveManager.GetRunSave(ent).goobPositions[AnixbirthSaveManager.GetRunSave(ent).localGoobPosition], 10)
+
+				if ent.Position:Distance(AnixbirthSaveManager.GetRunSave(ent).goobPositions[AnixbirthSaveManager.GetRunSave(ent).localGoobPosition]) < 70 then
+					AnixbirthSaveManager.GetRunSave(ent).localGoobPosition = AnixbirthSaveManager.GetRunSave(ent).localGoobPosition + 1
+				end
+			end
+
+			if AnixbirthSaveManager.GetRunSave(ent).localGoobPosition > 4 then
+				AnixbirthSaveManager.GetRunSave(ent).localGoobPosition = 1
+				AnixbirthSaveManager.GetRunSave(ent).checkMegDamRot = AnixbirthSaveManager.GetRunSave(ent).checkMegDamRot + 1
+			end
+		end
+
+		if AnixbirthSaveManager.GetRunSave(ent).checkMegDamRot and AnixbirthSaveManager.GetRunSave(ent).checkMegDamRot > 5 then
+			AnixbirthSaveManager.GetRunSave(ent).lastDamageWasSpikesAndNowWeAreAtHalfAHeart = false
+			AnixbirthSaveManager.GetRunSave(ent).checkMegDamFirst = false
+
+
+			local itemcon = itemConfig:GetCollectible(mod.Collectibles.Items.Megaper)
+			for h = 1, 100 do
+				mod.scheduleCallback(function()
+					if not ent then return end
+					local s = Sprite()
+
+					local pos
+
+					s:Load("gfx/items/collectible.anm2", true)
+					s:Play(s:GetDefaultAnimationName(), true)
+					s:ReplaceSpritesheet(1, itemcon.GfxFileName)
+
+					if i < 80 then
+						s.Color = Color(1, 1, 1, h/100)
+					else
+						s.Color = Color(1, 1, 1, (100-h)/20)
+					end
+
+					s:LoadGraphics()
+
+					--if i < 100 then
+						pos = Game():GetRoom():WorldToScreenPosition(player.Position) + Vector(0, -(player.SpriteScale.Y * 35) + h/3)
+					--end
+
+					s:Render(Vector(pos.X, pos.Y))
+					if h == 100 then
+						if ent then
+							ent:AddCollectible(mod.Collectibles.Items.Megaper)
+						end
+					end
+				end, h, ModCallbacks.MC_POST_RENDER, false)
+			end
+		end
+
+	end
+end
+
+function mod:SetupMegaperWallEndsForCircling()
+	for i = 1, game:GetNumPlayers() do
+		local ent = Isaac.GetPlayer(i)
+
+		local function TechGrudgeEnt(pos)
+
+			local room = game:GetRoom()
+
+			local tab = {GridEntityType.GRID_ROCK, GridEntityType.GRID_ROCKT, GridEntityType.GRID_ROCK_BOMB, GridEntityType.GRID_ROCK_ALT, GridEntityType.GRID_LOCK, GridEntityType.GRID_TNT, GridEntityType.GRID_FIREPLACE,
+			GridEntityType.GRID_WALL, GridEntityType.GRID_DOOR, GridEntityType.GRID_STATUE, GridEntityType.GRID_ROCK_SS, GridEntityType.GRID_PILLAR, GridEntityType.GRID_ROCK_SPIKED, GridEntityType.GRID_ROCK_ALT2,
+			GridEntityType.GRID_ROCK_GOLD}
+
+			--local tab = {GridEntityType.GRID_WALL, GridEntityType.GRID_DOOR}
+			--1 is right, 2 is up, 3 is left, 4 is down
+			if pos == 2 or pos == 4 then
+				return mod:GetClosestGridEntAlongAxisDirection(room:GetCenterPos() + Vector(0, (-3+pos)*30), "Y", true, true, pos*-90, tab, nil, room)
+			end
+
+			if pos == 1 or pos == 3 then
+				return mod:GetClosestGridEntAlongAxisDirection(room:GetCenterPos() + Vector((2-pos)*10, 0), "X", true, true, pos*-90, tab, nil, room)        
+			end
+
+		end
+		AnixbirthSaveManager.GetRunSave(ent).goobPositions = {}
+		for j = 1, 4 do
+			table.insert(AnixbirthSaveManager.GetRunSave(ent).goobPositions, TechGrudgeEnt(j).Position)
+		end
 	end
 end
 

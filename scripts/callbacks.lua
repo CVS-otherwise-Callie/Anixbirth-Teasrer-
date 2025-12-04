@@ -1,5 +1,4 @@
 local game = Game()
-local mod = FHAC
 
 function FHAC.DeathStuff(_, ent)
     FHAC.ShowFortuneDeath()
@@ -51,6 +50,7 @@ function FHAC.PostUpdateStuff()
     if not FHAC.FiendFolioCompactLoaded then
         FHAC.FiendFolioCompat()
     end
+    FHAC:SetupMegaperItem()
     --FHAC.PreSavedEntsLevel = AnixbirthSaveManager.GetRunSave().PreSavedEntsLevel
     --FHAC.SavedEntsLevel = AnixbirthSaveManager.GetRunSave().SavedEntsLevel
     --FHAC.ToBeSavedEnts = AnixbirthSaveManager.GetRunSave().ToBeSavedEnts
@@ -91,7 +91,7 @@ function FHAC:RenderedStuff()
 end
 FHAC:AddCallback(ModCallbacks.MC_POST_RENDER, FHAC.RenderedStuff)
 
-mod:AddCallback(ModCallbacks.MC_POST_FIRE_TEAR, function(_, tear, _, ignorePlayerEffects, isLudo) -- Regular tears
+FHAC:AddCallback(ModCallbacks.MC_POST_FIRE_TEAR, function(_, tear, _, ignorePlayerEffects, isLudo) -- Regular tears
 	local player = nil
 	if not tear.SpawnerEntity then
 		return
@@ -133,7 +133,6 @@ function FHAC:PostNewRoom()
     FHAC:BigOlBowlOfSauerkrautSpawn()
     FHAC:RemoveAllSpecificItemEffects(Isaac.GetPlayer())
     FHAC:SongChangesToIngameOST()
-
     FHAC:CVSNewRoom()
 
     AnixbirthSaveManager.GetRunSave().anixbirthsaveData = AnixbirthSaveManager.GetRunSave().anixbirthsaveData or {}
@@ -220,7 +219,7 @@ end)
 local function EntsNeverTakeFireDamage(npc, damage, flag, source)
 	if flag ~= flag | DamageFlag.DAMAGE_FIRE then return end
 	for _, ent in ipairs(FHAC.noFireDamage) do
-		if npc.Type == mod.Monsters[ent].ID and npc.Variant == mod.Monsters[ent].Var then
+		if npc.Type == FHAC.Monsters[ent].ID and npc.Variant == FHAC.Monsters[ent].Var then
         	npc:SetColor(Color(2,2,2,1,0,0,0),5,2,true,false)
 			npc:ToNPC():PlaySound(SoundEffect.SOUND_SCYTHE_BREAK, 1, 0, false, 0.3)
 			return false
@@ -244,6 +243,7 @@ function FHAC:NPCGetHurtStuff(npc, damage, flag, source, countdown)
         FHAC:PlayerCoralCheck(npc)
         FHAC:StrawDollPassive(npc)
     end
+    FHAC:CheckLastPlayerDamageIsSpikesAtHalfHeart(npc, source)
 
     --extra item stuff
 end

@@ -857,6 +857,10 @@
         <gibs amount="20" blood="1" bone="1" eye="1" gut="1" large="1" />
     </entity>
 
+    <entity anm2path="bosses/megaper.anm2" baseHP="200" boss="1" bossID="1" champion="1" collisionDamage="1" collisionMass="30" collisionRadius="15" friction="1" id="161" name="Megaper" numGridCollisionPoints="12" shieldStrength="20" portrait="1" stageHP="0" variant="3592">
+		<gibs amount="24" blood="1" bone="1" eye="2" gut="1" large="0" />
+	</entity>
+
     <!--Jokes-->
     <entity anm2path="jokes/monsters/willowalker/willowalker.anm2" id="137" variant="3939" reroll="false" baseHP="1" boss="0" champion="0" collisionDamage="0" collisionMass="0" collisionRadius="13" friction="1" name="Willowalker" numGridCollisionPoints="12" shadowSize="12" stageHP="0">
         <gibs amount="0"/>

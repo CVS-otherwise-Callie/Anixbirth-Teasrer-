@@ -7,7 +7,8 @@
     <passive id="6" name="Tums" gfx="006_tums.png" description="No more heartburn!" quality="2"/>
     <passive id="7" name="Traveler's Bag" gfx="007_travalersbag.png" description="Lots of space..." quality="4"/>
     <passive id="8" name="Unwound Cassete" gfx="008_unwoundcassete.png" description="Darn it…" quality="2"/>
-    <passive id="10" name="Bawled Reef" gfx="009_bawledreef.png" description="And the streams dried" quality="3"/>
+    <passive id="9" name="Bawled Reef" gfx="009_bawledreef.png" description="And the streams dried" quality="3"/>
+    <passive id="11" name="Megaper" gfx="010_megaper.png" description="He awaits!!" quality="0" hidden="true"/>
 
     <passive id="20" name="Gros Michel" gfx="020_grosmichel.png" description="JUST [extinct!] ALREADY PLEASEEEEE" quality="3" cache="damage"/>
     <passive id="99" name="Money = Please-let-me-into-epiphany" gfx="099_moneyequalsletmeintoepiphany.png" description="Sorry for the wait..." quality="0" cache="damage" />
