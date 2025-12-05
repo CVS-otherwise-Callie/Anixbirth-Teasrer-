@@ -163,6 +163,15 @@ for i = 1, XMLData.GetNumEntries(XMLNode.ENTITY) do
 		elseif CheckForTag(entry, "miniboss") then
 			FHAC.MiniBosses[tostring(name)] = stats
 		elseif tonumber(entry.boss) == 1 then
+
+            stats = {
+                ID = stats.ID,
+                Var = stats.Var,
+                Sub = stats.Sub,
+                BossName = name,
+                Rooms = "resources.anixbirthluarooms.bosses." .. name
+            }
+
 			FHAC.Bosses[tostring(name)] = stats
 		elseif tonumber(entry.id) == 9 then
 			FHAC.Projectiles[tostring(name)] = tonumber(entry.variant)
@@ -224,6 +233,18 @@ for i = 1, XMLData.GetNumEntries(XMLNode.CARD) do
 	end
 end
 -----------------------------------------------------------------------------------------------------------------------
+
+mod.Bossdata = {
+    Megaper = StageAPI.AddBossData("FHAC Megaper", { --do not add to floor pool
+        Name = "Megaper",
+        Portrait = "gfx/bosses/portrait" ..mod.Bosses.Megaper.BossName.. "png",
+        Bossname = "gfx/bosses/bossname" ..mod.Bosses.Megaper.BossName.. "png",
+        Weight = 1,
+        Rooms = StageAPI.RoomsList("Megaper Rooms",
+            require(mod.Bosses.Megaper.Rooms)),
+        Entity = { Type = mod.Bosses.Megaper.ID, Variant = mod.Bosses.Megaper.Var },
+    }),
+}
 
 mod.FloorGrids = {
     mod.BasementGrid

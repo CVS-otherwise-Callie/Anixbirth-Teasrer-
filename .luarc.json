@@ -1,4 +1,3 @@
-"_comment": "hi fiend folio"
 {	"runtime.version": "Lua 5.3",	"workspace.library": [
 		"c:\\Users\\jl992\\.vscode\\extensions\\filloax.isaac-lua-api-vscode-1.12.0\\out\\emmylua\\repentogon"
 	],	"diagnostics.globals": [
@@ -251,7 +250,8 @@
 		"GODMODE",
 		"__eidItemDescriptions",
 		"__eidItemTransformations",
-		"STARTING_ROOM"
+		"STARTING_ROOM",
+		"BasementRenovator"
 	],
     "diagnostics.disable": [
         "need-check-nil"

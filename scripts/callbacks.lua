@@ -122,32 +122,7 @@ function FHAC:PostNewRoom()
 
     AnixbirthSaveManager.GetRoomSave().anixbirthsaveData = AnixbirthSaveManager.GetRoomSave().anixbirthsaveData or {}
 
-    FHAC:LoadSavedRoomEnts()
-    FHAC.ToBeSavedEnts = {}
-
-    FHAC.NullPressureEntExist = false
-	FHAC.ErrorRoomSubtype = nil
-
-    FHAC.spawnedDried = false
-    FHAC:SpawnRandomDried()
-    FHAC:BigOlBowlOfSauerkrautSpawn()
-    FHAC:RemoveAllSpecificItemEffects(Isaac.GetPlayer())
-    FHAC:SongChangesToIngameOST()
     FHAC:CVSNewRoom()
-
-    AnixbirthSaveManager.GetRunSave().anixbirthsaveData = AnixbirthSaveManager.GetRunSave().anixbirthsaveData or {}
-    if AnixbirthSaveManager.IsLoaded() and AnixbirthSaveManager.GetRunSave() and AnixbirthSaveManager.GetRunSave().anixbirthsaveData.diaLouges then
-        for name, tab in pairs(AnixbirthSaveManager.GetRunSave().anixbirthsaveData.diaLouges) do
-            tab.cancel = true
-        end
-    end
-
-    for i = 1, game:GetNumPlayers() do
-        if AnixbirthSaveManager.GetRunSave(Isaac.GetPlayer(i)).jokeBookUpNum and AnixbirthSaveManager.GetRunSave(Isaac.GetPlayer(i)).jokeBookUpNum > 0 then
-            AnixbirthSaveManager.GetRunSave(Isaac.GetPlayer(i)).jokeBookUpNum = 0
-            Isaac.GetPlayer(i):EvaluateItems()
-        end
-    end
 
 end
 FHAC:AddCallback(ModCallbacks.MC_POST_NEW_ROOM, FHAC.PostNewRoom)

@@ -138,7 +138,8 @@ FHAC:LoadScripts("scripts.iam.items.passives", {
 	"tums",
 	"traveler's bag",
 	"unwound cassete",
-	"bawled reef"
+	"bawled reef",
+	"megaper"
 })
 
 FHAC:LoadScripts("scripts.iam.items.pickups" , {
@@ -1192,6 +1193,19 @@ function mod:CVSNewRoom()
 				--StageAPI.ChangeRoomGfx(roomGfx)
 			end
 		end
+
+		FHAC:SetMegaperBoss()
+    	FHAC:RemoveAllSpecificItemEffects(Isaac.GetPlayer())
+		FHAC:LoadSavedRoomEnts()
+		FHAC.ToBeSavedEnts = {}
+
+		FHAC.NullPressureEntExist = false
+		FHAC.ErrorRoomSubtype = nil
+
+		FHAC.spawnedDried = false
+		FHAC:SpawnRandomDried()
+		FHAC:BigOlBowlOfSauerkrautSpawn()
+		FHAC:SongChangesToIngameOST()
 	end
 
 	local levelswithBlocks = {
@@ -1199,6 +1213,19 @@ function mod:CVSNewRoom()
 		BackdropType.CELLAR
 	}
 
+    AnixbirthSaveManager.GetRunSave().anixbirthsaveData = AnixbirthSaveManager.GetRunSave().anixbirthsaveData or {}
+    if AnixbirthSaveManager.IsLoaded() and AnixbirthSaveManager.GetRunSave() and AnixbirthSaveManager.GetRunSave().anixbirthsaveData.diaLouges then
+        for name, tab in pairs(AnixbirthSaveManager.GetRunSave().anixbirthsaveData.diaLouges) do
+            tab.cancel = true
+        end
+    end
+
+    for i = 1, game:GetNumPlayers() do
+        if AnixbirthSaveManager.GetRunSave(Isaac.GetPlayer(i)).jokeBookUpNum and AnixbirthSaveManager.GetRunSave(Isaac.GetPlayer(i)).jokeBookUpNum > 0 then
+            AnixbirthSaveManager.GetRunSave(Isaac.GetPlayer(i)).jokeBookUpNum = 0
+            Isaac.GetPlayer(i):EvaluateItems()
+        end
+    end
 
 	local room = game:GetRoom()
     for i = 0, room:GetGridSize() do
@@ -1423,7 +1450,6 @@ function mod:SetupMegaperItem()
 			AnixbirthSaveManager.GetRunSave(ent).checkMegDamRot = 0
 		end
 
-		print(AnixbirthSaveManager.GetRunSave(ent).checkMegDamRot)
 		if AnixbirthSaveManager.GetRunSave(ent).checkMegDamFirst and game:GetLevel():GetCurrentRoomDesc().Data.Variant == 2 then
 			if AnixbirthSaveManager.GetRunSave(ent).goobPositions and AnixbirthSaveManager.GetRunSave(ent).goobPositions[1] then
 				AnixbirthSaveManager.GetRunSave(ent).localGoobPosition = AnixbirthSaveManager.GetRunSave(ent).localGoobPosition or 1
@@ -1440,9 +1466,11 @@ function mod:SetupMegaperItem()
 			end
 		end
 
-		if AnixbirthSaveManager.GetRunSave(ent).checkMegDamRot and AnixbirthSaveManager.GetRunSave(ent).checkMegDamRot > 5 then
+		if AnixbirthSaveManager.GetRunSave(ent).checkMegDamRot and AnixbirthSaveManager.GetRunSave(ent).checkMegDamRot > 31 and not ent:HasCollectible(mod.Collectibles.Items.Megaper) then
 			AnixbirthSaveManager.GetRunSave(ent).lastDamageWasSpikesAndNowWeAreAtHalfAHeart = false
 			AnixbirthSaveManager.GetRunSave(ent).checkMegDamFirst = false
+			AnixbirthSaveManager.GetRunSave(ent).lastDamageWasSpikes = false
+			AnixbirthSaveManager.GetRunSave(ent).checkMegDamRot = 0
 
 
 			local itemcon = itemConfig:GetCollectible(mod.Collectibles.Items.Megaper)
@@ -1466,7 +1494,7 @@ function mod:SetupMegaperItem()
 					s:LoadGraphics()
 
 					--if i < 100 then
-						pos = Game():GetRoom():WorldToScreenPosition(player.Position) + Vector(0, -(player.SpriteScale.Y * 35) + h/3)
+						pos = Game():GetRoom():WorldToScreenPosition(ent.Position) + Vector(0, -(ent.SpriteScale.Y * 35) + h/3)
 					--end
 
 					s:Render(Vector(pos.X, pos.Y))
