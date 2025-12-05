@@ -2,7 +2,7 @@ local mod = FHAC
 local game = Game()
 
 function mod:SetMegaperBoss()
-    if mod:AnyPlayerHasCollectible(mod.Collectibles.Items.Megaper) then
+    if mod:AnyPlayerHasCollectible(mod.Collectibles.Items.Megaper) and not AnixbirthSaveManager.GetRunSave().hasmadeMegaperBoss then
 
     --OH SHIT WHOOOOOPSIES THANKS STAGEAPI
         if BasementRenovator and BasementRenovator.InTestRoom and BasementRenovator.InTestStage and (BasementRenovator:InTestRoom() or BasementRenovator:InTestStage()) then
@@ -57,7 +57,7 @@ function mod:SetMegaperBoss()
                 StageAPI.SetLevelRoom(newRoom, listIndex, dimension)
                 if roomDesc.Data.Type == RoomType.ROOM_BOSS and baseFloorInfo.HasMirrorLevel and dimension == 0 and roomDesc.SafeGridIndex > -1 then
                     local mirroredRoom = newRoom:Copy(roomDesc)
-                    local mirroredDesc = shared.Level:GetRoomByIdx(roomDesc.SafeGridIndex, 1)
+                    local mirroredDesc = game:GetLevel():GetRoomByIdx(roomDesc.SafeGridIndex, 1)
                     if setMirrorBossData then
                         mirroredDesc.Data = setMirrorBossData
                     end
@@ -67,5 +67,6 @@ function mod:SetMegaperBoss()
             end
 
         end
+        AnixbirthSaveManager.GetRunSave().hasmadeMegaperBoss = true
     end
 end

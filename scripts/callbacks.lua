@@ -51,6 +51,7 @@ function FHAC.PostUpdateStuff()
         FHAC.FiendFolioCompat()
     end
     FHAC:SetupMegaperItem()
+    FHAC:SetMegaperBoss()
     --FHAC.PreSavedEntsLevel = AnixbirthSaveManager.GetRunSave().PreSavedEntsLevel
     --FHAC.SavedEntsLevel = AnixbirthSaveManager.GetRunSave().SavedEntsLevel
     --FHAC.ToBeSavedEnts = AnixbirthSaveManager.GetRunSave().ToBeSavedEnts

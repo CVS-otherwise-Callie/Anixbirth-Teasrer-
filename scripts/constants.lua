@@ -164,11 +164,13 @@ for i = 1, XMLData.GetNumEntries(XMLNode.ENTITY) do
 			FHAC.MiniBosses[tostring(name)] = stats
 		elseif tonumber(entry.boss) == 1 then
 
+            local bname = string.upper(string.sub(name, 1, 1)) .. string.sub(name, 2, string.len(name))
+
             stats = {
                 ID = stats.ID,
                 Var = stats.Var,
                 Sub = stats.Sub,
-                BossName = name,
+                BossName = bname,
                 Rooms = "resources.anixbirthluarooms.bosses." .. name
             }
 
@@ -239,7 +241,7 @@ mod.Bossdata = {
         Name = mod.Bosses.Megaper.BossName,
         Portrait = "gfx/ui/boss/portrait_" ..mod.Bosses.Megaper.BossName.. "png",
         Bossname = "gfx/ui/boss/bossname_" ..mod.Bosses.Megaper.BossName.. "png",
-        Weight = 0,
+        Weight = 1,
         Rooms = StageAPI.RoomsList(mod.Bosses.Megaper.BossName.. " Rooms",
             require(mod.Bosses.Megaper.Rooms)),
         Entity = { Type = mod.Bosses.Megaper.ID, Variant = mod.Bosses.Megaper.Var },

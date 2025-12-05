@@ -1194,7 +1194,6 @@ function mod:CVSNewRoom()
 			end
 		end
 
-		FHAC:SetMegaperBoss()
     	FHAC:RemoveAllSpecificItemEffects(Isaac.GetPlayer())
 		FHAC:LoadSavedRoomEnts()
 		FHAC.ToBeSavedEnts = {}
