@@ -1453,7 +1453,7 @@ function mod:SetupMegaperItem()
 		if AnixbirthSaveManager.GetRunSave(ent).checkMegDamFirst and game:GetLevel():GetCurrentRoomDesc().Data.Variant == 2 then
 			if AnixbirthSaveManager.GetRunSave(ent).goobPositions and AnixbirthSaveManager.GetRunSave(ent).goobPositions[1] then
 				AnixbirthSaveManager.GetRunSave(ent).localGoobPosition = AnixbirthSaveManager.GetRunSave(ent).localGoobPosition or 1
-				DebugRenderer.Get():Circle(AnixbirthSaveManager.GetRunSave(ent).goobPositions[AnixbirthSaveManager.GetRunSave(ent).localGoobPosition], 10)
+				--DebugRenderer.Get():Circle(AnixbirthSaveManager.GetRunSave(ent).goobPositions[AnixbirthSaveManager.GetRunSave(ent).localGoobPosition], 10)
 
 				if ent.Position:Distance(AnixbirthSaveManager.GetRunSave(ent).goobPositions[AnixbirthSaveManager.GetRunSave(ent).localGoobPosition]) < 70 then
 					AnixbirthSaveManager.GetRunSave(ent).localGoobPosition = AnixbirthSaveManager.GetRunSave(ent).localGoobPosition + 1

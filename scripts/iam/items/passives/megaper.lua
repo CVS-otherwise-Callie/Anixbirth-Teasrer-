@@ -9,8 +9,6 @@ function mod:SetMegaperBoss()
             return
         end
 
-        if not StageAPI.GetBossEncountered("Megaper") then return end
-
         --everything under here is stageapi code. this is one of the benefits of using it as a relied source 
 
         local roomsList = game:GetLevel():GetRooms()
@@ -30,10 +28,10 @@ function mod:SetMegaperBoss()
             local newRoom
             local setMirrorBossData
 
-            if baseFloorInfo and baseFloorInfo.HasCustomBosses
-            and roomDesc.Data.Type == RoomType.ROOM_BOSS
+            if roomDesc.Data.Type == RoomType.ROOM_BOSS
             and roomDesc.SafeGridIndex ~= GridRooms.ROOM_DEBUG_IDX
             and dimension == 0 and not backwards then
+
                 local bossFloorInfo = baseFloorInfo
                 if xlFloorInfo and roomDesc.ListIndex == lastBossRoomListIndex then
                     bossFloorInfo = xlFloorInfo
@@ -42,7 +40,7 @@ function mod:SetMegaperBoss()
                 local bossID = "Megaper"
                 if bossID then
                     local bossData = StageAPI.GetBossData(bossID)
-                    if bossData and not bossData.BaseGameBoss and bossData.Rooms then
+                    if bossData and bossData.Rooms then
                         newRoom = StageAPI.GenerateBossRoom({
                             BossID = bossID,
                             NoPlayBossAnim = true,
@@ -50,13 +48,6 @@ function mod:SetMegaperBoss()
                         }, {
                             RoomDescriptor = roomDesc
                         })
-                        
-                        if StageAPI.ReplaceBossSubtypes[roomDesc.Data.Subtype] then
-                            local overwritableRoomDesc = game:GetLevel():GetRoomByIdx(roomDesc.SafeGridIndex, dimension)
-                            local replaceData = StageAPI.GetGotoDataForTypeShape(RoomType.ROOM_BOSS, roomDesc.Data.Shape)
-                            overwritableRoomDesc.Data = replaceData
-                            setMirrorBossData = replaceData
-                        end
                     end
                 end
             end

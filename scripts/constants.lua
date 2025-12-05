@@ -235,12 +235,12 @@ end
 -----------------------------------------------------------------------------------------------------------------------
 
 mod.Bossdata = {
-    Megaper = StageAPI.AddBossData("FHAC Megaper", { --do not add to floor pool
-        Name = "Megaper",
-        Portrait = "gfx/bosses/portrait" ..mod.Bosses.Megaper.BossName.. "png",
-        Bossname = "gfx/bosses/bossname" ..mod.Bosses.Megaper.BossName.. "png",
-        Weight = 1,
-        Rooms = StageAPI.RoomsList("Megaper Rooms",
+    Megaper = StageAPI.AddBossData(mod.Bosses.Megaper.BossName, {
+        Name = mod.Bosses.Megaper.BossName,
+        Portrait = "gfx/ui/boss/portrait_" ..mod.Bosses.Megaper.BossName.. "png",
+        Bossname = "gfx/ui/boss/bossname_" ..mod.Bosses.Megaper.BossName.. "png",
+        Weight = 0,
+        Rooms = StageAPI.RoomsList(mod.Bosses.Megaper.BossName.. " Rooms",
             require(mod.Bosses.Megaper.Rooms)),
         Entity = { Type = mod.Bosses.Megaper.ID, Variant = mod.Bosses.Megaper.Var },
     }),
