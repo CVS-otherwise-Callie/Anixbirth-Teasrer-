@@ -38,18 +38,13 @@ function mod:SetMegaperBoss()
                 end
 
                 local bossID = "Megaper"
-                if bossID then
-                    local bossData = StageAPI.GetBossData(bossID)
-                    if bossData and bossData.Rooms then
-                        newRoom = StageAPI.GenerateBossRoom({
-                            BossID = bossID,
-                            NoPlayBossAnim = true,
-                            CheckEncountered = false,
-                        }, {
-                            RoomDescriptor = roomDesc
-                        })
-                    end
-                end
+                newRoom = StageAPI.GenerateBossRoom({
+                    BossID = bossID,
+                    NoPlayBossAnim = true,
+                    CheckEncountered = false,
+                }, {
+                    RoomDescriptor = roomDesc
+                })
             end
 
             if newRoom then
