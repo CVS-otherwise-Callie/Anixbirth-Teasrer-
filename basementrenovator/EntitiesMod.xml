@@ -1,5 +1,10 @@
 <data>
 
+<!--Machines-->
+<entity ID="6" Variant="250" Name="Scannard" Image="mah boys/machines/scannard.png" BaseHP="0" PlaceVisual="WallSnap"/>
+
+<!--Enemies-->
+
 <entity ID="37" Variant="3" Name="Woodhead" Image="mah boys/woodhead.png" BaseHP="12"/>
 <entity ID="37" Variant="6" Name="Sam Bear Spawn" Image="mah boys/samspawn.png" BaseHP="15"/>
 <entity ID="37" Variant="100" Name="Jim" Image="mah boys/jim.png" BaseHP="10"/>
@@ -215,20 +220,24 @@ Use 2, 4, or 6 normally.
       <checkbox Name="Gives Rewards" Length="1"/>
    </bitfield>
 </entity>
+
 <!--163-->
 
 <entity ID="163" Variant="2" Name="WilloWalker NPC" Image="mah boys/willowalkerog.png" Tags="NPC"/>
 
 <!--240-->
+
 <entity ID="240" Variant="359" Name="Stall Creep" Image="mah boys/stall_creep.png" BaseHP="10" Tags="Champion" PlaceVisual="WallSnap"/>
 <entity ID="240" Variant="368" Name="Webbed Creep" Image="mah boys/webbed_creep.png" BaseHP="10" Tags="Champion" PlaceVisual="WallSnap"/>
 
 <!--Tainted-->
+
 <entity ID="426" Variant="0" Name="Tainted Silly" Image="mah boys/sillytainted.png" BaseHP="70" StageHP="13" ShieldStrength="20" Tags="Champion"/>
 <entity ID="426" Variant="1" Name="Tainted String" Image="mah boys/stringtainted.png" BaseHP="70" StageHP="13" ShieldStrength="20" Tags="Champion"/>
 <entity ID="426" Variant="2" Name="&amp;" Image="mah boys/&amp;tainted.png" BaseHP="20" StageHP="20" ShieldStrength="1000" Tags="Champion"/>
 
 <!--Jokes-->
+
 <entity ID="161" Variant="3939" Name="WilloWalker" Image="mah boys/willowalker.png" BaseHP="n/a" />
 <entity ID="161" Variant="4095" Name="Blank NPC Anixbirth" Image="mah boys/blanknpc.png" BaseHP="n/a">
 <bitfield Key="Subtype">
@@ -236,6 +245,9 @@ Use 2, 4, or 6 normally.
         </spinner>
       </bitfield>
 </entity>
+
+<!--Extra-->
+
 <entity ID="998" Variant="418" Name="Error Room Editor" Image="mah boys/errorroomeditor.png" BaseHP="n/a">
 <bitfield Key="Subtype">
         <spinner Length="16" ValueOffset="1" Name="Variant">
@@ -263,6 +275,10 @@ Use 2, 4, or 6 normally.
 	</group>
 
 	<group Name="HOPE Grid Objects Poop">
+	</group>
+
+	<group Name="HOPE Machines">
+		<entity Name="Scannard" />
 	</group>
 
 	<group Name="HOPE Chapter 1 Enemies" Label="Chapter 1 Shared">
@@ -447,6 +463,10 @@ Use 2, 4, or 6 normally.
 	</group>
 
 </tab>
+
+<group Label="Machines">
+	<group Name="HOPE Machines"/>
+</group>
 
 <group Name="Poops">
 	<group Name="HOPE Grid Objects Poop"/>
