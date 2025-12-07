@@ -50,6 +50,7 @@ FHAC.Effects = {
 }
 
 FHAC.NPCS = {
+    Scannard = mod:ENT("Scannard")
 }
 
 FHAC.Tears = {
