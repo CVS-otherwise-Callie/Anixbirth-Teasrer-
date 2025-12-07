@@ -73,8 +73,7 @@ function mod:HuoAI(npc, sprite, d)
     if sprite:IsEventTriggered("Shoot") then
         local turnAmt = math.random(-30, 30)
         for i = 1, 10 do
-            print("a")
-            mod:ShootFire(npc.Position + Vector(5, 0):Rotated(36 * i), (targetpos - npc.Position):Resized(9):Rotated(turnAmt + (36 * i)), {scale = 1 + (extraamt*0.2), timer = 50 + (extraamt*5), radius = 20 + (extraamt)})
+            mod:ShootFire(npc.Position + Vector(5, 0):Rotated(36 * i), (targetpos - npc.Position):Resized(9 + (extraamt*3)):Rotated(turnAmt + (36 * i)), {scale = 1 + (extraamt*0.2), timer = 50 + (extraamt*5), radius = 20 + (extraamt)})
         end
     end
 
