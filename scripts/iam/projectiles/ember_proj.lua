@@ -10,11 +10,8 @@ end)
 
 function mod:EmberProjectileAI(proj, sprite, d)
 
-    if not d.init then
-        sprite:ReplaceSpritesheet(0, "gfx/projectiles/ember.png")
-        sprite:LoadGraphics() 
-        d.init = true
-    end
+    sprite:ReplaceSpritesheet(0, "gfx/projectiles/ember.png")
+    sprite:LoadGraphics()
 
     local num = proj.Scale
 

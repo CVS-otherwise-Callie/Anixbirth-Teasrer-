@@ -4,6 +4,7 @@ function FHAC.DeathStuff(_, ent)
     FHAC.ShowFortuneDeath()
     FHAC.SchmootDeath(ent)
     FHAC.GassedFlyDeath(ent)
+    FHAC.BumblingSootDeath(ent)
 end
 FHAC:AddCallback(ModCallbacks.MC_POST_NPC_DEATH, FHAC.DeathStuff)
 

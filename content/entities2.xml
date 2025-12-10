@@ -546,6 +546,10 @@
 		<bestiary transform="0,0,1" anim="Walk" />
         <gibs amount="12" blood="1" bone="1" eye="0" gut="1" large="0" />
     </entity>
+    <entity anm2path="monsters/bumblingsooter/bumblingsooter.anm2" reroll="true" baseHP="16" boss="0" champion="0" collisionDamage="1" collisionMass="3" collisionRadius="13" friction="1" id="161" name="Bumbling Sooter" numGridCollisionPoints="12" shadowSize="20" stageHP="4" variant="96" portrait="187" tags="spider">
+		<bestiary transform="0,0,1" anim="Bounce" />
+        <gibs amount="12" blood="1" bone="1" eye="0" gut="1" large="0" />
+    </entity>
     <entity id="161" variant="97" name="Lil Flash" anm2path="monsters/lilflash/lilflash.anm2" reroll="true" baseHP="7" boss="0" champion="false" collisionDamage="1" collisionMass="3" collisionRadius="17" friction="1" numGridCollisionPoints="4" shadowSize="11" stageHP="0" gridCollision="walls" tags="fly" portrait="97">
 		<bestiary transform="0,0,1" anim="Idle" overlay="Eyes"/>
         <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />

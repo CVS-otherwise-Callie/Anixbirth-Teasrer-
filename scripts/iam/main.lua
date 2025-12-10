@@ -78,7 +78,8 @@ FHAC:LoadScripts("scripts.iam.monsters", {
 	"amekatze",
 	"sheriff",
 	"gunslinger",
-	"huo"
+	"huo",
+	"bumblingsooter"
 })
 
 FHAC:LoadScripts("scripts.iam.bosses", {
@@ -310,6 +311,8 @@ function mod:CVS161AI(npc)
 		mod:AmekatzeAI(npc, npc:GetSprite(), npc:GetData())
 	elseif npc.Variant == mod.Monsters.Huo.Var then
 		mod:HuoAI(npc, npc:GetSprite(), npc:GetData())
+	elseif npc.Variant == mod.Monsters.BumblingSooter.Var then
+		mod:BumblingSooterAI(npc, npc:GetSprite(), npc:GetData())
 	end
 end
 
@@ -1554,4 +1557,5 @@ function FHAC:CVSProjStuff(v)
     FHAC.BewebbedShot(v, d)
 	FHAC.StallCreepShots(v, d)
     FHAC.SheriffShots(v, d)
+	FHAC.BumblingSootProjAI(v, d)
 end
