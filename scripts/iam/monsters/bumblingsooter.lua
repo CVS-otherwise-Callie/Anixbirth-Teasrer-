@@ -2,12 +2,31 @@ local mod = FHAC
 local game = Game()
 local rng = RNG()
 
+local function GetInRoomPos(position, add)
+    local room = Game():GetRoom()
+
+    if not room:IsPositionInRoom((position + add), 10) then
+        local newpos = add:Rotated(math.random(-40, 40))
+
+        if room:IsPositionInRoom(position + newpos, 10) then
+            return position + newpos
+        else
+            return GetInRoomPos(position, newpos)
+        end
+    else
+        return position + add
+    end
+end
+
 function mod:BumblingSooterAI(npc, sprite, d)
 
     local anmaddend = ""
 
     if not d.init then
-        d.newpos = Vector(3, 0):Rotated(math.random(1, 360))
+        d.newpos = GetInRoomPos(npc.Position, Vector(0, 3):Rotated(math.random(-40, 40)))
+        d.state = "land"
+        d.walkCy = 0
+        npc.SplatColor = FHAC.Color.Charred
         d.init = true
     else
         npc.StateFrame = npc.StateFrame + 1
@@ -15,18 +34,36 @@ function mod:BumblingSooterAI(npc, sprite, d)
 
     local target = npc:GetPlayerTarget()
     local targetpos = mod:confusePos(npc, target.Position, 5, nil, nil)
-    local path = npc.Pathfinder
 
     if target.Velocity:Length() > 0 and game:GetRoom():CheckLine(npc.Position, (target.Position + target.Velocity:Resized(10)), 0, 1, false, false) and npc.Position:Distance((targetpos + target.Velocity:Resized(30))) < 160 then
         d.newpos = (targetpos + target.Velocity:Resized(30))
     end
 
-    if math.abs(npc.Velocity.Y) > 1 then
-        if npc.Velocity.Y < 0 then
-            anmaddend = "Up"
-        else
-            anmaddend = "Down"
+    if not d.haslanded or (d.haslanded and npc.Velocity:Length() > 2.4) then
+
+        if math.abs(npc.Velocity.Y) > 1 then
+            if npc.Velocity.Y < 0 then
+                anmaddend = "Up"
+            else
+                anmaddend = "Down"
+            end
         end
+
+        mod:spritePlay(sprite, "Bounce" .. anmaddend)
+
+    elseif npc.Velocity:Length() > 0.05 and d.haslanded then
+
+        d.walkCy = d.walkCy + math.min(npc.Velocity:Length(), 0.2)
+
+        if d.walkCy > 4 then
+            d.walkCy = 1
+        end
+        
+        sprite:SetFrame("Walk", math.floor(d.walkCy))
+
+    else
+        sprite:Play("Idle")
+        d.state = "land"
     end
 
     if npc.Velocity.X < 0 then
@@ -35,17 +72,36 @@ function mod:BumblingSooterAI(npc, sprite, d)
         sprite.FlipX = false
     end
 
-    if sprite:IsEventTriggered("Bounce") then
+    if d.state == "move" then
+        
         npc.Velocity = mod:Lerp(npc.Velocity, (d.newpos - npc.Position):Resized(6), 0.3)
-    elseif sprite:IsEventTriggered("Land") then
-        npc:MultiplyFriction(0.3)
-        d.newpos = Vector(3, 0):Rotated(math.random(1, 360))
+
+        if npc.StateFrame > 2 then
+            d.state = nil
+            npc.StateFrame = 0
+        end
+    elseif d.state == "land" then
+        npc:MultiplyFriction(0.94)
+
+        if npc.StateFrame > 50 and math.random(1, 100) < 40 then
+            d.state = "move"
+            npc.StateFrame = 0
+        end
+    else
+        if npc.StateFrame > 50 and math.random(1, 100) < 75 then
+            d.state = "move"
+            npc.StateFrame = 0
+        end
+
+        d.newpos = GetInRoomPos(npc.Position, Vector(0, 3):Rotated(math.random(-360, 360)))
     end
 
-    mod:spritePlay(sprite, "Bounce" .. anmaddend)
-
-    if npc:CollidesWithGrid() then
-        d.newpos = d.newpos:Rotated(90)
+    if sprite:IsEventTriggered("Land") then
+        npc.StateFrame = 0
+        d.state = "land"
+        d.haslanded = true
+    elseif sprite:IsEventTriggered("Bounce") then
+        d.haslanded = false
     end
 
 end
