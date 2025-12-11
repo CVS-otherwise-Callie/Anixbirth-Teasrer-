@@ -121,7 +121,20 @@ function mod.BumblingSootDeath(npc)
 
         proj:GetData().sootstumbleproj = true
         proj:Update()
+
     end
+
+    for i = 1, math.random(3, 5) do
+        local ef = Isaac.Spawn(EntityType.ENTITY_EFFECT, EffectVariant.DUST_CLOUD, -1, npc.Position + Vector(math.random(-25, 25), 10),Vector.Zero, nil):ToEffect()
+        ef:SetTimeout(50)
+        ef.SpriteScale = Vector(0.05,0.05)
+        ef:Update()
+        ef.Color = Color(0.1, 0.1, 0.1, 0.4)
+
+        local soot = Isaac.Spawn(mod.Monsters.Soot.ID, mod.Monsters.Soot.Var, 0, npc.Position, Vector(2, 0):Rotated(math.random(1, 360)), nil)
+        soot.HitPoints = soot.MaxHitPoints/2
+    end
+
 end
 
 function mod.BumblingSootProjAI(v, d)
