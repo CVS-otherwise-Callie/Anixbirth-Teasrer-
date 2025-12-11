@@ -83,7 +83,7 @@ function mod:BumblingSooterAI(npc, sprite, d)
     elseif d.state == "land" then
         npc:MultiplyFriction(0.94)
 
-        if npc.StateFrame > 50 and math.random(1, 100) < 40 then
+        if npc.StateFrame > 50 and math.random(1, 100) < 70 then
             d.state = "move"
             npc.StateFrame = 0
         end
@@ -104,6 +104,14 @@ function mod:BumblingSooterAI(npc, sprite, d)
         d.haslanded = false
     end
 
+    for _, ent in ipairs(Isaac.FindInCapsule(npc:GetCollisionCapsule())) do
+        if ent.Type > 10 and ent.Type < 1000 and ent.EntityCollisionClass == EntityCollisionClass.ENTCOLL_ALL then
+            local vel = (npc.Position - ent.Position) * 0.1
+            npc.Velocity = npc.Velocity + vel
+            ent.Velocity = ent.Velocity - vel
+        end
+    end    
+
 end
 
 function mod.BumblingSootDeath(npc)
@@ -122,16 +130,17 @@ function mod.BumblingSootDeath(npc)
         proj:GetData().sootstumbleproj = true
         proj:Update()
 
-    end
-
-    for i = 1, math.random(3, 5) do
         local ef = Isaac.Spawn(EntityType.ENTITY_EFFECT, EffectVariant.DUST_CLOUD, -1, npc.Position + Vector(math.random(-25, 25), 10),Vector.Zero, nil):ToEffect()
         ef:SetTimeout(50)
         ef.SpriteScale = Vector(0.05,0.05)
         ef:Update()
         ef.Color = Color(0.1, 0.1, 0.1, 0.4)
 
+    end
+
+    for i = 1, math.random(3, 5) do
         local soot = Isaac.Spawn(mod.Monsters.Soot.ID, mod.Monsters.Soot.Var, 0, npc.Position, Vector(2, 0):Rotated(math.random(1, 360)), nil)
+        soot:ClearEntityFlags(EntityFlag.FLAG_APPEAR)
         soot.HitPoints = soot.MaxHitPoints/2
     end
 
