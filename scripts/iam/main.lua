@@ -79,7 +79,8 @@ FHAC:LoadScripts("scripts.iam.monsters", {
 	"sheriff",
 	"gunslinger",
 	"huo",
-	"bumblingsooter"
+	"bumblingsooter",
+	"burnrun"
 })
 
 FHAC:LoadScripts("scripts.iam.bosses", {

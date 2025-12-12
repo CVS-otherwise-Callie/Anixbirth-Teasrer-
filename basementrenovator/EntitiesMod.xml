@@ -7,6 +7,7 @@
 
 <entity ID="37" Variant="3" Name="Woodhead" Image="mah boys/woodhead.png" BaseHP="12"/>
 <entity ID="37" Variant="6" Name="Sam Bear Spawn" Image="mah boys/samspawn.png" BaseHP="15"/>
+<entity ID="37" Variant="8" Name="Burnrun" Image="mah boys/burnrun.png" BaseHP="15"/>
 <entity ID="37" Variant="100" Name="Jim" Image="mah boys/jim.png" BaseHP="10"/>
 
 <entity ID="95" Variant="0" Name="Narcissism" Image="mah boys/narcissism.png" BaseHP="130" ShieldStrength="15" StageHP="10"/>
@@ -346,6 +347,7 @@ Use 2, 4, or 6 normally.
 			<entity Name="Soot"/>
 			<entity Name="Spaarker"/>
 			<entity Name="Huo"/>
+			<entity Name="Burnrun"/>
 			<entity Name="Enflamed Crazy Spider"/>
 		</group>
 	</group>
