@@ -7,14 +7,26 @@ function mod.ScattcomBombAI(bomb)
     if bomb.Variant ~= mod.Bombs.ScattcomBomb.Var then return end
 
     local sprite = bomb:GetSprite()
+    local d = bomb:GetData()
 	local var = bomb.Variant
+
+    if bomb.SubType == 1 and not d.hasLoadedS then
+        sprite:Load("gfx/items/pick ups/scattcombomb1.anm2", true)
+        sprite:LoadGraphics()
+
+        bomb:ToBomb():SetExplosionCountdown(math.random(29, 39))
+        bomb:ToBomb().RadiusMultiplier = bomb:ToBomb().RadiusMultiplier/1.5
+
+        d.hasLoadedS = true
+    end
 
     if bomb.SubType == 1 and sprite:IsPlaying("Pulse") and sprite:GetFrame() == 57 then
 
         sfx:Play(SoundEffect.SOUND_EXPLOSION_WEAK)
 
-        for k, v in ipairs(Isaac.FindInRadius(bomb.Position, 10, EntityPartition.PLAYER)) do
-            v:TakeDamage(1/10, DamageFlag.DAMAGE_EXPLOSION, EntityRef(bomb), 0.1)
+        for k, v in ipairs(Isaac.FindInRadius(bomb.Position, 30, EntityPartition.PLAYER)) do
+            print(v)
+            v:TakeDamage(0.5, DamageFlag.DAMAGE_EXPLOSION, EntityRef(bomb), 1)
         end
 
         local ef = Isaac.Spawn(EntityType.ENTITY_EFFECT, 1, -1, bomb.Position, Vector.Zero, bomb):ToEffect()
@@ -40,11 +52,6 @@ function mod.ScattcomBombAI(bomb)
         local rand = 7
         for i = 1, rand do
             local tinybomb = Isaac.Spawn(4, mod.Bombs.ScattcomBomb.Var, 1, bomb.Position + Vector(20, 0):Rotated(i*(360/rand)), Vector(10, 0):Rotated(i*(360/rand)), bomb)
-            tinybomb:GetSprite():Load("gfx/items/pick ups/scattcombomb1.anm2", true)
-            tinybomb:GetSprite():LoadGraphics()
-            tinybomb:ToBomb():SetExplosionCountdown(math.random(29, 39))
-            tinybomb:ToBomb().RadiusMultiplier = tinybomb:ToBomb().RadiusMultiplier/1.5
-
             tinybomb:ClearEntityFlags(EntityFlag.FLAG_APPEAR)
             tinybomb:GetSprite():Play("Idle")
         end
