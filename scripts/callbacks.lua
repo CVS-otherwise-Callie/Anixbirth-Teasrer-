@@ -5,6 +5,7 @@ function FHAC.DeathStuff(_, ent)
     FHAC.SchmootDeath(ent)
     FHAC.GassedFlyDeath(ent)
     FHAC.BumblingSootDeath(ent)
+    FHAC.ScattcomDEATHOHNOAI(ent)
 end
 FHAC:AddCallback(ModCallbacks.MC_POST_NPC_DEATH, FHAC.DeathStuff)
 
@@ -118,6 +119,10 @@ FHAC:AddCallback(ModCallbacks.MC_POST_FIRE_TEAR, function(_, tear, _, ignorePlay
 	end
 
     FHAC:UnwoundCasseteShot(tear, player, isLudo)
+end)
+
+FHAC:AddCallback(ModCallbacks.MC_POST_BOMB_UPDATE, function(_, bomb)
+    FHAC.ScattcomBombAI(bomb)
 end)
 
 function FHAC:PostNewRoom()

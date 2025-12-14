@@ -56,6 +56,9 @@ FHAC.NPCS = {
 FHAC.Tears = {
 }
 
+FHAC.Bombs = {
+}
+
 FHAC.Jokes = {
     Gaperrr = mod:ENT("A gaper w/ three legs, why did we do this"),
     Willowalker = FHAC:ENT("Willowalker")
@@ -157,6 +160,8 @@ for i = 1, XMLData.GetNumEntries(XMLNode.ENTITY) do
 			FHAC.NPCS[tostring(name)] = stats
         elseif tonumber(entry.type) == 2 then
             FHAC.Tears[tostring(name)] = stats
+		elseif tonumber(entry.type) == 4 then
+			FHAC.Bombs[tostring(name)] = stats
         elseif tonumber(entry.type) == 5 then
             FHAC.Collectibles.PickupsEnt[tostring(name)] = stats
 		elseif tonumber(entry.type) == 1000 then
@@ -292,7 +297,7 @@ FHAC.noFireDamage = {
     "EnflamedCrazySpider",
     "ScorchedPeat",
     "Burntlet",
-    "Burnrun"
+    "Burnrun",
 }
 
 FHAC.DirectionToVector = {

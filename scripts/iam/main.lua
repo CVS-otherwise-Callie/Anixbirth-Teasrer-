@@ -81,7 +81,8 @@ FHAC:LoadScripts("scripts.iam.monsters", {
 	"huo",
 	"bumblingsooter",
 	"burnrun",
-	"burntlet"
+	"burntlet",
+	"scattcom"
 })
 
 FHAC:LoadScripts("scripts.iam.bosses", {
@@ -148,6 +149,7 @@ FHAC:LoadScripts("scripts.iam.items.passives", {
 FHAC:LoadScripts("scripts.iam.items.pickups" , {
 	"bowl of sauerkraut",
 	"birthday slice",
+	"scattcom bomb"
 })
 
 FHAC:LoadScripts("scripts.iam.jokes", {
@@ -315,6 +317,8 @@ function mod:CVS161AI(npc)
 		mod:HuoAI(npc, npc:GetSprite(), npc:GetData())
 	elseif npc.Variant == mod.Monsters.BumblingSooter.Var then
 		mod:BumblingSooterAI(npc, npc:GetSprite(), npc:GetData())
+	elseif npc.Variant == mod.Monsters.Scattcom.Var then
+		mod:ScattcomAI(npc, npc:GetSprite(), npc:GetData())
 	end
 end
 
