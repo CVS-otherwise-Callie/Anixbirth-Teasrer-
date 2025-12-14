@@ -7,7 +7,8 @@
 
 <entity ID="37" Variant="3" Name="Woodhead" Image="mah boys/woodhead.png" BaseHP="12"/>
 <entity ID="37" Variant="6" Name="Sam Bear Spawn" Image="mah boys/samspawn.png" BaseHP="15"/>
-<entity ID="37" Variant="8" Name="Burnrun" Image="mah boys/burnrun.png" BaseHP="15"/>
+<entity ID="37" Variant="8" Name="Burnrun" Image="mah boys/burnrun.png" BaseHP="10"/>
+<entity ID="37" Variant="9" Name="Burntlet" Image="mah boys/burntlet.png" BaseHP="10"/>
 <entity ID="37" Variant="100" Name="Jim" Image="mah boys/jim.png" BaseHP="10"/>
 
 <entity ID="95" Variant="0" Name="Narcissism" Image="mah boys/narcissism.png" BaseHP="130" ShieldStrength="15" StageHP="10"/>
@@ -131,6 +132,7 @@ Up to groups of 3.
 <entity ID="161" Variant="52" Name="Potted Fatty" Image="mah boys/pottedfatty.png" BaseHP="20"/>
 <entity ID="161" Variant="59" Name="Webbed Carcass" Image="mah boys/webbedcarcass.png" BaseHP="10"/>
 <entity ID="161" Variant="65" Name="Suck Up" Image="mah boys/suckup.png" BaseHP="10"/>
+<entity ID="161" Variant="68" Name="Amekatze" Image="mah boys/awekatze.png" BaseHP="16"/>
 <entity ID="161" Variant="70" Name="Hotato" Image="mah boys/hotato.png" BaseHP="20"/>
 <entity ID="161" Variant="71" Name="Hot Potato" Image="mah boys/hot potato.png" BaseHP="10"/>
 <entity ID="161" Variant="72" Name="Furnace" Image="mah boys/furnace.png" BaseHP="12"/>
@@ -141,7 +143,7 @@ Up to groups of 3.
 <entity ID="161" Variant="84" Name="Trilo" Image="mah boys/trilo.png" BaseHP="10"/>
 <entity ID="161" Variant="91" Name="Schmoot" Image="mah boys/schmoot.png" BaseHP="16" Tags="Champion"/>
 <entity ID="161" Variant="94" Name="Enflamed Crazy Spider" Image="mah boys/enflamedcrazyspider.png" BaseHP="16" Tags="Champion"/>
-<entity ID="161" Variant="94" Name="Bumbling Sooter" Image="mah boys/bumblingsooter.png" BaseHP="16"/>
+<entity ID="161" Variant="96" Name="Bumbling Sooter" Image="mah boys/bumblingsooter.png" BaseHP="16"/>
 <entity ID="161" Variant="97" Name="Lil' Flash" Image="mah boys/lilflash.png" BaseHP="7" Tags="Champion"/>
 <entity ID="161" Variant="101" Name="Soot" Image="mah boys/soot.png" BaseHP="3"/>
 <entity ID="161" Variant="108" Name="Spaarker" Image="mah boys/spaarker.png" BaseHP="10" StageHP="4"  Tags="Champion"/>
@@ -336,19 +338,20 @@ Use 2, 4, or 6 normally.
 
 	<group Name="HOPE Burning Basement" Label="Burning Basement">
 		<group Name="HOPE Burning Basement Enemies">
-			<entity Name="Scorched Peat"/>
-			<entity Name="Bumbling Sooter"/>
-			<entity Name="Hot Potato"/>
-			<entity Name="Scorched Sooter"/>
 			<entity Name="Firehead"/>
 			<entity Name="Trilo"/>
-			<entity Name="Schmoot"/>
-			<entity Name="Lil' Flash"/>
+			<entity Name="Bumbling Sooter"/>
+			<entity Name="Scorched Sooter"/>
 			<entity Name="Soot"/>
+			<entity Name="Lil' Flash"/>
+			<entity Name="Scorched Peat"/>
 			<entity Name="Spaarker"/>
 			<entity Name="Huo"/>
+			<entity Name="Amekatze"/>
 			<entity Name="Burnrun"/>
 			<entity Name="Enflamed Crazy Spider"/>
+			<entity Name="Burntlet"/>
+			<entity Name="Schmoot"/>
 		</group>
 	</group>
    

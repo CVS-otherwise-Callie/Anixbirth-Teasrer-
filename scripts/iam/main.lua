@@ -80,7 +80,8 @@ FHAC:LoadScripts("scripts.iam.monsters", {
 	"gunslinger",
 	"huo",
 	"bumblingsooter",
-	"burnrun"
+	"burnrun",
+	"burntlet"
 })
 
 FHAC:LoadScripts("scripts.iam.bosses", {
@@ -1345,6 +1346,10 @@ function FHAC:GetFireProjectileCollisions()
 		local d = fire:GetData()
 
 		if d.damage == 0 then return end
+
+		d.turn = d.turn or 0
+
+		fire.Velocity = fire.Velocity:Rotated(d.turn)
 
 		--thanks ff i didnt realize it needs post render 
 

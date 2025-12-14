@@ -290,7 +290,9 @@ FHAC.noFireDamage = {
 	"LilFlash",
     "Huo",
     "EnflamedCrazySpider",
-    "ScorchedPeat"
+    "ScorchedPeat",
+    "Burntlet",
+    "Burnrun"
 }
 
 FHAC.DirectionToVector = {

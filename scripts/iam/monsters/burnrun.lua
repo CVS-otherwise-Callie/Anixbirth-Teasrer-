@@ -73,7 +73,7 @@ function mod:BurnrunAI(npc, sprite, d)
             if mod:isScare(npc) then
                 local targetvelocity = (newpos - npc.Position):Resized(-8)
                 npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 0.3)
-            elseif path:HasPathToPos(newpos) then
+            elseif Game():GetRoom():CheckLine(npc.Position, targetpos, 0, 1, false, false) then
                 local targetvelocity = (newpos - npc.Position):Resized(8)
                 npc.Velocity = mod:Lerp(npc.Velocity, targetvelocity, 0.3)
             else
