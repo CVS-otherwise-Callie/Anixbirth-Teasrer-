@@ -1,9 +1,18 @@
 """
 Converts an entities2.xml to a lua table
+
+Thanks connor love ya 
 """
 from pathlib import Path
 import xml.etree.cElementTree as ET
 import sys
+
+"""
+Since this will stay in ANXIBIRTH for others to use I want to make something clear. 
+If this doesn't work, it's not because IT is broken, it's because YOUR XML is broken. 
+Use this site to fix. https://www.w3schools.com/xml/xml_validator.asp
+"""
+
 
 ATTRIB_MAP = {
     "name": "Name",
