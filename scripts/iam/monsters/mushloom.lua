@@ -38,11 +38,6 @@ function mod:MushLoomAI(npc, sprite, d)
 
     if d.state == "Hide" then
         d.idonttakealotofdamage = true
-        mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, function(_, npc, damage, flag, source)
-            if npc:ToNPC():GetData().idonttakealotofdamage then
-                return {Damage=0.5}
-            end
-        end, mod.Monsters.MushLoom.ID)
     end
 
     if d.state == "LookUp" then
@@ -121,4 +116,10 @@ function mod:MushLoomAI(npc, sprite, d)
 
     mod:spritePlay(sprite, d.state)
 end
+
+mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, function(_, npc, damage, flag, source)
+    if npc:ToNPC():GetData().idonttakealotofdamage then
+        return {Damage=0.5}
+    end
+end, mod.Monsters.MushLoom.ID)
 
