@@ -1007,6 +1007,9 @@ local glitchedvar = nil
 
 local rng = RNG()
 function mod:ShowRoomText()
+
+	if AnixbirthSaveManager.GetSettingsSave().roomName == 2 then return end
+
 	local room = StageAPI.GetCurrentRoom()
 	local rDD = game:GetLevel():GetCurrentRoomDesc().Data
 	local center = StageAPI.GetScreenCenterPosition()
@@ -1103,11 +1106,14 @@ function mod:ShowRoomText()
 		local varsize = mod.LuaFont:GetStringWidth(vartext) * scale
 
 		--bcenter = player.Position
-		mod.LuaFont:DrawStringScaled(text, bcenter.X - (size/2), y, scale, scale, KColor(1,1,1,0.5), 0, false)
-		mod.LuaFont:DrawStringScaled(vartext, bcenter.X - (varsize / 2), y + 10, scale, scale, KColor(1,1,1,0.5), 0, false)
+		mod.LuaFont:DrawStringScaled(text, bcenter.X - (size/2), y, scale, scale, KColor(1,1,1,0.5 - (0.5*(1 - (AnixbirthSaveManager.GetSettingsSave().roomNameOpacity/10)))), 0, false)
+		if AnixbirthSaveManager.GetSettingsSave().roomNameVariantShow == 1 then
+			mod.LuaFont:DrawStringScaled(vartext, bcenter.X - (varsize / 2), y + 10, scale, scale, KColor(1,1,1,0.5 - (0.5*(1 - (AnixbirthSaveManager.GetSettingsSave().roomNameOpacity/10)))), 0, false)
+		end
 
 	end
 end
+
 
 function mod:ShowFortuneDeath()
 	if AnixbirthSaveManager.GetSettingsSave().fortunesonDeath and AnixbirthSaveManager.GetSettingsSave().fortunesonDeath == 1 and mod.DSSavedata.fortuneDeathChance ~= 0 and mod.DSSavedata.customFortunes == 1 then

@@ -10,6 +10,12 @@ FHAC.AnixbirthSaveManager = AnixbirthSaveManager
 
 AnixbirthSaveManager.AddCallback(AnixbirthSaveManager.Utility.CustomCallback.POST_DATA_LOAD, function()
         FHAC.DSSavedata = AnixbirthSaveManager.GetSettingsSave()
+
+        FHAC.DSSavedata.roomNameVariantShow = FHAC.DSSavedata.roomNameVariantShow or 1
+        FHAC.DSSavedata.roomNameOpacity = FHAC.DSSavedata.roomNameOpacity or 10
+        FHAC.DSSavedata.roomName = FHAC.DSSavedata.roomName or 1
+
+
         FHAC.DSSavedata.monsterReplacements = FHAC.DSSavedata.monsterReplacements or 2
         FHAC.DSSavedata.customFortunes = FHAC.DSSavedata.customFortunes or 1
         FHAC.DSSavedata.fortuneDeathChance = FHAC.DSSavedata.fortuneDeathChance or 3
@@ -25,11 +31,10 @@ end)
 
 AnixbirthAchievementSystem = include("scripts.achievements")
 
-
-        FHAC:LoadScripts("scripts.deadseascrolls", {
-            "dssmain",
-            "dss_credits"
-        })
+FHAC:LoadScripts("scripts.deadseascrolls", {
+    "dssmain",
+    "dss_credits"
+})
 
 FHAC:AddCallback(ModCallbacks.MC_POST_GAME_STARTED, function()
     if FHAC.HasLoadedDSS and not AnixbirthSaveManager.GetPersistentSave().shownUnlocksChoicePopup then

@@ -142,7 +142,7 @@ end
 
 for i = 1, XMLData.GetNumEntries(XMLNode.ENTITY) do
     local entry = XMLData.GetEntryByOrder(XMLNode.ENTITY, i)
-    if entry.sourceid == "3167715373" then --anixbirth specific
+    if entry.sourceid == "3167715373" or  entry.sourceid == "3627051861"  then --anixbirth specific 
 		local name = entry.name
 		local stats = {ID = tonumber(entry.type), Var = tonumber(entry.variant), Sub = tonumber(entry.subtype)}
 		for _ = 1, #entry.name do
@@ -191,7 +191,7 @@ end
 
 for i = 1, XMLData.GetNumEntries(XMLNode.ITEM) do
     local entry = XMLData.GetEntryByOrder(XMLNode.ITEM, i)
-    if entry.sourceid == "3167715373" then --anixbirth specific
+    if entry.sourceid == "3167715373" or  entry.sourceid == "3627051861"  then --anixbirth specific
 		local name = entry.name
 		for _ = 1, #entry.name do
 			name = mod:gsubMany(name, " ", "'", "-", "=")
@@ -208,7 +208,7 @@ end
 
 for i = 1, XMLData.GetNumEntries(XMLNode.NULLITEM) do
     local entry = XMLData.GetEntryByOrder(XMLNode.NULLITEM, i)
-    if entry.sourceid == "3167715373" then --anixbirth specific
+    if entry.sourceid == "3167715373" or  entry.sourceid == "3627051861"  then --anixbirth specific
 		local name = entry.name
 		for _ = 1, #entry.name do
 			name = mod:gsubMany(name, " ", "'", "-", "=")
@@ -219,7 +219,7 @@ end
 
 for i = 1, XMLData.GetNumEntries(XMLNode.TRINKET) do
     local entry = XMLData.GetEntryByOrder(XMLNode.TRINKET, i)
-    if entry.sourceid == "3167715373" then --anixbirth specific
+    if entry.sourceid == "3167715373" or  entry.sourceid == "3627051861"  then --anixbirth specific
 		local name = entry.name
 		for _ = 1, #entry.name do
 			name = mod:removeSubstring(tostring(name), " ")
@@ -231,7 +231,7 @@ end
 
 for i = 1, XMLData.GetNumEntries(XMLNode.CARD) do
     local entry = XMLData.GetEntryByOrder(XMLNode.CARD, i)
-    if entry.sourceid == "3167715373" then --anixbirth specific
+    if entry.sourceid == "3167715373" or  entry.sourceid == "3627051861"  then --anixbirth specific
 		local name = entry.name
 		for _ = 1, #entry.name do
 			name = mod:removeSubstring(tostring(name), " ")

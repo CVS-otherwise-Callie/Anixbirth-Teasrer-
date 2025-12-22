@@ -18,7 +18,7 @@ local cmds = {
             end
         end,
         Desc = "Shows enemy animations, frames, etc"
-    }
+    },
 }
 
 
@@ -45,6 +45,17 @@ FHAC:AddCallback(ModCallbacks.MC_EXECUTE_CMD, function(_, cmd, params)
     if commandData then
         return commandData.Func(params)
     end
+
+    -- secret dev stuff
+
+    if cmd == "dssDeveloperMode" then
+        if not FHAC.fhacDSSDeveloperMode then
+            FHAC.fhacDSSDeveloperMode = true
+        else
+            FHAC.fhacDSSDeveloperMode = false
+        end 
+    end
+    
 end)
 
 FHAC:AddCallback(ModCallbacks.MC_POST_NPC_RENDER, function(_, npc)

@@ -8,9 +8,9 @@ end
 if StageAPI and StageAPI.Loaded then
 StageAPI.UnregisterCallbacks("FHAC")
 FHAC:LoadScripts("scripts", {
-	"fhacsavedata",
 	"otherapi.fiend folio.api.fiendfolioapi",
 	"library",
+	"fhacsavedata",
 	"constants",
 	"iam.main",
 	"callbacks",
@@ -22,7 +22,7 @@ FHAC:LoadScripts("scripts", {
 	"otherapi.fiend folio.api.apioverride",
 	"otherapi.proapi.proapi",
 	"itemsmain",
-	"commands"
+	"commands",
 })
 
 
