@@ -1125,9 +1125,24 @@ mod:AddCallback(ModCallbacks.MC_POST_RENDER, function()
 
 
 
-                    --[[{str = '----------', fsize=2, nosel = true},
-                    {str = 'characters', nosel = true},
-                    {str = '----------', fsize=2, nosel = true},
+                    {str = '----------', fsize=2, nosel = true, displayif = function(_, item)
+
+                        if FHAC.fhacDSSDeveloperMode then return true end
+
+                        return false
+                    end},
+                    {str = 'characters', nosel = true, displayif = function(_, item)
+
+                        if FHAC.fhacDSSDeveloperMode then return true end
+
+                        return false
+                    end},
+                    {str = '----------', fsize=2, nosel = true, displayif = function(_, item)
+
+                        if FHAC.fhacDSSDeveloperMode then return true end
+
+                        return false
+                    end},
                     {
                         str = 'johannes',
                         action= "back",
@@ -1137,8 +1152,19 @@ mod:AddCallback(ModCallbacks.MC_POST_RENDER, function()
                             FHAC.dssmod.reloadButtons(root, root.Directory.settings)
                         end,
                         tooltip = {strset = {'restart as', 'johannes'}},
+                        displayif = function(_, item)
+
+                            if FHAC.fhacDSSDeveloperMode then return true end
+
+                            return false
+                        end
                     },
-                    {str = '----------', fsize=2, nosel = true},
+                    {str = '----------', fsize=2, nosel = true, displayif = function(_, item)
+
+                        if FHAC.fhacDSSDeveloperMode then return true end
+
+                        return false
+                    end},
                     {
                         str = 'pongon',
                         action= "back",
@@ -1148,7 +1174,13 @@ mod:AddCallback(ModCallbacks.MC_POST_RENDER, function()
                             FHAC.dssmod.reloadButtons(root, root.Directory.settings)
                         end,
                         tooltip = {strset = {'restart as', 'pongon'}},
-                    },]]
+                        displayif = function(_, item)
+
+                            if FHAC.fhacDSSDeveloperMode then return true end
+
+                            return false
+                        end
+                    },
                 },
         }
         FHAC.dmdirectory.newslettershub = {
@@ -1156,7 +1188,7 @@ mod:AddCallback(ModCallbacks.MC_POST_RENDER, function()
             buttons = newsletterbuttons
         }
         FHAC.dmdirectory.yesNo = {
-                title = mod:GetNestedVariable(bobbySaveManager.GetSettingsSave(), "DSSSavedata", "YesNo", "Name" ),
+                title = mod:GetNestedVariable(AnixbirthSaveManager.GetSettingsSave(), "DSSSavedata", "YesNo", "Name" ),
                 fsize = 1,
                 buttons = {
                     {str = "would you wish", nosel = true},
