@@ -1202,7 +1202,7 @@ mod:AddCallback(ModCallbacks.MC_POST_RENDER, function()
                         glowcolor = 3,
 
                         func = function()
-                            bobbySaveManager.GetSettingsSave()[mod:GetNestedVariable(bobbySaveManager.GetSettingsSave(), "DSSSavedata", "YesNo", "Variable" )] = mod:GetNestedVariable(bobbySaveManager.GetSettingsSave(), "DSSSavedata", "YesNo", "Outcome" )
+                            AnixbirthSaveManager.GetSettingsSave()[mod:GetNestedVariable(AnixbirthSaveManager.GetSettingsSave(), "DSSSavedata", "YesNo", "Variable" )] = mod:GetNestedVariable(AnixbirthSaveManager.GetSettingsSave(), "DSSSavedata", "YesNo", "Outcome" )
                         end,
                     },
                     {
@@ -1213,7 +1213,7 @@ mod:AddCallback(ModCallbacks.MC_POST_RENDER, function()
 
                     {str = "", nosel = true},
                 },
-                tooltip = {strset = mod:GetNestedVariable(bobbySaveManager.GetSettingsSave(), "DSSSavedata", "YesNo", "Tooltip" )}
+                tooltip = {strset = mod:GetNestedVariable(AnixbirthSaveManager.GetSettingsSave(), "DSSSavedata", "YesNo", "Tooltip" )}
         }
         
 
