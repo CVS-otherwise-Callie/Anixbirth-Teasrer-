@@ -21,7 +21,8 @@ have led to tremendous
 overall team growth
 
 here's some answers
-to your waiting!
+to your long-awaited
+questions!
 
 {FSIZE2}
 is the mod even
@@ -38,9 +39,8 @@ very focused on
 the overall project
 so quality has
 gone waaay up
-
-code, sprites, and
-even our rooms!
+in code, sprites, 
+and even our rooms!
 
 {FSIZE2}
 
@@ -76,7 +76,7 @@ hint to one...
 
 do i get a
 bonus if i
-was a initial
+was an initial
 player of the mod?
 
 {FSIZE1}
@@ -100,12 +100,15 @@ it's the devs!
 {{SPRtjp}} [[width:-43 height:-5 ]]
 {{COLOR(1,1,1,1)}}
 tjp waz here
-oh
-keep it gubbing
 
 {{COLOR(1,0,1,1)}}
 {{SPRgub}} [[width:13 height:0 ]]
-hi
+hi?
+idk
+
+{{SPRtjp}} [[width:-43 height:-5 ]]
+{{COLOR(1,1,1,1)}}
+what abt 'keep it gubbing'
 
 {{COLOR(0,1,1,1)}}
 {{XSHIFT13}}
@@ -155,5 +158,9 @@ have a great
 holidays
 
 {{SPRholiday}}
+
+{{SPRtjp}} [[width:-43 height:-5 ]]
+{{COLOR(1,1,1,1)}}
+tjp waz also here
 
 ]================], "WINTER")

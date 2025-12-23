@@ -470,7 +470,7 @@ mod:AddCallback(ModCallbacks.MC_POST_RENDER, function()
                                     AnixbirthSaveManager.GetSettingsSave().roomName = var
                                 end,
                                 tooltip = {strset = {'should the room', 'name be shown', '', 'default is', 'yes'}}
-                
+
                             },
                             {str = '', nosel = true, fsize=1,displayif = function(_, item)
                                 if item and item.buttons then
@@ -563,7 +563,7 @@ mod:AddCallback(ModCallbacks.MC_POST_RENDER, function()
                                     AnixbirthSaveManager.GetSettingsSave().monsterReplacements = var
                                 end,
                                 tooltip = {strset = {'some enemies', 'can be','replaced by', 'floor variants', '', 'half anf half', 'by default'}}
-                
+
                             },
                             {str = '', fsize=2, nosel = true},
                             {str = '-----achievements-----', fsize=2, nosel = true},
@@ -583,7 +583,7 @@ mod:AddCallback(ModCallbacks.MC_POST_RENDER, function()
                                 store = function(var)
                                     AnixbirthSaveManager.GetSettingsSave().lockAchTooltip = var
                                 end,
-                                tooltip = {strset = {'shows tooltip', 'to a unlock', 'while locked', '', 'default', 'is off', '', 'updates on', 'dss close'}}
+                                tooltip = {strset = {'shows tooltip', 'to an unlock', 'while locked', '', 'default', 'is off', '', 'updates on', 'dss close'}}
                             },
                             {str = '', fsize=2, nosel = true},
                             {str = '-----fortunes-----', fsize=2, nosel = true},

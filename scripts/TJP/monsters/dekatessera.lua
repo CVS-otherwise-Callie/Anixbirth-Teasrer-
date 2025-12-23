@@ -13,15 +13,14 @@ function mod:DekatesseraAI(npc, sprite, d)
     local isGehenna = (room:GetBackdropType() == BackdropType.GEHENNA)
     local myawesomepurplecolor = Color(1,1,1,1,0.6,0,0.5)
     myawesomepurplecolor:SetColorize(1,1,1,1)
+    local myawesomeredcolor = Color(1,1,1,1,0.6,0,0)
+    myawesomeredcolor:SetColorize(1,1,1,1)
 
+    d.attacktype = "Mausoleum"
     if isGehenna then
         mod:ReplaceEnemySpritesheet(npc, "gfx/monsters/dekatessera/dekatessera_gehenna", 0)
         mod:ReplaceEnemySpritesheet(npc, "gfx/monsters/dekatessera/dekatessera_gehenna", 1)
-    end
-
-    if npc.StateFrame > 100 then
-        d.targetpos =  mod:freeGrid(npc, false, 200, 100)
-        npc.StateFrame = 0
+        d.attacktype = "Gehenna"
     end
 
     if not d.init then
@@ -36,26 +35,32 @@ function mod:DekatesseraAI(npc, sprite, d)
         d.cooldown = d.cooldown + 1
     end
 
-    if d.state == "Idle" then
-        d.targetvelocity = (d.targetpos - npc.Position):Resized(7)
-        mod:spritePlay(sprite, "Idle")
-        if npc.Position:Distance(d.targetpos) > 5 then
-            npc.Velocity = mod:Lerp(npc.Velocity, d.targetvelocity, 0.1)
+    if d.state ~= "Recharge" then
+        d.targetvelocity = (d.targetpos - npc.Position)
+        if (d.targetvelocity * 0.1):Length() > 15 then
+            npc.Velocity = mod:Lerp(npc.Velocity, d.targetvelocity:Resized(15), 0.1)
+        else
+            npc.Velocity = mod:Lerp(npc.Velocity, d.targetvelocity * 0.1, 0.1)
         end
+    end
+
+    if d.state ~= "Attack" then
+        if npc.StateFrame > 100 then
+            d.targetpos =  mod:freeGrid(npc, false, 200, 100)
+            npc.StateFrame = 0
+        end
+    end
+
+    if d.state == "Idle" then
+        mod:spritePlay(sprite, "Idle")
 
         if d.cooldown > 200 then
             d.state = "Attack"
         end
-
-
     end
 
     if d.state == "Attack" then
-
-        npc:AddEntityFlags(EntityFlag.FLAG_NO_PHYSICS_KNOCKBACK | EntityFlag.FLAG_NO_KNOCKBACK)
-
-        npc:MultiplyFriction(0.5)
-        mod:spritePlay(sprite, "Attack")
+        mod:spritePlay(sprite, "Attack".. d.attacktype)
         if sprite:IsFinished() then
             d.cooldown = 0
             d.state = "Recharge"
@@ -64,7 +69,7 @@ function mod:DekatesseraAI(npc, sprite, d)
 
     if d.state == "Recharge" then
 
-        npc:MultiplyFriction(0.5)
+        npc:MultiplyFriction(0.8)
 
         if d.cooldown > 200 then
             mod:spritePlay(sprite, "Reset")
@@ -79,32 +84,46 @@ function mod:DekatesseraAI(npc, sprite, d)
 
     if sprite:IsEventTriggered("summon") then
         d.dekBall = Isaac.Spawn(mod.Effects.DekatesseraEffect.ID, mod.Effects.DekatesseraEffect.Var, mod.Effects.DekatesseraEffect.Sub, npc.Position, Vector.Zero, npc)
-        local dat = d.dekBall:GetData()
-        dat.stageTypeDekka = isGehenna
-        dat.dekkaTears = {}
-        for i = 1, 8 do
+        d.dekBall:GetData().Baby = npc
+
+        if isGehenna then
+            d.dekBall:GetData().precision = 1
+        else
+            d.dekBall:GetData().precision = 10
+        end
+        for i = 1, 6 do
             local p = Isaac.Spawn(9, 0, 0, npc.Position, Vector.Zero, npc):ToProjectile()
 
-            p:GetData().offyourfuckingheadset = 70 + math.random(-10, 10) --fuuuuu THIS WONT BREAK TRUST!!!!
             p:GetData().StateFrame = 0
             p:GetData().Baby = d.dekBall
-            p:GetData().moveit = (360/10) * i
-            p:GetData().type = "SyntheticHorf"
-            p:GetData().Player = player --d.dekBall
+            p:GetData().type = "Dekatessera"
+            p:GetData().number = i
+            p:GetData().distance = 35
 
+            p:GetSprite().Color = myawesomeredcolor
             if not isGehenna then
                 p:GetSprite().Color = myawesomepurplecolor
+                p:GetData().distance = 70
             end
-
-            table.insert(dat.dekkaTears, p)
         end
     end
 
     if sprite:IsEventTriggered("attack") then
         if d.dekBall then
 
+            local enemies = {}
+            for i, entity in ipairs(Isaac.GetRoomEntities()) do
+                if (entity.Type ~= mod.Monsters.Dekatessera.ID) and (entity.Variant ~= mod.Monsters.Dekatessera.Var) and entity:IsActiveEnemy() then
+                    table.insert(enemies, entity)
+                end
+            end
+
             if isGehenna then
-                d.dekBall:GetData().target = mod:GetEntInRoom(npc, true, npc)
+                if #enemies > 0 then
+                    d.dekBall:GetData().target = enemies[math.random(1, #enemies)]
+                else
+                    d.dekBall:GetData().target = player
+                end
             else
                 d.dekBall:GetData().target = player
             end
@@ -113,3 +132,23 @@ function mod:DekatesseraAI(npc, sprite, d)
     end
 end
 
+function mod.DekatesseraShot(p, d)
+    if d.type == "Dekatessera" then
+        local room = game:GetRoom()
+        local target = d.Baby
+        p.GridCollisionClass = EntityGridCollisionClass.GRIDCOLL_NONE
+        p.EntityCollisionClass = EntityCollisionClass.ENTCOLL_PLAYERONLY
+        if not d.init then
+            d.init = true
+        else
+            d.StateFrame = d.StateFrame + 1
+        end
+        if target:IsDead() then--or room:IsClear() then
+            p.FallingAccel = p.FallingAccel + 0.001
+        else
+            d.targetpos = target.Position + Vector(0,d.distance):Rotated(((360/6)*d.number) + d.StateFrame)
+            p.Velocity = mod:Lerp(p.Velocity, (d.targetpos - p.Position), math.min(d.StateFrame/60, 1))
+            p.Height = -21
+        end
+    end
+end

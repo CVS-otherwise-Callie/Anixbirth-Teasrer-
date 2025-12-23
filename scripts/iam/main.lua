@@ -1574,4 +1574,5 @@ function FHAC:CVSProjStuff(v)
 	FHAC.StallCreepShots(v, d)
     FHAC.SheriffShots(v, d)
 	FHAC.BumblingSootProjAI(v, d)
+	FHAC.DekatesseraShot(v,d)
 end
